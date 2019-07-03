@@ -1,0 +1,2903 @@
+ACTOR StartingAnimation : Inventory {} //When you start a new game, the weapon the player first pulls out (The beretta) will check to see if the player has this in their inventory
+									   //(Which they should).
+									   //If they do, then the check passes, and a Duke 3D-esque starting animation will play.
+									   //Otherwise, the player will pull out the weapon normally.
+									   //Base code from Aracnocide.
+
+Actor GamingMarine : DoomPlayer
+{
+	Player.DisplayName "GamingMarine"
+	Player.StartItem "GMIDPistol"
+	Player.StartItem "GMIDFist"
+	Player.StartItem "Clip2", 75
+	Player.StartItem "FragGrenade"
+	Player.StartItem "FragGrenadeAmmo2", 2
+	Player.StartItem "StartingAnimation", 1
+	Player.StartItem "IsPlayer", 1
+	PainChance "Fire", 256
+	PainChance "Melee", 256
+	PainChance "Electric", 256
+	Player.JumpZ 10
+	Player.WeaponSlot 0, HandGrenade
+	Player.WeaponSlot 1, GMIDFist, GMIDChainsaw
+	Player.WeaponSlot 2, GMIDPistol, GMIDDualPistol
+	Player.WeaponSlot 3, GMIDShotgun, SPAS12, GMIDSuperShotgun
+	Player.WeaponSlot 4, GMIDChaingun
+	Player.WeaponSlot 5, GMIDGrenadeLauncher
+	Player.WeaponSlot 6, GMIDRailgun
+	Player.WeaponSlot 7, GMIDBFG9000, JohnnyGee
+	States
+	{
+//	Spawn: //Unfortunately, I cannot get this to work without the player sprite freezing after attacking/getting hurt.
+//		PLID A -1
+//		Loop
+	Death:
+		TNT1 A 0 A_Jump(256, "NewDeath1", "NewDeath2")
+	NewDeath1:
+	Death.Falling:
+		PLAY H 0 A_PlaySound("player/notgood", CHAN_AUTO)
+		PLAY H 5
+		PLAY I 5 A_PlayerScream
+		PLAY J 5 A_NoBlocking
+		PLAY K 5
+		PLAY L 0 A_PlaySound("body/hitfloor")
+		PLAY LM 5
+		PLAY N -1
+		Stop
+	NewDeath2:
+		PDTH A 0 A_PlaySound("player/notgood", CHAN_AUTO)
+		PDTH A 5
+		PDTH B 5 A_PlayerScream
+		PDTH C 5 A_NoBlocking
+		PDTH D 5
+		PDTH E 0 A_PlaySound("body/hitfloor")
+		PDTH E -1
+		Stop
+	Death.Fire:
+		TNT1 A 0 A_PlaySound("player/notgood", CHAN_AUTO)
+		PBRN A 0 Bright A_PlaySound("player/imonfire", CHAN_VOICE) //I would put A_ItBurnsItBurns here, but DoomPlayer doesn't inherit from Strife actors.
+		PBRN A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+		PBRN A 5 Bright
+		PBRN B 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+		PBRN B 5 Bright
+		PBRN C 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+		PBRN C 5 Bright
+		PBRN D 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+		PBRN D 5 Bright A_NoBlocking
+		PBRN E 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+		PBRN E 5 Bright
+		PBRN F 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+		PBRN F 5 Bright
+		PBRN G 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+		PBRN G 5 Bright
+		PBRN H 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+		PBRN H 5 Bright
+		PBRN I 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+		PBRN I 5 Bright
+		PBRN J 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+		PBRN J 5 Bright
+		PBRN K 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+		PBRN K 5 Bright
+		PBRN L 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+		PBRN L 5 Bright
+		PBRN M 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+		PBRN M 5 Bright
+		PBRN N 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+		PBRN N 5 Bright //A_CrispyPlayer //I can't get this to work, unfortunately. It would be cool to view the player's arms waving while on fire ala Strife, though. :( 
+		PBRN O 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+		PBRN OPQPQ 5 Bright
+		PBRN RSTW 7 Bright
+		PBRN V -1
+		Stop
+	Death.Melee:
+		PLA2 H 0 A_PlaySound("player/notgood", CHAN_AUTO)
+		PLA2 H 5
+		PLA2 I 5 A_PlaySound("player/meleedie", CHAN_VOICE)
+		PLA2 J 5 A_NoBlocking
+		PLA2 KLM 5
+		PLA2 N 0 A_PlaySound("body/hitfloor")
+		PLA2 NO 5
+		PLA2 P -1
+		Stop
+	Death.Electric:
+		PDTH A 0 A_PlaySound("player/notgood", CHAN_AUTO)
+		PDTH A 0 A_PlaySound("player/zaps", CHAN_VOICE)
+		PZAP AABBAABBAABBAABBAABBAABBAA 1 bright A_SpawnItemEx("expsmoke",0,random(-0,0),0,random(-1,1),random(-1,1),random(1,3),random(0,0)	)
+		PDTH A 5
+		PDTH B 5 A_PlayerScream
+		PDTH C 5 A_NoBlocking
+		PDTH D 5
+		PDTH E 0 A_PlaySound("body/hitfloor")
+		PDTH E -1
+		Stop
+	Death.Taokaka:
+		PDTH A 0 A_PlaySound("player/notgood", CHAN_AUTO)
+		PGUT H 10
+		PGUT I 10 A_PlaySound("Player/Gutted", CHAN_VOICE)
+		PGUT J 10 A_NoBlocking
+		PGUT K 10
+		PLAY LM 10
+		PLAY N 0 A_PlaySound("Taokaka/WinQuote")
+		PLAY N -1
+		Stop
+	Death.TaokakaPunch:
+		PLA2 H 0 A_PlaySound("player/notgood", CHAN_AUTO)
+		PLA2 H 5
+		PLA2 I 5 A_PlaySound("player/meleedie", CHAN_VOICE)
+		PLA2 J 5 A_NoBlocking
+		PLA2 KLM 5
+		PLA2 N 0 A_PlaySound("body/hitfloor")
+		PLA2 NO 5
+		PLA2 P 0 A_PlaySound("Taokaka/WinQuote")
+		PLA2 P -1
+		Stop
+	Death.TaokakaElectric:
+		PBR1 A 0 A_PlaySound("misc/HOLYSHIT")
+		PBR1 A 0 A_XScream
+		PBR1 A 0 A_NoBlocking
+		PBR1 AAAAABBBBBCCCCCDDDDDEEEEEFFFFFGGGGG 1 A_SpawnDebris("DukeGibs6")
+		PBR1 H 0 A_PlaySound("Taokaka/WinQuote", CHAN_AUTO)
+		PBR1 H -1
+		Stop
+	Death.Basic:
+		TNT1 A 0 A_Jump(64, "Bloodbath1", "Bloodbath2", "Bloodbath3")
+		TNT1 A 0 A_Jump(256, "Death1", "Death2", "Death3")
+	Death1:
+		PLAY H 5
+		PLAY I 5 A_PlayerScream
+		PLAY J 5 A_NoBlocking
+		PLAY K 5
+		PLAY L 0 A_PlaySound("body/hitfloor")
+		PLAY LM 5
+		PLAY N -1
+		Stop
+	Death2:
+		PDTH A 5
+		PDTH B 5 A_PlayerScream
+		PDTH C 5 A_NoBlocking
+		PDTH D 5
+		PDTH E 0 A_PlaySound("body/hitfloor")
+		PDTH E -1
+		Stop
+	Death3:
+		PLA2 H 5
+		PLA2 I 5 A_PlayerScream
+		PLA2 J 5 A_NoBlocking
+		PLA2 KLM 5
+		PLA2 N 0 A_PlaySound("body/hitfloor")
+		PLA2 NO 5
+		PLA2 P -1
+		Stop
+	Bloodbath1:
+		PLAY H 0 A_PlaySound("Bloodbath/kill")
+		PLAY H 5
+		PLAY I 5 A_PlayerScream
+		PLAY J 5 A_NoBlocking
+		PLAY K 5
+		PLAY L 0 A_PlaySound("body/hitfloor")
+		PLAY LM 5
+		PLAY N -1
+		Stop
+	Bloodbath2:
+		PLAY H 0 A_PlaySound("Bloodbath/kill")
+		PDTH A 5
+		PDTH B 5 A_PlayerScream
+		PDTH C 5 A_NoBlocking
+		PDTH D 5
+		PDTH E 0 A_PlaySound("body/hitfloor")
+		PDTH E -1
+		Stop
+	Bloodbath3:
+		PLAY H 0 A_PlaySound("Bloodbath/kill")
+		PLA2 H 5
+		PLA2 I 5 A_PlayerScream
+		PLA2 J 5 A_NoBlocking
+		PLA2 KLM 5
+		PLA2 N 0 A_PlaySound("body/hitfloor")
+		PLA2 NO 5
+		PLA2 P -1
+		Stop
+	XDeath:
+		PDTH A 0 A_PlaySound("player/notgood", CHAN_AUTO)
+		TNT1 A 0 A_XScream
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_SpawnDebris("HLGoreSkull")
+		TNT1 A 0 A_SpawnDebris("DukeGibs1")
+		TNT1 A 0 A_SpawnDebris("DukeGibs2")
+		TNT1 A 0 A_SpawnDebris("DukeGibs3")
+		TNT1 A 0 A_SpawnDebris("DukeGibs4")
+		TNT1 A 0 A_SpawnDebris("DukeGibs5")
+		TNT1 A 0 A_SpawnDebris("DukeGibs6")
+		TNT1 A -1
+		Stop
+	}
+}
+
+Actor GMIDFist : Fist Replaces Fist
+{
+	Weapon.BobRangeX 0.3
+	Weapon.BobRangeY 0.5
+	Weapon.BobStyle InverseSmooth
+	Weapon.BobSpeed 2.0
+	Tag "Bare Hands"
+	Inventory.PickupMessage "Thou shalt not see this."
+	Obituary "%o lost a fistfight with %k."
+    +WEAPON.NOALERT
+	Weapon.UpSound "knuckled"
+	states
+	{
+		Ready:
+			FIST A 1 A_WeaponReady
+			TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+			loop
+		Fire:
+			FISU DCBA 1
+			TNT1 A 5
+			Goto ReadyToGo
+		ReadyToGo:
+			TNT1 A 0 A_Jump(256, "Fist1", "Fist2")
+			Goto Fist1
+		Fist1:
+			TNT1 A 0 A_PlaySound("fist/normalthrow")
+			FIS1 AC 1
+			FIS1 E 1 A_CustomPunch(2,0,0,"FistPuff")
+			FIS1 FEDCBA 1
+			TNT1 A 8 A_Refire("ReadyToGo")
+		Goto StopFiring
+		Fist2:
+			TNT1 A 0 A_PlaySound("fist/normalthrow")
+			FIS2 AC 1
+			FIS2 E 1 A_CustomPunch(2,0,0,"FistPuff")
+			FIS2 FEDCBA 1
+			TNT1 A 8 A_Refire("ReadyToGo")
+		Goto StopFiring
+		StopFiring:
+			FISU ABCD 1
+			Goto Ready
+		AltFire:
+			FISU DCBA 1
+			TNT1 A 5
+			Goto Kick
+		Kick:
+			TNT1 A 0 A_PlaySound ("weapons/KICK")
+			FOOT AB 1
+			FOOT C 1
+			FOOT D 1
+			FOOT D 1 A_CustomPunch(5,0,0,"KickPuff")
+			FOOT D 0 A_Quake(1,2,0,10)
+			FOOT EF 1
+			FOOT FEDCBA 1
+			TNT1 A 8
+			TNT1 A 0 A_Refire("Kick")
+			goto StopFiring
+		Deselect:
+			FIST A 1 A_Lower
+			FIST A 0 A_Lower
+			TNT1 A 0 A_TakeInventory("BotMeleeWeapon")
+			Loop
+		Select:
+			FIST A 1 A_Raise
+			FIST A 0 A_Raise
+			TNT1 A 0 A_GiveInventory("BotMeleeWeapon")
+			Loop
+		}
+}
+Actor GMIDChainsaw : Chainsaw Replaces Chainsaw
+{
+	Weapon.BobRangeX 0.3
+	Weapon.BobRangeY 0.5
+	Weapon.BobStyle InverseSmooth
+	Weapon.BobSpeed 2.0
+	Weapon.UpSound "weapons/sawup"
+	Weapon.ReadySound ""
+	Tag "Angle Grinder"
+	Inventory.PickupMessage "You got the Angle Grinder! Groovy! (1)"
+	Obituary "%o was slaughtered by %k's Angle Grinder."
+	States
+	{
+	Ready:
+    SAWG A 1 A_WeaponReady
+	TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+	Loop
+	Fire:
+	SAWG A 0 A_PlaySound("grinder/start", CHAN_WEAPON)
+	SAWG ACD 2
+	SAWG E 0 A_PlaySound("grinder/continue", CHAN_WEAPON)
+	SAWG EFGH 1 A_CustomPunch(2*random(1,10),1,0,"GrinderPuff")
+	TNT1 A 0 A_Refire("KeepFiring")
+	SAWG D 0 A_PlaySound("grinder/stop", CHAN_WEAPON)
+	SAWG DCBABBAABBBAAABBBBAAAABBBBBAAAAA 2 A_WeaponReady
+	TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+	goto Ready
+	KeepFiring:
+	SAWG E 0 A_PlaySound("grinder/continue", CHAN_WEAPON)
+	SAWG EFGH 1 A_CustomPunch(2*random(1,10),1,0,"GrinderPuff")
+	TNT1 A 0 A_Refire("KeepFiring")
+	SAWG D 0 A_PlaySound("grinder/stop", CHAN_WEAPON)
+	SAWG DCBABBAABBBAAABBBBAAAABBBBBAAAAA 2 A_WeaponReady
+	TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+	goto Ready
+  Deselect:
+    SAWG A 1 A_Lower
+    SAWG A 0 A_Lower
+	TNT1 A 0 A_TakeInventory("BotMeleeWeapon")
+    Loop
+  Select:
+    SAWG A 1 A_Raise
+    SAWG A 0 A_Raise
+	TNT1 A 0 A_GiveInventory("BotMeleeWeapon")
+    Loop
+	}
+}
+Actor GMIDPistol : Pistol Replaces Pistol
+{
+	Weapon.BobRangeX 0.3
+	Weapon.BobRangeY 0.5
+	Weapon.BobStyle InverseSmooth
+	Weapon.BobSpeed 2.0
+	Weapon.UpSound "pistup"
+	attacksound ""
+	Weapon.AmmoType "Clip2"
+	Weapon.AmmoUse 1
+	Tag "Beretta"
+	Scale 0.5
+	Inventory.PickupMessage "Picked up a Beretta. (2)"
+	Obituary "%o barely evaded %k's Beretta."
+	states
+	{
+	Ready:
+	TNT1 A 0 A_JumpIfInventory("StartingAnimation",1,"StartGame")
+	PISG A 1 A_WeaponReady
+	TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+	Loop
+	Fire:
+	PISG A 2
+	PISG B 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
+	PISG B 0 A_PlaySound("weapons/GMPISTOL", CHAN_WEAPON)
+	PISG B 0 A_SetPitch(pitch-0.15)
+	PISG B 0 A_FireBullets (5.6, 0, 1, 5, "XaserPuff")
+    PISG B 0 A_FireCustomMissile("CasingSpawner",0,0,17,0)
+	PISG BC 1 Bright A_Light1
+	PISG D 0 A_SetPitch(pitch+0.15)
+    PISG D 1 A_Light0
+	PISG EF 1
+	PISG A 5 A_WeaponReady(1)
+	TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+	Goto Ready
+	QuadFire:
+	TNT1 A 0 A_SetBlend("Blue", 0.50, 16)
+	PISG B 0 A_PlaySound("QuadDamage/Use")
+	PISG B 0 A_PlaySound("weapons/GMPISTOL", CHAN_WEAPON)
+	PISG B 0 A_SetPitch(pitch-0.15)
+	PISG B 0 A_FireBullets (5.6, 0, 1, 5, "XaserPuff")
+    PISG B 0 A_FireCustomMissile("CasingSpawner",0,0,17,0)
+	PISG BC 1 Bright A_Light1
+	PISG D 0 A_SetPitch(pitch+0.15)
+    PISG D 1 A_Light0
+	PISG EF 1
+	PISG A 5 A_WeaponReady(1)
+	TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+    Goto Ready
+  Deselect:
+    PISG A 1 A_Lower
+    PISG A 0 A_Lower
+    Loop
+  Select:
+    PISG A 1 A_Raise
+    PISG A 0 A_Raise
+    Loop
+  StartGame: //Damn, those four-legged bastards are gonna pay for being cringy as fuck.
+	TNT1 A 15
+	KNUX A 0 A_PlaySound("player/intro", CHAN_VOICE)
+	TNT1 A 0 A_TakeInventory("StartingAnimation", 9999)
+	KNUX ABC 2
+	KNUX A 0 A_PlaySound("knuckled")
+	KNUX DDDCBA 2
+	KNX2 ABC 2
+	KNX2 A 0 A_PlaySound("knuckled")
+	KNX2 DDDCBA 2
+	TNT1 A 20 
+	BLRD A 0 A_PlaySound("Pistol/Cock", CHAN_AUTO)
+	BRLD ABCDEFGHIJKLMNOPQ 2
+	Goto Ready
+  }
+}
+
+Actor GMIDDualPistol : GMIDPistol
+{
+	Weapon.BobRangeX 0.3
+	Weapon.BobRangeY 0.5
+	Weapon.BobStyle InverseSmooth
+	Weapon.BobSpeed 2.0
+	Weapon.UpSound "pistup"
+	attacksound ""
+	Weapon.AmmoType "Clip2"
+	Weapon.AmmoUse 2
+	Tag "Dual Berettas"
+	Scale 0.5
+	Inventory.PickupMessage "You got another Beretta! (2)"
+	Obituary "%o was so close to evading %k's dual Berettas."
+	states
+	{
+	Ready:
+	PIS2 A 1 A_WeaponReady
+	TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+	Loop
+	Fire:
+	PIS2 A 2
+	PIS2 B 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
+	PIS2 B 0 A_SetPitch(pitch-0.3)
+	PIS2 B 0 A_PlaySound("weapons/GMPISTOL", CHAN_WEAPON)
+	PIS2 B 0 A_PlaySound("weapons/GMPISTOL", CHAN_AUTO)
+	PIS2 B 0 A_FireBullets (11.2, 0, 2, 5, "XaserPuff")
+    PIS2 B 0 A_FireCustomMissile("CasingSpawner",0,0,17,0)
+    PIS2 B 0 A_FireCustomMissile("CasingSpawner",0,0,-13,0)
+	PIS2 B 1 Bright A_Light1
+	PIS2 C 1 Bright A_Light0
+	PIS2 D 1 A_Light0
+	PIS2 D 0 A_SetPitch(pitch+0.3)
+	PIS2 EF 1
+	PIS2 A 5 A_WeaponReady(1)
+	TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+	Goto Ready
+	QuadFire:
+	TNT1 A 0 A_SetBlend("Blue", 0.50, 16)
+	PIS2 D 0 A_PlaySound("QuadDamage/Use")
+	PIS2 B 0 A_SetPitch(pitch-0.3)
+	PIS2 B 0 A_PlaySound("weapons/GMPISTOL", CHAN_WEAPON)
+	PIS2 B 0 A_PlaySound("weapons/GMPISTOL", CHAN_AUTO)
+	PIS2 B 0 A_FireBullets (11.2, 0, 2, 5, "XaserPuff")
+    PIS2 B 0 A_FireCustomMissile("CasingSpawner",0,0,17,0)
+    PIS2 B 0 A_FireCustomMissile("CasingSpawner",0,0,-13,0)
+	PIS2 B 1 Bright A_Light1
+	PIS2 C 1 Bright A_Light0
+	PIS2 D 1 A_Light0
+	PIS2 D 0 A_SetPitch(pitch+0.3)
+	PIS2 EF 1
+	PIS2 A 5 A_WeaponReady(1)
+	TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+    Goto Ready
+  Deselect:
+    PIS2 A 1 A_Lower
+    PIS2 A 0 A_Lower
+    Loop
+  Select:
+    PIS2 A 1 A_Raise
+    PIS2 A 0 A_Raise
+    Loop
+  }
+}
+
+Actor GMIDShotgun : Shotgun Replaces Shotgun
+{
+	Weapon.BobRangeX 0.3
+	Weapon.BobRangeY 0.5
+	Weapon.BobStyle InverseSmooth
+	Weapon.BobSpeed 2.0
+	Weapon.UpSound "shotcock"
+	attacksound ""
+	Weapon.AmmoUse 1
+	Tag "UAC Pump-Action Shotgun"
+	Inventory.PickupMessage "You got the UAC Pump-Action Shotgun! (3)"
+	Obituary "%o chewed on %k's Pump-Action Shotgun."
+	states
+	{
+		Pickup:
+			TNT1 A 0 A_PlaySound("player/gun")
+		Fire:
+			SHTG A 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
+			SHTG A 3
+			SHTG A 0 A_SetPitch(pitch-0.5)
+			SHTG A 0 A_PlaySound("weapons/GMSHOTGN", CHAN_WEAPON)
+			SHTG A 0 A_Light1
+			SHTG A 0 A_FireBullets (5.6, 0, 7, 5, "XaserPuff")
+			SHTG B 1
+			SHTG C 0 A_SetPitch(pitch+0.25)
+			SHTG C 1 A_Light2
+			SHTG D 0 A_SetPitch(pitch+0.25)
+			SHTG D 0 A_Light0
+			SHTG DEFGHA 1
+			SHTG HI 2
+			SHTG JK 1
+			TNT1 A 0 A_PlaySound("Shotgun/Pump1", CHAN_AUTO)
+			SHTG L 0 A_FireCustomMissile("ShotgunCasingSpawner",0,0,17,0)
+			SHTG LMM 1
+			SHTG M 1 A_PlaySound("Shotgun/Pump2", CHAN_AUTO)
+			SHTG L 1
+			SHTG KJ 2
+			SHTG IH 1
+			SHTG A 2
+			SHTG A 1 A_ReFire
+			goto Ready
+		QuadFire:
+			SHTG A 3
+			TNT1 A 0 A_SetBlend("Blue", 0.50, 16)
+			SHTG A 0 A_PlaySound("QuadDamage/Use")
+			SHTG A 0 A_SetPitch(pitch-0.5)
+			SHTG A 0 A_PlaySound("weapons/GMSHOTGN", CHAN_WEAPON)
+			SHTG A 0 A_GunFlash
+			SHTG A 0 A_FireBullets (5.6, 0, 7, 5, "XaserPuff")
+			SHTG B 1
+			SHTG C 0 A_SetPitch(pitch+0.25)
+			SHTG C 1
+			SHTG D 0 A_SetPitch(pitch+0.25)
+			SHTG DEFGHA 1
+			SHTG HI 2
+			SHTG JK 1
+			TNT1 A 0 A_PlaySound("Shotgun/Pump1", CHAN_AUTO)
+			SHTG L 0 A_FireCustomMissile("ShotgunCasingSpawner",0,0,17,0)
+			SHTG LMM 1
+			SHTG M 1 A_PlaySound("Shotgun/Pump2", CHAN_AUTO)
+			SHTG L 1
+			SHTG KJ 2
+			SHTG IH 1
+			SHTG A 2
+			SHTG A 1 A_ReFire
+			goto Ready
+		Ready:
+			SHTG A 1 A_WeaponReady
+			TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+			Loop
+		Deselect:
+			SHTG A 1 A_Lower
+			SHTG A 0 A_Lower
+			Loop
+		Select:
+			SHTG A 1 A_Raise
+			SHTG A 0 A_Raise
+			Loop
+		}
+}
+
+Actor GMIDSuperShotgun : SuperShotgun Replaces SuperShotgun
+{
+	Weapon.BobRangeX 0.3
+	Weapon.BobRangeY 0.5
+	Weapon.BobStyle InverseSmooth
+	Weapon.BobSpeed 2.0
+	Weapon.UpSound "dbcock"
+	attacksound "weapons/DSDSHTGN"
+	Tag "Sawn-Off"
+	Weapon.AmmoUse 2
+	Inventory.PickupMessage "You got the Sawn-Off! (3)"
+	Obituary "%o was decapitated by %k's Sawn-Off."
+	states
+	{
+	Ready:
+		SHOG A 1 A_WeaponReady
+		TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+		Loop
+	Fire:
+		SHOG A 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
+		SHOF A 0 A_SetPitch(pitch-1)
+		SHOF A 0 A_Light1
+		SHOF A 1 A_FireBullets (5.6, 3.55, 20, 5, "XaserPuff")
+		SHOF B 0 A_SetPitch(pitch+0.5)
+		SHOF B 0 A_Light0
+		SHOF B 1 BRIGHT
+		SHOG B 0 A_SetPitch(pitch+0.5)
+		SHOG BC 1
+		SHOG D 2
+		SHOG EFGHIJ 1
+		SHOG K 1 A_CheckReload
+		SHOG L 1 A_PlayWeaponSound ("weapons/ssg1")
+		SHOG M 1 A_FireCustomMissile("ShotgunCasingSpawner",0,0,10,0)
+		SHOG N 1 A_FireCustomMissile("ShotgunCasingSpawner",0,0,8,0)
+		SHOG OPQR 1
+		TNT1 A 5
+		TNT1 A 1 A_PlayWeaponSound ("weapons/DSDBLOAD")
+		TNT1 A 5
+		SHOG STUVW 1
+		SHOG X 1 A_PlayWeaponSound ("weapons/DSDBCLS")
+		SHOG YZ 1
+		SHOG A 0 A_ReFire
+		goto Ready
+	QuadFire:
+		TNT1 A 0 A_SetBlend("Blue", 0.50, 16)
+		SHOG A 0 A_PlaySound("QuadDamage/Use")
+		SHOF A 0 A_SetPitch(pitch-1)
+		SHOF A 0 A_Light1
+		SHOF A 1 A_FireBullets (5.6, 3.55, 20, 5, "XaserPuff")
+		SHOF B 0 A_SetPitch(pitch+0.5)
+		SHOF B 0 A_Light0
+		SHOF B 1 BRIGHT
+		SHOG B 0 A_SetPitch(pitch+0.5)
+		SHOG BC 1
+		SHOG D 2
+		SHOG EFGHIJ 1
+		SHOG K 1 A_CheckReload
+		SHOG L 1 A_PlayWeaponSound ("weapons/ssg1")
+		SHOG M 1 A_FireCustomMissile("ShotgunCasingSpawner",0,0,10,0)
+		SHOG N 1 A_FireCustomMissile("ShotgunCasingSpawner",0,0,8,0)
+		SHOG OPQR 1
+		TNT1 A 5
+		TNT1 A 1 A_PlayWeaponSound ("weapons/DSDBLOAD")
+		TNT1 A 5
+		SHOG STUVW 1
+		SHOG X 1 A_PlayWeaponSound ("weapons/DSDBCLS")
+		SHOG YZ 1
+		SHOG A 0 A_ReFire
+		goto Ready
+	Deselect:
+		SHOG A 1 A_Lower
+		SHOG A 0 A_Lower
+		Loop
+	Select:
+		SHOG A 1 A_Raise
+		SHOG A 0 A_Raise
+		Loop
+	}
+}
+
+Actor GMIDChaingun : Chaingun Replaces Chaingun
+{
+	Weapon.BobRangeX 0.3
+	Weapon.BobRangeY 0.5
+	Weapon.BobStyle InverseSmooth
+	Weapon.BobSpeed 2.0
+	Weapon.UpSound "chanup"
+	Weapon.AmmoType1 "Clip3"
+	Weapon.AmmoUse 1
+	Tag "V-Gun"
+	Inventory.PickupMessage "You got the V-Gun! (4)"
+	Obituary "%o was pelted with lead by %k's V-Gun."
+	states
+	{
+		Pickup:
+		TNT1 A 0 A_PlaySound("player/gun")
+		Fire: 
+		CHGG A 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
+		CHGG C 0 A_Light1 
+		CHGG C 0 A_PlaySound("weapons/UZIFIRE", CHAN_WEAPON)
+		CHGG C 0 A_FireCustomMissile("CasingSpawner",0,0,17,0)
+		CHGG C 0 A_SetPitch(pitch-1)
+		CHGG C 1 A_FireBullets(5.6, 0, 1, 5, "XaserPuff")
+		CHGG D 0 A_SetPitch(pitch+1)
+		CHGG D 1 A_Light0
+		CHGG AA 1 A_WeaponReady
+		TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+		CHGG BB 1 A_WeaponReady
+		TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+		CHGG AAAA 1 A_WeaponReady
+		TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+		CHGG BBBB 1 A_WeaponReady
+		TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+		CHGG AAAAAAAA 1 A_WeaponReady
+		TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+		CHGG BBBBBBBB 1 A_WeaponReady
+		TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+		goto Ready
+		QuadFire:
+		TNT1 A 0 A_SetBlend("Blue", 0.50, 16)
+		CHGG A 0 A_PlaySound("QuadDamage/Use")
+		CHGG A 0 A_GunFlash
+		CHGG C 0 A_PlaySound("weapons/UZIFIRE", CHAN_WEAPON)
+		CHGG C 0 A_FireCustomMissile("CasingSpawner",0,0,17,0)
+		CHGG C 0 A_SetPitch(pitch-1)
+		CHGG C 1 A_FireBullets(5.6, 0, 1, 5, "XaserPuff")
+		CHGG D 0 A_SetPitch(pitch+1)
+		CHGG D 1
+		CHGG AA 1 A_WeaponReady
+		TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+		CHGG BB 1 A_WeaponReady
+		TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+		CHGG AAAA 1 A_WeaponReady
+		TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+		CHGG BBBB 1 A_WeaponReady
+		TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+		CHGG AAAAAAAA 1 A_WeaponReady
+		TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+		CHGG BBBBBBBB 1 A_WeaponReady
+		TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+		goto Ready
+  Deselect:
+    CHGG A 1 A_Lower
+    CHGG A 0 A_Lower
+    Loop
+  Select:
+    CHGG A 1 A_Raise
+    CHGG A 0 A_Raise
+    Loop
+	}
+}
+
+Actor GMIDGrenadeLauncher : RocketLauncher Replaces RocketLauncher //It's a missile launcher now, but I'm too lazy to rename the actor.
+{
+	Weapon.BobRangeX 0.3
+	Weapon.BobRangeY 0.5
+	Weapon.BobStyle InverseSmooth
+	Weapon.BobSpeed 2.0
+	Weapon.AmmoType1 "RocketAmmo"
+	Weapon.AmmoGive 5
+	Weapon.AmmoUse 1
+	Weapon.UpSound "rockpump"
+	Tag "Missile Launcher"
+	Inventory.PickupMessage "You got the Missile Launcher! (5)"
+	Obituary "%o got a face full of %k's Missile Launcher."
+	states
+	{
+  Pickup:
+	TNT1 A 0 A_PlaySound("player/gun")
+  Fire:
+	MISG B 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
+	TNT1 A 0 A_PlaySound("weapons/GMROCKTL", CHAN_WEAPON)
+    MISG B 4 A_GunFlash
+    MISG B 6 A_FireCustomMissile ("Rocket")
+	MISG A 10
+	TNT1 A 0 A_PlaySound("rockpump", CHAN_WEAPON)
+	MISG CDEFGHGFEDC 1
+	MISG A 6
+    MISG A 0 A_ReFire
+    Goto Ready
+  QuadFire:
+    TNT1 A 0 A_SetBlend("Blue", 0.50, 16)
+	MISG B 0 A_PlaySound("QuadDamage/Use")
+	TNT1 A 0 A_PlaySound("weapons/GMROCKTL", CHAN_WEAPON)
+    MISG B 4 A_GunFlash
+    MISG B 6 A_FireCustomMissile ("Rocket")
+	MISG A 10
+	TNT1 A 0 A_PlaySound("rockpump", CHAN_WEAPON)
+	MISG CDEFGHGFEDC 1
+	MISG A 6
+    MISG A 0 A_ReFire
+    Goto Ready
+  Flash:
+    MISF A 1 Bright A_Light1
+    MISF B 2 Bright
+    MISF CD 2 Bright A_Light2
+    Goto LightDone
+  Spawn:
+    LAUN A -1
+    Stop
+  Deselect:
+    MISG A 1 A_Lower
+    MISG A 0 A_Lower
+	TNT1 A 0 A_TakeInventory("BotExplosiveWeapon")
+    Loop
+  Select:
+    MISG A 1 A_Raise
+    MISG A 0 A_Raise
+	TNT1 A 0 A_GiveInventory("BotExplosiveWeapon")
+    Loop
+  }
+}
+Actor GMIDRailgun : PlasmaRifle Replaces PlasmaRifle
+{
+	Weapon.AmmoUse 10
+    Weapon.AmmoGive 40
+	Weapon.BobRangeX 0.3
+	Weapon.BobRangeY 0.5
+	Weapon.BobStyle InverseSmooth
+	Weapon.BobSpeed 2.0
+	Weapon.UpSound "railup"
+	Tag "Railgun"
+	Weapon.AmmoType1 "NewCell"
+	Weapon.AmmoUse 1
+	Inventory.PickupMessage "You got the Railgun! (6)"
+	Obituary "%o was split by %l's Railgun."
+	states
+	{
+		Pickup:
+			TNT1 A 0 A_PlaySound("player/gun")
+		Fire:
+			RGUN A 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
+			RGUN A 0 A_SetPitch(pitch-1)
+			RGUN A 0 A_TakeInventory("NewCell", 10) //For whatever reason, when I updated the rail color, the weapon started to consume no ammo.
+			RGUN B 1 A_CustomRailgun(65, 0, "DarkGreen", "Green")
+			RGUN C 1 A_SetPitch(pitch+0.50)
+			RGUN D 1 A_SetPitch(pitch+0.50)
+			RGUN EFGH 1
+			RGUN I 20
+			RGUN HGFEDJ 1
+			RGUN K 1 A_ReFire
+			goto Ready
+		QuadFire:
+		    TNT1 A 0 A_SetBlend("Blue", 0.50, 16)
+			RGUN A 0 A_PlaySound("QuadDamage/Use")
+			RGUN A 0 A_SetPitch(pitch-1)
+			RGUN A 0 A_TakeInventory("NewCell", 10)
+			RGUN B 1 A_CustomRailgun(65, 0, "DarkGreen", "Green")
+			RGUN C 1 A_SetPitch(pitch+0.50)
+			RGUN D 1 A_SetPitch(pitch+0.50)
+			RGUN EFGH 1
+			RGUN I 20
+			RGUN HGFEDJ 1
+			RGUN K 1 A_ReFire
+			goto Ready
+		Ready:
+			RGUN A 1 A_WeaponReady
+			TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+			Loop
+		Deselect:
+			RGUN A 1 A_Lower
+			RGUN A 0 A_Lower
+			Loop
+		Select:
+			RGUN A 1 A_Raise
+			RGUN A 0 A_Raise
+			Loop
+		Spawn:
+			RGNG A -1
+			Stop
+	}
+}
+Actor GMIDBFG9000 : BFG9000 Replaces BFG9000 //Now the "Space Cadet" spell
+{
+	Weapon.BobRangeX 0.3
+	Weapon.BobRangeY 0.5
+	Weapon.BobStyle InverseSmooth
+	Weapon.BobSpeed 2.0
+	Weapon.UpSound "bfgup"
+	Inventory.PickupSound "cadet/pickup"
+	Tag "Space Cadet"
+	Weapon.AmmoType1 "SmallMana"
+	Weapon.AmmoUse 2
+	Inventory.PickupMessage "You got the ''Space Cadet'' Pinball spell! Time to bring pain and nostalgia upon thee... (7)"
+	Obituary "%o choked on %k's big balls."
+	Scale 0.3125
+	+FLOATBOB
+	states
+	{
+  Ready:
+	PING A 1 A_WeaponReady
+	TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+	Loop
+  Fire:
+	PING BC 1
+	PING D 1 A_FireCustomMissile("IveGotBigBalls")
+	PING EFGHGFE 1
+	PING D 1 A_ReFire("Hold")
+	PING CB 1
+	goto Ready
+  Hold:
+	PING D 1 A_FireCustomMissile("IveGotBigBalls")
+	PING EFGHGFE 1
+	PING D 1 A_ReFire("Hold")
+	PING CB 1
+	goto Ready
+  Deselect:
+    PING A 1 A_Lower
+    PING A 0 A_Lower
+	TNT1 A 0 A_TakeInventory("BotExplosiveWeapon")
+    Loop
+  Select:
+    PING A 1 A_Raise
+    PING A 0 A_Raise
+	TNT1 A 0 A_GiveInventory("BotExplosiveWeapon")
+    Loop
+  Spawn:
+    PINB B 1 Bright
+    Loop
+	}
+}
+
+ACTOR IveGotBigBalls //My attempt at an AC/DC reference
+{
+	Radius 6
+	Height 8
+	Projectile
+	Speed 50
+	Damage 10
+	SeeSound "bigball/fire"
+	DeathSound "bigball/hit"
+	DamageType "Basic"
+	Obituary "%o choked on %k's big balls."
+	Scale 0.3125
+	States
+	{
+	  Spawn:
+		PINB A 1
+		Loop
+	  Death:
+		TNT1 A 0 A_Explode(100, 128)
+		TNT1 AAAAAAAAAA 0 A_SpawnItemEx("IveGotSmallBalls",frandom(5.0,-5.0),frandom(5.0,-5.0),frandom(0.5,10.0),frandom(2.0,8.0),0,random(6.0,12.0),random(0,360))
+		Stop
+	}
+}
+
+ACTOR IveGotSmallBalls
+{
+   Radius 2
+   Height 2
+   Speed 0
+   Damage 0
+   Scale 0.3
+   ReactionTime 2
+   SeeSound ""
+   PROJECTILE
+   -NOGRAVITY
+   +HEXENBOUNCE
+   Scale 0.15625
+   BounceSound "bigball/bounce"
+   DeathSound "bigball/bounce"
+   States
+   {
+   Spawn:
+      TNT1 A 0 A_Countdown
+      PINB AAAAAAAAAA 2
+      TNT1 A 0 A_Jump(128,2)
+      TNT1 A 0 A_Countdown
+      PINB AAAAAAAAAA 2
+      Loop
+   Death:
+      TNT1 A 1
+      Stop
+   }
+}
+
+ACTOR Blaster_RifleShot
+{
+	PROJECTILE
+	Radius 4
+	Height 4
+	Speed 26
+	Damage 5
+	SeeSound "weapons/blasterrifle"
+	Scale 1.0
+	Decal BulletChip
+	States
+	{
+	Spawn:
+		TNT1 A 3
+		BLAS AA 1 BRIGHT A_CustomMissile ("Blaster_RifleShot_Trail", 0, 0, 0, 2, 0)
+		Goto Spawn+1
+	Death:
+		TNT1 AAA 0 A_SpawnItem ("Blaster_RifleShot_Hit")
+		TNT1 A 35
+		Stop
+	}
+}
+
+ACTOR Blaster_RifleShot_Hit : RedParticleFountain
+{
+	States
+	{
+	Spawn:
+		TNT1 A 16
+		Stop
+	}
+}
+
+ACTOR Blaster_RifleShot_Trail
+{
+	+NOGRAVITY
+	+NOCLIP
+	Speed 1
+	Translation "112:127=171:191"
+	Scale 0.5
+	States
+	{
+	Spawn:
+		TNT1 A 1
+		BLAS A 2
+		Stop
+	}
+}
+
+actor JohnnyGee : DoomWeapon
+{
+  Weapon.SelectionOrder 1300
+  Weapon.AmmoUse 1
+  Weapon.AmmoGive 100
+  Weapon.AmmoType "SmallMana"
+  Inventory.PickupMessage "You possess the ''Johnny Gee'' fire spell!... what (7)"
+  Obituary "%o was set ablaze by %k."
+  Weapon.BobRangeX 0.3
+  Weapon.BobRangeY 0.5
+  Weapon.BobStyle InverseSmooth
+  Weapon.BobSpeed 2.0
+  Weapon.UpSound "STAFUP"
+  Inventory.PickupSound "weapons/staffget"
+  Tag "Johnny Gee"
+  +FLOATBOB
+  States
+  {
+  Ready:
+    WAVE ABCD 3 Bright A_WeaponReady
+	TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+    Loop
+  Deselect:
+    WAVE A 1 Bright A_Lower
+	WAVE A 0 Bright A_Lower
+    Loop
+  Select:
+    WAVE A 1 Bright A_Raise
+	WAVE A 0 Bright A_Raise
+    Loop
+  Fire:
+	WAVE A 0 A_PlaySound("STAFUP", CHAN_WEAPON)
+	WAVE A 0 A_PlaySound("Johnny/Gee", CHAN_VOICE)
+	WAVE A 2 Bright
+	WAVE B 2 Bright A_FireCustomMissile("CookiedemonFireball")
+	WAVE C 2 Bright
+	WAVE D 2 Bright A_FireCustomMissile("CookiedemonFireball")
+	WAVE A 0 A_ReFire("ContinueFiring")
+    Goto Ready
+  ContinueFiring:
+	WAVE A 2 Bright
+	WAVE B 2 Bright A_FireCustomMissile("CookiedemonFireball")
+	WAVE C 2 Bright
+	WAVE D 2 Bright A_FireCustomMissile("CookiedemonFireball")
+	WAVE A 0 A_ReFire("ContinueFiring")
+	Goto Ready
+  Spawn:
+    LLSP ABCDCB 1 Bright
+    Loop
+  }
+}
+
+Actor SpiritBall_NoSeek
+{
+    Speed 32
+    damage 12
+    scale 0.3
+    radius 6
+    height 12
+    //RENDERSTYLE ADD
+	RenderStyle SoulTrans
+    Alpha 0.85
+    PROJECTILE
+    seesound "weapons/stafffire"
+    deathsound "baron/shotx"
+    states
+    {
+    Spawn:
+	PSMM ABC 5 Bright
+	PSMM DEF 2 Bright
+	goto Spawn+2
+    Death:
+	PSMM GGHHIIJJKKLLMM 2 Bright A_FadeOut(0.05)
+	stop
+    }
+}
+
+actor LeadPosioning : Weapon
+{
+    Weapon.AmmoType Clip3
+    Weapon.AmmoUse 1
+    Weapon.AmmoGive 60
+    Weapon.KickBack 200
+	Weapon.SlotNumber 4
+    Inventory.PickupMessage "You got the ''Lead Poisoning'' rapid-fire chaingun! (4)"
+    Inventory.PickupSound "misc/w_pkup"
+    AttackSound "weapons/mgunfire"
+	Weapon.UpSound "weapons/machinegun/up"
+    Obituary "%o was totally perforated by %k's Lead Poisioning."
+	Tag "Lead Poisoning"
+	Scale 0.5
+	Weapon.BobRangeX 0.3
+	Weapon.BobRangeY 0.5
+	Weapon.BobStyle InverseSmooth
+	Weapon.BobSpeed 2.0
+    States
+	{
+	Pickup:
+	   TNT1 A 0 A_PlaySound("player/gun")
+    Spawn:
+       CGUN A -1
+       Stop
+    Select:
+       CHNG A 1 A_Raise
+	   CHNG A 0 A_Raise
+       Loop
+    Deselect:
+       CHNG A 1 A_Lower
+	   CHNG A 0 A_Lower
+       Loop
+    Ready:
+       CHNG A 1 A_WeaponReady
+	   TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+       Loop
+    Fire:
+       CHNG BC 1
+       Goto ContinueFiring
+	ContinueFiring:
+	   CHNF A 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
+       CHNF A 0 A_SetPitch(pitch-0.25)
+	   CHNF A 0 A_FireCustomMissile("CasingSpawner",0,0,17,0)
+       CHNF A 1 Bright A_FireBullets (4,3,1,10,"XaserPuff")
+	   CHNG D 0 A_SetPitch(pitch+0.25)
+	   CHNG DE 1
+	   CHNF B 0 A_SetPitch(pitch-0.25)
+	   CHNF B 0 A_FireCustomMissile("CasingSpawner",0,0,17,0)
+       CHNF B 1 Bright A_FireBullets (3,4,1,10,"XaserPuff")
+	   CHNG F 0 A_SetPitch(pitch+0.25)
+       CHNG FC 1
+	   CHNG D 0 A_ReFire("ContinueFiring")
+	   CHNG DDEEFFCCDDDDEEEEFFFFCCCCDDDDDDDDEEEEEEEEFFFFFFFFCCCCCCCC 1 A_WeaponReady
+	   TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+	   CHNG CB 1
+	   Goto Ready
+	QuadFire:
+	   TNT1 A 0 A_SetBlend("Blue", 0.50, 16)
+	   CHNF A 0 A_PlaySound("QuadDamage/Use")
+       CHNF A 0 A_SetPitch(pitch-0.25)
+	   CHNF A 0 A_FireCustomMissile("CasingSpawner",0,0,17,0)
+       CHNF A 1 Bright A_FireBullets (4,3,1,10,"XaserPuff")
+	   CHNG D 0 A_SetPitch(pitch+0.25)
+	   CHNG DE 1
+	   TNT1 A 0 A_SetBlend("Blue", 0.50, 16)
+	   CHNF A 0 A_PlaySound("QuadDamage/Use")
+	   CHNF B 0 A_SetPitch(pitch-0.25)
+	   CHNF B 0 A_FireCustomMissile("CasingSpawner",0,0,17,0)
+       CHNF B 1 Bright A_FireBullets (3,4,1,10,"XaserPuff")
+	   CHNG F 0 A_SetPitch(pitch+0.25)
+       CHNG FC 1
+	   CHNG D 0 A_ReFire("ContinueFiring")
+	   CHNG DDEEFFCCDDDDEEEEFFFFCCCCDDDDDDDDEEEEEEEEFFFFFFFFCCCCCCCC 1 A_WeaponReady
+	   TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+	   CHNG CB 1
+       Goto Ready
+    }
+}
+
+actor SPAS12 : Weapon
+{
+  Weapon.SelectionOrder 1250
+  Weapon.AmmoUse 1
+  Weapon.AmmoGive 8
+  Weapon.AmmoType "Shell"
+  Weapon.BobRangeX 0.3
+  Weapon.BobRangeY 0.5
+  Weapon.BobStyle InverseSmooth
+  Weapon.BobSpeed 2.0
+  Weapon.UpSound "spasup"
+  Inventory.PickupMessage "You got the ''Firestick'' SPAS-12! (3)"
+  Obituary "%o was shelled by %k's Firestick."
+  scale 0.5
+  decal "bulletchip"
+  Tag "Firestick"
+  States
+	{
+  Ready:
+	SHGG A 1 A_WeaponReady
+	TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+	Loop
+  Deselect:
+    SHGG A 1 A_Lower
+    SHGG A 0 A_Lower
+    Loop
+  Select:
+    SHGG A 1 A_Raise
+    SHGG A 0 A_Raise
+    Loop
+  Fire:
+	SHGG A 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
+    SHGG A 0 A_GunFlash
+	SHGG A 0 A_PlaySound("weapons/spasshot")
+    SHGG A 3 A_FireBullets (5, 0, 12, 8, "XaserPuff")
+	SHGG B 0 A_SetPitch(pitch-1)
+	SHGG B 1
+	SHGG C 1 A_SetPitch(pitch+0.50)
+	SHGG D 1 A_SetPitch(pitch+0.50)
+	SHGG EFG 1
+	SHGG A 0 A_SetPitch(pitch+0.50)
+	SHGG AA 3
+    SHGC ABCDEFGHIJKL 1
+	SHGC M 0 A_FireCustomMissile("ShotgunCasingSpawner",0,0,17,0)
+	SHGC M 0 A_PlaySound("weapons/spascock")
+	SHGC MNMLKJIHGFED 1
+    SHGC CB 1 A_TakeInventory("ShotAmmount",999)
+    SHGC A 1 A_ReFire
+    Goto Ready
+ QuadFire:
+	TNT1 A 0 A_SetBlend("Blue", 0.50, 16)
+	SHGG A 0 A_PlaySound("QuadDamage/Use")
+    SHGG A 0 A_GunFlash
+	SHGG A 0 A_PlaySound("weapons/spasshot", CHAN_WEAPON)
+    SHGG A 3 A_FireBullets (5, 0, 12, 8, "XaserPuff")
+	SHGG B 0 A_SetPitch(pitch-1)
+	SHGG B 1
+	SHGG C 1 A_SetPitch(pitch+0.50)
+	SHGG D 1 A_SetPitch(pitch+0.50)
+	SHGG EFG 1
+	SHGG A 0 A_SetPitch(pitch+0.50)
+	SHGG AA 3
+    SHGC ABCDEFGHIJKL 1
+	SHGC M 0 A_FireCustomMissile("ShotgunCasingSpawner",0,0,17,-20)
+	SHGC M 0 A_PlaySound("weapons/spascock")
+	SHGC MNMLKJIHGFED 1
+    SHGC CB 1 A_TakeInventory("ShotAmmount",999)
+    SHGC A 1 A_ReFire
+    Goto Ready
+  Flash:
+    SHGF A 3 Bright A_Light2
+    Goto LightDone
+  Spawn:
+    SHGP A -1
+    Stop
+  }
+}
+
+ACTOR ShotAmmount : Ammo
+{
+	Inventory.MaxAmount 8
+	Ammo.BackpackAmount 0
+	Ammo.BackpackMaxAmount 8
+}
+
+ACTOR 40mmGrenadeLauncher : Weapon //29010
+{
+	Inventory.PickupMessage "You got the ''Pineapple Jammer'' 40mm Grenade Launcher! (5)"
+	Weapon.Ammogive 10
+	Weapon.AmmoType "40mmGrenades"
+	Weapon.AmmoUse 1
+	Weapon.SelectionOrder 400
+	Weapon.SlotNumber 5
+	+WEAPON.EXPLOSIVE
+	Obituary "%o was blown up by %k's Pineapple Jammer."
+	Tag "Pineapple Jammer"
+	Weapon.UpSound "BOLT1R"
+	Weapon.BobRangeX 0.3
+	Weapon.BobRangeY 0.5
+	Weapon.BobStyle InverseSmooth
+	Weapon.BobSpeed 2.0
+	States
+	{
+	Pickup:
+		TNT1 A 0 A_PlaySound("player/gun")
+	Ready:
+		RGLG A 1 A_WeaponReady
+		TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+		Loop
+	Select:
+		RGLG A 1 A_Raise
+		RGLG A 0 A_Raise
+		TNT1 A 0 A_GiveInventory("BotExplosiveWeapon")
+		Loop
+	Deselect:
+		RGLG A 1 A_Lower
+		RGLG A 0 A_Lower
+		TNT1 A 0 A_TakeInventory("BotExplosiveWeapon")
+		Loop
+	Fire:
+		RGLG A 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
+		RGLG BC 1
+		RGLG D 0 A_GunFlash 
+		RGLG D 0 A_PlayWeaponSound ("40mm/grenfire")
+		RGLG D 0 A_FireCustomMissile ("40mmShot", 0, 1, 1, 10, 1)
+		RGLG D 1 A_SetPitch(pitch-1)
+	    RGLG EF 1 A_SetPitch(pitch+0.50)
+		RGLG GHIJKLMNO 1
+		RGLG A 5 
+		RGLG A 5 A_ReFire
+		Goto Ready
+	QuadFire:
+		TNT1 A 0 A_SetBlend("Blue", 0.50, 16)
+		RGLG A 0 A_PlaySound("QuadDamage/Use")
+		RGLG BC 1
+		RGLG D 0 A_GunFlash 
+		RGLG D 0 A_PlayWeaponSound ("40mm/grenfire")
+		RGLG D 0 A_FireCustomMissile ("40mmShot", 0, 1, 1, 10, 1)
+		RGLG D 1 A_SetPitch(pitch-1)
+	    RGLG EF 1 A_SetPitch(pitch+0.50)
+		RGLG GHIJKLMNO 1
+		RGLG A 5 
+		RGLG A 5 A_ReFire
+		Goto Ready
+	Flash:
+		RGLG D 1 BRIGHT A_Light1
+		RGLG E 1 BRIGHT A_Light2
+		Goto LightDone
+	Spawn:
+		GLMM A -1
+		Stop
+	}
+}
+
+ACTOR 40mmShot
+{
+	Radius 8
+	Height 8
+	Damage 25
+	Speed 50
+	Scale 0.75
+	BounceSound "40mm/grenbounce"
+	Projectile
+	-NOGRAVITY
+	States
+	{
+	Spawn:
+		SHRP O 3 bright A_SpawnItemEX("GrenadeSmoke",0,0,0,0,0,0,0,2)
+		SHRP O 0 A_CountDown
+		Loop
+	Death:
+		MIS6 B 0 A_NoGravity
+		ZXPL A 0 A_PlaySound("explosion/distant", CHAN_AUTO)
+		ZXPL A 0 A_PlaySound("newexplosion")
+		BEXP D 0 A_SpawnItem("ExplosionSpawner")
+		Stop
+	}
+}
+
+ACTOR 40mmTimedShot : 40mmShot
+{
+	ReactionTime 30
+	Speed 30
+	Damage 1
+	+HEXENBOUNCE
+	+BOUNCEONACTORS
+	+EXTREMEDEATH
+	+CANBOUNCEWATER
+	States
+	{
+	Death:
+		MIS6 B 0 A_NoGravity
+		MIS6 B 3 bright A_SetTranslucent (0.85,1)
+		MIS6 C 3 bright A_Explode //(200, 200, 0)
+		MIS6 DEF 3 bright 
+		Stop
+	}
+}
+
+ACTOR GrenadeSmoke
+{   
+   Radius 0
+   Height 1
+   Speed 0
+   Projectile
+   Scale 0.75
+   Renderstyle Translucent
+   Alpha 0.45
+   States
+   {
+   Spawn:
+      NULL A 3 bright
+      SMK2 ABCDE 2 Bright
+      Stop 
+   }
+}
+
+ACTOR 40mmGrenades : Ammo //5567
+{
+	Inventory.Amount 5
+	Inventory.MaxAmount 50
+	Ammo.BackpackAmount 5
+	Ammo.BackpackMaxAmount 100
+	Inventory.PickupSound "grenade/get1"
+	Inventory.PickupMessage "Picked up some 40mm grenades. (Ammo for Pineapple Jammer)"
+	Inventory.Icon "40MMA0"
+	States
+	{
+	Spawn:
+		40MM A -1
+		Stop
+	}
+}
+
+ACTOR 40mmGrenadeBox : 40mmGrenades //5568
+{
+	Inventory.Amount 15
+	Inventory.PickupSound "grenade/get2"
+	Inventory.PickupMessage "Picked up a box of 40mm grenades. (Ammo for Pineapple Jammer)"
+	States
+	{
+	Spawn:
+		40BX A -1
+		Stop
+	}
+}
+
+actor PlasmaCannon : Weapon
+{
+	Weapon.BobRangeX 0.3
+	Weapon.BobRangeY 0.5
+	Weapon.BobStyle InverseSmooth
+	Weapon.BobSpeed 2.0
+    Weapon.SlotNumber 6
+    Weapon.SelectionOrder 100
+    Weapon.AmmoGive 25
+    Weapon.AmmoType "NewCell"
+	Weapon.AmmoUse 1
+	Obituary "%o tasted %k's Excessive Force."
+	Tag "Excessive Force"
+    Inventory.Pickupmessage "You got the ''Excessive Force'' Plasma Cannon! (6)"
+    Weapon.upsound "duke/weaponup"
+    Scale 0.75
+    States
+    {
+      Spawn:
+        NCHG Z -1
+        Stop
+	Pickup:
+		TNT1 A 0 A_PlaySound("player/gun")
+	Ready:
+		NCHG A 1 A_WeaponReady
+		TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
+		Loop
+	Select:
+		NCHG A 1 A_Raise
+		NCHG A 0 A_Raise
+		Loop
+	Deselect:
+		NCHG A 1 A_Lower
+		NCHG A 0 A_Lower
+		Loop
+	Fire:
+		NCHG A 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
+		NCHG A 0 A_PlayWeaponSound ("plasma/fire")
+		NCHG B 1 Bright A_Light1
+	    NCHG B 0 A_SetPitch(pitch-1)
+		NCHG B 0 A_FireBullets(5.6, 0, 1, 25,"PlasmaCannonPuff")
+		NCHG C 1 A_Light0
+		NCHG D 1 A_SetPitch(pitch+0.50)
+		NCHG E 1 A_SetPitch(pitch+0.50)
+		NCHG A 1 A_ReFire
+		Goto Ready
+	QuadFire:
+		TNT1 A 0 A_SetBlend("Blue", 0.50, 16)
+		NCHG A 0 A_PlaySound("QuadDamage/Use")
+		NCHG A 0 A_PlayWeaponSound ("plasma/fire")
+		NCHG B 1 Bright A_Light1
+	    NCHG B 0 A_SetPitch(pitch-1)
+		NCHG B 0 A_FireBullets(5.6, 0, 1, 25,"PlasmaCannonPuff")
+		NCHG C 1 A_Light0
+		NCHG D 1 A_SetPitch(pitch+0.50)
+		NCHG E 1 A_SetPitch(pitch+0.50)
+		NCHG A 1 A_ReFire
+		Goto Ready
+	}
+}		  
+
+ACTOR NewCell : Ammo
+{
+  Inventory.PickupMessage "Picked up a lesser plasma charge. \cf(\cjAmmo for slot 6\cf)"
+  Inventory.Amount 20
+  Inventory.MaxAmount 300
+  Ammo.BackpackAmount 20
+  Ammo.BackpackMaxAmount 600
+  Inventory.PickupSound "cell/get1"
+  Inventory.Icon "CELLA0"
+  States
+  {
+  Spawn:
+    CELL A -1
+    Stop
+  }
+}
+
+ACTOR NewCellPack : NewCell
+{
+  Inventory.PickupMessage "Picked up a greater plasma charge. \cf(\cjAmmo for slot 6\cf)"
+  Inventory.PickupSound "cell/get2"
+  Inventory.Amount 100
+  States
+  {
+  Spawn:
+    CELP A -1
+    Stop
+  }
+}
+
+Actor SmallMana : Ammo
+{
+	Inventory.Amount 50
+	Inventory.MaxAmount 450
+	Ammo.BackpackAmount 50
+	Ammo.BackpackMaxAmount 900
+	Inventory.PickupSound "mana/smallget"
+	Inventory.PickupMessage "Picked up a vial of mana. \cf(\cjAmmo for slot 7\cf)"
+	Inventory.Icon "HPP1B0"
+	+FLOATBOB
+	States
+	{
+	Spawn:
+		HPP1 A -1 Bright 
+		Stop
+	}
+}
+
+ACTOR LargeMana : SmallMana
+{
+	Inventory.Amount 150
+	Inventory.PickupSound "mana/largeget"
+	Inventory.PickupMessage "Picked up a jar of mana. \cf(\cjAmmo for slot 7\cf)"
+	States
+	{
+	Spawn:
+		HPP2 A -1 Bright
+		Stop
+	}
+}
+
+//Original spent casing code made by HellCattX and Lippeth
+ACTOR CasingSpawner
+{
+	+MISSILE
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+DROPOFF
+	+NOTELEPORT
+	+FORCEXYBILLBOARD
+	+NOTDMATCH
+	+GHOST
+	+NOINTERACTION
+	Radius 1
+	Height 1
+	Mass 1
+	Damage 0
+	Speed 20
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1
+		TNT1 A 0 A_CustomMissile("BulletCasing",0,0,random(-80,-100),2,random(45,80))
+		TNT1 A 0
+		Stop
+	}
+}
+
+ACTOR BulletCasing
+{
+   Height 3
+   Radius 3
+   Speed 2
+        Mass 5
+   Scale 0.16
+   PROJECTILE
+   +DOOMBOUNCE
+   -NOGRAVITY
+        -NOBLOCKMAP
+   SeeSound "casings/bullet/bounce"
+   States
+   {
+   Spawn:
+      BCAS A 0 A_CustomMissile("CasingSmoketrail",0,0,0)
+      BCAS ABCDEFGH 1
+      Loop
+   Death:
+         TNT1 A 0 A_jump(128,10)
+         TNT1 A 0 A_jump(128,8)
+         TNT1 A 0 A_jump(128,6)
+         TNT1 A 0 A_jump(128,4)
+      TNT1 A 0 A_jump(128,2)
+           BCAS H -1
+           stop
+           BCAS I -1
+           stop
+           BCAS K -1
+           stop
+           BCAS J -1
+           stop
+           BCAS K -1
+           stop
+           BCAS L -1
+           stop
+   }
+}
+
+ACTOR ShotgunCasingSpawner : CasingSpawner
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1
+		TNT1 A 0 A_CustomMissile("ShellCasing",0,0,random(-80,-100),2,random(45,80))
+		TNT1 A 0
+		Stop
+	}
+}
+
+ACTOR ShellCasing : BulletCasing
+{
+   Scale 0.26
+   SeeSound "casings/shell/bounce"
+   States
+   {
+
+   Spawn:
+      SCAS A 0 A_CustomMissile("CasingSmoketrail",0,0,0)
+      SCAS ABCDEFGH 1
+      Loop
+   Death:
+         TNT1 A 0 A_jump(128,10)
+         TNT1 A 0 A_jump(128,8)
+         TNT1 A 0 A_jump(128,6)
+         TNT1 A 0 A_jump(128,4)
+      TNT1 A 0 A_jump(128,2)
+           SHDY A -1
+           stop
+           SHDY B -1
+           stop
+           SHDY C -1
+           stop
+           SHDY D -1
+           stop
+           SHDY E -1
+           stop
+           SHDY F -1
+           stop
+   }
+}
+
+ACTOR CasingSmoketrail 
+{
+   Speed 2
+   Height 2
+   Radius 4
+   PROJECTILE
+   +NOGRAVITY
+   Scale 0.25
+   RenderStyle Add
+   Alpha 0.2
+   States
+   {
+   Spawn:
+      SMOK A 0
+      goto death       
+   Death: 
+      SMOK ABCDEFGHIJKLMNOPQR 1
+      STOP      
+   }
+}
+
+actor DukeGibs1
+{
+  Radius 4
+  Height 4
+  Speed 0
+  Projectile
+  -NOGRAVITY
+  Gravity 0.5
+  health 1
+  scale 0.5
+  DeathSound "Gib/Land"
+  States
+  {
+  Spawn:
+    DGB1 ABCD 5
+    loop
+  Death:
+    DGB6 CDEFGH 5
+    stop
+  }
+}
+
+actor DukeGibs2 : DukeGibs1
+{
+  States
+  {
+  Spawn:
+    DGB2 ABCD 5
+    loop
+  Death:
+    DGB6 CDEFGH 5
+    stop
+  }
+}
+
+actor DukeGibs3 : DukeGibs1
+{
+  health 4
+  States
+  {
+  Spawn:
+    DGB3 ABCD 5
+    loop
+  Death:
+    DGB6 CDEFGH 5
+    stop
+  }
+}
+actor DukeGibs4 : DukeGibs1
+{
+  States
+  {
+  Spawn:
+    DGB4 ABCD 5
+    loop
+  Death:
+    DGB6 CDEFGH 5
+    stop
+  }
+}
+
+actor DukeGibs5 : DukeGibs1
+{
+  States
+  {
+  Spawn:
+    DGB5 ABCD 5
+    loop
+  Death:
+    DGB6 CDEFGH 5
+    stop
+  }
+}
+
+actor DukeGibs6 : DukeGibs1
+{
+  health 4
+  States
+  {
+  Spawn:
+    DGB6 AB 5
+    loop
+  Death:
+    DGB6 CDEFGH 5
+    stop
+  }
+}
+
+actor HLGoreSkull : DukeGibs1
+{
+  Radius 3
+  Height 4
+  Speed 0
+  Projectile
+  -NOGRAVITY
+  Gravity 0.5
+  health 1
+  scale 0.10
+  BounceCount 6
+  BounceFactor 0.75
+  States
+  {
+  Spawn:
+    HGB0 ABCDEFGHI 2
+    loop
+  Death:
+    DGB6 CDEFGH 5
+    stop
+  }
+}
+
+actor ChexGibs1
+{
+  Radius 4
+  Height 4
+  Speed 0
+  Projectile
+  -NOGRAVITY
+  Gravity 0.5
+  health 1
+  scale 0.5
+  DeathSound "Gib/Land"
+  Translation "32:47=112:127", "184:191=160:167", "232:235=124:127"
+  States
+  {
+  Spawn:
+    DGB1 ABCD 5
+    loop
+  Death:
+    DGB6 CDEFGH 5
+    stop
+  }
+}
+
+actor ChexGibs2 : ChexGibs1
+{
+  States
+  {
+  Spawn:
+    DGB2 ABCD 5
+    loop
+  Death:
+    DGB6 CDEFGH 5
+    stop
+  }
+}
+
+actor ChexGibs3 : ChexGibs1
+{
+  health 4
+  States
+  {
+  Spawn:
+    DGB3 ABCD 5
+    loop
+  Death:
+    DGB6 CDEFGH 5
+    stop
+  }
+}
+actor ChexGibs4 : ChexGibs1
+{
+  States
+  {
+  Spawn:
+    DGB4 ABCD 5
+    loop
+  Death:
+    DGB6 CDEFGH 5
+    stop
+  }
+}
+
+actor ChexGibs5 : ChexGibs1
+{
+  States
+  {
+  Spawn:
+    DGB5 ABCD 5
+    loop
+  Death:
+    DGB6 CDEFGH 5
+    stop
+  }
+}
+
+actor ChexGibs6 : ChexGibs1
+{
+  health 4
+  States
+  {
+  Spawn:
+    DGB6 AB 5
+    loop
+  Death:
+    DGB6 CDEFGH 5
+    stop
+  }
+}
+
+Actor 2GramsofCocaCola : Health Replaces HealthBonus
+{
+	Game Doom
+	+INVENTORY.ALWAYSPICKUP
+	Inventory.Amount 2
+	Inventory.MaxAmount 250
+	Tag "Coca-Cola"
+	Inventory.PickupMessage "Drank a can of Coca-Cola. \cf(\cj+2 health\cf)"
+	Inventory.PickupSound "coke/up"
+	scale 0.2
+	states
+	{
+	Spawn:
+		COLA ABCDEFG 3
+		Loop
+	}
+}
+
+Actor 5GramsofCocaCola : 2GramsofCocaCola
+{
+	Game Doom
+	+INVENTORY.ALWAYSPICKUP
+	Inventory.Amount 5
+	Inventory.MaxAmount 500
+	Tag "Coca-Cola Zero"
+	Inventory.PickupMessage "Drank a can of Coca-Cola Zero. \cf(\cj+5 health\cf)"
+	Inventory.PickupSound "coke/up"
+	scale 0.2
+	states
+	{
+	Spawn:
+		ZCAF ABCDEFG 3
+		Loop
+	}
+}
+
+ACTOR Apple : Stimpack
+{
+  Inventory.Amount 10
+  Inventory.PickupMessage "Ate an apple. \cf(\cj10 health\cf)"
+  Inventory.PickupSound "eating/apple"
+  States
+  {
+  Spawn:
+    APPY A -1
+    Stop
+  }
+}
+
+ACTOR Grapes : Stimpack
+{
+  Inventory.Amount 10
+  Inventory.PickupMessage "Ate a set of grapes. \cf(\cj10 health\cf)"
+  Inventory.PickupSound "eating/orange"
+  States
+  {
+  Spawn:
+    GRAP A -1
+    Stop
+  }
+}
+
+ACTOR Orange : Stimpack
+{
+  Inventory.Amount 10
+  Inventory.PickupMessage "Ate an orange. \cf(\cj10 health\cf)"
+  Inventory.PickupSound "eating/orange"
+  States
+  {
+  Spawn:
+    ORNG A -1
+    Stop
+  }
+}
+
+ACTOR Hamburg : Medikit
+{
+  Inventory.Amount 25
+  Tag "Hamburger"
+  Inventory.PickupMessage "Ate a hamburger. \cf(\cj25 health\cf)"
+  Health.LowMessage 25, "Found a hamburger!"
+  Inventory.PickupSound "eating/burger"
+  States
+  {
+  Spawn:
+    HMBG A -1
+    Stop
+  }
+}
+
+ACTOR EntireChickenYouWeirdo : Medikit
+{
+  Inventory.Amount 25
+  Tag "Chicken"
+  Inventory.PickupMessage "Ate an entire chicken. \cf(\cj25 health\cf)"
+  Health.LowMessage 25, "Found an entire chicken!"
+  Inventory.PickupSound "eating/burger"
+  States
+  {
+  Spawn:
+    CHKN A -1
+    Stop
+  }
+}
+
+ACTOR PizzaZone : Medikit
+{
+  Inventory.Amount 25
+  Tag "Pizza"
+  Inventory.PickupMessage "Gourged on an entire pizza. \cf(\cj25 health\cf)"
+  Health.LowMessage 25, "Found an entire pizza!"
+  Inventory.PickupSound "eating/orange"
+  States
+  {
+  Spawn:
+    PIZA A -1
+    Stop
+  }
+}
+
+Actor ArmorShard : BasicArmorBonus Replaces ArmorBonus
+{
+	+INVENTORY.ALWAYSPICKUP
+	Armor.SaveAmount 5
+	Armor.MaxSaveAmount 250
+	Armor.SavePercent 25
+	Inventory.PickupMessage "Slapped on an armor shard. \cf(\cj+5 armor\cf)"
+	Inventory.PickupSound "misc/ar2_pkup"
+	states
+	{
+	Spawn:
+		BON2 ABCDCBA 3 BRIGHT
+		Loop
+	}
+}
+
+Actor SuperArmorShard : BasicArmorBonus
+{
+	+INVENTORY.ALWAYSPICKUP
+	Armor.SaveAmount 10
+	Armor.MaxSaveAmount 500
+	Armor.SavePercent 50
+	Inventory.PickupMessage "Slapped on an super armor shard. \cf(\cj+10 armor\cf)"
+	Inventory.PickupSound "misc/ar2_pkup"
+	states
+	{
+	Spawn:
+		BON4 ABCDCBA 3 BRIGHT
+		Loop
+	}
+}
+
+ACTOR LightArmorVest : GreenArmor replaces GreenArmor
+{
+  Radius 20
+  Height 16
+  Inventory.PickupMessage "You are now wearing a light armor vest. \cf(\cj100 armor, 25% protection\cf)"
+  Inventory.Icon "ARM1A0"
+  Armor.SavePercent 25
+  Armor.SaveAmount 100
+  Inventory.PickupSound "ARMOR1"
+  States
+  {
+  Spawn:
+    ARM1 A 7
+    ARM1 A 7 Bright
+    Loop
+  }
+}
+
+ACTOR StrongArmorVest : GreenArmor
+{
+  Radius 20
+  Height 16
+  Inventory.PickupMessage "You are now wearing a strong armor vest. \cf(\cj150 armor, 50% protection\cf)"
+  Inventory.Icon "ARM3A0"
+  Armor.SavePercent 50
+  Armor.SaveAmount 150
+  Inventory.PickupSound "ARMOR2"
+  States
+  {
+  Spawn:
+    ARM3 A 7
+    ARM3 A 7 Bright
+    Loop
+  }
+}
+
+ACTOR HeavyArmorVest : BlueArmor replaces BlueArmor
+{
+  Radius 20
+  Height 16
+  Inventory.PickupMessage "You are now wearing a heavy armor vest. \cf(\cj200 armor, 75% protection\cf)"
+  Inventory.Icon "ARM2A0"
+  Armor.SavePercent 75
+  Armor.SaveAmount 200
+  Inventory.PickupSound "ARMOR3"
+  States
+  {
+  Spawn:
+    ARM2 A 7
+    ARM2 A 7 Bright
+    Loop
+  }
+}
+
+ACTOR PraetorArmorVest : BlueArmor
+{
+  Radius 20
+  Height 16
+  Inventory.PickupMessage "You are now protected by the praetor armor vest! \cf(\cj250 armor, 95% protection\cf)"
+  Inventory.Icon "ARM4A0"
+  Armor.SavePercent 95
+  Armor.SaveAmount 250
+  Inventory.PickupSound "ARMOR4"
+  States
+  {
+  Spawn:
+    ARM4 A 7
+    ARM4 A 7 Bright
+    Loop
+  }
+}
+
+ACTOR InvulnerabilitySphere_  : PowerupGiver Replaces InvulnerabilitySphere
+{
+	Game Doom
+	SpawnID 133
+	+COUNTITEM
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	+INVENTORY.BIGPOWERUP
+	Inventory.MaxAmount 0
+	Powerup.Type Invulnerable
+	Powerup.Color "Yellow", 0.05
+	Inventory.PickupMessage "\c[green]Invulnerability!"
+	Inventory.PickupSound "INVULGET"
+	Scale 0.82
+	RenderStyle Add
+	+FLOATBOB
+	States
+	{
+	Spawn:
+		PINV AAAAAAAAAAAAAAAAAAAABCDDDDDDDDDDDDDDDDDDDDCB 3 Bright
+		Loop
+	}
+}
+
+ACTOR LifeSphere : Health Replaces SoulSphere
+{
+	+COUNTITEM
+	+INVENTORY.ALWAYSPICKUP
+	Inventory.PickupMessage "\c[blue]Soulsphere!"
+	Scale 0.82
+	Inventory.PickupSound "soulget"
+	Inventory.Amount 100
+	Inventory.MaxAmount 250
+	RenderStyle Add
+	+FLOATBOB
+	States
+	{
+	Spawn:
+		SOUL AAAAAAAAAAAAAAAAAAAABCDDDDDDDDDDDDDDDDDDDDCB 3 Bright
+		Loop
+	}
+}
+
+ACTOR EnergySphere : CustomInventory Replaces Megasphere
+{
+	+COUNTITEM
+	+INVENTORY.ALWAYSPICKUP
+	Inventory.PickupMessage "\c[Tan]Megasphere!"
+	Inventory.PickupSound "megaget"
+	Scale 0.82
+	RenderStyle Add
+	+FLOATBOB
+	States
+	{
+	Spawn:
+		MEGA ABCD 3 BRIGHT
+		Loop
+	Pickup:
+		TNT1 A 0 A_GiveInventory("BlueArmorForMegasphere", 1)
+		TNT1 A 0 A_GiveInventory("NewMegasphereHealth", 1)
+		Stop
+	}
+}
+
+ACTOR NewMegasphereHealth : Health
+{
+  Inventory.Amount 200
+  Inventory.MaxAmount 200
+  +INVENTORY.ALWAYSPICKUP
+}
+
+ACTOR NewAllmap : MapRevealer replaces Allmap
+{
+  +COUNTITEM
+  +INVENTORY.FANCYPICKUPSOUND
+  +INVENTORY.ALWAYSPICKUP
+  Inventory.MaxAmount 0
+  Inventory.PickupSound "pc/pick"
+  Inventory.PickupMessage "Automap downloaded!"
+  States
+  {
+  Spawn:
+	PMAP A 0
+    PMAP A 0 A_PlaySound("pc/idle", CHAN_AUTO, 1.0, 1)
+	Goto Idle
+  Idle:
+    PMAP ABCBAD 3 Bright
+    Loop
+  }
+}
+
+ACTOR PowerDoubleDamage : PowerDamage
+{
+	Damagefactor "normal", 2
+}
+
+ACTOR DoubleSphere : PowerupGiver
+{
+	+COUNTITEM
+	+NOGRAVITY
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	+FLOATBOB
+	Inventory.MaxAmount 0
+	Powerup.Type DoubleDamage
+	Powerup.Color RedMap
+	Powerup.Duration -30
+	RenderStyle Add
+	Inventory.PickupMessage "\cgDouble Damage!\c-"
+	Inventory.PickupSound "DoubleDamage/Pickup"
+	States
+	{
+	Spawn:
+		DDMG AAAAAAAAAAAAAAAAAAAABCCCCCCCCCCCCCCCCCCCCB 3 Bright
+		Loop
+	}
+}
+
+Actor PowerQuadDamageST : PowerDamage
+{
+Damagefactor "Normal", 4
+}
+
+Actor QuadDamage : PowerupGiver
+{
+  +CountItem
+  +Inventory.AutoActivate
+  +Inventory.AlwaysPickup
+  Inventory.MaxAmount 0
+  Powerup.Type QuadDamageST
+  Powerup.Color Blue, 0.3
+  powerup.duration 1050
+  Inventory.PickupMessage "\c[LightBlue]Quad Damage!\c-"
+  Inventory.PickupSound "QuadDamage/Pickup"
+  Scale 0.82
+  RenderStyle Add
+  +FLOATBOB
+  States
+  {
+  Spawn:
+	QDMG A 10
+    Loop
+  }
+}
+
+Actor BioSuit : CustomInventory replaces RadSuit
+{
+  -CountItem
+  +Inventory.AlwaysPickup
+  +Inventory.AutoActivate
+  Inventory.MaxAmount 0
+  Inventory.PickupMessage "Put on a bio-suit."
+  Inventory.PickupSound "RADS"
+  States
+  {
+  Spawn:
+    BIOS A -1
+    Loop
+  Pickup:
+    TNT1 A 0 A_GiveInventory("BioSuitFeet", 1)
+    TNT1 A 0 A_GiveInventory("BioSuitProtector", 1)
+    Stop
+  }
+}
+
+Actor BioSuitFeet : PowerupGiver
+{
+  +Inventory.AutoActivate
+  +Inventory.AlwaysPickup
+  Inventory.MaxAmount 0
+  Inventory.PickupMessage ""
+  Powerup.Type "IronFeet"
+  Powerup.Duration -120
+  Powerup.Color "Green", 0.1
+  States
+  {
+  Spawn:
+    TNT1 A 1
+    Fail
+  }
+}
+
+Actor PowerBioSuitProtection : PowerProtection
+{
+  DamageFactor "Poison", 0.1
+  //Add your custom poison-ish damagetypes here!
+}
+
+Actor BioSuitProtector : PowerupGiver
+{
+  +Inventory.AutoActivate
+  +Inventory.AlwaysPickup
+  Inventory.MaxAmount 0
+  Inventory.PickupMessage ""
+  Powerup.Type BioSuitProtection
+  Powerup.Duration -120
+  States
+  {
+  Spawn:
+    TNT1 A 1
+    Fail
+  }
+}
+
+ACTOR SmallSoul : ArmorShard
+{
+	-COUNTITEM
+	+INVENTORY.ALWAYSPICKUP
+	Inventory.PickupMessage "You feel a minor surge of protection and power. \cf(\cj+5 armor\cf)"
+	Scale 0.53
+	Armor.SaveAmount 5
+	Armor.MaxSaveAmount 999
+	Inventory.PickupSound "eating/heart"
+	+FLOATBOB
+	States
+	{
+	Spawn:
+		HHRT AAAAAAAAAAAAAAAAAAAABCCCCCCCCCCCCCCCCCCCCB 3 Bright
+		Loop
+	}
+}
+
+ACTOR LargeSoul : SmallSoul
+{
+	Inventory.PickupMessage "You feel a major surge of protection and power! \cf(\cj+10 armor\cf)"
+	Scale 0.7
+	Armor.SaveAmount 10
+	Inventory.PickupSound "eating/swollenheart"
+	States
+	{
+	Spawn:
+		BHRT ABCD 4 Bright
+		Loop
+	}
+}
+
+ACTOR BetterBackpack : Backpack replaces Backpack
+{
+  Height 26
+  Inventory.PickupMessage "Picked up a leather backpack full to the brim of goodies!"
+  Inventory.PickupSound "backpack/get"
+  States
+  {
+  Spawn:
+    BPAK A -1
+    Stop
+  }
+}
+
+ACTOR RocketAmmo2 : RocketAmmo
+{
+  Inventory.PickupSound "rocket/get"
+  Inventory.PickupMessage "Picked up a missile. \cf(\cjAmmo for slot 5\cf)"
+}
+
+ACTOR RocketBox2 : RocketBox
+{
+  Inventory.PickupSound "rocketbox/get"
+  Inventory.PickupMessage "Picked up a crate full of missiles. \cf(\cjAmmo for slot 5\cf)"
+}
+
+Actor Clip2 : Ammo
+{
+	Scale .58
+	Game Doom
+	+FLOORCLIP
+	+DONTGIB
+	Inventory.Amount 10
+	Inventory.MaxAmount 200
+	Ammo.BackpackAmount 10
+	Ammo.BackpackMaxAmount 400
+	Inventory.PickupSound "pistolmagazine/get"
+	Inventory.Icon "PISAA0"
+	Inventory.PickupMessage "Picked up a pistol magazine. \cf(\cjAmmo for slot 2\cf)"
+	States
+	{
+	Spawn:
+		PISA A -1
+		Stop
+	}
+}
+
+Actor ClipBox2 : Clip2
+{
+	Game Doom
+	+FLOORCLIP
+	+DONTGIB
+	Scale 1.15
+	Inventory.Amount 30
+	Ammo.BackpackAmount 30
+	Inventory.PickupSound "pistolbox/get"
+	Inventory.Icon "PISAA0"
+	Inventory.PickupMessage "Picked up a box of pistol rounds. \cf(\cjAmmo for slot 2\cf)"
+	States
+	{
+	Spawn:
+		BBOX A -1
+		Stop
+	}
+}
+
+Actor Clip3 : Ammo
+{
+	Game Doom
+	+FLOORCLIP
+	+DONTGIB
+	Inventory.Amount 15
+	Inventory.MaxAmount 300
+	Ammo.BackpackAmount 15
+	Ammo.BackpackMaxAmount 600
+	Inventory.PickupSound "bulletmagazine/get"
+	Inventory.Icon "BLITA0"
+	Inventory.PickupMessage "Picked up a chain of bullets. \cf(\cjAmmo for slot 4\cf)"
+	States
+	{
+	Spawn:
+		BLIT A -1
+		Stop
+	}
+}
+
+Actor ClipBox3 : Clip3
+{
+	Game Doom
+	+FLOORCLIP
+	+DONTGIB
+	Inventory.Amount 100
+	Ammo.BackpackAmount 100
+	Scale 0.65
+	Inventory.Icon "BLITA0"
+	Inventory.PickupSound "bulletbox/get"
+	Inventory.PickupMessage "Picked up a box of bullet chains. \cf(\cjAmmo for slot 4\cf)"
+	States
+	{
+	Spawn:
+		CHGP B -1
+		Stop
+	}
+}
+
+Actor NewShells : Shell replaces Shell
+{
+	Scale 0.6
+	Inventory.PickupSound "shellclip/get"
+	Inventory.PickupMessage "Picked up a handful of shotgun shells. \cf(\cjAmmo for slot 3\cf)"
+}
+
+Actor NewShellBox : ShellBox replaces ShellBox
+{
+	Scale 0.6
+	Inventory.PickupSound "shellbox/get"
+	Inventory.PickupMessage "Picked up a case of shotgun shells. \cf(\cjAmmo for slot 3\cf)"
+}
+
+actor FistPuff
+{
+  +NOBLOCKMAP
+  +NOGRAVITY
+  +PUFFONACTORS
+  activesound ""
+  attacksound "Fist/Hit"
+  seesound "Fist/Hit"
+  DamageType "Fist"
+  states
+  {
+  Spawn:
+    TNT1 A 0
+    TNT1 A 1
+    stop
+  Crash:
+     TNT1 A 0
+     TNT1 A 1
+     stop
+  Melee:
+     TNT1 A 0
+     TNT1 A 1
+     stop
+  }
+}
+
+actor KickPuff
+{
+  +NOBLOCKMAP
+  +NOGRAVITY
+  +PUFFONACTORS
+  activesound ""
+  attacksound "FOOT/WALL"
+  seesound "FOOT/HIT"
+  DamageType "Foot"
+  states
+  {
+  Spawn:
+    TNT1 A 0
+    TNT1 A 1
+    stop
+  Crash:
+     TNT1 A 0
+     TNT1 A 1
+     stop
+  Melee:
+     TNT1 A 0
+     TNT1 A 1
+     stop
+  }
+}
+
+actor PlasmaCannonPuff
+{
+  VSpeed 1
+  +NOBLOCKMAP
+  +NOGRAVITY
+  +ALLOWPARTICLES
+  +RANDOMIZE
+  RenderStyle Translucent
+  scale 0.5
+  Alpha 0.5
+  States
+  {
+  Spawn:
+	NFZB AB 2 Bright
+  Melee:
+    NFZB CDEF 2 Bright
+    Stop
+  }
+}
+
+ACTOR NewExplosion
+{
+	RenderStyle "Add"
+	+NOINTERACTION
+	+CLIENTSIDEONLY
+	+FORCEXYBILLBOARD
+	+NOBLOCKMAP
+	+DONTSPLASH
+	+THRUACTORS
+	+NOTRIGGER
+	+NOBLOCKMONST
+	+NOTONAUTOMAP
+	+CANNOTPUSH
+	Radius 0.5
+	Height 1
+	Gravity 0.66
+	+BRIGHT
+	Alpha 0.99
+	Scale 1.5
+	DamageType GMIDExplosion
+	States
+	{
+	Spawn:
+		ZXPL A 0 A_Quake(4,12,0,400)
+		ZXPL A 0 A_Quake(2,12,0,800)
+		ZXPL A 0 A_Explode(175,148)
+		ZXPL ABC 3
+		ZXPL D 3 A_SpawnItem("ExplosionSmoke")
+		ZXPL EFGHIJKLMN 3
+		Stop
+	}
+}
+
+ACTOR NewExplosion2
+{
+	RenderStyle "Add"
+	+NOINTERACTION
+	+CLIENTSIDEONLY
+	+FORCEXYBILLBOARD
+	+NOBLOCKMAP
+	+DONTSPLASH
+	+THRUACTORS
+	+NOTRIGGER
+	+NOBLOCKMONST
+	+NOTONAUTOMAP
+	+CANNOTPUSH
+	Radius 0.5
+	Height 1
+	Gravity 0.66
+	+BRIGHT
+	Alpha 0.99
+	Scale 1.6640625
+	DamageType GMIDExplosion
+	States
+	{
+	Spawn:
+		YXPL A 0 A_Quake(4,12,0,400)
+		YXPL A 0 A_Quake(2,12,0,800)
+		YXPL A 0 A_Explode(175,148)
+		YXPL ABC 3
+		YXPL D 3 A_SpawnItem("ExplosionSmoke")
+		YXPL EFGHIJKLMNOPQ 3
+		Stop
+	}
+}
+
+ACTOR ExplosionSmoke
+{
+	RenderStyle "Shaded"
+	+NOINTERACTION
+	+CLIENTSIDEONLY
+	+FORCEXYBILLBOARD
+	+NOBLOCKMAP
+	+DONTSPLASH
+	+THRUACTORS
+	+NOTRIGGER
+	+NOBLOCKMONST
+	+NOTONAUTOMAP
+	+CANNOTPUSH
+	Radius 0.5
+	Height 1
+	Gravity 0.66
+	Alpha 1.0
+	Scale 1.5
+	States
+	{
+	Spawn:
+		SMK0 ABCDEFGHIJKLMNO 3
+		Stop
+	}
+}
+
+ACTOR XaserBarrel : ExplosiveBarrel replaces ExplosiveBarrel
+{
+	Obituary "%o was far too close to an explosive barrel."
+	+FIREDAMAGE
+	+PUSHABLE
+   States
+   {
+   Spawn:
+        BAR1 A 0
+        BAR1 A 0 A_Jump(20,13)
+        BAR1 A 0 A_Jump(20,13)
+        BAR1 A 0 A_Jump(20,13)
+        BAR1 A 0 A_Jump(20,13)
+        BAR1 A 0 A_Jump(20,13)
+        BAR1 A 0 A_Jump(20,13)
+        BAR1 A 0 A_Jump(20,13)
+        BAR1 A 0 A_Jump(20,13)
+        BAR1 A 0 A_Jump(20,13)
+        BAR1 A 0 A_Jump(20,13)
+        BAR1 A 0 A_Jump(20,13)
+        BAR1 A 0 A_Jump(20,13)
+   	BAR1 ABCDEFGHIJKLM 2
+   	Goto Spawn+13
+   Death:
+        BEXP ABC 2 BRIGHT
+		ZXPL A 0 A_PlaySound("explosion/distant", CHAN_AUTO)
+		ZXPL A 0 A_PlaySound("newexplosion")
+		BEXP D 0 A_SpawnItem("ExplosionSpawner")
+        TNT1 AAAAAAAAAAAAAAA 0 A_SpawnItemEx("BarrelParts",frandom(5.0,-5.0),frandom(5.0,-5.0),frandom(0.5,10.0),frandom(2.0,8.0),0,random(6.0,12.0),random(0,360)) 
+      Stop
+   }
+}
+
+ACTOR XaserBarrelShell
+{
+	+NOCLIP
+	States
+	{
+	Spawn:
+		BEXP RSTRSTRSTRSTRSTRSTRSTRSTRSTRSTRSTRSTRSTRSTRSTRSTRSTRSTRSTRSTRSTRSTRSTRST 5 BRIGHT
+      		BEXP U -1 A_SpawnItem("XaserBarrelShell2",1)
+		Stop
+	}
+}
+
+ACTOR XaserBarrelShell2
+{
+	+NOCLIP
+	Renderstyle Translucent
+	Alpha 1
+	States
+	{
+	Spawn:
+		BEXP A 0
+		BEXP RRRRRSSSSSTTTTTRRRRRSSSSSTTTTTRRRRRSSSSSTTTTTRRRRR 1 BRIGHT A_FadeOut (0.02)
+		Stop
+	}
+}
+
+ACTOR BarrelParts
+{
+   Radius 2
+   Height 2
+   Speed 0
+   Damage 0
+   Scale 0.3
+   ReactionTime 2
+   SeeSound ""
+   PROJECTILE
+   -NOGRAVITY
+   +HEXENBOUNCE
+   Scale 0.75
+   BounceSound "metal/hit"
+   DeathSound "metal/hit"
+   States
+   {
+   Spawn:
+      TNT1 A 0 A_Countdown
+      BARF AABBCCDDEE 2
+      TNT1 A 0 A_Jump(128,2)
+      TNT1 A 0 A_Countdown
+      BARF FFGGHHIIJJ 2
+      Loop
+   Death:
+      TNT1 A 1 A_SpawnItemEx("BarrelPartsDrop",0,0,0,0,0,0,128,0,0)
+      Stop
+   }
+}
+
+ACTOR BarrelPartsDrop
+{
+	+NOCLIP
+	Scale 0.75
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_SetTranslucent(1,0)
+		TNT1 A 0 A_Jump(255,"BARFA","BARFB","BARFC","BARFD","BARFE","BARFF","BARFG","BARFH","BARFI","BARFJ")
+	BARFA:
+		BARF A 200
+		BARF A 1 A_FadeOut(0.01)
+		Wait
+	BARFB:
+		BARF B 200
+		BARF B 1 A_FadeOut(0.01)
+		Wait
+	BARFC:
+		BARF C 200
+		BARF C 1 A_FadeOut(0.01)
+		Wait
+	BARFD:
+		BARF D 200
+		BARF D 1 A_FadeOut(0.01)
+		Wait
+	BARFE:
+		BARF E 200
+		BARF E 1 A_FadeOut(0.01)
+		Wait
+	BARFF:
+		BARF F 200
+		BARF F 1 A_FadeOut(0.01)
+		Wait
+	BARFG:
+		BARF G 200
+		BARF G 1 A_FadeOut(0.01)
+		Wait
+	BARFH:
+		BARF H 200
+		BARF H 1 A_FadeOut(0.01)
+		Wait
+	BARFI:
+		BARF I 200
+		BARF I 1 A_FadeOut(0.01)
+		Wait
+	BARFJ:
+		BARF J 200
+		BARF J 1 A_FadeOut(0.01)
+		Wait
+	}
+}
+
+ACTOR NewTeleportFog : TeleportFog replaces TeleportFog
+{
+  States
+  {
+  Spawn:
+    TFOG ABABABABABABABABABABABCDEFGHIJ 1 Bright
+    Stop
+  }
+}
+
+ACTOR XaserPuff replaces BulletPuff
+{
+    Mass		1
+	Radius		1
+	Height		1
+	RenderStyle ADD
+	Alpha		0.9
+	DamageType "Basic"
+	+NOGRAVITY
+	+NOBLOCKMAP
+	+FLOORCLIP
+	+FORCEXYBILLBOARD
+	Decal "BulletChip"
+	States
+	{
+	Spawn:
+		XPUF Q 0 BRIGHT
+		XPUF Q 0 A_SpawnItemEx("XaserPuffSmoke",0,0,4.0+0.1*random(-10,10),0,0,0,0,SXF_CLIENTSIDE,0)
+		XPUF Q 0 A_Jump(128, "PuffMirrored")
+		
+	PuffNormal:
+		XPUF Q 0 A_Jump(32, "PuffNormalAlt")
+		XPUF QRSTU 1 BRIGHT
+	  PuffNormalEnd:
+		XPUF FGH 1 BRIGHT
+		Stop
+	  PuffNormalAlt:
+		XPUF A 0 A_PlaySound("misc/ricochet")
+		XPUF ABCDE 1 BRIGHT
+		Goto PuffNormalEnd
+		
+	PuffMirrored:
+		XPUF V 0 A_Jump(32, "PuffMirroredAlt")
+		XPUF VWXYZ 1 BRIGHT
+	  PuffMirroredEnd:
+		XPUF NOP 1 BRIGHT
+		Stop
+	  PuffMirroredAlt:
+		XPUF I 0 A_PlaySound("misc/ricochet")
+		XPUF IJKLM 1 BRIGHT
+		Goto PuffNormalEnd
+	}
+}
+
+ACTOR XaserPuff_NoTaunt
+{
+    Mass		1
+	Radius		1
+	Height		1
+	RenderStyle ADD
+	Alpha		0.9
+	+NOGRAVITY
+	+NOBLOCKMAP
+	+FLOORCLIP
+	+FORCEXYBILLBOARD
+	Decal "BulletChip"
+	States
+	{
+	Spawn:
+		XPUF Q 0 BRIGHT
+		XPUF Q 0 A_SpawnItemEx("XaserPuffSmoke",0,0,4.0+0.1*random(-10,10),0,0,0,0,SXF_CLIENTSIDE,0)
+		XPUF Q 0 A_Jump(128, "PuffMirrored")
+		
+	PuffNormal:
+		XPUF Q 0 A_Jump(32, "PuffNormalAlt")
+		XPUF QRSTU 1 BRIGHT
+	  PuffNormalEnd:
+		XPUF FGH 1 BRIGHT
+		Stop
+	  PuffNormalAlt:
+		XPUF A 0 A_PlaySound("misc/ricochet")
+		XPUF ABCDE 1 BRIGHT
+		Goto PuffNormalEnd
+		
+	PuffMirrored:
+		XPUF V 0 A_Jump(32, "PuffMirroredAlt")
+		XPUF VWXYZ 1 BRIGHT
+	  PuffMirroredEnd:
+		XPUF NOP 1 BRIGHT
+		Stop
+	  PuffMirroredAlt:
+		XPUF I 0 A_PlaySound("misc/ricochet")
+		XPUF IJKLM 1 BRIGHT
+		Goto PuffNormalEnd
+	}
+}
+
+ACTOR XaserPuffSmoke
+{
+	Radius		1
+	Height		1
+	RenderStyle ADD
+	Alpha		0.3
+	Scale		0.4
+	+NOGRAVITY
+	+NOBLOCKMAP
+	+FLOORCLIP
+	+FORCEXYBILLBOARD
+	States
+	{
+	Spawn:
+		PFSM ABCDEFGHIJKLMNOP 1
+		Stop
+	}
+}
+
+ACTOR GrinderPuff //WIP
+{
+    Mass		1
+	Radius		1
+	Height		1
+	RenderStyle ADD
+	Alpha		0.9
+	DamageType "Basic"
+	+NOGRAVITY
+	+NOBLOCKMAP
+	+FLOORCLIP
+	+FORCEXYBILLBOARD
+	Decal "BulletChip"
+	States
+	{
+	Spawn:
+		XPUF Q 0 BRIGHT
+		XPUF Q 0 A_SpawnItemEx("XaserPuffSmoke",0,0,4.0+0.1*random(-10,10),0,0,0,0,SXF_CLIENTSIDE,0)
+		XPUF Q 0 A_Jump(128, "PuffMirrored")
+		
+	PuffNormal:
+		XPUF Q 0 A_Jump(32, "PuffNormalAlt")
+		XPUF QRSTU 1 BRIGHT
+	  PuffNormalEnd:
+		XPUF FGH 1 BRIGHT
+		Stop
+	  PuffNormalAlt:
+		XPUF A 0 A_PlaySound("misc/ricochet")
+		XPUF ABCDE 1 BRIGHT
+		Goto PuffNormalEnd
+		
+	PuffMirrored:
+		XPUF V 0 A_Jump(32, "PuffMirroredAlt")
+		XPUF VWXYZ 1 BRIGHT
+	  PuffMirroredEnd:
+		XPUF NOP 1 BRIGHT
+		Stop
+	  PuffMirroredAlt:
+		XPUF I 0 A_PlaySound("misc/ricochet")
+		XPUF IJKLM 1 BRIGHT
+		Goto PuffNormalEnd
+	}
+}
+
+ACTOR ToastyGuy //I tried my best to rip the sprite from a screenshot on The Cutting Room Floor
+{
+	States
+	{
+	Spawn:
+		TOST YY 35
+		Stop
+	}
+}
+
+Actor GamingMarineHavingSexWithCookiedemon
+{
+Scale 0.35
+States
+  {
+	Spawn:
+		CHEA ABABAB 5
+		CHEA C 0 A_PlaySound("big/nute")
+		CHEA CD 6
+		CHEA E 15
+		TNT1 A 0 A_SpawnItem("TeleportFog")
+		Stop
+  }
+}

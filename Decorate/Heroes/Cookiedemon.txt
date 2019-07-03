@@ -1,0 +1,635 @@
+//Base code from Brutal Friends
+Actor IsPlayer : Inventory //ALWAYS give this inventory to the player to prevent the sentry from seeing it as an enemy.
+{
+inventory.maxamount 1
+}
+
+
+Actor TargetIsAMarine : Inventory //ALWAYS give this inventory to friendly monsters to prevent infight.
+{
+inventory.maxamount 1
+}
+
+//Shamelessly stolen from Stormy Blue is Doomed (Yeah... *that* mod)
+actor expsmoke
+{
++NOBLOCKMAP
+  +NOGRAVITY
+  +RANDOMIZE
+  +nointeraction
+  RenderStyle translucent
+  scale 0.7
+  alpha 0.4
+  speed 5
+  vspeed 5
+  Mass 5
+  States
+{
+	spawn:
+    SMOK ABCDEFGHIJKLMNOPQR 3 Bright A_fadeout(0.05)
+	stop
+}
+}
+
+Actor CookieCrystalSpawner
+{
+	States
+	{
+	Spawn:
+		TNT1 A 1 NoDelay A_SpawnItemEx("CookieCrystal")
+		TNT1 A 0 A_PlaySound("crystal/spawn")
+		TNT1 A 0 A_Print("A Cookie-Crystal has been detected in this area!")
+		Stop
+	}
+}
+Actor CookieCrystal : CustomInventory
+{
+	Radius 21
+	Height 12
+	Scale 0.333333333
+	Inventory.Amount 1
+	Inventory.MaxAmount 1
+	Inventory.PickupSound "cookie/crystal"
+	Inventory.UseSound "cookie/jingle"
+	Inventory.PickupMessage "You got the Cookie-Crystal! Use this item to summon \c[brick]Cookiedemon\c-..."
+	Inventory.Icon "CRYSB0"
+	Tag "Cookie-Crystal"
+	+FLOATBOB
+	+NOGRAVITY
+	+INVBAR
+	+FLOORCLIP
+	+DROPOFF
+	States
+	{
+	Spawn:
+		CRYS A 1 Bright
+		Loop
+	Use:
+		CRYS A 0 A_ThrowGrenade("CookiedemonSpawner",2,8,2,0)
+		Stop
+	}
+}
+
+ACTOR CookiedemonSpawner
+{
+   Radius 21
+   Height 56
+   Scale 0.1666666665
+   +DROPOFF
+   +MISSILE
+   +WINDTHRUST
+   +CANBOUNCEWATER
+   States
+   {
+   Spawn:
+      CRYS A 1 bright
+      Loop
+   Death:
+	  TNT1 A 0 A_PlaySound("cookie/spawnready")
+	  TNT1 A 0 A_SpawnItem("GlowingPentagram")
+	  CRYS AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 1 bright A_FadeOut(0.01)
+	  TNT1 A 0 A_SpawnItem("Cookiedemon")
+	  TNT1 AAAAAAAAAAAA 0 A_SpawnItemEx("expsmoke",0,random(-0,0),0,random(-1,1),random(-1,1),random(1,3),random(0,0))
+	  TNT1 A 0 A_PlaySound("cookie/spawnboom", CHAN_AUTO)
+	  TNT1 A 12 A_Quake(2,12,0,800)
+	  TNT1 A 4
+	  TNT1 A 0 A_PlaySound("cookie/spawn", CHAN_AUTO)
+      Stop
+   } 
+}
+
+actor GlowingPentagram
+{
+  RenderStyle Translucent
+  Alpha 0.0
+  Scale 0.242236025
+  States
+  {
+  Spawn:
+	PNTG AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 1 bright A_FadeIn(0.01)
+	Stop
+  }
+}
+
+ACTOR Cookiedemon
+{
+	Health 400
+	Radius 16
+	Height 56
+	Mass 400
+	MaxTargetRange 2000
+	Speed 3
+	FastSpeed 20
+	PainChance 256
+	MONSTER
+	+QUICKTORETALIATE
+	+LOOKALLAROUND
+	+PUSHABLE
+	+SLIDESONWALLS
+	+FLOORCLIP
+	-FASTER
+	+MTHRUSPECIES
+	+THRUSPECIES
+	+DONTHURTSPECIES 
+	+NOBLOCKMONST 
+	+USESPECIAL
+	-CANNOTPUSH
+	-COUNTKILL
+	+THRUACTORS
+	Damage 6
+	MaxStepHeight 48
+	MaxDropOffHeight 48
+	MeleeDamage 4
+	PainSound "cookie/pain"
+	DeathSound "cookie/death"
+	BloodColor "Blue"
+	DamageFactor "Basic", 0.0 //Prevents the player from accidentally hurting Cookiedemon.
+	DamageFactor "GMIDExplosion", 0.0 //Same thing, but also goes for explosive barrels.
+	States
+ {
+ 
+
+	Spawn:
+		 COOK A 1
+		 TNT1 A 0 A_GiveInventory("TargetIsAMarine")//Stops multiple sentries from firing at each other.
+		 COOK A 1 A_Look
+		 Goto Waits
+		 
+	
+	ForgetTarget:
+		TNT1 A 0 A_ClearTarget
+		Goto See
+		
+		
+		
+	Idle:	
+	See:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag("NODROPOFF", 0)	
+		TNT1 A 0 A_ChangeFLag("FRIENDLY", 1)
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMarine", 1, "FollowPLayer")//
+		
+		
+		
+		TNT1 A 0 A_ChangeFlag("MISSILEMORE", 1)
+		TNT1 A 0 A_ChangeFlag("MISSILEEVENMORE", 1)
+		TNT1 A 0 A_Recoil(-1)
+		
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMarine", 1, "FollowPLayer")//
+		COOK AA 1 A_Chase
+		TNT1 A 0 A_ChangeFlag("FASTER", 0)
+		TNT1 A 0 A_Recoil(-1)
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMarine", 1, "FollowPLayer")//
+		TNT1 A 0 A_JumpIfInTargetInventory("IsPlayer", 1, "FollowPLayer")//
+		COOK BB 1 A_Chase
+		NULL A 0 
+		TNT1 A 0 A_Recoil(-1)
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMarine", 1, "FollowPLayer")//
+		COOK BB 1 A_Chase
+		TNT1 A 0 A_ChangeFLag("FRIENDLY", 0)
+		TNT1 A 0 A_Recoil(-1)
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMarine", 1, "FollowPLayer")//
+		COOK CC 1 A_Chase
+		NULL A 0 
+		TNT1 A 0 A_ChangeFLag("FRIENDLY", 1)
+		TNT1 A 0 A_Recoil(-1)
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMarine", 1, "FollowPLayer")//
+		COOK CC 1 A_Chase
+		TNT1 A 0 A_Recoil(-1)
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMarine", 1, "FollowPLayer")//
+		COOK DD 1 A_Chase
+		
+		TNT1 A 0 A_Recoil(-1)
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMarine", 1, "FollowPLayer")//
+		COOK DD 1 A_Chase
+		TNT1 A 0 A_Recoil(-1)
+		TNT1 A 0 A_CheckSight("ForgetTarget")
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMarine", 1, "FollowPLayer")//
+		TNT1 A 0 A_CheckSight("FollowPLayer")
+		TNT1 A 0 A_ChangeFLag("FRIENDLY", 0)
+		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 0)
+		
+		COOK AA 1 A_Chase
+		NULL A 0 
+		TNT1 A 0 A_Recoil(-1)
+		TNT1 A 0 A_JumpIfCloser(200, "Waits")
+		TNT1 A 0 A_CheckSight("CheckIfPlayerSee")
+		
+		COOK BB 1 A_Chase
+		TNT1 A 0 A_Recoil(-1)
+		TNT1 A 0 A_JumpIfInTargetInventory("IsPlayer", 1, "FollowPlayer")
+		TNT1 A 0 A_JumpIfCloser(200, "Waits")
+		TNT1 A 0 A_CheckSight("CheckIfPlayerSee")
+		
+		COOK CC 1 A_Chase
+		NULL A 0 
+		TNT1 A 0 A_Recoil(-1)
+		TNT1 A 0 A_JumpIfInTargetInventory("IsPlayer", 1, "FollowPlayer")
+		TNT1 A 0 A_JumpIfCloser(200, "Waits")
+		TNT1 A 0 A_CheckSight("CheckIfPlayerSee")
+		
+		COOK DD 1 A_Chase
+		TNT1 A 0 A_Recoil(-1)
+		
+		TNT1 A 0 A_JumpIfInTargetInventory("IsPlayer", 1, "FollowPlayer")
+		TNT1 A 0 A_JumpIfCloser(200, "Waits")
+		TNT1 A 0 A_CheckSight("CheckIfPlayerSee")
+		
+		
+		TNT1 A 0 A_JumpIfCloser(200, "Waits")
+		TNT1 A 0 A_JumpIfInTargetInventory("IsPlayer", 1, "FollowPlayer")
+		Goto See
+		
+		
+		
+	FollowPlayer:
+	    TNT1 A 0 A_ChangeFlag("FRIENDLY", 0)
+		TNT1 A 0 A_ChangeFlag("FASTER", 1)
+		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 0)
+	    TNT1 A 0 A_JumpIfCloser(150, "Waits")
+		TNT1 A 0 A_ChangeFlag("MISSILEMORE", 0)
+		TNT1 A 0 A_ChangeFlag("MISSILEEVENMORE", 0)
+		COOK A 1 A_Chase
+		
+		TNT1 A 0 A_Recoil(-1)
+		TNT1 A 0 A_Recoil(-1)
+		COOK AA 1 A_Chase
+		TNT1 A 0 A_Recoil(-1)
+		COOK BB 1 A_Chase
+		TNT1 A 0 A_CheckSight("CheckIfPlayerSee")
+		NULL A 0 
+		TNT1 A 0 A_Recoil(-1)
+		COOK BB 1 A_Chase
+		TNT1 A 0 A_Recoil(-1)
+		COOK CC 1 A_Chase
+		NULL A 0 
+		TNT1 A 0 A_Recoil(-1)
+		COOK CC 1 A_Chase
+		TNT1 A 0 A_Recoil(-1)
+		COOK DD 1 A_Chase
+		
+		TNT1 A 0 A_Recoil(-1)
+		COOK DD 1 A_Chase
+		TNT1 A 0 A_CheckSight("CheckIfPlayerSee")
+		TNT1 A 0 A_Recoil(-1)
+		
+		COOK AA 1 A_Chase
+		TNT1 A 0 A_Recoil(-1)
+		NULL A 0 
+		COOK BB 1 A_Chase
+		TNT1 A 0 A_Recoil(-1)
+		COOK BB 1 A_Chase
+		NULL A 0 
+		TNT1 A 0 A_Recoil(-1)
+		COOK CC 1 A_Chase
+		TNT1 A 0 A_CheckSight("CheckIfPlayerSee")
+		TNT1 A 0 A_Recoil(-1)
+		COOK CC 1 A_Chase
+		
+		TNT1 A 0 A_Recoil(-1)
+		COOK DD 1 A_Chase
+		TNT1 A 0 A_Recoil(-1)
+		COOK DD 1 A_Chase
+		NULL A 0 
+		TNT1 A 0 A_Recoil(-1)
+		
+		TNT1 A 0 A_ChangeFlag("FRIENDLY", 1)
+		TNT1 A 0 A_JumpIfTargetInLOS("See")
+		TNT1 A 0 A_ChangeFlag("FRIENDLY", 0)
+		
+		
+		TNT1 A 0 A_CheckSight("CheckIfPlayerSee")
+		Loop
+	
+	CheckRangeToWait:
+		TNT1 A 0
+		TNT1 A 0 A_JumpIfCloser(150, "Waits")
+		Goto FollowPLayer
+	
+	CheckIfPlayerSee:
+		TNT1 A 0
+		COOK AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_FastChase
+		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 0)
+		TNT1 A 0 A_ChangeFLag("FRIENDLY", 0)
+		////TNT1 A 0 Thing_Hate(94, 0, 0)
+		TNT1 A 0 A_JumpIfCloser(1000, 2)
+		Goto Pathfind
+		TNT1 AAA 0
+		Goto FollowPlayer
+	
+	
+	
+	Pathfind:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFLag("FRIENDLY", 0)
+		TNT1 A 0 A_JumpIFInTargetInventory("IsPLayer", 1, 1)
+		Goto FollowPLayer
+		//TNT1 A 1 A_Chase("", "")
+		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 0)
+		TNT1 A 0 A_ChangeFlag("NOBLOCKMAP", 1)
+		TNT1 A 0 A_ChangeFlag("NOCLIP", 1)
+		TNT1 A 0 A_ChangeFlag("SOLID", 0)
+		TNT1 A 0 A_Noblocking
+		TNT1 A 0 A_SpawnItemEx ("FriendMarine1Pathfinder",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,0)
+		Stop
+	
+	BecomeEnemy23:
+		COOK E 1
+		TNT1 A 0 A_ClearTarget
+		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 0)
+		TNT1 A 0 A_ChangeFLag("FRIENDLY", 0)
+		Goto FollowPlayer
+	
+	Waits:
+		COOK A 1
+		TNT1 A 0 A_JumpIfInTargetInventory("IsPlayer", 1, 2)
+		TNT1 A 0 A_ClearTarget
+		Goto See
+		TNT1 A 0 A_ChangeFlag("FRIENDLY", 0)
+		TNT1 A 0 A_ChangeFlag("MISSILEMORE", 1)
+		TNT1 A 0 A_ChangeFlag("MISSILEEVENMORE", 1)
+		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 0)
+		TNT1 A 0 A_ChangeFlag("SOLID", 0)
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMarine", 1, "BecomeEnemy23")
+		TNT1 A 0 A_Jump(32, "Waits2")
+		TNT1 A 0 A_Jump(32, "Waits3")
+		
+		COOK A 4 A_Stop
+		COOK A 4 A_Stop
+		TNT1 A 0 A_Stop
+		TNT1 A 0 A_CheckSight("FollowPlayer")
+		TNT1 A 0 A_ChangeFLag("FRIENDLY", 1)
+		TNT1 A 0 A_ClearTarget
+		
+		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 1)
+		COOK A 0 A_Look
+		TNT1 A 0 A_ChangeFLag("FRIENDLY", 0)
+		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 0)
+		COOK A 1 A_LookEx(0, 0, 0, 0, 0, "FollowPlayer")
+		TNT1 A 0 A_CheckSIght("FollowPlayer")
+		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 1)
+		TNT1 A 0 A_JumpIfCloser(200, "Waits")
+		Goto FollowPlayer
+	
+	Waits2:
+		TNT1 A 0 A_SetAngle(random(90, -90) + angle)
+		COOK A 6 A_Stop
+		TNT1 A 0 //A_PlaySound("MRNWT", 2)
+		COOK A 6 A_Stop
+		TNT1 A 0 A_CheckSight("FollowPlayer")
+		TNT1 A 0 A_ChangeFLag("FRIENDLY", 1)
+		TNT1 A 0 A_ClearTarget
+		
+		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 1)
+		COOK A 0 A_Look
+		TNT1 A 0 A_ChangeFLag("FRIENDLY", 0)
+		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 0)
+		COOK A 1 A_LookEx(0, 0, 0, 0, 0, "FollowPlayer")
+		TNT1 A 0 A_CheckSIght("FollowPlayer")
+		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 1)
+		TNT1 A 0 A_JumpIfCloser(300, "Waits")
+		Goto FollowPLayer
+	
+	Waits3:
+		TNT1 A 0
+		//TNT1 A 0 A_JumpIfInTargetInventory("Clip2", 40, 3)
+		//Goto GiveAmmo
+		TNT1 AAA 0
+		TNT1 A 0 A_SetAngle(random(90, -90) + angle)
+		COOK A 4 A_Stop
+		TNT1 A 0 //A_PlaySound("MRNWC", 2)
+		COOK A 4 A_Stop
+		TNT1 A 0 A_CheckSight("FollowPlayer")
+		TNT1 A 0 A_ChangeFLag("FRIENDLY", 1)
+		TNT1 A 0 A_ClearTarget
+		
+		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 1)
+		COOK A 0 A_Look
+		TNT1 A 0 A_ChangeFLag("FRIENDLY", 0)
+		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 0)
+		COOK A 1 A_LookEx(0, 0, 0, 0, 0, "FollowPlayer")
+		TNT1 A 0 A_CheckSIght("FollowPlayer")
+		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 1)
+		TNT1 A 0 A_JumpIfCloser(300, "Waits")
+		Goto FollowPLayer
+
+	Missile:
+        TNT1 A 0
+        TNT1 A 0 A_ChangeFlag("NODROPOFF", 1)
+		TNT1 A 0 A_JumpIfInTargetInventory("TargetIsAMarine", 1, "FollowPlayer")////Never remove this one!
+		TNT1 A 0 A_JumpIfInTargetInventory("IsPlayer", 1, "CheckRangeToWait")
+		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 1)
+		TNT1 A 0 A_ChangeFlag("SOLID", 1)
+		
+		TNT1 A 0 A_JumpIfCloser(200, "Retreat")
+
+		TNT1 A 0 A_FaceTarget
+		COOK A 1 A_Chase ("","")
+		TNT1 A 0 A_JumpIfInTargetInventory("IsPlayer", 1, "CheckRangeToWait")
+		
+	ActualFireState:
+		COOK EEEEEEEEEEEEEEEE 1 A_FaceTarget
+		COOK E 0 A_Jump(256, "IceAttack", "FireballAttack")
+		Goto See
+	IceAttack:
+        COOK A 6 A_CustomMissile("CookiedemonIceBall", 32, 0)
+		COOK A 0 A_Jump(16, "Taunt")
+		Goto See
+	FireballAttack:
+        COOK A 6 A_CustomMissile("CookiedemonFireball", 32, 0)
+		COOK A 0 A_Jump(16, "Taunt")
+		Goto See
+	Taunt:
+		COOK A 0 A_PlaySound("cookie/taunt", CHAN_VOICE)
+		Goto See
+ 
+	CheckRetreat:
+		TNT1 A 0
+		TNT1 A 0 A_JumpIfCloser(300, "Retreat")
+		Goto ActualFireState
+	
+	Retreat:
+		TNT1 A 0
+		
+		COOK A 2 A_Recoil(4)
+		TNT1 A 0 A_FaceTarget
+		NULL A 0 
+		COOK B 2 A_Recoil(4)
+		TNT1 A 0 A_FaceTarget
+		NULL A 0 
+		COOK C 2 A_Recoil(4)
+		TNT1 A 0 A_FaceTarget
+		
+		COOK D 2 A_Recoil(4)
+		TNT1 A 0 A_FaceTarget
+		Goto ActualFireState
+		
+
+	Pain:
+		COOK E 2
+		COOK E 2 A_Pain
+		Goto See + 1
+  	
+	
+	Death:
+		COOK E 5
+		TNT1 A 0 A_Scream
+		COOK E 0 A_NoBlocking
+		COOK E 0 A_PlaySound("cookie/spawnready")
+		COOK EE 35 
+		TNT1 A 0 A_SpawnItem("CookiedemonLeaveFog")
+		TNT1 A 35
+		TNT1 A 0 A_PlaySound("cookie/lastwords")
+		Stop
+ }
+}
+
+ACTOR FriendMarine1Pathfinder
+{
+	Radius 32
+	Height 56
+	Speed 20
+	Health 4000
+	PainChance 255
+	MaxTargetRange 150
+	Monster
+	damagefactor "SpawnMarine", 99999.0
+	MaxDropOffHeight 1200
+	MaxStepHeight 1200
+	-COUNTKILL
+	+NOTARGET
+	+THRUACTORS
+	+MISSILEMORE
+	+MISSILEEVENMORE
+	+FASTER
+    +DONTSPLASH
+	+SHOOTABLE
+	-FRIENDLY
+	+NOCLIP
+	+LOOKALLAROUND
+	+NOINFIGHTING
+	States
+	{
+	Spawn:
+	Pain:
+    See:
+		TNT1 A 0 A_ChangeFlag("FRIENDLY", 0)
+		//TNT1 A 0 Thing_ChangeTID(0,98)
+		//TNT1 A 0 Thing_Hate(98, 0, 0)
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("TargetIsAMarine", 1)
+		TNT1 AAAAA 1 A_Chase
+		//TNT1 A 0 Thing_Hate(98, 0, 0)
+		TNT1 A 0
+		TNT1 A 0 A_GiveInventory("TargetIsAMarine", 1)
+		TNT1 A 0 A_FaceTarget
+		Loop
+	//Missile:
+	TNT1 A 2
+	TNT1 A 0 A_SpawnItem("MarineSpawnChecker")	
+	TNT1 A 5
+	Goto See
+	Death:
+	Missile:
+	    TNT1 A 0
+		TNT1 A 1 A_FaceTarget
+	    TNT1 A 0 A_Recoil(-6)
+		TNT1 A 4
+		TNT1 A 0 A_Scream
+		TNT1 A 0 A_NoBlocking
+		TNT1 A 0 A_SpawnItemEx("Cookiedemon",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,0)
+		TNT1 A 0 A_SpawnItem("TeleportFog")
+		Stop
+	}
+}
+
+ACTOR MarineSpawnChecker
+{
+MONSTER
+-COUNTKILL
++FRIENDLY
+Health 1
+Radius 24
+Height 52
+Damagetype "SpawnMarine"
+	States
+	{
+	Spawn:
+	    TNT1 A 0
+		TNT1 A 0 A_GiveInventory("TargetIsAMarine", 1)
+	    TNT1 A 0
+		TNT1 A 0 A_Explode(1100, 32)
+		Stop
+	Death:
+	TNT1 A 1
+	Stop
+}
+}
+
+ACTOR CookiedemonIceBall : DoomImpBall
+{
+	Radius 6
+	Height 8
+	Speed 40
+	FastSpeed 40
+	Damage 10
+	Projectile
+	+RANDOMIZE
+	RenderStyle Add
+	Alpha 1
+	scale 0.6
+	Decal "DoomImpScorch"
+	DamageType "Ice"
+	
+	States
+	{
+		Spawn:
+			CICE ABC 4 BRIGHT
+			Loop
+		Death:
+			CICE DEFGHI 2 BRIGHT
+			Stop
+	}
+}
+
+ACTOR CookiedemonFireball : DoomImpBall
+{
+	Radius 6
+	Height 8
+	Speed 40
+	FastSpeed 40
+	Damage 10
+	Projectile
+	+RANDOMIZE
+	RenderStyle Add
+	Alpha 1
+	scale 0.6
+	Decal "DoomImpScorch"
+	DamageType "Fire"
+	
+	States
+	{
+		Spawn:
+			CFIR ABC 4 BRIGHT
+			Loop
+		Death:
+			CFIR DEFGHI 2 BRIGHT
+			Stop
+	}
+}
+
+Actor CookiedemonLeaveFog
+{
+  +NOBLOCKMAP
+  +NOTELEPORT
+  +NOGRAVITY
+  RenderStyle Add
+  States
+  {
+  Spawn:
+    TNT1 A 0 
+	TNT1 A 0 A_PlaySound("cookie/leave")
+    SWFG ABABCDEFGHIJKLMNOPQR 3 Bright
+    Stop
+  }
+}

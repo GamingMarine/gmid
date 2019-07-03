@@ -1,0 +1,635 @@
+Actor ChainsawSpawner : RandomSpawner replaces Chainsaw
+{
+DropItem "GMIDChainsaw"
+}
+
+Actor ShotgunSpawner : RandomSpawner replaces Shotgun
+{
+DropItem "GMIDShotgun"
+DropItem "SPAS12"
+}
+
+Actor SSGSpawner : RandomSpawner replaces SuperShotgun
+{
+DropItem "GMIDSuperShotgun"
+DropItem "RevX"
+DropItem "GMIDSuperShotgun"
+DropItem "RevX"
+DropItem "GMIDSuperShotgun"
+DropItem "RevX"
+DropItem "GMIDSuperShotgun"
+DropItem "RevX"
+DropItem "RevXUpgrade1"
+DropItem "RevXUpgrade2"
+}
+
+Actor RocketLauncherSpawner : RandomSpawner replaces RocketLauncher
+{
+DropItem "GMIDGrenadeLauncher"
+DropItem "40mmGrenadeLauncher"
+}
+
+Actor PlasmaGunSpawner : RandomSpawner replaces PlasmaRifle
+{
+DropItem "GMIDRailgun"
+DropItem "PlasmaCannon"
+}
+
+Actor RocketAmmoSpawner : RandomSpawner replaces RocketAmmo
+{
+DropItem "40mmGrenades"
+DropItem "RocketAmmo2"
+}
+
+Actor RocketBoxSpawner : RandomSpawner replaces RocketBox
+{
+DropItem "40mmGrenadeBox"
+DropItem "RocketBox2"
+}
+
+Actor ClipSpawner : RandomSpawner replaces Clip
+{
+DropItem "Clip2"
+DropItem "Clip3"
+DropItem "GMIDDualPistol"
+}
+
+Actor ClipSpawner3 : RandomSpawner //Enemy drops
+{
+DropItem "Clip2"
+DropItem "Clip3"
+}
+
+Actor ClipBoxSpawner : RandomSpawner replaces ClipBox
+{
+DropItem "ClipBox2"
+DropItem "ClipBox3"
+}
+
+Actor CellSpawner : RandomSpawner replaces Cell
+{
+DropItem "NewCell"
+DropItem "SmallMana"
+}
+
+Actor CellPackSpawner : RandomSpawner replaces CellPack
+{
+DropItem "NewCellPack"
+DropItem "LargeMana"
+}
+
+Actor ChaingunSpawner : RandomSpawner replaces Chaingun
+{
+DropItem "GMIDChaingun"
+DropItem "LeadPosioning"
+}
+
+Actor BFGSpawner : RandomSpawner replaces BFG9000
+{
+DropItem "GmidBFG9000"
+DropItem "JohnnyGee"
+}
+
+Actor BlurSpherespawner : RandomSpawner replaces BlurSphere
+{
+DropItem "CloakingDevice"
+DropItem "CloakingDevice"
+DropItem "CloakingDevice"
+DropItem "CookieCrystalSpawner"
+}
+
+Actor SoulsphereSpawner : RandomSpawner replaces Soulsphere
+{
+DropItem "LifeSphere"
+DropItem "HealthBackpack"
+}
+
+Actor ColaSpawner : RandomSpawner replaces HealthBonus
+{
+DropItem "2GramsofCocaCola"
+DropItem "2GramsofCocaCola"
+DropItem "2GramsofCocaCola"
+DropItem "2GramsofCocaCola"
+DropItem "2GramsofCocaCola"
+DropItem "2GramsofCocaCola"
+DropItem "2GramsofCocaCola"
+DropItem "5GramsofCocaCola"
+}
+
+Actor ArmorSpawner : RandomSpawner replaces ArmorBonus
+{
+DropItem "ArmorShard"
+DropItem "ArmorShard"
+DropItem "ArmorShard"
+DropItem "ArmorShard"
+DropItem "ArmorShard"
+DropItem "ArmorShard"
+DropItem "ArmorShard"
+DropItem "SuperArmorShard"
+}
+
+Actor GreenArmorSpawner : RandomSpawner replaces GreenArmor
+{
+DropItem "LightArmorVest"
+DropItem "StrongArmorVest"
+}
+
+Actor BlueArmorSpawner : RandomSpawner replaces BlueArmor
+{
+DropItem "HeavyArmorVest"
+DropItem "PraetorArmorVest"
+}
+
+Actor BerserkSpawner : RandomSpawner replaces Berserk
+{
+DropItem "DoubleSphere"
+DropItem "QuadDamage"
+}
+
+Actor DeadPlayerSpawner : RandomSpawner replaces DeadMarine
+{
+DropItem "CarcassBrownScientist"
+DropItem "DeadMaleScientist"
+DropItem "DeadFemaleScientist"
+DropItem "Corp01"
+DropItem "Corp02"
+DropItem "Corp03"
+DropItem "Corp04"
+DropItem "Corp05"
+DropItem "Corp06"
+DropItem "MarineVictim"
+DropItem "Skeleton"
+DropItem "DeadPony1"
+DropItem "DeadGeneral"
+DropItem "CarcassSoldierHalfCut"
+DropItem "CarcassShirtlessBeheaded"
+DropItem "CarcassShirtlessMarine"
+}
+
+Actor MinorFoodSpawner : RandomSpawner replaces Stimpack
+{
+DropItem "Apple"
+DropItem "Grapes"
+DropItem "Orange"
+DropItem "HealingPillsJar"
+}
+
+Actor MajorFoodSpawner : RandomSpawner replaces Medikit
+{
+DropItem "Hamburg"
+DropItem "EntireChickenYouWeirdo"
+DropItem "PizzaZone"
+DropItem "HealingSerum"
+}
+
+//This is a new set of weapon spawners.
+//What this will do is spawn a weapon, and then a set of rats that will scurry away from the player, ala Duke 3D.
+//I was originally planning on having them be stepped on, like it was in the base code, but they would end up being squished by the weapon that they spawned near.
+//Base code from Realm667.
+
+ACTOR NewChainsawSpawner replaces Chainsaw
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay A_SpawnItemEx("ChainsawSpawner")
+		TNT1 A 0 A_DropItem("ScurryRat")
+		TNT1 A 0 A_DropItem("ScurryRat")
+		TNT1 A 0 A_DropItem("ScurryRat")
+		Stop
+	}
+}
+
+ACTOR NewShotgunSpawner replaces Shotgun
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay A_SpawnItemEx("ShotgunSpawner")
+		TNT1 A 0 A_DropItem("ScurryRat")
+		TNT1 A 0 A_DropItem("ScurryRat")
+		TNT1 A 0 A_DropItem("ScurryRat")
+		Stop
+	}
+}
+
+ACTOR NewSSGSpawner replaces SuperShotgun
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay A_SpawnItemEx("SSGSpawner")
+		TNT1 A 0 A_DropItem("ScurryRat")
+		TNT1 A 0 A_DropItem("ScurryRat")
+		TNT1 A 0 A_DropItem("ScurryRat")
+		Stop
+	}
+}
+
+ACTOR NewChaingunSpawner replaces Chaingun
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay A_SpawnItemEx("ChaingunSpawner")
+		TNT1 A 0 A_DropItem("ScurryRat")
+		TNT1 A 0 A_DropItem("ScurryRat")
+		TNT1 A 0 A_DropItem("ScurryRat")
+		Stop
+	}
+}
+
+ACTOR NewRocketLauncherSpawner replaces RocketLauncher
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay A_SpawnItemEx("RocketLauncherSpawner")
+		TNT1 A 0 A_DropItem("ScurryRat")
+		TNT1 A 0 A_DropItem("ScurryRat")
+		TNT1 A 0 A_DropItem("ScurryRat")
+		Stop
+	}
+}
+
+ACTOR NewPlasmaRifleSpawner replaces PlasmaRifle
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay A_SpawnItemEx("PlasmaGunSpawner")
+		TNT1 A 0 A_DropItem("ScurryRat")
+		TNT1 A 0 A_DropItem("ScurryRat")
+		TNT1 A 0 A_DropItem("ScurryRat")
+		Stop
+	}
+}
+
+ACTOR NewBFGSpawner replaces BFG9000
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay A_SpawnItemEx("BFGSpawner")
+		TNT1 A 0 A_DropItem("ScurryRat")
+		TNT1 A 0 A_DropItem("ScurryRat")
+		TNT1 A 0 A_DropItem("ScurryRat")
+		Stop
+	}
+}
+
+Actor CorpseSpawner1 : RandomSpawner replaces GibbedMarine
+{
+DropItem "DeadMaleScientist"
+DropItem "DeadFemaleScientist"
+DropItem "Skeleton"
+DropItem "ZombieScientist"
+}
+
+Actor CorpseSpawner2 : RandomSpawner replaces GibbedMarineExtra
+{
+DropItem "DeadMaleScientist"
+DropItem "DeadFemaleScientist"
+DropItem "Skeleton"
+DropItem "ZombieScientist"
+}
+
+Actor MarineSpawner1 : RandomSpawner replaces EvilEye
+{
+DropItem "BoundPlayer1"
+DropItem "BoundPlayer2"
+DropItem "CarcassImpaledMarine"
+DropItem "CarcassImpaledMarine2"
+DropItem "ChestSkewered"
+DropItem "ImpalingSpike4"
+DropItem "ImpalingSpike5"
+DropItem "ImpalingSpike6"
+DropItem "ImpalingSpike7"
+DropItem "ImpalingSpike8"
+}
+
+Actor MarineSpawner2 : RandomSpawner replaces FloatingSkull
+{
+DropItem "BoundPlayer1"
+DropItem "BoundPlayer2"
+DropItem "CarcassImpaledMarine"
+DropItem "CarcassImpaledMarine2"
+DropItem "ChestSkewered"
+DropItem "ImpalingSpike4"
+DropItem "ImpalingSpike5"
+DropItem "ImpalingSpike6"
+DropItem "ImpalingSpike7"
+DropItem "ImpalingSpike8"
+}
+
+Actor MarineSpawner3 : RandomSpawner replaces LiveStick
+{
+DropItem "BoundPlayer1"
+DropItem "BoundPlayer2"
+DropItem "CarcassImpaledMarine"
+DropItem "CarcassImpaledMarine2"
+DropItem "ChestSkewered"
+DropItem "ImpalingSpike4"
+DropItem "ImpalingSpike5"
+DropItem "ImpalingSpike6"
+DropItem "ImpalingSpike7"
+DropItem "ImpalingSpike8"
+}
+
+Actor MarineSpawner4 : RandomSpawner replaces DeadStick
+{
+DropItem "BoundPlayer1"
+DropItem "BoundPlayer2"
+DropItem "CarcassImpaledMarine"
+DropItem "CarcassImpaledMarine2"
+DropItem "ChestSkewered"
+DropItem "ImpalingSpike4"
+DropItem "ImpalingSpike5"
+DropItem "ImpalingSpike6"
+DropItem "ImpalingSpike7"
+DropItem "ImpalingSpike8"
+}
+
+Actor MarineSpawner5 : RandomSpawner replaces HeartColumn
+{
+DropItem "BoundPlayer1"
+DropItem "BoundPlayer2"
+DropItem "CarcassImpaledMarine"
+DropItem "CarcassImpaledMarine2"
+DropItem "ChestSkewered"
+DropItem "ImpalingSpike4"
+DropItem "ImpalingSpike5"
+DropItem "ImpalingSpike6"
+DropItem "ImpalingSpike7"
+DropItem "ImpalingSpike8"
+}
+
+Actor MarineSpawner6 : RandomSpawner replaces ShortGreenColumn
+{
+DropItem "BoundPlayer1"
+DropItem "BoundPlayer2"
+DropItem "CarcassImpaledMarine"
+DropItem "CarcassImpaledMarine2"
+DropItem "ChestSkewered"
+DropItem "ImpalingSpike4"
+DropItem "ImpalingSpike5"
+DropItem "ImpalingSpike6"
+DropItem "ImpalingSpike7"
+DropItem "ImpalingSpike8"
+}
+
+Actor MarineSpawner7 : RandomSpawner replaces ShortRedColumn
+{
+DropItem "BoundPlayer1"
+DropItem "BoundPlayer2"
+DropItem "CarcassImpaledMarine"
+DropItem "CarcassImpaledMarine2"
+DropItem "ChestSkewered"
+DropItem "ImpalingSpike4"
+DropItem "ImpalingSpike5"
+DropItem "ImpalingSpike6"
+DropItem "ImpalingSpike7"
+DropItem "ImpalingSpike8"
+}
+
+Actor MarineSpawner8 : RandomSpawner replaces TallGreenColumn
+{
+DropItem "BoundPlayer1"
+DropItem "BoundPlayer2"
+DropItem "CarcassImpaledMarine"
+DropItem "CarcassImpaledMarine2"
+DropItem "ChestSkewered"
+DropItem "ImpalingSpike4"
+DropItem "ImpalingSpike5"
+DropItem "ImpalingSpike6"
+DropItem "ImpalingSpike7"
+DropItem "ImpalingSpike8"
+}
+
+Actor MarineSpawner9 : RandomSpawner replaces TallRedColumn
+{
+DropItem "BoundPlayer1"
+DropItem "BoundPlayer2"
+DropItem "CarcassImpaledMarine"
+DropItem "CarcassImpaledMarine2"
+DropItem "ChestSkewered"
+DropItem "ImpalingSpike4"
+DropItem "ImpalingSpike5"
+DropItem "ImpalingSpike6"
+DropItem "ImpalingSpike7"
+DropItem "ImpalingSpike8"
+}
+
+Actor MarineSpawner10 : RandomSpawner replaces HeadCandles
+{
+DropItem "BoundPlayer1"
+DropItem "BoundPlayer2"
+DropItem "CarcassImpaledMarine"
+DropItem "CarcassImpaledMarine2"
+DropItem "ChestSkewered"
+DropItem "ImpalingSpike4"
+DropItem "ImpalingSpike5"
+DropItem "ImpalingSpike6"
+DropItem "ImpalingSpike7"
+DropItem "ImpalingSpike8"
+}
+
+Actor BigTreeSpawner : RandomSpawner replaces BigTree
+{
+DropItem "GardenTree1"
+DropItem "GardenTree2"
+}
+
+Actor ExplosionSpawner : RandomSpawner
+{
+DropItem "NewExplosion"
+DropItem "NewExplosion2"
+}
+
+actor "ZombiemanSpawner" : RandomSpawner replaces ZombieMan
+{
+	DropItem "SonicXRainbow"
+	DropItem "SonicXRainbow"
+	DropItem "SonicXRainbow"
+	DropItem "SonicXRainbow"
+	DropItem "SonicXRainbow"
+	DropItem "SonicXRainbow"
+	DropItem "SonicXRainbow"
+	DropItem "SonicXRainbow"
+	DropItem "SonicXRainbow"
+	DropItem "SonicXRainbow"
+	DropItem "SonicXRainbow"
+	DropItem "SonicXRainbow"
+	DropItem "SonicXRainbow"
+	DropItem "SonicXRainbow"
+	DropItem "SonicXRainbow"
+	DropItem "SonicXRainbow"
+	DropItem "SonicXRainbow"
+	DropItem "SonicXRainbow"
+	DropItem "SonicXRainbow"
+	DropItem "SonicXRainbow"
+	DropItem "SonicXRainbow"
+	DropItem "SonicXRainbow"
+	DropItem "SonicXRainbow"
+	DropItem "SonicXRainbow"
+	DropItem "Zombieman_PossessedSpawner"
+}
+
+actor "ShotgunDudeSpawner" : RandomSpawner replaces ShotgunGuy
+{
+	DropItem "OctaLeb"
+	DropItem "OctaLeb"
+	DropItem "OctaLeb"
+	DropItem "OctaLeb"
+	DropItem "OctaLeb"
+	DropItem "OctaLeb"
+	DropItem "OctaLeb"
+	DropItem "OctaLeb"
+	DropItem "OctaLeb"
+	DropItem "OctaLeb"
+	DropItem "OctaLeb"
+	DropItem "OctaLeb"
+	DropItem "OctaLeb"
+	DropItem "OctaLeb"
+	DropItem "OctaLeb"
+	DropItem "OctaLeb"
+	DropItem "OctaLeb"
+	DropItem "OctaLeb"
+	DropItem "OctaLeb"
+	DropItem "OctaLeb"
+	DropItem "OctaLeb"
+	DropItem "OctaLeb"
+	DropItem "OctaLeb"
+	DropItem "OctaLeb"
+	DropItem "ShotgunBoi_PossessedSpawner"
+}
+
+actor "ChaingunGuySpawner" : RandomSpawner replaces ChaingunGuy
+{
+	DropItem "AppleSheriff"
+	DropItem "AppleSheriff"
+	DropItem "AppleSheriff"
+	DropItem "AppleSheriff"
+	DropItem "AppleSheriff"
+	DropItem "AppleSheriff"
+	DropItem "AppleSheriff"
+	DropItem "AppleSheriff"
+	DropItem "AppleSheriff"
+	DropItem "AppleSheriff"
+	DropItem "AppleSheriff"
+	DropItem "AppleSheriff"
+	DropItem "AppleSheriff"
+	DropItem "AppleSheriff"
+	DropItem "AppleSheriff"
+	DropItem "AppleSheriff"
+	DropItem "AppleSheriff"
+	DropItem "AppleSheriff"
+	DropItem "AppleSheriff"
+	DropItem "AppleSheriff"
+	DropItem "AppleSheriff"
+	DropItem "AppleSheriff"
+	DropItem "AppleSheriff"
+	DropItem "AppleSheriff"
+	DropItem "ChaingunBoi_PossessedSpawner"
+}
+
+actor "SpectreSpawner" : RandomSpawner replaces Spectre //To ensure that Hellhounds will also spawn in place of the Spectre
+{
+	DropItem "HellHound"
+}
+
+Actor Zombieman_PossessedSpawner : RandomSpawner
+{
+	DropItem "ZSecPistol"
+	DropItem "Q2Soldier"
+	DropItem "EvilMarine_Rifle"
+}
+
+Actor ShotgunBoi_PossessedSpawner : RandomSpawner
+{
+	DropItem "ZSpecOpsShotgun"
+	DropItem "SawedOffShotgunGuy"
+	DropItem "EvilMarine_Shotgun"
+}
+
+Actor ChaingunBoi_PossessedSpawner : RandomSpawner
+{
+	DropItem "HomelessGunman"
+	DropItem "ChaingunMajor"
+	DropItem "EvilMarine_Minigun"
+}
+
+Actor BossDeathSpawner : RandomSpawner
+{
+	DropItem "BossDeathRD"
+	DropItem "BossDeathOC"
+	DropItem "BossDeathPP"
+	DropItem "BossDeathHH"
+	DropItem "BossDeathCL"
+	DropItem "BossDeathAH"
+	DropItem "BossDeathFS"
+	DropItem "BossDeathTS"
+}
+
+//Chance of that one thing spawning
+actor ShotgunDudeSpawner16 : RandomSpawner
+{
+	DropItem "Taokaka"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+}
+
+actor ShotgunDudeSpawner512 : RandomSpawner replaces ShotgunGuy
+{
+	DropItem "ShotgunDudeSpawner16"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+	DropItem "ShotgunDudeSpawner"
+}
+
+
+actor DemonSpawner2 : RandomSpawner replaces YoPretendImaDemon //For compatibility with Consolation Prize
+{
+	DropItem "HellHound"
+}
