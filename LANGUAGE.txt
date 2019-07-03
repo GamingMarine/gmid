@@ -1,10 +1,423 @@
-// Footsteps
-// Language Definitions
-
-// This is where the footstep sounds for each texture are defined.
-// The definition MUST be STEP_<texturename>
+//HELP, I AM TRAPPED IN A
+//PK3 FILE
 
 [enu default]
+
+STARTUP1 = "GamingMarine in Doom";
+STARTUP2 = "''No one had the guts ...UNTIL NOW!";
+STARTUP3 = "\n";
+STARTUP4 = "WARNING: Constant hatred towards bronies and catgirls up ahead!";
+STSTR_DQDON	= "What's the matter, is playing by the rules too hard for you?";
+STSTR_DQDOFF = "Now that's more like it~";
+STSTR_NCON	= "Map layouts are hard to navigate!";
+STSTR_NCOFF	= "Not that hard, it seems...";
+STSTR_NC2ON = "You might as well be invisible at this point.";
+TXT_BUDDHAON = "You've changed your religous belief!";
+TXT_BUDDHAOFF = "Switched back to your old belief.";
+STSTR_KFAADDED	= "How does one carry that much stuff around?";
+STSTR_FAADDED = "You now have the entire roster of weapons... you cheater.";
+STSTR_CHOPPERS = "Why even bother if this cheat code is broken?"
+MSGOFF = "Future messages will now be hidden.";
+MSGON = "Future messages will now be shown.";
+NETEND = "You can't end a netgame yet!\n\nPress any key to continue.";
+ENDGAME = "Are you really sure you want to end this game?\n\nPress Y or N to confirm.";
+GGSAVED = "Your game has been successfully saved.";
+HUSTR_MSGU = "Your message failed to be sent!";
+TXT_DEFAULTPICKUPMSG = "You get Tool."; //Y o u g e t T o o l is a reference to Virtual Hydlide
+
+D_DEVSTR = "Useless mode ENABLED.\n";
+D_CDROM = "CD-ROM Version: zdoom.ini from c:\\zdoomdat\n";
+PRESSKEY = "Press any key.";
+PRESSYN = "Press Y or N to confirm.";
+TXT_YES = "Yeah";
+TXT_NO = "Nope";
+
+TXT_FRAGLIMIT = "Frag limit's up! Let's see the results!";
+TXT_TIMELIMIT = "Time limit's up! Let's see the results!";
+
+GGSAVED = "Game successfully saved until further notice.";
+SECRETMESSAGE = "A secret area has been discovered!";
+PICKUP_PISTOL_DROPPED = "You got the handgun! (2)";
+
+STSTR_CLEV = "Level is being changed...\n";
+
+//Quit messages
+QUITMSG = "Hey, Serge-If the players find that one easter egg, you can kiss your Taokaka body pillow goodbye.";
+QUITMSG1 = "Remember: Music is the weapon.";
+QUITMSG2 = "Contact your local D.E.A. recruiter.";
+QUITMSG3 = "Waga baga bobo";
+QUITMSG4 = "Well I wrote this song for the Christian youth\nI wanna teach kids the Christian truth\nIf you wanna reach those kids on the street\nThen you gotta do a rap to a hip-hop beat\nSo I gave my summon an urban kick\nMy rhymes are fly and my beats are sick\nMy crew is big and it keeps getting bigga\nThat's cause Jesus Christ is my-";
+QUITMSG5 = "Well, go click on your icons then.\n\nI'll be waiting.";
+QUITMSG6 = "I didn't like the way the show started. They had given me the best seat in the house;\n\nFront row and center.";
+QUITMSG7 = "TWO KIDS GON DIE TONITE"; //JonTron
+QUITMSG8 = "You must defeat Sheng Long\n to stand a chance."; //Street Fighter II (NO, HE'S NOT IN THIS MOD. DON'T EVEN BOTHER)
+QUITMSG9 = "Making progress, marine? Your journey is futile. You will die, and your soul will be mine!"; //Doom 3
+QUITMSG10 = "Blake! You should have known that you can not defeat me\nand my creations! Now I can take over the known\nuniverse! No one will ever laugh at me again!\nRest in peace, Blake!                -Dr. Goldfire"; //Blake Stone series
+QUITMSG11 = "Droppin' plates on yo ass, beyotch!"; //Beavis and Butt-Head
+QUITMSG12 = "I am the celestial gardener, policing\nthe planet of the stink weeds and poisons\nwhich leak out even through the cracks in the\ncold asphalt sidewalks of the\nCity of Sin!"; //The City
+QUITMSG13 = "Keep your head, hands, arms, legs, and\nfeet inside the ride at all times. You're bound to\nlose MORE today than just a few limbs!"; //The Carnival (Redux-exclusive level)
+QUITMSG14 = "No day in the park. Too much of the\nblood on me is mine. But the day is not\ndone, and I've miles to go to make\nthem sleep... Peanuts anyone?"; //Central Park
+QUITMSG15 = "Feast upon the frozen images of\nmolten massacre as the machineries of\ndeath grind relentlessly, mindlessly on..."; //The Industrial Complex
+QUITMSG16 = "From the halls of the Vatican to the\nRunways of Truth, we are there. At the place\ncalled Climax, and the time called NOW!\nWhen it's done, let the gods sort it out!"; //Air Force Base
+QUITMSG17 = "Watch for falling prices, falling\nemployees, falling customers, incoming\nmissiles, and blood puddles..."; //EZ Mart (Special Delivery level)
+QUITMSG18 = "The earth is thirsty. It also\nseems to have soiled itself..."; //Shanty Town (Special Delivery level)
+QUITMSG19 = "The earth was hungry,\nso it ate some people."; //Earthquake (Special Delivery level)
+QUITMSG20 = "Did someone say they've\nfallen and can't get up?"; //La Palamino Resort (Special Delivery level)
+QUITMSG21 = "Watch the river run;\nflowing with bubbling blood;\nthe end, it is near."; //Tokyo (Super Postal level)
+QUITMSG22 = "The footprint you see;\nGodzilla has formed for you;\nyour city laid waste."; //Osaka (Super Postal level)
+QUITMSG23 = "The hive has been cleansed. The\nsource of the corruption has been corked,\nlaid in a body bag and dragged to the\noutskirts of existence"; //The Elementary School (The End in Redux)
+QUITMSG24 = "The demons are real and they\nare here. Fate has delivered me into\ntheir midst and given me the\nopportunity to save my species from a\nmillion years of dominion."; //Unused quote found in the beta
+
+PD_BLUEO = "This object is restricted to those with \chblue\c- access.";
+PD_REDO = "This object is restricted to those with \cgred\c- access.";
+PD_YELLOWO = "This object is restricted to those with \ckyellow\c- access.";
+PD_BLUEK = "This door is restricted to those with \chblue\c- access.";
+PD_REDK = "This door is restricted to those with \cgred\c- access.";
+PD_YELLOWK = "This door is restricted to those with \ckyellow\c- access.";
+PD_BLUECO = "This object is restricted to those with \chblue keycard\c- access.";
+PD_REDCO = "This object is restricted to those with \cgred keycard\c- access.";
+PD_YELLOWCO = "This object is restricted to those with \ckyellow keycard\c- access.";
+PD_BLUESO = "This object is restricted to those with \chblue skull\c- access.";
+PD_REDSO = "This object is restricted to those with \cgred skull\c- access.";
+PD_YELLOWSO = "This oject is restricted to those with \ckyellow skull\c- access.";
+PD_BLUEC = "This door is restricted to those with \chblue keycard\c- access.";
+PD_REDC = "This door is restricted to those with \cgred keycard\c- access.";
+PD_YELLOWC = "This door is restricted to those with \ckyellow keycard\c- access.";
+PD_BLUES = "This door is restricted to those with \chblue skull\c- access.";
+PD_REDS = "This door is restricted to those with \cgred skull\c- access.";
+PD_YELLOWS = "This door is restricted to those with \ckyellow skull\c- access.";
+PD_ANY = "This door is restricted to those with \cjany key\c-.";
+PD_ANYOBJ = "This object is restricted to those with \cjany key\c-.";
+PD_ALL3 = "This door is restricted to those with \cjall three keys\c-.";
+PD_ALL3O = "This object is restricted to those with \cjall three keys\c-.";
+PD_ALL6 = "This door is restricted to those with \cjall six keys\c-.";
+PD_ALL6O = "This object is restricted to those with \cjall six keys\c-.";
+PD_ALLKEYS = "\cjEvery single key\c- is required.";
+
+// Obituary strings
+// First the self-kills, then the other-kills
+OB_SUICIDE = "%o, suicide is not the answer. Call the National Suicide Prevention Lifeline.";
+OB_FALLING = "%o fell to %p death.";
+OB_CRUSH = "%o went ''squish!''";
+OB_EXIT = "%o really wanted to leave.";
+OB_WATER = "%o sleeps with the fishies.";
+OB_SLIME = "%o mutated into a pile of goop.";
+OB_LAVA = "%o melted like a crayon in the hot Sun.";
+OB_BARREL = "%o perished.";
+OB_SPLASH = "%o learned what splash damage is.";
+OB_KILLEDSELF = "%o took the easy way out.";
+
+// Same as OB_MPTELEFRAG, but shown when a monster telefrags you
+OB_MONTELEFRAG = "%o stood in the way of a monster.";
+
+OB_DEFAULT = "%o said %p final farewells.";
+OB_MPDEFAULT = "%o asked %k to please fix this death string."; //A reference to an unused obituary found in Postal 2. "%o said to %k to please rewrite this death string or remove it."
+OB_FRIENDLY1 = "%k killed a teammate of %p.";
+OB_FRIENDLY2 = "%k got in the way of someone else.";
+OB_FRIENDLY3 = "%k gave the other team a frag.";
+OB_FRIENDLY4 = "%k lost a friend of %p.";
+
+// Extra:
+
+TXT_FREEZEON = "Freeze mode ENABLED";
+TXT_FREEZEOFF = "Freeze mode DISABLED";
+TXT_LIGHTER = "You feel like flying through the air.";
+TXT_GRAVITY = "You're falling, falling...";
+AM_MONSTERS			= "Monsters Killed:";
+AM_SECRETS			= "Secrets Discovered:";
+AM_ITEMS			= "Items Collected:";
+
+MNU_DELETESG		= "Are you SURE you want to delete the savegame\n";
+
+//Story screen text
+//Doom
+E1TEXT =
+	"As expected, it wouldn't be that easy to claim\n"
+	"victory. After killing two freakos and walking over\n"
+	"a mysterious portal you find yourself attacked from\n"
+	"every corner, but technically blindfolded. Why couldn't\n"
+	"you have just stopped the damned invasion at this point\n"
+	"and get a free ticket home? Life is unfair.\n"
+	"\n"
+	"Well, tough shit, marine; This is only the beginning\n"
+	"of your adventure. You've been teleported to Deimos,\n"
+	"the moon that was reported missing not too long ago.\n"
+	"You might be able to find out what happened in a\n"
+	"little bit.\n"
+	"\n"
+	"To kick some more ass, keep on playing through the\n"
+	"adventure of GamingMarine in Doom: Where the safest\n"
+	"place is behind the trigger!\n";
+E2TEXT =
+	"What was that thing? No matter, because it's\n"
+	"dead now. It seems it was commanding these guys to\n"
+	"build a nice crib for it. Too bad you've just trashed\n"
+	"the place. Oops.\n"
+	"However, you've still yet to find out what happened to\n"
+	"Deimos. It seems your morbid curiousity has caught up\n"
+	"with you, for as you look down, your eyes widen.\n"
+	"\n"
+	"Deimos now floats above this dimension!\n"
+	"It was bad enough that the Master Force was invading\n"
+	"the area, but teleporting Deimos to wherever they live\n"
+	"is a whole new level of asshole.\n"
+	"Quickly, you rush down to the surface, thirsty for\n"
+	"ass-kicking.\n"
+	"\n"
+	"Time to teach these bastards the true meaning of\n"
+	"Inferno.";
+E3TEXT =
+	"'Tis quite a shame that you had to\n"
+	"assassinate one of your closest friends.\n"
+	"He was under the influence of those damned\n"
+	"creatures, riding one of them, so it's not\n"
+	"like you could do anything else.\n"
+	"\n"
+	"A portal appears in the distance, urging\n"
+	"you to walk through it. As you look through\n"
+	"the portal, you see your desired destination:\n"
+	"The green fields of Earth!\n"
+	"It's good to be back home.\n"
+	"\n"
+	"As you step foot outside the portal, you\n"
+	"wonder to yourself: ''With all the madness\n"
+	"I've been through, what has Earth been doing?''\n"
+	"After all, there's no way anyone could've gone\n"
+	"through the portal with you... right?";
+//The Ultimate Doom
+E4TEXT =
+	"You had seen a lot of clones ever since you've\n"
+	"started your adventure. But the fact that even\n"
+	"the toughest fellas here are cloned as well makes\n"
+	"you doubt that you'll find the original version\n"
+	"of them.\n"
+	"\n"
+	"Anyway, those creatures managed to make their way\n"
+	"to Earth. Considering how insane these guys were\n"
+	"beforehand, you should know how bad it's gonna\n"
+	"be back home.\n"
+	"\n"
+	"Time to raise Hell on Earth.";
+//Doom II: Hell on Earth
+C1TEXT =
+	"You've made your way to some sort of\n"
+	"starport. It seems that those four-\n"
+	"legged bastards are using this place's\n"
+	"powers to take the entire human race\n"
+	"hostage.\n"
+	"\n"
+	"A switch that controls this lies up ahead.\n"
+	"Reach it, and you'll be able to get everyone\n"
+	"out of the Earth's atmosphere.\n"
+	"If you fail, billions will meet their fate\n"
+	"against the last thing they'd expect to be\n"
+	"killed by.\n"
+	"\n"
+	"Good luck.";
+C2TEXT =
+	"Great work! You've managed to survive the\n"
+	"heavily guarded area and pull the switch.\n"
+	"However, you could not make it to the rocket\n"
+	"that is sending everyone out of here.\n"
+	"You're now the only living human left on Earth,\n"
+	"with more of those freaks surrounding you.\n"
+	"You've decided that your work here is done,\n"
+	"and proceed to stuff the barrel in your mouth.\n"
+	"\n"
+	"Suddenly, a message beams down from space:\n"
+	"\"Sensors have located the source of the\n"
+	"alien invasion. If you go there, you may be\n"
+	"able to block their entry. The alien base is\n"
+	"in the heart of your own home city, not far\n"
+	"from the starport.\"\n"
+	"Looks like suicide isn't your next step here.\n"
+	"Get going and kick some more ass!";
+C3TEXT =
+	"After going from area to area, killing endless\n"
+	"hordes of ponies, only now has it hit you; They're\n"
+	"not gonna stop coming. They're not gonna give up,\n"
+	"unless...\n"
+	"\n"
+	"...we kill the mother.\n"
+	"\n"
+	"The portal you went through has taken you to the\n"
+	"Master Force's dimension. Keep exploring, find the\n"
+	"source, and destroy it!\n";
+C4TEXT =
+	"Congratulations and well done!\n"
+	"The giant being that you've just destroyed\n"
+	"was the mother of this whole invasion.\n"
+	"The monster starts to bellow very loudly,\n"
+	"with its thrashing limbs destroying the\n"
+	"whole place.\n"
+	"\n"
+	"The invasion is no more. Humanity can\n"
+	"come back to Earth, and restore the heavily\n"
+	"decreased population safely. You will now be\n"
+	"seen as a hero, but you feel that's no enough.\n"
+	"You wish to help everyone rebuild what was once\n"
+	"your favorite places when you were young.\n"
+	"\n"
+	"Those four-legged freaks shouldn't rise again for\n"
+	"some time.";
+C5TEXT =
+	"Your curiousity has led you to an area you're\n"
+	"not very familiar with. Swastikas and paintings\n"
+	"of Adolf Hitler surround the place. However, you\n"
+	"some human voices outside the door. Hopefully, they\n"
+	"are friends.\n"
+	"\n"
+	"Hopefully.";
+C6TEXT =
+	"As it turns out, a corrupt group named the New\n"
+	"Order Nation has taken over this area.\n"
+	"\n"
+	"But due to your foolish curiousity, you have to\n"
+	"deal with more of them.";
+//Final Doom: The Plutonia Experiment	
+P1TEXT =
+	"As the Accelerator's guardian crumbles\n"
+	"before you, your gun is lowered as you\n"
+	"procure the Accelerator from Hell's\n"
+	"wretched maw.\n"
+	"But wait, there was supposed to be two\n"
+	"prototypes, and those goddamn demons\n"
+	"must have taken the other one.\n"
+	"\n"
+	"Find the prototype, or your struggle\n"
+	"will have been for naught. Keep moving,\n"
+	"keep fighting, keep killing.\n"
+	"All for the greater good.";
+P2TEXT =
+	"Not even the dreaded gauntlet of Arch-Viles\n"
+	"could contain you, as you walk up to the\n"
+	"Accelerator and put a bullet in it,\n"
+	"permanently shutting it down.\n"
+	"\n"
+	"Don't hold your breath just yet, as\n"
+	"up ahead, lies another great demon"
+	"stronghold.\n"
+	"\n"
+	"Knock, knock.";
+P3TEXT =
+	"You've kicked in the faces of many demons\n"
+	"only to find yourself in their command\n"
+	"center, only to discover the existence\n"
+	"of the Gatekeeper, a god-like demon whose\n"
+	"cousin you've destroyed, and whose spawn\n"
+	"is now cascading to Earth.\n"
+	"\n"
+	"With a hellish grin, you load up, knowing\n"
+	"you've done this before. Time to give this\n"
+	"son of a bitch the good news!";
+P4TEXT =
+	"The Gatekeeper's visage explodes, leaving\n"
+	"gibs, bloody metal, and some demented eye\n"
+	"of Hell itself which manages to suck in\n"
+	"the last of the demonic hordes, as well\n"
+	"as the burning corpse of the Gatekeeper\n"
+	"before the portal collapses and implodes\n"
+	"into nothingness.\n"
+	"\n"
+	"Now that you've blown Hell into oblivion,\n"
+	"you decide to remain at the Gatekeeper's\n"
+	"final resting place, to ensure that no demon\n"
+	"shall rise again...";
+P5TEXT =
+	"R&R isn't always that easy to recieve.\n"
+	"Welcome to Cyberden, where a Master Force\n"
+	"Lord lurks around every corner. Best you\n"
+	"have enough mana.";
+P6TEXT =
+	"What? You thought it would be *that* easy to\n"
+	"escape? To whoever designed this place, it's seems\n"
+	"like the answer is no.\n"
+	"\n"
+	"Because no one gets out alive...";
+//Final Doom: TNT: Evilution	
+T1TEXT =
+	"You've fought out of the of the diseased\n"
+	"research labs. It appears that no matter\n"
+	"how many times Hell is unleashed, those\n"
+	"sorry bastards at UAC always manage to\n"
+	"fuck up real hard when it comes to\n"
+	"security of their own assets.\n"
+	"\n"
+	"Ahead lies the military complex, now\n"
+	"a breeding ground of nightmarish\n"
+	"creatures bent on mutilating you.\n"
+	"Hopefully, there's plenty of war\n"
+	"ordinance to go around.";
+T2TEXT =
+	"Judging by the sounds of whining machinery\n"
+	"and inhuman wailing up ahead, it looks\n"
+	"like new hellspawn is being stitched\n"
+	"together through corrupted flesh and bloody\n"
+	"metal. If that's the case, you've got an\n"
+	"entire legion to put down in the most\n"
+	"vile fashion one can possibly think of.\n"
+	"\n"
+	"Nobody said it was going to be easy.";
+T3TEXT =
+	"Wait a minute.\n"
+	"\n"
+	"You've been through here before. Once\n" 
+	"when you've been kicked down the\n"
+	"galactic toilet for that stint with\n"
+	"your commanding officer, and now when\n"
+	"this entire corporate shithole has been\n"
+	"kicked into Hell's meat grinder.\n"
+	"You've never liked this place, and you\n"
+	"as hell hate it now.";
+T4TEXT =
+	"Unlike the Icon of Sin, this demon-spitter\n"
+	"screams with an echo turning the blood-red\n"
+	"sky into the blue skies of Earth.\n"
+	"This dimension is falling apart slowly,\n"
+	"with the mounds of demonic corpses\n"
+	"vanishing and the buildings around you\n"
+	"crumbling silently. Have you truly won?\n"
+	"\n"
+	"Something rumbles in the distance.\n"
+	"A powerful blue light now takes the place\n"
+	"of the demon-spitter's decaying skull.";
+T5TEXT =
+	"Ancient Egypt? Whatever the case, the\n"
+	"demons must have made an abode here,\n"
+	"despite the ruins becoming awfully\n"
+	"quiet.\n"
+	"Have you been forsaken by the gods?";
+T6TEXT =
+	"At last, a vacation. You mutter to\n"
+	"yourself that someone else can do the\n"
+	"job for a change. As you welcome \n"
+	"yourself to the peaceful flowing water,\n"
+	"quaint buildings, and placid atmosphere,\n"
+	"the iron shoe of a cyberdemon marks\n"
+	"the presence of hellspawn.\n"
+	"\n"
+	"Goddamn, it appears that the demons\n"
+	"really do have it out for only you.";
+//No Rest For The Living
+NERVETEXT =
+	"Looks like trouble was brewing up again\n"
+	"in your home country. Some asshole thought\n"
+	"it would be a good idea to start up an\n"
+	"amusement park, with Earth being the ticket\n"
+	"booth.\n"
+	"\n"
+	"Little did it know a teen with a sawn off\n"
+	"in his hand was making a guest appearance,\n"
+	"and turning up the crank on the shooting\n"
+	"gallery to a 12.\n"
+	"\n"
+	"The clone's corpse now lies right in the\n"
+	"middle of the hedge maze, with its infected\n"
+	"guts and blood covering the walls. That should\n"
+	"teach it for pulling off this stunt.\n"
+	"\n"
+	"Sorry, sir, the park is closed.\n";
+	
 // Flats
 // This is a list of flats that have footstep sounds associated with them.
 // Items are separated by a colon ( : )

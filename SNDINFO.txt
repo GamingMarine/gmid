@@ -1,3 +1,675 @@
+//------------Player------------------//
+$playersound	player	male	*falling        dsplfall
+Player/Gutted PLAYGUT
+$random player/pain100	{ pp10 pp11 pp12 pp13 }
+pp10 pain1
+pp11 pain1-2
+pp12 pain1-3
+pp13 pain1-4
+$playeralias    player  male    *pain100    player/pain100
+$random player/pain75	{ pp20 pp21 pp22 pp23 }
+pp20 pain2
+pp21 pa1n2
+pp22 pa1n3
+pp23 pa1n4
+$playeralias    player  male    *pain75    player/pain75
+$random player/pain50	{ pp30 pp31 }
+pp30 pain3
+pp31 pain4
+$playeralias    player  male    *pain50    player/pain50
+$random player/pain25	{ pp40 pp41 pp42 pp43 }
+pp40 pain5
+pp41 pain6
+pp42 pa1n5
+pp43 pa1n6
+$playeralias    player male *pain25 player/pain25
+poof-1 ploof1
+poof-2 ploof2
+poof-3 ploof3
+poof-4 ploof4
+poof-5 ploof5
+$random gmarinoof { poof-1 poof-2 poof-3 poof-4 poof-5 }
+$playeralias player male *grunt gmarinoof
+pdhi-1	diehi1
+pdhi-2	diehi2
+pdhi-3	diehi3
+$random gmarindhi { pdhi-1 pdhi-2 pdhi-3 }
+$playersound	player	male	*death		GMPLDETH
+//$playeralias	player	male	*xdeath		gmarindhi
+player/jump1	 DSJUMP1
+player/jump2	 DSJUMP2
+$random gmarinjmp { player/jump1 player/jump2 }
+$playeralias	player	male	*jump		gmarinjmp
+$playeralias	player	male	*gibbed		misc/gibbed
+player/notgood	 OHSHIT
+player/zaps		 ZAPS
+//------------Weapons----------------//
+$random fist/normalthrow { normalfist1 normalfist2 normalfist3 normalfist4 }
+normalfist1		 FISTWH1
+normalfist2		 FISTWH2
+normalfist3		 FISTWH3
+normalfist4		 FISTWH4
+$random fist/hit { fisthit1 fisthit2 fisthit3 fisthit4 fisthit5 }
+fisthit1		 PUNHIT1
+fisthit2		 PUNHIT2
+fisthit3		 PUNHIT3
+fisthit4		 PUNHIT4
+fisthit5		 PUNHIT5
+weapons/KICK     KICK
+weapons/DSSAWFUL DSSAWFUL
+weapons/DSSAWHIT DSSAWHIT
+pistol/cock		 PISTCOCK
+weapons/GMPISTOL GMPISTOL
+$random weapons/GMSHOTGN { shotgun/fire1 shotgun/fire2 shotgun/fire3 shotgun/fire4 }
+shotgun/fire1	 SGFIR1
+shotgun/fire2	 SGFIR2
+shotgun/fire3	 SGFIR3
+shotgun/fire4	 SGFIR4
+weapons/ssg1	 DSDBOPN
+weapons/DSDBCLS	 DSDBCLS
+$random weapons/UZIFIRE { weapons/UZIFIRE1 weapons/UZIFIRE2 weapons/UZIFIRE3 }
+weapons/UZIFIRE1 UZIFIRE1
+weapons/UZIFIRE2 UZIFIRE2
+weapons/UZIFIRE3 UZIFIRE3
+weapons/GMROCKTL GMROCKTL
+weapons/DSBFG    DSBFG
+weapons/blasterrifle	DSBLASTR
+railgun/fire1	 RAILFIR1
+railgun/fire2	 RAILFIR2
+$random weapons/railgf { railgun/fire1 railgun/fire2 }
+weapons/GAUSEND  GAUSEND
+weapons/machinegun/up	DSD3MGU
+$random weapons/mgunfire	{ mgunfire1 mgunfire2 mgunfire3 }
+mgunfire1		dsmgfir1
+mgunfire2		dsmgfir2
+mgunfire3		dsmgfir3
+weapons/explosion1		barexp1
+weapons/explosion2		barexp2
+weapons/explosion3		barexp3
+weapons/explosion4		barexp4
+weapons/explosion5		barexp5
+weapons/explosion6		barexp6
+explosion/distant		EXPDIST
+40mm/grenfire gfire
+40mm/grenbounce bounce
+shotgun/pump1			PUMPBACK
+shotgun/pump2			PUMPFRTH
+weapons/spasshot	SPASSHOT
+weapons/spascock	SPASCOCK
+$random weapons/DSDSHTGN { ssg/fire1 ssg/fire2 }
+ssg/fire1			DBSFIRE1
+ssg/fire2			DBSFIRE2
+$random weapons/DSDBLOAD { ssg/load1 ssg/load2 ssg/load3 }
+ssg/load1			DBSLOAD1
+ssg/load2			DBSLOAD2
+ssg/load3			DBSLOAD3
+Legendary/Get		LEGENDUP
+cadet/pickup		CADETGET
+bigball/fire		CADETFIR
+bigball/hit			CADETEXP
+bigball/bounce1		CADETHT1
+bigball/bounce2		CADETHT2
+$random bigball/bounce { bigball/bounce1 bigball/bounce2 }
+plasma/fire			PLACANFR
+weapons/staffget		STAFFGET
+johnny/gee1			JOHNGEE1
+johnny/gee2			JOHNGEE2
+johnny/gee3			JOHNGEE3
+johnny/gee4			JOHNGEE4 //"They call him Lil' Johnny Gee"?
+johnny/gee5			JOHNGEE5
+$random johnny/gee { johnny/gee1 johnny/gee2 johnny/gee3 johnny/gee4 johnny/gee5 }
+FOOT/WALL			FOOTWALL
+FOOT/HIT			FOOTHIT
+grinder/start		MOTFIRE
+grinder/continue	MOTFIREB
+grinder/stop		MOTFIREC
+misc/gibbed1			dsslop1
+misc/gibbed2			dsslop2
+misc/gibbed3			dsslop3
+misc/gibbed4			dsslop4
+misc/gibbed5			dsslop5
+misc/gibbed6			dsslop6
+misc/gibbed7			dsslop7
+misc/gibbed8			dsslop8
+$random misc/gibbed { misc/gibbed1 misc/gibbed2 misc/gibbed3 misc/gibbed4 misc/gibbed5 misc/gibbed6 misc/gibbed7 misc/gibbed8 }
+gib/hit1				gibimp1
+gib/hit2				gibimp2
+gib/hit3				gibimp3
+gib/hit4				gibimp4
+gib/hit5				gibimp5
+gib/hit6				gibimp6
+gib/hit7				gibimp7
+gib/hit8				gibimp8
+gib/hit9				gibimp9
+gib/hit10				gibimp10
+gib/hit11				gibimp11
+gib/hit12				gibimp12
+$random	gib/land { gib/hit1 gib/hit2 gib/hit3 gib/hit4 gib/hit5 gib/hit6 gib/hit7 gib/hit8 gib/hit9 gib/hit10 gib/hit11 gib/hit12 }
+$random newexplosion			{ weapons/explosion1 weapons/explosion2 weapons/explosion3 weapons/explosion4 weapons/explosion5 weapons/explosion6 }
+knukled1 knukled1
+knukled2 knukled2
+$random knuckled { knukled1 knukled2 }
+fistslct fistslct
+pistup	 pistup
+shotcock shotcock
+dbcock	 dbcock
+chanup	 chanup
+rockpump rockpump
+railup	 railup
+bfgup	 dsbfgup
+blastrup blastrup
+sawpkup	 sawpkup
+BOLT1R BOLT1R
+spasup spasup
+duke/weaponup WPNSEL21
+STAFUP STAFUP
+REVXUP REVXUP
+INVIS	 INVIS
+coke/up	 COLA
+pc/pick	 PCPICK
+pc/idle	 comp1
+SOULGET	 SOULGET
+MEGAGET	 MEGAGET
+INVULGET INVULGET
+PCOLABUP PCOLABUP
+weapon/get1			DSWPNUP1
+weapon/get2			DSWPNUP2
+weapon/get3			DSWPNUP3
+weapon/get4			DSWPNUP4
+$random misc/w_pkup { weapon/get1 weapon/get2 weapon/get3 weapon/get4 }
+misc/ammo_pkup am_pkup
+pistolmagazine/get	PISMAGUP
+pistolbox/get		PISBOXUP
+bulletmagazine/get	BULMAGUP
+bulletbox/get		BULBOXUP
+shellclip/get		SHELGET
+shellbox/get		SHELGET2
+rocket/get			RCKCLIP
+rocketbox/get		RCKCLIP2
+grenade/get1		GRENGET1
+grenade/get2		GRENGET2
+cell/get1			CELLGET
+cell/get2			CELLGET2
+mana/smallget		SMOLMANA
+mana/largeget		BIGMANA
+misc/ar2_pkup 		AMRSHRD
+backpack/get BPACKUP
+FKITUSE		cokeuse
+DoubleDamage/Pickup			DDMG
+QuadDamage/Pickup			QUADDMUP
+QuadDamage/Use				QUADDMFR
+RADS						SUIT
+eating/apple				APPLEEAT
+eating/orange				ORANGEAT
+eating/burger				BURGEAT
+eating/heart				HEARTEAT
+eating/swollenheart			HARTEAT2
+revx/fire					REVXFIRE
+revx/upgrade				REVXUPGR
+get/soulsphere				asoulsph
+get/megasphere				amegasph
+get/pinvisibil				apartial
+get/invisibili				ainvisib
+get/invulnerab				ainvulne
+ARMOR1						ARMOR1
+ARMOR2						ARMOR2
+ARMOR3						ARMOR3
+ARMOR4						ARMOR4
+
+//------------Misc-------------------//
+misc/k_pkup  dsgotkey
+$random player/gibtaunt { ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 }
+ds1 pieces1
+ds2 pieces2
+ds3 pieces3
+ds4 pieces4
+ds5 pieces5
+ds6 pieces6
+ds7 pieces7
+ds8 pieces8
+ds9 pieces9
+ds10 pieces10
+ds11 pieces11
+ds12 pieces12
+ds13 pieces13
+ds14 pieces14
+ds15 pieces15
+ds16 pieces16
+ds17 pieces17
+ds18 pieces18
+ds19 pieces19
+ds20 pieces20
+ds21 pieces21
+ds22 pieces22
+ds23 pieces23
+ds24 pieces24
+ds25 pieces25
+$random player/intro { player/intro1 player/intro2 player/intro3 player/intro4 player/intro5 player/intro6 player/intro7 player/intro8 player/intro9 player/intro10 player/intro11 player/intro12 player/intro13 player/intro14 player/intro15 player/intro16 player/intro17 player/intro18 player/intro19 player/intro20 player/intro21 player/intro22 player/intro23 player/intro24 player/intro25 player/intro26 player/intro27 player/intro28 player/intro29 player/intro30 player/intro31 player/intro32 player/intro33 player/intro34 player/intro35 player/intro36 player/intro37 player/intro38 player/intro39 player/intro40 }
+player/intro1				INTRO01
+player/intro2				INTRO02
+player/intro3				INTRO03
+player/intro4				INTRO04
+player/intro5				INTRO05
+player/intro6				INTRO06
+player/intro7				INTRO07
+player/intro8				INTRO08
+player/intro9				INTRO09
+player/intro10				INTRO10
+player/intro11				INTRO11
+player/intro12				INTRO12
+player/intro13				INTRO13
+player/intro14				INTRO14
+player/intro15				INTRO15
+player/intro16				INTRO16
+player/intro17				INTRO17
+player/intro18				INTRO18
+player/intro19				INTRO19
+player/intro20				INTRO20
+player/intro21				INTRO21
+player/intro22				INTRO22
+player/intro23				INTRO23
+player/intro24				INTRO24
+player/intro25				INTRO25
+player/intro26				INTRO26
+player/intro27				INTRO27
+player/intro28				INTRO28
+player/intro29				INTRO29
+player/intro30				INTRO30
+player/intro31				INTRO31
+player/intro32				INTRO32
+player/intro33				INTRO33
+player/intro34				INTRO34
+player/intro35				INTRO35
+player/intro36				INTRO36
+player/intro37				INTRO37
+player/intro38				INTRO38
+player/intro39				INTRO39
+player/intro40				INTRO40
+$random player/killtaunt { player/killtaunt1 player/killtaunt2 player/killtaunt3 player/killtaunt4 player/killtaunt5 player/killtaunt6 player/killtaunt7 player/killtaunt8 player/killtaunt9 player/killtaunt10 player/killtaunt11 player/killtaunt12 player/killtaunt13 player/killtaunt14 player/killtaunt15 player/killtaunt16 player/killtaunt17 player/killtaunt18 player/killtaunt19 player/killtaunt20 player/killtaunt21 player/killtaunt22 player/killtaunt23 player/killtaunt24 player/killtaunt25 player/killtaunt26 player/killtaunt27 player/killtaunt28 player/killtaunt29 player/killtaunt30 player/killtaunt31 player/killtaunt32 player/killtaunt33 player/killtaunt34 player/killtaunt35 player/killtaunt36 player/killtaunt37 player/killtaunt38 player/killtaunt39 player/killtaunt40 player/killtaunt41 player/killtaunt42 player/killtaunt43 player/killtaunt44 player/killtaunt45 player/killtaunt46 player/killtaunt47 player/killtaunt48 player/killtaunt49 player/killtaunt50 player/killtaunt51 player/killtaunt52 player/killtaunt53 player/killtaunt54 player/killtaunt55 player/killtaunt56 player/killtaunt57 player/killtaunt58 player/killtaunt59 player/killtaunt60 player/killtaunt61 player/killtaunt62 player/killtaunt63 player/killtaunt64 player/killtaunt65 player/killtaunt66 player/killtaunt67 player/killtaunt68 player/killtaunt69 player/killtaunt70 player/killtaunt71 player/killtaunt72 player/killtaunt73 player/killtaunt74 player/killtaunt75 player/killtaunt76 player/killtaunt77 player/killtaunt78 player/killtaunt79 player/killtaunt80 player/killtaunt81 player/killtaunt82 player/killtaunt83 player/killtaunt84 player/killtaunt85 player/killtaunt86 player/killtaunt87 player/killtaunt88 player/killtaunt89 player/killtaunt90 player/killtaunt91 player/killtaunt92 player/killtaunt93 player/killtaunt94 player/killtaunt95 }
+player/killtaunt1			KILL01
+player/killtaunt2			KILL02
+player/killtaunt3			KILL03
+player/killtaunt4			KILL04
+player/killtaunt5			KILL05
+player/killtaunt6			KILL06
+player/killtaunt7			KILL07
+player/killtaunt8			KILL08
+player/killtaunt9			KILL09
+player/killtaunt10			KILL10
+player/killtaunt11			KILL11
+player/killtaunt12			KILL12
+player/killtaunt13			KILL13
+player/killtaunt14			KILL14
+player/killtaunt15			KILL15
+player/killtaunt16			KILL16
+player/killtaunt17			KILL17
+player/killtaunt18			KILL18
+player/killtaunt19			KILL19
+player/killtaunt20			KILL20
+player/killtaunt21			KILL21
+player/killtaunt22			KILL22
+player/killtaunt23			KILL23
+player/killtaunt24			KILL24
+player/killtaunt25			KILL25
+player/killtaunt26			KILL26
+player/killtaunt27			KILL27
+player/killtaunt28			KILL28
+player/killtaunt29			KILL29
+player/killtaunt30			KILL30
+player/killtaunt31			KILL31
+player/killtaunt32			KILL32
+player/killtaunt33			KILL33
+player/killtaunt34			KILL34
+player/killtaunt35			KILL35
+player/killtaunt36			KILL36
+player/killtaunt37			KILL37
+player/killtaunt38			KILL38
+player/killtaunt39			KILL39
+player/killtaunt40			KILL40
+player/killtaunt41			KILL41
+player/killtaunt42			KILL42
+player/killtaunt43			KILL43
+player/killtaunt44			KILL44
+player/killtaunt45			KILL45
+player/killtaunt46			KILL46
+player/killtaunt47			KILL47
+player/killtaunt48			KILL48
+player/killtaunt49			KILL49
+player/killtaunt50			KILL50
+player/killtaunt51			KILL51
+player/killtaunt52			KILL52
+player/killtaunt53			KILL53
+player/killtaunt54			KILL54
+player/killtaunt55			KILL55
+player/killtaunt56			KILL56
+player/killtaunt57			KILL57
+player/killtaunt58			KILL58
+player/killtaunt59			KILL59
+player/killtaunt60			KILL60
+player/killtaunt61			KILL61
+player/killtaunt62			KILL62
+player/killtaunt63			KILL63
+player/killtaunt64			KILL64
+player/killtaunt65			KILL65
+player/killtaunt66			KILL66
+player/killtaunt67			KILL67
+player/killtaunt68			KILL68
+player/killtaunt69			KILL69
+player/killtaunt70			KILL70
+player/killtaunt71			KILL71
+player/killtaunt72			KILL72
+player/killtaunt73			KILL73
+player/killtaunt74			KILL74
+player/killtaunt75			KILL75
+player/killtaunt76			KILL76
+player/killtaunt77			KILL77
+player/killtaunt78			KILL78
+player/killtaunt79			KILL79
+player/killtaunt80			KILL80
+player/killtaunt81			KILL81
+player/killtaunt82			KILL82
+player/killtaunt83			KILL83
+player/killtaunt84			KILL84
+player/killtaunt85			KILL85
+player/killtaunt86			KILL86
+player/killtaunt87			KILL87
+player/killtaunt88			KILL88
+player/killtaunt89			KILL89
+player/killtaunt90			KILL90
+player/killtaunt91			KILL91
+player/killtaunt92			KILL92
+player/killtaunt93			KILL93
+player/killtaunt94			KILL94
+player/killtaunt95			KILL95
+$random player/kicktaunt { player/kicktaunt1 player/kicktaunt2 player/kicktaunt3 player/kicktaunt4 player/kicktaunt5 player/kicktaunt6 player/kicktaunt7 player/kicktaunt8 player/kicktaunt9 player/kicktaunt10 }
+player/kicktaunt1			kick01
+player/kicktaunt2			kick02
+player/kicktaunt3			kick03
+player/kicktaunt4			kick04
+player/kicktaunt5			kick05
+player/kicktaunt6			kick06
+player/kicktaunt7			kick07
+player/kicktaunt8			kick08
+player/kicktaunt9			kick09
+player/kicktaunt10			kick10
+player/imonfire		dsburnpl
+player/meleedie		deathhit
+
+crystal/spawn				CRYSTLSP
+cookie/crystal				CRYSTLUP
+cookie/jingle1				CJINGLE1
+cookie/jingle2				CJINGLE2
+cookie/jingle3				CJINGLE3
+$random cookie/jingle { cookie/jingle1 cookie/jingle2 cookie/jingle3 }
+cookie/spawnready			CSTART
+cookie/spawnboom			CSPAWN
+cookie/spawn1				CINTRO01
+cookie/spawn2				CINTRO02
+cookie/spawn3				CINTRO03
+cookie/spawn4				CINTRO04
+cookie/spawn5				CINTRO05
+cookie/spawn6				CINTRO06
+cookie/spawn7				CINTRO07
+cookie/spawn8				CINTRO08
+cookie/spawn9				CINTRO09
+cookie/spawn10				CINTRO10
+cookie/spawn11				CINTRO11
+$random cookie/spawn { cookie/spawn1 cookie/spawn2 cookie/spawn3 cookie/spawn4 cookie/spawn5 cookie/spawn6 cookie/spawn7 cookie/spawn8 cookie/spawn9 cookie/spawn10 cookie/spawn11 }
+cookie/taunt1				CTAUNT01
+cookie/taunt2				CTAUNT02
+cookie/taunt3				CTAUNT03
+cookie/taunt4				CTAUNT04
+cookie/taunt5				CTAUNT05
+cookie/taunt6				CTAUNT06
+cookie/taunt7				CTAUNT07
+cookie/taunt8				CTAUNT08
+cookie/taunt9				CTAUNT09
+cookie/taunt10				CTAUNT10
+cookie/taunt11				CTAUNT11
+cookie/taunt12				CTAUNT12
+cookie/taunt13				CTAUNT13
+$random cookie/taunt { cookie/taunt1 cookie/taunt2 cookie/taunt3 cookie/taunt4 cookie/taunt5 cookie/taunt6 cookie/taunt7 cookie/taunt8 cookie/taunt9 cookie/taunt10 cookie/taunt11 cookie/taunt12 cookie/taunt13 }
+cookie/pain1				CPAIN01
+cookie/pain2				CPAIN02
+cookie/pain3				CPAIN03
+cookie/pain4				CPAIN04
+cookie/pain5				CPAIN05
+cookie/pain6				CPAIN06
+cookie/pain7				CPAIN07
+cookie/pain8				CPAIN08
+cookie/pain9				CPAIN09
+cookie/pain10				CPAIN10
+cookie/pain11				CPAIN11
+cookie/pain12				CPAIN12
+cookie/pain13				CPAIN13
+cookie/pain14				CPAIN14
+cookie/pain15				CPAIN15
+cookie/pain16				CPAIN16
+cookie/pain17				CPAIN17
+cookie/pain18				CPAIN18
+cookie/pain19				CPAIN19
+cookie/pain20				CPAIN20
+$random cookie/pain { cookie/pain1 cookie/pain2 cookie/pain3 cookie/pain4 cookie/pain5 cookie/pain6 cookie/pain7 cookie/pain8 cookie/pain9 cookie/pain10 cookie/pain11 cookie/pain12 cookie/pain13 cookie/pain14 cookie/pain15 cookie/pain16 cookie/pain17 cookie/pain18 cookie/pain19 cookie/pain20 }
+cookie/death				CDEATH
+cookie/leave				CLEAVE
+cookie/lastwords1			CLASTW1
+cookie/lastwords2			CLASTW2
+$random cookie/lastwords { cookie/lastwords1 cookie/lastwords2 }
+
+misc/startupdone 	STARTUP
+menu/activate			newmenu	// Activate a new menu
+menu/backup			menuback	// Backup to previous menu
+menu/cursor			menulft		// Move cursor up/down
+menu/change			menulft	// Select new value for option
+menu/invalid			menunope		// Menu not available
+menu/dismiss			dsswtchx	// Dismiss a prompt message
+menu/choose			menusel	// Choose a menu item
+menu/clear			menuback	// Close top menu
+secret/found1		SECRET1
+secret/found2		SECRET2
+$random misc/secret { secret/found1 secret/found2 }
+menu/quit1			QUITSND
+menu/quit2			QUITSND
+intermission/tick	COUNTING
+intermission/nextstage	COUNTEND
+$random weapons/shotgr { Steven/YoureDoingGreat Steven/KeepItUp Steven/StillGoing }
+misc/keytry				doorlock
+$volume casings/bullet/bounce 0.4
+$random Casings/Bullet/bounce { CBNCE1 CBNCE2 CBNCE3 CBNCE4 CBNCE5 }
+CBNCE1 DSCASIN1
+CBNCE2 DSCASIN2
+CBNCE3 DSCASIN3
+CBNCE4 DSCASIN4
+CBNCE5 DSCASIN5
+$volume casings/bullet/die 0.4
+$random Casings/Bullet/die { CBNCE1 CBNCE2 CBNCE3 CBNCE4 CBNCE5 }
+$volume casings/shell/die 0.4
+$random casings/shell/die { SBNCE1 SBNCE2 SBNCE3 SBNCE4 SBNCE5 }
+$volume casings/shell/bounce 0.4
+$random casings/shell/bounce { SBNCE1 SBNCE2 SBNCE3 SBNCE4 SBNCE5 }
+SBNCE1 DSSHELL1
+SBNCE2 DSSHELL2
+SBNCE3 DSSHELL3
+SBNCE4 DSSHELL4
+SBNCE5 DSSHELL5
+$random misc/ricochet { misc/ricochet1 misc/ricochet2 misc/ricochet3 misc/ricochet4 misc/ricochet5 misc/ricochet6  misc/ricochet7 }
+misc/ricochet1	RICOCHE1
+misc/ricochet2	RICOCHE2
+misc/ricochet3	RICOCHE3
+misc/ricochet4	RICOCHE4
+misc/ricochet5	RICOCHE5
+misc/ricochet6	RICOCHE6
+misc/ricochet7	RICOCHE7
+
+cloak/get		 CLOAKUP
+PillsJar/Pickup	 PILLSUP
+PillsJar/Use	 PILLSUSE
+Serum/Pickup	 SERUMUP
+Serum/Use		 SERUMUSE
+
+Rat/Squeek	DSRAT
+radio/chat 	RADIOAMB
+props/lighthum1		lite1
+$volume props/lighthum1 0.50
+props/lighthum2		lite2
+$volume props/lighthum2 0.050
+props/lighthum3		lite3
+$volume props/lighthum3 0.050
+props/burningbarrel/loop				burnbarl
+$volume props/burningbarrel/loop 0.03
+PILRGLS1 PILRGLS1
+PILRGLS2 PILRGLS2
+PILRGLS3 PILRGLS3
+$RANDOM PillarGlassBreak {PILRGLS1 PILRGLS2 PILRGLS3}
+FLORGLS1 FLORGLS1
+FLORGLS2 FLORGLS2
+FLORGLS3 FLORGLS3
+FLORGLS4 FLORGLS4
+$RANDOM GlassShardImpact {FLORGLS1 FLORGLS2 FLORGLS3 FLORGLS4}
+Glass/Break				GLASSBRK
+metal/hit1				METAL1
+metal/hit2				METAL2
+metal/hit3				METAL3
+metal/hit4				METAL4
+metal/hit5				METAL5
+metal/hit6				METAL6
+$random metal/hit { metal/hit1 metal/hit2 metal/hit3 metal/hit4 metal/hit5 metal/hit6 }
+ambience/reactor		reactor
+ambience/scream1		SCREAM1
+ambience/scream2		SCREAM2
+ambience/scream3		SCREAM3
+$random ambience/scream { ambience/scream1 ambience/scream2 ambience/scream3 }
+ambience/scary1			SCARY1
+ambience/scary2			SCARY2
+ambience/scary3			SCARY3
+ambience/scary4			SCARY4
+ambience/scary5			SCARY5
+ambience/scary6			SCARY6
+ambience/scary7			SCARY7
+ambience/scary8			SCARY8
+ambience/scary9			SCARY9
+ambience/horror1		HORROR1
+ambience/horror2		HORROR2
+ambience/horror3		HORROR3
+ambience/horror4		HORROR4
+$random ambience/horror { ambience/horror1 ambience/horror2 ambience/horror3 ambience/horror4 }
+ambience/bird1			BIRD01
+ambience/bird2			BIRD02
+ambience/bird3			BIRD03
+ambience/bird4			BIRD04
+ambience/bird5			BIRD05
+ambience/bird6			BIRD06
+ambience/bird7			BIRD07
+$random ambience/bird { ambience/bird1 ambience/bird2 ambience/bird3 ambience/bird4 ambience/bird5 ambience/bird6 ambience/bird7 }
+radio/break				VENTBUST
+SFX/Buzz				DSBUZZ
+$volume SFX/Buzz 0.25
+
+plats/start				elev1
+plats/mid				elev2
+plats/stop				elev3
+doors/slow/open			door1
+doors/slow/openstop		door2
+doors/slow/close		door3
+doors/slow/closestop	door2
+
+
+elephant/hit			ELLEHIT
+big/nute				BIGNUT
+toasty1					TOASTY
+toasty2					TOASTY3D
+$random toasty { toasty1 toasty2 }
+
+//Steven Tyler sound definitions
+Steven/GoodShot			GOODSHOT
+Steven/GreatShot		GRETSHOT
+Steven/NiceShot			NICESHOT
+Steven/YoureDoingGreat	DOINGRET
+Steven/KeepItUp			KEEPITUP
+Steven/StillGoing		STILGOIN
+$random Steven/Shot { Steven/GoodShot Steven/GreatShot Steven/NiceShot }
+
+//Bloodbath announcer
+$random Bloodbath/kill { Bloodbath/kill1 Bloodbath/kill2 Bloodbath/kill3 Bloodbath/kill4 Bloodbath/kill5 Bloodbath/kill6 Bloodbath/kill7 Bloodbath/kill8 Bloodbath/kill9 Bloodbath/kill10 Bloodbath/kill11 Bloodbath/kill12 Bloodbath/kill13 Bloodbath/kill14 Bloodbath/kill15 Bloodbath/kill16 Bloodbath/kill17 Bloodbath/kill18 Bloodbath/kill19 Bloodbath/kill20 Bloodbath/kill21 Bloodbath/kill22 Bloodbath/kill23 Bloodbath/kill24 Bloodbath/kill25 Bloodbath/kill26 Bloodbath/kill27 Bloodbath/kill28 Bloodbath/kill29 Bloodbath/kill30 Bloodbath/kill31 Bloodbath/kill32 Bloodbath/kill33 Bloodbath/kill34 Bloodbath/kill35 Bloodbath/kill36 Bloodbath/kill37 Bloodbath/kill38 Bloodbath/kill39 }
+Bloodbath/kill1			BBATH01
+Bloodbath/kill2			BBATH02
+Bloodbath/kill3			BBATH03
+Bloodbath/kill4			BBATH04
+Bloodbath/kill5			BBATH05
+Bloodbath/kill6			BBATH06
+Bloodbath/kill7			BBATH07
+Bloodbath/kill8			BBATH08
+Bloodbath/kill9			BBATH09
+Bloodbath/kill10		BBATH10
+Bloodbath/kill11		BBATH11
+Bloodbath/kill12		BBATH12
+Bloodbath/kill13		BBATH13
+Bloodbath/kill14		BBATH14
+Bloodbath/kill15		BBATH15
+Bloodbath/kill16		BBATH16
+Bloodbath/kill17		BBATH17
+Bloodbath/kill18		BBATH18
+Bloodbath/kill19		BBATH19
+Bloodbath/kill20		BBATH20
+Bloodbath/kill21		BBATH21
+Bloodbath/kill22		BBATH22
+Bloodbath/kill23		BBATH23
+Bloodbath/kill24		BBATH24
+Bloodbath/kill25		BBATH25
+Bloodbath/kill26		BBATH26
+Bloodbath/kill27		BBATH27
+Bloodbath/kill28		BBATH28
+Bloodbath/kill29		BBATH29
+Bloodbath/kill30		BBATH30
+Bloodbath/kill31		BBATH31
+Bloodbath/kill32		BBATH32
+Bloodbath/kill33		BBATH33
+Bloodbath/kill34		BBATH34
+Bloodbath/kill35		BBATH35
+Bloodbath/kill36		BBATH36
+Bloodbath/kill37		BBATH37
+Bloodbath/kill38		BBATH38
+Bloodbath/kill39		BBATH39
+Bloodbath/FinishHim		FINISHHM
+$random Bloodbath/Decap { Bloodbath/Decap1 Bloodbath/Decap2 Bloodbath/Decap3 Bloodbath/Decap4 Bloodbath/Decap5 Bloodbath/Decap6 Bloodbath/Decap7 Bloodbath/Decap8 Bloodbath/Decap9 Bloodbath/Decap10 }
+Bloodbath/Decap1		DECAP01
+Bloodbath/Decap2		DECAP02
+Bloodbath/Decap3		DECAP03
+Bloodbath/Decap4		DECAP04
+Bloodbath/Decap5		DECAP05
+Bloodbath/Decap6		DECAP06
+Bloodbath/Decap7		DECAP07
+Bloodbath/Decap8		DECAP08
+Bloodbath/Decap9		DECAP09
+Bloodbath/Decap10		DECAP10
+
+$attenuation player/killtaunt 0
+$attenuation player/gibtaunt 0
+$attenuation player/kicktaunt 0
+$attenuation Explosion/Distant 0
+$attenuation crystal/spawn 0
+$attenuation cookie/jingle 0
+$attenuation cookie/spawnready 0
+$attenuation cookie/spawnboom 0
+$attenuation cookie/spawn 0
+$attenuation cookie/death 0
+$attenuation cookie/leave 0
+$attenuation cookie/lastwords 0
+$attenuation Steven/Shot 0
+$attenuation Steven/Gib 0
+$attenuation toasty 0
+$attenuation Bloodbath/kill 0
+$attenuation Bloodbath/FinishHam 0
+$attenuation Bloodbath/Decap 0
+$limit player/killtaunt 1
+$limit player/gibtaunt 1
+$limit boss/sight 1
+$limit player/kicktaunt 1
+$limit player/joketaunt 1
+$limit Explosion/Distant 1
+$limit misc/teleport 0
+$limit revx/fire 0
+
 // Footsteps
 // Sound Info
 
