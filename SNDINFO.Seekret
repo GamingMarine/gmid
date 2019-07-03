@@ -1,0 +1,127 @@
+NONBoy/Sight1					 NONSIT01
+NONBoy/Sight2					 NONSIT02
+NONBoy/Sight3					 NONSIT03
+NONBoy/Sight4					 NONSIT04
+NONBoy/Sight5					 NONSIT05
+NONBoy/Sight6					 NONSIT06
+NONBoy/Sight7					 NONSIT07
+NONBoy/Sight8					 NONSIT08
+NONBoy/Sight9					 NONSIT09
+$random NONBoy/Sight { NONBoy/Sight1 NONBoy/Sight2 NONBoy/Sight3 NONBoy/Sight4 NONBoy/Sight5 NONBoy/Sight6 NONBoy/Sight7 NONBoy/Sight8 NONBoy/Sight9 }
+NONBoy/Attack					 NONATTCK
+NONBoy/Death1					 NONDIE01
+NONBoy/Death2					 NONDIE02
+NONBoy/Death3					 NONDIE03
+NONBoy/Death4					 NONDIE04
+NONBoy/Death5					 NONDIE05
+NONBoy/Death6					 NONDIE06
+NONBoy/Death7					 NONDIE07
+NONBoy/Death8					 NONDIE08
+NONBoy/Death9					 NONDIE09
+NONBoy/Death10					 NONDIE10
+NONBoy/Death11					 NONDIE11
+NONBoy/Death12					 NONDIE12
+$random NONBoy/Death { NONBoy/Death1 NONBoy/Death2 NONBoy/Death3 NONBoy/Death4 NONBoy/Death5 NONBoy/Death6 NONBoy/Death7 NONBoy/Death8 NONBoy/Death9 NONBoy/Death10 NONBoy/Death11 NONBoy/Death12 }
+
+//I nEvEr AsKeD fOr ThIs
+Taokaka/Sight1				TAOKSIT1
+Taokaka/Sight2				TAOKSIT2
+$random Taokaka/Sight { Taokaka/Sight1 Taokaka/Sight2 }
+Taokaka/Footstep			TAOKSTEP
+Taokaka/Active1				TAOKACT1
+Taokaka/Active2				TAOKACT2
+Taokaka/Active3				TAOKACT3
+Taokaka/Active4				TAOKACT4
+Taokaka/Active5				TAOKACT5
+Taokaka/Active6				TAOKACT6
+Taokaka/Active7				TAOKACT7
+$random Taokaka/Active { Taokaka/Active1 Taokaka/Active2 Taokaka/Active6 Taokaka/Active7 }
+$random Taokaka/Whine { Taokaka/Active3 Taokaka/Active4 Taokaka/Active5 }
+Taokaka/Hit1				TAOKHIT1
+Taokaka/Hit2				TAOKHIT2
+$random Taokaka/Hit { Taokaka/Hit1 Taokaka/Hit2 }
+Taokaka/Whoosh				TAOKWOSH
+Taokaka/PawHit				TAOKPHIT
+Taokaka/ChargedHit			TAOKCRG1
+Taokaka/Whoosh2				TAOKWSH2
+Taokaka/ChargedPawHit		TAOKPHT2
+Taokaka/SimpleCharge		TAOKCRG2
+Taokaka/ClawLock			TAOKLOCK
+Taokaka/ClawScratch1		TAOKSCRT
+Taokaka/NailsItching		TAOKNAIL
+Taokaka/Shing				TAOKSHNG
+Taokaka/ReadytoStrike1		TAOKRDY1
+Taokaka/ReadytoStrike2		TAOKRDY2
+$random Taokaka/ReadytoStrike { Taokaka/ReadytoStrike1 Taokaka/ReadytoStrike2 }
+Taokaka/Strike1				TAOKSTR1
+Taokaka/Strike2				TAOKSTR2
+Taokaka/Strike3				TAOKSTR3
+$random Taokaka/Strike { Taokaka/Strike1 Taokaka/Strike2 Taokaka/Strike3 }
+Taokaka/SimplePawThrow1		TAOKTHR1
+Taokaka/SimplePawThrow2		TAOKTHR2
+$random Taokaka/SimplePawThrow { Taokaka/SimplePawThrow1 Taokaka/SimplePawThrow2 }
+Taokaka/EEEEE				TAOKEEEE
+Taokaka/Sparks1				TAOKSPK1
+Taokaka/Sparks2				TAOKSPK2
+Taokaka/Sparks3				TAOKSPK3
+Taokaka/Sparks4				TAOKSPK4
+$random Taokaka/Sparks { Taokaka/Sparks1 Taokaka/Sparks2 Taokaka/Sparks3 Taokaka/Sparks4 }
+Taokaka/WinQuote1			TAOKWIN1
+Taokaka/WinQuote2			TAOKWIN2
+Taokaka/WinQuote3			TAOKWIN3
+Taokaka/WinQuote4			TAOKWIN4
+Taokaka/WinQuote5			TAOKWIN5
+Taokaka/WinQuote6			TAOKWIN6
+Taokaka/JumpAttack			TAOKJUMP
+Taokaka/ThrowObject1		TAOKTKT1
+Taokaka/ThrowObject2		TAOKTKT2
+Taokaka/ThrowObject3		TAOKTHR3
+$random Taokaka/ThrowObject { Taokaka/ThrowObject1 Taokaka/ThrowObject2 Taokaka/ThrowObject3 }
+$random Taokaka/WinQuote { Taokaka/WinQuote1 Taokaka/WinQuote2 Taokaka/WinQuote3 Taokaka/WinQuote4 Taokaka/WinQuote5 Taokaka/WinQuote6 }
+Taokaka/Pain1					TAOKPN01
+Taokaka/Pain2					TAOKPN02
+Taokaka/Pain3					TAOKPN03
+Taokaka/Pain4					TAOKPN04
+Taokaka/Pain5					TAOKPN05
+Taokaka/Pain6					TAOKPN06
+Taokaka/Pain7					TAOKPN07
+Taokaka/Pain8					TAOKPN08
+Taokaka/Pain9					TAOKPN09
+Taokaka/Pain10					TAOKPN10
+Taokaka/Pain11					TAOKPN11
+Taokaka/Pain12					TAOKPN12
+Taokaka/Pain13					TAOKPN13
+Taokaka/Pain14					TAOKPN14
+Taokaka/Pain15					TAOKPN15
+Taokaka/Pain16					TAOKPN16
+Taokaka/Pain17					TAOKPN17
+Taokaka/Pain18					TAOKPN18
+Taokaka/Pain19					TAOKPN19
+Taokaka/Pain20					TAOKPN20
+Taokaka/Pain21					TAOKPN21
+Taokaka/Pain22					TAOKPN22
+Taokaka/Pain23					TAOKPN23
+Taokaka/Pain24					TAOKPN24
+Taokaka/Pain25					TAOKPN25
+Taokaka/Pain26					TAOKPN26
+Taokaka/Pain27					TAOKPN27
+Taokaka/Pain28					TAOKPN28
+Taokaka/Pain29					TAOKPN29
+$random Taokaka/Pain { Taokaka/Pain1 Taokaka/Pain2 Taokaka/Pain3 Taokaka/Pain4 Taokaka/Pain5 Taokaka/Pain6 Taokaka/Pain7 Taokaka/Pain8 Taokaka/Pain9 Taokaka/Pain10 Taokaka/Pain11 Taokaka/Pain12 Taokaka/Pain13 Taokaka/Pain14 Taokaka/Pain15 Taokaka/Pain16 Taokaka/Pain17 Taokaka/Pain18 Taokaka/Pain19 Taokaka/Pain20 Taokaka/Pain21 Taokaka/Pain22 Taokaka/Pain23 Taokaka/Pain24 Taokaka/Pain25 Taokaka/Pain26 Taokaka/Pain27 Taokaka/Pain28 Taokaka/Pain29 }
+Taokaka/Death					TAOKDTH
+
+wayne/excellent					 WAYNEEXC
+wayne/shwing					 WAYNESHW
+wayne/partyon					 WAYNEPAR
+$random wayne/sight { wayne/excellent wayne/shwing wayne/partyon }
+wayne/not						 WAYNENOT
+wayne/notworthy					 WAYNEWTH
+
+misc/HOLYSHIT					 HOLYSHIT
+
+$attenuation Taokaka/Sight 0
+$attenuation Taokaka/WinQuote 0
+$attenuation Taokaka/Death 0
+$attenuation misc/HOLYSHIT 0
+$limit		 Taokaka/ClawLock 0
+$limit		 Taokaka/ReadytoStrike 0

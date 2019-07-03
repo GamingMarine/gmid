@@ -1,0 +1,235 @@
+Intermission Inter_Cast
+{
+	Image
+	{
+		// This is only here to initialize the background and the music
+		Background = "$bgcastcall"
+		Time = -1
+		Music = "D_DOME"
+	}
+	Link = GMIDCast
+}
+
+Intermission GMIDCast
+{
+    Cast
+	{
+	  CastClass = "SonicXRainbow"
+	  CastName = "Rainbow Dash"
+      AttackSound = "Missile", 1, "grunt/attack"
+	}
+    Cast
+	{
+	  CastClass = "ZSecPistolCastCall"
+	  CastName = "ZSec Soldier (Pistol)"
+      AttackSound = "Missile", 1, "zsec/pistol"
+	}
+    Cast
+	{
+	  CastClass = "Q2SoldierCastCall"
+	  CastName = "Insane Soldier"
+      AttackSound = "Missile", 1, "q2soldier/blaster"
+      AttackSound = "Missile", 5, "q2soldier/blaster"
+	}
+	Cast
+	{
+	  CastClass = "EvilMarine_RifleCastCall"
+	  CastName = "Evil Marine (Rifle)"
+      AttackSound = "Missile", 1, "rifle/fire"
+      AttackSound = "Missile", 3, "rifle/fire"
+      AttackSound = "Missile", 5, "rifle/fire"
+      AttackSound = "Missile", 7, "rifle/fire"
+      AttackSound = "Missile", 9, "rifle/fire"
+      AttackSound = "Missile", 11, "rifle/fire"
+      AttackSound = "Missile", 13, "rifle/fire"
+      AttackSound = "Missile", 15, "rifle/fire"
+      AttackSound = "Missile", 17, "rifle/fire"
+	}
+    Cast
+	{
+	  CastClass = "OctaLeb"
+	  CastName = "OctaLeb"
+      AttackSound = "Missile", 1, "shotguy/attack"
+	}
+	Cast
+	{
+	  CastClass = "ZSpecOpsShotgunCastCall"
+	  CastName = "ZSec Soldier (Shotgun)"
+      AttackSound = "Missile", 1, "weapons/shotgf"
+	}
+	Cast
+	{
+	  CastClass = "SawedOffShotgunGuy"
+	  CastName = "ZSec Soldier (Shotgun)"
+      AttackSound = "Missile", 1, "weapons/DSDSHTGN"
+	  AttackSound = "Missile", 3, "weapons/DSDSHTGN"
+	  AttackSound = "Missile", 5, "weapons/DSDBOPN"
+	  AttackSound = "Missile", 7, "weapons/DSDBLOAD"
+	  AttackSound = "Missile", 9, "weapons/sshotc"
+	}
+	Cast
+	{
+	  CastClass = "EvilMarine_ShotgunCastCall"
+	  CastName = "Evil Marine (Shotgun)"
+      AttackSound = "Missile", 1, "shotguy/attack"
+	}
+    Cast
+	{
+	  CastClass = "AppleSheriff"
+	  CastName = "Applejack"
+      AttackSound = "Missile", 1, "chainguy/attack"
+      AttackSound = "Missile", 2, "chainguy/attack"
+      AttackSound = "Missile", 3, "chainguy/attack"
+	}
+	Cast
+	{
+	  CastClass = "ChaingunMajorCastCall"
+	  CastName = "Chaingun Major"
+      AttackSound = "Missile", 1, "chainguy/attack"
+      AttackSound = "Missile", 2, "chainguy/attack"
+      AttackSound = "Missile", 3, "chainguy/attack"
+	}
+	Cast
+	{
+	  CastClass = "HomelessGunman"
+	  CastName = "Homeless Gunman"
+      AttackSound = "Missile", 1, "weapons/minifire"
+      AttackSound = "Missile", 3, "weapons/minifire"
+      AttackSound = "Missile", 5, "weapons/minifire"
+      AttackSound = "Missile", 7, "weapons/minifire"
+      AttackSound = "Missile", 9, "weapons/minifire"
+      AttackSound = "Missile", 11, "weapons/minifire"
+	}
+	Cast
+	{
+	  CastClass = "EvilMarine_MinigunCastCall"
+	  CastName = "Evil Marine (Minigun)"
+      AttackSound = "Missile", 1, "weapons/uzifire1"
+      AttackSound = "Missile", 3, "weapons/uzifire1"
+      AttackSound = "Missile", 5, "weapons/uzifire1"
+      AttackSound = "Missile", 7, "weapons/uzifire1"
+      AttackSound = "Missile", 9, "weapons/uzifire1"
+      AttackSound = "Missile", 11, "weapons/uzifire1"
+	}
+    Cast
+	{
+	  CastClass = "AmyPie"
+	  CastName = "Pinkie Pie"
+      AttackSound = "Missile", 1, "grunt/attack"
+	}
+    Cast
+	{
+	  CastClass = "HellhoundCastCall"
+	  CastName = "Hellhound"
+      AttackSound = "Melee", 1, "Hellhound/melee"
+	}
+    Cast
+	{
+	  CastClass = "ZombieScientistCastCall"
+	  CastName = "Zombie Scientist"
+      AttackSound = "Melee", 1, "scientist/attack"
+	}
+    Cast
+	{
+	  CastClass = "Changeling"
+	  CastName = "Changeling"
+      AttackSound = "Missile", 2, "changeling/attack"
+	}
+	Cast
+	{
+	  CastClass = "Rourity"
+	  CastName = "Rarity"
+      AttackSound = "Missile", 1, "grunt/attack"
+      AttackSound = "Missile", 3, "grunt/attack"
+      AttackSound = "Missile", 5, "grunt/attack"
+      AttackSound = "Missile", 7, "grunt/attack"
+      AttackSound = "Missile", 9, "grunt/attack"
+      AttackSound = "Missile", 11, "grunt/attack"
+      AttackSound = "Missile", 13, "grunt/attack"
+      AttackSound = "Missile", 15, "grunt/attack"
+	}
+    Cast
+	{
+	  CastClass = "TrixieKir"
+	  CastName = "Trixie"
+      AttackSound = "Missile", 1, "imp/attack"
+	}
+    Cast
+	{
+	  CastClass = "TwiMage"
+	  CastName = "Twilight Sparkle"
+      AttackSound = "Missile", 1, "imp/attack"
+	}
+    Cast
+	{
+	  CastClass = "VinylStorm"
+	  CastName = "Vinyl Scratch"
+      AttackSound = "Missile", 1, "weapons/blasterrifle"
+	}
+    Cast
+	{
+	  CastClass = "AdvancedHellhoundCastCall"
+	  CastName = "Genetically Advanced Hellhound"
+      AttackSound = "Missile", 1, "fatso/attack"
+	  AttackSound = "Missile", 4, "fatso/attack"
+	}
+    Cast
+	{
+	  CastClass = "GamingMarineCloneCastCall"
+	  CastName = "GMBot"
+      AttackSound = "Missile", 1, "GamingMarineClone/Fire"
+	  AttackSound = "Missile", 3, "GamingMarineClone/Fire"
+      AttackSound = "Missile", 5, "GamingMarineClone/Fire"
+	  AttackSound = "Missile", 7, "GamingMarineClone/Fire"
+      AttackSound = "Missile", 9, "GamingMarineClone/Fire"
+	  AttackSound = "Missile", 11, "GamingMarineClone/Fire"
+      AttackSound = "Missile", 13, "GamingMarineClone/Fire"
+	  AttackSound = "Missile", 15, "GamingMarineClone/Fire"
+      AttackSound = "Missile", 17, "GamingMarineClone/Fire"
+	  AttackSound = "Missile", 19, "GamingMarineClone/Fire"
+      AttackSound = "Missile", 21, "GamingMarineClone/Fire"
+	  AttackSound = "Missile", 23, "GamingMarineClone/Fire"
+      AttackSound = "Missile", 25, "GamingMarineClone/Fire"
+	  AttackSound = "Missile", 27, "GamingMarineClone/Fire"
+      AttackSound = "Missile", 29, "GamingMarineClone/Fire"
+	  AttackSound = "Missile", 31, "GamingMarineClone/Fire"
+      AttackSound = "Melee", 1, "GamingMarineClone/Ready"
+	  AttackSound = "Melee", 2, "weapons/GMROCKTL"
+	}
+   Cast
+   {
+      CastClass = "NewbieHooves"
+      CastName = "Derpy Hooves"
+      AttackSound = "Missile", 1, "fatso/attack"
+      AttackSound = "Missile", 3, "fatso/attack"
+      AttackSound = "Missile", 5, "fatso/attack"
+   }
+    Cast
+	{
+	  CastClass = "FlutterMedic"
+	  CastName = "Fluttershy"
+      AttackSound = "Missile", 1, "grunt/attack"
+	  AttackSound = "Missile", 3, "grunt/attack"
+      AttackSound = "Missile", 5, "grunt/attack"
+	  AttackSound = "Missile", 7, "grunt/attack"
+      AttackSound = "Missile", 9, "grunt/attack"
+	  AttackSound = "Missile", 11, "grunt/attack"
+      AttackSound = "Missile", 13, "grunt/attack"
+	  AttackSound = "Missile", 15, "grunt/attack"
+      AttackSound = "Missile", 17, "grunt/attack"
+	  AttackSound = "Missile", 19, "grunt/attack"
+      AttackSound = "Missile", 21, "grunt/attack"
+	  AttackSound = "Missile", 23, "grunt/attack"
+      AttackSound = "Missile", 25, "grunt/attack"
+	  AttackSound = "Missile", 27, "grunt/attack"
+      AttackSound = "Missile", 29, "grunt/attack"
+	  AttackSound = "Missile", 31, "grunt/attack"
+	}
+    Cast
+	{
+	  CastClass = "MasterForceLordCastCall"
+	  CastName = "Master Force Lord"
+      AttackSound = "Melee", 1, "ForceLord/Clap"
+	}
+	Link = GMIDCast //restarts cast call
+}

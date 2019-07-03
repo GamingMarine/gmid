@@ -1,0 +1,409 @@
+Object 40mmShot
+{
+ Frame MIS6B { Light Explod }
+ Frame MIS6C { Light Explod2 }
+ Frame MIS6D { Light Explod3 }
+ Frame MIS6E { Light Explod3 }
+ Frame MIS6F { Light Explod4 }
+}
+
+Object 40mmTimedShot
+{
+ Frame MIS6B { Light Explod }
+ Frame MIS6C { Light Explod2 }
+ Frame MIS6D { Light Explod3 }
+ Frame MIS6E { Light Explod3 }
+ Frame MIS6F { Light Explod4 }
+}
+
+Pointlight Explod
+{
+ Color 1.0 1.0 0.0
+ Size 90
+}
+Pointlight Explod2
+{
+ Color 1.0 1.0 0.0
+ Size 110
+}
+
+Pointlight Explod3
+{
+ Color 1.0 1.0 0.0
+ Size 60
+}
+
+Pointlight Explod4
+{
+ Color 1.0 1.0 0.0
+ Size 30
+}
+
+BrightMap Sprite SLIMA0
+{
+Map BMSLIMA0
+DisableFullBright
+}
+
+BrightMap Sprite SLIMB0
+{
+Map BMSLIMB0
+DisableFullBright
+}
+
+BrightMap Sprite SLIMC0
+{
+Map BMSLIMC0
+DisableFullBright
+}
+
+BrightMap Sprite SLIMD0
+{
+Map BMSLIMD0
+DisableFullBright
+}
+
+BrightMap Sprite SLIME0
+{
+Map BMSLIME0
+DisableFullBright
+}
+
+BrightMap Sprite SLIMF0
+{
+Map BMSLIMF0
+DisableFullBright
+}
+
+BrightMap Sprite SLIMG0
+{
+Map BMSLIMG0
+DisableFullBright
+}
+
+BrightMap Sprite SLIMH0
+{
+Map BMSLIMH0
+DisableFullBright
+}
+
+PointLight GreyLamp
+{
+Color 0.6 0.6 0.6
+Size 56
+Offset 0 48 0
+}
+
+Object GreyLamp
+{
+Frame GLMP { Light GreyLamp }
+}
+
+pointlight TLIGHT1
+{
+    color 1.0 1.0 0.8
+    size 56
+    offset 0 72 0
+}
+
+pointlight TLIGHT2
+{
+    color 1.0 1.0 0.8
+    size 56
+    offset 0 44 0
+}
+
+object TLamp1
+{
+    frame LAMTA { light TLIGHT1 }
+}
+
+object TLamp2
+{
+    frame LAMTB { light TLIGHT2 }
+}
+
+pointlight LAMP2
+{
+    color 1.0 1.0 0.8
+    size 84
+    offset 0 44 0
+}
+
+object NewColumn
+{
+    frame COLUA { light LAMP2 }
+}
+
+PULSELIGHT LifeSphere1
+{
+Color 0 0 0.8
+OffSet 0 30 0
+Size 52
+SecondarySize 62
+Interval 1
+}
+
+OBJECT LifeSphere
+{
+Frame SOULA { Light LifeSphere1 }
+Frame SOULB { Light LifeSphere1 }
+Frame SOULC { Light LifeSphere1 }
+Frame SOULD { Light LifeSphere1 }
+}
+
+PULSELIGHT EnergySphere1
+{
+Color 0.7 0.7 0.7
+OffSet 0 30 0
+Size 52
+SecondarySize 62
+Interval 1
+}
+
+OBJECT EnergySphere
+{
+Frame MEGA { Light EnergySphere1 }
+}
+
+PULSELIGHT ArmorShard1
+{
+Color 0 0.8 0
+OffSet 0 0 0
+Size 6
+SecondarySize 8
+Interval 1
+}
+
+pulselight SuperArmorShard1
+{
+    color 0.6 0.0 0.0
+    size 16
+    secondarySize 20
+    interval 1.0
+	dontlightself 1
+    offset 0 10 0
+}
+
+OBJECT ArmorShard
+{
+Frame BON2 { Light ArmorShard1 }
+}
+
+OBJECT SuperArmorShard
+{
+Frame BON4 { Light SuperArmorShard1 }
+}
+
+object NewTeleportFog
+{
+    frame TFOGA { light DTFOG1 }
+    frame TFOGB { light DTFOG2 }
+    frame TFOGC { light DTFOG2 }
+    frame TFOGD { light DTFOG2 }
+    frame TFOGE { light DTFOG3 }
+    frame TFOGF { light DTFOG4 }
+}
+
+Pulselight SoulLight //666 >:)
+{
+Color 0.8 0.8 0.8
+Size 20
+SecondarySize 12
+Interval 1.0
+Offset 0 16 0
+}
+
+Pulselight SoulLight2
+{
+Color 0.8 0.8 0.8
+Size 40
+SecondarySize 42
+Interval 2.0
+Offset 0 16 0
+}
+
+Object SmallSoul
+{
+Frame HHRT { Light SoulLight }
+}
+
+Object LargeSoul
+{
+Frame BHRT { Light SoulLight2 }
+}
+
+Object CookieCrystal
+{
+Frame CRYS { Light SoulLight2 }
+}
+
+Object GMIDBFG9000
+{
+Frame PINB { Light SoulLight2 }
+}
+
+flickerlight FIREBARREL
+{
+    color 1.0 0.9 0.0
+    size 48
+    secondarySize 54
+    chance 0.8
+    offset 0 32 0
+}
+
+object NewBurningBarrel
+{
+    frame BURB { light FIREBARREL }
+}
+
+Pointlight BARRELGLOW
+{
+    Color 0.1 0.5 0.1
+    Size 32
+    Offset 0 20 0
+}
+
+Object XaserBarrel
+{
+    Frame BAR1 { light BARRELGLOW }
+	Frame BEXP { light BARRELGLOW }
+}
+
+pulselight DOUBLER
+{
+    color 1.0 0.0 0.0
+    size 40
+    secondarySize 42
+    interval 2.0
+    offset 0 16 0
+}
+
+object DoubleSphere
+{
+    frame DDMG { light DOUBLER }
+}
+
+FlickerLight2 ZSecAttack
+{
+  Color 1.0 0.8 0.2
+  Size 48
+  SecondarySize 56
+  Interval 1
+  Offset 0 40 0
+}
+
+Object ZSecPistol
+{
+  Frame ZSC1F { Light ZSecAttack }
+}
+
+Pointlight SawedOffShotgunGuyAttack
+{
+Color 1.0 0.8 0.0
+Size 32
+}
+
+Object SawedOffShotgunGuy
+{
+Frame ZSDOF { Light SawedOffShotgunGuyAttack }
+}
+
+FlickerLight2 ChaingunMajorAttack
+{
+color 1.0 0.8 0.2
+size 48
+secondarySize 56
+interval 1
+offset 0 40 0
+}
+
+Object ChaingunMajor
+{
+Frame CPS2F { Light ChaingunMajorAttack }
+}
+
+//Brightmaps
+BrightMap Sprite ZSDOF1
+{
+Map BMZSDOF1
+DisableFullBright
+}
+
+BrightMap Sprite ZSDOF2F8
+{
+Map BMZSDOF2
+DisableFullBright
+}
+
+BrightMap Sprite ZSDOF3F7
+{
+Map BMZSDOF3
+DisableFullBright
+}
+
+BrightMap Sprite ZSDOF4F6
+{
+Map BMZSDOF4
+DisableFullBright
+}
+
+BrightMap Sprite ZSDOF5
+{
+Map BMZSDOF5
+DisableFullBright
+}
+
+BrightMap Sprite CPS2E1
+{
+Map BMCPS2E1
+DisableFullBright
+}
+
+BrightMap Sprite CPS2E2E8
+{
+Map BMCPS2E2
+DisableFullBright
+}
+
+BrightMap Sprite CPS2E3E7
+{
+Map BMCPS2E3
+DisableFullBright
+}
+
+BrightMap Sprite CPS2E4E6
+{
+Map BMCPS2E4
+DisableFullBright
+}
+
+BrightMap Sprite CPS2F1
+{
+Map BMCPS2F1
+DisableFullBright
+}
+
+BrightMap Sprite CPS2F2F8
+{
+Map BMCPS2F2
+DisableFullBright
+}
+
+BrightMap Sprite CPS2F3F7
+{
+Map BMCPS2F3
+DisableFullBright
+}
+
+BrightMap Sprite CPS2F4F6
+{
+Map BMCPS2F4
+DisableFullBright
+}
+
+BrightMap Sprite CPS2F5
+{
+Map BMCPS2F5
+DisableFullBright
+}

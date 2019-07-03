@@ -1,0 +1,10 @@
+#include Decorate/Main.txt
+#include Decorate/Weapons/RevX.txt
+#include Decorate/Inventory.txt
+#include Decorate/Spawner.txt
+#include Decorate/Heroes/Cookiedemon.txt
+#include Decorate/Decorations.txt
+#include Decorate/Monsters/Monsters.txt
+#include Decorate/Monsters/Taokaka.txt
+#include Decorate/Monsters/WayneCampbell.txt
+#include Decorate/Monsters/MonstersCastCall.txt

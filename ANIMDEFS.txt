@@ -1,0 +1,5 @@
+texture M_SKULL1
+    pic M_SKULL1 tics 4
+    pic M_SKULL2 tics 4
+	pic M_SKULL3 tics 4
+	pic M_SKULL2 tics 4

@@ -1,0 +1,8 @@
+ClearPlayerClasses
+AddPlayerClass GamingMarine
+
+weaponsection "Hand Grenades"
+addslotdefault 0 FragGrenade
+
+weaponsection "SPAS12"
+addslotdefault 3 SPAS12

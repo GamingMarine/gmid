@@ -1,0 +1,288 @@
+// >> ALL-INFO CLASSIC HUD V.1.1 <<
+ 
+// (Made by patrik, 2015)
+
+// Compatible with both Zdoom/Gzdoom (tested on build 2.8pre-1250) 
+// and Zandronum (tested on stable release v. 2.0).
+// Should run nicely with vanilla and most of not too complex mods.
+
+// NOTE: 
+// This fullscreen hud replaces Statusbar (I know it sounds weird),
+// but that was the only way I was capable to show level stats for 
+// overlay map. If you see built-in default Zdoom fullscreen HUD instead
+// of this, shrink screen one step down.
+
+// NOTE 2: 
+// Centered deliberately, as I prefer having info in center of
+// widescreen. But feel free to make any modifications (like editing 
+// it with fullscreen offsets) and distribute it further.
+
+// NOTE 3: 
+// Copies of vanilla Doom Statusbar Fonts (DIGNUMs) are included,
+// because I dont like it when some PWADs and mods replace them with 
+// their own ones.
+
+// POSSIBLE TO-DOs:
+// - Implement all 4 colors for values of counter digits. So far I was
+//   able to implement only 3.
+// - Scale down SelectedWeaponIcon. Seems to be not yet possible, only
+//   in test build of Gzdoom f73275a :(
+// If you know any way to accomplish this *without breaking cross mod
+// compatibility*, please contact me at Zdoom Forums. My nickname there
+// is same, patrik.
+
+// CREDITS: 
+// All code made by me. Copies of original statusbar font 
+// graphics (STYSNUM*s) made by ID Software. 
+// Little help from Blue Shadow with colorizing counters.
+// Inspiration by Odamex (mugshot), Doomsday (level stats for overlay map) 
+// and Boom (colorized counters from graphical hud) HUDs.
+
+
+//------------------------------------------------------------------
+
+// FACE
+
+mugshot "Normal", health2
+{
+	{ST00, ST01, ST02} 17;
+}
+
+mugshot "Pain", healthspecial, directional
+{
+	{TR00, KILL0, TL00} 35;
+}
+
+mugshot "Rampage", health
+{
+	RAG0 1;
+}
+
+mugshot "Ouch", health
+{
+	OUCH0 35;
+}
+
+mugshot "Grin", health
+{
+	EVL0 70;
+}
+
+mugshot "God"
+{
+	{GOD0, GOD1, GOD2} 17;
+}
+
+mugshot "GodAnimated"
+{
+	{GOD0, GOD1, GOD2} 17;
+}
+
+mugshot "Death"
+{
+	DEAD0 -1;
+}
+
+mugshot "XDeath"
+{
+	XDTH0 10;
+	XDTH1 10;
+	XDTH2 10;
+	XDTH3 10;
+	XDTH4 10;
+	XDTH5 -1;
+}
+//------------------------------------------------------------------
+
+// BASIC INFO
+
+base Doom;
+height 0;
+monospacefonts false, "0";
+CompleteBorder true;
+
+//------------------------------------------------------------------
+
+// STATUSBAR FULLSCREEN HUD
+
+statusbar normal, forcescaled
+{
+// Keys
+DrawKeyBar 3, horizontal, auto, 90, 175, 0;
+DrawKeyBar 3, horizontal, auto, 90, 185, 3; 
+
+// Inventory Items
+drawselectedinventory SMALLFONT, 280, 120;
+
+// Face
+drawmugshot 5, 0, 165;
+
+// Armor
+drawimage armoricon, 16, 165;
+drawnumber 4, DIGFONT, yellow, armor, whennotzero, interpolate(4), 75, 148, red, 25, green, 51;
+       
+// Health
+drawnumber 4, DIGFONT, yellow, health, interpolate(4), 75, 175, red, 25, green, 51;
+
+// Ammo
+drawimage ammoicon2, 307, 175;
+drawimage ammoicon1, 307, 195;
+drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, 0;
+drawnumber 4, DIGFONT, yellow, ammo2, 292, 160, 0;
+
+// Colorized ammo counters for vanilla weapons
+	IsSelected GMIDPistol
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 50, green, 101;
+	}
+	IsSelected GMIDDualPistol
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 50, green, 101;
+	}
+	IsSelected GMIDShotgun
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
+	}
+	IsSelected SPAS12
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
+	}
+	IsSelected GMIDSuperShotgun
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
+	}
+	IsSelected RevX
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
+	}
+	IsSelected GMIDChaingun
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 100, green, 202;
+	}
+	IsSelected LeadPosioning
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 100, green, 202;
+	}
+	IsSelected GMIDRailgun
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 75, green, 151;
+	}
+	IsSelected PlasmaCannon
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 75, green, 151;
+	}
+	IsSelected GMIDGrenadelauncher
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
+	}
+	IsSelected GMIDBFG9000
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 225, green, 451;
+	}
+	IsSelected JohnnyGee
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 225, green, 451;
+	}
+
+// Multiplayer Counters
+gamemode deathmatch, teamgame
+{
+drawnumber 8, SMALLFONT, darkred, frags, 40, 135;
+DrawString SMALLFONT, darkred, "Kills", 40, 127;
+}
+}
+
+//------------------------------------------------------------------
+
+// STATUSBAR FULLSCREEN HUD WITH AUTOMAP LEVEL STATS
+
+statusbar automap, forcescaled
+{
+// Keys
+DrawKeyBar 3, horizontal, auto, 90, 175, 0;
+DrawKeyBar 3, horizontal, auto, 90, 185, 3; 
+
+// Selected Inventory Item
+drawselectedinventory SMALLFONT, 280, 120;
+
+// Face
+drawmugshot 5, 0, 165;
+
+// Armor
+drawimage armoricon, 16, 165;
+drawnumber 4, DIGFONT, yellow, armor, whennotzero, 75, 148, red, 25, green, 51;
+
+// Health
+drawnumber 4, DIGFONT, yellow, health, 75, 175, red, 25, green, 51;
+
+// Selected Weapon Icon
+//Drawimage Weaponicon, 290, 160;
+
+// Ammo
+drawimage ammoicon2, 307, 175;
+drawimage ammoicon1, 307, 195;
+drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, 0;
+drawnumber 4, DIGFONT, yellow, ammo2, 292, 160, 0;
+
+// Colorized ammo counters for vanilla weapons
+	IsSelected Pistol
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 50, green, 101;
+	}
+	IsSelected Shotgun
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
+	}
+	IsSelected SuperShotgun
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
+	}
+	IsSelected Chaingun
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 50, green, 101;
+	}
+	IsSelected Plasmarifle
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 75, green, 151;
+	}
+	IsSelected Rocketlauncher
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
+	}
+	IsSelected BFG9000
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 75, green, 151;
+	}
+// Multiplayer Counters
+gamemode deathmatch, teamgame
+{
+drawnumber 8, SMALLFONT, darkred, frags, 40, 135;
+DrawString SMALLFONT, darkred, "Frags", 40, 127;
+}
+
+// Level Stats for Automap
+	// Kills
+	DrawString SMALLFONT, red, "K:", 240, 5;
+	drawnumber 4, SMALLFONT, white, kills, 274, 5;
+	DrawString SMALLFONT, red, "/", 282, 5;
+	drawnumber 4, SMALLFONT, white, monsters, Alignment(left), 284, 5;
+	// Items
+	DrawString SMALLFONT, red, "I:", 240, 13;
+	drawnumber 3, SMALLFONT, white, items, 274, 13;
+	DrawString SMALLFONT, red, "/", 282, 13;
+	drawnumber 3, SMALLFONT, white, totalitems, Alignment(left), 284, 13;
+	// Secrets
+	DrawString SMALLFONT, red, "S:", 240, 21;
+	drawnumber 2, SMALLFONT, white, secrets, 274, 21;
+	DrawString SMALLFONT, red, "/", 282, 21;
+	drawnumber 2, SMALLFONT, white, totalsecrets, Alignment(left), 284, 21;
+}
+
+//------------------------------------------------------------------
+
+// INVENTORY SELECTION BAR
+
+statusbar inventory
+{
+drawinventorybar Doom, noartibox, 5, INDEXFONT, 85, 170;
+}

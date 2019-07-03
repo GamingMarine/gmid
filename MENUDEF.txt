@@ -1,0 +1,50 @@
+LISTMENU "MainMenu"
+{
+	StaticPatch 94, 2, "M_DOOM"
+	Position 97, 72
+		
+	TextItem "Kill Some Stuff", 	"n",	"PlayerclassMenu"
+	TextItem "Configure",	    	"o",	"OptionsMenu"
+	TextItem "Restore Progress",  	"l",	"LoadGameMenu"
+	TextItem "Save Progress",   	"s",	"SaveGameMenu"
+	TextItem "Surrender",	 		"q",	"QuitMenu"
+}
+
+ListMenu "PlayerclassMenu"
+{
+	NetgameMessage "$NEWGAME"
+	
+	StaticTextCentered 160, 15, "$MNU_CHOOSECLASS"
+	Position 80, 50
+	PlayerDisplay 220, 50, "20 00 00", "80 00 40"
+	MouseWindow 0, 220
+}
+
+ListMenu "EpisodeMenu"
+{
+	NetgameMessage "$NEWGAME"
+	
+	Position 48, 63
+	StaticTextCentered 176, 14, "Choose Your Fate"
+}
+
+ListMenu "SkillMenu"
+{
+	StaticTextCentered 166, 28, "How tough are you?"
+	Position 48, 66
+}
+
+ListMenu "LoadGameMenu"
+{
+	NetgameMessage "You will need to quit this netgame in order to load any progress."
+	StaticTextCentered 90, -20, "Restore Progress"
+	Position 80, 54
+	Class "LoadMenu"
+}
+
+ListMenu "SaveGameMenu"
+{
+	StaticTextCentered 90, -20, "Save Progress"
+	Position 60, 54
+	Class "SaveMenu"
+}
