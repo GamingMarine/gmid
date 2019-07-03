@@ -1,0 +1,51 @@
+List of songs used:
+
+1. LURKING
+Song name: Flight Castle
+Game of origin: Unreal
+Composer: Alexander Brandon
+
+2. D_INTER
+Song name: Mission Clear
+Game of origin: Terminator 2 (Arcade)
+Composer: Chris Granner
+
+3. D_E1M8
+Song name: Winnowing Hall
+Game of origin: Hexen: Beyond Heretic
+Composer: Kevin Schilder
+
+4. D_E2M8
+Song name: Battle Against the Natives
+Game of origin: Revolution X
+Composer: Chris Granner
+
+5. D_E3M8
+Song name: Battle Against Mondor
+Game of origin: Revolution X
+Composer: Chris Granner
+
+6. D_OPENIN
+Song name: Take Down General Akhboob!
+Game of origin: Total Carnage (Arcade)
+Composer: Jon Hey
+
+7. D_VICTOR
+Song name: Unknown
+Game of origin: ShadowCaster
+Composer: Marc Schaefgen
+
+8. D_READ_M
+Song name: Unknown
+Game of origin: ShadowCaster
+Composer: Marc Schaefgen
+
+9. D_BUNNY
+Song name: Orb
+Game of origin: Hexen: Beyond Heretic
+Composer: Kevin Schilder
+
+10. D_DOMES
+Song name: Pleasure Dome
+Game of origin: Total Carnage (SNES)
+Composers: Jon Hey, Byte Size Sound
