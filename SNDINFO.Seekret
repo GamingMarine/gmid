@@ -35,8 +35,15 @@ Taokaka/Active4				TAOKACT4
 Taokaka/Active5				TAOKACT5
 Taokaka/Active6				TAOKACT6
 Taokaka/Active7				TAOKACT7
-$random Taokaka/Active { Taokaka/Active1 Taokaka/Active2 Taokaka/Active6 Taokaka/Active7 }
-$random Taokaka/Whine { Taokaka/Active3 Taokaka/Active4 Taokaka/Active5 }
+Taokaka/Active8				TAOKACT8
+Taokaka/Active9				TAOKACT9
+Taokaka/Active10			TAOKACT0
+Taokaka/Active11			TAOKACTA
+Taokaka/Active12			TAOKACTB
+Taokaka/Active13			TAOKACTC
+Taokaka/Active14			TAOKACTD
+$random Taokaka/Active { Taokaka/Active1 Taokaka/Active2 Taokaka/Active6 Taokaka/Active7 Taokaka/Active10 Taokaka/Active11 Taokaka/Active12 Taokaka/Active13 Taokaka/Active14 }
+$random Taokaka/Whine { Taokaka/Active3 Taokaka/Active4 Taokaka/Active5 Taokaka/Active8 Taokaka/Active9 }
 Taokaka/Hit1				TAOKHIT1
 Taokaka/Hit2				TAOKHIT2
 $random Taokaka/Hit { Taokaka/Hit1 Taokaka/Hit2 }
@@ -72,12 +79,14 @@ Taokaka/WinQuote3			TAOKWIN3
 Taokaka/WinQuote4			TAOKWIN4
 Taokaka/WinQuote5			TAOKWIN5
 Taokaka/WinQuote6			TAOKWIN6
+Taokaka/WinQuote7			TAOKWIN7
+Taokaka/WinQuote8			TAOKWIN8
 Taokaka/JumpAttack			TAOKJUMP
 Taokaka/ThrowObject1		TAOKTKT1
 Taokaka/ThrowObject2		TAOKTKT2
 Taokaka/ThrowObject3		TAOKTHR3
 $random Taokaka/ThrowObject { Taokaka/ThrowObject1 Taokaka/ThrowObject2 Taokaka/ThrowObject3 }
-$random Taokaka/WinQuote { Taokaka/WinQuote1 Taokaka/WinQuote2 Taokaka/WinQuote3 Taokaka/WinQuote4 Taokaka/WinQuote5 Taokaka/WinQuote6 }
+$random Taokaka/WinQuote { Taokaka/WinQuote1 Taokaka/WinQuote2 Taokaka/WinQuote3 Taokaka/WinQuote4 Taokaka/WinQuote5 Taokaka/WinQuote6 Taokaka/WinQuote7 Taokaka/WinQuote8 }
 Taokaka/Pain1					TAOKPN01
 Taokaka/Pain2					TAOKPN02
 Taokaka/Pain3					TAOKPN03
@@ -107,7 +116,25 @@ Taokaka/Pain26					TAOKPN26
 Taokaka/Pain27					TAOKPN27
 Taokaka/Pain28					TAOKPN28
 Taokaka/Pain29					TAOKPN29
-$random Taokaka/Pain { Taokaka/Pain1 Taokaka/Pain2 Taokaka/Pain3 Taokaka/Pain4 Taokaka/Pain5 Taokaka/Pain6 Taokaka/Pain7 Taokaka/Pain8 Taokaka/Pain9 Taokaka/Pain10 Taokaka/Pain11 Taokaka/Pain12 Taokaka/Pain13 Taokaka/Pain14 Taokaka/Pain15 Taokaka/Pain16 Taokaka/Pain17 Taokaka/Pain18 Taokaka/Pain19 Taokaka/Pain20 Taokaka/Pain21 Taokaka/Pain22 Taokaka/Pain23 Taokaka/Pain24 Taokaka/Pain25 Taokaka/Pain26 Taokaka/Pain27 Taokaka/Pain28 Taokaka/Pain29 }
+Taokaka/Pain30					TAOKPN30
+Taokaka/Pain31					TAOKPN31
+Taokaka/Pain32					TAOKPN32
+Taokaka/Pain33					TAOKPN33
+Taokaka/Pain34					TAOKPN34
+Taokaka/Pain35					TAOKPN35
+Taokaka/Pain36					TAOKPN36
+Taokaka/Pain37					TAOKPN37
+Taokaka/Pain38					TAOKPN38
+Taokaka/Pain39					TAOKPN39
+Taokaka/Pain40					TAOKPN40
+Taokaka/Pain41					TAOKPN41
+Taokaka/Pain42					TAOKPN42
+Taokaka/Pain43					TAOKPN43
+Taokaka/Pain44					TAOKPN44
+Taokaka/Pain45					TAOKPN45
+Taokaka/Pain46					TAOKPN46
+Taokaka/Pain47					TAOKPN47
+$random Taokaka/Pain { Taokaka/Pain1 Taokaka/Pain2 Taokaka/Pain3 Taokaka/Pain4 Taokaka/Pain5 Taokaka/Pain6 Taokaka/Pain7 Taokaka/Pain8 Taokaka/Pain9 Taokaka/Pain10 Taokaka/Pain11 Taokaka/Pain12 Taokaka/Pain13 Taokaka/Pain14 Taokaka/Pain15 Taokaka/Pain16 Taokaka/Pain17 Taokaka/Pain18 Taokaka/Pain19 Taokaka/Pain20 Taokaka/Pain21 Taokaka/Pain22 Taokaka/Pain23 Taokaka/Pain24 Taokaka/Pain25 Taokaka/Pain26 Taokaka/Pain27 Taokaka/Pain28 Taokaka/Pain29 Taokaka/Pain30 Taokaka/Pain31 Taokaka/Pain32 Taokaka/Pain33 Taokaka/Pain34 Taokaka/Pain35 Taokaka/Pain36 Taokaka/Pain37 Taokaka/Pain38 Taokaka/Pain39 Taokaka/Pain40 Taokaka/Pain41 Taokaka/Pain42 Taokaka/Pain43 Taokaka/Pain44 Taokaka/Pain45 Taokaka/Pain46 Taokaka/Pain47 }
 Taokaka/Death					TAOKDTH
 
 wayne/excellent					 WAYNEEXC
