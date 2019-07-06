@@ -3568,7 +3568,7 @@ Actor Q2SoldierProjectile
   Damage (random(2,8)*2)
   translation "112:127=%[0, 0, 0]:[2, 1, 0]"
   Scale 0.2
-  DeathSound "imp/shotx"
+  DeathSound "q2soldier/shotx"
   DamageType "Electric"
   PROJECTILE
   RenderStyle Add

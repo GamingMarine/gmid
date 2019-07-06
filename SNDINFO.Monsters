@@ -592,6 +592,7 @@ InsaneSoldier/Laugh21		SOLLAF21
 InsaneSoldier/Laugh22		SOLLAF22
 $random InsaneSoldier/Laugh { InsaneSoldier/Laugh1 InsaneSoldier/Laugh2 InsaneSoldier/Laugh3 InsaneSoldier/Laugh4 InsaneSoldier/Laugh5 InsaneSoldier/Laugh6 InsaneSoldier/Laugh7 InsaneSoldier/Laugh8 InsaneSoldier/Laugh9 InsaneSoldier/Laugh10 InsaneSoldier/Laugh11 InsaneSoldier/Laugh12 InsaneSoldier/Laugh13 InsaneSoldier/Laugh14 InsaneSoldier/Laugh15 InsaneSoldier/Laugh16 InsaneSoldier/Laugh17 InsaneSoldier/Laugh18 InsaneSoldier/Laugh19 InsaneSoldier/Laugh20 InsaneSoldier/Laugh21 InsaneSoldier/Laugh22 }
 Q2Soldier/Blaster			SOLATCK2
+Q2Soldier/ShotX				SHORTED
 
 $random sawedoff/sit { sawedoff/sit1 sawedoff/sit2 sawedoff/sit3 }
 sawedoff/sit1 sawedg1
