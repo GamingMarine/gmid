@@ -26,7 +26,9 @@ $random NONBoy/Death { NONBoy/Death1 NONBoy/Death2 NONBoy/Death3 NONBoy/Death4 N
 //I nEvEr AsKeD fOr ThIs
 Taokaka/Sight1				TAOKSIT1
 Taokaka/Sight2				TAOKSIT2
-$random Taokaka/Sight { Taokaka/Sight1 Taokaka/Sight2 }
+Taokaka/Sight3				TAOKSIT3
+Taokaka/Sight4				TAOKSIT4
+$random Taokaka/Sight { Taokaka/Sight1 Taokaka/Sight2 Taokaka/Sight3 Taokaka/Sight4 }
 Taokaka/Footstep			TAOKSTEP
 Taokaka/Active1				TAOKACT1
 Taokaka/Active2				TAOKACT2
@@ -42,7 +44,8 @@ Taokaka/Active11			TAOKACTA
 Taokaka/Active12			TAOKACTB
 Taokaka/Active13			TAOKACTC
 Taokaka/Active14			TAOKACTD
-$random Taokaka/Active { Taokaka/Active1 Taokaka/Active2 Taokaka/Active6 Taokaka/Active7 Taokaka/Active10 Taokaka/Active11 Taokaka/Active12 Taokaka/Active13 Taokaka/Active14 }
+Taokaka/Active15			TAOKACTE
+$random Taokaka/Active { Taokaka/Active1 Taokaka/Active2 Taokaka/Active6 Taokaka/Active7 Taokaka/Active10 Taokaka/Active11 Taokaka/Active12 Taokaka/Active13 Taokaka/Active14 Taokaka/Active15 }
 $random Taokaka/Whine { Taokaka/Active3 Taokaka/Active4 Taokaka/Active5 Taokaka/Active8 Taokaka/Active9 }
 Taokaka/Hit1				TAOKHIT1
 Taokaka/Hit2				TAOKHIT2
