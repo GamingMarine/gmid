@@ -41,7 +41,6 @@ player/jump2	 DSJUMP2
 $random gmarinjmp { player/jump1 player/jump2 }
 $playeralias	player	male	*jump		gmarinjmp
 $playeralias	player	male	*gibbed		misc/gibbed
-player/notgood	 OHSHIT
 player/zaps		 ZAPS
 //------------Weapons----------------//
 $random fist/normalthrow { normalfist1 normalfist2 normalfist3 normalfist4 }
@@ -589,60 +588,6 @@ Steven/KeepItUp			KEEPITUP
 Steven/StillGoing		STILGOIN
 $random Steven/Shot { Steven/GoodShot Steven/GreatShot Steven/NiceShot }
 
-//Bloodbath announcer
-$random Bloodbath/kill { Bloodbath/kill1 Bloodbath/kill2 Bloodbath/kill3 Bloodbath/kill4 Bloodbath/kill5 Bloodbath/kill6 Bloodbath/kill7 Bloodbath/kill8 Bloodbath/kill9 Bloodbath/kill10 Bloodbath/kill11 Bloodbath/kill12 Bloodbath/kill13 Bloodbath/kill14 Bloodbath/kill15 Bloodbath/kill16 Bloodbath/kill17 Bloodbath/kill18 Bloodbath/kill19 Bloodbath/kill20 Bloodbath/kill21 Bloodbath/kill22 Bloodbath/kill23 Bloodbath/kill24 Bloodbath/kill25 Bloodbath/kill26 Bloodbath/kill27 Bloodbath/kill28 Bloodbath/kill29 Bloodbath/kill30 Bloodbath/kill31 Bloodbath/kill32 Bloodbath/kill33 Bloodbath/kill34 Bloodbath/kill35 Bloodbath/kill36 Bloodbath/kill37 Bloodbath/kill38 Bloodbath/kill39 }
-Bloodbath/kill1			BBATH01
-Bloodbath/kill2			BBATH02
-Bloodbath/kill3			BBATH03
-Bloodbath/kill4			BBATH04
-Bloodbath/kill5			BBATH05
-Bloodbath/kill6			BBATH06
-Bloodbath/kill7			BBATH07
-Bloodbath/kill8			BBATH08
-Bloodbath/kill9			BBATH09
-Bloodbath/kill10		BBATH10
-Bloodbath/kill11		BBATH11
-Bloodbath/kill12		BBATH12
-Bloodbath/kill13		BBATH13
-Bloodbath/kill14		BBATH14
-Bloodbath/kill15		BBATH15
-Bloodbath/kill16		BBATH16
-Bloodbath/kill17		BBATH17
-Bloodbath/kill18		BBATH18
-Bloodbath/kill19		BBATH19
-Bloodbath/kill20		BBATH20
-Bloodbath/kill21		BBATH21
-Bloodbath/kill22		BBATH22
-Bloodbath/kill23		BBATH23
-Bloodbath/kill24		BBATH24
-Bloodbath/kill25		BBATH25
-Bloodbath/kill26		BBATH26
-Bloodbath/kill27		BBATH27
-Bloodbath/kill28		BBATH28
-Bloodbath/kill29		BBATH29
-Bloodbath/kill30		BBATH30
-Bloodbath/kill31		BBATH31
-Bloodbath/kill32		BBATH32
-Bloodbath/kill33		BBATH33
-Bloodbath/kill34		BBATH34
-Bloodbath/kill35		BBATH35
-Bloodbath/kill36		BBATH36
-Bloodbath/kill37		BBATH37
-Bloodbath/kill38		BBATH38
-Bloodbath/kill39		BBATH39
-Bloodbath/FinishHim		FINISHHM
-$random Bloodbath/Decap { Bloodbath/Decap1 Bloodbath/Decap2 Bloodbath/Decap3 Bloodbath/Decap4 Bloodbath/Decap5 Bloodbath/Decap6 Bloodbath/Decap7 Bloodbath/Decap8 Bloodbath/Decap9 Bloodbath/Decap10 }
-Bloodbath/Decap1		DECAP01
-Bloodbath/Decap2		DECAP02
-Bloodbath/Decap3		DECAP03
-Bloodbath/Decap4		DECAP04
-Bloodbath/Decap5		DECAP05
-Bloodbath/Decap6		DECAP06
-Bloodbath/Decap7		DECAP07
-Bloodbath/Decap8		DECAP08
-Bloodbath/Decap9		DECAP09
-Bloodbath/Decap10		DECAP10
-
 $attenuation player/killtaunt 0
 $attenuation player/gibtaunt 0
 $attenuation player/kicktaunt 0
@@ -656,11 +601,7 @@ $attenuation cookie/death 0
 $attenuation cookie/leave 0
 $attenuation cookie/lastwords 0
 $attenuation Steven/Shot 0
-$attenuation Steven/Gib 0
 $attenuation toasty 0
-$attenuation Bloodbath/kill 0
-$attenuation Bloodbath/FinishHam 0
-$attenuation Bloodbath/Decap 0
 $limit player/killtaunt 1
 $limit player/gibtaunt 1
 $limit boss/sight 1
