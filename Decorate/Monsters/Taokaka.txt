@@ -13,6 +13,7 @@ ACTOR Taokaka
   +NOINFIGHTING
   +MISSILEMORE
   +MISSILEEVENMORE
+  +NOICEDEATH
   SeeSound "Taokaka/Sight"
   ActiveSound "Taokaka/Active"
   PainSound "Taokaka/Pain"
