@@ -412,9 +412,9 @@ ACTOR MasterForceLordCastCall
 	MNTR AABBCCDD 5 A_Chase
 	Loop
   Melee:
-	MNTR WVW 5
+	MNTR WVW 3
 	MNTR X 53 A_SargAttack
-	MNTR W 10
+	MNTR W 5
 	Goto See
   Death:
 	MNTR E 5 A_Scream

@@ -133,6 +133,7 @@ Actor GamingMarine : DoomPlayer
 		PBR1 H -1
 		Stop
 	XDeath:
+	Death.ForceLord:
 		TNT1 A 0 A_XScream
 		TNT1 A 0 A_NoBlocking
 		TNT1 A 0 A_SpawnDebris("HLGoreSkull")
