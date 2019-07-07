@@ -1101,6 +1101,7 @@ actor Changeling replaces LostSoul //WHAT THE FUCK IS A CHANGELING ANYWAY
   Obituary "%o was spooked by a Changeling."
   +NOBLOOD
   +NOICEDEATH
+  +DROPOFF
   DropItem "SmallSoul" 10
   PainChance "Basic", 256
   PainChance "Foot", 256
@@ -1212,6 +1213,7 @@ actor Rourity replaces Cacodemon
   Height 56
   Scale 1.08
   Monster
+  +DROPOFF
   SeeSound "Rourity/sight"
   PainSound "Rourity/pain"
   ActiveSound "Rourity/sight"
@@ -1595,6 +1597,7 @@ actor AdvancedHellhound replaces PainElemental
 	ActiveSound "AdvancedHound/act"
 	MaxTargetRange 256
 	PainChance 128
+	+DROPOFF
 	Obituary "%o was frightened by a Genetically Advanced Hellhound."
 	DropItem "LargeSoul" 25
 	DropItem "SmallSoul" 255
