@@ -11,9 +11,9 @@ Game of origin: Terminator 2 (Arcade)
 Composer: Chris Granner
 
 3. D_E1M8
-Song name: Died from the Wizard
-Game of origin: Waxworks (Amiga)
-Composer: Jezz Woodroffe
+Song name: Infuscomus
+Game of origin: Blood
+Composer: Daniel Bernstein, Guy Whitmore
 
 4. D_E2M8
 Song name: The Battle with the Natives
