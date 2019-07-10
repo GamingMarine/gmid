@@ -13,7 +13,7 @@ actor RevX : Weapon
 	Weapon.AmmoUse 1
 	Obituary "%o got a load of %k's Rev-X."
 	Tag "Rev-X"
-    Inventory.Pickupmessage "You got the ''Rev-X'' Battery-Charged Rifle! Generation X is in effect! (3)"
+    Inventory.Pickupmessage "You got the ''Rev-X'' Battery-Charged Rifle! Generation X is in effect! \cf(\cjSlot 3\cf)"
     Weapon.upsound "REVXUP"
 	+WEAPON.AMMO_OPTIONAL
     Scale 0.75

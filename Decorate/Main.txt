@@ -226,7 +226,7 @@ Actor GMIDChainsaw : Chainsaw Replaces Chainsaw
 	Weapon.UpSound "weapons/sawup"
 	Weapon.ReadySound ""
 	Tag "Angle Grinder"
-	Inventory.PickupMessage "You got the Angle Grinder! Groovy! (1)"
+	Inventory.PickupMessage "You got the Angle Grinder! Groovy! \cf(\cjSlot 1\cf)"
 	Obituary "%o was slaughtered by %k's Angle Grinder."
 	States
 	{
@@ -276,7 +276,7 @@ Actor GMIDPistol : Pistol Replaces Pistol
 	Weapon.AmmoUse 1
 	Tag "Beretta"
 	Scale 0.5
-	Inventory.PickupMessage "Picked up a Beretta. (2)"
+	Inventory.PickupMessage "Picked up a Beretta. \cf(\cjSlot 2\cf)"
 	Obituary "%o barely evaded %k's Beretta."
 	states
 	{
@@ -350,7 +350,7 @@ Actor GMIDDualPistol : GMIDPistol
 	Weapon.AmmoUse 2
 	Tag "Dual Berettas"
 	Scale 0.5
-	Inventory.PickupMessage "You got another Beretta! (2)"
+	Inventory.PickupMessage "You got another Beretta! \cf(\cjSlot 2\cf)"
 	Obituary "%o was so close to evading %k's dual Berettas."
 	states
 	{
@@ -413,7 +413,7 @@ Actor GMIDShotgun : Shotgun Replaces Shotgun
 	attacksound ""
 	Weapon.AmmoUse 1
 	Tag "UAC Pump-Action Shotgun"
-	Inventory.PickupMessage "You got the UAC Pump-Action Shotgun! (3)"
+	Inventory.PickupMessage "You got the UAC Pump-Action Shotgun! \cf(\cjSlot 3\cf)"
 	Obituary "%o chewed on %k's Pump-Action Shotgun."
 	states
 	{
@@ -494,7 +494,7 @@ Actor GMIDSuperShotgun : SuperShotgun Replaces SuperShotgun
 	attacksound "weapons/DSDSHTGN"
 	Tag "Sawn-Off"
 	Weapon.AmmoUse 2
-	Inventory.PickupMessage "You got the Sawn-Off! (3)"
+	Inventory.PickupMessage "You got the Sawn-Off! \cf(\cjSlot 3\cf)"
 	Obituary "%o was decapitated by %k's Sawn-Off."
 	states
 	{
@@ -574,7 +574,7 @@ Actor GMIDChaingun : Chaingun Replaces Chaingun
 	Weapon.AmmoType1 "Clip3"
 	Weapon.AmmoUse 1
 	Tag "V-Gun"
-	Inventory.PickupMessage "You got the V-Gun! (4)"
+	Inventory.PickupMessage "You got the V-Gun! \cf(\cjSlot 4\cf)"
 	Obituary "%o was pelted with lead by %k's V-Gun."
 	states
 	{
@@ -647,7 +647,7 @@ Actor GMIDGrenadeLauncher : RocketLauncher Replaces RocketLauncher //It's a miss
 	Weapon.AmmoUse 1
 	Weapon.UpSound "rockpump"
 	Tag "Missile Launcher"
-	Inventory.PickupMessage "You got the Missile Launcher! (5)"
+	Inventory.PickupMessage "You got the Missile Launcher! \cf(\cjSlot 5\cf)"
 	Obituary "%o got a face full of %k's Missile Launcher."
 	states
 	{
@@ -708,7 +708,7 @@ Actor GMIDRailgun : PlasmaRifle Replaces PlasmaRifle
 	Tag "Railgun"
 	Weapon.AmmoType1 "NewCell"
 	Weapon.AmmoUse 1
-	Inventory.PickupMessage "You got the Railgun! (6)"
+	Inventory.PickupMessage "You got the Railgun! \cf(\cjSlot 6\cf)"
 	Obituary "%o was split by %l's Railgun."
 	states
 	{
@@ -767,7 +767,7 @@ Actor GMIDBFG9000 : BFG9000 Replaces BFG9000 //Now the "Space Cadet" spell
 	Tag "Space Cadet"
 	Weapon.AmmoType1 "SmallMana"
 	Weapon.AmmoUse 2
-	Inventory.PickupMessage "You got the ''Space Cadet'' Pinball spell! Time to bring pain and nostalgia upon thee... (7)"
+	Inventory.PickupMessage "You got the ''Space Cadet'' Pinball spell! Time to bring pain and nostalgia upon thee... \cf(\cjSlot 7\cf)"
 	Obituary "%o choked on %k's big balls."
 	Scale 0.3125
 	+FLOATBOB
@@ -915,7 +915,7 @@ actor JohnnyGee : DoomWeapon
   Weapon.AmmoUse 1
   Weapon.AmmoGive 100
   Weapon.AmmoType "SmallMana"
-  Inventory.PickupMessage "You possess the ''Johnny Gee'' fire spell!... what (7)"
+  Inventory.PickupMessage "You possess the ''Johnny Gee'' fire spell!... what \cf(\cjSlot 7\cf)"
   Obituary "%o was set ablaze by %k."
   Weapon.BobRangeX 0.3
   Weapon.BobRangeY 0.5
@@ -961,31 +961,6 @@ actor JohnnyGee : DoomWeapon
   }
 }
 
-Actor SpiritBall_NoSeek
-{
-    Speed 32
-    damage 12
-    scale 0.3
-    radius 6
-    height 12
-    //RENDERSTYLE ADD
-	RenderStyle SoulTrans
-    Alpha 0.85
-    PROJECTILE
-    seesound "weapons/stafffire"
-    deathsound "baron/shotx"
-    states
-    {
-    Spawn:
-	PSMM ABC 5 Bright
-	PSMM DEF 2 Bright
-	goto Spawn+2
-    Death:
-	PSMM GGHHIIJJKKLLMM 2 Bright A_FadeOut(0.05)
-	stop
-    }
-}
-
 actor LeadPosioning : Weapon
 {
     Weapon.AmmoType Clip3
@@ -993,7 +968,7 @@ actor LeadPosioning : Weapon
     Weapon.AmmoGive 60
     Weapon.KickBack 200
 	Weapon.SlotNumber 4
-    Inventory.PickupMessage "You got the ''Lead Poisoning'' rapid-fire chaingun! (4)"
+    Inventory.PickupMessage "You got the ''Lead Poisoning'' rapid-fire chaingun! \cf(\cjSlot 4\cf)"
     Inventory.PickupSound "misc/w_pkup"
     AttackSound "weapons/mgunfire"
 	Weapon.UpSound "weapons/machinegun/up"
@@ -1077,7 +1052,7 @@ actor SPAS12 : Weapon
   Weapon.BobStyle InverseSmooth
   Weapon.BobSpeed 2.0
   Weapon.UpSound "spasup"
-  Inventory.PickupMessage "You got the ''Firestick'' SPAS-12! (3)"
+  Inventory.PickupMessage "You got the ''Firestick'' SPAS-12! \cf(\cjSlot 3\cf)"
   Obituary "%o was shelled by %k's Firestick."
   scale 0.5
   decal "bulletchip"
@@ -1153,7 +1128,7 @@ ACTOR ShotAmmount : Ammo
 
 ACTOR 40mmGrenadeLauncher : Weapon //29010
 {
-	Inventory.PickupMessage "You got the ''Pineapple Jammer'' 40mm Grenade Launcher! (5)"
+	Inventory.PickupMessage "You got the ''Pineapple Jammer'' 40mm Grenade Launcher! \cf(\cjSlot 5\cf)"
 	Weapon.Ammogive 10
 	Weapon.AmmoType "40mmGrenades"
 	Weapon.AmmoUse 1
@@ -1290,7 +1265,7 @@ ACTOR 40mmGrenades : Ammo //5567
 	Ammo.BackpackAmount 5
 	Ammo.BackpackMaxAmount 100
 	Inventory.PickupSound "grenade/get1"
-	Inventory.PickupMessage "Picked up some 40mm grenades. (Ammo for Pineapple Jammer)"
+	Inventory.PickupMessage "Picked up some 40mm grenades. \cf(\cjAmmo for Pineapple Jammer\cf)"
 	Inventory.Icon "40MMA0"
 	States
 	{
@@ -1304,7 +1279,7 @@ ACTOR 40mmGrenadeBox : 40mmGrenades //5568
 {
 	Inventory.Amount 15
 	Inventory.PickupSound "grenade/get2"
-	Inventory.PickupMessage "Picked up a box of 40mm grenades. (Ammo for Pineapple Jammer)"
+	Inventory.PickupMessage "Picked up a box of 40mm grenades. \cf(\cjAmmo for Pineapple Jammer\cf)"
 	States
 	{
 	Spawn:
@@ -1326,7 +1301,7 @@ actor PlasmaCannon : Weapon
 	Weapon.AmmoUse 1
 	Obituary "%o tasted %k's Excessive Force."
 	Tag "Excessive Force"
-    Inventory.Pickupmessage "You got the ''Excessive Force'' Plasma Cannon! (6)"
+    Inventory.Pickupmessage "You got the ''Excessive Force'' Plasma Cannon! \cf(\cjSlot 6\cf)"
     Weapon.upsound "duke/weaponup"
     Scale 0.75
     States
