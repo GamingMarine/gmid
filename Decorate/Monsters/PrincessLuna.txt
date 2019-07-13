@@ -1,0 +1,202 @@
+ACTOR DoomLuna replaces SpiderMastermind
+{
+  Health 4000
+  Radius 16
+  Height 56
+  Scale 1.06
+  PainChance 40
+  Speed 7.5
+  Monster
+  +BOSS
+  +NOICEDEATH
+  +BOSSDEATH
+  Obituary "%o kneeled before Princess Luna."
+  SeeSound "DoomLuna/Sight"
+  ActiveSound "DoomLuna/Active"
+  PainSound "DoomLuna/Pain"
+  DeathSound "DoomLuna/Death"
+  States
+  {
+  Spawn:
+	DOLN A 1 A_Look
+	Loop
+  See:
+	DOLN AABBCCDD 2 A_Chase
+	Loop
+  Pain:
+	DOLN E 10 A_Pain
+	DOLN E 0 A_Jump(32, "InsultPlayer")
+	Goto See
+  InsultPlayer:
+	DOLN G 0 A_PlaySound("DoomLuna/Insult", CHAN_VOICE)
+  Death:
+	DOLN H 0 A_Scream
+	DOLN H 0 A_NoBlocking
+	DOLN HH 35
+	DOLN IJKL 5
+	DOLN M 0 A_PlaySound("body/hitfloor")
+	DOLN M 5
+	DOLN NN 35
+	DOLN A 0 A_XScream
+	DOLN A 0 A_SpawnDebris("DukeGibs1")
+	DOLN A 0 A_SpawnDebris("DukeGibs2")
+	DOLN A 0 A_SpawnDebris("DukeGibs3")
+	DOLN A 0 A_SpawnDebris("DukeGibs4")
+	DOLN A 0 A_SpawnDebris("DukeGibs5")
+	DOLN A 0 A_SpawnDebris("DukeGibs6")
+	DOLN N 7
+	DOLN A 0 A_XScream
+	DOLN A 0 A_SpawnDebris("DukeGibs1")
+	DOLN A 0 A_SpawnDebris("DukeGibs2")
+	DOLN A 0 A_SpawnDebris("DukeGibs3")
+	DOLN A 0 A_SpawnDebris("DukeGibs4")
+	DOLN A 0 A_SpawnDebris("DukeGibs5")
+	DOLN A 0 A_SpawnDebris("DukeGibs6")
+	DOLN N 7
+	DOLN A 0 A_XScream
+	DOLN A 0 A_SpawnDebris("DukeGibs1")
+	DOLN A 0 A_SpawnDebris("DukeGibs2")
+	DOLN A 0 A_SpawnDebris("DukeGibs3")
+	DOLN A 0 A_SpawnDebris("DukeGibs4")
+	DOLN A 0 A_SpawnDebris("DukeGibs5")
+	DOLN A 0 A_SpawnDebris("DukeGibs6")
+	DOLN N 7
+	DOLN A 0 A_XScream
+	DOLN A 0 A_SpawnDebris("DukeGibs1")
+	DOLN A 0 A_SpawnDebris("DukeGibs2")
+	DOLN A 0 A_SpawnDebris("DukeGibs3")
+	DOLN A 0 A_SpawnDebris("DukeGibs4")
+	DOLN A 0 A_SpawnDebris("DukeGibs5")
+	DOLN A 0 A_SpawnDebris("DukeGibs6")
+	DOLN N 7
+	DOLN A 0 A_SpawnDebris("DukeGibs1")
+	DOLN A 0 A_SpawnDebris("DukeGibs2")
+	DOLN A 0 A_SpawnDebris("DukeGibs3")
+	DOLN A 0 A_SpawnDebris("DukeGibs4")
+	DOLN A 0 A_SpawnDebris("DukeGibs5")
+	DOLN A 0 A_SpawnDebris("DukeGibs6")
+	DOLN N 4
+	DOLN A 0 A_XScream
+	DOLN A 0 A_SpawnDebris("DukeGibs1")
+	DOLN A 0 A_SpawnDebris("DukeGibs2")
+	DOLN A 0 A_SpawnDebris("DukeGibs3")
+	DOLN A 0 A_SpawnDebris("DukeGibs4")
+	DOLN A 0 A_SpawnDebris("DukeGibs5")
+	DOLN A 0 A_SpawnDebris("DukeGibs6")
+	DOLN N 4
+	DOLN A 0 A_XScream
+	DOLN A 0 A_SpawnDebris("DukeGibs1")
+	DOLN A 0 A_SpawnDebris("DukeGibs2")
+	DOLN A 0 A_SpawnDebris("DukeGibs3")
+	DOLN A 0 A_SpawnDebris("DukeGibs4")
+	DOLN A 0 A_SpawnDebris("DukeGibs5")
+	DOLN A 0 A_SpawnDebris("DukeGibs6")
+	DOLN N 4
+	DOLN A 0 A_XScream
+	DOLN A 0 A_SpawnDebris("DukeGibs1")
+	DOLN A 0 A_SpawnDebris("DukeGibs2")
+	DOLN A 0 A_SpawnDebris("DukeGibs3")
+	DOLN A 0 A_SpawnDebris("DukeGibs4")
+	DOLN A 0 A_SpawnDebris("DukeGibs5")
+	DOLN A 0 A_SpawnDebris("DukeGibs6")
+	DOLN N 4
+	DOLN A 0 A_SpawnDebris("DukeGibs1")
+	DOLN A 0 A_SpawnDebris("DukeGibs2")
+	DOLN A 0 A_SpawnDebris("DukeGibs3")
+	DOLN A 0 A_SpawnDebris("DukeGibs4")
+	DOLN A 0 A_SpawnDebris("DukeGibs5")
+	DOLN A 0 A_SpawnDebris("DukeGibs6")
+	DOLN N 2
+	DOLN A 0 A_XScream
+	DOLN A 0 A_SpawnDebris("DukeGibs1")
+	DOLN A 0 A_SpawnDebris("DukeGibs2")
+	DOLN A 0 A_SpawnDebris("DukeGibs3")
+	DOLN A 0 A_SpawnDebris("DukeGibs4")
+	DOLN A 0 A_SpawnDebris("DukeGibs5")
+	DOLN A 0 A_SpawnDebris("DukeGibs6")
+	DOLN N 2
+	DOLN A 0 A_XScream
+	DOLN A 0 A_SpawnDebris("DukeGibs1")
+	DOLN A 0 A_SpawnDebris("DukeGibs2")
+	DOLN A 0 A_SpawnDebris("DukeGibs3")
+	DOLN A 0 A_SpawnDebris("DukeGibs4")
+	DOLN A 0 A_SpawnDebris("DukeGibs5")
+	DOLN A 0 A_SpawnDebris("DukeGibs6")
+	DOLN N 2
+	DOLN A 0 A_XScream
+	DOLN A 0 A_SpawnDebris("DukeGibs1")
+	DOLN A 0 A_SpawnDebris("DukeGibs2")
+	DOLN A 0 A_SpawnDebris("DukeGibs3")
+	DOLN A 0 A_SpawnDebris("DukeGibs4")
+	DOLN A 0 A_SpawnDebris("DukeGibs5")
+	DOLN A 0 A_SpawnDebris("DukeGibs6")
+	DOLN N 2
+	DOLN A 0 A_SpawnDebris("DukeGibs1")
+	DOLN A 0 A_SpawnDebris("DukeGibs2")
+	DOLN A 0 A_SpawnDebris("DukeGibs3")
+	DOLN A 0 A_SpawnDebris("DukeGibs4")
+	DOLN A 0 A_SpawnDebris("DukeGibs5")
+	DOLN A 0 A_SpawnDebris("DukeGibs6")
+	DOLN N 1
+	DOLN A 0 A_XScream
+	DOLN A 0 A_SpawnDebris("DukeGibs1")
+	DOLN A 0 A_SpawnDebris("DukeGibs2")
+	DOLN A 0 A_SpawnDebris("DukeGibs3")
+	DOLN A 0 A_SpawnDebris("DukeGibs4")
+	DOLN A 0 A_SpawnDebris("DukeGibs5")
+	DOLN A 0 A_SpawnDebris("DukeGibs6")
+	DOLN N 1
+	DOLN A 0 A_XScream
+	DOLN A 0 A_SpawnDebris("DukeGibs1")
+	DOLN A 0 A_SpawnDebris("DukeGibs2")
+	DOLN A 0 A_SpawnDebris("DukeGibs3")
+	DOLN A 0 A_SpawnDebris("DukeGibs4")
+	DOLN A 0 A_SpawnDebris("DukeGibs5")
+	DOLN A 0 A_SpawnDebris("DukeGibs6")
+	DOLN N 1
+	DOLN A 0 A_XScream
+	DOLN A 0 A_SpawnDebris("DukeGibs1")
+	DOLN A 0 A_SpawnDebris("DukeGibs2")
+	DOLN A 0 A_SpawnDebris("DukeGibs3")
+	DOLN A 0 A_SpawnDebris("DukeGibs4")
+	DOLN A 0 A_SpawnDebris("DukeGibs5")
+	DOLN A 0 A_SpawnDebris("DukeGibs6")
+	DOLN N 1
+	TNT1 A 0 A_XScream
+	TNT1 A 0 A_SpawnDebris("HLGoreSkull")
+	TNT1 A 0 A_SpawnDebris("HLGoreSkull")
+	TNT1 A 0 A_SpawnDebris("DukeGibs1")
+	TNT1 A 0 A_SpawnDebris("DukeGibs2")
+	TNT1 A 0 A_SpawnDebris("DukeGibs3")
+	TNT1 A 0 A_SpawnDebris("DukeGibs4")
+	TNT1 A 0 A_SpawnDebris("DukeGibs5")
+	TNT1 A 0 A_SpawnDebris("DukeGibs6")
+	TNT1 A 0 A_SpawnDebris("DukeGibs1")
+	TNT1 A 0 A_SpawnDebris("DukeGibs2")
+	TNT1 A 0 A_SpawnDebris("DukeGibs3")
+	TNT1 A 0 A_SpawnDebris("DukeGibs4")
+	TNT1 A 0 A_SpawnDebris("DukeGibs5")
+	TNT1 A 0 A_SpawnDebris("DukeGibs6")
+	TNT1 A 0 A_SpawnDebris("DukeGibs1")
+	TNT1 A 0 A_SpawnDebris("DukeGibs2")
+	TNT1 A 0 A_SpawnDebris("DukeGibs3")
+	TNT1 A 0 A_SpawnDebris("DukeGibs4")
+	TNT1 A 0 A_SpawnDebris("DukeGibs5")
+	TNT1 A 0 A_SpawnDebris("DukeGibs6")
+	TNT1 A 0 A_SpawnDebris("DukeGibs1")
+	TNT1 A 0 A_SpawnDebris("DukeGibs2")
+	TNT1 A 0 A_SpawnDebris("DukeGibs3")
+	TNT1 A 0 A_SpawnDebris("DukeGibs4")
+	TNT1 A 0 A_SpawnDebris("DukeGibs5")
+	TNT1 A 0 A_SpawnDebris("DukeGibs6")
+	TNT1 A 0 A_SpawnDebris("DukeGibs1")
+	TNT1 A 0 A_SpawnDebris("DukeGibs2")
+	TNT1 A 0 A_SpawnDebris("DukeGibs3")
+	TNT1 A 0 A_SpawnDebris("DukeGibs4")
+	TNT1 A 0 A_SpawnDebris("DukeGibs5")
+	TNT1 A 0 A_SpawnDebris("DukeGibs6")
+	TNT1 AA 35
+	TNT1 A 0 A_BossDeath
+    Stop
+  }
+}

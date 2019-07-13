@@ -790,6 +790,32 @@ ForceLord/Pain9					MFLHRT9
 ForceLord/Death					MFLDEATH
 ForceLord/Theme					MFLTHEME
 
+$random DoomLuna/Sight { DoomLuna/Sight1 DoomLuna/Sight2 }
+DoomLuna/Sight1					DLSIT1
+DoomLuna/Sight2					DLSIT2
+$random DoomLuna/Active { DoomLuna/Active1 DoomLuna/Active2 DoomLuna/Active3 DoomLuna/Active4 DoomLuna/Active5 }
+DoomLuna/Active1				DLACT1
+DoomLuna/Active2				DLACT2
+DoomLuna/Active3				DLACT3
+DoomLuna/Active4				DLACT4
+DoomLuna/Active5				DLACT5
+$random DoomLuna/Pain { DoomLuna/Pain1 DoomLuna/Pain2 DoomLuna/Pain3 DoomLuna/Pain4 DoomLuna/Pain5 DoomLuna/Pain6 }
+DoomLuna/Pain1					DLHRT1
+DoomLuna/Pain2					DLHRT2
+DoomLuna/Pain3					DLHRT3
+DoomLuna/Pain4					DLHRT4
+DoomLuna/Pain5					DLHRT5
+DoomLuna/Pain6					DLHRT6
+$random DoomLuna/Insult { DoomLuna/Insult1 DoomLuna/Insult2 DoomLuna/Insult3 DoomLuna/Insult4 DoomLuna/Insult5 }
+DoomLuna/Insult1				DLINS1
+DoomLuna/Insult2				DLINS2
+DoomLuna/Insult3				DLINS3
+DoomLuna/Insult4				DLINS4
+DoomLuna/Insult5				DLINS5
+$random DoomLuna/Death { DoomLuna/Death1 DoomLuna/Death2 }
+DoomLuna/Death1					DLDTH1
+DoomLuna/Death2					DLDTH2
+
 $random Zombie/Burn { Zombie/Burn1 Zombie/Burn2 Zombie/Burn3 }
 Zombie/Burn1					BURNZOM1
 Zombie/Burn2					BURNZOM2
