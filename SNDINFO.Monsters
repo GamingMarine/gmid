@@ -841,6 +841,18 @@ $random body/hitfloor { body/hitfloor1 body/hitfloor2 body/hitfloor3 body/hitflo
 gore/hitbig GOREHIT
 gore/head	HEADSHOT
 
+//Scripted Marines
+$random ScriptedMarine/Pain { ScriptedMarine/Pain1 ScriptedMarine/Pain2 ScriptedMarine/Pain3 ScriptedMarine/Pain4 ScriptedMarine/Pain5 }
+ScriptedMarine/Pain1			MRNHURT1
+ScriptedMarine/Pain2			MRNHURT2
+ScriptedMarine/Pain3			MRNHURT3
+ScriptedMarine/Pain4			MRNHURT4
+ScriptedMarine/Pain5			MRNHURT5
+$random ScriptedMarine/Death { ScriptedMarine/Death1 ScriptedMarine/Death2 ScriptedMarine/Death3 }
+ScriptedMarine/Death1			MRNDETH1
+ScriptedMarine/Death2			MRNDETH2
+ScriptedMarine/Death3			MRNDETH3
+
 $attenuation ForceLord/Theme 0
 $limit SonicXRainbow/death2 0
 $limit OctaLeb/death6 0
