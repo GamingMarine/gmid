@@ -10,15 +10,12 @@ Actor GamingMarine : DoomPlayer
 	Player.StartItem "GMIDPistol"
 	Player.StartItem "GMIDFist"
 	Player.StartItem "Clip2", 75
-	Player.StartItem "FragGrenade"
-	Player.StartItem "FragGrenadeAmmo2", 2
 	Player.StartItem "StartingAnimation", 1
 	Player.StartItem "IsPlayer", 1
 	PainChance "Fire", 256
 	PainChance "Melee", 256
 	PainChance "Electric", 256
 	Player.JumpZ 10
-	Player.WeaponSlot 0, HandGrenade
 	Player.WeaponSlot 1, GMIDFist, GMIDChainsaw
 	Player.WeaponSlot 2, GMIDPistol, GMIDDualPistol
 	Player.WeaponSlot 3, GMIDShotgun, SPAS12, GMIDSuperShotgun
