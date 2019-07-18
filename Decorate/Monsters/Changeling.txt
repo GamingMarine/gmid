@@ -1,0 +1,168 @@
+actor Changeling replaces LostSoul
+{
+  Game Doom
+  Speed 7.5
+  health 100
+  PainChance 256
+  Radius 8
+  Height 28
+  Alpha 0.5
+  Monster
+  SeeSound "Changeling/sight"
+  PainSound "Changeling/pain"
+  ActiveSound "Changeling/sight"
+  DeathSound "Changeling/death"
+  Obituary "%o was spooked by a Changeling."
+  +NOBLOOD
+  +NOICEDEATH
+  +DROPOFF
+  DropItem "SmallSoul" 10
+  PainChance "Basic", 256
+  PainChance "Foot", 256
+  Tag "Changeling"
+  States
+  {
+  Spawn:
+	CHGL A 10 A_Look
+    Loop
+  See:
+	CHGL A 0 A_SpawnItemEx("ChangelingTrailA",random(-1,1), random(-1,1), 0)
+	CHGL AA 2 A_Chase
+	CHGL B 0 A_SpawnItemEx("ChangelingTrailB",random(-1,1), random(-1,1), 0)
+	CHGL BB 2 A_Chase
+	CHGL C 0 A_SpawnItemEx("ChangelingTrailC",random(-1,1), random(-1,1), 0)
+	CHGL CC 2 A_Chase
+	CHGL D 0 A_SpawnItemEx("ChangelingTrailD",random(-1,1), random(-1,1), 0)
+	CHGL DD 2 A_Chase
+	Loop
+  Pain:
+    CHGL H 4
+	CHGL H 4 A_Pain
+	Goto See
+  Pain.Foot:
+    TNT1 A 0 A_ChangeFlag("NOPAIN",1)
+    CHGL H 2 A_FaceTarget
+    TNT1 A 0 A_Recoil(14)
+    CHGL H 16 A_Pain
+    Goto See
+  Missile:
+	CHGL E 10 A_FaceTarget
+	CHGL F 8 Bright A_CustomMissile("SpiritBall", 32, 10)
+	CHGL G 8
+	Goto See
+  Death:
+	CHGL I 5
+	CHGL J 5 A_Scream
+	CHGL K 5 A_NoBlocking
+	CHGL L 5
+	CHGL MMMMMMMMMMMMMM 2 A_FadeOut(0.05)
+	Stop
+  Death.Basic:
+    CHGL H 0 A_PlaySound("Weapons/CrowbarHitFlesh")
+	TNT1 A 0 A_Jump(5, "KillTaunt")
+	CHGL I 5
+	CHGL J 5 A_Scream
+	CHGL K 5 A_NoBlocking
+	CHGL L 5
+	CHGL MMMMMMMMMMMMMM 2 A_FadeOut(0.05)
+	Stop
+  KillTaunt:
+    CHGL H 0 A_PlaySound("Weapons/CrowbarHitFlesh")
+	CHGL I 5
+	CHGL J 5 A_Scream
+	CHGL K 5 A_NoBlocking
+	CHGL L 5
+	CHGL MMMMMMMMMMMMMM 2 A_FadeOut(0.05)
+  	TNT1 A 0 A_PlaySound("player/killtaunt", CHAN_AUTO)
+	Stop
+  Death.Foot:
+	TNT1 A 0 A_Jump(64, "KickTaunt")
+	CHGL I 5 ThrustThingZ(0,16,0,0)
+	CHGL J 5 A_Scream
+	CHGL K 5 A_NoBlocking
+	CHGL L 5
+	CHGL MMMMMMMMMMMMMM 2 A_FadeOut(0.05)
+	Stop
+  KickTaunt:
+	CHGL I 5 ThrustThingZ(0,16,0,0)
+	CHGL J 5 A_Scream
+	CHGL K 5 A_NoBlocking
+	CHGL L 5
+	CHGL MMMMMMMMMMMMMM 2 A_FadeOut(0.05)
+  	TNT1 A 0 A_PlaySound("player/kicktaunt", CHAN_AUTO)
+	Stop
+  Raise:
+	Stop
+  Crush:
+	Stop
+   }
+}
+
+Actor SpiritBall
+{
+    Speed 16
+    damage 3
+    scale 0.3
+    radius 6
+    height 12
+    //RENDERSTYLE ADD
+	RenderStyle SoulTrans
+    Alpha 0.85
+    PROJECTILE
+    seesound "changeling/attack"
+    deathsound "baron/shotx"
+    states
+    {
+    Spawn:
+	PSMM ABC 5 Bright
+	PSMM DEF 2 Bright
+	goto Spawn+2
+    Death:
+	PSMM GGHHIIJJKKLLMM 2 Bright A_FadeOut(0.05)
+	stop
+    }
+}
+
+Actor ChangelingTrailA
+{
+	+NOINTERACTION
+	+NOCLIP
+	RenderStyle Translucent
+	Alpha 0.5
+	States
+	{
+	Spawn:
+	  CHGL A 5 A_FadeOut (0.1)
+	  Loop
+	}
+}
+
+Actor ChangelingTrailB : ChangelingTrailA
+{
+	States
+	{
+	Spawn:
+	  CHGL B 5 A_FadeOut (0.1)
+	  Loop
+	}
+}
+
+Actor ChangelingTrailC : ChangelingTrailA
+{
+	States
+	{
+	Spawn:
+	  CHGL C 5 A_FadeOut (0.1)
+	  Loop
+	}
+}
+
+Actor ChangelingTrailD : ChangelingTrailA
+{
+	States
+	{
+	Spawn:
+	  CHGL D 5 A_FadeOut (0.1)
+	  Loop
+	}
+}

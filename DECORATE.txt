@@ -5,6 +5,7 @@
 #include Decorate/Heroes/Cookiedemon.txt
 #include Decorate/Decorations.txt
 #include Decorate/Monsters/Monsters.txt
+#include Decorate/Monsters/Changeling.txt
 #include Decorate/Monsters/PrincessLuna.txt
 #include Decorate/Monsters/ScriptedMarines.txt
 #include Decorate/Monsters/Taokaka.txt
