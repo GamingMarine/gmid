@@ -500,6 +500,8 @@ misc/ricochet5	RICOCHE5
 misc/ricochet6	RICOCHE6
 misc/ricochet7	RICOCHE7
 
+Blood/Splat 	BLODDROP
+
 cloak/get		 CLOAKUP
 PillsJar/Pickup	 PILLSUP
 PillsJar/Use	 PILLSUSE
@@ -606,10 +608,10 @@ $limit player/killtaunt 1
 $limit player/gibtaunt 1
 $limit boss/sight 1
 $limit player/kicktaunt 1
-$limit player/joketaunt 1
 $limit Explosion/Distant 1
 $limit misc/teleport 0
 $limit revx/fire 0
+$limit Blood/Splat 0
 
 // Footsteps
 // Sound Info

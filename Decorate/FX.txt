@@ -1,0 +1,58 @@
+//Blood effects (Taken from Moon Man Doom, of all things)
+Actor BloodFXSpawner replaces Blood
+{
+	+NOBLOCKMAP
+	+NOTELEPORT
+	-NOGRAVITY
+	-ALLOWPARTICLES
+	+NOTELEPORT
+	+CLIENTSIDEONLY	
+	scale 0.25
+	VSpeed 0
+	Speed 0
+	States
+	{
+    Spawn:
+	   HBLD A 1
+	   NULL A 0 A_CustomMissile("DropBlood", 0, 0, random(115,135), 2, random(5,10))
+	   NULL A 0 A_CustomMissile ("DropBlood", 0, 0, random(70,90), 2, random(5,10))
+	   NULL A 0 A_CustomMissile ("DropBlood", 0, 0, random(25,45), 2, random(5,10))
+	   NULL A 0 A_CustomMissile ("DropBlood", 0, 0, random(250,270), 2, random(345,350))
+	   NULL A 0 A_CustomMissile ("DropBlood", 0, 0, random(295,315), 2, random(345,350))
+	   NULL A 0 A_CustomMissile ("DropBlood", 0, 0, random(340,360), 2, random(345,350))
+	   NULL A 0 A_CustomMissile("DropBlood", 0, 0, random(115,135), 2, random(5,10))
+	   NULL A 0 A_CustomMissile ("DropBlood", 0, 0, random(70,90), 2, random(5,10))
+	   NULL A 0 A_CustomMissile ("DropBlood", 0, 0, random(25,45), 2, random(5,10))
+	   NULL A 0 A_CustomMissile ("DropBlood", 0, 0, random(250,270), 2, random(345,350))
+	   NULL A 0 A_CustomMissile ("DropBlood", 0, 0, random(295,315), 2, random(345,350))
+	   NULL A 0 A_CustomMissile ("DropBlood", 0, 0, random(340,360), 2, random(345,350))
+	   HBLD BCDEFGHIJ 1
+	   Stop
+    }
+}
+
+ACTOR DropBlood
+{
+	Radius 0
+	height 0
+	Speed 5
+	scale 0.5 //default 0.2
+	Projectile
+	-NOGRAVITY
+	-SOLID
+	+CLIENTSIDEONLY
+	Gravity 0.25
+	States
+	{
+	Spawn:
+		DGB6 AB 3
+	    Loop
+	Death:
+	   DGB6 A 0 A_PlaySound("Blood/Splat")
+	   DGB6 CDEFGH 3
+	   Stop
+	XDeath:
+	   NULL A 1 
+	   Stop
+	}
+}
