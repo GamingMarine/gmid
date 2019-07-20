@@ -56,3 +56,11 @@ ACTOR DropBlood
 	   Stop
 	}
 }
+
+Actor BloodFXSpawner_NoDroplets : BloodFXSpawner
+{
+	States
+	{
+    Spawn:
+	   HBLD ABCDEFGHIJ 1
+	   Stop

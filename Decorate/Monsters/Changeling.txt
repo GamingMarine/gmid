@@ -18,6 +18,7 @@ actor Changeling replaces LostSoul
   DropItem "SmallSoul" 10
   Tag "Changeling"
   BloodColor "Dark Gray"
+  BloodType "BloodFXSpawner_NoDroplets"
   States
   {
   Spawn:
