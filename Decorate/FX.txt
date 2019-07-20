@@ -64,3 +64,5 @@ Actor BloodFXSpawner_NoDroplets : BloodFXSpawner
     Spawn:
 	   HBLD ABCDEFGHIJ 1
 	   Stop
+	 }
+}
