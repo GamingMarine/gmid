@@ -736,7 +736,10 @@ GamingMarineClone/Idle6			GMBOTA06
 $random GamingMarineClone/Idle { GamingMarineClone/Idle1 GamingMarineClone/Idle2 GamingMarineClone/Idle3 GamingMarineClone/Idle4 GamingMarineClone/Idle5 GamingMarineClone/Idle6 }
 GamingMarineClone/Ready			GMBOTRDY
 GamingMarineClone/Fire			SOLATCK3
-GamingMarineClone/Death			GMBOTDTH
+$random GamingMarineClone/Death { GamingMarineClone/Death1 GamingMarineClone/Death2 GamingMarineClone/Death3 }
+GamingMarineClone/Death1		GMBOTDT1
+GamingMarineClone/Death2		GMBOTDT2
+GamingMarineClone/Death3		GMBOTDT3
 
 $random Changeling/Sight { Changeling/Sight1 Changeling/Sight2 Changeling/Sight3 Changeling/Sight4 }
 Changeling/Sight1				CHGLSIT1
