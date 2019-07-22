@@ -424,20 +424,7 @@ $random Gunman/Roam { Gunman/Roam1 Gunman/Roam2 Gunman/Roam3 Gunman/Roam4 Gunman
 OBCTerrVomit TERRVOM
 weapons/minifire DSMINIGN
 
-$random grunt/sight { grunt/sight1
-grunt/sight2
-grunt/sight3
-grunt/sight4
-grunt/sight5
-grunt/sight6
-grunt/sight7
-grunt/sight8
-grunt/sight9 
-grunt/sight10
-grunt/sight11
-grunt/sight12
-grunt/sight13
-grunt/sight14 }
+$random grunt/sight { grunt/sight1 grunt/sight2 grunt/sight3 grunt/sight4 grunt/sight5 grunt/sight6 grunt/sight7 grunt/sight8 grunt/sight9  grunt/sight10 grunt/sight11 grunt/sight12 grunt/sight13 grunt/sight14 }
 grunt/sight1	zomsit1
 grunt/sight2	zomsit2
 grunt/sight3	zomsit3
@@ -452,14 +439,7 @@ grunt/sight11   zomsit11
 grunt/sight12	zomsit12
 grunt/sight13	zomsit13
 grunt/sight14	zomsit14
-$random grunt/death
-{ grunt/death1
-grunt/death2
-grunt/death3
-grunt/death4
-grunt/death5
-grunt/death6
-grunt/death7 }
+$random grunt/death { grunt/death1 grunt/death2 grunt/death3 grunt/death4 grunt/death5 grunt/death6 grunt/death7 }
 grunt/death1	zomdth1
 grunt/death2	zomdth2
 grunt/death3	zomdth3
@@ -467,21 +447,7 @@ grunt/death4	zomdth4
 grunt/death5	zomdth5
 grunt/death6	zomdth6
 grunt/death7	zomdth7
-$random grunt/pain 
-{ grunt/pain1
-grunt/pain2
-grunt/pain3
-grunt/pain4
-grunt/pain5
-grunt/pain6
-grunt/pain7
-grunt/pain8
-grunt/pain9
-grunt/pain10
-grunt/pain11
-grunt/pain12
-grunt/pain13
-grunt/pain14 }
+$random grunt/pain { grunt/pain1 grunt/pain2 grunt/pain3 grunt/pain4 grunt/pain5 grunt/pain6 grunt/pain7 grunt/pain8 grunt/pain9 grunt/pain10 grunt/pain11 grunt/pain12 grunt/pain13 grunt/pain14 }
 grunt/pain1		zompn1
 grunt/pain2		zompn2
 grunt/pain3		zompn3
@@ -496,15 +462,7 @@ grunt/pain11	zompn11
 grunt/pain12	zompn12
 grunt/pain13	zompn13
 grunt/pain14	zompn14
-$random grunt/active 
-{ grunt/active1
-grunt/active2
-grunt/active3
-grunt/active4
-grunt/active5
-grunt/active6
-grunt/active7
-grunt/active8 }
+$random grunt/active { grunt/active1 grunt/active2 grunt/active3 grunt/active4 grunt/active5 grunt/active6 grunt/active7 grunt/active8 }
 grunt/active1	zomact1
 grunt/active2	zomact2
 grunt/active3	zomact3
@@ -513,6 +471,14 @@ grunt/active5	zomact5
 grunt/active6	zomact6
 grunt/active7	zomact7
 grunt/active8	zomact8
+$random grunt/prepare { grunt/prepare1 grunt/prepare2 grunt/prepare3 grunt/prepare4 grunt/prepare5 grunt/prepare6 grunt/prepare7 }
+grunt/prepare1	zomprep1
+grunt/prepare2	zomprep2
+grunt/prepare3	zomprep3
+grunt/prepare4	zomprep4
+grunt/prepare5	zomprep5
+grunt/prepare6	zomprep6
+grunt/prepare7	zomprep7
 $random ZSec/Idle { zsecgrunt/active1 zsecgrunt/active2 zsecgrunt/active3 zsecgrunt/active4 zsecgrunt/active5 zsecgrunt/active6 zsecgrunt/active7 }
 zsecgrunt/active1		ZOMIDL1
 zsecgrunt/active2		ZOMIDL2
@@ -526,17 +492,7 @@ ZSECPFR1	ZSECPFR1
 ZSECPFR2	ZSECPFR2
 ZSECPFR3	ZSECPFR3
 
-$random shotguy/active { shotguy/active1
-shotguy/active2
-shotguy/active3
-shotguy/active4
-shotguy/active5
-shotguy/active6
-shotguy/active7
-shotguy/active8
-shotguy/active9
-shotguy/active10
-shotguy/active11 }
+$random shotguy/active { shotguy/active1 shotguy/active2 shotguy/active3 shotguy/active4 shotguy/active5 shotguy/active6 shotguy/active7 shotguy/active8 shotguy/active9 shotguy/active10 shotguy/active11 }
 shotguy/active1	zsecbr01
 shotguy/active2	zsecbr02
 shotguy/active3	zsecbr03
@@ -553,10 +509,7 @@ shotguy/active13  zsecbr13
 shotguy/active14  zsecbr14
 shotguy/active15  zsecbr15
 
-$random shotguy/breathe { shotguy/active12
-shotguy/active13
-shotguy/active14
-shotguy/active15 }
+$random shotguy/breathe { shotguy/active12 shotguy/active13 shotguy/active14 shotguy/active15 }
 
 $RANDOM shotguy/sight { ENFS1 ENFS2 ENFS3 ENFS4 }
 ENFS1 ZSECSIT1
