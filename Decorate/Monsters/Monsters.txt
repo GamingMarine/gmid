@@ -2654,7 +2654,6 @@ actor SawedOffShotgunGuy
     ZSDO G 3 A_Pain
     goto See
   Death:
-	TNT1 A 0 A_PlaySound("Steven/Shot")
 	TNT1 A 0 A_NoBlocking
     ZSDO H 13 A_Scream
 	ZSDO I 0 A_PlaySound("gore/head", CHAN_VOICE)
@@ -2771,7 +2770,6 @@ actor EvilMarine_Rifle //Evil! EEEVILLL
 	PLA1 N -1
 	Stop
   Death2:
-	TNT1 A 0 A_PlaySound("Steven/Shot")
 	XPL1 A 10
 	XPL1 B 0 A_PlaySound("gore/head", CHAN_VOICE)
 	XPL1 B 10
@@ -2891,7 +2889,6 @@ actor EvilMarine_Shotgun
 	PLA1 N -1
 	Stop
   Death2:
-	TNT1 A 0 A_PlaySound("Steven/Shot")
 	XPL1 A 10
 	XPL1 B 0 A_PlaySound("gore/head", CHAN_VOICE)
 	XPL1 B 10
@@ -3013,7 +3010,6 @@ actor EvilMarine_Minigun
 	PLA1 N -1
 	Stop
   Death2:
-	TNT1 A 0 A_PlaySound("Steven/Shot")
 	XPL1 A 10
 	XPL1 B 0 A_PlaySound("gore/head", CHAN_VOICE)
 	XPL1 B 10

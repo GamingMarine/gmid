@@ -867,6 +867,7 @@ ACTOR Blaster_RifleShot
 	SeeSound "weapons/blasterrifle"
 	Scale 1.0
 	Decal BulletChip
+	DamageType "Electric"
 	States
 	{
 	Spawn:
@@ -1964,77 +1965,6 @@ ACTOR PraetorArmorVest : BlueArmor
   }
 }
 
-ACTOR InvulnerabilitySphere_  : PowerupGiver Replaces InvulnerabilitySphere
-{
-	Game Doom
-	SpawnID 133
-	+COUNTITEM
-	+INVENTORY.AUTOACTIVATE
-	+INVENTORY.ALWAYSPICKUP
-	+INVENTORY.BIGPOWERUP
-	Inventory.MaxAmount 0
-	Powerup.Type Invulnerable
-	Powerup.Color "Yellow", 0.05
-	Inventory.PickupMessage "\c[green]Invulnerability!"
-	Inventory.PickupSound "INVULGET"
-	Scale 0.82
-	RenderStyle Add
-	+FLOATBOB
-	States
-	{
-	Spawn:
-		PINV AAAAAAAAAAAAAAAAAAAABCDDDDDDDDDDDDDDDDDDDDCB 3 Bright
-		Loop
-	}
-}
-
-ACTOR LifeSphere : Health Replaces SoulSphere
-{
-	+COUNTITEM
-	+INVENTORY.ALWAYSPICKUP
-	Inventory.PickupMessage "\c[blue]Soulsphere!"
-	Scale 0.82
-	Inventory.PickupSound "soulget"
-	Inventory.Amount 100
-	Inventory.MaxAmount 250
-	RenderStyle Add
-	+FLOATBOB
-	States
-	{
-	Spawn:
-		SOUL AAAAAAAAAAAAAAAAAAAABCDDDDDDDDDDDDDDDDDDDDCB 3 Bright
-		Loop
-	}
-}
-
-ACTOR EnergySphere : CustomInventory Replaces Megasphere
-{
-	+COUNTITEM
-	+INVENTORY.ALWAYSPICKUP
-	Inventory.PickupMessage "\c[Tan]Megasphere!"
-	Inventory.PickupSound "megaget"
-	Scale 0.82
-	RenderStyle Add
-	+FLOATBOB
-	States
-	{
-	Spawn:
-		MEGA ABCD 3 BRIGHT
-		Loop
-	Pickup:
-		TNT1 A 0 A_GiveInventory("BlueArmorForMegasphere", 1)
-		TNT1 A 0 A_GiveInventory("NewMegasphereHealth", 1)
-		Stop
-	}
-}
-
-ACTOR NewMegasphereHealth : Health
-{
-  Inventory.Amount 200
-  Inventory.MaxAmount 200
-  +INVENTORY.ALWAYSPICKUP
-}
-
 ACTOR NewAllmap : MapRevealer replaces Allmap
 {
   +COUNTITEM
@@ -2051,60 +1981,6 @@ ACTOR NewAllmap : MapRevealer replaces Allmap
 	Goto Idle
   Idle:
     PMAP ABCBAD 3 Bright
-    Loop
-  }
-}
-
-ACTOR PowerDoubleDamage : PowerDamage
-{
-	Damagefactor "normal", 2
-}
-
-ACTOR DoubleSphere : PowerupGiver
-{
-	+COUNTITEM
-	+NOGRAVITY
-	+INVENTORY.AUTOACTIVATE
-	+INVENTORY.ALWAYSPICKUP
-	+FLOATBOB
-	Inventory.MaxAmount 0
-	Powerup.Type DoubleDamage
-	Powerup.Color RedMap
-	Powerup.Duration -30
-	RenderStyle Add
-	Inventory.PickupMessage "\cgDouble Damage!\c-"
-	Inventory.PickupSound "DoubleDamage/Pickup"
-	States
-	{
-	Spawn:
-		DDMG AAAAAAAAAAAAAAAAAAAABCCCCCCCCCCCCCCCCCCCCB 3 Bright
-		Loop
-	}
-}
-
-Actor PowerQuadDamageST : PowerDamage
-{
-Damagefactor "Normal", 4
-}
-
-Actor QuadDamage : PowerupGiver
-{
-  +CountItem
-  +Inventory.AutoActivate
-  +Inventory.AlwaysPickup
-  Inventory.MaxAmount 0
-  Powerup.Type QuadDamageST
-  Powerup.Color Blue, 0.3
-  powerup.duration 1050
-  Inventory.PickupMessage "\c[LightBlue]Quad Damage!\c-"
-  Inventory.PickupSound "QuadDamage/Pickup"
-  Scale 0.82
-  RenderStyle Add
-  +FLOATBOB
-  States
-  {
-  Spawn:
-	QDMG A 10
     Loop
   }
 }

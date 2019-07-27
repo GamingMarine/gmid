@@ -1,10 +1,11 @@
 #include Decorate/Main.txt
-#include Decorate/Weapons/RevX.txt
+#include Decorate/Spheres.txt
 #include Decorate/Inventory.txt
 #include Decorate/Spawner.txt
-#include Decorate/Heroes/Cookiedemon.txt
 #include Decorate/Decorations.txt
 #include Decorate/FX.txt
+#include Decorate/Heroes/Cookiedemon.txt
+#include Decorate/Weapons/RevX.txt
 #include Decorate/Monsters/Monsters.txt
 #include Decorate/Monsters/Changeling.txt
 #include Decorate/Monsters/PrincessLuna.txt
