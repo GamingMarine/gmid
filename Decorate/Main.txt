@@ -2044,6 +2044,19 @@ Actor BioSuitProtector : PowerupGiver
   }
 }
 
+Actor NightVisionGoggles : InfraRed replaces InfraRed
+{
+  Scale 0.75
+  Inventory.PickupMessage "Night vision goggles!"
+  Inventory.PickupSound "nvg/pick"
+  States
+  {
+  Spawn:
+	PVIS A -1
+	Stop
+  }
+}
+
 ACTOR SmallSoul : ArmorShard
 {
 	-COUNTITEM

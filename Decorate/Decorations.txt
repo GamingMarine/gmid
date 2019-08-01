@@ -1068,9 +1068,10 @@ ACTOR NewColumn replaces Column
   }
 }
 
-Actor NewburningBarrel : BurningBarrel replaces BurningBarrel
+Actor NewBurningBarrel : BurningBarrel replaces BurningBarrel
 {
   Height 32
+  Scale 0.6
   States
   {
   Spawn:
@@ -1078,7 +1079,7 @@ Actor NewburningBarrel : BurningBarrel replaces BurningBarrel
   BURB A 0 A_PlaySoundEx("props/burningbarrel/loop", "Body", 1)
   goto Idle
   Idle:
-  BURB ABCDEFGHIJKLM 2 bright 
+  BURB ABCD 3 bright 
   Loop
   }
 }
