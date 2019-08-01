@@ -27,11 +27,11 @@ Actor ZSecPistolCastCall
   }
 }
 
-ACTOR Q2SoldierCastCall
+ACTOR BlasterSoldierCastCall
 {
   Monster
-  SeeSound "InsaneSoldier/Laugh"
-  DeathSound "InsaneSoldier/Laugh"
+  SeeSound "BlasterSoldier/Sight"
+  DeathSound "BlasterSoldier/Death"
   States
   {
   Spawn:

@@ -29,8 +29,8 @@ D_DEVSTR = "Useless mode ENABLED.\n";
 D_CDROM = "CD-ROM Version: zdoom.ini from c:\\zdoomdat\n";
 PRESSKEY = "Press any key.";
 PRESSYN = "Press Y or N to confirm.";
-TXT_YES = "Yeah";
-TXT_NO = "Nope";
+TXT_YES = "Yeah Boi";
+TXT_NO = "Naw Fam";
 
 TXT_FRAGLIMIT = "Frag limit's up! Let's see the results!";
 TXT_TIMELIMIT = "Time limit's up! Let's see the results!";

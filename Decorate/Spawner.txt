@@ -541,7 +541,7 @@ actor "SpectreSpawner" : RandomSpawner replaces Spectre //To ensure that Hellhou
 Actor Zombieman_PossessedSpawner : RandomSpawner
 {
 	DropItem "ZSecPistol"
-	DropItem "Q2Soldier"
+	DropItem "BlasterSoldier"
 	DropItem "EvilMarine_Rifle"
 }
 

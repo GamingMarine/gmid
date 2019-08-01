@@ -10,6 +10,7 @@
 #include Decorate/Monsters/Changeling.txt
 #include Decorate/Monsters/PrincessLuna.txt
 #include Decorate/Monsters/ZSecPistol.txt
+#include Decorate/Monsters/BlasterSoldier.txt
 #include Decorate/Monsters/ScriptedMarines.txt
 #include Decorate/Monsters/Taokaka.txt
 #include Decorate/Monsters/WayneCampbell.txt

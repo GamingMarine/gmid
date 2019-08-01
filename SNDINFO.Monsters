@@ -521,29 +521,18 @@ shotguy/pain1 zsecpan1
 shotguy/pain2 zsecpan2
 shotguy/death zsecdeth
 
-InsaneSoldier/Laugh1		SOLLAF01
-InsaneSoldier/Laugh2		SOLLAF02
-InsaneSoldier/Laugh3		SOLLAF03
-InsaneSoldier/Laugh4		SOLLAF04
-InsaneSoldier/Laugh5		SOLLAF05
-InsaneSoldier/Laugh6		SOLLAF06
-InsaneSoldier/Laugh7		SOLLAF07
-InsaneSoldier/Laugh8		SOLLAF08
-InsaneSoldier/Laugh9		SOLLAF09
-InsaneSoldier/Laugh10		SOLLAF10
-InsaneSoldier/Laugh11		SOLLAF11
-InsaneSoldier/Laugh12		SOLLAF12
-InsaneSoldier/Laugh13		SOLLAF13
-InsaneSoldier/Laugh14		SOLLAF14
-InsaneSoldier/Laugh15		SOLLAF15
-InsaneSoldier/Laugh16		SOLLAF16
-InsaneSoldier/Laugh17		SOLLAF17
-InsaneSoldier/Laugh18		SOLLAF18
-InsaneSoldier/Laugh19		SOLLAF19
-InsaneSoldier/Laugh20		SOLLAF20
-InsaneSoldier/Laugh21		SOLLAF21
-InsaneSoldier/Laugh22		SOLLAF22
-$random InsaneSoldier/Laugh { InsaneSoldier/Laugh1 InsaneSoldier/Laugh2 InsaneSoldier/Laugh3 InsaneSoldier/Laugh4 InsaneSoldier/Laugh5 InsaneSoldier/Laugh6 InsaneSoldier/Laugh7 InsaneSoldier/Laugh8 InsaneSoldier/Laugh9 InsaneSoldier/Laugh10 InsaneSoldier/Laugh11 InsaneSoldier/Laugh12 InsaneSoldier/Laugh13 InsaneSoldier/Laugh14 InsaneSoldier/Laugh15 InsaneSoldier/Laugh16 InsaneSoldier/Laugh17 InsaneSoldier/Laugh18 InsaneSoldier/Laugh19 InsaneSoldier/Laugh20 InsaneSoldier/Laugh21 InsaneSoldier/Laugh22 }
+BlasterSoldier/Sight		BLSDSIT
+BlasterSoldier/Radio1		BLSDAC1
+BlasterSoldier/Radio2		BLSDAC2
+BlasterSoldier/Radio3		BLSDAC3
+BlasterSoldier/Radio4		BLSDAC4
+BlasterSoldier/Radio5		BLSDAC5
+BlasterSoldier/Radio6		BLSDAC6
+$random BlasterSoldier/Radio { BlasterSoldier/Radio1 BlasterSoldier/Radio2 BlasterSoldier/Radio3 BlasterSoldier/Radio4 BlasterSoldier/Radio5 BlasterSoldier/Radio6 }
+BlasterSoldier/Pain1		BLSDPN1
+BlasterSoldier/Pain2		BLSDPN2
+$random BlasterSoldier/Pain { BlasterSoldier/Pain1 BlasterSoldier/Pain2 }
+BlasterSoldier/Death		BLSDDTH
 Q2Soldier/Blaster			SOLATCK2
 Q2Soldier/ShotX				SHORTED
 

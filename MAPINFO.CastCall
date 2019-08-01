@@ -26,8 +26,8 @@ Intermission GMIDCast
 	}
     Cast
 	{
-	  CastClass = "Q2SoldierCastCall"
-	  CastName = "Insane Soldier"
+	  CastClass = "BlasterSoldierCastCall"
+	  CastName = "Blaster Soldier"
       AttackSound = "Missile", 1, "q2soldier/blaster"
       AttackSound = "Missile", 5, "q2soldier/blaster"
 	}
