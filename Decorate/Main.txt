@@ -187,10 +187,7 @@ Actor GMIDFist : Fist Replaces Fist
 			FISU ABCD 1
 			Goto Ready
 		AltFire:
-			FISU DCBA 1
-			TNT1 A 5
-			Goto Kick
-		Kick:
+			TNT1 A 0 A_GunFlash("WeaponStill")
 			TNT1 A 0 A_PlaySound ("weapons/KICK")
 			FOOT AB 1
 			FOOT C 1
@@ -200,8 +197,11 @@ Actor GMIDFist : Fist Replaces Fist
 			FOOT EF 1
 			FOOT FEDCBA 1
 			TNT1 A 8
-			TNT1 A 0 A_Refire("Kick")
-			goto StopFiring
+			TNT1 A 0 A_ReFire
+			Goto Ready
+		WeaponStill:
+			FIST A 22
+			Goto LightDone
 		Deselect:
 			FIST A 1 A_Lower
 			FIST A 0 A_Lower
@@ -223,6 +223,7 @@ Actor GMIDChainsaw : Chainsaw Replaces Chainsaw
 	Weapon.UpSound "weapons/sawup"
 	Weapon.ReadySound ""
 	Tag "Angle Grinder"
+	+WEAPON.NOALERT
 	Inventory.PickupMessage "You got the Angle Grinder! Groovy! \cf(\cjSlot 1\cf)"
 	Obituary "%o was slaughtered by %k's Angle Grinder."
 	States
@@ -232,6 +233,7 @@ Actor GMIDChainsaw : Chainsaw Replaces Chainsaw
 	TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
 	Loop
 	Fire:
+	SAWG A 0 A_AlertMonsters
 	SAWG A 0 A_PlaySound("grinder/start", CHAN_WEAPON)
 	SAWG ACD 2
 	SAWG E 0 A_PlaySound("grinder/continue", CHAN_WEAPON)
@@ -242,6 +244,7 @@ Actor GMIDChainsaw : Chainsaw Replaces Chainsaw
 	TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
 	goto Ready
 	KeepFiring:
+	SAWG E 0 A_AlertMonsters
 	SAWG E 0 A_PlaySound("grinder/continue", CHAN_WEAPON)
 	SAWG EFGH 1 A_CustomPunch(2*random(1,10),1,0,"GrinderPuff")
 	TNT1 A 0 A_Refire("KeepFiring")
@@ -249,6 +252,22 @@ Actor GMIDChainsaw : Chainsaw Replaces Chainsaw
 	SAWG DCBABBAABBBAAABBBBAAAABBBBBAAAAA 2 A_WeaponReady
 	TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
 	goto Ready
+	AltFire:
+	TNT1 A 0 A_GunFlash("WeaponStill")
+	TNT1 A 0 A_PlaySound ("weapons/KICK")
+	FOOT AB 1
+	FOOT C 1
+	FOOT D 1
+	FOOT D 1 A_CustomPunch(5,0,0,"KickPuff")
+	FOOT D 0 A_Quake(1,2,0,10)
+	FOOT EF 1
+	FOOT FEDCBA 1
+	TNT1 A 8
+	TNT1 A 0 A_ReFire
+	Goto Ready
+	WeaponStill:
+	SAWG A 22
+	Goto LightDone
   Deselect:
     SAWG A 1 A_Lower
     SAWG A 0 A_Lower
@@ -273,6 +292,7 @@ Actor GMIDPistol : Pistol Replaces Pistol
 	Weapon.AmmoUse 1
 	Tag "Beretta"
 	Scale 0.5
+	+WEAPON.NOALERT
 	Inventory.PickupMessage "Picked up a Beretta. \cf(\cjSlot 2\cf)"
 	Obituary "%o barely evaded %k's Beretta."
 	states
@@ -284,6 +304,7 @@ Actor GMIDPistol : Pistol Replaces Pistol
 	Loop
 	Fire:
 	PISG A 2
+	PISG A 0 A_AlertMonsters
 	PISG B 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
 	PISG B 0 A_PlaySound("weapons/GMPISTOL", CHAN_WEAPON)
 	PISG B 0 A_SetPitch(pitch-0.15)
@@ -332,6 +353,22 @@ Actor GMIDPistol : Pistol Replaces Pistol
 	BLRD A 0 A_PlaySound("Pistol/Cock", CHAN_AUTO)
 	BRLD ABCDEFGHIJKLMNOPQ 2
 	Goto Ready
+  AltFire:
+	TNT1 A 0 A_GunFlash("WeaponStill")
+	TNT1 A 0 A_PlaySound ("weapons/KICK")
+	FOOT AB 1
+	FOOT C 1
+	FOOT D 1
+	FOOT D 1 A_CustomPunch(5,0,0,"KickPuff")
+	FOOT D 0 A_Quake(1,2,0,10)
+	FOOT EF 1
+	FOOT FEDCBA 1
+	TNT1 A 8
+	TNT1 A 0 A_ReFire
+	Goto Ready
+  WeaponStill:
+	PISG A 22
+	Goto LightDone
   }
 }
 
@@ -347,6 +384,7 @@ Actor GMIDDualPistol : GMIDPistol
 	Weapon.AmmoUse 2
 	Tag "Dual Berettas"
 	Scale 0.5
+	+WEAPON.NOALERT
 	Inventory.PickupMessage "You got another Beretta! \cf(\cjSlot 2\cf)"
 	Obituary "%o was so close to evading %k's dual Berettas."
 	states
@@ -357,6 +395,7 @@ Actor GMIDDualPistol : GMIDPistol
 	Loop
 	Fire:
 	PIS2 A 2
+	PIS2 A 0 A_AlertMonsters
 	PIS2 B 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
 	PIS2 B 0 A_SetPitch(pitch-0.3)
 	PIS2 B 0 A_PlaySound("weapons/GMPISTOL", CHAN_WEAPON)
@@ -389,6 +428,22 @@ Actor GMIDDualPistol : GMIDPistol
 	PIS2 A 5 A_WeaponReady(1)
 	TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
     Goto Ready
+  AltFire:
+	TNT1 A 0 A_GunFlash("WeaponStill")
+	TNT1 A 0 A_PlaySound ("weapons/KICK")
+	FOOT AB 1
+	FOOT C 1
+	FOOT D 1
+	FOOT D 1 A_CustomPunch(5,0,0,"KickPuff")
+	FOOT D 0 A_Quake(1,2,0,10)
+	FOOT EF 1
+	FOOT FEDCBA 1
+	TNT1 A 8
+	TNT1 A 0 A_ReFire
+	Goto Ready
+  WeaponStill:
+	PIS2 A 22
+	Goto LightDone
   Deselect:
     PIS2 A 1 A_Lower
     PIS2 A 0 A_Lower
@@ -409,6 +464,7 @@ Actor GMIDShotgun : Shotgun Replaces Shotgun
 	Weapon.UpSound "shotcock"
 	attacksound ""
 	Weapon.AmmoUse 1
+	+WEAPON.NOALERT
 	Tag "UAC Pump-Action Shotgun"
 	Inventory.PickupMessage "You got the UAC Pump-Action Shotgun! \cf(\cjSlot 3\cf)"
 	Obituary "%o chewed on %k's Pump-Action Shotgun."
@@ -417,6 +473,7 @@ Actor GMIDShotgun : Shotgun Replaces Shotgun
 		Pickup:
 			TNT1 A 0 A_PlaySound("player/gun")
 		Fire:
+			SHTG A 0 A_AlertMonsters
 			SHTG A 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
 			SHTG A 3
 			SHTG A 0 A_SetPitch(pitch-0.5)
@@ -478,6 +535,22 @@ Actor GMIDShotgun : Shotgun Replaces Shotgun
 			SHTG A 1 A_Raise
 			SHTG A 0 A_Raise
 			Loop
+		AltFire:
+			TNT1 A 0 A_GunFlash("WeaponStill")
+			TNT1 A 0 A_PlaySound ("weapons/KICK")
+			FOOT AB 1
+			FOOT C 1
+			FOOT D 1
+			FOOT D 1 A_CustomPunch(5,0,0,"KickPuff")
+			FOOT D 0 A_Quake(1,2,0,10)
+			FOOT EF 1
+			FOOT FEDCBA 1
+			TNT1 A 8
+			TNT1 A 0 A_ReFire
+			Goto Ready
+		WeaponStill:
+			SHTG A 22
+			Goto LightDone
 		}
 }
 
@@ -491,6 +564,7 @@ Actor GMIDSuperShotgun : SuperShotgun Replaces SuperShotgun
 	attacksound "weapons/DSDSHTGN"
 	Tag "Sawn-Off"
 	Weapon.AmmoUse 2
+	+WEAPON.NOALERT
 	Inventory.PickupMessage "You got the Sawn-Off! \cf(\cjSlot 3\cf)"
 	Obituary "%o was decapitated by %k's Sawn-Off."
 	states
@@ -500,6 +574,7 @@ Actor GMIDSuperShotgun : SuperShotgun Replaces SuperShotgun
 		TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
 		Loop
 	Fire:
+		SHOG A 0 A_AlertMonsters
 		SHOG A 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
 		SHOF A 0 A_SetPitch(pitch-1)
 		SHOF A 0 A_Light1
@@ -558,6 +633,22 @@ Actor GMIDSuperShotgun : SuperShotgun Replaces SuperShotgun
 		SHOG A 1 A_Raise
 		SHOG A 0 A_Raise
 		Loop
+	AltFire:
+		TNT1 A 0 A_GunFlash("WeaponStill")
+		TNT1 A 0 A_PlaySound ("weapons/KICK")
+		FOOT AB 1
+		FOOT C 1
+		FOOT D 1
+		FOOT D 1 A_CustomPunch(5,0,0,"KickPuff")
+		FOOT D 0 A_Quake(1,2,0,10)
+		FOOT EF 1
+		FOOT FEDCBA 1
+		TNT1 A 8
+		TNT1 A 0 A_ReFire
+		Goto Ready
+	WeaponStill:
+		SHOG A 22
+		Goto LightDone
 	}
 }
 
@@ -571,6 +662,7 @@ Actor GMIDChaingun : Chaingun Replaces Chaingun
 	Weapon.AmmoType1 "Clip3"
 	Weapon.AmmoUse 1
 	Tag "V-Gun"
+	+WEAPON.NOALERT
 	Inventory.PickupMessage "You got the V-Gun! \cf(\cjSlot 4\cf)"
 	Obituary "%o was pelted with lead by %k's V-Gun."
 	states
@@ -578,6 +670,7 @@ Actor GMIDChaingun : Chaingun Replaces Chaingun
 		Pickup:
 		TNT1 A 0 A_PlaySound("player/gun")
 		Fire: 
+		CHGG A 0 A_AlertMonsters
 		CHGG A 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
 		CHGG C 0 A_Light1 
 		CHGG C 0 A_PlaySound("weapons/UZIFIRE", CHAN_WEAPON)
@@ -622,14 +715,30 @@ Actor GMIDChaingun : Chaingun Replaces Chaingun
 		CHGG BBBBBBBB 1 A_WeaponReady
 		TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
 		goto Ready
-  Deselect:
-    CHGG A 1 A_Lower
-    CHGG A 0 A_Lower
-    Loop
-  Select:
-    CHGG A 1 A_Raise
-    CHGG A 0 A_Raise
-    Loop
+	Deselect:
+		CHGG A 1 A_Lower
+		CHGG A 0 A_Lower
+		Loop
+	Select:
+		CHGG A 1 A_Raise
+		CHGG A 0 A_Raise
+		Loop
+	AltFire:
+		TNT1 A 0 A_GunFlash("WeaponStill")
+		TNT1 A 0 A_PlaySound ("weapons/KICK")
+		FOOT AB 1
+		FOOT C 1
+		FOOT D 1
+		FOOT D 1 A_CustomPunch(5,0,0,"KickPuff")
+		FOOT D 0 A_Quake(1,2,0,10)
+		FOOT EF 1
+		FOOT FEDCBA 1
+		TNT1 A 8
+		TNT1 A 0 A_ReFire
+		Goto Ready
+	WeaponStill:
+		CHGG A 22
+		Goto LightDone
 	}
 }
 
@@ -644,6 +753,7 @@ Actor GMIDGrenadeLauncher : RocketLauncher Replaces RocketLauncher //It's a miss
 	Weapon.AmmoUse 1
 	Weapon.UpSound "rockpump"
 	Tag "Missile Launcher"
+	+WEAPON.NOALERT
 	Inventory.PickupMessage "You got the Missile Launcher! \cf(\cjSlot 5\cf)"
 	Obituary "%o got a face full of %k's Missile Launcher."
 	states
@@ -651,6 +761,7 @@ Actor GMIDGrenadeLauncher : RocketLauncher Replaces RocketLauncher //It's a miss
   Pickup:
 	TNT1 A 0 A_PlaySound("player/gun")
   Fire:
+	MISG A 0 A_AlertMonsters
 	MISG B 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
 	TNT1 A 0 A_PlaySound("weapons/GMROCKTL", CHAN_WEAPON)
     MISG B 4 A_GunFlash
@@ -691,6 +802,22 @@ Actor GMIDGrenadeLauncher : RocketLauncher Replaces RocketLauncher //It's a miss
     MISG A 0 A_Raise
 	TNT1 A 0 A_GiveInventory("BotExplosiveWeapon")
     Loop
+  AltFire:
+	TNT1 A 0 A_GunFlash("WeaponStill")
+	TNT1 A 0 A_PlaySound ("weapons/KICK")
+	FOOT AB 1
+	FOOT C 1
+	FOOT D 1
+	FOOT D 1 A_CustomPunch(5,0,0,"KickPuff")
+	FOOT D 0 A_Quake(1,2,0,10)
+	FOOT EF 1
+	FOOT FEDCBA 1
+	TNT1 A 8
+	TNT1 A 0 A_ReFire
+	Goto Ready
+  WeaponStill:
+	MISG A 22
+	Goto LightDone
   }
 }
 Actor GMIDRailgun : PlasmaRifle Replaces PlasmaRifle
@@ -705,6 +832,7 @@ Actor GMIDRailgun : PlasmaRifle Replaces PlasmaRifle
 	Tag "Railgun"
 	Weapon.AmmoType1 "NewCell"
 	Weapon.AmmoUse 1
+	+WEAPON.NOALERT
 	Inventory.PickupMessage "You got the Railgun! \cf(\cjSlot 6\cf)"
 	Obituary "%o was split by %l's Railgun."
 	states
@@ -712,6 +840,7 @@ Actor GMIDRailgun : PlasmaRifle Replaces PlasmaRifle
 		Pickup:
 			TNT1 A 0 A_PlaySound("player/gun")
 		Fire:
+			RGUN A 0 A_AlertMonsters
 			RGUN A 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
 			RGUN A 0 A_SetPitch(pitch-1)
 			RGUN A 0 A_TakeInventory("NewCell", 10) //For whatever reason, when I updated the rail color, the weapon started to consume no ammo.
@@ -751,6 +880,22 @@ Actor GMIDRailgun : PlasmaRifle Replaces PlasmaRifle
 		Spawn:
 			RGNG A -1
 			Stop
+		AltFire:
+			TNT1 A 0 A_GunFlash("WeaponStill")
+			TNT1 A 0 A_PlaySound ("weapons/KICK")
+			FOOT AB 1
+			FOOT C 1
+			FOOT D 1
+			FOOT D 1 A_CustomPunch(5,0,0,"KickPuff")
+			FOOT D 0 A_Quake(1,2,0,10)
+			FOOT EF 1
+			FOOT FEDCBA 1
+			TNT1 A 8
+			TNT1 A 0 A_ReFire
+			Goto Ready
+		WeaponStill:
+			RGUN A 22
+			Goto LightDone
 	}
 }
 Actor GMIDBFG9000 : BFG9000 Replaces BFG9000 //Now the "Space Cadet" spell
@@ -764,6 +909,7 @@ Actor GMIDBFG9000 : BFG9000 Replaces BFG9000 //Now the "Space Cadet" spell
 	Tag "Space Cadet"
 	Weapon.AmmoType1 "SmallMana"
 	Weapon.AmmoUse 2
+	+WEAPON.NOALERT
 	Inventory.PickupMessage "You got the ''Space Cadet'' Pinball spell! Time to bring pain and nostalgia upon thee... \cf(\cjSlot 7\cf)"
 	Obituary "%o choked on %k's big balls."
 	Scale 0.3125
@@ -776,12 +922,14 @@ Actor GMIDBFG9000 : BFG9000 Replaces BFG9000 //Now the "Space Cadet" spell
 	Loop
   Fire:
 	PING BC 1
+	PING A 0 A_AlertMonsters
 	PING D 1 A_FireCustomMissile("IveGotBigBalls")
 	PING EFGHGFE 1
 	PING D 1 A_ReFire("Hold")
 	PING CB 1
 	goto Ready
   Hold:
+	PING A 0 A_AlertMonsters
 	PING D 1 A_FireCustomMissile("IveGotBigBalls")
 	PING EFGHGFE 1
 	PING D 1 A_ReFire("Hold")
@@ -800,6 +948,22 @@ Actor GMIDBFG9000 : BFG9000 Replaces BFG9000 //Now the "Space Cadet" spell
   Spawn:
     PINB B 1 Bright
     Loop
+  AltFire:
+	TNT1 A 0 A_GunFlash("WeaponStill")
+	TNT1 A 0 A_PlaySound ("weapons/KICK")
+	FOOT AB 1
+	FOOT C 1
+	FOOT D 1
+	FOOT D 1 A_CustomPunch(5,0,0,"KickPuff")
+	FOOT D 0 A_Quake(1,2,0,10)
+	FOOT EF 1
+	FOOT FEDCBA 1
+	TNT1 A 8
+	TNT1 A 0 A_ReFire
+	Goto Ready
+  WeaponStill:
+	PING A 22
+	Goto LightDone
 	}
 }
 
@@ -923,6 +1087,7 @@ actor JohnnyGee : DoomWeapon
   Inventory.PickupSound "weapons/staffget"
   Tag "Johnny Gee"
   +FLOATBOB
+  +WEAPON.NOALERT
   States
   {
   Ready:
@@ -938,6 +1103,7 @@ actor JohnnyGee : DoomWeapon
 	WAVE A 0 Bright A_Raise
     Loop
   Fire:
+	WAVE A 0 A_AlertMonsters
 	WAVE A 0 A_PlaySound("STAFUP", CHAN_WEAPON)
 	WAVE A 0 A_PlaySound("Johnny/Gee", CHAN_VOICE)
 	WAVE A 2 Bright
@@ -947,6 +1113,7 @@ actor JohnnyGee : DoomWeapon
 	WAVE A 0 A_ReFire("ContinueFiring")
     Goto Ready
   ContinueFiring:
+	WAVE A 0 A_AlertMonsters
 	WAVE A 2 Bright
 	WAVE B 2 Bright A_FireCustomMissile("CookiedemonFireball")
 	WAVE C 2 Bright
@@ -956,6 +1123,23 @@ actor JohnnyGee : DoomWeapon
   Spawn:
     LLSP ABCDCB 1 Bright
     Loop
+  AltFire:
+	TNT1 A 0 A_GunFlash("WeaponStill")
+	TNT1 A 0 A_PlaySound ("weapons/KICK")
+	FOOT AB 1
+	FOOT C 1
+	FOOT D 1
+	FOOT D 1 A_CustomPunch(5,0,0,"KickPuff")
+	FOOT D 0 A_Quake(1,2,0,10)
+	FOOT EF 1
+	FOOT FEDCBA 1
+	TNT1 A 8
+	TNT1 A 0 A_ReFire
+	Goto Ready
+  WeaponStill:
+	WAVE ABCBABC 3 Bright
+	WAVE B 1 Bright
+	Goto LightDone
   }
 }
 
@@ -977,6 +1161,7 @@ actor LeadPosioning : Weapon
 	Weapon.BobRangeY 0.5
 	Weapon.BobStyle InverseSmooth
 	Weapon.BobSpeed 2.0
+	+WEAPON.NOALERT
     States
 	{
 	Pickup:
@@ -1000,6 +1185,7 @@ actor LeadPosioning : Weapon
        CHNG BC 1
        Goto ContinueFiring
 	ContinueFiring:
+	   CHNF A 0 A_AlertMonsters
 	   CHNF A 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
        CHNF A 0 A_SetPitch(pitch-0.25)
 	   CHNF A 0 A_FireCustomMissile("CasingSpawner",0,0,17,0)
@@ -1036,6 +1222,22 @@ actor LeadPosioning : Weapon
 	   TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
 	   CHNG CB 1
        Goto Ready
+	AltFire:
+		TNT1 A 0 A_GunFlash("WeaponStill")
+		TNT1 A 0 A_PlaySound ("weapons/KICK")
+		FOOT AB 1
+		FOOT C 1
+		FOOT D 1
+		FOOT D 1 A_CustomPunch(5,0,0,"KickPuff")
+		FOOT D 0 A_Quake(1,2,0,10)
+		FOOT EF 1
+		FOOT FEDCBA 1
+		TNT1 A 8
+		TNT1 A 0 A_ReFire
+		Goto Ready
+	WeaponStill:
+		CHNG A 22
+		Goto LightDone
     }
 }
 
@@ -1053,8 +1255,8 @@ actor SPAS12 : Weapon
   Inventory.PickupMessage "You got the ''Firestick'' SPAS-12! \cf(\cjSlot 3\cf)"
   Obituary "%o was shelled by %k's Firestick."
   scale 0.5
-  decal "bulletchip"
   Tag "Firestick"
+  +WEAPON.NOALERT
   States
 	{
   Ready:
@@ -1070,6 +1272,7 @@ actor SPAS12 : Weapon
     SHGG A 0 A_Raise
     Loop
   Fire:
+	SHGG A 0 A_AlertMonsters
 	SHGG A 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
     SHGG A 0 A_GunFlash
 	SHGG A 0 A_PlaySound("weapons/spasshot")
@@ -1114,6 +1317,22 @@ actor SPAS12 : Weapon
   Spawn:
     SHGP A -1
     Stop
+  AltFire:
+	TNT1 A 0 A_GunFlash("WeaponStill")
+	TNT1 A 0 A_PlaySound ("weapons/KICK")
+	FOOT AB 1
+	FOOT C 1
+	FOOT D 1
+	FOOT D 1 A_CustomPunch(5,0,0,"KickPuff")
+	FOOT D 0 A_Quake(1,2,0,10)
+	FOOT EF 1
+	FOOT FEDCBA 1
+	TNT1 A 8
+	TNT1 A 0 A_ReFire
+	Goto Ready
+  WeaponStill:
+	SHGG A 22
+	Goto LightDone
   }
 }
 
@@ -1140,6 +1359,7 @@ ACTOR 40mmGrenadeLauncher : Weapon //29010
 	Weapon.BobRangeY 0.5
 	Weapon.BobStyle InverseSmooth
 	Weapon.BobSpeed 2.0
+	+WEAPON.NOALERT
 	States
 	{
 	Pickup:
@@ -1159,6 +1379,7 @@ ACTOR 40mmGrenadeLauncher : Weapon //29010
 		TNT1 A 0 A_TakeInventory("BotExplosiveWeapon")
 		Loop
 	Fire:
+		RGLG A 0 A_AlertMonsters
 		RGLG A 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
 		RGLG BC 1
 		RGLG D 0 A_GunFlash 
@@ -1190,6 +1411,22 @@ ACTOR 40mmGrenadeLauncher : Weapon //29010
 	Spawn:
 		GLMM A -1
 		Stop
+	AltFire:
+		TNT1 A 0 A_GunFlash("WeaponStill")
+		TNT1 A 0 A_PlaySound ("weapons/KICK")
+		FOOT AB 1
+		FOOT C 1
+		FOOT D 1
+		FOOT D 1 A_CustomPunch(5,0,0,"KickPuff")
+		FOOT D 0 A_Quake(1,2,0,10)
+		FOOT EF 1
+		FOOT FEDCBA 1
+		TNT1 A 8
+		TNT1 A 0 A_ReFire
+		Goto Ready
+	WeaponStill:
+		RGLG A 22
+		Goto LightDone
 	}
 }
 
@@ -1302,6 +1539,7 @@ actor PlasmaCannon : Weapon
     Inventory.Pickupmessage "You got the ''Excessive Force'' Plasma Cannon! \cf(\cjSlot 6\cf)"
     Weapon.upsound "duke/weaponup"
     Scale 0.75
+	+WEAPON.NOALERT
     States
     {
       Spawn:
@@ -1322,6 +1560,7 @@ actor PlasmaCannon : Weapon
 		NCHG A 0 A_Lower
 		Loop
 	Fire:
+		NCHG A 0 A_AlertMonsters
 		NCHG A 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
 		NCHG A 0 A_PlayWeaponSound ("plasma/fire")
 		NCHG B 1 Bright A_Light1
@@ -1344,6 +1583,22 @@ actor PlasmaCannon : Weapon
 		NCHG E 1 A_SetPitch(pitch+0.50)
 		NCHG A 1 A_ReFire
 		Goto Ready
+	AltFire:
+		TNT1 A 0 A_GunFlash("WeaponStill")
+		TNT1 A 0 A_PlaySound ("weapons/KICK")
+		FOOT AB 1
+		FOOT C 1
+		FOOT D 1
+		FOOT D 1 A_CustomPunch(5,0,0,"KickPuff")
+		FOOT D 0 A_Quake(1,2,0,10)
+		FOOT EF 1
+		FOOT FEDCBA 1
+		TNT1 A 8
+		TNT1 A 0 A_ReFire
+		Goto Ready
+	WeaponStill:
+		NCHG A 22
+		Goto LightDone
 	}
 }		  
 

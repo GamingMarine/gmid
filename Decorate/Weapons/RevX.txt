@@ -16,6 +16,7 @@ actor RevX : Weapon
     Inventory.Pickupmessage "You got the ''Rev-X'' Battery-Charged Rifle! Generation X is in effect! \cf(\cjSlot 3\cf)"
     Weapon.upsound "REVXUP"
 	+WEAPON.AMMO_OPTIONAL
+	+WEAPON.NOALERT
     Scale 0.75
     States
     {
@@ -55,6 +56,7 @@ actor RevX : Weapon
 		TFL1 A 0 A_Lower
 		Loop
 	Fire:
+		RFL1 C 0 A_AlertMonsters
 		RFL1 C 0 A_JumpIfInventory("RevXUpgrade1", 1, "CoolantFire")
 		RFL1 C 0 A_JumpIfInventory("RevXUpgrade2", 1, "BarrelFire")
 		RFL1 C 0 A_JumpIfInventory("RevXAmmo", 50, "FireNormal")
@@ -309,6 +311,95 @@ actor RevX : Weapon
 		RFL4 B 1 A_Light0
 		RFL4 A 0 A_ReFire
 		Goto Ready
+	AltFire:
+		TNT1 A 0 A_GunFlash("WeaponStill")
+		TNT1 A 0 A_PlaySound ("weapons/KICK")
+		FOOT AB 1
+		FOOT C 1
+		FOOT D 1
+		FOOT D 1 A_CustomPunch(5,0,0,"KickPuff")
+		FOOT D 0 A_Quake(1,2,0,10)
+		FOOT EF 1
+		FOOT FEDCBA 1
+		TNT1 A 8
+		TNT1 A 0 A_ReFire
+		Goto Ready
+	WeaponStill:
+		RFL1 A 0 A_JumpIfInventory("RevXUpgrade1", 1, "CoolantStill")
+		RFL1 A 0 A_JumpIfInventory("RevXUpgrade2", 1, "BarrelStill")
+		RFL1 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL1 A 5
+		RFL1 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL1 A 5
+		RFL1 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL1 A 5
+		RFL1 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL1 A 5
+		RFL1 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL1 A 2
+		Goto LightDone
+	CoolantStill:
+		RFL2 A 0 A_JumpIfInventory("RevXUpgrade2", 1, "SuperStill")
+		RFL2 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL2 A 2
+		RFL2 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL2 A 2
+		RFL2 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL2 A 2
+		RFL2 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL2 A 2
+		RFL2 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL2 A 2
+		RFL2 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL2 A 2
+		RFL2 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL2 A 2
+		RFL2 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL2 A 2
+		RFL2 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL2 A 2
+		RFL2 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL2 A 2
+		RFL2 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL2 A 2
+		Goto LightDone
+	BarrelStill:
+		RFL3 A 0 A_JumpIfInventory("RevXUpgrade1", 1, "SuperStill")
+		RFL3 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL3 A 5
+		RFL3 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL3 A 5
+		RFL3 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL3 A 5
+		RFL3 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL3 A 5
+		RFL3 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL3 A 2
+		Goto LightDone
+	SuperStill:
+		RFL4 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL4 A 2
+		RFL4 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL4 A 2
+		RFL4 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL4 A 2
+		RFL4 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL4 A 2
+		RFL4 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL4 A 2
+		RFL4 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL4 A 2
+		RFL4 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL4 A 2
+		RFL4 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL4 A 2
+		RFL4 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL4 A 2
+		RFL4 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL4 A 2
+		RFL4 A 0 A_GiveInventory("RevXAmmo", 1)
+		RFL4 A 2
+		Goto LightDone
 	}
 }
 
