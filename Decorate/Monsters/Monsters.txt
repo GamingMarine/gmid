@@ -2727,7 +2727,7 @@ Actor GamingMarineClone replaces Revenant
   States
   {
   Spawn:
-	PLID A 10 A_Look
+	PLAY Z 10 A_Look
     Loop
   See:
 	PLAY AABB 2 A_Chase
