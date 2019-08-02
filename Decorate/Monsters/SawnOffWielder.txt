@@ -1,0 +1,97 @@
+actor SawedOffShotgunGuy
+{
+  spawnid 4
+  obituary "%o was bucked by a Sawn-Off Wielder."
+  health 60
+  radius 20
+  height 56
+  mass 100
+  speed 8
+  painchance 200
+  PainChance "Fire", 256
+  seesound "sawedoff/sit"
+  painsound "sawedoff/pain"
+  deathsound "sawedoff/death"
+  activesound "sawedoff/idle"
+  AttackSound "weapons/DSDSHTGN"
+  decal "bulletchip"
+  MONSTER
+   +FLOORCLIP
+   Tag "Sawn-Off Wielder"
+  states
+  {
+  Spawn:
+    ZSDO A 10 A_Look
+    loop
+  See:
+    ZSDO AABB 3 A_Chase
+	ZSDO C 0 A_PlaySound("Cyber/Hoof", CHAN_BODY)	
+	ZSDO CCDD 3 A_Chase
+	ZSDO A 0 A_PlaySound("Cyber/Hoof", CHAN_BODY)	
+    loop
+  Missile:
+    ZSDO E 10 A_FaceTarget
+    ZSDO F 8 A_CustomBulletAttack(22.5, 0, 3, random(1,5)*3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+    ZSDO E 10 A_FaceTarget
+    ZSDO F 8 A_CustomBulletAttack(22.5, 0, 3, random(1,5)*3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+    ZSDO E 8
+	ZSDO A 0 A_CustomMissile ("shellcasing", 5,0,6,-14)
+	ZSDO A 7 A_PlaySound("weapons/DSDBOPN")
+	ZSDO A 0 A_CustomMissile ("shellcasing", 6,0,7,-13)
+	ZSDO A 7
+	ZSDO A 7 A_PlaySound("weapons/DSDBLOAD")
+	ZSDO A 6
+	ZSDO A 6 A_PlaySound("weapons/sshotc")
+	ZSDO A 5
+    goto See
+  Pain:
+    ZSDO G 3
+    ZSDO G 3 A_Pain
+    goto See
+  Death:
+    ZSDO H 2 A_Scream
+	TNT1 A 0 A_NoBlocking
+	ZSDO I 0 A_PlaySound("gore/head", CHAN_VOICE)
+	ZSDO II 0 A_SpawnDebris("DukeGibs2")
+	ZSDO II 0 A_SpawnDebris("DukeGibs5")
+	ZSDO II 0 A_SpawnDebris("DukeGibs6")
+    ZSDO I 13 
+    ZSDO J 13
+	ZSDO J 0 A_Jump(5, "KillTaunt")
+    ZSDO K 13 A_SpawnItem("GmidSuperShotgun")
+    ZSDO L 10
+    ZSDO M 10
+    ZSDO N -1
+    stop
+  KillTaunt:
+	TNT1 A 0 A_PlaySound("player/killtaunt", CHAN_AUTO)
+    ZSDO K 13 A_SpawnItem("GmidSuperShotgun")
+    ZSDO L 10
+    ZSDO M 10
+    ZSDO N -1
+    stop
+  XDeath:
+	TNT1 A 0 A_XScream
+	TNT1 A 0 A_SpawnItem("GmidSuperShotgun")
+	TNT1 A 0 A_SpawnDebris("HLGoreSkull")
+	TNT1 A 0 A_SpawnDebris("DukeGibs1")
+	TNT1 A 0 A_SpawnDebris("DukeGibs2")
+	TNT1 A 0 A_SpawnDebris("DukeGibs3")
+	TNT1 A 0 A_SpawnDebris("DukeGibs4")
+	TNT1 A 0 A_SpawnDebris("DukeGibs5")
+	TNT1 A 0 A_SpawnDebris("DukeGibs6")
+	TNT1 A 0 A_Jump(10, "GibTaunt")
+    Stop
+  GibTaunt:
+	TNT1 A 0 A_PlaySound("player/gibtaunt", CHAN_AUTO)
+	Stop
+  Raise:
+    ZSDO KJIH 5
+    goto See
+  Death.Fire:
+	ZSC1 G 0 A_NoBlocking
+	ZSC1 G 0 A_SpawnItem("BurningBoi")
+	TNT1 A -1
+	Stop
+  }
+}
