@@ -264,8 +264,8 @@ C5TEXT =
 	"Your curiousity has led you to an area you're\n"
 	"not very familiar with. Swastikas and paintings\n"
 	"of Adolf Hitler surround the place. However, you\n"
-	"some human voices outside the door. Hopefully, they\n"
-	"are friends.\n"
+	"hear some human voices outside the door. Hopefully,\n"
+	"they are friends.\n"
 	"\n"
 	"Hopefully.";
 C6TEXT =
@@ -327,7 +327,7 @@ P5TEXT =
 	"R&R isn't always that easy to recieve.\n"
 	"Welcome to Cyberden, where a Master Force\n"
 	"Lord lurks around every corner. Best you\n"
-	"have enough mana.";
+	"have enough mana and a Soul Cube.";
 P6TEXT =
 	"What? You thought it would be *that* easy to\n"
 	"escape? To whoever designed this place, it's seems\n"

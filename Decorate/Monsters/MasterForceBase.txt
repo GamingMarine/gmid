@@ -1,0 +1,209 @@
+actor MasterForceBase
+{
+  Speed 7.5
+  Radius 16
+  Height 56
+  Scale 1.06
+  Monster
+  AttackSound "Grunt/Attack"
+  PainChance "Foot", 256
+  Obituary "%o died from cringe."
+  States
+  {
+  Spawn:
+	TNT1 A 10 A_Look
+    Loop
+  See:
+	"####" AABBCCDD 2 A_Chase
+	Loop
+  Pain:
+    "####" G 4
+	"####" G 4 A_Pain
+	Goto See
+  Pain.Foot:
+    "####" A 0 A_ChangeFlag("NOPAIN",1)
+    "####" G 2 A_FaceTarget
+    "####" A 0 A_Recoil(14)
+    "####" G 16 A_Pain
+    Goto See
+  Missile:
+	"####" E 10 A_FaceTarget
+	"####" F 8 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	"####" E 8
+	Goto See
+  Death:
+	"####" H 5
+	"####" I 5 A_Scream
+	"####" J 5 A_NoBlocking
+	"####" KL 5
+	"####" M 0 A_PlaySound("body/hitfloor")
+	"####" M 5
+	"####" N -1
+	Stop
+  Death.Basic:
+	"####" H 5
+	"####" I 5 A_Scream
+	"####" A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
+	Goto ContinueDeath
+  DropSoulCubeAmmo:
+	"####" A 0 A_SpawnItem("CubeAmmo")
+  ContinueDeath:
+	"####" J 5 A_NoBlocking
+	"####" KL 5
+	"####" M 0 A_PlaySound("body/hitfloor")
+	"####" M 5
+	"####" N 10
+	"####" A 0 A_Jump(5, "KillTaunt")
+	"####" N -1
+	Stop
+  KillTaunt:
+	"####" A 0 A_PlaySound("player/killtaunt", CHAN_AUTO)
+	"####" N -1
+	Stop
+  Death.Foot:
+	"####" H 5 ThrustThingZ(0,16,0,0)
+	"####" I 5 A_Scream
+	"####" A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo2", AAPTR_PLAYER1)
+	Goto ContinueDeath2
+  DropSoulCubeAmmo2:
+	"####" A 0 A_SpawnItem("CubeAmmo")
+  ContinueDeath2:
+	"####" J 5 A_NoBlocking
+	"####" KL 5
+	"####" M 0 A_PlaySound("body/hitfloor")
+	"####" M 5
+	"####" N 10
+	"####" A 0 A_Jump(5, "KickTaunt")
+	"####" N -1
+	Stop
+  KickTaunt:
+  	"####" A 0 A_PlaySound("player/kicktaunt", CHAN_AUTO)
+	"####" N -1
+	Stop
+  Raise:
+	"####" MLKJIH 5
+	Goto See
+  XDeath:
+	"####" A 0 A_XScream
+	"####" A 0 A_NoBlocking
+	"####" A 0 A_SpawnDebris("HLGoreSkull")
+	"####" A 0 A_SpawnDebris("DukeGibs1")
+	"####" A 0 A_SpawnDebris("DukeGibs2")
+	"####" A 0 A_SpawnDebris("DukeGibs3")
+	"####" A 0 A_SpawnDebris("DukeGibs4")
+	"####" A 0 A_SpawnDebris("DukeGibs5")
+	"####" A 0 A_SpawnDebris("DukeGibs6")
+	"####" A 0 A_SpawnDebris("HLGoreSkull")
+	"####" A 0 A_SpawnDebris("DukeGibs1")
+	"####" A 0 A_SpawnDebris("DukeGibs2")
+	"####" A 0 A_SpawnDebris("DukeGibs3")
+	"####" A 0 A_SpawnDebris("DukeGibs4")
+	"####" A 0 A_SpawnDebris("DukeGibs5")
+	"####" A 0 A_SpawnDebris("DukeGibs6")
+	"####" A 0 A_Jump(10, "GibTaunt")
+	Stop
+  GibTaunt:
+	"####" Z 40
+	"####" A 0 A_PlaySound("player/gibtaunt", CHAN_AUTO)
+	Stop
+  Death.Fire:
+	"####" A 0 A_PlaySound("female/burn", CHAN_VOICE)
+	"####" AAA 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" BBB 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" CCC 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" DDD 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" AAA 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" BBB 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" CCC 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" DDD 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" AAA 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" BBB 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" CCC 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" DDD 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" AAA 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" BBB 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" CCC 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" DDD 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" AAA 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" BBB 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" CCC 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" DDD 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" AAA 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" BBB 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" CCC 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" DDD 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" AAA 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" BBB 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" CCC 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" DDD 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" AAA 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" BBB 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" CCC 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" DDD 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" AAA 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" BBB 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" CCC 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" DDD 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" AAA 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" BBB 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" CCC 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" DDD 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" AAA 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" BBB 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" CCC 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	"####" DDD 1 Bright A_Wander
+	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	Goto Fall
+  Fall:
+	"####" HI 5
+	"####" J 5 A_NoBlocking
+	"####" KL 5
+	"####" M 0 A_PlaySound("body/hitfloor")
+	"####" M 5
+	"####" N -1
+	Stop
+   }
+}

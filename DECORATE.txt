@@ -6,7 +6,11 @@
 #include Decorate/FX.txt
 #include Decorate/Heroes/Cookiedemon.txt
 #include Decorate/Weapons/RevX.txt
+#include Decorate/Weapons/SoulCube.txt
 #include Decorate/Monsters/Monsters.txt
+#include Decorate/Monsters/MasterForceBase.txt
+#include Decorate/Monsters/WeakTier.txt
+#include Decorate/Monsters/NormalTier.txt
 #include Decorate/Monsters/Changeling.txt
 #include Decorate/Monsters/PrincessLuna.txt
 #include Decorate/Monsters/ZSecPistol.txt

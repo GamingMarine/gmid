@@ -1,0 +1,345 @@
+actor Rourity : MasterForceBase replaces Cacodemon
+{
+  health 400
+  PainChance 128
+  Scale 1.08
+  +DROPOFF
+  SeeSound "Rourity/sight"
+  PainSound "Rourity/pain"
+  ActiveSound "Rourity/sight"
+  DeathSound "Rourity/death"
+  DropItem "ClipSpawner3"
+  DropItem "ClipSpawner3"
+  DropItem "ClipSpawner3"
+  DropItem "LargeSoul" 25
+  DropItem "SmallSoul" 255
+  Tag "Rarity"
+  States
+  {
+  Spawn:
+	ROTY A 10 A_Look
+    Loop
+  Missile:
+	ROTY E 10 A_FaceTarget
+	ROTY F 4 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	ROTY E 2
+	ROTY F 4 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	ROTY E 2
+	ROTY F 4 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	ROTY E 2
+	ROTY F 4 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	ROTY E 2
+	ROTY F 4 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	ROTY E 2
+	ROTY F 4 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	ROTY E 2
+	ROTY F 4 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	ROTY E 2
+	ROTY F 4 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	ROTY E 8
+	Goto See
+   }
+}
+
+
+actor TrixieKir : MasterForceBase replaces HellKnight
+{
+  health 500
+  PainChance 50
+  Scale 1.08
+  SeeSound "TrixieKir/sight"
+  PainSound "TrixieKir/pain"
+  ActiveSound "TrixieKir/sight"
+  DeathSound "TrixieKir/death"
+  DropItem "LargeSoul" 50
+  DropItem "SmallSoul" 196
+  Tag "TrixieKir"
+  States
+  {
+  Spawn:
+	TRKI A 10 A_Look
+    Loop
+  Missile:
+	TRKI E 10 A_FaceTarget
+	TRKI F 8 Bright A_CustomComboAttack("BaronBall", 32, 10 * random(1, 8))
+	TRKI E 8
+	Goto See
+   }
+}
+
+actor VinylStorm : MasterForceBase replaces Arachnotron
+{
+  health 500
+  PainChance 128
+  Scale 1.04
+  +FLOORCLIP
+  +BOSSDEATH
+  SeeSound "VinylStorm/sight"
+  PainSound "VinylStorm/pain"
+  ActiveSound "VinylStorm/idle"
+  DeathSound "VinylStorm/death"
+  DropItem "LargeSoul" 255
+  DropItem "SmallSoul" 25
+  Tag "Vinyl Scratch"
+  states
+  {
+  Spawn:
+	VSTR A 10 A_Look
+    Loop
+  Missile:
+	VSTR A 20 A_FaceTarget
+	VSTR E 4 Bright A_CustomMissile("Blaster_RifleShot", 48)
+	VSTR F 4 Bright
+	VSTR F 1 Bright A_SpidRefire
+	Goto Missile+1
+  ContinueDeath:
+	VSTR J 5 A_NoBlocking
+	VSTR KL 5
+	VSTR M 0 A_PlaySound("body/hitfloor")
+	VSTR M 5
+	VSTR N 10
+	VSTR A 0 A_BossDeath
+	VSTR A 0 A_Jump(5, "KillTaunt")
+	VSTR N -1
+	Stop
+  ContinueDeath2:
+	VSTR J 5 A_NoBlocking
+	VSTR KL 5
+	VSTR M 0 A_PlaySound("body/hitfloor")
+	VSTR M 5
+	VSTR N 10
+	VSTR A 0 A_BossDeath
+	VSTR A 0 A_Jump(5, "KickTaunt")
+	VSTR N -1
+	Stop
+  XDeath:
+	TNT1 A 0 A_XScream
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_SpawnDebris("HLGoreSkull")
+	TNT1 A 0 A_SpawnDebris("DukeGibs1")
+	TNT1 A 0 A_SpawnDebris("DukeGibs2")
+	TNT1 A 0 A_SpawnDebris("DukeGibs3")
+	TNT1 A 0 A_SpawnDebris("DukeGibs4")
+	TNT1 A 0 A_SpawnDebris("DukeGibs5")
+	TNT1 A 0 A_SpawnDebris("DukeGibs6")
+	TNT1 A 0 A_SpawnDebris("HLGoreSkull")
+	TNT1 A 0 A_SpawnDebris("DukeGibs1")
+	TNT1 A 0 A_SpawnDebris("DukeGibs2")
+	TNT1 A 0 A_SpawnDebris("DukeGibs3")
+	TNT1 A 0 A_SpawnDebris("DukeGibs4")
+	TNT1 A 0 A_SpawnDebris("DukeGibs5")
+	TNT1 A 0 A_SpawnDebris("DukeGibs6")
+	TNT1 A 0 A_BossDeath
+	TNT1 A 0 A_Jump(10, "GibTaunt")
+	Stop
+   }
+}
+
+actor NewbieHooves : MasterForceBase replaces Fatso
+{
+  health 600
+  PainChance 80
+  +FLOORCLIP
+  +BOSSDEATH
+  SeeSound "NewbieHooves/sight"
+  PainSound "NewbieHooves/pain"
+  ActiveSound "NewbieHooves/sight"
+  DeathSound "NewbieHooves/death"
+  DropItem "LargeSoul" 60
+  DropItem "LargeSoul" 250
+  Tag "Derpy Hooves"
+  States
+  {
+  Spawn:
+	NWBH A 10 A_Look
+    Loop
+  See:
+	NWBH AABBCCDD 2 A_FastChase
+	Loop
+  Missile:
+	NWBH E 20 A_FaceTarget
+	NWBH F 10 Bright A_FatAttack1
+	NWBH E 10 A_FaceTarget
+	NWBH F 10 Bright A_FatAttack2
+	NWBH E 10 A_FaceTarget
+	NWBH F 10 Bright A_FatAttack3
+	NWBH E 10 A_FaceTarget
+	Goto See
+  ContinueDeath:
+	NWBH J 5 A_NoBlocking
+	NWBH KL 5
+	NWBH M 0 A_PlaySound("body/hitfloor")
+	NWBH M 5
+	NWBH N 10
+	NWBH A 0 A_BossDeath
+	NWBH A 0 A_Jump(5, "KillTaunt")
+	NWBH N -1
+	Stop
+  ContinueDeath2:
+	NWBH J 5 A_NoBlocking
+	NWBH KL 5
+	NWBH M 0 A_PlaySound("body/hitfloor")
+	NWBH M 5
+	NWBH N 10
+	NWBH A 0 A_BossDeath
+	NWBH A 0 A_Jump(5, "KickTaunt")
+	NWBH N -1
+	Stop
+  XDeath:
+	TNT1 A 0 A_XScream
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_SpawnDebris("HLGoreSkull")
+	TNT1 A 0 A_SpawnDebris("DukeGibs1")
+	TNT1 A 0 A_SpawnDebris("DukeGibs2")
+	TNT1 A 0 A_SpawnDebris("DukeGibs3")
+	TNT1 A 0 A_SpawnDebris("DukeGibs4")
+	TNT1 A 0 A_SpawnDebris("DukeGibs5")
+	TNT1 A 0 A_SpawnDebris("DukeGibs6")
+	TNT1 A 0 A_SpawnDebris("HLGoreSkull")
+	TNT1 A 0 A_SpawnDebris("DukeGibs1")
+	TNT1 A 0 A_SpawnDebris("DukeGibs2")
+	TNT1 A 0 A_SpawnDebris("DukeGibs3")
+	TNT1 A 0 A_SpawnDebris("DukeGibs4")
+	TNT1 A 0 A_SpawnDebris("DukeGibs5")
+	TNT1 A 0 A_SpawnDebris("DukeGibs6")
+	TNT1 A 0 A_BossDeath
+	TNT1 A 0 A_Jump(10, "GibTaunt")
+	Stop
+   }
+}
+
+actor FlutterMedic : MasterForceBase replaces Archvile
+{
+  health 700
+  PainChance 10
+  +QUICKTORETALIATE
+  SeeSound "FlutterMedic/sight"
+  PainSound "FlutterMedic/pain"
+  ActiveSound "FlutterMedic/idle"
+  DeathSound "FlutterMedic/death"
+  DropItem "ClipSpawner3"
+  DropItem "ClipSpawner3"
+  DropItem "ClipSpawner3"
+  DropItem "ClipSpawner3"
+  DropItem "ClipSpawner3"
+  DropItem "ClipSpawner3"
+  DropItem "ClipSpawner3"
+  DropItem "ClipSpawner3"
+  DropItem "LargeSoul" 255
+  DropItem "SmallSoul" 25
+  Tag "Fluttershy"
+  States
+  {
+  Spawn:
+	FLMD A 10 A_Look
+    Loop
+  See:
+	FLMD AABBCCDD 2 A_VileChase
+	Loop
+  Missile:
+	FLMD E 10 A_FaceTarget
+	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD E 1
+	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD E 1
+	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD E 1
+	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD E 1
+	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD E 1
+	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD E 1
+	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD E 1
+	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD E 1
+	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD E 1
+	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD E 1
+	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD E 1
+	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD E 1
+	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD E 1
+	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD E 1
+	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD E 1
+	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD E 8
+	Goto See
+  Heal:
+	FLMD E 30
+	Goto See
+   }
+}
+
+actor TwiMage : MasterForceBase replaces BaronOfHell
+{
+  health 1000
+  PainChance 50
+  Scale 1.08
+  +FLOORCLIP
+  +BOSSDEATH
+  SeeSound "TwiMage/sight"
+  PainSound "TwiMage/pain"
+  ActiveSound "TwiMage/idle"
+  DeathSound "TwiMage/death"
+  DropItem "LargeSoul" 76
+  DropItem "LargeSoul" 76
+  Tag "Twilight Sparkle"
+  States
+  {
+  Spawn:
+	TWMA A 10 A_Look
+    Loop
+  Missile:
+	TWMA E 10 A_FaceTarget
+	TWMA F 8 Bright A_CustomComboAttack("BaronBall", 32, 10 * random(1, 8))
+	TWMA E 8
+	Goto See
+  ContinueDeath:
+	TWMA J 5 A_NoBlocking
+	TWMA KL 5
+	TWMA M 0 A_PlaySound("body/hitfloor")
+	TWMA M 5
+	TWMA N 10
+	TWMA A 0 A_BossDeath
+	TWMA A 0 A_Jump(5, "KillTaunt")
+	TWMA N -1
+	Stop
+  ContinueDeath2:
+	TWMA J 5 A_NoBlocking
+	TWMA KL 5
+	TWMA M 0 A_PlaySound("body/hitfloor")
+	TWMA M 5
+	TWMA N 10
+	TWMA A 0 A_BossDeath
+	TWMA A 0 A_Jump(5, "KickTaunt")
+	TWMA N -1
+	Stop
+  XDeath:
+	TNT1 A 0 A_XScream
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_SpawnDebris("HLGoreSkull")
+	TNT1 A 0 A_SpawnDebris("DukeGibs1")
+	TNT1 A 0 A_SpawnDebris("DukeGibs2")
+	TNT1 A 0 A_SpawnDebris("DukeGibs3")
+	TNT1 A 0 A_SpawnDebris("DukeGibs4")
+	TNT1 A 0 A_SpawnDebris("DukeGibs5")
+	TNT1 A 0 A_SpawnDebris("DukeGibs6")
+	TNT1 A 0 A_SpawnDebris("HLGoreSkull")
+	TNT1 A 0 A_SpawnDebris("DukeGibs1")
+	TNT1 A 0 A_SpawnDebris("DukeGibs2")
+	TNT1 A 0 A_SpawnDebris("DukeGibs3")
+	TNT1 A 0 A_SpawnDebris("DukeGibs4")
+	TNT1 A 0 A_SpawnDebris("DukeGibs5")
+	TNT1 A 0 A_SpawnDebris("DukeGibs6")
+	TNT1 A 0 A_BossDeath
+	TNT1 A 0 A_Jump(10, "GibTaunt")
+	Stop
+   }
+}

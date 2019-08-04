@@ -13,6 +13,7 @@ Actor GamingMarine : DoomPlayer
 	Player.StartItem "StartingAnimation", 1
 	Player.StartItem "IsPlayer", 1
 	Player.CrouchSprite "PLAY"
+	DamageFactor "Cube", 0
 	Player.JumpZ 10
 	Player.WeaponSlot 1, GMIDFist, GMIDChainsaw
 	Player.WeaponSlot 2, GMIDPistol, GMIDDualPistol
@@ -20,7 +21,7 @@ Actor GamingMarine : DoomPlayer
 	Player.WeaponSlot 4, GMIDChaingun
 	Player.WeaponSlot 5, GMIDGrenadeLauncher
 	Player.WeaponSlot 6, GMIDRailgun
-	Player.WeaponSlot 7, GMIDBFG9000, JohnnyGee
+	Player.WeaponSlot 7, GMIDBFG9000, SoulCube
 	States
 	{
 	Spawn:
@@ -1083,78 +1084,6 @@ ACTOR Blaster_RifleShot_Trail
 		BLAS A 2
 		Stop
 	}
-}
-
-actor JohnnyGee : DoomWeapon
-{
-  Weapon.SelectionOrder 1300
-  Weapon.AmmoUse 1
-  Weapon.AmmoGive 100
-  Weapon.AmmoType "SmallMana"
-  Inventory.PickupMessage "You possess the ''Johnny Gee'' fire spell!... what \cf(\cjSlot 7\cf)"
-  Obituary "%o was set ablaze by %k."
-  Weapon.BobRangeX 0.3
-  Weapon.BobRangeY 0.5
-  Weapon.BobStyle InverseSmooth
-  Weapon.BobSpeed 2.0
-  Weapon.UpSound "STAFUP"
-  Inventory.PickupSound "weapons/staffget"
-  Tag "Johnny Gee"
-  +FLOATBOB
-  +WEAPON.NOALERT
-  States
-  {
-  Ready:
-    WAVE ABCD 3 Bright A_WeaponReady
-	TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
-    Loop
-  Deselect:
-    WAVE A 1 Bright A_Lower
-	WAVE A 0 Bright A_Lower
-    Loop
-  Select:
-    WAVE A 1 Bright A_Raise
-	WAVE A 0 Bright A_Raise
-    Loop
-  Fire:
-	WAVE A 0 A_AlertMonsters
-	WAVE A 0 A_PlaySound("STAFUP", CHAN_WEAPON)
-	WAVE A 0 A_PlaySound("Johnny/Gee", CHAN_VOICE)
-	WAVE A 2 Bright
-	WAVE B 2 Bright A_FireCustomMissile("CookiedemonFireball")
-	WAVE C 2 Bright
-	WAVE D 2 Bright A_FireCustomMissile("CookiedemonFireball")
-	WAVE A 0 A_ReFire("ContinueFiring")
-    Goto Ready
-  ContinueFiring:
-	WAVE A 0 A_AlertMonsters
-	WAVE A 2 Bright
-	WAVE B 2 Bright A_FireCustomMissile("CookiedemonFireball")
-	WAVE C 2 Bright
-	WAVE D 2 Bright A_FireCustomMissile("CookiedemonFireball")
-	WAVE A 0 A_ReFire("ContinueFiring")
-	Goto Ready
-  Spawn:
-    LLSP ABCDCB 1 Bright
-    Loop
-  AltFire:
-	TNT1 A 0 A_GunFlash("WeaponStill")
-	TNT1 A 0 A_PlaySound ("weapons/KICK")
-	FOOT AB 1
-	FOOT C 1
-	FOOT D 1
-	FOOT D 1 A_CustomPunch(5,0,0,"KickPuff")
-	FOOT D 0 A_Quake(1,2,0,10)
-	FOOT EF 1
-	FOOT FEDCBA 1
-	TNT1 A 8
-	TNT1 A 0 A_ReFire
-	Goto Ready
-  WeaponStill:
-	WAVE ABCBABC 3 Bright
-	WAVE B 1 Bright
-	Goto LightDone
-  }
 }
 
 actor LeadPosioning : Weapon

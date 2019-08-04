@@ -179,10 +179,6 @@ drawnumber 4, DIGFONT, yellow, ammo2, 292, 160, 0;
 	{
 	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 225, green, 451;
 	}
-	IsSelected JohnnyGee
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 225, green, 451;
-	}
 
 // Multiplayer Counters
 gamemode deathmatch, teamgame

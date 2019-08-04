@@ -1,0 +1,93 @@
+actor SonicXRainbow : MasterForceBase
+{
+  health 20
+  PainChance 200
+  SeeSound "SonicXRainbow/sight"
+  PainSound "SonicXRainbow/pain"
+  ActiveSound "SonicXRainbow/idle"
+  DeathSound "SonicXRainbow/death"
+  DropItem "ClipSpawner3"
+  Obituary "%o was confronted by the worst crossing ever made."
+  Tag "Rainbow Dash" //This is included for compatibility with mods like Target Spy. I was originally going to make this colored, but, for whatever reason, it showed everything INCLUDING the color code. So, until GZDoom or Target Spy gets updated to support that, this is left colorless.
+  States
+  {
+  Spawn:
+	SNXR A 10 A_Look
+    Loop
+  See:
+	SNXR AABBCCDD 2 A_FastChase
+	Loop
+   }
+}
+
+actor OctaLeb : MasterForceBase
+{
+  health 30
+  PainChance 170
+  Scale 0.65
+  SeeSound "OctaLeb/sight"
+  PainSound "OctaLeb/pain"
+  ActiveSound "OctaLeb/active"
+  DeathSound "OctaLeb/death"
+  AttackSound "Shotguy/Attack"
+  DropItem "GmidShotgun"
+  Tag "OctaLeb"
+  States
+  {
+  Spawn:
+	OCTL A 10 A_Look
+    Loop
+  Missile:
+	OCTL E 10 A_FaceTarget
+	OCTL F 10 bright A_CustomBulletAttack(22.5, 0, 3, random(1,5)*3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	OCTL E 10
+	Goto See
+   }
+}
+
+actor AppleSheriff : MasterForceBase replaces ChaingunGuy //Fun fact: Originally, this one was gonna replace the ShotgunGuy. Since the sprite is wielding a tommy gun, I switched it to ChaingunGuy.
+{
+  health 70
+  Scale 1.08
+  PainChance 200
+  SeeSound "AppleSheriff/sight"
+  PainSound "AppleSheriff/pain"
+  ActiveSound "AppleSheriff/idle"
+  DeathSound "AppleSheriff/death"
+  AttackSound "Chainguy/Attack"
+  DropItem "GmidChaingun"
+  Tag "Applejack"
+  States
+  {
+  Spawn:
+	APLS A 10 A_Look
+    Loop
+  Missile:
+	APLS A 10 A_FaceTarget
+	APLS F 4 Bright A_CPosAttack
+	APLS E 4 Bright A_CPosAttack
+	APLS F 1 A_SpidRefire
+	Goto Missile+1
+   }
+}
+
+actor AmyPie : MasterForceBase replaces DoomImp
+{
+  health 60
+  Scale 1.0
+  PainChance 200
+  SeeSound "AmyPie/sight"
+  PainSound "AmyPie/pain"
+  ActiveSound "AmyPie/idle"
+  DeathSound "AmyPie/death"
+  DropItem "ClipSpawner3"
+  translation "112:127=[0,128,192]:[0,0,0]"
+  DropItem "SmallSoul" 60
+  Tag "Pinkie Pie"
+  States
+  {
+  Spawn:
+    AMPI A 10 A_Look
+	Loop
+  }
+}

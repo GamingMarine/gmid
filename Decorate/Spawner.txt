@@ -87,7 +87,7 @@ DropItem "LeadPosioning"
 Actor BFGSpawner : RandomSpawner replaces BFG9000
 {
 DropItem "GmidBFG9000"
-DropItem "JohnnyGee"
+DropItem "SoulCubeGenerator"
 }
 
 Actor BlurSpherespawner : RandomSpawner replaces BlurSphere
