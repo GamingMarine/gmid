@@ -581,14 +581,14 @@ bg/d2 BGRDTH2
 bg/d3 BGRDTH3
 bg/d4 BGRDTH4
 
-//I know that the character these sounds come from (Sorlag from Quake Champions) is actually female, but, oh well.
+//I know that the character these sounds come from (Sorlag from Quake Champions) is actually a female, but, oh well.
 $random Hellhound/sit { Hellhound/sit1 Hellhound/sit2 Hellhound/sit3 Hellhound/sit4 Hellhound/sit5 }
 Hellhound/sit1	HOUNSIT1
 Hellhound/sit2	HOUNSIT2
 Hellhound/sit3	HOUNSIT3
 Hellhound/sit4	HOUNSIT4
 Hellhound/sit5	HOUNSIT5
-$random Hellhound/act { Hellhound/act1 Hellhound/act2 Hellhound/act3 Hellhound/act4 Hellhound/act5 Hellhound/act6 Hellhound/act7 Hellhound/act8 Hellhound/act9 }
+$random Hellhound/act { Hellhound/act1 Hellhound/act2 Hellhound/act3 Hellhound/act4 Hellhound/act5 Hellhound/act6 Hellhound/act7 Hellhound/act8 Hellhound/act9 Hellhound/act10 Hellhound/act11 Hellhound/act12 Hellhound/act13 }
 Hellhound/act1	HOUNAC1
 Hellhound/act2	HOUNAC2
 Hellhound/act3	HOUNAC3
@@ -598,6 +598,10 @@ Hellhound/act6	HOUNAC6
 Hellhound/act7	HOUNAC7
 Hellhound/act8	HOUNAC8
 Hellhound/act9	HOUNAC9
+Hellhound/act10 HOUNAC0
+Hellhound/act11	HOUNACA
+Hellhound/act12	HOUNACB
+Hellhound/act13	HOUNACC
 Hellhound/melee HOUNATK
 $random Hellhound/hurt { Hellhound/hurt1 Hellhound/hurt2 Hellhound/hurt3 Hellhound/hurt4 Hellhound/hurt5 Hellhound/hurt6 Hellhound/hurt7 }
 Hellhound/hurt1	HOUNHRT1
