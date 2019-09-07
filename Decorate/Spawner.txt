@@ -35,18 +35,6 @@ DropItem "GMIDRailgun"
 DropItem "PlasmaCannon"
 }
 
-Actor RocketAmmoSpawner : RandomSpawner replaces RocketAmmo
-{
-DropItem "40mmGrenades"
-DropItem "RocketAmmo2"
-}
-
-Actor RocketBoxSpawner : RandomSpawner replaces RocketBox
-{
-DropItem "40mmGrenadeBox"
-DropItem "RocketBox2"
-}
-
 Actor ClipSpawner : RandomSpawner replaces Clip
 {
 DropItem "Clip2"
@@ -459,19 +447,6 @@ actor "ZombiemanSpawner" : RandomSpawner replaces ZombieMan
 	DropItem "SonicXRainbow"
 	DropItem "SonicXRainbow"
 	DropItem "SonicXRainbow"
-	DropItem "SonicXRainbow"
-	DropItem "SonicXRainbow"
-	DropItem "SonicXRainbow"
-	DropItem "SonicXRainbow"
-	DropItem "SonicXRainbow"
-	DropItem "SonicXRainbow"
-	DropItem "SonicXRainbow"
-	DropItem "SonicXRainbow"
-	DropItem "SonicXRainbow"
-	DropItem "SonicXRainbow"
-	DropItem "SonicXRainbow"
-	DropItem "SonicXRainbow"
-	DropItem "SonicXRainbow"
 	DropItem "Zombieman_PossessedSpawner"
 }
 
@@ -488,37 +463,11 @@ actor "ShotgunDudeSpawner" : RandomSpawner replaces ShotgunGuy
 	DropItem "OctaLeb"
 	DropItem "OctaLeb"
 	DropItem "OctaLeb"
-	DropItem "OctaLeb"
-	DropItem "OctaLeb"
-	DropItem "OctaLeb"
-	DropItem "OctaLeb"
-	DropItem "OctaLeb"
-	DropItem "OctaLeb"
-	DropItem "OctaLeb"
-	DropItem "OctaLeb"
-	DropItem "OctaLeb"
-	DropItem "OctaLeb"
-	DropItem "OctaLeb"
-	DropItem "OctaLeb"
-	DropItem "OctaLeb"
 	DropItem "ShotgunBoi_PossessedSpawner"
 }
 
 actor "ChaingunGuySpawner" : RandomSpawner replaces ChaingunGuy
 {
-	DropItem "AppleSheriff"
-	DropItem "AppleSheriff"
-	DropItem "AppleSheriff"
-	DropItem "AppleSheriff"
-	DropItem "AppleSheriff"
-	DropItem "AppleSheriff"
-	DropItem "AppleSheriff"
-	DropItem "AppleSheriff"
-	DropItem "AppleSheriff"
-	DropItem "AppleSheriff"
-	DropItem "AppleSheriff"
-	DropItem "AppleSheriff"
-	DropItem "AppleSheriff"
 	DropItem "AppleSheriff"
 	DropItem "AppleSheriff"
 	DropItem "AppleSheriff"
@@ -572,60 +521,43 @@ Actor BossDeathSpawner : RandomSpawner
 }
 
 //Chance of that one thing spawning
-actor ShotgunDudeSpawner16 : RandomSpawner
+actor ImpSpawner16 : RandomSpawner
 {
 	DropItem "Taokaka"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
+	DropItem "AmyPie"
+	DropItem "AmyPie"
+	DropItem "AmyPie"
+	DropItem "AmyPie"
+	DropItem "AmyPie"
+	DropItem "AmyPie"
+	DropItem "AmyPie"
+	DropItem "AmyPie"
+	DropItem "AmyPie"
+	DropItem "AmyPie"
+	DropItem "AmyPie"
+	DropItem "AmyPie"
+	DropItem "AmyPie"
+	DropItem "AmyPie"
+	DropItem "AmyPie"
 }
 
-actor ShotgunDudeSpawner512 : RandomSpawner replaces ShotgunGuy
+actor ImpSpawner512 : RandomSpawner replaces DoomImp
 {
-	DropItem "ShotgunDudeSpawner16"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
-	DropItem "ShotgunDudeSpawner"
+	DropItem "ImpSpawner16"
+	DropItem "AmyPie"
+	DropItem "AmyPie"
+	DropItem "AmyPie"
+	DropItem "AmyPie"
+	DropItem "AmyPie"
+	DropItem "AmyPie"
+	DropItem "AmyPie"
+	DropItem "AmyPie"
+	DropItem "AmyPie"
+	DropItem "AmyPie"
+	DropItem "AmyPie"
+	DropItem "AmyPie"
+	DropItem "AmyPie"
+	DropItem "AmyPie"
 }
 
 

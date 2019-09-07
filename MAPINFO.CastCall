@@ -63,7 +63,7 @@ Intermission GMIDCast
 	  CastName = "ZSec Soldier (Shotgun)"
       AttackSound = "Missile", 1, "weapons/DSDSHTGN"
 	  AttackSound = "Missile", 3, "weapons/DSDSHTGN"
-	  AttackSound = "Missile", 5, "weapons/DSDBOPN"
+	  AttackSound = "Missile", 5, "weapons/ssg1"
 	  AttackSound = "Missile", 7, "weapons/DSDBLOAD"
 	  AttackSound = "Missile", 9, "weapons/sshotc"
 	}

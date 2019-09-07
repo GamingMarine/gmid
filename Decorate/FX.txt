@@ -36,7 +36,7 @@ ACTOR DropBlood
 	Radius 0
 	height 0
 	Speed 5
-	scale 0.5 //default 0.2
+	scale 0.3 //default 0.2
 	Projectile
 	-NOGRAVITY
 	-SOLID
@@ -45,11 +45,11 @@ ACTOR DropBlood
 	States
 	{
 	Spawn:
-		DGB6 AB 3
+		SPLT ABCD 3
 	    Loop
 	Death:
-	   DGB6 A 0 A_PlaySound("Blood/Splat")
-	   DGB6 CDEFGH 3
+	   SPLT A 0 A_PlaySound("Blood/Splat")
+	   SPLT EFGHIJKL 3
 	   Stop
 	XDeath:
 	   NULL A 1 
@@ -65,4 +65,105 @@ Actor BloodFXSpawner_NoDroplets : BloodFXSpawner
 	   HBLD ABCDEFGHIJ 1
 	   Stop
 	 }
+}
+
+actor DukeGibs1
+{
+  Radius 4
+  Height 4
+  Speed 0
+  Projectile
+  -NOGRAVITY
+  Gravity 0.5
+  health 1
+  scale 0.6
+  DeathSound "Gib/Land"
+  States
+  {
+  Spawn:
+    DGB1 ABCD 5
+    loop
+  Death:
+    DGB6 CDEFGH 5
+    stop
+  }
+}
+
+actor DukeGibs2 : DukeGibs1
+{
+  States
+  {
+  Spawn:
+    DGB2 ABCD 5
+    loop
+  Death:
+    DGB6 CDEFGH 5
+    stop
+  }
+}
+
+actor DukeGibs3 : DukeGibs1
+{
+  health 4
+  States
+  {
+  Spawn:
+    DGB3 ABCD 5
+    loop
+  Death:
+    DGB6 CDEFGH 5
+    stop
+  }
+}
+actor GutsGib : DukeGibs1
+{
+  States
+  {
+  Spawn:
+    GGUT ABCD 3
+    loop
+  Death:
+    GGUT EFGHIJKL 3
+    stop
+  }
+}
+
+actor DukeGibs5 : DukeGibs1
+{
+  States
+  {
+  Spawn:
+    DGB5 ABCD 5
+    loop
+  Death:
+    DGB6 CDEFGH 5
+    stop
+  }
+}
+
+actor BloodSplurt : DukeGibs1
+{
+  health 4
+  States
+  {
+  Spawn:
+    SPLT ABCD 3
+    loop
+  Death:
+    SPLT EFGHIJKL 3
+    stop
+  }
+}
+
+actor SkullGib : DukeGibs1
+{
+  States
+  {
+  Spawn:
+    GHED ABCD 3
+    loop
+  Death:
+    GHED EFGHIJKL 3
+    stop
+  }
 }

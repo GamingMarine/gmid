@@ -42,31 +42,21 @@ PICKUP_PISTOL_DROPPED = "You got the handgun! (2)";
 STSTR_CLEV = "Level is being changed...\n";
 
 //Quit messages
-QUITMSG = "Hey, Serge-If the players find that one easter egg, you can kiss your Taokaka body pillow goodbye.";
-QUITMSG1 = "Remember: Music is the weapon.";
-QUITMSG2 = "Contact your local D.E.A. recruiter.";
-QUITMSG3 = "Waga baga bobo";
-QUITMSG4 = "Well I wrote this song for the Christian youth\nI wanna teach kids the Christian truth\nIf you wanna reach those kids on the street\nThen you gotta do a rap to a hip-hop beat\nSo I gave my summon an urban kick\nMy rhymes are fly and my beats are sick\nMy crew is big and it keeps getting bigga\nThat's cause Jesus Christ is my-";
+QUITMSG = "The Master force still grows rapidly.\nQuitting will in no way advance the situation.";
+QUITMSG1 = "You quittin' on me, Private?";
+QUITMSG2 = "Hey, no one ever said being a space marine was easy!";
+QUITMSG3 = "What's that? You're gonna go play BlazBlue instead?\n\nWhat're you, gay?";
+QUITMSG4 = "Press N to fight strong.\nPress Y to die like the wimp you are.";
 QUITMSG5 = "Well, go click on your icons then.\n\nI'll be waiting.";
-QUITMSG6 = "I didn't like the way the show started. They had given me the best seat in the house;\n\nFront row and center.";
-QUITMSG7 = "TWO KIDS GON DIE TONITE"; //JonTron
-QUITMSG8 = "You must defeat Sheng Long\n to stand a chance."; //Street Fighter II (NO, HE'S NOT IN THIS MOD. DON'T EVEN BOTHER)
-QUITMSG9 = "Making progress, marine? Your journey is futile. You will die, and your soul will be mine!"; //Doom 3
-QUITMSG10 = "Blake! You should have known that you can not defeat me\nand my creations! Now I can take over the known\nuniverse! No one will ever laugh at me again!\nRest in peace, Blake!                -Dr. Goldfire"; //Blake Stone series
-QUITMSG11 = "Droppin' plates on yo ass, beyotch!"; //Beavis and Butt-Head
-QUITMSG12 = "I am the celestial gardener, policing\nthe planet of the stink weeds and poisons\nwhich leak out even through the cracks in the\ncold asphalt sidewalks of the\nCity of Sin!"; //The City
-QUITMSG13 = "Keep your head, hands, arms, legs, and\nfeet inside the ride at all times. You're bound to\nlose MORE today than just a few limbs!"; //The Carnival (Redux-exclusive level)
-QUITMSG14 = "No day in the park. Too much of the\nblood on me is mine. But the day is not\ndone, and I've miles to go to make\nthem sleep... Peanuts anyone?"; //Central Park
-QUITMSG15 = "Feast upon the frozen images of\nmolten massacre as the machineries of\ndeath grind relentlessly, mindlessly on..."; //The Industrial Complex
-QUITMSG16 = "From the halls of the Vatican to the\nRunways of Truth, we are there. At the place\ncalled Climax, and the time called NOW!\nWhen it's done, let the gods sort it out!"; //Air Force Base
-QUITMSG17 = "Watch for falling prices, falling\nemployees, falling customers, incoming\nmissiles, and blood puddles..."; //EZ Mart (Special Delivery level)
-QUITMSG18 = "The earth is thirsty. It also\nseems to have soiled itself..."; //Shanty Town (Special Delivery level)
-QUITMSG19 = "The earth was hungry,\nso it ate some people."; //Earthquake (Special Delivery level)
-QUITMSG20 = "Did someone say they've\nfallen and can't get up?"; //La Palamino Resort (Special Delivery level)
-QUITMSG21 = "Watch the river run;\nflowing with bubbling blood;\nthe end, it is near."; //Tokyo (Super Postal level)
-QUITMSG22 = "The footprint you see;\nGodzilla has formed for you;\nyour city laid waste."; //Osaka (Super Postal level)
-QUITMSG23 = "The hive has been cleansed. The\nsource of the corruption has been corked,\nlaid in a body bag and dragged to the\noutskirts of existence"; //The Elementary School (The End in Redux)
-QUITMSG24 = "The demons are real and they\nare here. Fate has delivered me into\ntheir midst and given me the\nopportunity to save my species from a\nmillion years of dominion."; //Unused quote found in the beta
+QUITMSG6 = "Does someone need to go back to their safety corner?";
+QUITMSG7 = "C'mon, just a few more productive hours?";
+QUITMSG8 = "But... you're the hero the world deserves!";
+QUITMSG9 = "Please don't leave... there's a Changeling around that corner!";
+QUITMSG10 = "Don't let humanity die off like this!\nYou must keep fighting!";
+QUITMSG11 = "I wouldn't leave if I were you.\nThat desktop is way worse.";
+QUITMSG12 = "Okay, fine. Abandon all hope for humanity.\n\nGenius move of you.";
+QUITMSG13 = "Who is this ''Stormy Blue'' that you talk of?";
+QUITMSG14 = "Are you crazy? Is that your problem?";
 
 PD_BLUEO = "This object is restricted to those with \chblue\c- access.";
 PD_REDO = "This object is restricted to those with \cgred\c- access.";
@@ -276,128 +266,127 @@ C6TEXT =
 	"deal with more of them.";
 //Final Doom: The Plutonia Experiment	
 P1TEXT =
-	"As the Accelerator's guardian crumbles\n"
-	"before you, your gun is lowered as you\n"
-	"procure the Accelerator from Hell's\n"
-	"wretched maw.\n"
-	"But wait, there was supposed to be two\n"
-	"prototypes, and those goddamn demons\n"
-	"must have taken the other one.\n"
+	"You begin to take a deep breath as the\n"
+	"Accelerator's guardian hits the floor.\n"
+	"But as you look around the room, you feel\n"
+	"that something's missing...\n"
+	"Shit, there was supposed to be TWO\n"
+	"prototypes, but you can't see the other\n"
+	"one. It must've fallen into the wrong hands.\n"
 	"\n"
-	"Find the prototype, or your struggle\n"
-	"will have been for naught. Keep moving,\n"
-	"keep fighting, keep killing.\n"
-	"All for the greater good.";
+	"Find the prototype, or your struggling\n"
+	"efforts will have been for nothing. Keep\n"
+	"moving. Keep fighting. Keep killing.\n"
+	"Oh, yeah, and keep living.";
 P2TEXT =
-	"Not even the dreaded gauntlet of Arch-Viles\n"
-	"could contain you, as you walk up to the\n"
-	"Accelerator and put a bullet in it,\n"
-	"permanently shutting it down.\n"
+	"Not even the labyrinth of the damned could\n"
+	"stop you in your tracks. You walk up to\n"
+	"the prototype Accelerator and fire your sawn-\n"
+	"off at it, permanently shutting it down.\n"
 	"\n"
-	"Don't hold your breath just yet, as\n"
-	"up ahead, lies another great demon"
-	"stronghold.\n"
+	"There's no time for resting, however. Up ahead\n"
+	"lies another stronghold tougher than you can\n"
+	"imagine.\n"
 	"\n"
 	"Knock, knock.";
 P3TEXT =
-	"You've kicked in the faces of many demons\n"
-	"only to find yourself in their command\n"
-	"center, only to discover the existence\n"
-	"of the Gatekeeper, a god-like demon whose\n"
-	"cousin you've destroyed, and whose spawn\n"
-	"is now cascading to Earth.\n"
+	"After having kicked in the faces of countless\n"
+	"horses, you realize at how close you've gotten\n"
+	"to the Gatekeeper's domain. He may have brought\n"
+	"forth the toughest army you've ever faced, but\n"
+	"there can only exist one other person capable of\n"
+	"worse than him. You know who.\n"
 	"\n"
-	"With a hellish grin, you load up, knowing\n"
-	"you've done this before. Time to give this\n"
-	"son of a bitch the good news!";
+	"With the grin of a madman, you check your weapons,\n"
+	"well aware of what you're capable of bringing\n"
+	"those bastards as punishment.";
 P4TEXT =
-	"The Gatekeeper's visage explodes, leaving\n"
-	"gibs, bloody metal, and some demented eye\n"
-	"of Hell itself which manages to suck in\n"
-	"the last of the demonic hordes, as well\n"
-	"as the burning corpse of the Gatekeeper\n"
-	"before the portal collapses and implodes\n"
-	"into nothingness.\n"
+	"A few missiles into the exposed brain of the\n"
+	"Gatekeeper erupts a monstrous roar, startling\n"
+	"even the beast's minions.\n"
+	"Every living thing that remains is sucked up\n"
+	"into thin air, along with what's left of the\n"
+	"Prototype Accelerator. It's over. The Master\n"
+	"Force has surrendered again. At least, for now.\n"
 	"\n"
-	"Now that you've blown Hell into oblivion,\n"
-	"you decide to remain at the Gatekeeper's\n"
-	"final resting place, to ensure that no demon\n"
-	"shall rise again...";
+	"If you ever have children, you may have one hell\n"
+	"of a story to tell them.";
 P5TEXT =
-	"R&R isn't always that easy to recieve.\n"
-	"Welcome to Cyberden, where a Master Force\n"
-	"Lord lurks around every corner. Best you\n"
-	"have enough mana and a Soul Cube.";
-P6TEXT =
-	"What? You thought it would be *that* easy to\n"
-	"escape? To whoever designed this place, it's seems\n"
-	"like the answer is no.\n"
+	"Congratulations! You have just recieved a one-way\n"
+	"ticket the two hardest areas we have available.\n"
 	"\n"
-	"Because no one gets out alive...";
+	"Welcome to the Cyberden. Only a master marine will\n"
+	"succeed.";
+P6TEXT =
+	"Great work! You've managed to survive one of the\n"
+	"hidden challenges. Yeah, ONE of them.\n"
+	"\n"
+	"This time around, no one gets out alive.";
 //Final Doom: TNT: Evilution	
 T1TEXT =
-	"You've fought out of the of the diseased\n"
-	"research labs. It appears that no matter\n"
-	"how many times Hell is unleashed, those\n"
-	"sorry bastards at UAC always manage to\n"
-	"fuck up real hard when it comes to\n"
-	"security of their own assets.\n"
+	"It seems that the UAC never learns its lesson\n"
+	"when it comes to playing with gateway\n"
+	"technology, even if it's clear that it'll\n"
+	"just result in another enemy force outbreak.\n"
+	"All of your thoughts on that are put aside as\n"
+	"you escape the infested experimental labs.\n"
 	"\n"
-	"Ahead lies the military complex, now\n"
-	"a breeding ground of nightmarish\n"
-	"creatures bent on mutilating you.\n"
-	"Hopefully, there's plenty of war\n"
-	"ordinance to go around.";
+	"Up ahead lies the military complex, which is\n"
+	"now filled to the brim of horrendous creatures\n"
+	"hellbent on gutting you alive. You hope that\n"
+	"the complex still has some hi-tech firepower\n"
+	"lying around.";
 T2TEXT =
-	"Judging by the sounds of whining machinery\n"
-	"and inhuman wailing up ahead, it looks\n"
-	"like new hellspawn is being stitched\n"
-	"together through corrupted flesh and bloody\n"
-	"metal. If that's the case, you've got an\n"
-	"entire legion to put down in the most\n"
-	"vile fashion one can possibly think of.\n"
+	"The grinding and wailing of heavy machinery\n"
+	"nearby begins to unsettle you. Hopefully,\n"
+	"it's not being used to stamp out more GMBots\n"
+	"and the like. If that's so, you'll be ready\n"
+	"trash it all. You have a feeling that the Master\n"
+	"Force is planning an all-out massacre, but you\n"
+	"feel as mean as a bull at a rodeo.\n"
 	"\n"
-	"Nobody said it was going to be easy.";
+	"You won't be going down easy.";
 T3TEXT =
-	"Wait a minute.\n"
+	"Hang on a second.\n"
 	"\n"
-	"You've been through here before. Once\n" 
-	"when you've been kicked down the\n"
-	"galactic toilet for that stint with\n"
-	"your commanding officer, and now when\n"
-	"this entire corporate shithole has been\n"
-	"kicked into Hell's meat grinder.\n"
-	"You've never liked this place, and you\n"
-	"as hell hate it now.";
+	"You feel that you've been here before.\n" 
+	"In fact, you have: This place was once a hospital,\n"
+	"the same one you were sent to a while back for\n"
+	"having suicidal thoughts. You never liked this place\n"
+	"when you were young, and you sure as fuck despise it\n"
+	"now.\n"
+	"You crack your knuckles as you walk into the vista\n"
+	"opening, prepared to take names.";
 T4TEXT =
-	"Unlike the Icon of Sin, this demon-spitter\n"
-	"screams with an echo turning the blood-red\n"
-	"sky into the blue skies of Earth.\n"
-	"This dimension is falling apart slowly,\n"
-	"with the mounds of demonic corpses\n"
-	"vanishing and the buildings around you\n"
-	"crumbling silently. Have you truly won?\n"
+	"After the creature-spitter lets out a humongous\n"
+	"roar of pain, all becomes quiet. The countless\n"
+	"corpses of the Master Force begin to dissolve,\n"
+	"and the Hellish-red sky becomes an Earthly blue.\n"
+	"You begin to scratch your head, pondering with\n"
+	"one question:\n"
+	"Have you truly won?\n"
 	"\n"
-	"Something rumbles in the distance.\n"
-	"A powerful blue light now takes the place\n"
-	"of the demon-spitter's decaying skull.";
+	"Suddenly, something rumbles in the distance.\n"
+	"An alien-like blue light glows inside the\n"
+	"creature-spitter's decaying skull.";
 T5TEXT =
-	"Ancient Egypt? Whatever the case, the\n"
-	"demons must have made an abode here,\n"
-	"despite the ruins becoming awfully\n"
-	"quiet.\n"
-	"Have you been forsaken by the gods?";
-T6TEXT =
-	"At last, a vacation. You mutter to\n"
-	"yourself that someone else can do the\n"
-	"job for a change. As you welcome \n"
-	"yourself to the peaceful flowing water,\n"
-	"quaint buildings, and placid atmosphere,\n"
-	"the iron shoe of a cyberdemon marks\n"
-	"the presence of hellspawn.\n"
+	"Ancient Egypt? This sure seems different.\n"
+	"Whatever infests this place surely can't be\n"
+	"any worse than normal, can it?\n"
 	"\n"
-	"Goddamn, it appears that the demons\n"
-	"really do have it out for only you.";
+	"Or, perhaps, maybe it's best to let the sleeping\n"
+	"gods lie...";
+T6TEXT =
+	"A vacation. About damn time. After the constant\n"
+	"beating of a thousand serial killers, you're\n"
+	"just about ready for a break. ''Maybe someone\n"
+	"else can kick the Master Force's ass next time\n"
+	"around'', you mutter to yourself. You step forth\n"
+	"into the welcoming, quiet town, complete with a\n"
+	"gently flowing stream and quaint buildings.\n"
+	"\n"
+	"But all of the peacefulness you were prepared\n"
+	"for becomes ruined as you hear a Force Lord's stomping.";
 //No Rest For The Living
 NERVETEXT =
 	"Looks like trouble was brewing up again\n"
@@ -406,7 +395,7 @@ NERVETEXT =
 	"amusement park, with Earth being the ticket\n"
 	"booth.\n"
 	"\n"
-	"Little did it know a teen with a sawn off\n"
+	"Little did it know a teen with a sawn-off\n"
 	"in his hand was making a guest appearance,\n"
 	"and turning up the crank on the shooting\n"
 	"gallery to a 12.\n"
@@ -414,7 +403,7 @@ NERVETEXT =
 	"The clone's corpse now lies right in the\n"
 	"middle of the hedge maze, with its infected\n"
 	"guts and blood covering the walls. That should\n"
-	"teach it for pulling off this stunt.\n"
+	"teach it a lesson for pulling off this stunt.\n"
 	"\n"
 	"Sorry, sir, the park is closed.\n";
 	

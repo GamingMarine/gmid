@@ -1,6 +1,6 @@
 ACTOR Taokaka
 {
-  Health 2000
+  Health 10000
   PainChance 20
   Speed 15
   Radius 20

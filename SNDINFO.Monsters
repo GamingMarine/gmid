@@ -492,34 +492,56 @@ ZSECPFR1	ZSECPFR1
 ZSECPFR2	ZSECPFR2
 ZSECPFR3	ZSECPFR3
 
-$random shotguy/active { shotguy/active1 shotguy/active2 shotguy/active3 shotguy/active4 shotguy/active5 shotguy/active6 shotguy/active7 shotguy/active8 shotguy/active9 shotguy/active10 shotguy/active11 }
-shotguy/active1	zsecbr01
-shotguy/active2	zsecbr02
-shotguy/active3	zsecbr03
-shotguy/active4	zsecbr04
-shotguy/active5	zsecbr05
-shotguy/active6	zsecbr06
-shotguy/active7	zsecbr07
-shotguy/active8	zsecbr08
-shotguy/active9	zsecbr09
-shotguy/active10  zsecbr10
-shotguy/active11  zsecbr11
-shotguy/active12  zsecbr12
-shotguy/active13  zsecbr13
-shotguy/active14  zsecbr14
-shotguy/active15  zsecbr15
+$random shotguy/active { shotguy/active1 shotguy/active2 shotguy/active3 }
+shotguy/active1	zsecbr1
+shotguy/active2	zsecbr2
+shotguy/active3	zsecbr3
+shotguy/chat1	zseccht1
+shotguy/chat2	zseccht2
+shotguy/chat3	zseccht3
+shotguy/chat4	zseccht4
+shotguy/chat5	zseccht5
+shotguy/chat6	zseccht6
+shotguy/chat7	zseccht7
+shotguy/chat8	zseccht8
+shotguy/chat9	zseccht9
+shotguy/chat10	zseccht0
+shotguy/chat11	zsecchta
+shotguy/chat12	zsecchtb
+shotguy/chat13	zsecchtc
+shotguy/chat14	zsecchtd
+shotguy/chat15	zsecchte
 
-$random shotguy/breathe { shotguy/active12 shotguy/active13 shotguy/active14 shotguy/active15 }
+$random shotguy/breathe { shotguy/chat1 shotguy/chat2 shotguy/chat3 shotguy/chat4 shotguy/chat5 shotguy/chat6 shotguy/chat7 shotguy/chat8 shotguy/chat9 shotguy/chat10 shotguy/chat11 shotguy/chat12 shotguy/chat13 shotguy/chat14 shotguy/chat15 }
 
-$RANDOM shotguy/sight { ENFS1 ENFS2 ENFS3 ENFS4 }
-ENFS1 ZSECSIT1
-ENFS2 ZSECSIT2
-ENFS3 ZSECSIT3
-ENFS4 ZSECSIT4
-$random shotguy/pain { shotguy/pain1 shotguy/pain2 }
-shotguy/pain1 zsecpan1
-shotguy/pain2 zsecpan2
-shotguy/death zsecdeth
+$RANDOM shotguy/sight { shotguy/sight1 shotguy/sight2 shotguy/sight3 shotguy/sight4 shotguy/sight5 shotguy/sight6 shotguy/sight7 shotguy/sight8 shotguy/sight9 shotguy/sight10 shotguy/sight11 shotguy/sight12 shotguy/sight13 }
+shotguy/sight1	  ZSECSIT1
+shotguy/sight2	  ZSECSIT2
+shotguy/sight3	  ZSECSIT3
+shotguy/sight4	  ZSECSIT4
+shotguy/sight5	  ZSECSIT5
+shotguy/sight6	  ZSECSIT6
+shotguy/sight7	  ZSECSIT7
+shotguy/sight8	  ZSECSIT8
+shotguy/sight9	  ZSECSIT9
+shotguy/sight10	  ZSECSIT0
+shotguy/sight11	  ZSECSITA
+shotguy/sight12	  ZSECSITB
+shotguy/sight13	  ZSECSITC
+$random shotguy/pain { shotguy/pain1 shotguy/pain2 shotguy/pain3 shotguy/pain4 shotguy/pain5 shotguy/pain6 shotguy/pain7 shotguy/pain8 shotguy/pain9 }
+shotguy/pain1 	  zsecpan1
+shotguy/pain2 	  zsecpan2
+shotguy/pain3 	  zsecpan3
+shotguy/pain4 	  zsecpan4
+shotguy/pain5 	  zsecpan5
+shotguy/pain6 	  zsecpan6
+shotguy/pain7 	  zsecpan7
+shotguy/pain8 	  zsecpan8
+shotguy/pain9 	  zsecpan9
+shotguy/death1	  zsecdth1
+shotguy/death2	  zsecdth2
+shotguy/death3	  zsecdth3
+$random shotguy/death { shotguy/death1 shotguy/death2 shotguy/death3 }
 
 BlasterSoldier/Sight		BLSDSIT
 BlasterSoldier/Radio1		BLSDAC1
@@ -536,19 +558,31 @@ BlasterSoldier/Death		BLSDDTH
 Q2Soldier/Blaster			SOLATCK2
 Q2Soldier/ShotX				SHORTED
 
-$random sawedoff/sit { sawedoff/sit1 sawedoff/sit2 sawedoff/sit3 }
+$random sawedoff/sit { sawedoff/sit1 sawedoff/sit2 sawedoff/sit3 sawedoff/sit4 sawedoff/sit5 }
 sawedoff/sit1 sawedg1
 sawedoff/sit2 sawedg2
 sawedoff/sit3 sawedg3
+sawedoff/sit4 sawedg4
+sawedoff/sit5 sawedg5
 $RANDOM sawedoff/idle { sawedoff/idle1 sawedoff/idle2 sawedoff/idle3 }
 sawedoff/idle1 saweda1
 sawedoff/idle2 saweda2
 sawedoff/idle3 saweda3
-sawedoff/pain sawedpn
-$random sawedoff/death { sawedoff/death1 sawedoff/death2 sawedoff/death3 }
+$random sawedoff/pain { sawedoff/pain1 sawedoff/pain2 sawedoff/pain3 sawedoff/pain4 sawedoff/pain5 }
+sawedoff/pain1 sawedp1
+sawedoff/pain2 sawedp2
+sawedoff/pain3 sawedp3
+sawedoff/pain4 sawedp4
+sawedoff/pain5 sawedp5
+$random sawedoff/death { sawedoff/death1 sawedoff/death2 sawedoff/death3 sawedoff/death4 sawedoff/death5 sawedoff/death6 sawedoff/death7 sawedoff/death8 }
 sawedoff/death1 sawedd1
 sawedoff/death2 sawedd2
 sawedoff/death3 sawedd3
+sawedoff/death4 sawedd4
+sawedoff/death5 sawedd5
+sawedoff/death6 sawedd6
+sawedoff/death7 sawedd7
+sawedoff/death8 sawedd8
 
 $random bgrunt/see {bg/s1 bg/s2 bg/s3 bg/s4 bg/s5 bg/s6 bg/s7 bg/s8 bg/s9}
 bg/s1 BGRSEE01

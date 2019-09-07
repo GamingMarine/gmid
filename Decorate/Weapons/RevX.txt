@@ -28,24 +28,20 @@ actor RevX : Weapon
 		RFL1 A 0 A_JumpIfInventory("RevXUpgrade2", 1, "BarrelReady")
 		RFL1 A 0 A_GiveInventory("RevXAmmo", 1)
 		RFL1 A 5 A_WeaponReady
-		TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
 		Loop
 	CoolantReady:
 		RFL2 A 0 A_JumpIfInventory("RevXUpgrade2", 1, "SuperReady")
 		RFL2 A 0 A_GiveInventory("RevXAmmo", 1)
 		RFL2 A 2 A_WeaponReady
-		TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
 		Loop
 	BarrelReady:
 		RFL3 A 0 A_JumpIfInventory("RevXUpgrade1", 1, "SuperReady")
 		RFL3 A 0 A_GiveInventory("RevXAmmo", 1)
 		RFL3 A 5 A_WeaponReady
-		TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
 		Loop
 	SuperReady:
 		RFL4 A 0 A_GiveInventory("RevXAmmo", 1)
 		RFL4 A 2 A_WeaponReady
-		TNT1 A 0 A_JumpIfInventory("BotAttack", 1, "Fire")
 		Loop
 	Select:
 		RFL1 A 1 A_Raise

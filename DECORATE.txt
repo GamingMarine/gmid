@@ -16,6 +16,7 @@
 #include Decorate/Monsters/ZSecPistol.txt
 #include Decorate/Monsters/BlasterSoldier.txt
 #include Decorate/Monsters/SawnOffWielder.txt
+#include Decorate/Monsters/ChaingunMajor.txt
 #include Decorate/Monsters/EvilMarines.txt
 #include Decorate/Monsters/ScriptedMarines.txt
 #include Decorate/Monsters/Taokaka.txt
