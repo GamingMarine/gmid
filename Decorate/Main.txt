@@ -170,6 +170,7 @@ Actor GMIDFist : Fist Replaces Fist
 	Inventory.PickupMessage "Thou shalt not see this."
 	Obituary "%o lost a fistfight with %k."
     +WEAPON.NOALERT
+	+WEAPON.NOAUTOFIRE
 	Weapon.UpSound "knuckled"
 	states
 	{
@@ -177,29 +178,30 @@ Actor GMIDFist : Fist Replaces Fist
 			FIST A 1 A_WeaponReady
 			loop
 		Fire:
-			FISU DCBA 1
-			TNT1 A 5
-			Goto ReadyToGo
-		ReadyToGo:
 			TNT1 A 0 A_Jump(256, "Fist1", "Fist2")
 			Goto Fist1
 		Fist1:
+			TNT1 A 0 A_GunFlash("LFistStay")
 			TNT1 A 0 A_PlaySound("fist/normalthrow")
-			FIS1 AC 1
+			FIS1 BC 1
 			FIS1 E 1 A_CustomPunch(2,0,0,"FistPuff")
-			FIS1 FEDCBA 1
-			TNT1 A 8 A_Refire("ReadyToGo")
-		Goto StopFiring
-		Fist2:
-			TNT1 A 0 A_PlaySound("fist/normalthrow")
-			FIS2 AC 1
-			FIS2 E 1 A_CustomPunch(2,0,0,"FistPuff")
-			FIS2 FEDCBA 1
-			TNT1 A 8 A_Refire("ReadyToGo")
-		Goto StopFiring
-		StopFiring:
-			FISU ABCD 1
+			FIS1 F 1
+			FIS1 EDCBA 1 A_WeaponReady(WRF_NOBOB|WRF_NOSWITCH)
 			Goto Ready
+		Fist2:
+			TNT1 A 0 A_GunFlash("RFistStay")
+			TNT1 A 0 A_PlaySound("fist/normalthrow")
+			FIS2 BC 1
+			FIS2 E 1 A_CustomPunch(2,0,0,"FistPuff")
+			FIS2 F 1
+			FIS2 EDCBA 1 A_WeaponReady(WRF_NOBOB|WRF_NOSWITCH)
+			Goto Ready
+		LFistStay:
+			FIS2 A 9
+			Stop
+		RFistStay:
+			FIS1 A 9
+			Stop
 		AltFire:
 			TNT1 A 0 A_GunFlash("WeaponStill")
 			TNT1 A 0 A_PlaySound ("weapons/KICK")
@@ -559,7 +561,6 @@ Actor GMIDSuperShotgun : SuperShotgun Replaces SuperShotgun
 	Weapon.BobStyle InverseSmooth
 	Weapon.BobSpeed 2.0
 	Weapon.UpSound "dbcock"
-	attacksound "weapons/DSDSHTGN"
 	Tag "Sawn-Off"
 	Weapon.AmmoUse 2
 	+WEAPON.NOALERT
@@ -571,6 +572,7 @@ Actor GMIDSuperShotgun : SuperShotgun Replaces SuperShotgun
 		SHOG A 1 A_WeaponReady
 		Loop
 	Fire:
+		SHOG A 0 A_PlayWeaponSound("weapons/DSDSHTGN")
 		SHOG A 0 A_AlertMonsters
 		SHOG A 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
 		SHOF A 0 A_SetPitch(pitch-1)
@@ -669,7 +671,7 @@ Actor GMIDChaingun : Chaingun Replaces Chaingun
 		CHGG A 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
 		CHGG C 0 A_Light1 
 		CHGG C 0 A_PlaySound("weapons/UZIFIRE", CHAN_WEAPON)
-		CHGG C 0 A_FireCustomMissile("CasingSpawner",0,0,17,0)
+		CHGG C 0 A_FireCustomMissile("RifleCasingSpawner",0,0,17,0)
 		CHGG C 0 A_SetPitch(pitch-1)
 		CHGG C 1 Bright A_FireBullets(5.6, 0, 1, 5, "XaserPuff")
 		CHGG D 0 A_SetPitch(pitch+1)
@@ -686,7 +688,7 @@ Actor GMIDChaingun : Chaingun Replaces Chaingun
 		CHGG A 0 A_PlaySound("QuadDamage/Use")
 		CHGG C 0 A_Light1
 		CHGG C 0 A_PlaySound("weapons/UZIFIRE", CHAN_WEAPON)
-		CHGG C 0 A_FireCustomMissile("CasingSpawner",0,0,17,0)
+		CHGG C 0 A_FireCustomMissile("RifleCasingSpawner",0,0,17,0)
 		CHGG C 0 A_SetPitch(pitch-1)
 		CHGG C 1 Bright A_FireBullets(5.6, 0, 1, 5, "XaserPuff")
 		CHGG D 0 A_SetPitch(pitch+1)
@@ -1106,12 +1108,12 @@ actor LeadPosioning : Weapon
 	   CHNF A 0 A_AlertMonsters
 	   CHNF A 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
        CHNF A 0 A_SetPitch(pitch-0.25)
-	   CHNF A 0 A_FireCustomMissile("CasingSpawner",0,0,17,0)
+	   CHNF A 0 A_FireCustomMissile("RifleCasingSpawner",0,0,17,0)
        CHNF A 1 Bright A_FireBullets (4,3,1,10,"XaserPuff")
 	   CHNG D 0 A_SetPitch(pitch+0.25)
 	   CHNG DE 1
 	   CHNF B 0 A_SetPitch(pitch-0.25)
-	   CHNF B 0 A_FireCustomMissile("CasingSpawner",0,0,17,0)
+	   CHNF B 0 A_FireCustomMissile("RifleCasingSpawner",0,0,17,0)
        CHNF B 1 Bright A_FireBullets (3,4,1,10,"XaserPuff")
 	   CHNG F 0 A_SetPitch(pitch+0.25)
        CHNG FC 1
@@ -1632,6 +1634,48 @@ ACTOR ShellCasing : BulletCasing
            SHDY E -1
            stop
            SHDY F -1
+           stop
+   }
+}
+
+ACTOR RifleCasingSpawner : CasingSpawner
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1
+		TNT1 A 0 A_CustomMissile("RifleCasing",0,0,random(-80,-100),2,random(45,80))
+		TNT1 A 0
+		Stop
+	}
+}
+
+ACTOR RifleCasing : BulletCasing
+{
+   Scale 0.26
+   SeeSound "casings/rifle/bounce"
+   States
+   {
+
+   Spawn:
+      RCAS A 0 A_CustomMissile("CasingSmoketrail",0,0,0)
+      RCAS ABCDEFGH 1
+      Loop
+   Death:
+         TNT1 A 0 A_jump(128,8)
+         TNT1 A 0 A_jump(128,6)
+         TNT1 A 0 A_jump(128,4)
+      TNT1 A 0 A_jump(128,2)
+           RCAS I -1
+           stop
+           RCAS J -1
+           stop
+           RCAS K -1
+           stop
+           RCAS L -1
+           stop
+           RCAS M -1
            stop
    }
 }
@@ -2289,6 +2333,8 @@ ACTOR ExplosionSmoke
 
 ACTOR XaserBarrel : ExplosiveBarrel replaces ExplosiveBarrel
 {
+	DamageFactor "Foot", 0
+	DamageFactor "Fist", 0
 	Obituary "%o was far too close to an explosive barrel."
 	+FIREDAMAGE
 	+PUSHABLE

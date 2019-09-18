@@ -995,6 +995,7 @@ ACTOR TLamp1 replaces TechLamp
   Height 80
   health 1
   Mass 900000
+  DeathHeight 60
   +SOLID
   +SHOOTABLE
   +NOBLOOD
@@ -1021,6 +1022,7 @@ ACTOR TLamp2 replaces TechLamp2
   Height 60
   Health 1
   Mass 900000
+  DeathHeight 60
   +SOLID
   +SHOOTABLE
   +NOBLOOD
@@ -1047,6 +1049,7 @@ ACTOR NewColumn replaces Column
   Radius 16
   Height 48
   Mass 900000
+  DeathHeight 48
   ProjectilePassHeight -16
   +SOLID
   +SHOOTABLE

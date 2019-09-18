@@ -1,2 +1,2 @@
-STARTUPTITLE = "GamingMarine in Doom - v1.0.0 8/03/2019"
+STARTUPTITLE = "GamingMarine in Doom Dev Build Edition 9/17/2019"
 STARTUPCOLORS = "0000FF", "00FF00"

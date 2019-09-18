@@ -9,6 +9,7 @@
 #include Decorate/Weapons/SoulCube.txt
 #include Decorate/Monsters/Monsters.txt
 #include Decorate/Monsters/MasterForceBase.txt
+#include Decorate/Monsters/MFBossBase.txt
 #include Decorate/Monsters/WeakTier.txt
 #include Decorate/Monsters/NormalTier.txt
 #include Decorate/Monsters/Changeling.txt
@@ -18,6 +19,8 @@
 #include Decorate/Monsters/SawnOffWielder.txt
 #include Decorate/Monsters/ChaingunMajor.txt
 #include Decorate/Monsters/EvilMarines.txt
+#include Decorate/Monsters/ZombieScientist.txt
+#include Decorate/Monsters/MasterForceLord.txt
 #include Decorate/Monsters/ScriptedMarines.txt
 #include Decorate/Monsters/Taokaka.txt
 #include Decorate/Monsters/WayneCampbell.txt
