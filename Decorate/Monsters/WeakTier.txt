@@ -42,6 +42,97 @@ actor OctaLeb : MasterForceBase
 	OCTL F 10 bright A_CustomBulletAttack(22.5, 0, 3, random(1,5)*3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
 	OCTL E 10
 	Goto See
+  Death.Fire:
+	OCTL A 0 A_PlaySound("octaleb/burn", CHAN_VOICE)
+	OCTL AAA 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL BBB 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL CCC 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL DDD 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL AAA 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL BBB 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL CCC 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL DDD 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL AAA 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL BBB 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL CCC 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL DDD 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL AAA 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL BBB 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL CCC 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL DDD 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL AAA 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL BBB 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL CCC 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL DDD 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL AAA 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL BBB 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL CCC 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL DDD 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL AAA 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL BBB 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL CCC 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL DDD 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL AAA 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL BBB 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL CCC 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL DDD 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL AAA 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL BBB 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL CCC 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL DDD 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL AAA 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL BBB 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL CCC 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL DDD 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL AAA 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL BBB 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL CCC 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	OCTL DDD 1 Bright A_Wander
+	OCTL A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	Goto Fall
    }
 }
 

@@ -1,0 +1,28 @@
+#Include "ZCommon.acs"
+Script "PowerupSounds" Enter
+{
+	Int PNum = PlayerNumber();
+	While(PNum==PlayerNumber())
+	{
+		If(GetActorPowerupTics(0,"PowerQuadDamageST")==125)
+		PlaySound(0,"QuadDamage/Fade",0);
+		
+		If(GetActorPowerupTics(0,"PowerInvulnerable")==125)
+		PlaySound(0,"Invulnerability/Fade",0);
+
+		If(GetActorPowerupTics(0,"PowerBioSuitProtection")==125)
+		PlaySound(0,"RADSFADE",0);
+		
+		If(GetActorPowerupTics(0,"PowerDoubleDamage")==125)
+		PlaySound(0,"DoubleDamage/Fade",0);
+		Delay(1);
+	}
+}
+
+/*
+This is broken beyond all belief. What this is supposed to do is, on the last 3 seconds of a powerup lasting,
+it will play a fading sound effect (Think the way powerups work in the Quake series). I figured this would work
+just fine, since this is taken straight from TheCamaleonMaligno's Quake II Stuff, but all it does is spam the
+console with "[null] is not a type of powerup", and, strangely, it'll spam the console with something like
+"[cacodemon]/[demon2] is not a type of powerup" when loaded up in Kinsie's test map. If you've ever wondered why
+I never, *ever* touch ACS, here's your reason.

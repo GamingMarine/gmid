@@ -57,7 +57,7 @@ actor SawedOffShotgunGuy
 	ZSDO II 0 A_SpawnDebris("BloodSplurt")
     ZSDO I 13 
     ZSDO J 13
-	ZSDO J 0 A_Jump(32, "KillTaunt")
+	ZSDO J 0 A_Jump(16, "KillTaunt")
     ZSDO K 13 A_SpawnItem("GmidSuperShotgun")
     ZSDO L 10
     ZSDO M 10
@@ -80,7 +80,7 @@ actor SawedOffShotgunGuy
 	TNT1 A 0 A_SpawnDebris("GutsGib")
 	TNT1 A 0 A_SpawnDebris("DukeGibs5")
 	TNT1 A 0 A_SpawnDebris("BloodSplurt")
-	TNT1 A 0 A_Jump(32, "GibTaunt")
+	TNT1 A 0 A_Jump(16, "GibTaunt")
     Stop
   GibTaunt:
 	TNT1 A 0 A_PlaySound("player/gibtaunt", CHAN_AUTO)

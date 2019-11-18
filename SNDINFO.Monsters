@@ -584,7 +584,7 @@ sawedoff/death6 sawedd6
 sawedoff/death7 sawedd7
 sawedoff/death8 sawedd8
 
-$random bgrunt/see {bg/s1 bg/s2 bg/s3 bg/s4 bg/s5 bg/s6 bg/s7 bg/s8 bg/s9}
+$random bgrunt/see {bg/s1 bg/s2 bg/s3 bg/s4 bg/s5 bg/s6 bg/s7 bg/s8 bg/s9 bg/s10 bg/s11 bg/s12 bg/s13 bg/s14 bg/s15}
 bg/s1 BGRSEE01
 bg/s2 BGRSEE02
 bg/s3 BGRSEE03
@@ -594,6 +594,12 @@ bg/s6 BGRSEE06
 bg/s7 BGRSEE07
 bg/s8 BGRSEE08
 bg/s9 BGRSEE09
+bg/s10 BGRSEE10
+bg/s11 BGRSEE11
+bg/s12 BGRSEE12
+bg/s13 BGRSEE13
+bg/s14 BGRSEE14
+bg/s15 BGRSEE15
 $random bgrunt/active {bg/a1 bg/a2 bg/a3 bg/a4 bg/a5 bg/a6 bg/a7}
 bg/a1 BGRACT01
 bg/a2 BGRACT02
@@ -602,13 +608,14 @@ bg/a4 BGRACT04
 bg/a5 BGRACT05
 bg/a6 BGRACT06
 bg/a7 BGRACT07
-$random bgrunt/pain {bg/p1 bg/p2 bg/p3 bg/p4 bg/p5 bg/p6}
+$random bgrunt/pain {bg/p1 bg/p2 bg/p3 bg/p4 bg/p5 bg/p6 bg/p7}
 bg/p1 BGRPAI01
 bg/p2 BGRPAI02
 bg/p3 BGRPAI03
 bg/p4 BGRPAI04
 bg/p5 BGRPAI05
 bg/p6 BGRPAI06
+bg/p7 BGRPAI07
 $random bgrunt/death {bg/d1 bg/d2 bg/d3 bg/d4}
 bg/d1 BGRDTH1
 bg/d2 BGRDTH2
@@ -804,15 +811,11 @@ $random Zombie/Burn { Zombie/Burn1 Zombie/Burn2 Zombie/Burn3 }
 Zombie/Burn1					BURNZOM1
 Zombie/Burn2					BURNZOM2
 Zombie/Burn3					BURNZOM3
-$random Female/Burn { Female/Burn1 Female/Burn2 Female/Burn3 Female/Burn4 Female/Burn5 Female/Burn6 Female/Burn7 Female/Burn8 }
+$random Female/Burn { Female/Burn1 Female/Burn2 Female/Burn3 Female/Burn4 }
 Female/Burn1					FEMFIRE1
 Female/Burn2					FEMFIRE2
 Female/Burn3					FEMFIRE3
 Female/Burn4					FEMFIRE4
-Female/Burn5					FEMFIRE5
-Female/Burn6					FEMFIRE6
-Female/Burn7					FEMFIRE7
-Female/Burn8					FEMFIRE8
 
 body/hitfloor1					BODLAND1
 body/hitfloor2					BODLAND2
@@ -821,7 +824,11 @@ body/hitfloor4					BODLAND4
 body/hitfloor5					BODLAND5
 body/hitfloor6					BODLAND6
 body/hitfloor7					BODLAND7
-$random body/hitfloor { body/hitfloor1 body/hitfloor2 body/hitfloor3 body/hitfloor4 body/hitfloor5 body/hitfloor6 body/hitfloor7 }
+body/hitfloor8					BODLAND8
+body/hitfloor9					BODLAND9
+body/hitfloor10					BODLAND0
+body/hitfloor11					BODLANDA
+$random body/hitfloor { body/hitfloor1 body/hitfloor2 body/hitfloor3 body/hitfloor4 body/hitfloor5 body/hitfloor6 body/hitfloor7 body/hitfloor8 body/hitfloor9 body/hitfloor10 body/hitfloor11 }
 gore/hitbig GOREHIT
 gore/head	HEADSHOT
 

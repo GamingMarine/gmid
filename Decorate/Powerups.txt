@@ -1,0 +1,414 @@
+ACTOR NewAllmap : MapRevealer replaces Allmap
+{
+  +COUNTITEM
+  +INVENTORY.FANCYPICKUPSOUND
+  +INVENTORY.ALWAYSPICKUP
+  Inventory.MaxAmount 0
+  Inventory.PickupSound "pc/pick"
+  Inventory.PickupMessage "Automap downloaded!"
+  States
+  {
+  Spawn:
+	PMAP A 0
+    PMAP A 0 A_PlaySound("pc/idle", CHAN_AUTO, 1.0, 1)
+	Goto Idle
+  Idle:
+    PMAP ABCBAD 3 Bright
+    Loop
+  }
+}
+
+Actor BioSuit : CustomInventory replaces RadSuit
+{
+  -CountItem
+  +Inventory.AlwaysPickup
+  +Inventory.AutoActivate
+  Inventory.MaxAmount 0
+  Inventory.PickupMessage "Put on a bio-suit."
+  Inventory.PickupSound "RADS"
+  States
+  {
+  Spawn:
+    BIOS A -1
+    Loop
+  Pickup:
+    TNT1 A 0 A_GiveInventory("BioSuitFeet", 1)
+    TNT1 A 0 A_GiveInventory("BioSuitProtector", 1)
+    Stop
+  }
+}
+
+Actor BioSuitFeet : PowerupGiver
+{
+  +Inventory.AutoActivate
+  +Inventory.AlwaysPickup
+  Inventory.MaxAmount 0
+  Inventory.PickupMessage ""
+  Powerup.Type "IronFeet"
+  Powerup.Duration -120
+  Powerup.Color "Green", 0.1
+  States
+  {
+  Spawn:
+    TNT1 A 1
+    Fail
+  }
+}
+
+Actor PowerBioSuitProtection : PowerProtection
+{
+  DamageFactor "Poison", 0.1
+  Inventory.Icon "BIOSA0"
+  //Add your custom poison-ish damagetypes here!
+}
+
+Actor BioSuitProtector : PowerupGiver
+{
+  +Inventory.AutoActivate
+  +Inventory.AlwaysPickup
+  Inventory.MaxAmount 0
+  Inventory.PickupMessage ""
+  Powerup.Type BioSuitProtection
+  Powerup.Duration -120
+  States
+  {
+  Spawn:
+    TNT1 A 1
+    Fail
+  }
+}
+
+Actor NightVisionGoggles : InfraRed replaces InfraRed
+{
+  Scale 0.75
+  Powerup.Type "LightAmp2"
+  Inventory.PickupMessage "Night vision goggles!"
+  Inventory.PickupSound "nvg/pick"
+  States
+  {
+  Spawn:
+	PVIS A -1
+	Stop
+  }
+}
+
+Actor PowerLightAmp2 : PowerLightAmp
+{
+  Inventory.Icon "PVISA0"
+}
+
+ACTOR InvulnerabilitySphere_  : PowerupGiver Replaces InvulnerabilitySphere
+{
+	Game Doom
+	SpawnID 133
+	+COUNTITEM
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	+INVENTORY.BIGPOWERUP
+	Inventory.MaxAmount 0
+	Powerup.Type Invulnerable2
+	Powerup.Color "Yellow", 0.05
+	Inventory.PickupMessage "\c[DarkGreen]Invulnerability!"
+	Inventory.PickupSound "INVULGET"
+	Alpha 0.99
+	Scale 0.82
+	+FLOATBOB
+	States
+	{
+	Spawn:
+		PINV AAAAAAAAAAAAAAAAAAAA 3 Bright A_SpawnItem("InvulnerabilitySphereEffectA")
+		PINV B 3 Bright A_SpawnItem("InvulnerabilitySphereEffectB")
+		PINV C 3 Bright A_SpawnItem("InvulnerabilitySphereEffectC")
+		PINV DDDDDDDDDDDDDDDDDDDD 3 Bright A_SpawnItem("InvulnerabilitySphereEffectD")
+		PINV C 3 Bright A_SpawnItem("InvulnerabilitySphereEffectC")
+		PINV B 3 Bright A_SpawnItem("InvulnerabilitySphereEffectB")
+		Loop
+	}
+}
+
+Actor PowerInvulnerable2 : PowerInvulnerable
+{
+	Inventory.Icon "PINVD0"
+}
+Actor InvulnerabilitySphereEffectA
+{
+	+NOINTERACTION
+	+NOGRAVITY
+	+FORCEXYBILLBOARD
+	+NOTONAUTOMAP
+	+NOTIMEFREEZE
+	Alpha 0.99
+	Scale 0.82
+	Renderstyle Add
+	States
+	{
+	Spawn:
+	  PINV A 2 A_FadeOut (0.1)
+	  Loop
+	 }
+}
+
+Actor InvulnerabilitySphereEffectB : InvulnerabilitySphereEffectA
+{
+	States
+	{
+	Spawn:
+	  PINV B 2 A_FadeOut (0.1)
+	  Loop
+	 }
+}
+
+Actor InvulnerabilitySphereEffectC : InvulnerabilitySphereEffectA
+{
+	States
+	{
+	Spawn:
+	  PINV C 2 A_FadeOut (0.1)
+	  Loop
+	 }
+}
+
+Actor InvulnerabilitySphereEffectD : InvulnerabilitySphereEffectA
+{
+	States
+	{
+	Spawn:
+	  PINV D 2 A_FadeOut (0.1)
+	  Loop
+	 }
+}
+
+ACTOR LifeSphere : Health Replaces SoulSphere
+{
+	+COUNTITEM
+	+INVENTORY.ALWAYSPICKUP
+	Inventory.PickupMessage "\c[blue]SoulSphere!"
+	Scale 0.82
+	Alpha 0.99
+	Inventory.PickupSound "soulget"
+	Inventory.Amount 100
+	Inventory.MaxAmount 250
+	+FLOATBOB
+	States
+	{
+	Spawn:
+		SOUL AAAAAAAAAAAAAAAAAAAA 3 Bright A_SpawnItem("SoulSphereEffectA")
+		SOUL B 3 Bright A_SpawnItem("SoulSphereEffectB")
+		SOUL C 3 Bright A_SpawnItem("SoulSphereEffectC")
+		SOUL DDDDDDDDDDDDDDDDDDDD 3 Bright A_SpawnItem("SoulSphereEffectD")
+		SOUL C 3 Bright A_SpawnItem("SoulSphereEffectC")
+		SOUL B 3 Bright A_SpawnItem("SoulSphereEffectB")
+		Loop
+	}
+}
+
+Actor SoulSphereEffectA : InvulnerabilitySphereEffectA
+{
+	States
+	{
+	Spawn:
+	  SOUL A 2 A_FadeOut (0.1)
+	  Loop
+	 }
+}
+
+Actor SoulSphereEffectB : InvulnerabilitySphereEffectA
+{
+	States
+	{
+	Spawn:
+	  SOUL B 2 A_FadeOut (0.1)
+	  Loop
+	 }
+}
+
+Actor SoulSphereEffectC : InvulnerabilitySphereEffectA
+{
+	States
+	{
+	Spawn:
+	  SOUL C 2 A_FadeOut (0.1)
+	  Loop
+	 }
+}
+
+Actor SoulSphereEffectD : InvulnerabilitySphereEffectA
+{
+	States
+	{
+	Spawn:
+	  SOUL D 2 A_FadeOut (0.1)
+	  Loop
+	 }
+}
+
+ACTOR EnergySphere : CustomInventory Replaces Megasphere
+{
+	+COUNTITEM
+	+INVENTORY.ALWAYSPICKUP
+	Inventory.PickupMessage "\c[Tan]MegaSphere!"
+	Inventory.PickupSound "megaget"
+	Scale 0.82
+	Alpha 0.99
+	+FLOATBOB
+	States
+	{
+	Spawn:
+		MEGA A 3 Bright A_SpawnItem("MegaSphereEffectA")
+		MEGA B 3 Bright A_SpawnItem("MegaSphereEffectB")
+		MEGA C 3 Bright A_SpawnItem("MegaSphereEffectC")
+		MEGA D 3 Bright A_SpawnITem("MegaSphereEffectD")
+		Loop
+	Pickup:
+		TNT1 A 0 A_GiveInventory("PraetorArmorVest", 1)
+		TNT1 A 0 A_GiveInventory("NewMegasphereHealth", 1)
+		Stop
+	}
+}
+
+Actor MegaSphereEffectA : InvulnerabilitySphereEffectA
+{
+	States
+	{
+	Spawn:
+	  MEGA A 1 A_FadeOut (0.1)
+	  Loop
+	 }
+}
+
+Actor MegaSphereEffectB : InvulnerabilitySphereEffectA
+{
+	States
+	{
+	Spawn:
+	  MEGA B 1 A_FadeOut (0.1)
+	  Loop
+	 }
+}
+
+Actor MegaSphereEffectC : InvulnerabilitySphereEffectA
+{
+	States
+	{
+	Spawn:
+	  MEGA C 1 A_FadeOut (0.1)
+	  Loop
+	 }
+}
+
+Actor MegaSphereEffectD : InvulnerabilitySphereEffectA
+{
+	States
+	{
+	Spawn:
+	  MEGA D 1 A_FadeOut (0.1)
+	  Loop
+	 }
+}
+
+ACTOR NewMegasphereHealth : Health
+{
+  Inventory.Amount 200
+  Inventory.MaxAmount 200
+  +INVENTORY.ALWAYSPICKUP
+}
+
+ACTOR PowerDoubleDamage : PowerDamage
+{
+	Damagefactor "normal", 2
+	Inventory.Icon "DDMGC0"
+}
+
+ACTOR DoubleSphere : PowerupGiver
+{
+	+COUNTITEM
+	+NOGRAVITY
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	+FLOATBOB
+	Inventory.MaxAmount 0
+	Powerup.Type DoubleDamage
+	Powerup.Color Red, 0.3
+	Powerup.Duration -30
+	Alpha 0.99
+	Inventory.PickupMessage "\cgDouble Damage!\c-"
+	Inventory.PickupSound "DoubleDamage/Pickup"
+	States
+	{
+	Spawn:
+		DDMG AAAAAAAAAAAAAAAAAAAA 3 Bright A_SpawnItem("DoubleSphereEffectA")
+		DDMG B 3 Bright A_SpawnItem("DoubleSphereEffectB")
+		DDMG CCCCCCCCCCCCCCCCCCCC 3 Bright A_SpawnItem("DoubleSphereEffectC")
+		DDMG B 3 Bright A_SpawnItem("DoubleSphereEffectB")
+		Loop
+	}
+}
+
+Actor DoubleSphereEffectA : InvulnerabilitySphereEffectA
+{
+	Scale 1.0
+	States
+	{
+	Spawn:
+	  DDMG A 1 A_FadeOut (0.1)
+	  Loop
+	 }
+}
+
+Actor DoubleSphereEffectB : DoubleSphereEffectA
+{
+	States
+	{
+	Spawn:
+	  DDMG B 1 A_FadeOut (0.1)
+	  Loop
+	 }
+}
+
+Actor DoubleSphereEffectC : DoubleSphereEffectA
+{
+	States
+	{
+	Spawn:
+	  DDMG C 1 A_FadeOut (0.1)
+	  Loop
+	 }
+}
+
+Actor PowerQuadDamageST : PowerDamage
+{
+Damagefactor "Normal", 4
+Inventory.Icon "QDMGA0"
+}
+
+Actor QuadDamage : PowerupGiver
+{
+  +CountItem
+  +Inventory.AutoActivate
+  +Inventory.AlwaysPickup
+  Inventory.MaxAmount 0
+  Powerup.Type QuadDamageST
+  Powerup.Color Blue, 0.3
+  powerup.duration 1050
+  Inventory.PickupMessage "\c[LightBlue]Quad Damage!\c-"
+  Inventory.PickupSound "QuadDamage/Pickup"
+  Scale 0.82
+  Alpha 0.99
+  +FLOATBOB
+  States
+  {
+  Spawn:
+	QDMG A 1 Bright A_SpawnItem("QuadDamageEffect")
+    Loop
+  }
+}
+
+Actor QuadDamageEffect : InvulnerabilitySphereEffectA
+{
+	States
+	{
+	Spawn:
+	  QDMG A 1 A_FadeOut (0.1)
+	  Loop
+	 }
+}

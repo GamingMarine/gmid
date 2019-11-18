@@ -119,6 +119,31 @@ AM_ITEMS			= "Items Collected:";
 
 MNU_DELETESG		= "Are you SURE you want to delete the savegame\n";
 
+MENUNEWG = "Kill Some Stuff";
+MENUOPTN = "Configure";
+MENULOAD = "Restore Progress";
+MENULOADNETGAME = "You will need to quit this netgame in order to load any progress.";
+MENUSAVE = "Save Progress";
+MENUQUIT = "Surrender";
+MENUEPSD = "Choose Your Fate";
+MENUSKIL = "How tough are you?";
+DIFFNAME1 = "Trainee";
+DIFFNAME2 = "Rookie";
+DIFFNAME3 = "Grunt";
+DIFFNAME4 = "Sergeant";
+DIFFNAME5 = "Recruit";
+DIFFNAME6 = "Veteran";
+DIFFNAME7 = "Lost Cause";
+DIFFSELECT1 = "The Master Force seems to have worryingly underestimated the Marine Corp, considering the amount of firepower they're sending your way.\n\nNot only will the amount of enemies you'll encounter be minimal, but you'll take half the amount of damage, and all the ammunition you'll find will be doubled.";
+DIFFSELECT2 = "Your friends luckily managed to take out most of the foes lurking around the area. That doesn't mean they survived...\n\nThe amount of enemies you will face on the battlefield will be fairly small, but will be able to take you down if you're not careful.";
+DIFFSELECT3 = "Your training has suited you rather well for this mission.\n\nEnemy forces will come in packs, willing to take a human down without question. If you know what you're doing, then your chances of survival are fairly high.";
+DIFFSELECT4 = "The Master Force knows what they're facing. In return, they're outnumbering you and the rest of the Marine Corp. Look at what's happened because of that...\n\nThere will be foes lurking around practically every single corner. You best hope you have what it takes or you're dead meat.";
+DIFFSELECT5 = "Despite how well you've payed attention during your training and the mission breifing, you still feel fragile.\n\nNot only will you find members of the Master Force every five seconds, but you will also take twice the amount of all damage...\n...including friendly fire from \c[brick]Cookiedemon\c-!";
+DIFFSELECT6 = "They know where you're hiding. If you try to run, they'll follow you.\nThere is no escape.\n\nYou will be surrounded the whole mission, and you will be taking twice the beating. To make matters worse, your foes will be much more aggressive towards you, and take half as much damage. Thank God \c[brick]Cookiedemon\c- is also applied to this...";
+DIFFSELECT7 = "You have absolutely no idea what you're dealing with. You will know what it means to be...\n...a \cmLost Cause\c-.\n\nAll your foes have \c[LightBlue]Quad Damage\c- applied to their attacks, take four times the beating, show you no mercy, will not infight, and will never, *ever* flinch. Any hope of salvation is gone for extra measures. Only the best of the best will survive.";
+
+GMIDTITLEMAP = "Your Adventure Begins";
+
 //Story screen text
 //Doom
 E1TEXT =
@@ -244,7 +269,7 @@ C4TEXT =
 	"The invasion is no more. Humanity can\n"
 	"come back to Earth, and restore the heavily\n"
 	"decreased population safely. You will now be\n"
-	"seen as a hero, but you feel that's no enough.\n"
+	"seen as a hero, but you feel that's not enough.\n"
 	"You wish to help everyone rebuild what was once\n"
 	"your favorite places when you were young.\n"
 	"\n"
@@ -313,7 +338,7 @@ P4TEXT =
 	"of a story to tell them.";
 P5TEXT =
 	"Congratulations! You have just recieved a one-way\n"
-	"ticket the two hardest areas we have available.\n"
+	"ticket to the two hardest areas we have available.\n"
 	"\n"
 	"Welcome to the Cyberden. Only a master marine will\n"
 	"succeed.";
@@ -340,7 +365,7 @@ T2TEXT =
 	"The grinding and wailing of heavy machinery\n"
 	"nearby begins to unsettle you. Hopefully,\n"
 	"it's not being used to stamp out more GMBots\n"
-	"and the like. If that's so, you'll be ready\n"
+	"and the like. If that's so, you'll be ready to\n"
 	"trash it all. You have a feeling that the Master\n"
 	"Force is planning an all-out massacre, but you\n"
 	"feel as mean as a bull at a rodeo.\n"
@@ -381,7 +406,7 @@ T6TEXT =
 	"beating of a thousand serial killers, you're\n"
 	"just about ready for a break. ''Maybe someone\n"
 	"else can kick the Master Force's ass next time\n"
-	"around'', you mutter to yourself. You step forth\n"
+	"around,'' you mutter to yourself. You step forth\n"
 	"into the welcoming, quiet town, complete with a\n"
 	"gently flowing stream and quaint buildings.\n"
 	"\n"

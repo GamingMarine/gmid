@@ -1,11 +1,13 @@
 #include Decorate/Main.txt
-#include Decorate/Spheres.txt
+#include Decorate/Powerups.txt
 #include Decorate/Inventory.txt
 #include Decorate/Spawner.txt
 #include Decorate/Decorations.txt
 #include Decorate/FX.txt
+#include Decorate/Heroes/GamingMarine.txt
 #include Decorate/Heroes/Cookiedemon.txt
 #include Decorate/Weapons/RevX.txt
+#include Decorate/Weapons/LeadPoisoning.txt
 #include Decorate/Weapons/SoulCube.txt
 #include Decorate/Monsters/Monsters.txt
 #include Decorate/Monsters/MasterForceBase.txt
@@ -20,8 +22,8 @@
 #include Decorate/Monsters/ChaingunMajor.txt
 #include Decorate/Monsters/EvilMarines.txt
 #include Decorate/Monsters/ZombieScientist.txt
+#include Decorate/Monsters/GMBot.txt
 #include Decorate/Monsters/MasterForceLord.txt
 #include Decorate/Monsters/ScriptedMarines.txt
-#include Decorate/Monsters/Taokaka.txt
 #include Decorate/Monsters/WayneCampbell.txt
 #include Decorate/Monsters/MonstersCastCall.txt

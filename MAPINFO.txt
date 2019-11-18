@@ -9,8 +9,8 @@ skill baby
 	AmmoFactor = 2
 	SpawnFilter = Baby
 	TextColor = Cyan
-	Name = "Trainee"
-	MustConfirm = "The Master Force seems to have worryingly underestimated the Marine Corp, considering the amount of firepower they're sending your way. Not only will the amount of enemies you'll encounter be minimal, but you'll take half the amount of damage, and all the ammunition you'll find will be doubled."
+	Name = "$DIFFNAME1"
+	MustConfirm = "$DIFFSELECT1"
 }
 
 skill easy
@@ -19,8 +19,8 @@ skill easy
 	EasyBossBrain
 	SpawnFilter = Easy
 	TextColor = Blue
-	Name = "Rookie"
-	MustConfirm = "Your friends luckily managed to take out most of the foes lurking around the area. That doesn't mean they survived... The amount of enemies you will face on the battlefield will be fairly small, but will be able to take you down if you're not careful."
+	Name = "$DIFFNAME2"
+	MustConfirm = "$DIFFSELECT2"
 }
 
 skill normal
@@ -28,8 +28,8 @@ skill normal
 	ACSReturn = 2
 	SpawnFilter = Normal
 	TextColor = Green
-	Name = "Grunt"
-	MustConfirm = "Your training has suited you rather well for this mission. Enemy forces will come in packs, willing to take a human down without question. If you know what you're doing, then your chances of survival are fairly high."
+	Name = "$DIFFNAME3"
+	MustConfirm = "$DIFFSELECT3"
 	DefaultSkill
 }
 
@@ -38,8 +38,8 @@ skill hard
 	ACSReturn = 3
 	SpawnFilter = Hard
 	TextColor = Yellow
-	Name = "Sergeant"
-	MustConfirm = "The Master Force knows what they're facing. In return, they're outnumbering you and the rest of the Marine Corp. Look at what's happened because of that... There will be foes lurking around practically every single corner. You best hope you have what it takes or you're dead meat."
+	Name = "$DIFFNAME4"
+	MustConfirm = "$DIFFSELECT4"
 }
 
 skill veryhard
@@ -47,8 +47,8 @@ skill veryhard
 	ACSReturn = 4
 	SpawnFilter = Hard
 	TextColor = Orange
-	Name = "Recruit"
-	MustConfirm = "Despite how well you've payed attention during your training and the mission breifing, you still feel fragile. Not only will you find members of the Master Force every five seconds, but you will also take twice the amount of all damage... including friendly fire from Cookiedemon!"
+	Name = "$DIFFNAME5"
+	MustConfirm = "$DIFFSELECT5"
 	DamageFactor = 2
 }
 
@@ -57,8 +57,8 @@ skill extrahard
 	ACSReturn = 5
 	SpawnFilter = Hard
 	TextColor = Red
-	Name = "Veteran"
-	MustConfirm = "They know where you're hiding. If you try to run, they'll follow you. There is no escape. You will be surrounded the whole mission, and you will be taking twice the beating. To make matters worse, your foes will be much more aggressive towards you, and take half as much damage. Thank God Cookiedemon is also applied to this..."
+	Name = "$DIFFNAME6"
+	MustConfirm = "$DIFFSELECT6"
 	DamageFactor = 2
 	Aggressiveness = 0.5
 	MonsterHealth = 2
@@ -69,8 +69,8 @@ skill nightmare
 	ACSReturn = 6
 	SpawnFilter = Hard
 	TextColor = Black
-	Name = "Lost Cause"
-	MustConfirm = "You have absolutely no idea what you're dealing with. You will know what it means to be... a Lost Cause. All your foes have Quad Damage applied to their attacks, take four times the beating, show you no mercy, will not infight, and will never, ever flich. Any hope of salvation is gone for extra measures. Only the best of the best will survive."
+	Name = "$DIFFNAME7"
+	MustConfirm = "$DIFFSELECT7"
 	DamageFactor = 4
 	Aggressiveness = 1.0
 	MonsterHealth = 4
@@ -81,14 +81,15 @@ skill nightmare
 
 gameinfo
 {
-	intermissionmusic = "D_INTER"
+	intermissionmusic = "MSSNCLER"
+	finalemusic = "DETHMINE"
 	pickupcolor = "blue"
 	quitmessages = "$QUITMSG","$QUITMSG1","$QUITMSG2","$QUITMSG3","$QUITMSG4",
 	"$QUITMSG5","$QUITMSG6","$QUITMSG7","$QUITMSG8","$QUITMSG9","$QUITMSG10",
 	"$QUITMSG11","$QUITMSG12","$QUITMSG13","$QUITMSG14"
 }
 
-map TITLEMAP lookup "Your Adventure Begins"
+map TITLEMAP lookup "$GMIDTITLEMAP"
 {
 	music = FLCASTLE
 	skybox = GFIRSK00

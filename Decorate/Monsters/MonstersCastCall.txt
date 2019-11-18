@@ -61,7 +61,6 @@ ACTOR BlasterSoldierCastCall
 
 actor EvilMarine_RifleCastCall
 {
-  Scale 1.06
   Monster
   SeeSound "bgrunt/see"
   DeathSound "bgrunt/death"
@@ -137,7 +136,6 @@ Actor ZSpecOpsShotgunCastCall
 
 actor EvilMarine_ShotgunCastCall
 {
-  Scale 1.06
   Monster
   SeeSound "bgrunt/see"
   DeathSound "bgrunt/death"
@@ -176,7 +174,6 @@ Actor ChaingunMajorCastCall : ChaingunMajor
 
 actor EvilMarine_MinigunCastCall
 {
-  Scale 1.06
   Monster
   SeeSound "bgrunt/see"
   DeathSound "bgrunt/death"
@@ -184,17 +181,17 @@ actor EvilMarine_MinigunCastCall
   States
   {
   Spawn:
-	PLA5 E 10 A_Look
+	PLA4 E 10 A_Look
     Loop
   See:
-	PLA5 AABBCCDD 2 A_FastChase	
+	PLA4 AABBCCDD 2 A_FastChase	
 	Loop
   Missile:
-	PLA5 E 10 A_FaceTarget
-	PLA5 G 1 bright A_CustomBulletAttack(22.5, 0, 3, random(1,5)*3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
-	PLA5 E 1
-	PLA5 G 1 bright A_CustomBulletAttack(22.5, 0, 3, random(1,5)*3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
-	PLA5 E 1 A_SpidRefire
+	PLA4 E 10 A_FaceTarget
+	PLA4 G 1 bright A_CustomBulletAttack(22.5, 0, 3, random(1,5)*3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	PLA4 E 1
+	PLA4 G 1 bright A_CustomBulletAttack(22.5, 0, 3, random(1,5)*3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	PLA4 E 1 A_SpidRefire
 	Goto Missile+1
   Death:
 	XPL1 A 10
@@ -244,31 +241,30 @@ ACTOR ZombieScientistCastCall
 actor HellhoundCastCall
 { 
 	Monster
-	Scale .6
 	Deathsound "Hellhound/die"
 	SeeSound "Hellhound/sit"
 	States
 	{
   	Spawn:
-		HOUN A 10 A_Look 
+		HNCC A 10 A_Look 
 		Loop
 	See:
-		HOUN AABBCCDDEEFF 2 A_Chase
+		HNCC AABBCCDDEEFF 2 A_Chase
 		Loop
 	Melee:
-		HOUN H 5 A_FaceTarget
-		HOUN I 7 A_SargAttack
-		HOUN A 7
+		HNCC H 5 A_FaceTarget
+		HNCC I 7 A_SargAttack
+		HNCC A 7
 		Goto See
 	Death:
-		HOUN K 6
-		HOUN L 5 A_Scream
-		HOUN M 4
-		HOUN N 4 A_NoBlocking
-		HOUN O 4
-		HOUN P 4
-		HOUN Q 4
-		HOUN R -1
+		HNCC K 6
+		HNCC L 5 A_Scream
+		HNCC M 4
+		HNCC N 4 A_NoBlocking
+		HNCC O 4
+		HNCC P 4
+		HNCC Q 4
+		HNCC R -1
 		Stop
 	}
 }
@@ -313,55 +309,55 @@ Actor GamingMarineCloneCastCall
   States
   {
   Spawn:
-	PLID A 10 A_Look
+	GMRN Z 10 A_Look
     Loop
   See:
-	PLAY AABBCCDD 2 A_Chase
+	GMRN AABBCCDD 2 A_Chase
 	Loop
   Missile:
-	PLAY E 10 A_FaceTarget
-	PLAY F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
-	PLAY E 2
-	PLAY F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
-	PLAY E 2
-	PLAY F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
-	PLAY E 2
-	PLAY F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
-	PLAY E 2
-	PLAY F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
-	PLAY E 2
-	PLAY F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
-	PLAY E 2
-	PLAY F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
-	PLAY E 2
-	PLAY F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
-	PLAY E 2
-	PLAY F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
-	PLAY E 2
-	PLAY F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
-	PLAY E 2
-	PLAY F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
-	PLAY E 2
-	PLAY F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
-	PLAY E 2
-	PLAY F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
-	PLAY E 2
-	PLAY F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
-	PLAY E 2
-	PLAY F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
-	PLAY E 2
-	PLAY F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
-	PLAY E 2
+	GMRN E 10 A_FaceTarget
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
 	Goto See
   Melee:
-	PLAY E 0 A_PlaySound("GamingMarineClone/Ready")
-	PLAY E 35 A_FaceTarget
-	PLAY F 12 A_CyberAttack
-	PLAY E 12
+	GMRN E 0 A_PlaySound("GamingMarineClone/Ready")
+	GMRN E 35 A_FaceTarget
+	GMRN F 12 A_CyberAttack
+	GMRN E 12
 	Goto See
   Death:
-	PLAY G 0 A_Scream
-	PLAY G 20
+	GMRN G 0 A_Scream
+	GMRN G 20
 	YXPL ABCDEFGHIJKLMNOPQ 3
 	Stop
    }

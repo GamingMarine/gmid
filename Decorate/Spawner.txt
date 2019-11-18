@@ -159,7 +159,6 @@ Actor MinorFoodSpawner : RandomSpawner replaces Stimpack
 DropItem "Apple"
 DropItem "Grapes"
 DropItem "Orange"
-DropItem "HealingPillsJar"
 }
 
 Actor MajorFoodSpawner : RandomSpawner replaces Medikit
@@ -167,7 +166,6 @@ Actor MajorFoodSpawner : RandomSpawner replaces Medikit
 DropItem "Hamburg"
 DropItem "EntireChickenYouWeirdo"
 DropItem "PizzaZone"
-DropItem "HealingSerum"
 }
 
 //This is a new set of weapon spawners.
@@ -519,47 +517,6 @@ Actor BossDeathSpawner : RandomSpawner
 	DropItem "BossDeathFS"
 	DropItem "BossDeathTS"
 }
-
-//Chance of that one thing spawning
-actor ImpSpawner16 : RandomSpawner
-{
-	DropItem "Taokaka"
-	DropItem "AmyPie"
-	DropItem "AmyPie"
-	DropItem "AmyPie"
-	DropItem "AmyPie"
-	DropItem "AmyPie"
-	DropItem "AmyPie"
-	DropItem "AmyPie"
-	DropItem "AmyPie"
-	DropItem "AmyPie"
-	DropItem "AmyPie"
-	DropItem "AmyPie"
-	DropItem "AmyPie"
-	DropItem "AmyPie"
-	DropItem "AmyPie"
-	DropItem "AmyPie"
-}
-
-actor ImpSpawner512 : RandomSpawner replaces DoomImp
-{
-	DropItem "ImpSpawner16"
-	DropItem "AmyPie"
-	DropItem "AmyPie"
-	DropItem "AmyPie"
-	DropItem "AmyPie"
-	DropItem "AmyPie"
-	DropItem "AmyPie"
-	DropItem "AmyPie"
-	DropItem "AmyPie"
-	DropItem "AmyPie"
-	DropItem "AmyPie"
-	DropItem "AmyPie"
-	DropItem "AmyPie"
-	DropItem "AmyPie"
-	DropItem "AmyPie"
-}
-
 
 actor DemonSpawner2 : RandomSpawner replaces YoPretendImaDemon //For compatibility with Consolation Prize
 {

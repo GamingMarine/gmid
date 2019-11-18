@@ -1,0 +1,88 @@
+Actor GamingMarineClone replaces Revenant
+{
+  Game Doom
+  health 300
+  PainChance 0
+  Speed 7.5
+  Radius 16
+  Height 56
+  Monster
+  SeeSound "GamingMarineClone/sight"
+  ActiveSound "GamingMarineClone/idle"
+  DeathSound "GamingMarineClone/death"
+  AttackSound "GamingMarineClone/Fire"
+  translation "112:127=[0,128,192]:[0,0,0]"
+  Obituary "%o didn't stand a chance against a GMBot."
+  +NOBLOOD
+  +NOICEDEATH
+  Tag "GMBot"
+  States
+  {
+  Spawn:
+	GMRN Z 10 A_Look
+    Loop
+  See:
+	GMRN AABB 2 A_Chase
+	GMRN C 0 A_PlaySound("Cyber/Hoof", CHAN_BODY)
+	GMRN CCDD 2 A_Chase
+	GMRN A 0 A_PlaySound("Cyber/Hoof", CHAN_BODY)
+	Loop
+  Pain:
+	GMRN G 0 A_PlaySound("Weapons/CrowbarHitFlesh")
+	Goto See
+  Missile:
+	TNT1 A 0 A_Jump (256, "Missile1", "Missile2")
+  Missile1: //Boolet attack
+	GMRN E 10 A_FaceTarget
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	GMRN F 1 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	GMRN E 2
+	Goto See
+  Missile2: //Motherfucker this dood also has a missile launcher?!
+	GMRN E 0 A_PlaySound("GamingMarineClone/Ready")
+	GMRN E 35 A_FaceTarget
+	GMRN F 12 A_CyberAttack
+	GMRN E 12
+	Goto See
+  Death:
+	GMRN G 0 A_PlaySound("Weapons/CrowbarHitFlesh")
+	GMRN G 0 A_Scream
+	GMRN G 20
+	GMRN G 0 A_PlaySound("explosion/distant", CHAN_AUTO)
+	GMRN G 0 A_PlaySound("newexplosion")
+	GMRN G 0 A_SpawnItem("NewExplosion")
+	TNT1 AAAAAAAAAAAAAAA 0 A_SpawnItemEx("BarrelParts",frandom(5.0,-5.0),frandom(5.0,-5.0),frandom(0.5,10.0),frandom(2.0,8.0),0,random(6.0,12.0),random(0,360)) 
+	Stop
+  Raise:
+	Stop
+   }
+}

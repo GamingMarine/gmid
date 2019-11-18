@@ -30,14 +30,9 @@ Song name: Take Down General Akhboob!
 Game of origin: Total Carnage (Arcade)
 Composer: Jon Hey
 
-7. D_VICTOR
+7. DETHMINE
 Song name: Death in the Mines
-Game of origin: Waxworks (Amiga)
-Composer: Jezz Woodroffe
-
-8. D_READ_M
-Song name: Mines of Suspense
-Game of origin: Waxworks (Amiga)
+Game of origin: Waxworks (DOS, Roland MT-32)
 Composer: Jezz Woodroffe
 
 9. D_BUNNY

@@ -86,7 +86,7 @@ actor Changeling replaces LostSoul
 	CHGL L 4
 	CHGL M 0 A_SpawnItemEx("ChangelingTrailM",random(-1,1), random(-1,1), 0)
 	CHGL MMMMMMMMMMMMMM 2 A_FadeOut(0.05)
-	TNT1 A 0 A_Jump(32, "KillTaunt")
+	TNT1 A 0 A_Jump(16, "KillTaunt")
 	Stop
   KillTaunt:
   	TNT1 A 0 A_PlaySound("player/killtaunt", CHAN_AUTO)

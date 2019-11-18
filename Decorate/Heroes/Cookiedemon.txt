@@ -120,7 +120,7 @@ ACTOR Cookiedemon
 	MaxTargetRange 2000
 	Speed 3
 	FastSpeed 20
-	PainChance 256
+	PainChance 16
 	MONSTER
 	+QUICKTORETALIATE
 	+LOOKALLAROUND
@@ -143,6 +143,7 @@ ACTOR Cookiedemon
 	PainSound "cookie/pain"
 	DeathSound "cookie/death"
 	BloodColor "Blue"
+	BloodType "BloodFXSpawner_NoDroplets"
 	DamageFactor "Basic", 0.0 //Prevents the player from accidentally hurting Cookiedemon.
 	DamageFactor "GMIDExplosion", 0.0 //Same thing, but also goes for explosive barrels.
 	States
