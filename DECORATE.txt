@@ -6,6 +6,7 @@
 #include Decorate/FX.txt
 #include Decorate/Heroes/GamingMarine.txt
 #include Decorate/Heroes/Cookiedemon.txt
+#include Decorate/Weapons/Beretta.txt
 #include Decorate/Weapons/RevX.txt
 #include Decorate/Weapons/LeadPoisoning.txt
 #include Decorate/Weapons/SoulCube.txt

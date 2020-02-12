@@ -63,7 +63,7 @@ actor RevX : Weapon
 		RFL1 C 1 Bright A_Light1
 		RFL1 B 0 A_SetPitch(pitch+0.50)
 		RFL1 B 1 A_Light0
-		RFL1 A 2
+		RFL1 A 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 		RFL1 A 0 A_ReFire
 		Goto Ready
 	FireHalf:
@@ -73,7 +73,7 @@ actor RevX : Weapon
 		RFL1 C 1 Bright A_Light1
 		RFL1 B 0 A_SetPitch(pitch+0.50)
 		RFL1 B 1 A_Light0
-		RFL1 A 1
+		RFL1 A 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 		RFL1 A 0 A_ReFire
 		Goto Ready
 	FireNormal:
@@ -82,7 +82,8 @@ actor RevX : Weapon
 		RFL1 C 0 A_FireCustomMissile("RevXProjectile",0,1,8)
 		RFL1 C 1 Bright A_Light1
 		RFL1 B 0 A_SetPitch(pitch+0.50)
-		RFL1 B 1 A_Light0
+		RFL1 B 0 A_Light0
+		RFL1 B 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 		RFL1 A 0 A_ReFire
 		Goto Ready
 	QuadFire1:
@@ -93,7 +94,7 @@ actor RevX : Weapon
 		RFL1 C 1 Bright A_Light1
 		RFL1 B 0 A_SetPitch(pitch+0.50)
 		RFL1 B 1 A_Light0
-		RFL1 A 2
+		RFL1 A 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 		RFL1 A 0 A_ReFire
 		Goto Ready
 	QuadFire1Half:
@@ -104,7 +105,7 @@ actor RevX : Weapon
 		RFL1 C 1 Bright A_Light1
 		RFL1 B 0 A_SetPitch(pitch+0.50)
 		RFL1 B 1 A_Light0
-		RFL1 A 1
+		RFL1 A 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 		RFL1 A 0 A_ReFire
 		Goto Ready
 	QuadFire1Normal:
@@ -114,7 +115,8 @@ actor RevX : Weapon
 		RFL1 C 0 A_FireCustomMissile("RevXProjectile",0,1,8)
 		RFL1 C 1 Bright A_Light1
 		RFL1 B 0 A_SetPitch(pitch+0.50)
-		RFL1 B 1 A_Light0
+		RFL1 B 0 A_Light0
+		RFL1 B 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 		RFL1 A 0 A_ReFire
 		Goto Ready
 	CoolantFire:
@@ -127,7 +129,7 @@ actor RevX : Weapon
 		RFL2 C 1 Bright A_Light1
 		RFL2 B 0 A_SetPitch(pitch+0.50)
 		RFL2 B 1 A_Light0
-		RFL2 A 2
+		RFL2 A 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 		RFL2 A 0 A_ReFire
 		Goto Ready
 	CoolantFireHalf:
@@ -137,7 +139,7 @@ actor RevX : Weapon
 		RFL2 C 1 Bright A_Light1
 		RFL2 B 0 A_SetPitch(pitch+0.50)
 		RFL2 B 1 A_Light0
-		RFL2 A 1
+		RFL2 A 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 		RFL2 A 0 A_ReFire
 		Goto Ready
 	CoolantFireNormal:
@@ -146,7 +148,8 @@ actor RevX : Weapon
 		RFL2 C 0 A_FireCustomMissile("RevXProjectile",0,1,8)
 		RFL2 C 1 Bright A_Light1
 		RFL2 B 0 A_SetPitch(pitch+0.50)
-		RFL2 B 1 A_Light0
+		RFL2 B 0 A_Light0
+		RFL2 B 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 		RFL2 A 0 A_ReFire
 		Goto Ready
 	QuadFire2:
@@ -157,7 +160,7 @@ actor RevX : Weapon
 		RFL2 C 1 Bright A_Light1
 		RFL2 B 0 A_SetPitch(pitch+0.50)
 		RFL2 B 1 A_Light0
-		RFL2 A 2
+		RFL2 A 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 		RFL2 A 0 A_ReFire
 		Goto Ready
 	QuadFire2Half:
@@ -168,7 +171,7 @@ actor RevX : Weapon
 		RFL2 C 1 Bright A_Light1
 		RFL2 B 0 A_SetPitch(pitch+0.50)
 		RFL2 B 1 A_Light0
-		RFL2 A 1
+		RFL2 A 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 		RFL2 A 0 A_ReFire
 		Goto Ready
 	QuadFire2Normal:
@@ -178,7 +181,8 @@ actor RevX : Weapon
 		RFL2 C 0 A_FireCustomMissile("RevXProjectile",0,1,8)
 		RFL2 C 1 Bright A_Light1
 		RFL2 B 0 A_SetPitch(pitch+0.50)
-		RFL2 B 1 A_Light0
+		RFL2 B 0 A_Light0
+		RFL2 B 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 		RFL2 A 0 A_ReFire
 		Goto Ready
 	BarrelFire:
@@ -190,7 +194,7 @@ actor RevX : Weapon
 		RFL3 C 1 Bright A_Light1
 		RFL3 B 0 A_SetPitch(pitch+0.50)
 		RFL3 B 1 A_Light0
-		RFL3 A 2
+		RFL3 A 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 		RFL3 A 0 A_ReFire
 		Goto Ready
 	BarrelFireHalf:
@@ -200,7 +204,7 @@ actor RevX : Weapon
 		RFL3 C 1 Bright A_Light1
 		RFL3 B 0 A_SetPitch(pitch+0.50)
 		RFL3 B 1 A_Light0
-		RFL3 A 1
+		RFL3 A 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 		RFL3 A 0 A_ReFire
 		Goto Ready
 	BarrelFireNormal:
@@ -209,7 +213,8 @@ actor RevX : Weapon
 		RFL3 C 0 A_FireCustomMissile("SuperRevXProjectile",0,1,8)
 		RFL3 C 1 Bright A_Light1
 		RFL3 B 0 A_SetPitch(pitch+0.50)
-		RFL3 B 1 A_Light0
+		RFL3 B 0 A_Light0
+		RFL3 B 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 		RFL3 A 0 A_ReFire
 		Goto Ready
 	QuadFire3:
@@ -220,7 +225,7 @@ actor RevX : Weapon
 		RFL3 C 1 Bright A_Light1
 		RFL3 B 0 A_SetPitch(pitch+0.50)
 		RFL3 B 1 A_Light0
-		RFL3 A 2
+		RFL3 A 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 		RFL3 A 0 A_ReFire
 		Goto Ready
 	QuadFire3Half:
@@ -231,7 +236,7 @@ actor RevX : Weapon
 		RFL3 C 1 Bright A_Light1
 		RFL3 B 0 A_SetPitch(pitch+0.50)
 		RFL3 B 1 A_Light0
-		RFL3 A 1
+		RFL3 A 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 		RFL3 A 0 A_ReFire
 		Goto Ready
 	QuadFire3Normal:
@@ -241,7 +246,8 @@ actor RevX : Weapon
 		RFL3 C 0 A_FireCustomMissile("SuperRevXProjectile",0,1,8)
 		RFL3 C 1 Bright A_Light1
 		RFL3 B 0 A_SetPitch(pitch+0.50)
-		RFL3 B 1 A_Light0
+		RFL3 B 0 A_Light0
+		RFL3 B 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 		RFL3 A 0 A_ReFire
 		Goto Ready
 	SuperFire:
@@ -253,7 +259,7 @@ actor RevX : Weapon
 		RFL4 C 1 Bright A_Light1
 		RFL4 B 0 A_SetPitch(pitch+0.50)
 		RFL4 B 1 A_Light0
-		RFL4 A 2
+		RFL4 A 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 		RFL4 A 0 A_ReFire
 		Goto Ready
 	SuperFireHalf:
@@ -263,7 +269,7 @@ actor RevX : Weapon
 		RFL4 C 1 Bright A_Light1
 		RFL4 B 0 A_SetPitch(pitch+0.50)
 		RFL4 B 1 A_Light0
-		RFL4 A 1
+		RFL4 A 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 		RFL4 A 0 A_ReFire
 		Goto Ready
 	SuperFireNormal:
@@ -272,7 +278,8 @@ actor RevX : Weapon
 		RFL4 C 0 A_FireCustomMissile("SuperRevXProjectile",0,1,8)
 		RFL4 C 1 Bright A_Light1
 		RFL4 B 0 A_SetPitch(pitch+0.50)
-		RFL4 B 1 A_Light0
+		RFL4 B 0 A_Light0
+		RFL4 B 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 		RFL4 A 0 A_ReFire
 		Goto Ready
 	QuadFire4:
@@ -283,7 +290,7 @@ actor RevX : Weapon
 		RFL4 C 1 Bright A_Light1
 		RFL4 B 0 A_SetPitch(pitch+0.50)
 		RFL4 B 1 A_Light0
-		RFL4 A 2
+		RFL4 A 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 		RFL4 A 0 A_ReFire
 		Goto Ready
 	QuadFire4Half:
@@ -294,7 +301,7 @@ actor RevX : Weapon
 		RFL4 C 1 Bright A_Light1
 		RFL4 B 0 A_SetPitch(pitch+0.50)
 		RFL4 B 1 A_Light0
-		RFL4 A 1
+		RFL4 A 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 		RFL4 A 0 A_ReFire
 		Goto Ready
 	QuadFire4Normal:
@@ -304,20 +311,21 @@ actor RevX : Weapon
 		RFL4 C 0 A_FireCustomMissile("SuperRevXProjectile",0,1,8)
 		RFL4 C 1 Bright A_Light1
 		RFL4 B 0 A_SetPitch(pitch+0.50)
-		RFL4 B 1 A_Light0
+		RFL4 B 0 A_Light0
+		RFL4 B 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 		RFL4 A 0 A_ReFire
 		Goto Ready
 	AltFire:
 		TNT1 A 0 A_GunFlash("WeaponStill")
 		TNT1 A 0 A_PlaySound ("weapons/KICK")
-		FOOT AB 1
-		FOOT C 1
-		FOOT D 1
+		FOOT AB 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		FOOT C 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 		FOOT D 1 A_CustomPunch(5,0,0,"KickPuff")
 		FOOT D 0 A_Quake(1,2,0,10)
-		FOOT EF 1
-		FOOT FEDCBA 1
-		TNT1 A 8
+		FOOT EF 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		FOOT FEDCBA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		TNT1 A 8 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 		TNT1 A 0 A_ReFire
 		Goto Ready
 	WeaponStill:

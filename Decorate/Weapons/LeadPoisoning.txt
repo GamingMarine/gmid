@@ -72,19 +72,19 @@ actor LeadPosioning : Weapon
 	   CHNG DDEEFFCCDDDDEEEEFFFFCCCCDDDDDDDDEEEEEEEEFFFFFFFFCCCCCCCC 1 A_WeaponReady
 	   CHNG CB 1
        Goto Ready
-	AltFire:
-		TNT1 A 0 A_GunFlash("WeaponStill")
-		TNT1 A 0 A_PlaySound ("weapons/KICK")
-		FOOT AB 1
-		FOOT C 1
-		FOOT D 1
-		FOOT D 1 A_CustomPunch(5,0,0,"KickPuff")
-		FOOT D 0 A_Quake(1,2,0,10)
-		FOOT EF 1
-		FOOT FEDCBA 1
-		TNT1 A 8
-		TNT1 A 0 A_ReFire
-		Goto Ready
+  AltFire:
+	TNT1 A 0 A_GunFlash("WeaponStill")
+	TNT1 A 0 A_PlaySound ("weapons/KICK")
+	FOOT AB 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT C 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT D 1 A_CustomPunch(5,0,0,"KickPuff")
+	FOOT D 0 A_Quake(1,2,0,10)
+	FOOT EF 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT FEDCBA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 8 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 0 A_ReFire
+	Goto Ready
 	WeaponStill:
 		CHNG A 22
 		Goto LightDone

@@ -58,7 +58,7 @@ Actor BioSuitFeet : PowerupGiver
 Actor PowerBioSuitProtection : PowerProtection
 {
   DamageFactor "Poison", 0.1
-  Inventory.Icon "BIOSA0"
+  Inventory.Icon "BIOSB0"
   //Add your custom poison-ish damagetypes here!
 }
 
@@ -94,7 +94,7 @@ Actor NightVisionGoggles : InfraRed replaces InfraRed
 
 Actor PowerLightAmp2 : PowerLightAmp
 {
-  Inventory.Icon "PVISA0"
+  Inventory.Icon "PVISB0"
 }
 
 ACTOR InvulnerabilitySphere_  : PowerupGiver Replaces InvulnerabilitySphere
@@ -128,7 +128,7 @@ ACTOR InvulnerabilitySphere_  : PowerupGiver Replaces InvulnerabilitySphere
 
 Actor PowerInvulnerable2 : PowerInvulnerable
 {
-	Inventory.Icon "PINVD0"
+	Inventory.Icon "PINVE0"
 }
 Actor InvulnerabilitySphereEffectA
 {
@@ -316,7 +316,7 @@ ACTOR NewMegasphereHealth : Health
 ACTOR PowerDoubleDamage : PowerDamage
 {
 	Damagefactor "normal", 2
-	Inventory.Icon "DDMGC0"
+	Inventory.Icon "DDMGD0"
 }
 
 ACTOR DoubleSphere : PowerupGiver
@@ -378,7 +378,7 @@ Actor DoubleSphereEffectC : DoubleSphereEffectA
 Actor PowerQuadDamageST : PowerDamage
 {
 Damagefactor "Normal", 4
-Inventory.Icon "QDMGA0"
+Inventory.Icon "QDMGB0"
 }
 
 Actor QuadDamage : PowerupGiver

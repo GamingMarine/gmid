@@ -3,10 +3,11 @@
 
 [enu default]
 
+BETATESTMESSAGE = "(Please open the console or pause the game to properly view this message)\n\nGreetings!\nYou are currently playing the Christmas beta build of GamingMarine in Doom.\nAt the current moment, this mod is about 75% complete, and is still in the works.\nDon't forget to send me any bugs or imbalances you find.\nThanks, and have fun!\n\n-GamingMarine";
 STARTUP1 = "GamingMarine in Doom";
-STARTUP2 = "''No one had the guts ...UNTIL NOW!";
+STARTUP2 = "''No one had the guts ...UNTIL NOW!''";
 STARTUP3 = "\n";
-STARTUP4 = "WARNING: Constant hatred towards bronies and catgirls up ahead!";
+STARTUP4 = "WARNING: Constant hatred towards bronies and whatnot up ahead!";
 STSTR_DQDON	= "What's the matter, is playing by the rules too hard for you?";
 STSTR_DQDOFF = "Now that's more like it~";
 STSTR_NCON	= "Map layouts are hard to navigate!";
@@ -55,7 +56,7 @@ QUITMSG9 = "Please don't leave... there's a Changeling around that corner!";
 QUITMSG10 = "Don't let humanity die off like this!\nYou must keep fighting!";
 QUITMSG11 = "I wouldn't leave if I were you.\nThat desktop is way worse.";
 QUITMSG12 = "Okay, fine. Abandon all hope for humanity.\n\nGenius move of you.";
-QUITMSG13 = "Who is this ''Stormy Blue'' that you talk of?";
+QUITMSG13 = "Okay, I'll let you leave, bit I'm warning you:\n\nHazbin Hotel is just porn-bait created by Tumblr.";
 QUITMSG14 = "Are you crazy? Is that your problem?";
 
 PD_BLUEO = "This object is restricted to those with \chblue\c- access.";

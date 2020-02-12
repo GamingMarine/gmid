@@ -89,7 +89,7 @@ gameinfo
 	"$QUITMSG11","$QUITMSG12","$QUITMSG13","$QUITMSG14"
 }
 
-map TITLEMAP lookup "$GMIDTITLEMAP"
+map TITLEMAP lookup "Your Adventure Begins"
 {
 	music = FLCASTLE
 	skybox = GFIRSK00

@@ -40,7 +40,7 @@ Actor SoulCube : weapon
 	  SCUB A 0 A_Raise
       Loop 
    Fire:
-      SCUB A 0 A_JumpIfInventory ("CubeAmmo", 5, "Fire2")
+      SCUB A 0 A_JumpIfInventory ("CubeAmmo", 50, "Fire2")
 	  SCUB A 0 A_PlaySound("SoulCube/NotYet")
       SCUB A 5 A_Print ("You don't have enough souls to use the \crSoul Cube\c-!")
       Goto Ready
