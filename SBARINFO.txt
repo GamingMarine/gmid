@@ -92,6 +92,16 @@ mugshot "XDeath"
 	XDTH4 10;
 	XDTH5 -1;
 }
+
+mugshot "XDeath"
+{
+	XDTH0 3;
+	XDTH1 2;
+	XDTH2 2;
+	XDTH3 2;
+	XDTH4 2;
+	XDTH5 -1;
+}
 //------------------------------------------------------------------
 
 // BASIC INFO
@@ -106,6 +116,94 @@ CompleteBorder true;
 // STATUSBAR FULLSCREEN HUD
 
 statusbar normal, forcescaled
+{
+// Keys
+DrawKeyBar 3, horizontal, auto, 90, 175, 0;
+DrawKeyBar 3, horizontal, auto, 90, 185, 3; 
+
+// Inventory Items
+drawselectedinventory SMALLFONT, 280, 120;
+
+// Face
+drawmugshot 5, xdeathface, 0, 165;
+
+// Armor
+drawimage armoricon, 16, 165;
+drawnumber 4, DIGFONT, yellow, armor, whennotzero, interpolate(4), 75, 148, red, 25, green, 51;
+       
+// Health
+drawnumber 4, DIGFONT, yellow, health, interpolate(4), 75, 175, red, 25, green, 51;
+
+// Ammo
+drawimage ammoicon2, 307, 175;
+drawimage ammoicon1, 307, 195;
+drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, 0;
+drawnumber 4, DIGFONT, yellow, ammo2, 292, 160, 0;
+
+	IsSelected GMIDPistol
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 50, green, 101;
+	}
+	IsSelected GMIDDualPistol
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 50, green, 101;
+	}
+	IsSelected GMIDShotgun
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
+	}
+	IsSelected Firestick
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 6, green, 13;
+	}
+	IsSelected GMIDSuperShotgun
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
+	}
+	IsSelected RevX
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
+	}
+	IsSelected VGun
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 100, green, 202;
+	}
+	IsSelected GMIDRailgun
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 75, green, 151;
+	}
+	IsSelected ExcessiveForce
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 75, green, 151;
+	}
+	IsSelected GMIDMissilelauncher
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
+	}
+	IsSelected PineappleJammer
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
+	}
+	IsSelected SpaceCadet
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 225, green, 451;
+	}
+
+// Multiplayer Counters
+gamemode deathmatch, teamgame
+{
+drawnumber 8, SMALLFONT, darkred, frags, 40, 135;
+DrawString SMALLFONT, darkred, "Kills", 40, 127;
+}
+}
+
+//------------------------------------------------------------------
+
+// FULLSCREEN HUD FOR SCREEN SIZE 11
+
+//------------------------------------------------------------------
+
+statusbar fullscreen, forcescaled
 {
 // Keys
 DrawKeyBar 3, horizontal, auto, 90, 175, 0;
@@ -130,7 +228,6 @@ drawimage ammoicon1, 307, 195;
 drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, 0;
 drawnumber 4, DIGFONT, yellow, ammo2, 292, 160, 0;
 
-// Colorized ammo counters for vanilla weapons
 	IsSelected GMIDPistol
 	{
 	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 50, green, 101;
@@ -143,9 +240,9 @@ drawnumber 4, DIGFONT, yellow, ammo2, 292, 160, 0;
 	{
 	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
 	}
-	IsSelected SPAS12
+	IsSelected Firestick
 	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 6, green, 13;
 	}
 	IsSelected GMIDSuperShotgun
 	{
@@ -155,11 +252,7 @@ drawnumber 4, DIGFONT, yellow, ammo2, 292, 160, 0;
 	{
 	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
 	}
-	IsSelected GMIDChaingun
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 100, green, 202;
-	}
-	IsSelected LeadPosioning
+	IsSelected VGun
 	{
 	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 100, green, 202;
 	}
@@ -167,15 +260,19 @@ drawnumber 4, DIGFONT, yellow, ammo2, 292, 160, 0;
 	{
 	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 75, green, 151;
 	}
-	IsSelected PlasmaCannon
+	IsSelected ExcessiveForce
 	{
 	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 75, green, 151;
 	}
-	IsSelected GMIDGrenadelauncher
+	IsSelected GMIDMissilelauncher
 	{
 	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
 	}
-	IsSelected GMIDBFG9000
+	IsSelected PineappleJammer
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
+	}
+	IsSelected SpaceCadet
 	{
 	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 225, green, 451;
 	}
@@ -186,92 +283,6 @@ gamemode deathmatch, teamgame
 drawnumber 8, SMALLFONT, darkred, frags, 40, 135;
 DrawString SMALLFONT, darkred, "Kills", 40, 127;
 }
-}
-
-//------------------------------------------------------------------
-
-// STATUSBAR FULLSCREEN HUD WITH AUTOMAP LEVEL STATS
-
-statusbar automap, forcescaled
-{
-// Keys
-DrawKeyBar 3, horizontal, auto, 90, 175, 0;
-DrawKeyBar 3, horizontal, auto, 90, 185, 3; 
-
-// Selected Inventory Item
-drawselectedinventory SMALLFONT, 280, 120;
-
-// Face
-drawmugshot 5, 0, 165;
-
-// Armor
-drawimage armoricon, 16, 165;
-drawnumber 4, DIGFONT, yellow, armor, whennotzero, 75, 148, red, 25, green, 51;
-
-// Health
-drawnumber 4, DIGFONT, yellow, health, 75, 175, red, 25, green, 51;
-
-// Selected Weapon Icon
-//Drawimage Weaponicon, 290, 160;
-
-// Ammo
-drawimage ammoicon2, 307, 175;
-drawimage ammoicon1, 307, 195;
-drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, 0;
-drawnumber 4, DIGFONT, yellow, ammo2, 292, 160, 0;
-
-// Colorized ammo counters for vanilla weapons
-	IsSelected Pistol
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 50, green, 101;
-	}
-	IsSelected Shotgun
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
-	}
-	IsSelected SuperShotgun
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
-	}
-	IsSelected Chaingun
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 50, green, 101;
-	}
-	IsSelected Plasmarifle
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 75, green, 151;
-	}
-	IsSelected Rocketlauncher
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
-	}
-	IsSelected BFG9000
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 75, green, 151;
-	}
-// Multiplayer Counters
-gamemode deathmatch, teamgame
-{
-drawnumber 8, SMALLFONT, darkred, frags, 40, 135;
-DrawString SMALLFONT, darkred, "Frags", 40, 127;
-}
-
-// Level Stats for Automap
-	// Kills
-	DrawString SMALLFONT, red, "K:", 240, 5;
-	drawnumber 4, SMALLFONT, white, kills, 274, 5;
-	DrawString SMALLFONT, red, "/", 282, 5;
-	drawnumber 4, SMALLFONT, white, monsters, Alignment(left), 284, 5;
-	// Items
-	DrawString SMALLFONT, red, "I:", 240, 13;
-	drawnumber 3, SMALLFONT, white, items, 274, 13;
-	DrawString SMALLFONT, red, "/", 282, 13;
-	drawnumber 3, SMALLFONT, white, totalitems, Alignment(left), 284, 13;
-	// Secrets
-	DrawString SMALLFONT, red, "S:", 240, 21;
-	drawnumber 2, SMALLFONT, white, secrets, 274, 21;
-	DrawString SMALLFONT, red, "/", 282, 21;
-	drawnumber 2, SMALLFONT, white, totalsecrets, Alignment(left), 284, 21;
 }
 
 //------------------------------------------------------------------

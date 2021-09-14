@@ -1,48 +1,50 @@
+#include brightmaps.gl
+
 BrightMap Sprite SLIMA0
 {
-Map BMSLIMA0
+Map "Brightmaps/BMSLIMA0.png"
 DisableFullBright
 }
 
 BrightMap Sprite SLIMB0
 {
-Map BMSLIMB0
+Map "Brightmaps/BMSLIMB0.png"
 DisableFullBright
 }
 
 BrightMap Sprite SLIMC0
 {
-Map BMSLIMC0
+Map "Brightmaps/BMSLIMC0.png"
 DisableFullBright
 }
 
 BrightMap Sprite SLIMD0
 {
-Map BMSLIMD0
+Map "Brightmaps/BMSLIMD0.png"
 DisableFullBright
 }
 
 BrightMap Sprite SLIME0
 {
-Map BMSLIME0
+Map "Brightmaps/BMSLIME0.png"
 DisableFullBright
 }
 
 BrightMap Sprite SLIMF0
 {
-Map BMSLIMF0
+Map "Brightmaps/BMSLIMF0.png"
 DisableFullBright
 }
 
 BrightMap Sprite SLIMG0
 {
-Map BMSLIMG0
+Map "Brightmaps/BMSLIMG0.png"
 DisableFullBright
 }
 
 BrightMap Sprite SLIMH0
 {
-Map BMSLIMH0
+Map "Brightmaps/BMSLIMH0.png"
 DisableFullBright
 }
 
@@ -91,7 +93,7 @@ pointlight LAMP2
 
 object NewColumn
 {
-    frame COLUA { light LAMP2 }
+    frame COLMA { light LAMP2 }
 }
 
 PULSELIGHT LifeSphere1
@@ -125,6 +127,20 @@ OBJECT EnergySphere
 Frame MEGA { Light EnergySphere1 }
 }
 
+PulseLight HasteSphere
+{
+Color 1.0 1.0 0.0
+Size 40
+SecondarySize 56
+Interval 5.0
+}
+
+Object HasteSphere
+{
+Frame HAST { Light HasteSphere }
+}
+
+
 PULSELIGHT ArmorShard1
 {
 Color 0 0.8 0
@@ -146,12 +162,44 @@ pulselight SuperArmorShard1
 
 OBJECT ArmorShard
 {
-Frame BON2 { Light ArmorShard1 }
+Frame BON3 { Light ArmorShard1 }
 }
 
 OBJECT SuperArmorShard
 {
 Frame BON4 { Light SuperArmorShard1 }
+}
+
+flickerlight DTFOG1
+{
+    color 0.4 1.0 0.4
+    size 84
+    secondarySize 96
+    chance 0.4
+}
+
+flickerlight DTFOG2
+{
+    color 0.4 1.0 0.4
+    size 60
+    secondarySize 72
+    chance 0.4
+}
+
+flickerlight DTFOG3
+{
+    color 0.4 1.0 0.4
+    size 36
+    secondarySize 48
+    chance 0.4
+}
+
+flickerlight DTFOG4
+{
+    color 0.4 1.0 0.4
+    size 15
+    secondarySize 24
+    chance 0.4
 }
 
 object NewTeleportFog
@@ -164,7 +212,7 @@ object NewTeleportFog
     frame TFOGF { light DTFOG4 }
 }
 
-Pulselight SoulLight //666 >:)
+Pulselight SoulLight
 {
 Color 0.8 0.8 0.8
 Size 20
@@ -197,7 +245,7 @@ Object CookieCrystal
 Frame CRYS { Light SoulLight2 }
 }
 
-Object GMIDBFG9000
+Object SpaceCadet
 {
 Frame PINB { Light SoulLight2 }
 }
@@ -216,17 +264,82 @@ object NewBurningBarrel
     frame BURB { light FIREBARREL }
 }
 
-Pointlight BARRELGLOW
+flickerlight BIGBLUETORCH
 {
-    Color 0.1 0.5 0.1
-    Size 32
-    Offset 0 20 0
+    color 0.2 0.2 0.7
+    size 90
+    secondarySize 99
+    offset 0 60 0
 }
 
-Object XaserBarrel
+object TallTorch_Blue
 {
-    Frame BAR1 { light BARRELGLOW }
-	Frame BEXP { light BARRELGLOW }
+    frame TTRB { light BIGBLUETORCH }
+}
+
+flickerlight BIGREDTORCH
+{
+    color 0.7 0.35 0.14
+    size 90
+    secondarySize 99
+    offset 0 60 0
+}
+
+object TallTorch_Red
+{
+    frame TTRB { light BIGREDTORCH }
+}
+
+flickerlight BIGGREENTORCH
+{
+    color 0.2 0.7 0.2
+    size 90
+    secondarySize 99
+    offset 0 60 0
+}
+
+object TallTorch_Green
+{
+    frame TTRB { light BIGGREENTORCH }
+}
+
+flickerlight SMALLBLUETORCH
+{
+    color 0.2 0.2 0.7
+    size 72
+    secondarySize 81
+    offset 0 35 0
+}
+
+object ShortTorch_Blue
+{
+    frame STRB { light SMALLBLUETORCH }
+}
+
+flickerlight SMALLREDTORCH
+{
+    color 0.7 0.35 0.14
+    size 72
+    secondarySize 81
+    offset 0 35 0
+}
+
+object ShortTorch_Red
+{
+    frame STRB { light SMALLREDTORCH }
+}
+
+flickerlight SMALLGREENTORCH
+{
+    color 0.2 0.7 0.2
+    size 72
+    secondarySize 81
+    offset 0 35 0
+}
+
+object ShortTorch_Green
+{
+    frame STRB { light SMALLGREENTORCH }
 }
 
 pulselight DOUBLER
@@ -282,87 +395,129 @@ Object ChaingunMajor
 Frame CPS2F { Light ChaingunMajorAttack }
 }
 
+//Based on Doomguy's Warzone code
+pointlight NewBaronBall
+{
+    color 1.0 0.0 1.0
+    size 32
+}
+
+flickerlight NewBaronBall_X1
+{
+    color 0.7 0.0 0.7
+    size 40
+    secondarySize 44
+    chance 0.25
+}
+
+flickerlight NewBaronBall_X2
+{
+    color 0.4 0.0 0.4
+    size 48
+    secondarySize 52
+    chance 0.25
+}
+
+flickerlight NewBaronBall_X3
+{
+    color 0.2 0.0 0.2
+    size 56
+    secondarySize 60
+    chance 0.25
+}
+
+object NewBaronBall
+{
+    frame BAL7A { light NewBaronBall    }
+    frame BAL7B { light NewBaronBall    }
+
+    frame BAL7C { light NewBaronBall_X1 }
+    frame BAL7D { light NewBaronBall_X1 }
+    frame BAL7E { light NewBaronBall_X2 }
+	frame BAL7F { light NewBaronBall_X3 }
+}
+
 //Brightmaps
 BrightMap Sprite ZSDOF1
 {
-Map "Brightmaps/BMZSDOF1"
+Map "Brightmaps/BMZSDOF1.png"
 DisableFullBright
 }
 
 BrightMap Sprite ZSDOF2F8
 {
-Map "Brightmaps/BMZSDOF2"
+Map "Brightmaps/BMZSDOF2.png"
 DisableFullBright
 }
 
 BrightMap Sprite ZSDOF3F7
 {
-Map "Brightmaps/BMZSDOF3"
+Map "Brightmaps/BMZSDOF3.png"
 DisableFullBright
 }
 
 BrightMap Sprite ZSDOF4F6
 {
-Map "Brightmaps/BMZSDOF4"
+Map "Brightmaps/BMZSDOF4.png"
 DisableFullBright
 }
 
 BrightMap Sprite ZSDOF5
 {
-Map "Brightmaps/BMZSDOF5"
+Map "Brightmaps/BMZSDOF5.png"
 DisableFullBright
 }
 
 BrightMap Sprite CPS2E1
 {
-Map "Brightmaps/BMCPS2E1"
+Map "Brightmaps/BMCPS2E1.png"
 DisableFullBright
 }
 
 BrightMap Sprite CPS2E2E8
 {
-Map "Brightmaps/BMCPS2E2"
+Map "Brightmaps/BMCPS2E2.png"
 DisableFullBright
 }
 
 BrightMap Sprite CPS2E3E7
 {
-Map "Brightmaps/BMCPS2E3"
+Map "Brightmaps/BMCPS2E3.png"
 DisableFullBright
 }
 
 BrightMap Sprite CPS2E4E6
 {
-Map "Brightmaps/BMCPS2E4"
+Map "Brightmaps/BMCPS2E4.png"
 DisableFullBright
 }
 
 BrightMap Sprite CPS2F1
 {
-Map "Brightmaps/BMCPS2F1"
+Map "Brightmaps/BMCPS2F1.png"
 DisableFullBright
 }
 
 BrightMap Sprite CPS2F2F8
 {
-Map "Brightmaps/BMCPS2F2"
+Map "Brightmaps/BMCPS2F2.png"
 DisableFullBright
 }
 
 BrightMap Sprite CPS2F3F7
 {
-Map "Brightmaps/BMCPS2F3"
+Map "Brightmaps/BMCPS2F3.png"
 DisableFullBright
 }
 
 BrightMap Sprite CPS2F4F6
 {
-Map "Brightmaps/BMCPS2F4"
+Map "Brightmaps/BMCPS2F4.png"
 DisableFullBright
 }
 
 BrightMap Sprite CPS2F5
 {
-Map "Brightmaps/BMCPS2F5"
+Map "Brightmaps/BMCPS2F5.png"
 DisableFullBright
 }

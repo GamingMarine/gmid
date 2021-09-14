@@ -1,0 +1,111 @@
+Actor GMIDMissileLauncher : RocketLauncher
+{
+	Weapon.BobRangeX 0.3
+	Weapon.BobRangeY 0.5
+	Weapon.BobStyle InverseSmooth
+	Weapon.BobSpeed 2.0
+	Weapon.AmmoType1 "RocketAmmo"
+	Weapon.AmmoGive 5
+	Weapon.AmmoUse 1
+	Weapon.UpSound "rockpump"
+	Tag "$TAG_LAUNCHER"
+	+WEAPON.NOALERT
+	Inventory.PickupMessage "$GOTLAUNCHER"
+	Obituary "$OB_LAUNCHER"
+	Inventory.Icon "LAUNA0B0"
+	states
+	{
+  Spawn:
+	TNT1 A 0
+	TNT1 A 0 A_Jump(128, "Spawn2")
+	LAUN A -1 
+	Stop
+  Spawn2:
+	LAUN B -1
+	Stop
+  Fire:
+	MISG A 0 A_AlertMonsters
+	MISG B 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
+	TNT1 A 0 A_PlaySound("weapons/GMROCKTL", CHAN_WEAPON)
+    MISG B 1 A_GunFlash
+	MISG BBB 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+    MISG B 0 A_FireCustomMissile("GMIDRocket")
+	MISG BBBBBB 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	MISG AAAAAAAAAA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 0 A_PlaySound("rockpump", CHAN_WEAPON)
+	MISG CDEFGHGFEDC 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	MISG AAAAAA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+    MISG A 0 A_ReFire
+    Goto Ready
+  QuadFire:
+    TNT1 A 0 A_SetBlend("Blue", 0.25, 16)
+	MISG B 0 A_PlaySound("QuadDamage/Use")
+	TNT1 A 0 A_PlaySound("weapons/GMROCKTL", CHAN_WEAPON)
+    MISG B 1 A_GunFlash
+	MISG BBB 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+    MISG B 0 A_FireCustomMissile("GMIDRocket")
+	MISG BBBBBB 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	MISG AAAAAAAAAA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 0 A_PlaySound("rockpump", CHAN_WEAPON)
+	MISG CDEFGHGFEDC 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	MISG AAAAAA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+    MISG A 0 A_ReFire
+    Goto Ready
+  Flash:
+    MISF A 1 Bright A_Light1
+    MISF B 2 Bright
+    MISF CD 2 Bright A_Light2
+    Goto LightDone
+  Spawn:
+    LAUN A -1
+    Stop
+  Deselect:
+    MISG A 1 A_Lower
+    MISG A 0 A_Lower
+    Loop
+  Select:
+    MISG A 1 A_Raise
+    MISG A 0 A_Raise
+    Loop
+  AltFire:
+	TNT1 A 0 A_GunFlash("WeaponStill")
+	TNT1 A 0 A_PlaySound ("weapons/KICK")
+	FOOT AB 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT C 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT D 0 A_CustomPunch(5,0,0,"KickPuff")
+	FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT D 0 A_Quake(1,2,0,10)
+	FOOT EF 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT FEDCBA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 8 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 0 A_ReFire
+	Goto Ready
+  WeaponStill:
+	MISG A 22
+	Goto LightDone
+  }
+}
+
+Actor GMIDRocket : Rocket replaces Rocket
+{
+	Speed 50
+	Damage 25
+	-ROCKETTRAIL +BRIGHT
+	DeathSound "null"
+	Obituary "$OB_LAUNCHER"
+	Decal Scorch
+	States
+	{
+	Spawn:
+		MISL AAAAA 0 A_SpawnItemEx("GrenadeSmoke",Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+		MISL A 0 A_SpawnItemEx("expsmoke",0,0,0,FRandom(0,0.5),0,FRandom(-0.5,0),Random(1,360),128)
+		MISL A 1 A_PlaySound("Weapons/RocketFly",CHAN_VOICE,0.66,1)
+		Loop
+	Death:
+		ZXPL A 0 A_PlaySound("explosion/distant", CHAN_VOICE)
+		ZXPL A 0 A_PlaySound("newexplosion")
+		BEXP D 0 A_SpawnItem("ExplosionSpawner")
+		Stop
+	}
+}

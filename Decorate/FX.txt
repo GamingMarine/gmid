@@ -1,73 +1,4 @@
-//Blood effects (Taken from Moon Man Doom, of all things)
-Actor BloodFXSpawner replaces Blood
-{
-	+NOBLOCKMAP
-	+NOTELEPORT
-	-NOGRAVITY
-	-ALLOWPARTICLES
-	+NOTELEPORT
-	+CLIENTSIDEONLY	
-	scale 0.25
-	VSpeed 0
-	Speed 0
-	States
-	{
-    Spawn:
-	   HBLD A 1
-	   NULL A 0 A_CustomMissile("DropBlood", 0, 0, random(115,135), 2, random(5,10))
-	   NULL A 0 A_CustomMissile ("DropBlood", 0, 0, random(70,90), 2, random(5,10))
-	   NULL A 0 A_CustomMissile ("DropBlood", 0, 0, random(25,45), 2, random(5,10))
-	   NULL A 0 A_CustomMissile ("DropBlood", 0, 0, random(250,270), 2, random(345,350))
-	   NULL A 0 A_CustomMissile ("DropBlood", 0, 0, random(295,315), 2, random(345,350))
-	   NULL A 0 A_CustomMissile ("DropBlood", 0, 0, random(340,360), 2, random(345,350))
-	   NULL A 0 A_CustomMissile("DropBlood", 0, 0, random(115,135), 2, random(5,10))
-	   NULL A 0 A_CustomMissile ("DropBlood", 0, 0, random(70,90), 2, random(5,10))
-	   NULL A 0 A_CustomMissile ("DropBlood", 0, 0, random(25,45), 2, random(5,10))
-	   NULL A 0 A_CustomMissile ("DropBlood", 0, 0, random(250,270), 2, random(345,350))
-	   NULL A 0 A_CustomMissile ("DropBlood", 0, 0, random(295,315), 2, random(345,350))
-	   NULL A 0 A_CustomMissile ("DropBlood", 0, 0, random(340,360), 2, random(345,350))
-	   HBLD BCDEFGHIJ 1
-	   Stop
-    }
-}
-
-ACTOR DropBlood
-{
-	Radius 0
-	height 0
-	Speed 5
-	scale 0.3 //default 0.2
-	Projectile
-	-NOGRAVITY
-	-SOLID
-	+CLIENTSIDEONLY
-	Gravity 0.25
-	States
-	{
-	Spawn:
-		SPLT ABCD 3
-	    Loop
-	Death:
-	   SPLT A 0 A_PlaySound("Blood/Splat")
-	   SPLT EFGHIJKL 3
-	   Stop
-	XDeath:
-	   NULL A 1 
-	   Stop
-	}
-}
-
-Actor BloodFXSpawner_NoDroplets : BloodFXSpawner
-{
-	States
-	{
-    Spawn:
-	   HBLD ABCDEFGHIJ 1
-	   Stop
-	 }
-}
-
-actor DukeGibs1
+actor RibGib
 {
   Radius 4
   Height 4
@@ -81,41 +12,41 @@ actor DukeGibs1
   States
   {
   Spawn:
-    DGB1 ABCD 5
+    GRIB ABCD 3
     loop
   Death:
-    DGB6 CDEFGH 5
+    GRIB EFGHIJKL 3
     stop
   }
 }
 
-actor DukeGibs2 : DukeGibs1
+actor BoneGib : RibGib
 {
   States
   {
   Spawn:
-    DGB2 ABCD 5
+    GBON ABCD 3
     loop
   Death:
-    DGB6 CDEFGH 5
+    GBON EFGHIJKL 3
     stop
   }
 }
 
-actor DukeGibs3 : DukeGibs1
+actor HipGib : RibGib
 {
   health 4
   States
   {
   Spawn:
-    DGB3 ABCD 5
+    GHIP ABCD 3
     loop
-  Death:
-    DGB6 CDEFGH 5
+  Death: //Man, it hurts to be this hip.
+    GHIP EFGHIJKL 3
     stop
   }
 }
-actor GutsGib : DukeGibs1
+actor GutsGib : RibGib
 {
   States
   {
@@ -128,20 +59,20 @@ actor GutsGib : DukeGibs1
   }
 }
 
-actor DukeGibs5 : DukeGibs1
+actor LimbGib : RibGib
 {
   States
   {
   Spawn:
-    DGB5 ABCD 5
+    GLMB ABCD 3
     loop
   Death:
-    DGB6 CDEFGH 5
+    GLMB EFGHIJKL 3
     stop
   }
 }
 
-actor BloodSplurt : DukeGibs1
+actor BloodSplurt : RibGib
 {
   health 4
   States
@@ -155,7 +86,7 @@ actor BloodSplurt : DukeGibs1
   }
 }
 
-actor SkullGib : DukeGibs1
+actor SkullGib : RibGib
 {
   States
   {
@@ -215,22 +146,30 @@ ACTOR BulletCasing
       BCAS ABCDEFGH 1
       Loop
    Death:
-         TNT1 A 0 A_jump(128,10)
-         TNT1 A 0 A_jump(128,8)
-         TNT1 A 0 A_jump(128,6)
-         TNT1 A 0 A_jump(128,4)
-      TNT1 A 0 A_jump(128,2)
-           BCAS H -1
+         TNT1 A 0 A_jump(256,"DeadCase1","DeadCase2","DeadCase3","DeadCase4","DeadCase5","DeadCase6")
+   DeadCase1:
+           BCAS H 350
+		   BCAS HHHHHHHHHHH 1 A_FadeOut
            stop
-           BCAS I -1
+   DeadCase2:
+           BCAS I 350
+		   BCAS IIIIIIIIIII 1 A_FadeOut
            stop
-           BCAS K -1
+   DeadCase3:
+           BCAS K 350
+		   BCAS KKKKKKKKKKK 1 A_FadeOut
            stop
-           BCAS J -1
+   DeadCase4:
+           BCAS J 350
+		   BCAS JJJJJJJJJJJ 1 A_FadeOut
            stop
-           BCAS K -1
+   DeadCase5:
+           BCAS K 350
+		   BCAS KKKKKKKKKKK 1 A_FadeOut
            stop
-           BCAS L -1
+   DeadCase6:
+           BCAS L 350
+		   BCAS LLLLLLLLLLL 1 A_FadeOut
            stop
    }
 }
@@ -260,22 +199,81 @@ ACTOR ShellCasing : BulletCasing
       SCAS ABCDEFGH 1
       Loop
    Death:
-         TNT1 A 0 A_jump(128,10)
-         TNT1 A 0 A_jump(128,8)
-         TNT1 A 0 A_jump(128,6)
-         TNT1 A 0 A_jump(128,4)
-      TNT1 A 0 A_jump(128,2)
-           SHDY A -1
+	  TNT1 A 0 A_jump(256,"DeadCase1","DeadCase2","DeadCase3","DeadCase4","DeadCase5","DeadCase6")
+   DeadCase1:
+           SHDY A 350
+		   SHDY AAAAAAAAAAA 1 A_FadeOut
            stop
-           SHDY B -1
+   DeadCase2:
+           SHDY B 350
+		   SHDY BBBBBBBBBBB 1 A_FadeOut
            stop
-           SHDY C -1
+   DeadCase3:
+           SHDY C 350
+		   SHDY CCCCCCCCCCC 1 A_FadeOut
            stop
-           SHDY D -1
+   DeadCase4:
+           SHDY D 350
+		   SHDY DDDDDDDDDDD 1 A_FadeOut
            stop
-           SHDY E -1
+   DeadCase5:
+           SHDY E 350
+		   SHDY EEEEEEEEEEE 1 A_FadeOut
            stop
-           SHDY F -1
+   DeadCase6:
+           SHDY F 350
+		   SHDY FFFFFFFFFFF 1 A_FadeOut
+           stop
+   }
+}
+
+ACTOR ShotgunCasingSpawner2 : CasingSpawner
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1
+		TNT1 A 0 A_CustomMissile("ShellCasing2",0,0,random(-80,-100),2,random(45,80))
+		TNT1 A 0
+		Stop
+	}
+}
+
+ACTOR ShellCasing2 : ShellCasing //Used for the Firestick
+{
+   States
+   {
+
+   Spawn:
+      SCS2 A 0 A_CustomMissile("CasingSmoketrail",0,0,0)
+      SCS2 ABCDEFGH 1
+      Loop
+   Death:
+         TNT1 A 0 A_jump(256,"DeadCase1","DeadCase2","DeadCase3","DeadCase4","DeadCase5","DeadCase6")
+	DeadCase1:
+           SDY2 A 350
+		   SDY2 AAAAAAAAAAA 1 A_FadeOut
+           stop
+	DeadCase2:
+           SDY2 B 350
+		   SDY2 BBBBBBBBBBB 1 A_FadeOut
+           stop
+	DeadCase3:
+           SDY2 C 350
+		   SDY2 CCCCCCCCCCC 1 A_FadeOut
+           stop
+	DeadCase4:
+           SDY2 D 350
+		   SDY2 DDDDDDDDDDD 1 A_FadeOut
+           stop
+	DeadCase5:
+           SDY2 E 350
+		   SDY2 EEEEEEEEEEE 1 A_FadeOut
+           stop
+	DeadCase6:
+           SDY2 F 350
+		   SDY2 FFFFFFFFFFF 1 A_FadeOut
            stop
    }
 }
@@ -305,19 +303,26 @@ ACTOR RifleCasing : BulletCasing
       RCAS ABCDEFGH 1
       Loop
    Death:
-         TNT1 A 0 A_jump(128,8)
-         TNT1 A 0 A_jump(128,6)
-         TNT1 A 0 A_jump(128,4)
-      TNT1 A 0 A_jump(128,2)
-           RCAS I -1
+	  TNT1 A 0 A_jump(256,"DeadCase1","DeadCase2","DeadCase3","DeadCase4","DeadCase5")
+   DeadCase1:
+           RCAS I 350
+		   RCAS IIIIIIIIIII 1 A_FadeOut
            stop
-           RCAS J -1
+   DeadCase2:
+           RCAS J 350
+		   RCAS JJJJJJJJJJJ 1 A_FadeOut
            stop
-           RCAS K -1
+   DeadCase3:
+           RCAS K 350
+		   RCAS KKKKKKKKKKK 1 A_FadeOut
            stop
-           RCAS L -1
+   DeadCase4:
+           RCAS L 350
+		   RCAS LLLLLLLLLLL 1 A_FadeOut
            stop
-           RCAS M -1
+   DeadCase5:
+           RCAS M 350
+		   RCAS MMMMMMMMMMM 1 A_FadeOut
            stop
    }
 }
@@ -341,4 +346,249 @@ ACTOR CasingSmoketrail
       SMOK ABCDEFGHIJKLMNOPQR 1
       STOP      
    }
+}
+
+ACTOR GrenadeSmoke
+{   
+   Radius 0
+   Height 1
+   Speed 0
+   Projectile
+   Scale 0.75
+   Renderstyle Translucent
+   Alpha 0.45
+   States
+   {
+   Spawn:
+      NULL A 3 bright
+      SMK2 ABCDE 2 Bright
+      Stop 
+   }
+}
+
+ACTOR NewExplosion
+{
+	RenderStyle "Add"
+	+NOINTERACTION
+	+CLIENTSIDEONLY
+	+FORCEXYBILLBOARD
+	+NOBLOCKMAP
+	+DONTSPLASH
+	+THRUACTORS
+	+NOTRIGGER
+	+NOBLOCKMONST
+	+NOTONAUTOMAP
+	+CANNOTPUSH
+	Radius 0.5
+	Height 1
+	Gravity 0.66
+	+BRIGHT
+	Alpha 0.99
+	Scale 1.5
+	DamageType GMIDExplosion
+	States
+	{
+	Spawn:
+		ZXPL A 0 A_Quake(4,12,0,400)
+		ZXPL A 0 A_Quake(2,12,0,800)
+		ZXPL A 0 A_Explode(175,148)
+		ZXPL ABC 3
+		ZXPL D 3 A_SpawnItem("ExplosionSmoke")
+		ZXPL EFGHIJKLMN 3
+		Stop
+	}
+}
+
+ACTOR NewExplosion2 : NewExplosion
+{
+	Scale 1.6640625
+	States
+	{
+	Spawn:
+		YXPL A 0 A_Quake(4,12,0,400)
+		YXPL A 0 A_Quake(2,12,0,800)
+		YXPL A 0 A_Explode(175,148)
+		YXPL ABC 3
+		YXPL D 3 A_SpawnItem("ExplosionSmoke")
+		YXPL EFGHIJKLMNOPQ 3
+		Stop
+	}
+}
+
+ACTOR NewExplosion3 : NewExplosion
+{
+	Scale 1.25
+	States
+	{
+	Spawn:
+		XXPL A 0 A_Quake(4,12,0,400)
+		XXPL A 0 A_Quake(2,12,0,800)
+		XXPL A 0 A_Explode(175,148)
+		XXPL ABC 3
+		XXPL D 3 A_SpawnItem("ExplosionSmoke")
+		XXPL EFGHIJKLMNOPQ 3
+		Stop
+	}
+}
+
+ACTOR NewExplosion4 : NewExplosion
+{
+	Scale 0.9867
+	States
+	{
+	Spawn:
+		WXPL A 0 A_Quake(4,12,0,400)
+		WXPL A 0 A_Quake(2,12,0,800)
+		WXPL A 0 A_Explode(175,148)
+		WXPL ABC 3
+		WXPL D 3 A_SpawnItem("ExplosionSmoke")
+		WXPL EFGHIJK 3
+		Stop
+	}
+}
+
+
+ACTOR ExplosionSmoke
+{
+	RenderStyle "Shaded"
+	+NOINTERACTION
+	+CLIENTSIDEONLY
+	+FORCEXYBILLBOARD
+	+NOBLOCKMAP
+	+DONTSPLASH
+	+THRUACTORS
+	+NOTRIGGER
+	+NOBLOCKMONST
+	+NOTONAUTOMAP
+	+CANNOTPUSH
+	Radius 0.5
+	Height 1
+	Gravity 0.66
+	Alpha 1.0
+	Scale 1.5
+	States
+	{
+	Spawn:
+		SMK0 ABCDEFGHIJKLMNO 3
+		Stop
+	}
+}
+
+ACTOR XaserBarrelShell
+{
+	+NOCLIP
+	States
+	{
+	Spawn:
+		BEXP RSTRSTRSTRSTRSTRSTRSTRSTRSTRSTRSTRSTRSTRSTRSTRSTRSTRSTRSTRSTRSTRSTRSTRST 5 BRIGHT
+      		BEXP U -1 A_SpawnItem("XaserBarrelShell2",1)
+		Stop
+	}
+}
+
+ACTOR XaserBarrelShell2
+{
+	+NOCLIP
+	Renderstyle Translucent
+	Alpha 1
+	States
+	{
+	Spawn:
+		BEXP A 0
+		BEXP RRRRRSSSSSTTTTTRRRRRSSSSSTTTTTRRRRRSSSSSTTTTTRRRRR 1 BRIGHT A_FadeOut (0.02)
+		Stop
+	}
+}
+
+ACTOR BarrelParts
+{
+   Radius 2
+   Height 2
+   Speed 0
+   Damage 0
+   Scale 0.3
+   ReactionTime 2
+   SeeSound ""
+   PROJECTILE
+   -NOGRAVITY
+   +HEXENBOUNCE
+   Scale 0.75
+   BounceSound "metal/hit"
+   DeathSound "metal/hit"
+   States
+   {
+   Spawn:
+      TNT1 A 0 A_Countdown
+      BARF AABBCCDDEE 2
+      TNT1 A 0 A_Jump(128,2)
+      TNT1 A 0 A_Countdown
+      BARF FFGGHHIIJJ 2
+      Loop
+   Death:
+      TNT1 A 1 A_SpawnItemEx("BarrelPartsDrop",0,0,0,0,0,0,128,0,0)
+      Stop
+   }
+}
+
+ACTOR BarrelPartsDrop
+{
+	+NOCLIP
+	Scale 0.75
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_SetTranslucent(1,0)
+		TNT1 A 0 A_Jump(255,"BARFA","BARFB","BARFC","BARFD","BARFE","BARFF","BARFG","BARFH","BARFI","BARFJ")
+	BARFA:
+		BARF A 200
+		BARF A 1 A_FadeOut(0.01)
+		Wait
+	BARFB:
+		BARF B 200
+		BARF B 1 A_FadeOut(0.01)
+		Wait
+	BARFC:
+		BARF C 200
+		BARF C 1 A_FadeOut(0.01)
+		Wait
+	BARFD:
+		BARF D 200
+		BARF D 1 A_FadeOut(0.01)
+		Wait
+	BARFE:
+		BARF E 200
+		BARF E 1 A_FadeOut(0.01)
+		Wait
+	BARFF:
+		BARF F 200
+		BARF F 1 A_FadeOut(0.01)
+		Wait
+	BARFG:
+		BARF G 200
+		BARF G 1 A_FadeOut(0.01)
+		Wait
+	BARFH:
+		BARF H 200
+		BARF H 1 A_FadeOut(0.01)
+		Wait
+	BARFI:
+		BARF I 200
+		BARF I 1 A_FadeOut(0.01)
+		Wait
+	BARFJ:
+		BARF J 200
+		BARF J 1 A_FadeOut(0.01)
+		Wait
+	}
+}
+
+ACTOR NewTeleportFog : TeleportFog replaces TeleportFog
+{
+  States
+  {
+  Spawn:
+    TFOG ABABABABABABABABABABABCDEFGHIJ 1 Bright
+    Stop
+  }
 }

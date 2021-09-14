@@ -38,7 +38,6 @@ Actor CookieCrystalSpawner
 	Spawn:
 		TNT1 A 1 NoDelay A_SpawnItemEx("CookieCrystal")
 		TNT1 A 0 A_PlaySound("crystal/spawn")
-		TNT1 A 0 A_Print("A Cookie-Crystal has been detected in this area!")
 		Stop
 	}
 }
@@ -51,14 +50,15 @@ Actor CookieCrystal : CustomInventory
 	Inventory.MaxAmount 1
 	Inventory.PickupSound "cookie/crystal"
 	Inventory.UseSound "cookie/jingle"
-	Inventory.PickupMessage "You got the Cookie-Crystal! Use this item to summon \c[brick]Cookiedemon\c-..."
+	Inventory.PickupMessage "$GOTCRYSTAL"
 	Inventory.Icon "CRYSB0"
-	Tag "Cookie-Crystal"
+	Tag "$TAG_CRYSTAL"
 	+FLOATBOB
 	+NOGRAVITY
 	+INVBAR
 	+FLOORCLIP
 	+DROPOFF
+	+FORCEXYBILLBOARD
 	States
 	{
 	Spawn:
@@ -143,9 +143,9 @@ ACTOR Cookiedemon
 	PainSound "cookie/pain"
 	DeathSound "cookie/death"
 	BloodColor "Blue"
-	BloodType "BloodFXSpawner_NoDroplets"
 	DamageFactor "Basic", 0.0 //Prevents the player from accidentally hurting Cookiedemon.
 	DamageFactor "GMIDExplosion", 0.0 //Same thing, but also goes for explosive barrels.
+	Obituary "%o experienced Cookie's friendly fire."
 	States
  {
  
@@ -539,7 +539,7 @@ ACTOR FriendMarine1Pathfinder
 		TNT1 A 0 A_Scream
 		TNT1 A 0 A_NoBlocking
 		TNT1 A 0 A_SpawnItemEx("Cookiedemon",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,0)
-		TNT1 A 0 A_SpawnItem("TeleportFog")
+		TNT1 A 0 A_SpawnItem("CookiedemonTeleportFog")
 		Stop
 	}
 }
@@ -630,6 +630,18 @@ Actor CookiedemonLeaveFog
   Spawn:
     TNT1 A 0 
 	TNT1 A 0 A_PlaySound("cookie/leave")
+    SWFG ABABCDEFGHIJKLMNOPQR 3 Bright
+    Stop
+  }
+}
+
+Actor CookiedemonTeleportFog : CookiedemonLeaveFog
+{
+  States
+  {
+  Spawn:
+    TNT1 A 0 
+	TNT1 A 0 A_PlaySound("cookie/teleport")
     SWFG ABABCDEFGHIJKLMNOPQR 3 Bright
     Stop
   }

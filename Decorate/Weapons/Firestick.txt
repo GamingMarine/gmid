@@ -1,0 +1,137 @@
+actor Firestick : Weapon
+{
+  Weapon.AmmoUse 1
+  Weapon.AmmoGive 8
+  Weapon.AmmoType "NewShells2"
+  Weapon.BobRangeX 0.3
+  Weapon.BobRangeY 0.5
+  Weapon.BobStyle InverseSmooth
+  Weapon.BobSpeed 2.0
+  Weapon.UpSound "spasup"
+  Inventory.PickupMessage "$GOTFIRESTICK"
+  Obituary "$OB_FIRESTICK"
+  scale 0.5
+  Tag "$TAG_FIRESTICK"
+  +WEAPON.NOALERT
+  Inventory.Icon "SHGPA0B0"
+  States
+	{
+  Ready:
+	SHGG A 1 A_WeaponReady
+	Loop
+  Deselect:
+    SHGG A 1 A_Lower
+    SHGG A 0 A_Lower
+    Loop
+  Select:
+    SHGG A 1 A_Raise
+    SHGG A 0 A_Raise
+    Loop
+  Fire:
+	SHGG A 0 A_AlertMonsters
+	SHGG A 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
+    SHGG A 0 A_GunFlash
+	SHGG A 0 A_PlaySound("weapons/spasshot", CHAN_WEAPON)
+    SHGG A 3 A_FireBullets (5, 0, 12, 0, "FirestickPuff_Player")
+	SHGG B 0 A_SetPitch(pitch-1)
+	SHGG B 1
+	SHGG C 1 A_SetPitch(pitch+0.50)
+	SHGG D 1 A_SetPitch(pitch+0.25)
+	SHGG EFG 1
+	SHGG A 0 A_SetPitch(pitch+0.25)
+	SHGG AA 3
+    SHGC ABCDEFGHIJKL 1
+	SHGC M 0 A_FireCustomMissile("ShotgunCasingSpawner2",0,0,17,0)
+	SHGC M 0 A_PlaySound("weapons/spascock", CHAN_WEAPON)
+	SHGC MNMLKJIHGFEDCB 1
+    SHGC A 1 A_ReFire
+    Goto Ready
+ QuadFire:
+	TNT1 A 0 A_SetBlend("Blue", 0.25, 16)
+	SHGG A 0 A_PlaySound("QuadDamage/Use")
+    SHGG A 0 A_GunFlash
+	SHGG A 0 A_PlaySound("weapons/spasshot", CHAN_WEAPON)
+    SHGG A 3 A_FireBullets (5, 0, 12, 0, "FirestickPuff_Player")
+	SHGG B 0 A_SetPitch(pitch-1)
+	SHGG B 1
+	SHGG C 1 A_SetPitch(pitch+0.50)
+	SHGG D 1 A_SetPitch(pitch+0.25)
+	SHGG EFG 1
+	SHGG A 0 A_SetPitch(pitch+0.25)
+	SHGG AA 3
+    SHGC ABCDEFGHIJKL 1
+	SHGC M 0 A_FireCustomMissile("ShotgunCasingSpawner2",0,0,17,-20)
+	SHGC M 0 A_PlaySound("weapons/spascock", CHAN_WEAPON)
+	SHGC MNMLKJIHGFEDCB 1
+    SHGC A 1 A_ReFire
+    Goto Ready
+  Flash:
+    SHGF A 3 Bright A_Light2
+    Goto LightDone
+  Spawn:
+	TNT1 A 0
+	TNT1 A 0 A_Jump(128, "Spawn2")
+	SHGP A -1 
+	Stop
+  Spawn2:
+	SHGP B -1
+	Stop
+  AltFire:
+	TNT1 A 0 A_GunFlash("WeaponStill")
+	TNT1 A 0 A_PlaySound ("weapons/KICK")
+	FOOT AB 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT C 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT D 0 A_CustomPunch(5,0,0,"KickPuff")
+	FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT D 0 A_Quake(1,2,0,10)
+	FOOT EF 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT FEDCBA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 8 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 0 A_ReFire
+	Goto Ready
+  WeaponStill:
+	SHGG A 22
+	Goto LightDone
+  }
+}
+
+ACTOR FirestickPuff
+{
+  Radius 11
+  Height 8
+  Speed 20
+  DamageType "Fire"
+  +NoBlockMap
+  +NoGravity
+  +ActivateImpact
+  +ActivatePCross
+  +NoTeleport
+  +PuffOnActors
+  +PuffGetsOwner
+  +ForceRadiusDmg
+  Renderstyle Translucent
+  Alpha 0.5
+  Scale 0.25
+  States
+  {
+  Spawn:
+    RBFX A 0 Bright
+    RBFX A 1 Bright A_Explode(4, 128, 1)
+    RBFX BCDEFGHIJKLMNO 1 Bright
+    Stop
+  }
+}
+
+Actor FirestickPuff_Player : FirestickPuff //This is the one shot by the player
+{
+  Damage 8
+  States
+  {
+  Spawn:
+    RBFX A 0 Bright
+    RBFX A 1 Bright A_Explode(8, 128, 1)
+    RBFX BCDEFGHIJKLMNO 1 Bright
+    Stop
+  }
+}

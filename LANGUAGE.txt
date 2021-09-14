@@ -3,11 +3,10 @@
 
 [enu default]
 
-BETATESTMESSAGE = "(Please open the console or pause the game to properly view this message)\n\nGreetings!\nYou are currently playing the Christmas beta build of GamingMarine in Doom.\nAt the current moment, this mod is about 75% complete, and is still in the works.\nDon't forget to send me any bugs or imbalances you find.\nThanks, and have fun!\n\n-GamingMarine";
 STARTUP1 = "GamingMarine in Doom";
-STARTUP2 = "''No one had the guts ...UNTIL NOW!''";
+STARTUP2 = "\"No one had the guts ...UNTIL NOW!\"";
 STARTUP3 = "\n";
-STARTUP4 = "WARNING: Constant hatred towards bronies and whatnot up ahead!";
+STARTUP4 = "WARNING: Absurd amounts of stupidity up ahead!";
 STSTR_DQDON	= "What's the matter, is playing by the rules too hard for you?";
 STSTR_DQDOFF = "Now that's more like it~";
 STSTR_NCON	= "Map layouts are hard to navigate!";
@@ -17,47 +16,267 @@ TXT_BUDDHAON = "You've changed your religous belief!";
 TXT_BUDDHAOFF = "Switched back to your old belief.";
 STSTR_KFAADDED	= "How does one carry that much stuff around?";
 STSTR_FAADDED = "You now have the entire roster of weapons... you cheater.";
-STSTR_CHOPPERS = "Why even bother if this cheat code is broken?"
+STSTR_CHOPPERS = "Why even bother if this cheat code is broken?";
 MSGOFF = "Future messages will now be hidden.";
 MSGON = "Future messages will now be shown.";
-NETEND = "You can't end a netgame yet!\n\nPress any key to continue.";
-ENDGAME = "Are you really sure you want to end this game?\n\nPress Y or N to confirm.";
+NETEND = "You can't end a netgame yet!\n\n"
+		 "Press any key to continue.";
+ENDGAME = "Are you really sure you want to end this game?\n\n"
+		  "Press Y or N to confirm.";
 GGSAVED = "Your game has been successfully saved.";
 HUSTR_MSGU = "Your message failed to be sent!";
-TXT_DEFAULTPICKUPMSG = "You get Tool."; //Y o u g e t T o o l is a reference to Virtual Hydlide
+TXT_DEFAULTPICKUPMSG = "You get Tool.";
 
 D_DEVSTR = "Useless mode ENABLED.\n";
-D_CDROM = "CD-ROM Version: zdoom.ini from c:\\zdoomdat\n";
-PRESSKEY = "Press any key.";
+PRESSKEY = "Press any key to continue.";
 PRESSYN = "Press Y or N to confirm.";
 TXT_YES = "Yeah Boi";
 TXT_NO = "Naw Fam";
+SAFEMESSAGE = "Are you sure? You might not be able to undo this action.";
+DOSY = "(Do you want to quit? Press Y or N to confirm)";
 
 TXT_FRAGLIMIT = "Frag limit's up! Let's see the results!";
 TXT_TIMELIMIT = "Time limit's up! Let's see the results!";
 
-GGSAVED = "Game successfully saved until further notice.";
 SECRETMESSAGE = "A secret area has been discovered!";
-PICKUP_PISTOL_DROPPED = "You got the handgun! (2)";
 
 STSTR_CLEV = "Level is being changed...\n";
 
+//Pickup messages
+GOTCOLA1 = "Drank a can of Caco-Cola. \cf(\cj+2 health\cf)";
+GOTCOLA2 = "Drank a can of Caco-Cola Zero. \cf(\cj+5 health\cf)";
+GOTAPPLE = "Ate an apple. \cf(\cj10 health\cf)";
+GOTGRAPES = "Ate a set of grapes. \cf(\cj10 health\cf)";
+GOTORANGE = "Ate an orange. \cf(\cj10 health\cf)";
+GOTHAMBURG = "Ate a hamburger. \cf(\cj25 health\cf)";
+GOTHAMBURG2 = "Found a hamburger!";
+GOTCHICKEN = "Ate an entire chicken. \cf(\cj25 health\cf)";
+GOTCHICKEN2 = "Found an entire chicken!";
+GOTPIZZA = "Gourged on an entire pizza. \cf(\cj25 health\cf)";
+GOTPIZZA2 = "Found an entire pizza!";
+GOTSOUL = "\c[blue]SoulSphere!";
+GOTBOTTLE = "Picked up a bottle of Caco-Cola! \cf(\cjThis item must be activated to use it\cf)";
+GOTSHARD1 = "Slapped on an armor shard. \cf(\cj+5 armor\cf)";
+GOTSHARD2 = "Slapped on a super armor shard. \cf(\cj+10 armor\cf)";
+GOTENERGY1 = "You feel a minor surge of protection and power. \cf(\cj+5 armor\cf)";
+GOTENERGY2 = "You feel a major surge of protection and power! \cf(\cj+10 armor\cf)";
+GOTVEST1 = "You are now wearing a light armor vest. \cf(\cj100 armor, 25% protection\cf)";
+GOTVEST2 = "You are now wearing a strong armor vest. \cf(\cj150 armor, 50% protection\cf)";
+GOTVEST3 = "You are now wearing a heavy armor vest. \cf(\cj200 armor, 75% protection\cf)";
+GOTVEST4 = "You are now protected by the Praetor armor vest! \cf(\cj250 armor, 95% protection\cf)";
+GOTMEGA = "\c[Tan]MegaSphere!";
+GOT9MM1 = "Picked up a pistol magazine. \cf(\cjAmmo for slot 2\cf)";
+GOT9MM2 = "Picked up a box of pistol rounds. \cf(\cjAmmo for slot 2\cf)";
+GOTBULLET1 = "Picked up a chain of bullets. \cf(\cjAmmo for slot 4\cf)";
+GOTBULLET2 = "Picked up a box of bullet chains. \cf(\cjAmmo for slot 4\cf)";
+GOTSHELLS1 = "Picked up a handful of shotgun shells. \cf(\cjAmmo for slot 3\cf)";
+GOTSHELLS2 = "Picked up a case of shotgun shells. \cf(\cjAmmo for slot 3\cf)";
+GOTFIRESHELLS1 = "Picked up a handful of \"Dragon's Breath\" shotgun shells! \cf(\cjAmmo for Firestick\cf)";
+GOTFIRESHELLS2 = "Picked up a case of \"Dragon's Breath\" shotgun shells! \cf(\cjAmmo for Firestick\cf)";
+GOTMISSILE1 = "Picked up a missile. \cf(\cjAmmo for slot 5\cf)";
+GOTMISSILE2 = "Picked up a crate full of missiles. \cf(\cjAmmo for slot 5\cf)";
+GOTCHARGE1 = "Picked up a lesser plasma charge. \cf(\cjAmmo for slot 6\cf)";
+GOTCHARGE2 = "Picked up a greater plasma charge. \cf(\cjAmmo for slot 6\cf)";
+GOTMANA1 = "Picked up a vial of mana. \cf(\cjAmmo for slot 7\cf)";
+GOTMANA2 = "Picked up a jar of mana. \cf(\cjAmmo for slot 7\cf)";
+GOTCUBEAMMO = "The \crSoul Cube\c- feeds on the enemy soul you picked up.";
+GOTBACKPACK2 = "Picked up a leather backpack full of goodies!";
+GOTGRINDER = "You got the Angle Grinder! Groovy! \cf(\cjSlot 1\cf)";
+GOTBERETTA = "Picked up a Beretta. \cf(\cjSlot 2\cf)";
+GOTBERETTA2 = "You got another Beretta! \cf(\cjSlot 2\cf)";
+GOTBOOMSTICK = "You got the UAC Pump-Action Shotgun! \cf(\cjSlot 3\cf)";
+GOTFIRESTICK = "You got the \"Firestick\" SPAS-12! \cf(\cjSlot 3\cf)";
+GOTSAWNOFF = "You got the Sawn-Off! \cf(\cjSlot 3\cf)";
+GOTVGUN = "You got the V-Gun! \cf(\cjSlot 4\cf)";
+GOTREVX = "You got the \"Rev-X\" Battery-Charged Rifle! The Revolution has begun! \cf(\cjSlot 4\cf)";
+GOTUPGRADE1 = "You got the \"Rev-X\" Rapid Fire Coolant!\n\c[white](Rev-X has been upgraded! Battery recharge increased!)";
+GOTUPGRADE2 = "You got the \"Rev-X\" Plasma Pulse Energiser!\n\c[white](Rev-X has been upgraded! Attack damage increased!)";
+GOTLAUNCHER = "You got the Missile Launcher! \cf(\cjSlot 5\cf)";
+GOTPINEAPPLE = "You got the \"Pineapple Jammer\" Grenade Launcher! \cf(\cjSlot 5\cf)";
+GOTRAIL = "You got the Railgun! \cf(\cjSlot 6\cf)";
+GOTEXCESS = "You got the \"Excessive Force\" Plasma Cannon! \cf(\cjSlot 6\cf)";
+GOTPINBALL = "You got the \"Space Cadet\" Pinball spell! Time to bring pain and nostalgia upon thee... \cf(\cjSlot 7\cf)";
+GOTCUBE = "The mysterious artifact speaks to you... \"We are many. We are one. We are the Praeleanthor. You know us as the \crSoul Cube\c-.\" \cf(\cjSlot 8\cf)";
+GOTCUBE2 = "You retrieved the \crSoul Cube\c-.";
+GOTAUTOMAP = "Automap downloaded!";
+GOTBIOSUIT = "Put on a bio-suit.";
+GOTGOGGLES = "Night vision goggles!";
+GOTINVUL = "\c[DarkGreen]Invulnerability!";
+GOTDOUBLE = "\cgDouble Damage!\c-";
+GOTQUAD = "\c[LightBlue]Quad Damage!\c-";
+GOTHASTE = "\cxHasteSphere!";
+GOTCRYSTAL = "You got the Cookie-Crystal! \c[brick]Cookiedemon\c- is ready... \cf(\cjThis item must be activated to use it\cf)";
+GOTSHAKE = "Drank a Super-Cool(tm) Energy Shake! Refreshing! \cf(\cj+50 health\cf)";
+
+TAG_COLA1 = "Caco-Cola";
+TAG_COLA2 = "Caco-Cola Zero";
+TAG_APPLE = "Apple";
+TAG_GRAPES = "Grapes";
+TAG_ORANGE = "Orange";
+TAG_HAMBURG = "Hamburger";
+TAG_CHICKEN = "Chicken";
+TAG_PIZZA = "Pizza";
+TAG_SOUL = "Soulsphere";
+TAG_BOTTLE = "Caco-Cola Bottle";
+TAG_SHARD1 = "Armor Shard";
+TAG_SHARD2 = "Super Armor Shard";
+TAG_ENERGY1 = "Minor Energy";
+TAG_ENERGY2 = "Major Energy";
+TAG_VEST1 = "Light Armor Vest";
+TAG_VEST2 = "Strong Armor Vest";
+TAG_VEST3 = "Heavy Armor Vest";
+TAG_VEST4 = "Praetor Armor Vest";
+TAG_MEGA = "Megasphere";
+TAG_9MM1 = "Pistol Magazine";
+TAG_9MM2 = "Box of Pistol Rounds";
+TAG_BULLET1 = "Bullet Chain";
+TAG_BULLET2 = "Box of Bullet Chains";
+TAG_SHELLS1 = "Shotgun Shells";
+TAG_SHELLS2 = "Case of Shotgun Shells";
+TAG_FIRESHELLS1 = "Dragon's Breath Shells";
+TAG_FIRESHELLS2 = "Case of Dragon's Breath Shells";
+TAG_MISSILE1 = "Missile";
+TAG_MISSILE2 = "Crate of Missiles";
+TAG_CHARGE1 = "Lesser Plasma Charge";
+TAG_CHARGE2 = "Greater Plasma Charge";
+TAG_MANA1 = "Mana Vial";
+TAG_MANA2 = "Mana Jar";
+TAG_CUBEAMMO = "Soul";
+TAG_REVXAMMO = "Rev-X Battery"; //For compatibility with m8f's Status Widget
+TAG_BACKPACK = "Backpack";
+TAG_AUTOMAP = "Automap";
+TAG_BIOSUIT = "Bio-Suit";
+TAG_GOGGLES = "Night Vision Goggles";
+TAG_INVUL = "Invulnerability";
+TAG_DOUBLE = "Double Damage";
+TAG_QUAD = "Quad Damage";
+TAG_HASTE = "HasteSphere";
+TAG_CRYSTAL = "Cookie-Crystal";
+TAG_UPGRADE1 = "Rapid Fire Coolant";
+TAG_UPGRADE2 = "Plasma Pulse Energiser";
+TAG_SHAKE = "Super-Cool(tm) Energy Shake";
+
+TAG_GRINDER = "Angle Grinder";
+TAG_FISTS = "Bare Hands";
+TAG_BERETTA = "Beretta";
+TAG_BERETTA2 = "Dual Berettas";
+TAG_BOOMSTICK = "UAC Pump-Action Shotgun";
+TAG_FIRESTICK = "Firestick";
+TAG_SAWNOFF = "Sawn-Off";
+TAG_VGUN = "V-Gun";
+TAG_REVX = "Rev-X";
+TAG_LAUNCHER = "Missile Launcher";
+TAG_PINEAPPLE = "Pineapple Jammer";
+TAG_RAIL = "Railgun";
+TAG_EXCESS = "Excessive Force";
+TAG_PINBALL = "Space Cadet";
+TAG_CUBE = "Soul Cube";
+
+TAG_BARREL = "Explosive Barrel";
+TAG_DASHIE = "Rainbow Dash";
+TAG_ZSEC1 = "ZSec Soldier (Pistol)";
+TAG_BLASTER = "Blaster Soldier";
+TAG_EVILMARINE1 = "Evil Marine (Rifle)";
+TAG_OCTAVIA = "Octavia Melody";
+TAG_ZSEC2 = "ZSec Soldier (Firestick)";
+TAG_WIELDER = "Sawn-Off Wielder";
+TAG_EVILMARINE2 = "Evil Marine (Shotgun)";
+TAG_APPLEJACK = "Applejack";
+TAG_MAJOR = "Chaingun Major";
+TAG_HOMELESS = "Homeless Gunman";
+TAG_EVILMARINE3 = "Evil Marine (V-Gun)";
+TAG_PINKIE = "Pinkie Pie";
+TAG_HOUND = "Hellhound";
+TAG_SCIENTIST = "Zombie Scientist";
+TAG_CHANGELING = "Changeling";
+TAG_RARITY = "Rarity";
+TAG_TRIXIE = "Trixie";
+TAG_TWILIGHT = "Twilight Sparkle";
+TAG_VINYL = "Vinyl Scratch";
+TAG_HOUND2 = "Genetically Advanced Hellhound";
+TAG_GMBOT = "GMBot";
+TAG_DERPY = "Derpy Hooves";
+TAG_FLUTTERSHY = "Fluttershy";
+TAG_LORD = "Master Force Lord";
+TAG_LUNA = "Princess Luna";
+TAG_NONBOY = "NONBoy";
+TAG_WAYNE = "Wayne Campbell";
+
+CC_COOKIE = "Cookiedemon";
+CC_GM = "GamingMarine";
+CC_THANKS = "Thanks for playing!\n-GamingMarine, 2020";
+
+//Obituaries
+OB_FISTS = "%o lost a fistfight with %k.";
+OB_GRINDER = "%o was slaughtered by %k's Angle Grinder.";
+OB_BERETTA = "%o barely evaded %k's Beretta.";
+OB_BERETTA2 = "%o was so close to evading %k's dual Berettas.";
+OB_BOOMSTICK = "%o chewed on %k's Pump-Action Shotgun.";
+OB_FIRESTICK = "%o was set ablaze by %k's Firestick.";
+OB_SAWNOFF = "%o was decapitated by %k's Sawn-Off.";
+OB_VGUN = "%o was pelted with lead by %k's V-Gun.";
+OB_REVX = "%o got a load of %k's Rev-X.";
+OB_LAUNCHER = "%o got a face full of %k's Missile Launcher.";
+OB_PINEAPPLE = "%o was blown up by %k's Pineapple Jammer.";
+OB_RAIL = "%o was split by %l's Railgun.";
+OB_EXCESS = "%o tasted %k's Excessive Force.";
+OB_PINBALL = "%o choked on %k's big balls.";
+OB_CUBE = "%o's soul was taken by %k.";
+
+OB_BARREL = "%o was far too close to an explosive barrel.";
+OB_GMIDBASE = "%o died from cringe.";
+OB_DASHIE = "%o was confronted by the worst crossing ever made.";
+OB_ZSEC1 = "%o was shot by a ZSec Gunner.";
+OB_BLASTER = "%o was zapped by a Blaster Soldier.";
+OB_EVILMARINE = "%o was eliminated by an Evil Marine.";
+OB_ZSEC2 = "%o was set ablaze by a ZSec Soldier.";
+OB_WIELDER = "%o was bucked by a Sawn-Off Wielder.";
+OB_MAJOR = "%o was perforated by a Chaingun Major.";
+OB_HOMELESS = "%o was assaulted by a Homeless Gunman.";
+OB_HOUND = "%o was mauled by a Hellhound.";
+OB_SCIENTIST = "%o was axed by a Zombie Scientist.";
+OB_CHANGELING = "%o was spooked by a Changeling.";
+OB_HOUND2 = "%o was frightened by a Genetically Advanced Hellhound.";
+OB_GMBOT = "%o was terminated by a GMBot.";
+OB_LORD = "%o was obliterated by the Master Force Lord.";
+OB_LUNA = "%o kneeled before Princess Luna.";
+OB_NONBOY = "%o couldn't stop the New Order.";
+
 //Quit messages
-QUITMSG = "The Master force still grows rapidly.\nQuitting will in no way advance the situation.";
+QUITMSG = "The Master force still grows rapidly.\n"
+		  "Quitting will in no way advance the situation.";
 QUITMSG1 = "You quittin' on me, Private?";
-QUITMSG2 = "Hey, no one ever said being a space marine was easy!";
-QUITMSG3 = "What's that? You're gonna go play BlazBlue instead?\n\nWhat're you, gay?";
-QUITMSG4 = "Press N to fight strong.\nPress Y to die like the wimp you are.";
-QUITMSG5 = "Well, go click on your icons then.\n\nI'll be waiting.";
-QUITMSG6 = "Does someone need to go back to their safety corner?";
-QUITMSG7 = "C'mon, just a few more productive hours?";
-QUITMSG8 = "But... you're the hero the world deserves!";
-QUITMSG9 = "Please don't leave... there's a Changeling around that corner!";
-QUITMSG10 = "Don't let humanity die off like this!\nYou must keep fighting!";
-QUITMSG11 = "I wouldn't leave if I were you.\nThat desktop is way worse.";
-QUITMSG12 = "Okay, fine. Abandon all hope for humanity.\n\nGenius move of you.";
-QUITMSG13 = "Okay, I'll let you leave, bit I'm warning you:\n\nHazbin Hotel is just porn-bait created by Tumblr.";
-QUITMSG14 = "Are you crazy? Is that your problem?";
+QUITMSG2 = "Hey, no one ever said being a space marine was easy!"; //Heretic
+QUITMSG3 = "What's that? You're gonna go play BlazBlue instead?\n\n"
+		   "Fine, then. It's not as appealing as this, though.";
+QUITMSG4 = "Press N to fight strong.\n"
+		   "Press Y to die like the wimp you are.";
+QUITMSG5 = "Well, go click on your icons then.\n\n"
+		   "I'll be waiting."; //Mac OS Classic port of Doom
+QUITMSG6 = "Pressing Y will install a Peter Griffin-themed virus onto your device.\n"
+		   "Do you really want to do this?";
+QUITMSG7 = "If I catch you loading up that tech demo pk3, I'll bitch-slap you."; //A certain Doom mod beginning with the letter "H"
+QUITMSG8 = "I really think you should be playing more of this mod right about now, unless, uhhh hrmmm...\n\n"
+		   "you won't."; //Unused Quake 1 sell screen
+QUITMSG9 = "Please don't leave... there's a Changeling around that corner!"; //Doom 1
+QUITMSG10 = "Don't let humanity die off like this!\n"
+			"You must keep fighting!";
+QUITMSG11 = "I wouldn't leave if I were you.\n"
+			"You got some really weird shit on your desktop."; //Doom II
+QUITMSG12 = "Okay, fine. Abandon all hope for humanity.\n\n"
+			"Genius move of you.";
+QUITMSG13 = "Watching nothing but Hazbin Hotel is no way to go through life, son."; //The Animal House
+QUITMSG14 = "Heroes don't quit, but go ahead and press Y if you aren't one."; //Spear of Destiny
+QUITMSG15 = "Well, Sport, you think you can handle this without getting the lowest body count in the history of this mod?"; //Plumbers Don't Wear Ties
+QUITMSG16 = "Hey, Ron! Can we say 'bruh' in the game?"; //Doom source code/"Development mode only" quit messages
+QUITMSG17 = "You got three seconds to get outta here before I break out the Atomic Elbow, brotha!"; //Space Ghost Coast to Coast
+QUITMSG18 = "This is too much!\n\n"
+			"Now where did I put those cheat codes?"; //Shadow Warrior prototypes
+QUITMSG19 = "Get back here before I downsize your face with a shovel!"; //Saturday Night Live - "Get on the bag!"
+QUITMSG20 = "IS IT THE SHOES???"; //NBA Jam
+QUITMSG21 = "Contact your local D.E.A. recruiter."; //N.A.R.C.
+QUITMSG22 = "Remember: Music is the Weapon."; //Do I really have to tell you?
+QUITMSG23 = "Sure, go back to viewing that \"Homework\" folder...";
 
 PD_BLUEO = "This object is restricted to those with \chblue\c- access.";
 PD_REDO = "This object is restricted to those with \cgred\c- access.";
@@ -85,24 +304,32 @@ PD_ALL6 = "This door is restricted to those with \cjall six keys\c-.";
 PD_ALL6O = "This object is restricted to those with \cjall six keys\c-.";
 PD_ALLKEYS = "\cjEvery single key\c- is required.";
 
+GOTBLUECARD = "You've found the \chblue\c- keycard!";
+GOTYELWCARD = "You've found the \ckyellow\c- keycard!";
+GOTREDCARD = "You've found the \cgred\c- keycard!";
+GOTBLUESKUL2 = "You've found the \chblue\c- skull key!";
+GOTYELWSKUL2 = "You've found the \ckyellow\c- skull key!";
+GOTREDSKUL2 = "You've found the \cgred\c- skull key!";
+
 // Obituary strings
 // First the self-kills, then the other-kills
 OB_SUICIDE = "%o, suicide is not the answer. Call the National Suicide Prevention Lifeline.";
-OB_FALLING = "%o fell to %p death.";
-OB_CRUSH = "%o went ''squish!''";
-OB_EXIT = "%o really wanted to leave.";
+OB_FALLING = "%o's legs became splinters.";
+OB_CRUSH = "%o went \"squish!\"";
+OB_EXIT = "%o hates this map.";
 OB_WATER = "%o sleeps with the fishies.";
 OB_SLIME = "%o mutated into a pile of goop.";
 OB_LAVA = "%o melted like a crayon in the hot Sun.";
 OB_BARREL = "%o perished.";
 OB_SPLASH = "%o learned what splash damage is.";
 OB_KILLEDSELF = "%o took the easy way out.";
+OB_VOODOO = "%o was voodoo'd.";
 
 // Same as OB_MPTELEFRAG, but shown when a monster telefrags you
 OB_MONTELEFRAG = "%o stood in the way of a monster.";
 
 OB_DEFAULT = "%o said %p final farewells.";
-OB_MPDEFAULT = "%o asked %k to please fix this death string."; //A reference to an unused obituary found in Postal 2. "%o said to %k to please rewrite this death string or remove it."
+OB_MPDEFAULT = "%k eliminated %o.";
 OB_FRIENDLY1 = "%k killed a teammate of %p.";
 OB_FRIENDLY2 = "%k got in the way of someone else.";
 OB_FRIENDLY3 = "%k gave the other team a frag.";
@@ -118,7 +345,7 @@ AM_MONSTERS			= "Monsters Killed:";
 AM_SECRETS			= "Secrets Discovered:";
 AM_ITEMS			= "Items Collected:";
 
-MNU_DELETESG		= "Are you SURE you want to delete the savegame\n";
+MNU_DELETESG		= "Are you absolutely sure you want to delete this savegame\n";
 
 MENUNEWG = "Kill Some Stuff";
 MENUOPTN = "Configure";
@@ -126,7 +353,7 @@ MENULOAD = "Restore Progress";
 MENULOADNETGAME = "You will need to quit this netgame in order to load any progress.";
 MENUSAVE = "Save Progress";
 MENUQUIT = "Surrender";
-MENUEPSD = "Choose Your Fate";
+MENUEPSD = "Choose Your Destiny";
 MENUSKIL = "How tough are you?";
 DIFFNAME1 = "Trainee";
 DIFFNAME2 = "Rookie";
@@ -135,35 +362,107 @@ DIFFNAME4 = "Sergeant";
 DIFFNAME5 = "Recruit";
 DIFFNAME6 = "Veteran";
 DIFFNAME7 = "Lost Cause";
-DIFFSELECT1 = "The Master Force seems to have worryingly underestimated the Marine Corp, considering the amount of firepower they're sending your way.\n\nNot only will the amount of enemies you'll encounter be minimal, but you'll take half the amount of damage, and all the ammunition you'll find will be doubled.";
-DIFFSELECT2 = "Your friends luckily managed to take out most of the foes lurking around the area. That doesn't mean they survived...\n\nThe amount of enemies you will face on the battlefield will be fairly small, but will be able to take you down if you're not careful.";
-DIFFSELECT3 = "Your training has suited you rather well for this mission.\n\nEnemy forces will come in packs, willing to take a human down without question. If you know what you're doing, then your chances of survival are fairly high.";
-DIFFSELECT4 = "The Master Force knows what they're facing. In return, they're outnumbering you and the rest of the Marine Corp. Look at what's happened because of that...\n\nThere will be foes lurking around practically every single corner. You best hope you have what it takes or you're dead meat.";
-DIFFSELECT5 = "Despite how well you've payed attention during your training and the mission breifing, you still feel fragile.\n\nNot only will you find members of the Master Force every five seconds, but you will also take twice the amount of all damage...\n...including friendly fire from \c[brick]Cookiedemon\c-!";
-DIFFSELECT6 = "They know where you're hiding. If you try to run, they'll follow you.\nThere is no escape.\n\nYou will be surrounded the whole mission, and you will be taking twice the beating. To make matters worse, your foes will be much more aggressive towards you, and take half as much damage. Thank God \c[brick]Cookiedemon\c- is also applied to this...";
-DIFFSELECT7 = "You have absolutely no idea what you're dealing with. You will know what it means to be...\n...a \cmLost Cause\c-.\n\nAll your foes have \c[LightBlue]Quad Damage\c- applied to their attacks, take four times the beating, show you no mercy, will not infight, and will never, *ever* flinch. Any hope of salvation is gone for extra measures. Only the best of the best will survive.";
+DIFFSELECT1 = "The Master Force seems to have worryingly underestimated the Marine Corps, considering the amount of firepower they're sending your way.\n\n"
+			  "Not only will the amount of enemies you'll encounter be minimal, but you'll take half the amount of damage, and all the ammunition you'll find will be doubled.";
+DIFFSELECT2 = "Your friends luckily managed to take out most of the foes lurking around the area. That doesn't mean they survived...\n\n"
+			  "The amount of enemies you will face on the battlefield will be fairly small, but will be able to take you down if you're not careful.";
+DIFFSELECT3 = "Your training has suited you rather well for this mission.\n\n"
+			  "Enemy forces will come in packs, willing to take a human down without question. If you know what you're doing, then your chances of survival are fairly high.";
+DIFFSELECT4 = "The Master Force knows what they're facing. In return, they're outnumbering you and the rest of the Marine Corps. Look at what's happened because of that...\n\n"
+			  "There will be foes lurking around practically every single corner. You best hope you have what it takes or you're dead meat.";
+DIFFSELECT5 = "Despite how well you've payed attention during your training and the mission breifing, you still feel fragile.\n\n"
+			  "Not only will you find members of the Master Force every five seconds, but you will also take twice the amount of all damage...\n...including friendly fire from \c[brick]Cookiedemon\c-!";
+DIFFSELECT6 = "They know where you're hiding. If you try to run, they'll follow you.\n"
+			  "There is no escape.\n\n"
+			  "You will be surrounded the whole mission, and you will be taking twice the beating. To make matters worse, your foes will be much more aggressive towards you, and take half as much damage. Thank God \c[brick]Cookiedemon\c- is also applied to this...";
+DIFFSELECT7 = "You have absolutely no idea what you're dealing with. You will know what it means to be...\n"
+			  "...a \cmLost Cause\c-.\n\n"
+			  "All your foes have \c[LightBlue]Quad Damage\c- applied to their attacks, take four times the beating, show you no mercy, will not infight, and will never, *ever* flinch. Any hope of salvation is gone for extra measures. In other words, you die a lot and then uninstall the mod. This difficulty isn't even remotely fair and in no way are you expected to beat it.";
 
 GMIDTITLEMAP = "Your Adventure Begins";
+
+CUBENOPE = "You don't have enough souls to use the \crSoul Cube\c-!";
+CUBEREADY = "The \crSoul Cube\c- is ready to be used!";
+
+//Options Menu
+GMIDMENU = "GamingMarine in Doom Options";
+HIDDENMENU = "Hidden ZDoom Options";
+KEYBINDMENU = "Necessary Keybinds Options";
+HIDDENNOTE1 = "These options were previously only available through console commands,";
+HIDDENNOTE2 = "but are now available here for your convenience.";
+FOVOPTION1 = "FOV";
+FOVOPTION2 = "Adjusts your FOV, or \"field of view\", which is how much of the";
+FOVOPTION3 = "environment is viewable to you. Default value is 90.";
+FOVOPTION4 = "(Console command: \ckfov \cnvalue\c-)";
+FPSOPTION1 = "FPS Counter";
+FPSOPTION2 = "Displays a simple FPS counter in the top right corner of your screen.";
+FPSOPTION3 = "\"ms\" is your input delay, \"fps\" is your framerate.";
+FPSOPTION4 = "(Console command: \ckvid_fps \cntrue/false\c-)";
+KEYBINDNOTE1 = "These controls are necessary to get the best possible experience out";
+KEYBINDNOTE2 = "of GamingMarine in Doom.";
+GMIDACTIONS = "Basic Actions";
+GMIDCTRL1 = "Move Forwards";
+GMIDCTRL2 = "Move Backwards";
+GMIDCTRL3 = "Sidestep Left";
+GMIDCTRL4 = "Sidestep Right";
+GMIDCTRL5 = "Jump";
+GMIDCTRL6 = "Crouch";
+GMIDCTRL7 = "Use";
+GMIDCTRL8 = "View Automap";
+GMIDWEAPON = "Weapon Actions";
+GMIDCTRL9 = "Fire Weapon";
+GMIDCTRL10 = "Quick-Kick (Alt-Fire)";
+GMIDCTRL11 = "Select Next Weapon";
+GMIDCTRL12 = "Select Previous Weapon";
+GMIDINVENTORY = "Inventory (Needed to use Caco-Cola bottles and Cookie-Crystals)";
+GMIDCTRL13 = "Use Selected Inventory";
+GMIDCTRL14 = "Move Inventory Left";
+GMIDCTRL15 = "Move Inventory Right";
+WARMUPOPTION1 = "Disable Warm-Up Animation";
+WARMUPOPTION2 = "If you don't want to sit through the animation and prefer jumping";
+WARMUPOPTION3 = "straight into the action, then enable this. Useful for mapsets like";
+WARMUPOPTION4 = "Scythe II, where you start with alerted enemies.";
+CUMMINSOON = "\cgMore mod-tailored options coming soon!";
+
+//This is only here so that those using older GZDoom versions don't have a broken options menu. I'm sorry, translators, but this is just how it has to be.
+OPTMNU_TITLE = "OPTIONS";
+OPTMNU_CONTROLS	= "Customize Controls";
+OPTMNU_MOUSE = "Mouse options";
+OPTMNU_JOYSTICK	= "Joystick options";
+OPTMNU_PLAYER = "Player Setup";
+OPTMNU_GAMEPLAY	= "Gameplay Options";
+OPTMNU_COMPATIBILITY = "Compatibility Options";
+OPTMNU_AUTOMAP = "Automap Options";
+OPTMNU_HUD = "HUD Options";
+OPTMNU_MISCELLANEOUS = "Miscellaneous Options";
+OPTMNU_NETWORK = "Network Options";
+OPTMNU_SOUND = "Sound Options";
+OPTMNU_DISPLAY = "Display Options";
+OPTMNU_VIDEO = "Set video mode";
+OPTMNU_CHANGERENDER = "Change Rendering Output";
+OPTMNU_DEFAULTS	= "Reset to defaults";
+OPTMNU_RESETTOSAVED = "Reset to last saved";
+OPTMNU_CONSOLE = "Go to console";
 
 //Story screen text
 //Doom
 E1TEXT =
 	"As expected, it wouldn't be that easy to claim\n"
-	"victory. After killing two freakos and walking over\n"
-	"a mysterious portal you find yourself attacked from\n"
-	"every corner, but technically blindfolded. Why couldn't\n"
-	"you have just stopped the damned invasion at this point\n"
-	"and get a free ticket home? Life is unfair.\n"
+	"victory. After infiltrating the Phobos Anomaly base and\n"
+	"walking over a mysterious portal, you find yourself\n"
+	"teleported into an ambush, being attacked from every\n"
+	"corner in the dark. That's all you witness before blacking\n"
+	"out.\n"
 	"\n"
-	"Well, tough shit, marine; This is only the beginning\n"
-	"of your adventure. You've been teleported to Deimos,\n"
-	"the moon that was reported missing not too long ago.\n"
-	"You might be able to find out what happened in a\n"
-	"little bit.\n"
+	"When you regain conciousness, you notice that you've\n"
+	"been taken to the lost Deimos Base that was reported\n"
+	"missing when this mess started, not to mention that\n"
+	"you've been stripped clean of almost all your equipment.\n"
 	"\n"
-	"To kick some more ass, keep on playing through the\n"
-	"adventure of GamingMarine in Doom: Where the safest\n"
-	"place is behind the trigger!\n";
+	"All you care about right now is where the Hell Deimos\n"
+	"went. But the Master Force is still going strong.\n"
+	"\n"
+	"This is only the beginning.\n";
 E2TEXT =
 	"What was that thing? No matter, because it's\n"
 	"dead now. It seems it was commanding these guys to\n"
@@ -196,8 +495,8 @@ E3TEXT =
 	"It's good to be back home.\n"
 	"\n"
 	"As you step foot outside the portal, you\n"
-	"wonder to yourself: ''With all the madness\n"
-	"I've been through, what has Earth been doing?''\n"
+	"wonder to yourself: \"With all the madness\n"
+	"I've been through, what has Earth been doing?\"\n"
 	"After all, there's no way anyone could've gone\n"
 	"through the portal with you... right?";
 //The Ultimate Doom
@@ -238,7 +537,7 @@ C2TEXT =
 	"You're now the only living human left on Earth,\n"
 	"with more of those freaks surrounding you.\n"
 	"You've decided that your work here is done,\n"
-	"and proceed to stuff the barrel in your mouth.\n"
+	"and proceed to stuff your shotgun in your mouth.\n"
 	"\n"
 	"Suddenly, a message beams down from space:\n"
 	"\"Sensors have located the source of the\n"
@@ -285,11 +584,12 @@ C5TEXT =
 	"\n"
 	"Hopefully.";
 C6TEXT =
-	"As it turns out, a corrupt group named the New\n"
-	"Order Nation has taken over this area.\n"
+	"As it turns out, a corrupt neo-industrial-governmental-\n"
+	"militaristic oppressive alliance named the New Order\n"
+	"Nation has taken over this area.\n"
 	"\n"
-	"But due to your foolish curiousity, you have to\n"
-	"deal with more of them.";
+	"From the looks of it, they're not through with you\n"
+	"yet.";
 //Final Doom: The Plutonia Experiment	
 P1TEXT =
 	"You begin to take a deep breath as the\n"
@@ -307,8 +607,8 @@ P1TEXT =
 P2TEXT =
 	"Not even the labyrinth of the damned could\n"
 	"stop you in your tracks. You walk up to\n"
-	"the prototype Accelerator and fire your sawn-\n"
-	"off at it, permanently shutting it down.\n"
+	"the prototype Accelerator and fire your Rev-X\n"
+	"at it, permanently shutting it down.\n"
 	"\n"
 	"There's no time for resting, however. Up ahead\n"
 	"lies another stronghold tougher than you can\n"
@@ -373,18 +673,19 @@ T2TEXT =
 	"\n"
 	"You won't be going down easy.";
 T3TEXT =
-	"Hang on a second.\n"
+	"You take a quick pause to catch your breath. You've been\n"
+	"fighting all day, after all: You deserve it.\n"
+	"\n" 
+	"It was only near the area you have stopped in that your father\n"
+	"used to live. At least, before the incident. The Master Force have\n"
+	"practically trashed the place, so finding the house he lived in\n"
+	"would be impossible. However, you hear an explosion up ahead of\n"
+	"you. Seems you have a new target of attention.\n"
 	"\n"
-	"You feel that you've been here before.\n" 
-	"In fact, you have: This place was once a hospital,\n"
-	"the same one you were sent to a while back for\n"
-	"having suicidal thoughts. You never liked this place\n"
-	"when you were young, and you sure as fuck despise it\n"
-	"now.\n"
-	"You crack your knuckles as you walk into the vista\n"
-	"opening, prepared to take names.";
+	"You crack your knuckles as you walk into the vista opening, prepared\n"
+	"to take names.";
 T4TEXT =
-	"After the creature-spitter lets out a humongous\n"
+	"After the Creature-Spitter lets out a humongous\n"
 	"roar of pain, all becomes quiet. The countless\n"
 	"corpses of the Master Force begin to dissolve,\n"
 	"and the Hellish-red sky becomes an Earthly blue.\n"
@@ -394,7 +695,7 @@ T4TEXT =
 	"\n"
 	"Suddenly, something rumbles in the distance.\n"
 	"An alien-like blue light glows inside the\n"
-	"creature-spitter's decaying skull.";
+	"Creature-Spitter's decaying skull.";
 T5TEXT =
 	"Ancient Egypt? This sure seems different.\n"
 	"Whatever infests this place surely can't be\n"
@@ -405,9 +706,9 @@ T5TEXT =
 T6TEXT =
 	"A vacation. About damn time. After the constant\n"
 	"beating of a thousand serial killers, you're\n"
-	"just about ready for a break. ''Maybe someone\n"
+	"just about ready for a break. \"Maybe someone\n"
 	"else can kick the Master Force's ass next time\n"
-	"around,'' you mutter to yourself. You step forth\n"
+	"around,\" you mutter to yourself. You step forth\n"
 	"into the welcoming, quiet town, complete with a\n"
 	"gently flowing stream and quaint buildings.\n"
 	"\n"
@@ -421,8 +722,8 @@ NERVETEXT =
 	"amusement park, with Earth being the ticket\n"
 	"booth.\n"
 	"\n"
-	"Little did it know a teen with a sawn-off\n"
-	"in his hand was making a guest appearance,\n"
+	"Little did it know a teen with a Rev-X\n"
+	"in his hands was making a guest appearance,\n"
 	"and turning up the crank on the shooting\n"
 	"gallery to a 12.\n"
 	"\n"
@@ -566,13 +867,13 @@ STEP_SLIME15 = "step/metal/a";
 STEP_SLIME16 = "step/metal/a";
 
 // Metal B
-STEP_FLAT22 = "step/metal/b";
-STEP_FLAT23 = "step/metal/b";
-STEP_CONS1_1 = "step/metal/b";
-STEP_CONS1_5 = "step/metal/b";
-STEP_CONS1_7 = "step/metal/b";
-STEP_GATE4 = "step/metal/b";
-STEP_FLAT4 = "step/metal/b";
+STEP_FLAT22 = "step/metal/a";
+STEP_FLAT23 = "step/metal/a";
+STEP_CONS1_1 = "step/metal/a";
+STEP_CONS1_5 = "step/metal/a";
+STEP_CONS1_7 = "step/metal/a";
+STEP_GATE4 = "step/metal/a";
+STEP_FLAT4 = "step/metal/a";
 
 // Rock
 STEP_FLAT1 = "step/rock";

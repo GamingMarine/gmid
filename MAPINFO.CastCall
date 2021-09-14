@@ -14,27 +14,27 @@ Intermission GMIDCast
 {
     Cast
 	{
-	  CastClass = "SonicXRainbow"
-	  CastName = "Rainbow Dash"
+	  CastClass = "RainbowDashCastCall"
+	  CastName = "$TAG_DASHIE"
       AttackSound = "Missile", 1, "grunt/attack"
 	}
     Cast
 	{
 	  CastClass = "ZSecPistolCastCall"
-	  CastName = "ZSec Soldier (Pistol)"
+	  CastName = "$TAG_ZSEC1"
       AttackSound = "Missile", 1, "zsec/pistol"
 	}
     Cast
 	{
 	  CastClass = "BlasterSoldierCastCall"
-	  CastName = "Blaster Soldier"
+	  CastName = "$TAG_BLASTER"
       AttackSound = "Missile", 1, "q2soldier/blaster"
       AttackSound = "Missile", 5, "q2soldier/blaster"
 	}
 	Cast
 	{
 	  CastClass = "EvilMarine_RifleCastCall"
-	  CastName = "Evil Marine (Rifle)"
+	  CastName = "$TAG_EVILMARINE1"
       AttackSound = "Missile", 1, "rifle/fire"
       AttackSound = "Missile", 3, "rifle/fire"
       AttackSound = "Missile", 5, "rifle/fire"
@@ -47,20 +47,20 @@ Intermission GMIDCast
 	}
     Cast
 	{
-	  CastClass = "OctaLeb"
-	  CastName = "OctaLeb"
-      AttackSound = "Missile", 1, "shotguy/attack"
+	  CastClass = "OctaviaCastCall"
+	  CastName = "$TAG_OCTAVIA"
+      AttackSound = "Missile", 1, "octaleb/attack"
 	}
 	Cast
 	{
 	  CastClass = "ZSpecOpsShotgunCastCall"
-	  CastName = "ZSec Soldier (Shotgun)"
-      AttackSound = "Missile", 1, "weapons/shotgf"
+	  CastName = "$TAG_ZSEC2"
+      AttackSound = "Missile", 1, "weapons/spasshot"
 	}
 	Cast
 	{
-	  CastClass = "SawedOffShotgunGuy"
-	  CastName = "ZSec Soldier (Shotgun)"
+	  CastClass = "SawnOffWielderCastCall"
+	  CastName = "$TAG_WIELDER"
       AttackSound = "Missile", 1, "weapons/DSDSHTGN"
 	  AttackSound = "Missile", 3, "weapons/DSDSHTGN"
 	  AttackSound = "Missile", 5, "weapons/ssg1"
@@ -70,29 +70,29 @@ Intermission GMIDCast
 	Cast
 	{
 	  CastClass = "EvilMarine_ShotgunCastCall"
-	  CastName = "Evil Marine (Shotgun)"
+	  CastName = "$TAG_EVILMARINE2"
       AttackSound = "Missile", 1, "shotguy/attack"
 	}
     Cast
 	{
-	  CastClass = "AppleSheriff"
-	  CastName = "Applejack"
-      AttackSound = "Missile", 1, "chainguy/attack"
-      AttackSound = "Missile", 2, "chainguy/attack"
-      AttackSound = "Missile", 3, "chainguy/attack"
+	  CastClass = "ApplejackCastCall"
+	  CastName = "$TAG_APPLEJACK"
+      AttackSound = "Missile", 1, "applesheriff/attack"
+      AttackSound = "Missile", 2, "applesheriff/attack"
+      AttackSound = "Missile", 3, "applesheriff/attack"
 	}
 	Cast
 	{
 	  CastClass = "ChaingunMajorCastCall"
-	  CastName = "Chaingun Major"
-      AttackSound = "Missile", 1, "chainguy/attack"
-      AttackSound = "Missile", 2, "chainguy/attack"
-      AttackSound = "Missile", 3, "chainguy/attack"
+	  CastName = "$TAG_MAJOR"
+      AttackSound = "Missile", 1, "weapons/mgunfire"
+      AttackSound = "Missile", 2, "weapons/mgunfire"
+      AttackSound = "Missile", 3, "weapons/mgunfire"
 	}
 	Cast
 	{
-	  CastClass = "HomelessGunman"
-	  CastName = "Homeless Gunman"
+	  CastClass = "HomelessGunmanCastCall"
+	  CastName = "$TAG_HOMELESS"
       AttackSound = "Missile", 1, "weapons/minifire"
       AttackSound = "Missile", 3, "weapons/minifire"
       AttackSound = "Missile", 5, "weapons/minifire"
@@ -103,7 +103,7 @@ Intermission GMIDCast
 	Cast
 	{
 	  CastClass = "EvilMarine_MinigunCastCall"
-	  CastName = "Evil Marine (Minigun)"
+	  CastName = "$TAG_EVILMARINE3"
       AttackSound = "Missile", 1, "weapons/uzifire1"
       AttackSound = "Missile", 3, "weapons/uzifire1"
       AttackSound = "Missile", 5, "weapons/uzifire1"
@@ -113,32 +113,32 @@ Intermission GMIDCast
 	}
     Cast
 	{
-	  CastClass = "AmyPie"
-	  CastName = "Pinkie Pie"
+	  CastClass = "PinkiePieCastCall"
+	  CastName = "$TAG_PINKIE"
       AttackSound = "Missile", 1, "grunt/attack"
 	}
     Cast
 	{
 	  CastClass = "HellhoundCastCall"
-	  CastName = "Hellhound"
+	  CastName = "$TAG_HOUND"
       AttackSound = "Melee", 1, "Hellhound/melee"
 	}
     Cast
 	{
 	  CastClass = "ZombieScientistCastCall"
-	  CastName = "Zombie Scientist"
+	  CastName = "$TAG_SCIENTIST"
       AttackSound = "Melee", 1, "scientist/attack"
 	}
     Cast
 	{
 	  CastClass = "Changeling"
-	  CastName = "Changeling"
+	  CastName = "$TAG_CHANGELING"
       AttackSound = "Missile", 2, "changeling/attack"
 	}
 	Cast
 	{
-	  CastClass = "Rourity"
-	  CastName = "Rarity"
+	  CastClass = "RarityCastCall"
+	  CastName = "$TAG_RARITY"
       AttackSound = "Missile", 1, "grunt/attack"
       AttackSound = "Missile", 3, "grunt/attack"
       AttackSound = "Missile", 5, "grunt/attack"
@@ -150,64 +150,56 @@ Intermission GMIDCast
 	}
     Cast
 	{
-	  CastClass = "TrixieKir"
-	  CastName = "Trixie"
+	  CastClass = "TrixieCastCall"
+	  CastName = "$TAG_TRIXIE"
       AttackSound = "Missile", 1, "imp/attack"
 	}
     Cast
 	{
 	  CastClass = "TwiMage"
-	  CastName = "Twilight Sparkle"
+	  CastName = "$TAG_TWILIGHT"
       AttackSound = "Missile", 1, "imp/attack"
 	}
     Cast
 	{
 	  CastClass = "VinylStorm"
-	  CastName = "Vinyl Scratch"
+	  CastName = "$TAG_VINYL"
       AttackSound = "Missile", 1, "weapons/blasterrifle"
 	}
     Cast
 	{
 	  CastClass = "AdvancedHellhoundCastCall"
-	  CastName = "Genetically Advanced Hellhound"
-      AttackSound = "Missile", 1, "fatso/attack"
-	  AttackSound = "Missile", 4, "fatso/attack"
+	  CastName = "$TAG_HOUND2"
+      AttackSound = "Missile", 1, "AdvancedHound/Breath"
+	  AttackSound = "Missile", 4, "AdvancedHound/Breath"
 	}
     Cast
 	{
 	  CastClass = "GamingMarineCloneCastCall"
-	  CastName = "GMBot"
-      AttackSound = "Missile", 1, "GamingMarineClone/Fire"
-	  AttackSound = "Missile", 3, "GamingMarineClone/Fire"
-      AttackSound = "Missile", 5, "GamingMarineClone/Fire"
-	  AttackSound = "Missile", 7, "GamingMarineClone/Fire"
-      AttackSound = "Missile", 9, "GamingMarineClone/Fire"
-	  AttackSound = "Missile", 11, "GamingMarineClone/Fire"
-      AttackSound = "Missile", 13, "GamingMarineClone/Fire"
-	  AttackSound = "Missile", 15, "GamingMarineClone/Fire"
-      AttackSound = "Missile", 17, "GamingMarineClone/Fire"
-	  AttackSound = "Missile", 19, "GamingMarineClone/Fire"
-      AttackSound = "Missile", 21, "GamingMarineClone/Fire"
-	  AttackSound = "Missile", 23, "GamingMarineClone/Fire"
-      AttackSound = "Missile", 25, "GamingMarineClone/Fire"
-	  AttackSound = "Missile", 27, "GamingMarineClone/Fire"
-      AttackSound = "Missile", 29, "GamingMarineClone/Fire"
-	  AttackSound = "Missile", 31, "GamingMarineClone/Fire"
+	  CastName = "$TAG_GMBOT"
+      AttackSound = "Missile", 1, "RevX/Fire"
+	  AttackSound = "Missile", 3, "RevX/Fire"
+      AttackSound = "Missile", 5, "RevX/Fire"
+	  AttackSound = "Missile", 7, "RevX/Fire"
+      AttackSound = "Missile", 9, "RevX/Fire"
+	  AttackSound = "Missile", 11, "RevX/Fire"
+      AttackSound = "Missile", 13, "RevX/Fire"
+	  AttackSound = "Missile", 15, "RevX/Fire"
       AttackSound = "Melee", 1, "GamingMarineClone/Ready"
 	  AttackSound = "Melee", 2, "weapons/GMROCKTL"
 	}
    Cast
    {
       CastClass = "NewbieHooves"
-      CastName = "Derpy Hooves"
+      CastName = "$TAG_DERPY"
       AttackSound = "Missile", 1, "fatso/attack"
       AttackSound = "Missile", 3, "fatso/attack"
       AttackSound = "Missile", 5, "fatso/attack"
    }
     Cast
 	{
-	  CastClass = "FlutterMedic"
-	  CastName = "Fluttershy"
+	  CastClass = "FluttershyCastCall"
+	  CastName = "$TAG_FLUTTERSHY"
       AttackSound = "Missile", 1, "grunt/attack"
 	  AttackSound = "Missile", 3, "grunt/attack"
       AttackSound = "Missile", 5, "grunt/attack"
@@ -228,8 +220,35 @@ Intermission GMIDCast
     Cast
 	{
 	  CastClass = "MasterForceLordCastCall"
-	  CastName = "Master Force Lord"
+	  CastName = "$TAG_LORD"
+	  AttackSound = "Missile", 1, "imp/attack"
       AttackSound = "Melee", 1, "ForceLord/Clap"
+	}
+	Cast
+	{
+	  CastClass = "PrincessLunaCastCall"
+	  CastName = "$TAG_LUNA"
+      AttackSound = "Missile", 1, "rifle/fire"
+      AttackSound = "Missile", 3, "rifle/fire"
+      AttackSound = "Missile", 5, "rifle/fire"
+	  AttackSound = "Melee", 1, "weapons/GMROCKTL"
+	}
+	Cast
+	{
+	  CastClass = "CookiedemonCastCall"
+	  CastName = "$CC_COOKIE"
+	  AttackSound = "Missile", 1, "imp/attack"
+	}
+	Cast
+	{
+	  CastClass = "GamingMarineCastCall"
+	  CastName = "$CC_GM"
+	  AttackSound = "Missile", 1, "weapons/GMPISTL1"
+	}
+	Cast
+	{
+	  CastClass = "ThankYouMessage"
+	  CastName = "$CC_THANKS"
 	}
 	Link = GMIDCast //restarts cast call
 }

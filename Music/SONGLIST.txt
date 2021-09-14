@@ -5,30 +5,30 @@ Song name: Flight Castle
 Game of origin: Unreal
 Composer: Alexander Brandon
 
-2. D_INTER
-Song name: Mission Clear
+2. MSSNCLER
+Song name: Bonus Groove
 Game of origin: Terminator 2 (Arcade)
 Composer: Chris Granner
 
 3. D_E1M8
 Song name: Infuscomus
 Game of origin: Blood
-Composer: Daniel Bernstein, Guy Whitmore
+Composers: Daniel Bernstein, Guy Whitmore
 
 4. D_E2M8
 Song name: The Battle with the Natives
 Game of origin: Revolution X
-Composer: Chris Granner
+Composer: Chris Granner, Vince Pontarelli
 
 5. D_E3M8
-Song name: The Battle of Mondor
-Game of origin: Revolution X
-Composer: Chris Granner
+Song name: Warlord
+Game of origin: Unreal
+Composers: Alexander Brandon, Michiel van den Bos
 
 6. D_OPENIN
-Song name: Take Down General Akhboob!
-Game of origin: Total Carnage (Arcade)
-Composer: Jon Hey
+Song name: Pestis Cruento
+Game of origin: Blood
+Composers: Daniel Bernstein, Guy Whitmore, Mike Cody
 
 7. DETHMINE
 Song name: Death in the Mines
@@ -40,7 +40,7 @@ Song name: Orb
 Game of origin: Hexen: Beyond Heretic
 Composer: Kevin Schilder
 
-10. D_DOMES
+10. D_DOME
 Song name: Pleasure Dome
 Game of origin: Total Carnage (SNES)
 Composers: Jon Hey, Byte Size Sound

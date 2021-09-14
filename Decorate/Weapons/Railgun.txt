@@ -1,0 +1,82 @@
+Actor GMIDRailgun : PlasmaRifle
+{
+	Weapon.AmmoUse 10
+    Weapon.AmmoGive 40
+	Weapon.BobRangeX 0.3
+	Weapon.BobRangeY 0.5
+	Weapon.BobStyle InverseSmooth
+	Weapon.BobSpeed 2.0
+	Weapon.UpSound "railup"
+	Tag "$TAG_RAIL"
+	Weapon.AmmoType1 "NewCell"
+	Weapon.AmmoUse 10
+	+WEAPON.NOALERT
+	Inventory.PickupMessage "$GOTRAIL"
+	Obituary "$OB_RAIL"
+	Inventory.Icon "RGNGA0B0"
+	states
+	{
+		Fire:
+			RGUN A 0 A_AlertMonsters
+			RGUN A 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
+			RGUN A 0 A_SetPitch(pitch-1)
+			RGUN B 1 BRIGHT A_RailAttack(300, 0, 1, "DarkGreen", "Green")
+			RGUN C 0 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			RGUN C 1 BRIGHT A_SetPitch(pitch+0.50)
+			RGUN D 1 A_SetPitch(pitch+0.50)
+			RGUN EFGH 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			RGUN IIIIIIIIIIIIIIIIIIII 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			RGUN HGFEDJ 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			RGUN K 1 A_ReFire
+			goto Ready
+		QuadFire:
+		    TNT1 A 0 A_SetBlend("Blue", 0.25, 16)
+			RGUN A 0 A_PlaySound("QuadDamage/Use")
+			RGUN A 0 A_SetPitch(pitch-1)
+			RGUN B 1 BRIGHT A_RailAttack(300, 0, 1, "DarkGreen", "Green")
+			RGUN C 0 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			RGUN C 1 BRIGHT A_SetPitch(pitch+0.50)
+			RGUN D 1 A_SetPitch(pitch+0.50)
+			RGUN EFGH 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			RGUN IIIIIIIIIIIIIIIIIIII 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			RGUN HGFEDJ 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			RGUN K 1 A_ReFire
+			goto Ready
+		Ready:
+			RGUN A 1 A_WeaponReady
+			Loop
+		Deselect:
+			RGUN A 1 A_Lower
+			RGUN A 0 A_Lower
+			Loop
+		Select:
+			RGUN A 1 A_Raise
+			RGUN A 0 A_Raise
+			Loop
+		Spawn:
+			TNT1 A 0
+			TNT1 A 0 A_Jump(128, "Spawn2")
+			RGNG A -1
+			Stop
+		Spawn2:
+			RGNG B -1
+			Stop
+		AltFire:
+			TNT1 A 0 A_GunFlash("WeaponStill")
+			TNT1 A 0 A_PlaySound ("weapons/KICK")
+			FOOT AB 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			FOOT C 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			FOOT D 0 A_CustomPunch(5,0,0,"KickPuff")
+			FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			FOOT D 0 A_Quake(1,2,0,10)
+			FOOT EF 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			FOOT FEDCBA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			TNT1 A 8 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			TNT1 A 0 A_ReFire
+			Goto Ready
+		WeaponStill:
+			RGUN A 22
+			Goto LightDone
+	}
+}

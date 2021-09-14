@@ -1,0 +1,1 @@
+user int nowarmupanim = 0;

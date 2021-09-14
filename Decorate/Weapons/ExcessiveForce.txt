@@ -1,0 +1,118 @@
+actor ExcessiveForce : Weapon
+{
+	Weapon.BobRangeX 0.3
+	Weapon.BobRangeY 0.5
+	Weapon.BobStyle InverseSmooth
+	Weapon.BobSpeed 2.0
+    Weapon.SlotNumber 6
+    Weapon.SelectionOrder 100
+    Weapon.AmmoGive 25
+    Weapon.AmmoType "NewCell"
+	Weapon.AmmoUse 1
+	Obituary "$OB_EXCESS"
+	Tag "$TAG_EXCESS"
+    Inventory.Pickupmessage "$GOTEXCESS"
+    Weapon.upsound "duke/weaponup"
+    Scale 0.75
+	+WEAPON.NOALERT
+	Inventory.Icon "NCHGZ0Y0"
+    States
+    {
+      Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_Jump(128, "Spawn2")
+        NCHG Z -1
+        Stop
+	  Spawn2:
+		NCHG Y -1
+		Stop
+	Ready:
+		NCHG A 1 A_WeaponReady
+		Loop
+	Select:
+		NCHG A 1 A_Raise
+		NCHG A 0 A_Raise
+		Loop
+	Deselect:
+		NCHG A 1 A_Lower
+		NCHG A 0 A_Lower
+		Loop
+	Fire:
+		NCHG A 0 A_AlertMonsters
+		NCHG A 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
+		NCHG A 0 A_PlayWeaponSound ("plasma/fire")
+		NCHG B 0 A_Light1
+		NCHG B 1 Bright A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	    NCHG B 0 A_SetPitch(pitch-1)
+		NCHG B 0 A_FireCustomMissile("PlasmaCannonProjectile",-5.625)
+		NCHG B 0 A_FireCustomMissile("PlasmaCannonProjectile",5.625)
+		NCHG B 0 A_FireCustomMissile("PlasmaCannonProjectile")
+		NCHG C 0 A_Light0
+		NCHG C 1 Bright A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		NCHG D 0 A_SetPitch(pitch+0.50)
+		NCHG D 1 Bright A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		NCHG E 0 A_SetPitch(pitch+0.50)
+		NCHG E 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		NCHG A 1 A_ReFire
+		Goto Ready
+	QuadFire:
+		TNT1 A 0 A_SetBlend("Blue", 0.25, 16)
+		NCHG A 0 A_PlaySound("QuadDamage/Use")
+		NCHG A 0 A_PlayWeaponSound ("plasma/fire")
+		NCHG B 1 Bright A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	    NCHG B 0 A_SetPitch(pitch-1)
+		NCHG B 0 A_FireCustomMissile("PlasmaCannonProjectile",-5.625)
+		NCHG B 0 A_FireCustomMissile("PlasmaCannonProjectile",5.625)
+		NCHG B 0 A_FireCustomMissile("PlasmaCannonProjectile")
+		NCHG C 0 A_Light0
+		NCHG C 1 Bright A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		NCHG D 0 A_SetPitch(pitch+0.50)
+		NCHG D 1 Bright A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		NCHG E 0 A_SetPitch(pitch+0.50)
+		NCHG E 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		NCHG A 1 A_ReFire
+		Goto Ready
+  AltFire:
+	TNT1 A 0 A_GunFlash("WeaponStill")
+	TNT1 A 0 A_PlaySound ("weapons/KICK")
+	FOOT AB 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT C 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT D 0 A_CustomPunch(5,0,0,"KickPuff")
+	FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT D 0 A_Quake(1,2,0,10)
+	FOOT EF 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT FEDCBA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 8 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 0 A_ReFire
+	Goto Ready
+	WeaponStill:
+		NCHG A 22
+		Goto LightDone
+	}
+}
+
+Actor PlasmaCannonProjectile
+{
+  +FORCEXYBILLBOARD
+  Mass 1
+  Radius 8
+  Height 6
+  Speed 20
+  Damage 8
+  translation "112:127=198:207"
+  Scale 0.65
+  DeathSound "q2soldier/shotx"
+  DamageType "Electric"
+  PROJECTILE
+  RenderStyle Add
+  States
+  {
+  Spawn:
+	ACID A 1 Bright
+	Loop
+  Death:
+	ACID BCDEF 1 Bright
+	Stop
+  }
+}

@@ -1,0 +1,626 @@
+actor VinylStorm replaces Arachnotron
+{
+  Speed 7.5
+  Radius 16
+  Height 56
+  Scale 1.06
+  Mass 600
+  Monster
+  AttackSound "Grunt/Attack"
+  PainChance "Foot", 256
+  Obituary "$OB_GMIDBASE"
+  health 500
+  PainChance 128
+  Scale 1.04
+  +FLOORCLIP
+  +NOICEDEATH
+  +BOSSDEATH
+  SeeSound "VinylStorm/sight"
+  PainSound "VinylStorm/pain"
+  ActiveSound "VinylStorm/idle"
+  DeathSound "VinylStorm/death"
+  DropItem "LargeSoul" 255
+  DropItem "SmallSoul" 25
+  Tag "$TAG_VINYL"
+  states
+  {
+  Spawn:
+	VSTR A 10 A_Look
+    Loop
+  See:
+	VSTR AA 2 A_Chase
+	VSTR B 0 A_PlaySound("pony/step", CHAN_BODY)
+	VSTR BBCC 2 A_Chase
+	VSTR D 0 A_PlaySound("pony/step", CHAN_BODY)
+	VSTR DD 2 A_Chase
+	Loop
+  Pain:
+    VSTR G 4
+	VSTR G 4 A_Pain
+	Goto See
+  Pain.Foot:
+    VSTR G 2 A_FaceTarget
+    VSTR A 0 A_ChangeFlag("NOPAIN",1)
+    VSTR A 0 A_Recoil(14)
+    VSTR G 33 A_Pain
+    Goto See
+  Missile:
+	VSTR A 20 A_FaceTarget
+	VSTR F 4 Bright A_CustomMissile("Blaster_RifleShot", 48)
+	VSTR E 4
+	VSTR E 1 A_SpidRefire
+	Goto Missile+1
+  Death:
+	VSTR H 5
+	VSTR I 5 A_Scream
+	VSTR J 5 A_NoBlocking
+	VSTR KL 5
+	VSTR M 0 A_PlaySound("body/hitfloor")
+	VSTR M 5
+	VSTR N 10 A_BossDeath
+	VSTR N 0
+	VSTR N -1
+	Stop
+  ContinueDeath:
+	VSTR J 5 A_NoBlocking
+	VSTR KL 5
+	VSTR M 0 A_PlaySound("body/hitfloor")
+	VSTR M 5
+	VSTR N 10 A_BossDeath
+	VSTR N 0
+	VSTR A 0 A_Jump(16, "KillTaunt")
+	VSTR N -1
+	Stop
+  ContinueDeath2:
+	VSTR J 5 A_NoBlocking
+	VSTR KL 5
+	VSTR M 0 A_PlaySound("body/hitfloor")
+	VSTR M 5
+	VSTR N 10 A_BossDeath
+	VSTR N 0
+	VSTR A 0 A_Jump(16, "KickTaunt")
+	VSTR N -1
+	Stop
+  Death.Fire:
+	BBQ8 A 0 A_NoBlocking
+	BBQ8 A 0 A_PlaySound("female/burn", CHAN_VOICE)
+	BBQ8 AAA 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 BBB 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 CCC 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 DDD 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 AAA 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 BBB 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 CCC 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 DDD 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 AAA 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 BBB 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 CCC 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 DDD 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 AAA 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 BBB 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 CCC 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 DDD 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 AAA 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 BBB 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 CCC 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 DDD 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 AAA 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 BBB 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 CCC 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 DDD 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 AAA 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 BBB 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 CCC 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 DDD 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 AAA 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 BBB 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 CCC 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 DDD 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 AAA 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 BBB 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 CCC 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 DDD 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 AAA 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 BBB 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 CCC 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 DDD 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 AAA 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 BBB 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 CCC 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 DDD 1 Bright A_Wander
+	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ8 A 0 A_Jump(1, "Toasty")
+	Goto Fall
+  Toasty:
+	BBQ8 A 0 A_SpawnItem("ToastyGuy")
+	Goto Fall
+  Fall:
+	VSTR HIJKL 5
+	VSTR M 0 A_PlaySound("body/hitfloor")
+	VSTR M 5
+	VSTR N -1 A_BossDeath
+	Stop
+  XDeath:
+	TNT1 A 0 A_XScream
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_SpawnDebris("SkullGib")
+	TNT1 A 0 A_SpawnDebris("RibGib")
+	TNT1 A 0 A_SpawnDebris("BoneGib")
+	TNT1 A 0 A_SpawnDebris("HipGib")
+	TNT1 A 0 A_SpawnDebris("GutsGib")
+	TNT1 A 0 A_SpawnDebris("LimbGib")
+	TNT1 A 0 A_SpawnDebris("BloodSplurt")
+	TNT1 A 0 A_SpawnDebris("SkullGib")
+	TNT1 A 0 A_SpawnDebris("RibGib")
+	TNT1 A 0 A_SpawnDebris("BoneGib")
+	TNT1 A 0 A_SpawnDebris("HipGib")
+	TNT1 A 0 A_SpawnDebris("GutsGib")
+	TNT1 A 0 A_SpawnDebris("LimbGib")
+	TNT1 A 0 A_SpawnDebris("BloodSplurt")
+	TNT1 A 0 A_BossDeath
+	TNT1 A 0 A_Jump(16, "GibTaunt")
+	Stop
+   }
+}
+
+actor NewbieHooves replaces Fatso
+{
+  Speed 7.5
+  Radius 16
+  Height 56
+  Scale 1.06
+  Mass 1000
+  Monster
+  AttackSound "Grunt/Attack"
+  PainChance "Foot", 256
+  Obituary "$OB_GMIDBASE"
+  health 600
+  PainChance 80
+  SeeSound "NewbieHooves/sight"
+  PainSound "NewbieHooves/pain"
+  ActiveSound "NewbieHooves/sight"
+  DeathSound "NewbieHooves/death"
+  DropItem "LargeSoul" 60
+  DropItem "LargeSoul" 250
+  Tag "$TAG_DERPY"
+  +NOICEDEATH
+  +BOSSDEATH
+  States
+  {
+  Spawn:
+	NWBH A 10 A_Look
+    Loop
+  See:
+	NWBH AABBCCDD 2 A_FastChase
+	Loop
+  See:
+	NWBH AA 2 A_FastChase
+	NWBH B 0 A_PlaySound("pony/step", CHAN_BODY)
+	NWBH BBCC 2 A_FastChase
+	NWBH D 0 A_PlaySound("pony/step", CHAN_BODY)
+	NWBH DD 2 A_FastChase
+	Loop
+  Pain:
+    NWBH G 4
+	NWBH G 4 A_Pain
+	Goto See
+  Pain.Foot:
+    NWBH G 2 A_FaceTarget
+    NWBH A 0 A_ChangeFlag("NOPAIN",1)
+    NWBH A 0 A_Recoil(14)
+    NWBH G 33 A_Pain
+    Goto See
+  Missile:
+	NWBH E 20 A_FaceTarget
+	NWBH F 10 Bright A_FatAttack1
+	NWBH E 10 A_FaceTarget
+	NWBH F 10 Bright A_FatAttack2
+	NWBH E 10 A_FaceTarget
+	NWBH F 10 Bright A_FatAttack3
+	NWBH E 10 A_FaceTarget
+	Goto See
+  Death:
+	NWBH H 5
+	NWBH I 5 A_Scream
+	NWBH J 5 A_NoBlocking
+	NWBH KL 5
+	NWBH M 0 A_PlaySound("body/hitfloor")
+	NWBH M 5
+	NWBH N 10 A_BossDeath
+	NWBH N 0
+	NWBH N -1
+	Stop
+  ContinueDeath:
+	NWBH J 5 A_NoBlocking
+	NWBH KL 5
+	NWBH M 0 A_PlaySound("body/hitfloor")
+	NWBH M 5
+	NWBH N 10 A_BossDeath
+	NWBH N 0
+	NWBH A 0 A_Jump(16, "KillTaunt")
+	NWBH N -1
+	Stop
+  ContinueDeath2:
+	NWBH J 5 A_NoBlocking
+	NWBH KL 5
+	NWBH M 0 A_PlaySound("body/hitfloor")
+	NWBH M 5
+	NWBH N 10 A_BossDeath
+	NWBH N 0
+	NWBH A 0 A_Jump(16, "KickTaunt")
+	NWBH N -1
+	Stop
+  Death.Fire:
+	BBQ5 A 0 A_NoBlocking
+	BBQ5 A 0 A_PlaySound("female/burn", CHAN_VOICE)
+	BBQ5 AAA 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 BBB 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 CCC 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 DDD 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 AAA 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 BBB 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 CCC 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 DDD 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 AAA 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 BBB 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 CCC 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 DDD 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 AAA 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 BBB 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 CCC 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 DDD 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 AAA 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 BBB 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 CCC 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 DDD 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 AAA 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 BBB 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 CCC 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 DDD 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 AAA 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 BBB 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 CCC 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 DDD 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 AAA 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 BBB 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 CCC 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 DDD 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 AAA 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 BBB 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 CCC 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 DDD 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 AAA 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 BBB 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 CCC 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 DDD 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 AAA 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 BBB 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 CCC 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 DDD 1 Bright A_Wander
+	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ5 A 0 A_Jump(1, "Toasty")
+	Goto Fall
+  Toasty:
+	BBQ5 A 0 A_SpawnItem("ToastyGuy")
+	Goto Fall
+  Fall:
+	NWBH HIJKL 5
+	NWBH M 0 A_PlaySound("body/hitfloor")
+	NWBH M 5
+	NWBH N -1 A_BossDeath
+	Stop
+  XDeath:
+	TNT1 A 0 A_XScream
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_SpawnDebris("SkullGib")
+	TNT1 A 0 A_SpawnDebris("RibGib")
+	TNT1 A 0 A_SpawnDebris("BoneGib")
+	TNT1 A 0 A_SpawnDebris("HipGib")
+	TNT1 A 0 A_SpawnDebris("GutsGib")
+	TNT1 A 0 A_SpawnDebris("LimbGib")
+	TNT1 A 0 A_SpawnDebris("BloodSplurt")
+	TNT1 A 0 A_SpawnDebris("SkullGib")
+	TNT1 A 0 A_SpawnDebris("RibGib")
+	TNT1 A 0 A_SpawnDebris("BoneGib")
+	TNT1 A 0 A_SpawnDebris("HipGib")
+	TNT1 A 0 A_SpawnDebris("GutsGib")
+	TNT1 A 0 A_SpawnDebris("LimbGib")
+	TNT1 A 0 A_SpawnDebris("BloodSplurt")
+	TNT1 A 0 A_BossDeath
+	TNT1 A 0 A_Jump(16, "GibTaunt")
+	Stop
+   }
+}
+
+actor TwiMage replaces BaronOfHell
+{
+  Speed 7.5
+  Radius 16
+  Height 56
+  Scale 1.06
+  Mass 1000
+  Monster
+  AttackSound "Grunt/Attack"
+  PainChance "Foot", 256
+  Obituary "$OB_GMIDBASE"
+  health 1000
+  PainChance 50
+  Scale 1.08
+  +FLOORCLIP
+  SeeSound "TwiMage/sight"
+  PainSound "TwiMage/pain"
+  ActiveSound "TwiMage/idle"
+  DeathSound "TwiMage/death"
+  DropItem "LargeSoul" 76
+  DropItem "LargeSoul" 76
+  Tag "$TAG_TWILIGHT"
+  +NOICEDEATH
+  +BOSSDEATH
+  States
+  {
+  Spawn:
+	TWMA A 10 A_Look
+    Loop
+  See:
+	TWMA AA 2 A_Chase
+	TWMA B 0 A_PlaySound("pony/step", CHAN_BODY)
+	TWMA BBCC 2 A_Chase
+	TWMA D 0 A_PlaySound("pony/step", CHAN_BODY)
+	TWMA DD 2 A_Chase
+	Loop
+  Pain:
+    TWMA G 4
+	TWMA G 4 A_Pain
+	Goto See
+  Pain.Foot:
+    TWMA G 2 A_FaceTarget
+    TWMA A 0 A_ChangeFlag("NOPAIN",1)
+    TWMA A 0 A_Recoil(14)
+    TWMA G 33 A_Pain
+    Goto See
+  Missile:
+	TWMA E 10 A_FaceTarget
+	TWMA F 8 Bright A_CustomMissile("NewBaronBall", 32, 10)
+	TWMA E 8
+	Goto See
+  Death:
+	TWMA H 5
+	TWMA I 5 A_Scream
+	TWMA J 5 A_NoBlocking
+	TWMA KL 5
+	TWMA M 0 A_PlaySound("body/hitfloor")
+	TWMA M 5
+	TWMA N 10 A_BossDeath
+	TWMA N 0
+	TWMA N -1
+	Stop
+  ContinueDeath:
+	TWMA J 5 A_NoBlocking
+	TWMA KL 5
+	TWMA M 0 A_PlaySound("body/hitfloor")
+	TWMA M 5
+	TWMA N 10 A_BossDeath
+	TWMA N 0
+	TWMA A 0 A_Jump(16, "KillTaunt")
+	TWMA N -1
+	Stop
+  ContinueDeath2:
+	TWMA J 5 A_NoBlocking
+	TWMA KL 5
+	TWMA M 0 A_PlaySound("body/hitfloor")
+	TWMA M 5
+	TWMA N 10 A_BossDeath
+	TWMA N 0
+	TWMA A 0 A_Jump(16, "KickTaunt")
+	TWMA N -1
+	Stop
+  Death.Fire:
+	BBQ7 A 0 A_NoBlocking
+	BBQ7 A 0 A_PlaySound("female/burn", CHAN_VOICE)
+	BBQ7 AAA 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 BBB 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 CCC 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 DDD 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 AAA 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 BBB 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 CCC 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 DDD 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 AAA 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 BBB 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 CCC 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 DDD 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 AAA 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 BBB 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 CCC 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 DDD 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 AAA 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 BBB 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 CCC 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 DDD 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 AAA 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 BBB 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 CCC 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 DDD 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 AAA 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 BBB 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 CCC 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 DDD 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 AAA 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 BBB 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 CCC 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 DDD 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 AAA 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 BBB 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 CCC 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 DDD 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 AAA 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 BBB 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 CCC 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 DDD 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 AAA 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 BBB 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 CCC 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 DDD 1 Bright A_Wander
+	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
+	BBQ7 A 0 A_Jump(1, "Toasty")
+	Goto Fall
+  Toasty:
+	BBQ7 A 0 A_SpawnItem("ToastyGuy")
+	Goto Fall
+  Fall:
+	TWMA HIJKL 5
+	TWMA M 0 A_PlaySound("body/hitfloor")
+	TWMA M 5
+	TWMA N -1 A_BossDeath
+	Stop
+  XDeath:
+	TNT1 A 0 A_XScream
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_SpawnDebris("SkullGib")
+	TNT1 A 0 A_SpawnDebris("RibGib")
+	TNT1 A 0 A_SpawnDebris("BoneGib")
+	TNT1 A 0 A_SpawnDebris("HipGib")
+	TNT1 A 0 A_SpawnDebris("GutsGib")
+	TNT1 A 0 A_SpawnDebris("LimbGib")
+	TNT1 A 0 A_SpawnDebris("BloodSplurt")
+	TNT1 A 0 A_SpawnDebris("SkullGib")
+	TNT1 A 0 A_SpawnDebris("RibGib")
+	TNT1 A 0 A_SpawnDebris("BoneGib")
+	TNT1 A 0 A_SpawnDebris("HipGib")
+	TNT1 A 0 A_SpawnDebris("GutsGib")
+	TNT1 A 0 A_SpawnDebris("LimbGib")
+	TNT1 A 0 A_SpawnDebris("BloodSplurt")
+	TNT1 A 0 A_BossDeath
+	TNT1 A 0 A_Jump(16, "GibTaunt")
+	Stop
+   }
+}

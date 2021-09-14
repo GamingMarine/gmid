@@ -1,15 +1,24 @@
-Actor ChainsawSpawner : RandomSpawner replaces Chainsaw
+actor RevXChecker //by 0x8BADF00D#8030
 {
-DropItem "GMIDChainsaw"
+  states
+  {
+  Spawn:
+	TNT1 AA 2 A_JumpIf(1 == (ACS_ExecuteWithResult(154,0,0,0)), "WithUpgrades")
+	TNT1 A 0 A_SpawnItem("NewerSSGSpawner")
+	stop
+  WithUpgrades:
+	TNT1 A 0 A_SpawnItem("NewSSGSpawnerWithUpgrades")
+	stop
+  }
 }
 
-Actor ShotgunSpawner : RandomSpawner replaces Shotgun
+Actor NewerSSGSpawner : RandomSpawner
 {
-DropItem "GMIDShotgun"
-DropItem "SPAS12"
+DropItem "GMIDSuperShotgun"
+DropItem "RevX"
 }
 
-Actor SSGSpawner : RandomSpawner replaces SuperShotgun
+Actor NewSSGSpawnerWithUpgrades : RandomSpawner
 {
 DropItem "GMIDSuperShotgun"
 DropItem "RevX"
@@ -22,27 +31,19 @@ DropItem "RevX"
 DropItem "RevXUpgrade1"
 DropItem "RevXUpgrade2"
 }
-
 Actor RocketLauncherSpawner : RandomSpawner replaces RocketLauncher
 {
-DropItem "GMIDGrenadeLauncher"
-DropItem "40mmGrenadeLauncher"
+DropItem "GMIDMissileLauncher"
+DropItem "PineappleJammer"
 }
 
 Actor PlasmaGunSpawner : RandomSpawner replaces PlasmaRifle
 {
 DropItem "GMIDRailgun"
-DropItem "PlasmaCannon"
+DropItem "ExcessiveForce"
 }
 
 Actor ClipSpawner : RandomSpawner replaces Clip
-{
-DropItem "Clip2"
-DropItem "Clip3"
-DropItem "GMIDDualPistol"
-}
-
-Actor ClipSpawner3 : RandomSpawner //Enemy drops
 {
 DropItem "Clip2"
 DropItem "Clip3"
@@ -52,6 +53,38 @@ Actor ClipBoxSpawner : RandomSpawner replaces ClipBox
 {
 DropItem "ClipBox2"
 DropItem "ClipBox3"
+}
+
+Actor ShellSpawner : RandomSpawner replaces Shell
+{
+DropItem "NewShells"
+DropItem "NewShells"
+DropItem "NewShells"
+DropItem "NewShells"
+DropItem "NewShells"
+DropItem "NewShells"
+DropItem "NewShells"
+DropItem "NewShells"
+DropItem "NewShells"
+DropItem "NewShells"
+DropItem "NewShells"
+DropItem "NewShells2"
+}
+
+Actor ShellBoxSpawner : RandomSpawner replaces ShellBox
+{
+DropItem "NewShellBox"
+DropItem "NewShellBox"
+DropItem "NewShellBox"
+DropItem "NewShellBox"
+DropItem "NewShellBox"
+DropItem "NewShellBox"
+DropItem "NewShellBox"
+DropItem "NewShellBox"
+DropItem "NewShellBox"
+DropItem "NewShellBox"
+DropItem "NewShellBox"
+DropItem "NewShellBox2"
 }
 
 Actor CellSpawner : RandomSpawner replaces Cell
@@ -66,30 +99,16 @@ DropItem "NewCellPack"
 DropItem "LargeMana"
 }
 
-Actor ChaingunSpawner : RandomSpawner replaces Chaingun
-{
-DropItem "GMIDChaingun"
-DropItem "LeadPosioning"
-}
-
 Actor BFGSpawner : RandomSpawner replaces BFG9000
 {
-DropItem "GmidBFG9000"
+DropItem "SpaceCadet"
 DropItem "SoulCubeGenerator"
 }
-
-Actor BlurSpherespawner : RandomSpawner replaces BlurSphere
-{
-DropItem "CloakingDevice"
-DropItem "CloakingDevice"
-DropItem "CloakingDevice"
-DropItem "CookieCrystalSpawner"
-}
-
 Actor SoulsphereSpawner : RandomSpawner replaces Soulsphere
 {
 DropItem "LifeSphere"
 DropItem "HealthBackpack"
+DropItem "CapturedMarine"
 }
 
 Actor ColaSpawner : RandomSpawner replaces HealthBonus
@@ -168,6 +187,14 @@ DropItem "EntireChickenYouWeirdo"
 DropItem "PizzaZone"
 }
 
+Actor AllMapSpawner : RandomSpawner replaces AllMap
+{
+DropItem "NewAllMap"
+DropItem "NewAllMap"
+DropItem "NewAllMap"
+DropItem "CookieCrystalSpawner"
+}
+
 //This is a new set of weapon spawners.
 //What this will do is spawn a weapon, and then a set of rats that will scurry away from the player, ala Duke 3D.
 //I was originally planning on having them be stepped on, like it was in the base code, but they would end up being squished by the weapon that they spawned near.
@@ -178,7 +205,7 @@ ACTOR NewChainsawSpawner replaces Chainsaw
 	States
 	{
 	Spawn:
-		TNT1 A 0 NoDelay A_SpawnItemEx("ChainsawSpawner")
+		TNT1 A 0 NoDelay A_SpawnItemEx("AngleGrinder")
 		TNT1 A 0 A_DropItem("ScurryRat")
 		TNT1 A 0 A_DropItem("ScurryRat")
 		TNT1 A 0 A_DropItem("ScurryRat")
@@ -191,7 +218,7 @@ ACTOR NewShotgunSpawner replaces Shotgun
 	States
 	{
 	Spawn:
-		TNT1 A 0 NoDelay A_SpawnItemEx("ShotgunSpawner")
+		TNT1 A 0 NoDelay A_SpawnItemEx("GMIDShotgun")
 		TNT1 A 0 A_DropItem("ScurryRat")
 		TNT1 A 0 A_DropItem("ScurryRat")
 		TNT1 A 0 A_DropItem("ScurryRat")
@@ -204,7 +231,7 @@ ACTOR NewSSGSpawner replaces SuperShotgun
 	States
 	{
 	Spawn:
-		TNT1 A 0 NoDelay A_SpawnItemEx("SSGSpawner")
+		TNT1 A 0 NoDelay A_SpawnItemEx("RevXChecker")
 		TNT1 A 0 A_DropItem("ScurryRat")
 		TNT1 A 0 A_DropItem("ScurryRat")
 		TNT1 A 0 A_DropItem("ScurryRat")
@@ -217,7 +244,7 @@ ACTOR NewChaingunSpawner replaces Chaingun
 	States
 	{
 	Spawn:
-		TNT1 A 0 NoDelay A_SpawnItemEx("ChaingunSpawner")
+		TNT1 A 0 NoDelay A_SpawnItemEx("VGun")
 		TNT1 A 0 A_DropItem("ScurryRat")
 		TNT1 A 0 A_DropItem("ScurryRat")
 		TNT1 A 0 A_DropItem("ScurryRat")
@@ -280,7 +307,7 @@ DropItem "Skeleton"
 DropItem "ZombieScientist"
 }
 
-Actor MarineSpawner1 : RandomSpawner replaces EvilEye
+Actor MarineSpawner1 : RandomSpawner replaces LiveStick
 {
 DropItem "BoundPlayer1"
 DropItem "BoundPlayer2"
@@ -294,7 +321,7 @@ DropItem "ImpalingSpike7"
 DropItem "ImpalingSpike8"
 }
 
-Actor MarineSpawner2 : RandomSpawner replaces FloatingSkull
+Actor MarineSpawner2 : RandomSpawner replaces DeadStick
 {
 DropItem "BoundPlayer1"
 DropItem "BoundPlayer2"
@@ -308,105 +335,7 @@ DropItem "ImpalingSpike7"
 DropItem "ImpalingSpike8"
 }
 
-Actor MarineSpawner3 : RandomSpawner replaces LiveStick
-{
-DropItem "BoundPlayer1"
-DropItem "BoundPlayer2"
-DropItem "CarcassImpaledMarine"
-DropItem "CarcassImpaledMarine2"
-DropItem "ChestSkewered"
-DropItem "ImpalingSpike4"
-DropItem "ImpalingSpike5"
-DropItem "ImpalingSpike6"
-DropItem "ImpalingSpike7"
-DropItem "ImpalingSpike8"
-}
-
-Actor MarineSpawner4 : RandomSpawner replaces DeadStick
-{
-DropItem "BoundPlayer1"
-DropItem "BoundPlayer2"
-DropItem "CarcassImpaledMarine"
-DropItem "CarcassImpaledMarine2"
-DropItem "ChestSkewered"
-DropItem "ImpalingSpike4"
-DropItem "ImpalingSpike5"
-DropItem "ImpalingSpike6"
-DropItem "ImpalingSpike7"
-DropItem "ImpalingSpike8"
-}
-
-Actor MarineSpawner5 : RandomSpawner replaces HeartColumn
-{
-DropItem "BoundPlayer1"
-DropItem "BoundPlayer2"
-DropItem "CarcassImpaledMarine"
-DropItem "CarcassImpaledMarine2"
-DropItem "ChestSkewered"
-DropItem "ImpalingSpike4"
-DropItem "ImpalingSpike5"
-DropItem "ImpalingSpike6"
-DropItem "ImpalingSpike7"
-DropItem "ImpalingSpike8"
-}
-
-Actor MarineSpawner6 : RandomSpawner replaces ShortGreenColumn
-{
-DropItem "BoundPlayer1"
-DropItem "BoundPlayer2"
-DropItem "CarcassImpaledMarine"
-DropItem "CarcassImpaledMarine2"
-DropItem "ChestSkewered"
-DropItem "ImpalingSpike4"
-DropItem "ImpalingSpike5"
-DropItem "ImpalingSpike6"
-DropItem "ImpalingSpike7"
-DropItem "ImpalingSpike8"
-}
-
-Actor MarineSpawner7 : RandomSpawner replaces ShortRedColumn
-{
-DropItem "BoundPlayer1"
-DropItem "BoundPlayer2"
-DropItem "CarcassImpaledMarine"
-DropItem "CarcassImpaledMarine2"
-DropItem "ChestSkewered"
-DropItem "ImpalingSpike4"
-DropItem "ImpalingSpike5"
-DropItem "ImpalingSpike6"
-DropItem "ImpalingSpike7"
-DropItem "ImpalingSpike8"
-}
-
-Actor MarineSpawner8 : RandomSpawner replaces TallGreenColumn
-{
-DropItem "BoundPlayer1"
-DropItem "BoundPlayer2"
-DropItem "CarcassImpaledMarine"
-DropItem "CarcassImpaledMarine2"
-DropItem "ChestSkewered"
-DropItem "ImpalingSpike4"
-DropItem "ImpalingSpike5"
-DropItem "ImpalingSpike6"
-DropItem "ImpalingSpike7"
-DropItem "ImpalingSpike8"
-}
-
-Actor MarineSpawner9 : RandomSpawner replaces TallRedColumn
-{
-DropItem "BoundPlayer1"
-DropItem "BoundPlayer2"
-DropItem "CarcassImpaledMarine"
-DropItem "CarcassImpaledMarine2"
-DropItem "ChestSkewered"
-DropItem "ImpalingSpike4"
-DropItem "ImpalingSpike5"
-DropItem "ImpalingSpike6"
-DropItem "ImpalingSpike7"
-DropItem "ImpalingSpike8"
-}
-
-Actor MarineSpawner10 : RandomSpawner replaces HeadCandles
+Actor MarineSpawner3 : RandomSpawner replaces HeartColumn
 {
 DropItem "BoundPlayer1"
 DropItem "BoundPlayer2"
@@ -426,13 +355,21 @@ DropItem "GardenTree1"
 DropItem "GardenTree2"
 }
 
+Actor BushSpawner : RandomSpawner replaces Stalagtite
+{
+DropItem "GardenBush1"
+DropItem "GardenBush3"
+}
+
 Actor ExplosionSpawner : RandomSpawner
 {
 DropItem "NewExplosion"
 DropItem "NewExplosion2"
+DropItem "NewExplosion3"
+DropItem "NewExplosion4"
 }
 
-actor "ZombiemanSpawner" : RandomSpawner replaces ZombieMan
+actor ZombiemanSpawner : RandomSpawner replaces ZombieMan
 {
 	DropItem "SonicXRainbow"
 	DropItem "SonicXRainbow"
@@ -448,7 +385,7 @@ actor "ZombiemanSpawner" : RandomSpawner replaces ZombieMan
 	DropItem "Zombieman_PossessedSpawner"
 }
 
-actor "ShotgunDudeSpawner" : RandomSpawner replaces ShotgunGuy
+actor ShotgunDudeSpawner : RandomSpawner replaces ShotgunGuy
 {
 	DropItem "OctaLeb"
 	DropItem "OctaLeb"
@@ -464,7 +401,7 @@ actor "ShotgunDudeSpawner" : RandomSpawner replaces ShotgunGuy
 	DropItem "ShotgunBoi_PossessedSpawner"
 }
 
-actor "ChaingunGuySpawner" : RandomSpawner replaces ChaingunGuy
+actor ChaingunGuySpawner : RandomSpawner replaces ChaingunGuy
 {
 	DropItem "AppleSheriff"
 	DropItem "AppleSheriff"
@@ -478,11 +415,6 @@ actor "ChaingunGuySpawner" : RandomSpawner replaces ChaingunGuy
 	DropItem "AppleSheriff"
 	DropItem "AppleSheriff"
 	DropItem "ChaingunBoi_PossessedSpawner"
-}
-
-actor "SpectreSpawner" : RandomSpawner replaces Spectre //To ensure that Hellhounds will also spawn in place of the Spectre
-{
-	DropItem "HellHound"
 }
 
 Actor Zombieman_PossessedSpawner : RandomSpawner
@@ -508,17 +440,31 @@ Actor ChaingunBoi_PossessedSpawner : RandomSpawner
 
 Actor BossDeathSpawner : RandomSpawner
 {
-	DropItem "BossDeathRD"
-	DropItem "BossDeathOC"
-	DropItem "BossDeathPP"
-	DropItem "BossDeathHH"
-	DropItem "BossDeathCL"
-	DropItem "BossDeathAH"
-	DropItem "BossDeathFS"
-	DropItem "BossDeathTS"
+	DropItem "BossDeath1"
+	DropItem "BossDeath2"
+	DropItem "BossDeath3"
+	DropItem "BossDeath4"
+	DropItem "BossDeath5"
+	DropItem "BossDeath6"
+	DropItem "BossDeath7"
+	DropItem "BossDeath8"
+	DropItem "BossDeath9"
+	DropItem "BossDeath10"
+	DropItem "BossDeath11"
+	DropItem "BossDeath12"
+	DropItem "BossDeath13"
 }
 
-actor DemonSpawner2 : RandomSpawner replaces YoPretendImaDemon //For compatibility with Consolation Prize
+Actor CapturedMarineDrops : RandomSpawner
 {
-	DropItem "HellHound"
+	DropItem "BetterBackpack"
+	DropItem "NewShellBox2"
+	DropItem "GMIDDualPistol"
+	DropItem "Firestick"
+	DropItem "RevX"
+	DropItem "RevXUpgrade1"
+	DropItem "RevXUpgrade2"
+	DropItem "PraetorArmorVest"
+	DropItem "HealthBackpack"
+	DropItem "SuperCoolShake"
 }

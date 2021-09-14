@@ -1,2 +1,2 @@
-STARTUPTITLE = "GamingMarine in Doom - Christmas Public Beta"
+STARTUPTITLE = "GamingMarine in Doom v1.1.1"
 STARTUPCOLORS = "0000FF", "00FF00"

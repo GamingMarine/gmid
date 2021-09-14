@@ -1,0 +1,70 @@
+Actor GMIDFist : Fist Replaces Fist
+{
+	Weapon.BobRangeX 0.3
+	Weapon.BobRangeY 0.5
+	Weapon.BobStyle InverseSmooth
+	Weapon.BobSpeed 2.0
+	Tag "$TAG_FISTS"
+	Inventory.PickupMessage "Thou shalt not see this."
+	Obituary "$OB_FISTS"
+    +WEAPON.NOALERT
+	+WEAPON.NOAUTOFIRE
+	Weapon.UpSound "knuckled"
+	Inventory.Icon "GLOVA0"
+	states
+	{
+		Ready:
+			FIST A 1 A_WeaponReady
+			loop
+		Fire:
+			TNT1 A 0 A_Jump(256, "Fist1", "Fist2")
+			Goto Fist1
+		Fist1:
+			TNT1 A 0 A_GunFlash("LFistStay")
+			TNT1 A 0 A_PlaySound("fist/normalthrow")
+			FIS1 BC 1
+			FIS1 E 1 A_CustomPunch(2,0,0,"FistPuff")
+			FIS1 F 1
+			FIS1 EDCBA 1 A_WeaponReady(WRF_NOBOB|WRF_NOSWITCH)
+			Goto Ready
+		Fist2:
+			TNT1 A 0 A_GunFlash("RFistStay")
+			TNT1 A 0 A_PlaySound("fist/normalthrow")
+			FIS2 BC 1
+			FIS2 E 1 A_CustomPunch(2,0,0,"FistPuff")
+			FIS2 F 1
+			FIS2 EDCBA 1 A_WeaponReady(WRF_NOBOB|WRF_NOSWITCH)
+			Goto Ready
+		LFistStay:
+			FIS2 A 9
+			Stop
+		RFistStay:
+			FIS1 A 9
+			Stop
+  AltFire:
+	TNT1 A 0 A_GunFlash("WeaponStill")
+	TNT1 A 0 A_PlaySound ("weapons/KICK")
+	FOOT AB 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT C 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT D 0 A_CustomPunch(5,0,0,"KickPuff")
+	FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT D 0 A_Quake(1,2,0,10)
+	FOOT EF 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT FEDCBA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 8 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 0 A_ReFire
+	Goto Ready
+		WeaponStill:
+			FIST A 22
+			Goto LightDone
+		Deselect:
+			FIST A 1 A_Lower
+			FIST A 0 A_Lower
+			Loop
+		Select:
+			FIST A 1 A_Raise
+			FIST A 0 A_Raise
+			Loop
+		}
+}

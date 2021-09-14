@@ -1,5 +1,78 @@
 texture M_SKULL1
-    pic M_SKULL1 tics 4
-    pic M_SKULL2 tics 4
-	pic M_SKULL3 tics 4
-	pic M_SKULL2 tics 4
+    pic M_SKULL1 tics 2
+    pic M_SKULL2 tics 2
+	pic M_SKULL3 tics 2
+	pic M_SKULL4 tics 2
+	pic M_SKULL5 tics 2
+    pic M_SKULL6 tics 2
+	pic M_SKULL7 tics 2
+	pic M_SKULL8 tics 2
+    pic M_SKULL9 tics 2
+    pic M_SKULL0 tics 2
+	pic M_SKULLA tics 2
+	pic M_SKULLB tics 2
+	pic M_SKULLC tics 2
+    pic M_SKULLD tics 2
+	pic M_SKULLE tics 2
+	pic M_SKULLF tics 2
+    pic M_SKULLG tics 2
+    pic M_SKULLH tics 2
+	pic M_SKULLI tics 2
+	pic M_SKULLJ tics 2
+	pic M_SKULLK tics 2
+    pic M_SKULLL tics 2
+	
+texture DDMGD0
+	pic DDMGF0 tics 60
+	pic DDMGE0 tics 3
+	pic DDMGD0 tics 60
+	pic DDMGE0 tics 3
+
+texture HASTE0
+	pic HASTE0 tics 2
+	pic HASTF0 tics 2
+	pic HASTG0 tics 2
+	pic HASTH0 tics 2
+	pic HASTG0 tics 2
+	pic HASTF0 tics 2
+	
+texture PINVE0
+	pic PINVH0 tics 60
+	pic PINVG0 tics 3
+	pic PINVF0 tics 3
+	pic PINVE0 tics 60
+	pic PINVF0 tics 3
+	pic PINVG0 tics 3
+	
+texture BON3A0
+	pic BON3D0 tics 6
+	pic BON3C0 tics 3
+	pic BON3B0 tics 3
+	pic BON3A0 tics 3
+	pic BON3B0 tics 3
+	pic BON3C0 tics 3
+
+texture BON4A0
+	pic BON4D0 tics 6
+	pic BON4C0 tics 3
+	pic BON4B0 tics 3
+	pic BON4A0 tics 3
+	pic BON4B0 tics 3
+	pic BON4C0 tics 3
+
+texture HHRTD0
+	pic HHRTF0 tics 60
+	pic HHRTE0 tics 3
+	pic HHRTD0 tics 60
+	pic HHRTE0 tics 3
+
+texture BHRTE0
+	pic BHRTE0 tics 4
+	pic BHRTF0 tics 4
+	pic BHRTG0 tics 4
+	pic BHRTH0 tics 4
+
+texture HPP1D0
+	pic HPP1D0 tics 5
+	pic HPP1E0 tics 5
+	pic HPP1F0 tics 5

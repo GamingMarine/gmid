@@ -1,0 +1,68 @@
+Actor AngleGrinder : Chainsaw
+{
+	Weapon.BobRangeX 0.3
+	Weapon.BobRangeY 0.5
+	Weapon.BobStyle InverseSmooth
+	Weapon.BobSpeed 2.0
+	Weapon.UpSound "weapons/sawup"
+	Weapon.ReadySound ""
+	Tag "$TAG_GRINDER"
+	+WEAPON.NOALERT
+	Inventory.PickupMessage "$GOTGRINDER"
+	Obituary "$OB_GRINDER"
+	Inventory.Icon "CSAWA0B0"
+	States
+	{
+	Spawn:
+	TNT1 A 0
+	TNT1 A 0 A_Jump(128, "Spawn2")
+	CSAW A -1 
+	Stop
+	Spawn2:
+	CSAW B -1
+	Stop
+	Ready:
+    SAWG A 1 A_WeaponReady
+	Loop
+	Fire:
+	SAWG A 0 A_AlertMonsters
+	SAWG A 0 A_PlaySound("grinder/start", CHAN_WEAPON)
+	SAWG AACCDD 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	SAWG E 0 A_PlaySound("grinder/continue", CHAN_WEAPON, 1.0, true)
+	KeepFiring:
+	SAWG E 0 A_AlertMonsters
+	SAWG E 1 A_CustomPunch(2*random(1,10),1,0,"GrinderPuff")
+	SAWG FGH 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 0 A_Refire("KeepFiring")
+	SAWG D 0 A_StopSound(CHAN_WEAPON)
+	SAWG D 0 A_PlaySound("grinder/stop", CHAN_WEAPON)
+	SAWG DCBABBAABBBAAABBBBAAAABBBBBAAAAA 2 A_WeaponReady
+	goto Ready
+  AltFire:
+	TNT1 A 0 A_GunFlash("WeaponStill")
+	TNT1 A 0 A_PlaySound ("weapons/KICK")
+	FOOT AB 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT C 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT D 0 A_CustomPunch(5,0,0,"KickPuff")
+	FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT D 0 A_Quake(1,2,0,10)
+	FOOT EF 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT FEDCBA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 8 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 0 A_ReFire
+	Goto Ready
+	WeaponStill:
+	SAWG A 22
+	Goto LightDone
+  Deselect:
+	SAWG A 0 A_StopSound(CHAN_WEAPON) //This is to prevent the Angle Grinder from continuing to play its attack sound if the player dies
+    SAWG A 1 A_Lower
+    SAWG A 0 A_Lower
+    Loop
+  Select:
+    SAWG A 1 A_Raise
+    SAWG A 0 A_Raise
+    Loop
+	}
+}

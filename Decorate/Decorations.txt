@@ -242,6 +242,91 @@ Actor DeadPony1
   }
 }
 
+Actor DeadCivilian replaces DeadZombieman
+{
+  Radius 32
+  Height 16
+  States
+  {
+  Spawn:
+	TNT1 A 0
+	TNT1 A 0 A_PlaySoundEX("SFX/Buzz","Body",1)
+	CIVI AAAAA 0 A_SpawnItemEx("SwarmFly2",frandom(-16,16),frandom(-16,16),frandom(-16,16))
+	CIVI A 0 A_Jump(256, "Spawn1", "Spawn2", "Spawn3", "Spawn4", "Spawn5", "Spawn6", "Spawn7", "Spawn8", "Spawn9")
+  Spawn1:
+    CIVI A -1
+    Loop
+  Spawn2:
+    CIVI B -1
+    Loop
+  Spawn3:
+    CIVI C -1
+    Loop
+  Spawn4:
+    CIVI D -1
+    Loop
+  Spawn5:
+    CIVI E -1
+    Loop
+  Spawn6:
+    CIVI F -1
+    Loop
+  Spawn7:
+    CIVI G -1
+    Loop
+  Spawn8:
+    CIVI H -1
+    Loop
+  Spawn9:
+    CIVI I -1
+    Loop
+  }
+}
+
+Actor DeadCivilian2 : DeadCivilian replaces DeadShotgunGuy
+{
+}
+
+Actor DeadHellhound : DeadCivilian replaces DeadDemon
+{
+  Scale 0.6
+  States
+  {
+  Spawn:
+	TNT1 A 0
+	TNT1 A 0 A_PlaySoundEX("SFX/Buzz","Body",1)
+	HOUN AAAAA 0 A_SpawnItemEx("SwarmFly2",frandom(-16,16),frandom(-16,16),frandom(-16,16))
+	HOUN R -1
+	Stop
+  }
+}
+
+Actor DeadPinkiePie : DeadCivilian replaces DeadDoomImp
+{
+  States
+  {
+  Spawn:
+	TNT1 A 0
+	TNT1 A 0 A_PlaySoundEX("SFX/Buzz","Body",1)
+	AMPI AAAAA 0 A_SpawnItemEx("SwarmFly2",frandom(-16,16),frandom(-16,16),frandom(-16,16))
+	AMPI N -1
+	Stop
+  }
+}
+
+Actor DeadRarity : DeadCivilian replaces DeadCacodemon
+{
+  States
+  {
+  Spawn:
+	TNT1 A 0
+	TNT1 A 0 A_PlaySoundEX("SFX/Buzz","Body",1)
+	ROTY AAAAA 0 A_SpawnItemEx("SwarmFly2",frandom(-16,16),frandom(-16,16),frandom(-16,16))
+	ROTY N -1
+	Stop
+  }
+}
+
 ACTOR SwarmFly2
 {
 Radius 1
@@ -1057,16 +1142,16 @@ ACTOR NewColumn replaces Column
   States
   {
   Spawn:
-	COLU A 0
-	COLU A 0 A_PlaySoundEx("props/lighthum3", "Body", 1)
+	COLM A 0
+	COLM A 0 A_PlaySoundEx("props/lighthum3", "Body", 1)
 	goto Idle
 	Idle:
-    COLU A 1 Bright
+    COLM A 1 Bright
     Loop
   Death:
 	TNT1 A 0 A_PlaySound ("glass/break")
 	TNT1 AAAAA 0 A_CustomMissile("PillarGlassShard",16,random(-3,3),random(0,360),2,random(40,70))
-	COLU B -1
+	COLM B -1
 	Stop
   }
 }
@@ -1085,6 +1170,59 @@ Actor NewBurningBarrel : BurningBarrel replaces BurningBarrel
   BURB ABCD 3 bright 
   Loop
   }
+}
+
+//These torches are based on an old version of Beautiful Doom by Agent_Ash. As such, the green and red variants are translated colors.
+Actor TallTorch_Blue : BlueTorch replaces BlueTorch
+{
+  radius 6
+  height 55
+  states
+  {
+  Spawn:
+  TTRB A 0
+  TTRB A 0 A_PlaySoundEx("props/torchburn", "Body", 1)
+  goto Idle
+  Idle:
+  TTRB ABCDEFGHIJKLM 2 bright 
+  Loop
+  }
+}
+
+Actor TallTorch_Red : TallTorch_Blue replaces RedTorch
+{
+  translation "192:207=168:184","240:247=185:191"
+}
+
+Actor TallTorch_Green : TallTorch_Blue replaces GreenTorch
+{
+  translation "192:207=112:127","240:247=11:12"
+}
+
+Actor ShortTorch_Blue : ShortBlueTorch replaces ShortBlueTorch
+{
+  radius 6
+  height 45
+  states
+  {
+  Spawn:
+  STRB A 0
+  STRB A 0 A_PlaySoundEx("props/torchburn", "Body", 1)
+  goto Idle
+  Idle:
+  STRB ABCDEFGHIJKLM 2 bright 
+  Loop
+  }
+}
+
+Actor ShortTorch_Red : ShortTorch_Blue replaces ShortRedTorch
+{
+  translation "192:207=168:184","240:247=185:191"
+}
+
+Actor ShortTorch_Green : ShortTorch_Blue replaces ShortGreenTorch
+{
+  translation "192:207=112:127","240:247=11:12"
 }
 
 Actor Gardentree1
@@ -1119,6 +1257,60 @@ Actor Gardentree2
 	Loop
   SaySomething:
 	PLAN B 0 A_PlaySound("ambience/bird")
+    Goto Spawn+1
+  }
+}
+
+Actor Gardenbush1
+{
+  Radius 24
+  Height 30
+  +Solid
+  States
+  {
+  Spawn:
+    PLAN CC 35
+	PLAN CC 35
+	PLAN C 0 A_Jump(128, "SaySomething")
+	Loop
+  SaySomething:
+	PLAN C 0 A_PlaySound("toad/ribbit")
+    Goto Spawn+1
+  }
+}
+
+Actor Gardenbush2 replaces TorchTree
+{
+  Radius 16
+  Height 30
+  +Solid
+  States
+  {
+  Spawn:
+    PLAN DD 35
+	PLAN DD 35
+	PLAN D 0 A_Jump(128, "SaySomething")
+	Loop
+  SaySomething:
+	PLAN D 0 A_PlaySound("ambience/bird")
+    Goto Spawn+1
+  }
+}
+
+Actor Gardenbush3
+{
+  Radius 16
+  Height 30
+  +Solid
+  States
+  {
+  Spawn:
+    PLAN EE 35
+	PLAN EE 35
+	PLAN E 0 A_Jump(128, "SaySomething")
+	Loop
+  SaySomething:
+	PLAN E 0 A_PlaySound("toad/ribbit")
     Goto Spawn+1
   }
 }

@@ -7,24 +7,25 @@ Actor SoulCube : weapon
    Weapon.SlotNumber 3
    Weapon.SelectionOrder 350
    Inventory.PickupSound "SoulCube/Pickup"
-   Obituary "%o's soul was taken by %k."
-   Tag "Soul Cube"
+   Obituary "$OB_CUBE"
+   Tag "$TAG_CUBE"
    Weapon.SlotNumber 7
    +WEAPON.NO_AUTO_SWITCH
+   +FORCEXYBILLBOARD
    AttackSound "SoulCube/Use" 
    damagetype Cube
    Scale 0.5
    States 
    { 
    Spawn: 
-      SCBG AAAA 5
-      Loop
+      SCBG A -1
+      Stop
    Ready: 
       SCUB A 0 A_JumpIfInventory ("CubeAmmo", 50, "UseUs")
       SCUB A 1 A_WeaponReady
       Loop
    UseUs:
-	  SCUB A 0 A_Print("The \crSoul Cube\c- is ready to be used!")
+	  SCUB A 0 A_Print("$CUBEREADY")
 	  SCUB A 0 A_PlaySound("SoulCube/UseUs")
 	  SCUB ABCDEFGHI 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	  Goto ActuallyReady
@@ -42,10 +43,12 @@ Actor SoulCube : weapon
    Fire:
       SCUB A 0 A_JumpIfInventory ("CubeAmmo", 50, "Fire2")
 	  SCUB A 0 A_PlaySound("SoulCube/NotYet")
-      SCUB A 5 A_Print ("You don't have enough souls to use the \crSoul Cube\c-!")
+      SCUB A 1 A_Print ("$CUBENOPE")
+	  SCUB AAAA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
       Goto Ready
    Fire2: 
-      SCUB J 5 A_FireCustomMissile("SoulCubeProj",0,0,0,0,0)
+      SCUB J 1 A_FireCustomMissile("SoulCubeProj",0,0,0,0,0)
+	  SCUB JJJJ 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	  SCUB J 1 Offset(0,10)
 	  SCUB J 1 Offset(0,20)
 	  SCUB J 1 Offset(0,30)
@@ -57,6 +60,28 @@ Actor SoulCube : weapon
 	  SCUB J 1 Offset(0,90)
       SCUB P 0 A_TakeInventory("SoulCube")
       Goto Ready 
+  AltFire:
+	  TNT1 A 0 A_GunFlash("WeaponStill")
+	  TNT1 A 0 A_PlaySound ("weapons/KICK")
+	  FOOT AB 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	  FOOT C 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	  FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	  FOOT D 0 A_CustomPunch(5,0,0,"KickPuff")
+	  FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	  FOOT D 0 A_Quake(1,2,0,10)
+	  FOOT EF 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	  FOOT FEDCBA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	  TNT1 A 8 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	  TNT1 A 0 A_ReFire
+	  TNT1 A 0 A_JumpIfInventory("CubeAmmo", 50, "ActuallyReady")
+	  Goto Ready
+  WeaponStill:
+	  SCUB A 0 A_JumpIfInventory("CubeAmmo", 50, "WeaponStill2")
+	  SCUB A 22
+	  Goto LightDone
+  WeaponStill2:
+	  SCUB I 22
+	  Goto LightDone
    } 
 }
   
@@ -73,6 +98,7 @@ actor SoulCubeProj
   PROJECTILE
   +SKYEXPLODE
   +SCREENSEEKER
+  +FORCEXYBILLBOARD
   states
   {
   Spawn:
@@ -130,7 +156,11 @@ actor SoulCubeReturner : Ammo
   +PAINLESS
   +NONSHOOTABLE
   +NOGRAVITY
+  +FORCEXYBILLBOARD
   -SOLID
+  Tag "$TAG_CUBE"
+  Inventory.PickupMessage "$GOTCUBE2"
+  Inventory.PickupSound "SoulCube/GetSoul"
   states
   {
   Spawn:
@@ -156,21 +186,18 @@ actor SoulCubeGenerator : CustomInventory
   +FLOORCLIP
   +FLOATBOB
   +AUTOACTIVATE
+  +FORCEXYBILLBOARD
   +INVENTORY.ALWAYSPICKUP
-  Inventory.PickupMessage "The mysterious artifact speaks to you... ''We are many. We are one. We are the Praeleanthor. You know us as the \crSoul Cube\c-.'' \cf(\cjSlot 7\cf)"
-   Inventory.PickupSound "SoulCube/Pickup" 
+  Tag "$TAG_CUBE"
+  Inventory.PickupMessage "$GOTCUBE"
+  Inventory.PickupSound "SoulCube/Pickup" 
   Inventory.MaxAmount 1
    Scale 0.25
   states
   {
   Spawn:
-    SCBG AA 35
-	SCBG AA 35
-	SCBG A 0 A_Jump(128, "SaySomething")
+    SCBG A 5
 	Loop
-  SaySomething:
-	SCBG A 0 A_PlaySound("SoulCube/Idle")
-    Goto Spawn+1
   Pickup:
     TNT1 A 0 A_GiveInventory("SoulCube")
     TNT1 A 0 A_TakeInventory("CubeAmmo", 25)
@@ -185,11 +212,13 @@ actor CubeAmmo : Ammo
      Inventory.MaxAmount 50
      Ammo.BackpackAmount 0
      Ammo.BackpackMaxAmount 50
-	 Inventory.PickupMessage "The Soul Cube feeds on the enemy soul you picked up."
+	 Tag "$TAG_CUBEAMMO"
+	 Inventory.PickupMessage "$GOTCUBEAMMO"
 	 Inventory.PickupSound "SoulCube/GetSoul"
 	 Scale 0.25
 	 Alpha 0.99
 	 +FLOATBOB
+	 +FORCEXYBILLBOARD
 	 States
 	 {
 	 Spawn:
@@ -197,22 +226,3 @@ actor CubeAmmo : Ammo
 	   Loop
 	 }
 }
-
-/*-
-Actor SoulSpawner
-{
-	States
-	{
-	Spawn:
-	  TNT1 A 0 //Needed for this to actually work
-	  TNT1 A 0 A_JumpIfInTargetInventory("SoulCube", 1, "SpawnSoul", AAPTR_PLAYER1)
-	  Stop
-	SpawnSoul:
-	  TNT1 A 0 A_SpawnItem("CubeAmmo")
-	  Stop
-	}
-}
-*/
-//This (unfortunately) does not work.
-//I will need to have enemies check for the Soul Cube in the player's inventory for them to drop Soul Cube ammo during their death animation.
-//It's hacky, yeah, but it's necessary in order for this to work MetaDoom style (Without the need of ACS or ZScript).

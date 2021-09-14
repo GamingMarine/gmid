@@ -16,6 +16,7 @@ Actor Wayne replaces CommanderKeen
   SeeSound "wayne/sight"
   PainSound "wayne/not"
   DeathSound "wayne/notworthy"
+  Tag "$TAG_WAYNE"
   States
   {
   Spawn:

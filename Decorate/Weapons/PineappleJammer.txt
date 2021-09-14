@@ -1,0 +1,118 @@
+ACTOR PineappleJammer : Weapon
+{
+	Inventory.PickupMessage "$GOTPINEAPPLE"
+	Weapon.Ammogive 5
+	Weapon.AmmoType "RocketAmmo"
+	Weapon.AmmoUse 1
+	Weapon.SelectionOrder 400
+	Weapon.SlotNumber 5
+	+WEAPON.EXPLOSIVE
+	Obituary "$OB_PINEAPPLE"
+	Tag "$TAG_PINEAPPLE"
+	Weapon.UpSound "BOLT1R"
+	Weapon.BobRangeX 0.3
+	Weapon.BobRangeY 0.5
+	Weapon.BobStyle InverseSmooth
+	Weapon.BobSpeed 2.0
+	+WEAPON.NOALERT
+	Inventory.Icon "GLMMA0B0"
+	States
+	{
+	Ready:
+		RGLG A 1 A_WeaponReady
+		Loop
+	Select:
+		RGLG A 1 A_Raise
+		RGLG A 0 A_Raise
+		Loop
+	Deselect:
+		RGLG A 1 A_Lower
+		RGLG A 0 A_Lower
+		Loop
+	Fire:
+		RGLG A 0 A_AlertMonsters
+		RGLG A 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
+		RGLG BC 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		RGLG D 0 A_GunFlash 
+		RGLG D 0 A_PlayWeaponSound ("40mm/grenfire")
+		RGLG D 0 A_FireCustomMissile ("40mmShot", 0, 1, 1, 10, 1)
+		RGLG D 1 A_SetPitch(pitch-1)
+		RGLG E 0 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	    RGLG EF 1 A_SetPitch(pitch+0.50)
+		RGLG GHIJKLMNO 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		RGLG AAAAA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch) 
+		Goto Ready
+	QuadFire:
+		TNT1 A 0 A_SetBlend("Blue", 0.25, 16)
+		RGLG A 0 A_PlaySound("QuadDamage/Use")
+		RGLG BC 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		RGLG D 0 A_GunFlash 
+		RGLG D 0 A_PlayWeaponSound ("40mm/grenfire")
+		RGLG D 0 A_FireCustomMissile ("40mmShot", 0, 1, 1, 10, 1)
+		RGLG D 1 A_SetPitch(pitch-1)
+		RGLG E 0 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	    RGLG EF 1 A_SetPitch(pitch+0.50)
+		RGLG GHIJKLMNO 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		RGLG AAAAA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch) 
+		Goto Ready
+	Flash:
+		RGLG D 1 BRIGHT A_Light1
+		RGLG E 1 BRIGHT A_Light2
+		Goto LightDone
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_Jump(128, "Spawn2")
+		GLMM A -1 
+		Stop
+	Spawn2:
+		GLMM B -1
+		Stop
+  AltFire:
+	TNT1 A 0 A_GunFlash("WeaponStill")
+	TNT1 A 0 A_PlaySound ("weapons/KICK")
+	FOOT AB 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT C 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT D 0 A_CustomPunch(5,0,0,"KickPuff")
+	FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT D 0 A_Quake(1,2,0,10)
+	FOOT EF 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT FEDCBA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 8 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 0 A_ReFire
+	Goto Ready
+	WeaponStill:
+		RGLG A 22
+		Goto LightDone
+	}
+}
+
+Actor 40mmShot
+{
+  Radius 11
+  Height 8
+  Speed 35	
+  Damage (15*random(1,16))
+  PROJECTILE
+  +HEXENBOUNCE 
+  -NOGRAVITY
+  +EXPLODEONWATER
+  BounceFactor 0.8
+  BounceCount 6
+  ReactionTime 139
+  Seesound "40mm/grenbounce"
+  Obituary "$OB_PINEAPPLE"
+  States
+  {
+  Spawn:
+    GBPJ A 0 A_CountDown		
+    GBPJ A 1 A_CustomMissile("GrenadeSmoke", 3, 0, 0, 1)	 
+    Loop
+  Death:
+	MIS6 B 0 A_NoGravity
+	ZXPL A 0 A_PlaySound("explosion/distant", CHAN_AUTO)
+	ZXPL A 0 A_PlaySound("newexplosion")
+	BEXP D 0 A_SpawnItem("ExplosionSpawner")
+	Stop
+  }
+}
