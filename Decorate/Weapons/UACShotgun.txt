@@ -1,3 +1,5 @@
+Actor GMIDShotgunToken : Inventory {}
+
 Actor GMIDShotgun : Shotgun
 {
 	Weapon.BobRangeX 0.3
@@ -74,6 +76,7 @@ Actor GMIDShotgun : Shotgun
 			SHTG A 1 A_ReFire
 			goto Ready
 		Ready:
+			TNT1 A 0 A_JumpIfInventory("GMIDShotgunToken",1,"FirstTime")
 			SHTG A 1 A_WeaponReady
 			Loop
 		Deselect:
@@ -84,6 +87,26 @@ Actor GMIDShotgun : Shotgun
 			SHTG A 1 A_Raise
 			SHTG A 0 A_Raise
 			Loop
+		 FirstTime:
+			TNT1 A 0 A_TakeInventory("GMIDShotgunToken",9999)
+			TNT1 A 0 A_JumpIf(CallACS("PickupAnimation")==0, "Ready")
+			SHTG A 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			TNT1 A 0 A_PlaySound("weapon/fiddle")
+			SGFS ABCDDDEFG 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			SGFS H 0 A_PlaySound("shellclip/get")
+			SGFS HIJDEFG 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			SGFS H 0 A_PlaySound("shellclip/get")
+			SGFS HIJDEFG 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			SGFS H 0 A_PlaySound("shellclip/get")
+			SGFS HIJD 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			TNT1 A 0 A_PlaySound("weapon/fiddle")
+			SGFS CBA 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			SHTG ARQP 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			SHTG O 0 A_PlaySound("Shotgun/Pump1", CHAN_AUTO)
+			SHTG ONT 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			SHTG T 0 A_PlaySound("Shotgun/Pump2", CHAN_AUTO)
+			SHTG TNOPQR 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			Goto Ready
   AltFire:
 	TNT1 A 0 A_GunFlash("WeaponStill")
 	TNT1 A 0 A_PlaySound ("weapons/KICK")

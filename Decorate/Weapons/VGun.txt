@@ -1,3 +1,5 @@
+Actor VGunToken : Inventory {}
+
 Actor VGun : Chaingun
 {
 	Weapon.BobRangeX 0.3
@@ -58,6 +60,10 @@ Actor VGun : Chaingun
 		CHGG AAAAAAAA 1 A_WeaponReady
 		CHGG BBBBBBBB 1 A_WeaponReady
 		goto Ready
+	Ready:
+		TNT1 A 0 A_JumpIfInventory("VGunToken",1,"FirstTime")
+		CHGG A 1 A_WeaponReady
+		Loop
 	Deselect:
 		CHGG A 1 A_Lower
 		CHGG A 0 A_Lower
@@ -66,6 +72,23 @@ Actor VGun : Chaingun
 		CHGG A 1 A_Raise
 		CHGG A 0 A_Raise
 		Loop
+	FirstTime:
+		TNT1 A 0 A_TakeInventory("VGunToken",9999)
+		TNT1 A 0 A_JumpIf(CallACS("PickupAnimation")==0, "Ready")
+		CHGG A 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		TNT1 A 0 A_PlaySound("weapon/fiddle")
+		CGFS ABC 3 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		TNT1 A 0 A_PlaySound("bulletbox/get")
+		CGFS DEEE 3 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		TNT1 A 0 A_PlaySound("weapon/fiddle", CHAN_AUTO)
+		CGFS FGHI 3 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		TNT1 A 0 A_PlaySound("weapon/fiddle", CHAN_AUTO)
+		CGFS JKLMN 3 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		TNT1 A 0 A_PlaySound("vgun/fiddle")
+		CGFS OPQQQ 3 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		TNT1 A 0 A_PlaySound("weapon/fiddle", CHAN_AUTO)
+		CGFS RST 3 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		Goto Ready
   AltFire:
 	TNT1 A 0 A_GunFlash("WeaponStill")
 	TNT1 A 0 A_PlaySound ("weapons/KICK")

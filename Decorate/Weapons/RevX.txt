@@ -470,6 +470,7 @@ ACTOR RevXProjectile : DoomImpBall
 	Speed 40
 	FastSpeed 40
 	Damage 10
+	Scale 0.75
 	Projectile
 	+RANDOMIZE
 	SeeSound "RevX/Fire"

@@ -158,6 +158,61 @@ Brightmap Sprite SHTGS0
 Map "Brightmaps/GMID/SHTGA0.png"
 }
 
+Brightmap Sprite SHTGT0
+{
+Map "Brightmaps/GMID/SHTGL0.png"
+}
+
+Brightmap Sprite SGFSA0
+{
+Map "Brightmaps/GMID/SGFSA0.png"
+}
+
+Brightmap Sprite SGFSB0
+{
+Map "Brightmaps/GMID/SGFSB0.png"
+}
+
+Brightmap Sprite SGFSC0
+{
+Map "Brightmaps/GMID/SGFSC0.png"
+}
+
+Brightmap Sprite SGFSD0
+{
+Map "Brightmaps/GMID/SGFSD0.png"
+}
+
+Brightmap Sprite SGFSE0
+{
+Map "Brightmaps/GMID/SGFSE0.png"
+}
+
+Brightmap Sprite SGFSF0
+{
+Map "Brightmaps/GMID/SGFSF0.png"
+}
+
+Brightmap Sprite SGFSG0
+{
+Map "Brightmaps/GMID/SGFSG0.png"
+}
+
+Brightmap Sprite SGFSH0
+{
+Map "Brightmaps/GMID/SGFSH0.png"
+}
+
+Brightmap Sprite SGFSI0
+{
+Map "Brightmaps/GMID/SGFSI0.png"
+}
+
+Brightmap Sprite SGFSJ0
+{
+Map "Brightmaps/GMID/SGFSJ0.png"
+}
+
 Brightmap Sprite OCTLA1
 {
 Map "Brightmaps/GMID/OCTLA1.png"

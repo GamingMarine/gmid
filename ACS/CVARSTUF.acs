@@ -5,3 +5,8 @@ script "NoWarmUpAnimation" (void)
 {
     SetResultValue(GetCVar("nowarmupanim"));
 }
+
+script "PickupAnimation" (void)
+{
+    SetResultValue(GetCVar("pickupanim"));
+}

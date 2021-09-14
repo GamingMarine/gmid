@@ -1,3 +1,5 @@
+Actor SawnOffToken : Inventory {}
+
 Actor GMIDSuperShotgun : SuperShotgun
 {
 	Weapon.BobRangeX 0.3
@@ -22,8 +24,24 @@ Actor GMIDSuperShotgun : SuperShotgun
 		SGN2 B -1
 		Stop
 	Ready:
+		TNT1 A 0 A_JumpIfInventory("SawnOffToken",1,"FirstTime")
 		SHOG A 1 A_WeaponReady
 		Loop
+	FirstTime:
+		TNT1 A 0 A_TakeInventory("SawnOffToken",9999)
+		TNT1 A 0 A_JumpIf(CallACS("PickupAnimation")==0, "Ready")
+		SHOG A 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		TNT1 A 0 A_PlaySound("weapon/fiddle")
+		S2FS ABCDEFFF 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		TNT1 A 0 A_PlaySound("weapons/ssg1", CHAN_AUTO)
+		S2FS GHHHIJKKKKKKKK 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		TNT1 A 0 A_PlaySound("weapon/fiddle")
+		S2FS LMNO 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		TNT1 A 0 A_PlaySound("weapons/DSDBLOAD", CHAN_AUTO)
+		S2FS PPPQRSSSSSSSS 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		TNT1 A 0 A_PlaySound("weapons/DSDBCLS")
+		S2FS TUVWXY 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		Goto Ready
 	Fire:
 		SHOG A 0 A_PlayWeaponSound("weapons/DSDSHTGN")
 		SHOG A 0 A_AlertMonsters

@@ -264,7 +264,7 @@ actor BossDeath7
   Gravity 0.5
   health 1
   scale 1.08
-  SeeSound "Rourity/death6"
+  SeeSound "Rourity/death5"
   States
   {
   Spawn:

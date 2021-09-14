@@ -56,6 +56,16 @@ $playersound	player	male	*gasp		gmchoke
 $random player/ridicule { player/kicktaunt2 player/killtaunt73 player/killtaunt5 player/killtaunt31 player/killtaunt7 player/killtaunt86 player/kicktaunt5 player/killtaunt50 player/killtaunt4 player/killtaunt3 }
 $playeralias	player	male	*taunt		player/ridicule
 //------------Weapons----------------//
+$random weapon/fiddle { weapon/fiddle1 weapon/fiddle2 weapon/fiddle3 weapon/fiddle4 weapon/fiddle5 weapon/fiddle6 weapon/fiddle7 }
+weapon/fiddle1	 WFIDDLE1
+weapon/fiddle2	 WFIDDLE2
+weapon/fiddle3	 WFIDDLE3
+weapon/fiddle4	 WFIDDLE4
+weapon/fiddle5	 WFIDDLE5
+weapon/fiddle6	 WFIDDLE6
+weapon/fiddle7	 WFIDDLE7
+vgun/fiddle		 VGUNFRS
+$volume weapon/fiddle 0.25
 $random fist/normalthrow { normalfist1 normalfist2 normalfist3 normalfist4 }
 normalfist1		 FISTWH1
 normalfist2		 FISTWH2
@@ -1724,7 +1734,7 @@ $limit Applesheriff/death2 0
 $limit AmyPie/death4 0
 $limit Hellhound/die2 0
 $limit Changeling/death 0
-$limit Rourity/death6 0
+$limit Rourity/death5 0
 $limit TrixieKir/death4 0
 $limit TwiMage/death5 0
 $limit VinylStorm/pain3 0

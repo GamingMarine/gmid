@@ -422,6 +422,10 @@ WARMUPOPTION1 = "Disable Warm-Up Animation";
 WARMUPOPTION2 = "If you don't want to sit through the animation and prefer jumping";
 WARMUPOPTION3 = "straight into the action, then enable this. Useful for mapsets like";
 WARMUPOPTION4 = "Scythe II, where you start with alerted enemies.";
+PICKUPOPTION1 = "Weapon Pickup Animations";
+PICKUPOPTION2 = "When enabled, any weapon you pick up for the first time will have";
+PICKUPOPTION3 = "its own pickup animation. Note that you cannot attack while these";
+PICKUPOPTION4 = "animations are playing."; 
 CUMMINSOON = "\cgMore mod-tailored options coming soon!";
 
 //This is only here so that those using older GZDoom versions don't have a broken options menu. I'm sorry, translators, but this is just how it has to be.
