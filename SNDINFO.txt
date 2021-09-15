@@ -65,6 +65,9 @@ weapon/fiddle5	 WFIDDLE5
 weapon/fiddle6	 WFIDDLE6
 weapon/fiddle7	 WFIDDLE7
 vgun/fiddle		 VGUNFRS
+missilelauncher/fiddle1	MISLFRS1
+missilelauncher/fiddle2	MISLFRS2
+missilelauncher/fiddle3	MISLFRS3
 $volume weapon/fiddle 0.25
 $random fist/normalthrow { normalfist1 normalfist2 normalfist3 normalfist4 }
 normalfist1		 FISTWH1

@@ -1,3 +1,5 @@
+Actor GMIDMissileLauncherToken : Inventory {}
+
 Actor GMIDMissileLauncher : RocketLauncher
 {
 	Weapon.BobRangeX 0.3
@@ -59,6 +61,26 @@ Actor GMIDMissileLauncher : RocketLauncher
   Spawn:
     LAUN A -1
     Stop
+  Ready:
+	TNT1 A 0 A_JumpIfInventory("FirestickToken",1,"FirstTime")
+	MISG A 1 A_WeaponReady
+	Loop
+  FirstTime:
+	TNT1 A 0 A_TakeInventory("FirestickToken",9999)
+	TNT1 A 0 A_JumpIf(CallACS("PickupAnimation")==0, "Ready")
+	MISG A 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 0 A_PlaySound("weapon/fiddle", CHAN_AUTO)
+	MLFS A 3 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 0 A_PlaySound("missilelauncher/fiddle1", CHAN_AUTO)
+	MLFS BCD 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 0 A_PlaySound("weapon/fiddle", CHAN_AUTO)
+	MLFS EFG 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 0 A_PlaySound("missilelauncher/fiddle2", CHAN_AUTO)
+	MLFS HIJKD 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 0 A_PlaySound("weapon/fiddle", CHAN_AUTO)
+	TNT1 A 0 A_PlaySound("missilelauncher/fiddle3", CHAN_AUTO)
+	MLFS CBA 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	Goto Ready
   Deselect:
     MISG A 1 A_Lower
     MISG A 0 A_Lower

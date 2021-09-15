@@ -16,6 +16,7 @@ Actor GamingMarine : DoomPlayer
 	Player.StartItem "FirestickToken", 1
 	Player.StartItem "SawnOffToken", 1
 	Player.StartItem "VGunToken", 1
+	Player.StartItem "GMIDMissileLauncherToken", 1
 	Player.StartItem "IsPlayer", 1
 	Player.Face "GMN"
 	DamageFactor "Cube", 0
