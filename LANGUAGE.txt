@@ -349,6 +349,7 @@ MNU_DELETESG		= "Are you absolutely sure you want to delete this savegame\n";
 
 MENUNEWG = "Kill Some Stuff";
 MENUOPTN = "Configure";
+MENUGMID = "Mod Configure";
 MENULOAD = "Restore Progress";
 MENULOADNETGAME = "You will need to quit this netgame in order to load any progress.";
 MENUSAVE = "Save Progress";
@@ -427,26 +428,6 @@ PICKUPOPTION2 = "When enabled, any weapon you pick up for the first time will ha
 PICKUPOPTION3 = "its own pickup animation. Note that you cannot attack while these";
 PICKUPOPTION4 = "animations are playing."; 
 CUMMINSOON = "\cgMore mod-tailored options coming soon!";
-
-//This is only here so that those using older GZDoom versions don't have a broken options menu. I'm sorry, translators, but this is just how it has to be.
-OPTMNU_TITLE = "OPTIONS";
-OPTMNU_CONTROLS	= "Customize Controls";
-OPTMNU_MOUSE = "Mouse options";
-OPTMNU_JOYSTICK	= "Joystick options";
-OPTMNU_PLAYER = "Player Setup";
-OPTMNU_GAMEPLAY	= "Gameplay Options";
-OPTMNU_COMPATIBILITY = "Compatibility Options";
-OPTMNU_AUTOMAP = "Automap Options";
-OPTMNU_HUD = "HUD Options";
-OPTMNU_MISCELLANEOUS = "Miscellaneous Options";
-OPTMNU_NETWORK = "Network Options";
-OPTMNU_SOUND = "Sound Options";
-OPTMNU_DISPLAY = "Display Options";
-OPTMNU_VIDEO = "Set video mode";
-OPTMNU_CHANGERENDER = "Change Rendering Output";
-OPTMNU_DEFAULTS	= "Reset to defaults";
-OPTMNU_RESETTOSAVED = "Reset to last saved";
-OPTMNU_CONSOLE = "Go to console";
 
 //Story screen text
 //Doom
