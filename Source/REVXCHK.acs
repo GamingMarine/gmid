@@ -1,0 +1,8 @@
+#include "zcommon.acs"
+#library "REVXCHK"
+// by 0x8BADF00D#8030
+script 154 (void)
+{
+    SetActivator(0, AAPTR_PLAYER1);
+	SetResultValue(CheckInventory("RevX"));
+}

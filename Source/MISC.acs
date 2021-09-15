@@ -1,0 +1,12 @@
+#include "zcommon.acs"
+
+//This script is to check if the game is being played in a PVP mode.
+//This can be used to make sure certain items don't spawn in deathmatch.
+//Loosely based on code from Death Foretold by DBT.
+script "PVPCheck" (void)
+{
+	if (GameType() == 2)
+	{
+	  SetResultValue(2);
+	}
+}
