@@ -62,11 +62,11 @@ Actor GMIDMissileLauncher : RocketLauncher
     LAUN A -1
     Stop
   Ready:
-	TNT1 A 0 A_JumpIfInventory("FirestickToken",1,"FirstTime")
+	TNT1 A 0 A_JumpIfInventory("GMIDMissileLauncherToken",1,"FirstTime")
 	MISG A 1 A_WeaponReady
 	Loop
   FirstTime:
-	TNT1 A 0 A_TakeInventory("FirestickToken",9999)
+	TNT1 A 0 A_TakeInventory("GMIDMissileLauncherToken",9999)
 	TNT1 A 0 A_JumpIf(CallACS("PickupAnimation")==0, "Ready")
 	MISG A 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	TNT1 A 0 A_PlaySound("weapon/fiddle", CHAN_AUTO)
