@@ -540,6 +540,10 @@ misc/ricochet5	RICOCHE5
 misc/ricochet6	RICOCHE6
 misc/ricochet7	RICOCHE7
 
+Blood/Splat 	BLUDDROP
+$volume Blood/Splat 0.25
+$limit Blood/Splat 0
+
 Rat/Squeek	DSRAT
 $volume radio/chat 0.5
 radio/chat 	RADIOAMB
