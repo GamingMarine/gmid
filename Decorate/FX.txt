@@ -659,3 +659,14 @@ ACTOR NewTeleportFog : TeleportFog replaces TeleportFog
     Stop
   }
 }
+
+ACTOR NewItemFog : ItemFog replaces ItemFog
+{
+  Scale 0.66
+  States
+  {
+  Spawn:
+    IFOG ABABABABABABABABCDEFGHIJ 1 Bright
+    Stop
+  }
+}

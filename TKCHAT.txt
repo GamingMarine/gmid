@@ -1,0 +1,2 @@
+[LoseStrings]
+"I lost, meow..."
