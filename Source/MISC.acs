@@ -1,3 +1,4 @@
+#library "misc"
 #include "zcommon.acs"
 
 //This script is to check if the game is being played in a PVP mode.
@@ -8,5 +9,22 @@ script "PVPCheck" (void)
 	if (GameType() == 2)
 	{
 	  SetResultValue(2);
+	}
+}
+
+//This should be a much cleaner method for recharging the Rev-X.
+script "RevXRecharge" ENTER
+{
+	if (CheckInventory("RevXUpgrade1"))
+	{
+		GiveInventory("RevXAmmo", 1);
+		Delay(4);
+		Restart;
+	}
+	else
+	{
+		GiveInventory("RevXAmmo", 1);
+		Delay(8);
+		Restart;
 	}
 }
