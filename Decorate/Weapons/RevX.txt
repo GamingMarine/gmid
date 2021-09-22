@@ -10,7 +10,7 @@ actor RevX : Weapon
     Weapon.SelectionOrder 100
     Weapon.AmmoGive 100
     Weapon.AmmoType "RevXAmmo"
-	Weapon.AmmoUse 1
+	Weapon.AmmoUse 2
 	Obituary "$OB_REVX"
 	Tag "$TAG_REVX"
     Inventory.Pickupmessage "$GOTREVX"
