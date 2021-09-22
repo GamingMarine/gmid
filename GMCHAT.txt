@@ -1,0 +1,29 @@
+[IntroStrings]
+"Great, looks like I'm in with the smacktards."
+"Ladies and gentlemen, the Marine has entered the building."
+
+[FragStrings]
+"I had eggs for breakfast. Your mom had sausage."
+"I hit you, you hit the respawn key."
+"It's just like Laser Tag... but with more bloodshed."
+"Ya looked like you needed a respawn."
+
+[KilledStrings]
+"D'oh!"
+"I ain't ready for a gravestone yet."
+"Yeah, I deserved that."
+
+[WinStrings]
+"That's how the Expert does it."
+"Thanks for the target practice."
+
+[EnragedStrings] //You fail it
+"I ain't got time to bleed."
+"Lucky son of a bitch."
+"This really pisses me off."
+"Ugh, it's always somethin', goddamnit."
+
+[DemoralizedStrings] //Your skill is not enough
+"I oughta break a broom handle off in your ass."
+"I oughta stab you through the heart with a fuckin' pencil."
+"You're gonna look pretty funny trying to eat burgers with no fuckin' teeth."

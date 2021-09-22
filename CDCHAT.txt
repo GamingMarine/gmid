@@ -1,0 +1,9 @@
+[IntroStrings]
+"Hey, y'all, it's me! The Cookie you all know and love!"
+"Here I am! Leeet's GOOO!"
+
+[FragStrings]
+"C'mon! Ya even tryin'?"
+
+[WinStrings]
+"Aw, yeah!"

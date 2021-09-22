@@ -91,7 +91,7 @@ Actor GMIDShotgun : Shotgun
 			TNT1 A 0 A_TakeInventory("GMIDShotgunToken",9999)
 			TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("PVPCheck",0,0,0,0) == 2,"Ready")
 			TNT1 A 0 A_JumpIf(CallACS("PickupAnimation")==0, "Ready")
-			SHTG A 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			SHTG A 2 A_WeaponReady
 			TNT1 A 0 A_PlaySound("weapon/fiddle")
 			SGFS ABCDDDEFG 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 			SGFS H 0 A_PlaySound("shellclip/get")
