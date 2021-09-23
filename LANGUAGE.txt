@@ -108,6 +108,13 @@ GOTHASTE = "\cxHasteSphere!";
 GOTCRYSTAL = "You got the Cookie-Crystal! \c[brick]Cookiedemon\c- is ready... \cf(\cjThis item must be activated to use it\cf)";
 GOTSHAKE = "Drank a Super-Cool(tm) Energy Shake! Refreshing! \cf(\cj+50 health\cf)";
 
+BIOFADE = "Air supply in bio-suit is expiring...";
+GOGGLESFADE = "Night vision goggles' batteries are draining...";
+INVULFADE = "\c[DarkGreen]Invulnerability\c- is almost burned out...";
+DOUBLEFADE = "\cgDouble Damage\c- is wearing off...";
+QUADFADE = "\c[LightBlue]Quad Damage\c- is wearing off...";
+HASTEFADE = "\cxHasteSphere\c- is running out...";
+
 TAG_COLA1 = "Caco-Cola";
 TAG_COLA2 = "Caco-Cola Zero";
 TAG_APPLE = "Apple";

@@ -123,6 +123,11 @@ $random weapons/DSDBLOAD { ssg/load1 ssg/load2 ssg/load3 }
 ssg/load1			DBSLOAD1
 ssg/load2			DBSLOAD2
 ssg/load3			DBSLOAD3
+$random SSG/Eject { ssg/eject1 ssg/eject2 ssg/eject3 ssg/eject4 }
+ssg/eject1			DBSEJCT1
+ssg/eject2			DBSEJCT2
+ssg/eject3			DBSEJCT3
+ssg/eject4			DBSEJCT4
 cadet/pickup		CADETGET
 bigball/fire		CADETFIR
 bigball/hit			CADETEXP
@@ -196,10 +201,13 @@ coke/up COLA
 pc/pick	 PCPICK
 pc/idle	 comp1
 nvg/pick GOGGLES
+nvg/fade GOGGLEND
 SOULGET	 SOULGET
 MEGAGET	 MEGAGET
 INVULGET INVULGET
+Invulnerability/Fade INVULEND
 HASTEUP  HASTEUP
+Haste/Fade HASTEEND
 PCOLABUP PCOLABUP
 weapon/get1			DSWPNUP1
 weapon/get2			DSWPNUP2
@@ -223,9 +231,12 @@ misc/ar2_pkup 		AMRSHRD
 backpack/get BPACKUP
 FKITUSE		cokeuse
 DoubleDamage/Pickup			DDMG
+DoubleDamage/Fade			DDMGEND
 QuadDamage/Pickup			QUADDMUP
 QuadDamage/Use				QUADDMFR
+QuadDamage/Fade				QUADDMFD
 RADS						SUIT
+RADSFADE					SUITEND
 eating/apple				APPLEEAT
 eating/orange				ORANGEAT
 eating/burger				BURGEAT

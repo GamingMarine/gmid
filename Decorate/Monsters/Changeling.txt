@@ -120,7 +120,7 @@ actor Changeling replaces LostSoul
 	CHGL L 4
 	CHGL M 0 A_SpawnItemEx("ChangelingTrailM",random(-1,1), random(-1,1), 0)
 	CHGL MMMMMMMMMMMMMM 2 A_FadeOut(0.05)
-	TNT1 A 0 A_Jump(16, "KillTaunt")
+	TNT1 A 0 A_Jump(38, "KillTaunt")
 	Stop
   DeathBasic2:
 	CHGL O 0 A_SpawnItemEx("ChangelingTrailO",random(-1,1), random(-1,1), 0)
@@ -133,7 +133,7 @@ actor Changeling replaces LostSoul
 	CHGL R 4
 	CHGL S 0 A_SpawnItemEx("ChangelingTrailS",random(-1,1), random(-1,1), 0)
 	CHGL SSSSSSSSSSSSSS 2 A_FadeOut(0.05)
-	TNT1 A 0 A_Jump(16, "KillTaunt")
+	TNT1 A 0 A_Jump(38, "KillTaunt")
 	Stop
   DeathBasic3:
 	CHGL T 0 A_SpawnItemEx("ChangelingTrailT",random(-1,1), random(-1,1), 0)
@@ -150,7 +150,7 @@ actor Changeling replaces LostSoul
 	CHGL Y 4
 	CHGL Z 0 A_SpawnItemEx("ChangelingTrailZ",random(-1,1), random(-1,1), 0)
 	CHGL ZZZZZZZZZZZZZZ 2 A_FadeOut(0.05)
-	TNT1 A 0 A_Jump(16, "KillTaunt")
+	TNT1 A 0 A_Jump(38, "KillTaunt")
 	Stop
   KillTaunt:
   	TNT1 A 0 A_PlaySound("player/killtaunt", CHAN_AUTO)

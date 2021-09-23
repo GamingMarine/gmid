@@ -28,3 +28,43 @@ script "RevXRecharge" ENTER
 		Restart;
 	}
 }
+
+//Attempt #2 at adding this in
+script "PowerupFading" ENTER
+{
+	Int PNum = PlayerNumber();
+	While(PNum==PlayerNumber())
+	{
+		If(GetActorPowerupTics(0,"PowerBioSuitProtection")==105)
+		{
+			Log(s:"Air supply in bio-suit is expiring...");
+			PlaySound(0,"RADSFADE",0);
+		}
+		If(GetActorPowerupTics(0,"PowerLightAmp2")==105)
+		{
+			Log(s:"Night vision goggles' batteries are draining...");
+			PlaySound(0,"NVG/Fade",0);
+		}
+		If(GetActorPowerupTics(0,"PowerInvulnerable2")==105)
+		{
+			Log(s:"\c[DarkGreen]Invulnerability\c- is almost burned out...");
+			PlaySound(0,"Invulnerability/Fade",0);
+		}
+		If(GetActorPowerupTics(0,"PowerDoubleDamage")==105)
+		{
+			Log(s:"\cgDouble Damage\c- is wearing off...");
+			PlaySound(0,"DoubleDamage/Fade",0);
+		}
+		If(GetActorPowerupTics(0,"PowerQuadDamageST")==105)
+		{
+			Log(s:"\c[LightBlue]Quad Damage\c- is wearing off...");
+			PlaySound(0,"QuadDamage/Fade",0);
+		}
+		If(GetActorPowerupTics(0,"PowerSpeed2")==105)
+		{
+			Log(s:"\cxHasteSphere\c- is running out...");
+			PlaySound(0,"Haste/Fade",0);
+		}
+		Delay(1);
+	}
+}
