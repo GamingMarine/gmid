@@ -12,24 +12,8 @@ script "PVPCheck" (void)
 	}
 }
 
-//This should be a much cleaner method for recharging the Rev-X.
-script "RevXRecharge" ENTER
-{
-	if (CheckInventory("RevXUpgrade1"))
-	{
-		GiveInventory("RevXAmmo", 1);
-		Delay(4);
-		Restart;
-	}
-	else
-	{
-		GiveInventory("RevXAmmo", 1);
-		Delay(8);
-		Restart;
-	}
-}
-
-//Attempt #2 at adding this in
+//Plays a warning sound and logs a message to the console when a powerup is about to phase out
+//Based on Quake II Stuff by TheCamaleonMaligno
 script "PowerupFading" ENTER
 {
 	Int PNum = PlayerNumber();
