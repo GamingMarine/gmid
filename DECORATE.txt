@@ -28,8 +28,8 @@
 #include Decorate/Monsters/Hellhounds.txt
 #include Decorate/Monsters/Changeling.txt
 #include Decorate/Monsters/PrincessLuna.txt
-#include Decorate/Monsters/ZSecPistol.txt
-#include Decorate/Monsters/ZSecShotgun.txt
+#include Decorate/Monsters/ZSecGunner.txt
+#include Decorate/Monsters/ZSecArsonist.txt
 #include Decorate/Monsters/BlasterSoldier.txt
 #include Decorate/Monsters/SawnOffWielder.txt
 #include Decorate/Monsters/ChaingunMajor.txt

@@ -41,6 +41,12 @@ ACTOR HealthBackpack : CustomInventory
 	}
 }
 
+Actor NewRedCard : RedCard replaces RedCard
+{
+  Species "RedCard"
+  Inventory.PickupMessage "$GOTREDCARD2"
+}
+
 Actor NewRedSkull : RedSkull replaces RedSkull
 {
   Species "RedSkull"
@@ -48,11 +54,23 @@ Actor NewRedSkull : RedSkull replaces RedSkull
   Inventory.PickupSound "misc/skullup"
 }
 
+Actor NewBlueCard : BlueCard replaces BlueCard
+{
+  Species "BlueCard"
+  Inventory.PickupMessage "$GOTBLUECARD2"
+}
+
 Actor NewBlueSkull : BlueSkull replaces BlueSkull
 {
   Species "BlueSkull"
   Inventory.PickupMessage "$GOTBLUESKUL2"
   Inventory.PickupSound "misc/skullup"
+}
+
+Actor NewYellowCard : YellowCard replaces YellowCard
+{
+  Species "YellowCard"
+  Inventory.PickupMessage "$GOTYELWCARD2"
 }
 
 Actor NewYellowSkull : YellowSkull replaces YellowSkull

@@ -518,7 +518,9 @@ $random menu/quit2 { misc/quit1 misc/quit2 misc/quit3 }
 intermission/tick	COUNTING
 intermission/nextstage	COUNTEND
 weapons/shotgr		CONTINUE
-misc/keytry				doorlock
+lock/card			DOORLOCK
+lock/skull			DOORLOK2
+lock/misc			DOORLOK3
 $volume casings/bullet/bounce 0.4
 $random Casings/Bullet/bounce { CBNCE1 CBNCE2 CBNCE3 CBNCE4 CBNCE5 }
 CBNCE1 DSCASIN1

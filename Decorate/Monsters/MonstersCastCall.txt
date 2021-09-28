@@ -26,7 +26,7 @@ actor RainbowDashCastCall
    }
 }
 
-Actor ZSecPistolCastCall
+Actor ZSecGunnerCastCall
 {
   seesound "grunt/sight"
   deathsound "grunt/death"
@@ -163,7 +163,7 @@ actor OctaviaCastCall
    }
 }
 
-Actor ZSpecOpsShotgunCastCall
+Actor ZSecArsonistCastCall
 {
   SeeSound "shotguy/Sight"
   DeathSound "shotguy/Death"

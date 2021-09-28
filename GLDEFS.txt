@@ -365,7 +365,7 @@ FlickerLight2 ZSecAttack
   Offset 0 40 0
 }
 
-Object ZSecPistol
+Object ZSecGunner
 {
   Frame ZSC1F { Light ZSecAttack }
 }
@@ -435,6 +435,60 @@ object NewBaronBall
     frame BAL7D { light NewBaronBall_X1 }
     frame BAL7E { light NewBaronBall_X2 }
 	frame BAL7F { light NewBaronBall_X3 }
+}
+
+pulselight REDKEY
+{
+    color 0.6 0.0 0.0
+    size 16
+    secondarySize 18
+    interval 2.0
+}
+
+object NewRedCard
+{
+    frame RKEY { light REDKEY }
+}
+
+object NewRedSkull
+{
+    frame RSKU { light REDKEY }
+}
+
+pulselight HEALTHPOTION
+{
+    color 0.0 0.0 0.6
+    size 16
+    secondarySize 18
+    interval 2.0
+}
+
+object NewBlueCard
+{
+    frame BKEY { light HEALTHPOTION }
+}
+
+object NewBlueSkull
+{
+    frame BSKU { light HEALTHPOTION }
+}
+
+pulselight YELLOWKEY
+{
+    color 0.6 0.6 0.0
+    size 16
+    secondarySize 18
+    interval 2.0
+}
+
+object NewYellowCard
+{
+    frame YKEY { light YELLOWKEY }
+}
+
+object NewYellowSkull
+{
+    frame YSKU { light YELLOWKEY }
 }
 
 //Brightmaps

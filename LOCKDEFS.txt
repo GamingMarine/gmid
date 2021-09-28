@@ -1,0 +1,164 @@
+ClearLocks
+
+//Red Keycard
+Lock 1 Doom
+{
+	RedCard
+	Message "$GMIDPD_REDC"
+	RemoteMessage "$GMIDPD_REDCO"
+	MapColor 255 0 0
+	LockedSound "lock/card"
+}
+
+//Blue Keycard
+Lock 2 Doom
+{
+	BlueCard
+	Message "$GMIDPD_BLUEC"
+	RemoteMessage "$GMIDPD_BLUECO"
+	MapColor 0 0 255
+	LockedSound "lock/card"
+}
+
+//Yellow Keycard
+Lock 3 Doom
+{
+	YellowCard
+	Message "$GMIDPD_YELLOWC"
+	RemoteMessage "$GMIDPD_YELLOWCO"
+	MapColor 255 255 0
+	LockedSound "lock/card"
+}
+
+//Red Skull
+Lock 4 Doom
+{
+	RedSkull
+	Message "$GMIDPD_REDS"
+	RemoteMessage "$GMIDPD_REDSO"
+	MapColor 255 0 0
+	LockedSound "lock/skull"
+}
+
+//Blue Skull
+Lock 5 Doom
+{
+	BlueSkull
+	Message "$GMIDPD_BLUES"
+	RemoteMessage "$GMIDPD_BLUESO"
+	MapColor 0 0 255
+	LockedSound "lock/skull"
+}
+
+//Yellow Skull
+Lock 6 Doom
+{
+	YellowSkull
+	Message "$GMIDPD_YELLOWS"
+	RemoteMessage "$GMIDPD_YELLOWSO"
+	MapColor 255 255 0
+	LockedSound "lock/skull"
+}
+
+//Any Red Key
+Lock 129 Doom
+{
+	Any { RedCard RedSkull KeyGreen }
+	Message "$GMIDPD_REDK"
+	RemoteMessage "$GMIDPD_REDO"
+	MapColor 255 0 0
+	LockedSound "lock/misc"
+}
+
+//Any Blue Key
+Lock 130 Doom
+{
+	Any { BlueCard BlueSkull KeyBlue }
+	Message "$GMIDPD_BLUEK"
+	RemoteMessage "$GMIDPD_BLUEO"
+	MapColor 0 0 255
+	LockedSound "lock/misc"
+}
+
+//Any Yellow Key
+Lock 131 Doom
+{
+	Any { YellowCard YellowSkull KeyYellow }
+	Message "$GMIDPD_YELLOWK"
+	RemoteMessage "$GMIDPD_YELLOWO"
+	MapColor 255 255 0
+	LockedSound "lock/misc"
+}
+
+//Red Card/Skull
+Lock 132 Doom
+{
+	Any { RedCard RedSkull }
+	Message "$GMIDPD_REDK"
+	RemoteMessage "$GMIDPD_REDO"
+	MapColor 255 0 0
+	LockedSound "lock/misc"
+}
+
+//Blue Card/Skull
+Lock 133 Doom
+{
+	Any { BlueCard BlueSkull }
+	Message "$GMIDPD_BLUEK"
+	RemoteMessage "$GMIDPD_BLUEO"
+	MapColor 0 0 255
+	LockedSound "lock/misc"
+}
+
+//Yellow Card/Skull
+Lock 134 Doom
+{
+	Any { YellowCard YellowSkull }
+	Message "$GMIDPD_YELLOWK"
+	RemoteMessage "$GMIDPD_YELLOWO"
+	MapColor 255 255 0
+	LockedSound "lock/misc"
+}
+
+//Any Key
+Lock 100 Doom
+{
+	Message "$GMIDPD_ANY"
+	RemoteMessage "$GMIDPD_ANYOBJ"
+	MapColor 128 128 255
+	LockedSound "lock/misc"
+}
+
+//Any Key (Again)
+Lock 228 Doom
+{
+	Message "$GMIDPD_ANY"
+	RemoteMessage "$GMIDPD_ANYOBJ"
+	MapColor 128 128 255
+	LockedSound "lock/misc"
+}
+
+//One of Each
+Lock 229 Doom
+{
+	Any { RedCard RedSkull KeyGreen }
+	Any { BlueCard BlueSkull KeyBlue }
+	Any { YellowCard YellowSkull KeyYellow }
+	Message "$GMIDPD_ALL3"
+	RemoteMessage "$GMIDPD_ALL3O"
+	LockedSound "lock/misc"
+}
+
+//All Six Keys
+Lock 101 Doom
+{
+	RedCard
+	BlueCard
+	YellowCard
+	RedSkull
+	BlueSkull
+	YellowSkull
+	Message "$GMIDPD_ALL6"
+	RemoteMessage "$GMIDPD_ALL6O"
+	LockedSound "lock/misc"
+}

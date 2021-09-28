@@ -459,14 +459,14 @@ actor ChaingunGuySpawner : RandomSpawner replaces ChaingunGuy
 
 Actor Zombieman_PossessedSpawner : RandomSpawner
 {
-	DropItem "ZSecPistol"
+	DropItem "ZSecGunner"
 	DropItem "BlasterSoldier"
 	DropItem "EvilMarine_Rifle"
 }
 
 Actor ShotgunBoi_PossessedSpawner : RandomSpawner
 {
-	DropItem "ZSpecOpsShotgun"
+	DropItem "ZSecArsonist"
 	DropItem "SawedOffShotgunGuy"
 	DropItem "EvilMarine_Shotgun"
 }

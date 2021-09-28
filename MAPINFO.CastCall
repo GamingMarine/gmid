@@ -20,7 +20,7 @@ Intermission GMIDCast
 	}
     Cast
 	{
-	  CastClass = "ZSecPistolCastCall"
+	  CastClass = "ZSecGunnerCastCall"
 	  CastName = "$TAG_ZSEC1"
       AttackSound = "Missile", 1, "zsec/pistol"
 	}
@@ -53,7 +53,7 @@ Intermission GMIDCast
 	}
 	Cast
 	{
-	  CastClass = "ZSpecOpsShotgunCastCall"
+	  CastClass = "ZSecArsonistCastCall"
 	  CastName = "$TAG_ZSEC2"
       AttackSound = "Missile", 1, "weapons/spasshot"
 	}

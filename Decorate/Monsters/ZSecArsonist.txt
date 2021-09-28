@@ -1,0 +1,111 @@
+Actor ZSecArsonist
+{
+  Health 80
+  Height 56
+  Radius 20
+  Speed 4
+  PainChance 200
+  PainChance "Fire", 256
+  Monster
+  +FloorClip
+  +NoTarget
+  +NoInfighting
+  SeeSound "shotguy/Sight"
+  ActiveSound "shotguy/active"
+  PainSound "shotguy/Pain"
+  DeathSound "shotguy/Death"
+  Obituary "$OB_ZSEC2"
+  DropItem "Firestick"
+  Tag "$TAG_ZSEC2"
+  States
+  {
+  Spawn:
+    ZSP1 AAAAA 10 A_Look
+    ZSP1 A 0 A_Jump(8, 2)
+    ZSP1 A 0
+    Loop
+    ZSP1 A 0 A_PlaySound("shotguy/breathe")
+    Loop
+  See:
+    ZSP1 AAAABBBB 1 A_Chase
+	ZSP1 C 0 A_PlaySound("Cyber/Hoof", CHAN_BODY)	
+	ZSP1 CCCCDDDD 1 A_Chase
+	ZSP1 A 0 A_PlaySound("Cyber/Hoof", CHAN_BODY)	
+    Loop
+  Missile:
+    ZSP1 E 12 A_FaceTarget
+    ZSP1 F 0 Bright A_PlayWeaponSound("weapons/spasshot")
+    ZSP1 F 3 Bright A_CustomBulletAttack(5, 0, 12, 0, "FirestickPuff")
+    ZSP1 E 24 A_FaceTarget
+	ZSP1 E 0 A_PlayWeaponSound("weapons/spascock")
+    Goto See
+  Pain:
+    ZSP1 G 4
+    ZSP1 G 4 A_Pain
+    Goto See
+  Death:
+	TNT1 A 0 A_Jump(256, "Death1", "Death2")
+  Death1:
+	TNT1 A 0 A_Jump(38, "KillTaunt1")
+    ZSP1 H 5
+    ZSP1 I 5 A_Scream
+    ZSP1 J 5
+    ZSP1 K 5 A_NoBlocking
+	ZSP1 L 0 A_PlaySound("body/hitfloor")
+    ZSP1 L -1
+	Stop
+  Death2:
+	TNT1 A 0 A_Jump(38, "KillTaunt2")
+    ZSP5 L 5
+    ZSP5 M 5 A_Scream
+    ZSP5 N 5
+    ZSP5 O 5 A_NoBlocking
+	ZSP5 P 0 A_PlaySound("body/hitfloor")
+    ZSP5 P -1
+	Stop
+  KillTaunt1:
+    ZSP1 H 5
+    ZSP1 I 5 A_Scream
+    ZSP1 J 5
+    ZSP1 K 5 A_NoBlocking
+	ZSP1 L 0 A_PlaySound("body/hitfloor")
+	ZSP1 L 10
+  	TNT1 A 0 A_PlaySound("player/killtaunt", CHAN_AUTO)
+    ZSP1 L -1
+	Stop
+  KillTaunt2:
+    ZSP5 L 5
+    ZSP5 M 5 A_Scream
+    ZSP5 N 5
+    ZSP5 O 5 A_NoBlocking
+	ZSP5 P 0 A_PlaySound("body/hitfloor")
+    ZSP5 P 10
+  	TNT1 A 0 A_PlaySound("player/killtaunt", CHAN_AUTO)
+    ZSP5 P -1
+	Stop
+  XDeath:
+	TNT1 A 0 A_XScream
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_SpawnDebris("SkullGib")
+	TNT1 A 0 A_SpawnDebris("RibGib")
+	TNT1 A 0 A_SpawnDebris("BoneGib")
+	TNT1 A 0 A_SpawnDebris("HipGib")
+	TNT1 A 0 A_SpawnDebris("GutsGib")
+	TNT1 A 0 A_SpawnDebris("LimbGib")
+	TNT1 A 0 A_SpawnDebris("BloodSplurt")
+	TNT1 A 0 A_Jump(38, "GibTaunt")
+	Stop
+  GibTaunt:
+	TNT1 A 40
+	TNT1 A 0 A_PlaySound("player/gibtaunt", CHAN_AUTO)
+	Stop
+  Raise:
+    ZSP1 LKJIH 5
+    Goto See
+  Death.Fire:
+	ZSP1 G 0 A_NoBlocking
+	ZSP1 G 0 A_SpawnItem("BurningBoi")
+	TNT1 A -1
+	Stop
+  }
+}
