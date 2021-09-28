@@ -433,7 +433,7 @@ WARMUPOPTION4 = "Scythe II, where you start with alerted enemies.";
 PICKUPOPTION1 = "Weapon Pickup Animations";
 PICKUPOPTION2 = "When enabled, any weapon you pick up for the first time will have";
 PICKUPOPTION3 = "its own pickup animation. Note that you cannot attack while these";
-PICKUPOPTION4 = "animations are playing."; 
+PICKUPOPTION4 = "animations are playing.";
 CUMMINSOON = "\cgMore mod-tailored options coming soon!";
 
 //Story screen text

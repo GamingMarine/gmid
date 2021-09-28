@@ -1,62 +1,62 @@
 //These are the definitions for brightmaps exclusive to GamingMarine in Doom
-BrightMap Sprite RGNGA0B0
+Brightmap Sprite RGNGA0B0
 {
 Map "Brightmaps/GMID/RGNGA0B0.png"
 }
 
-BrightMap Sprite RGUNA0
+Brightmap Sprite RGUNA0
 {
 Map "Brightmaps/GMID/RGUNA0.png"
 }
 
-BrightMap Sprite RGUNB0
+Brightmap Sprite RGUNB0
 {
 Map "Brightmaps/GMID/RGUNB0.png"
 DisableFullBright
 }
 
-BrightMap Sprite RGUNC0
+Brightmap Sprite RGUNC0
 {
 Map "Brightmaps/GMID/RGUNC0.png"
 DisableFullBright
 }
 
-BrightMap Sprite RGUND0
+Brightmap Sprite RGUND0
 {
 Map "Brightmaps/GMID/RGUNA0.png"
 }
 
-BrightMap Sprite RGUNE0
+Brightmap Sprite RGUNE0
 {
 Map "Brightmaps/GMID/RGUNA0.png"
 }
 
-BrightMap Sprite RGUNF0
+Brightmap Sprite RGUNF0
 {
 Map "Brightmaps/GMID/RGUNA0.png"
 }
 
-BrightMap Sprite RGUNG0
+Brightmap Sprite RGUNG0
 {
 Map "Brightmaps/GMID/RGUNA0.png"
 }
 
-BrightMap Sprite RGUNH0
+Brightmap Sprite RGUNH0
 {
 Map "Brightmaps/GMID/RGUNA0.png"
 }
 
-BrightMap Sprite RGUNI0
+Brightmap Sprite RGUNI0
 {
 Map "Brightmaps/GMID/RGUNA0.png"
 }
 
-BrightMap Sprite RGUNJ0
+Brightmap Sprite RGUNJ0
 {
 Map "Brightmaps/GMID/RGUNA0.png"
 }
 
-BrightMap Sprite RGUNK0
+Brightmap Sprite RGUNK0
 {
 Map "Brightmaps/GMID/RGUNA0.png"
 }
@@ -3335,4 +3335,253 @@ Map "Brightmaps/GMID/CDMNA0.png"
 Brightmap Sprite CDMNH0
 {
 Map "Brightmaps/GMID/CDMNH0.png"
+}
+
+Brightmap Sprite ZSDOA1
+{
+Map "Brightmaps/GMID/ZSDOA1.png"
+}
+
+Brightmap Sprite ZSDOA2A8
+{
+Map "Brightmaps/GMID/ZSDOA2A8.png"
+}
+
+Brightmap Sprite ZSDOA3A7
+{
+Map "Brightmaps/GMID/ZSDOA3A7.png"
+}
+
+Brightmap Sprite ZSDOA4A6
+{
+Map "Brightmaps/GMID/ZSDOA4A6.png"
+}
+
+Brightmap Sprite ZSDOB1
+{
+Map "Brightmaps/GMID/ZSDOB1.png"
+}
+
+Brightmap Sprite ZSDOB2B8
+{
+Map "Brightmaps/GMID/ZSDOB2B8.png"
+}
+
+Brightmap Sprite ZSDOB3B7
+{
+Map "Brightmaps/GMID/ZSDOB3B7.png"
+}
+
+Brightmap Sprite ZSDOB4B6
+{
+Map "Brightmaps/GMID/ZSDOB4B6.png"
+}
+
+Brightmap Sprite ZSDOC1
+{
+Map "Brightmaps/GMID/ZSDOC1.png"
+}
+
+Brightmap Sprite ZSDOC2C8
+{
+Map "Brightmaps/GMID/ZSDOC2C8.png"
+}
+
+Brightmap Sprite ZSDOC3C7
+{
+Map "Brightmaps/GMID/ZSDOC3C7.png"
+}
+
+Brightmap Sprite ZSDOC4C6
+{
+Map "Brightmaps/GMID/ZSDOC4C6.png"
+}
+
+Brightmap Sprite ZSDOD1
+{
+Map "Brightmaps/GMID/ZSDOD1.png"
+}
+
+Brightmap Sprite ZSDOD2D8
+{
+Map "Brightmaps/GMID/ZSDOD2D8.png"
+}
+
+Brightmap Sprite ZSDOD3D7
+{
+Map "Brightmaps/GMID/ZSDOD3D7.png"
+}
+
+Brightmap Sprite ZSDOD4D6
+{
+Map "Brightmaps/GMID/ZSDOD4D6.png"
+}
+
+Brightmap Sprite ZSDOE1
+{
+Map "Brightmaps/GMID/ZSDOE1.png"
+}
+
+Brightmap Sprite ZSDOE2E8
+{
+Map "Brightmaps/GMID/ZSDOE2E8.png"
+}
+
+Brightmap Sprite ZSDOE3E7
+{
+Map "Brightmaps/GMID/ZSDOE3E7.png"
+}
+
+Brightmap Sprite ZSDOE4E6
+{
+Map "Brightmaps/GMID/ZSDOE4E6.png"
+}
+
+Brightmap Sprite ZSDOF1
+{
+Map "Brightmaps/GMID/ZSDOF1.png"
+DisableFullBright
+}
+
+Brightmap Sprite ZSDOF2F8
+{
+Map "Brightmaps/GMID/ZSDOF2F8.png"
+DisableFullBright
+}
+
+Brightmap Sprite ZSDOF3F7
+{
+Map "Brightmaps/GMID/ZSDOF3F7.png"
+DisableFullBright
+}
+
+Brightmap Sprite ZSDOF4F6
+{
+Map "Brightmaps/GMID/ZSDOF4F6.png"
+DisableFullBright
+}
+
+Brightmap Sprite ZSDOF5
+{
+Map "Brightmaps/GMID/ZSDOF5.png"
+DisableFullBright
+}
+
+Brightmap Sprite CPS2A1
+{
+Map "Brightmaps/GMID/CPS2A1.png"
+}
+
+Brightmap Sprite CPS2A2A8
+{
+Map "Brightmaps/GMID/CPS2A2A8.png"
+}
+
+Brightmap Sprite CPS2A3A7
+{
+Map "Brightmaps/GMID/CPS2A3A7.png"
+}
+
+Brightmap Sprite CPS2A4A6
+{
+Map "Brightmaps/GMID/CPS2A4A6.png"
+}
+
+Brightmap Sprite CPS2B1
+{
+Map "Brightmaps/GMID/CPS2B1.png"
+}
+
+Brightmap Sprite CPS2B2B8
+{
+Map "Brightmaps/GMID/CPS2B2B8.png"
+}
+
+Brightmap Sprite CPS2B3B7
+{
+Map "Brightmaps/GMID/CPS2B3B7.png"
+}
+
+Brightmap Sprite CPS2C1
+{
+Map "Brightmaps/GMID/CPS2C1.png"
+}
+
+Brightmap Sprite CPS2C2C8
+{
+Map "Brightmaps/GMID/CPS2C2C8.png"
+}
+
+Brightmap Sprite CPS2C3C7
+{
+Map "Brightmaps/GMID/CPS2C3C7.png"
+}
+
+Brightmap Sprite CPS2D1
+{
+Map "Brightmaps/GMID/CPS2D1.png"
+}
+
+Brightmap Sprite CPS2D2D8
+{
+Map "Brightmaps/GMID/CPS2D2D8.png"
+}
+
+Brightmap Sprite CPS2D3D7
+{
+Map "Brightmaps/GMID/CPS2D3D7.png"
+}
+
+Brightmap Sprite CPS2E1
+{
+Map "Brightmaps/GMID/CPS2E1.png"
+DisableFullBright
+}
+
+Brightmap Sprite CPS2E2E8
+{
+Map "Brightmaps/GMID/CPS2E2E8.png"
+DisableFullBright
+}
+
+Brightmap Sprite CPS2E3E7
+{
+Map "Brightmaps/GMID/CPS2E3E7.png"
+DisableFullBright
+}
+
+Brightmap Sprite CPS2E4E6
+{
+Map "Brightmaps/GMID/CPS2E4E6.png"
+DisableFullBright
+}
+
+Brightmap Sprite CPS2F1
+{
+Map "Brightmaps/GMID/CPS2F1.png"
+DisableFullBright
+}
+
+Brightmap Sprite CPS2F2F8
+{
+Map "Brightmaps/GMID/CPS2F2F8.png"
+DisableFullBright
+}
+
+Brightmap Sprite CPS2F3F7
+{
+Map "Brightmaps/GMID/CPS2F3F7.png"
+DisableFullBright
+}
+
+Brightmap Sprite CPS2F4F6
+{
+Map "Brightmaps/GMID/CPS2F4F6.png"
+DisableFullBright
+}
+
+Brightmap Sprite CPS2F5
+{
+Map "Brightmaps/GMID/CPS2F5.png"
+DisableFullBright
 }
