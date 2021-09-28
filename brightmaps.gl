@@ -3585,3 +3585,27 @@ Brightmap Sprite CPS2F5
 Map "Brightmaps/GMID/CPS2F5.png"
 DisableFullBright
 }
+
+Brightmap Sprite PMAPA0
+{
+Map "Brightmaps/GMID/PMAPA0.png"
+DisableFullBright
+}
+
+Brightmap Sprite PMAPB0
+{
+Map "Brightmaps/GMID/PMAPA0.png"
+DisableFullBright
+}
+
+Brightmap Sprite PMAPC0
+{
+Map "Brightmaps/GMID/PMAPC0.png"
+DisableFullBright
+}
+
+Brightmap Sprite PMAPD0
+{
+Map "Brightmaps/GMID/PMAPA0.png"
+DisableFullBright
+}

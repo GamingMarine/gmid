@@ -11,6 +11,7 @@ Actor GamingMarine : DoomPlayer
 	Player.StartItem "GMIDFist"
 	Player.StartItem "Clip2", 75
 	Player.StartItem "StartingAnimation", 1
+	Player.StartItem "AngleGrinderToken", 1
 	Player.StartItem "DualPistolToken", 1
 	Player.StartItem "GMIDShotgunToken", 1
 	Player.StartItem "FirestickToken", 1
