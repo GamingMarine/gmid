@@ -1,6 +1,11 @@
 #library "cvarstuf"
 #include "zcommon.acs"
 
+script "NoIntroWarning" (void)
+{
+	SetResultValue(GetCvar("nointrowarn"));
+}
+
 script "NoWarmUpAnimation" (void)
 {
     SetResultValue(GetCVar("nowarmupanim"));
