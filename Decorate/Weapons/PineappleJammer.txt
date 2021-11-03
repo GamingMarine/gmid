@@ -1,3 +1,5 @@
+Actor PineappleJammerToken : Inventory {}
+
 ACTOR PineappleJammer : Weapon
 {
 	Inventory.PickupMessage "$GOTPINEAPPLE"
@@ -19,8 +21,28 @@ ACTOR PineappleJammer : Weapon
 	States
 	{
 	Ready:
+		TNT1 A 0 A_JumpIfInventory("PineappleJammerToken",1,"FirstTime")
 		RGLG A 1 A_WeaponReady
 		Loop
+	FirstTime:
+		TNT1 A 0 A_TakeInventory("PineappleJammerToken",9999)
+		TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("PVPCheck",0,0,0,0) == 2,"Ready")
+		TNT1 A 0 A_JumpIf(CallACS("PickupAnimation")==0, "Ready")
+		RGLG A 2 A_WeaponReady
+		TNT1 A 0 A_PlaySound("weapon/fiddle", CHAN_AUTO)
+		PJFS ABCDEEEEE 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		TNT1 A 0 A_PlaySound("weapon/fiddle", CHAN_AUTO)
+		PJFS F 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		PJFS G 0 A_PlaySound("pineapplejammer/fiddle1")
+		PJFS GHI 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		PJFS J 0 A_PlaySound("pineapplejammer/fiddle2", CHAN_AUTO)
+		PJFS JKLI 3 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		PJFS J 0 A_PlaySound("pineapplejammer/fiddle2", CHAN_AUTO)
+		PJFS JKLI 4 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		PJFS J 0 A_PlaySound("pineapplejammer/fiddle2", CHAN_AUTO)
+		PJFS JKLI 5 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		PJFS J 0 A_PlaySound("pineapplejammer/fiddle2", CHAN_AUTO)
+		Goto Ready
 	Select:
 		RGLG A 1 A_Raise
 		RGLG A 0 A_Raise

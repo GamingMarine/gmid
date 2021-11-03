@@ -68,6 +68,8 @@ vgun/fiddle		 VGUNFRS
 missilelauncher/fiddle1	MISLFRS1
 missilelauncher/fiddle2	MISLFRS2
 missilelauncher/fiddle3	MISLFRS3
+pineapplejammer/fiddle1 PJAMFRS1
+pineapplejammer/fiddle2 PJAMFRS2
 $volume weapon/fiddle 0.25
 $random fist/normalthrow { normalfist1 normalfist2 normalfist3 normalfist4 }
 normalfist1		 FISTWH1
