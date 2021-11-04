@@ -19,28 +19,21 @@ Actor GMIDRailgun : PlasmaRifle
 		Fire:
 			RGUN A 0 A_AlertMonsters
 			RGUN A 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
-			RGUN A 0 A_SetPitch(pitch-1)
-			RGUN B 1 BRIGHT A_RailAttack(300, 0, 1, "DarkGreen", "Green")
-			RGUN C 0 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-			RGUN C 1 BRIGHT A_SetPitch(pitch+0.50)
-			RGUN D 1 A_SetPitch(pitch+0.50)
-			RGUN EFGH 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-			RGUN IIIIIIIIIIIIIIIIIIII 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-			RGUN HGFEDJ 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-			RGUN K 1 A_ReFire
-			goto Ready
+			Goto ContinueFire
 		QuadFire:
 		    TNT1 A 0 A_SetBlend("Blue", 0.25, 16)
 			RGUN A 0 A_PlaySound("QuadDamage/Use")
+		ContinueFire:
 			RGUN A 0 A_SetPitch(pitch-1)
-			RGUN B 1 BRIGHT A_RailAttack(300, 0, 1, "DarkGreen", "Green")
-			RGUN C 0 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-			RGUN C 1 BRIGHT A_SetPitch(pitch+0.50)
-			RGUN D 1 A_SetPitch(pitch+0.50)
-			RGUN EFGH 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-			RGUN IIIIIIIIIIIIIIIIIIII 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			RGUN B 0 BRIGHT A_RailAttack(300, 0, 1, "DarkGreen", "Green")
+			RGUN B 1 Bright A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			RGUN C 0 A_SetPitch(pitch+0.50)
+			RGUN C 1 Bright A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			RGUN D 0 A_SetPitch(pitch+0.50)
+			RGUN DEFGH 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			RGUN I 40 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 			RGUN HGFEDJ 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-			RGUN K 1 A_ReFire
+			RGUN K 1 A_WeaponReady
 			goto Ready
 		Ready:
 			RGUN A 1 A_WeaponReady
@@ -61,19 +54,26 @@ Actor GMIDRailgun : PlasmaRifle
 		Spawn2:
 			RGNG B -1
 			Stop
-		AltFire:
+	    AltFire:
 			TNT1 A 0 A_GunFlash("WeaponStill")
-			TNT1 A 0 A_PlaySound ("weapons/KICK")
+			TNT1 A 0 A_PlaySound ("weapons/KICK",CHAN_WEAPON)
 			FOOT AB 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 			FOOT C 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 			FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			FOOT D 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadKick")
+			Goto ContinueKick
+	    QuadKick:
+			TNT1 A 0 A_SetBlend("Blue", 0.25, 16)
+			FOOT D 0 A_PlaySound("QuadDamage/Use",CHAN_7)
+	    ContinueKick:
 			FOOT D 0 A_CustomPunch(5,0,0,"KickPuff")
 			FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-			FOOT D 0 A_Quake(1,2,0,10)
+			FOOT D 0 A_Quake(1,2,0,10,"")
 			FOOT EF 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 			FOOT FEDCBA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 			TNT1 A 8 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 			TNT1 A 0 A_ReFire
+			TNT1 A 0 A_JumpIfInventory("CubeAmmo", 50, "ActuallyReady")
 			Goto Ready
 		WeaponStill:
 			RGUN A 22

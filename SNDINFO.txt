@@ -1670,7 +1670,6 @@ ForceLord/Pain7					MFLHRT7
 ForceLord/Pain8					MFLHRT8
 ForceLord/Pain9					MFLHRT9
 ForceLord/Death					MFLDEATH
-ForceLord/Theme					MFLTHEME
 
 $random DoomLuna/Sight { DoomLuna/Sight1 DoomLuna/Sight2 DoomLuna/Sight3 }
 DoomLuna/Sight1					DLSIT1
@@ -1749,7 +1748,6 @@ ScriptedMarine/Death2			MRNDETH2
 ScriptedMarine/Death3			MRNDETH3
 
 //These are intended for when the Master Force Lord dies, mirroring Shao Khan's death sequence in the N64 version of Mortal Kombat Trilogy.
-$attenuation ForceLord/Theme 0
 $limit SonicXRainbow/death2 0
 $limit OctaLeb/death6 0
 $limit Applesheriff/death2 0

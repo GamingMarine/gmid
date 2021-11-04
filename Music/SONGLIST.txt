@@ -15,7 +15,7 @@ Song name: Infuscomus
 Game of origin: Blood
 Composers: Daniel Bernstein, Guy Whitmore
 
-4. D_E2M8
+4. MFLORD1/MFLORD2
 Song name: The Battle with the Natives
 Game of origin: Revolution X
 Composer: Chris Granner, Vince Pontarelli

@@ -49,7 +49,7 @@ actor Hellhound replaces Demon
 		HOUN R -1
 		Stop
 	Death.Basic:
-		TNT1 A 0 A_Jump(38, "KillTaunt")
+		TNT1 A 0 A_Jump(16, "KillTaunt")
 		HOUN K 6
 		HOUN L 5 A_Scream
 		HOUN M 4
@@ -76,14 +76,9 @@ actor Hellhound replaces Demon
 	  XDeath:
 		TNT1 A 0 A_XScream
 		HOUN S 4 A_NoBlocking
-		TNT1 A 0 A_SpawnDebris("RibGib")
-		TNT1 A 0 A_SpawnDebris("BoneGib")
-		TNT1 A 0 A_SpawnDebris("HipGib")
-		TNT1 A 0 A_SpawnDebris("GutsGib")
-		TNT1 A 0 A_SpawnDebris("LimbGib")
-		TNT1 A 0 A_SpawnDebris("BloodSplurt")
+		HOUN A 0 A_SpawnItem("GMIDGibSpawner_NoSkull")
 		HOUN TUVW 4
-		TNT1 A 0 A_Jump(38, "GibTaunt")
+		TNT1 A 0 A_Jump(16, "GibTaunt")
 		HOUN X -1
 		Stop
 	  GibTaunt:
@@ -184,7 +179,7 @@ actor AdvancedHellhound replaces PainElemental
 		AHOX Q -1
 		Stop
 	Death.Basic:
-		TNT1 A 0 A_Jump(38, "KillTaunt")
+		TNT1 A 0 A_Jump(16, "KillTaunt")
 		AHOX H 5
 		AHOX I 5 A_Scream
 		AHOX J 5 A_NoBlocking

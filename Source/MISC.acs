@@ -52,3 +52,18 @@ script "PowerupFading" ENTER
 		Delay(1);
 	}
 }
+
+//The Master Force Lord has his own theme song when he sees you.
+//These two scripts start playing his theme when the player is sighted and when the Master Force Lord dies respectively.
+Script "MasterForceLordTheme" (void)
+{
+	SetMusic("MFLORD1",0);
+}
+
+Script "MasterForceLordEnding" (void)
+{
+	SetMusic("MFLORD2",0);
+	Delay(35*3);
+	Delay(15);
+	SetMusic("*",0);
+}

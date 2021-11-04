@@ -22,15 +22,13 @@ Actor SpaceCadet : BFG9000
 	Loop
   Fire:
 	PING BC 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-	PING A 0 A_AlertMonsters
-	PING D 0 A_FireCustomMissile("IveGotBigBalls")
-	PING D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-	PING EFGHGFE 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-	PING D 0 A_ReFire("Hold")
-	PING D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-	PING CB 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-	goto Ready
   Hold:
+	PING A 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
+	Goto ContinueFire
+  QuadFire:
+	TNT1 A 0 A_SetBlend("Blue", 0.25, 16)
+	PING A 0 A_PlaySound("QuadDamage/Use")
+  ContinueFire:
 	PING A 0 A_AlertMonsters
 	PING D 0 A_FireCustomMissile("IveGotBigBalls")
 	PING D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
@@ -51,17 +49,24 @@ Actor SpaceCadet : BFG9000
     Stop
   AltFire:
 	TNT1 A 0 A_GunFlash("WeaponStill")
-	TNT1 A 0 A_PlaySound ("weapons/KICK")
+	TNT1 A 0 A_PlaySound ("weapons/KICK",CHAN_WEAPON)
 	FOOT AB 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	FOOT C 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	FOOT D 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadKick")
+	Goto ContinueKick
+  QuadKick:
+	TNT1 A 0 A_SetBlend("Blue", 0.25, 16)
+	FOOT D 0 A_PlaySound("QuadDamage/Use",CHAN_7)
+  ContinueKick:
 	FOOT D 0 A_CustomPunch(5,0,0,"KickPuff")
 	FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-	FOOT D 0 A_Quake(1,2,0,10)
+	FOOT D 0 A_Quake(1,2,0,10,"")
 	FOOT EF 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	FOOT FEDCBA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	TNT1 A 8 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	TNT1 A 0 A_ReFire
+	TNT1 A 0 A_JumpIfInventory("CubeAmmo", 50, "ActuallyReady")
 	Goto Ready
   WeaponStill:
 	PING A 22

@@ -10,6 +10,7 @@ Actor SoulCube : weapon
    Obituary "$OB_CUBE"
    Tag "$TAG_CUBE"
    Weapon.SlotNumber 7
+   +WEAPON.NOALERT
    +WEAPON.NO_AUTO_SWITCH
    +FORCEXYBILLBOARD
    AttackSound "SoulCube/Use" 
@@ -43,12 +44,19 @@ Actor SoulCube : weapon
    Fire:
       SCUB A 0 A_JumpIfInventory ("CubeAmmo", 50, "Fire2")
 	  SCUB A 0 A_PlaySound("SoulCube/NotYet")
-      SCUB A 1 A_Print ("$CUBENOPE")
-	  SCUB AAAA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+      SCUB A 0 A_Print("$CUBENOPE")
+	  SCUB A 5 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
       Goto Ready
-   Fire2: 
-      SCUB J 1 A_FireCustomMissile("SoulCubeProj",0,0,0,0,0)
-	  SCUB JJJJ 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+   Fire2:
+	  SCUB J 0 A_AlertMonsters
+	  SCUB D 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
+	  Goto ContinueFire
+   QuadFire:
+	  TNT1 A 0 A_SetBlend("Blue", 0.25, 16)
+	  SCUB D 0 A_PlaySound("QuadDamage/Use")
+   ContinueFire:
+      SCUB J 0 A_FireCustomMissile("SoulCubeProj",0,0,0,0,0)
+	  SCUB J 5 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	  SCUB J 1 Offset(0,10)
 	  SCUB J 1 Offset(0,20)
 	  SCUB J 1 Offset(0,30)
@@ -62,13 +70,19 @@ Actor SoulCube : weapon
       Goto Ready 
   AltFire:
 	  TNT1 A 0 A_GunFlash("WeaponStill")
-	  TNT1 A 0 A_PlaySound ("weapons/KICK")
+	  TNT1 A 0 A_PlaySound ("weapons/KICK",CHAN_WEAPON)
 	  FOOT AB 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	  FOOT C 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	  FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	  FOOT D 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadKick")
+	  Goto ContinueKick
+  QuadKick:
+	  TNT1 A 0 A_SetBlend("Blue", 0.25, 16)
+	  FOOT D 0 A_PlaySound("QuadDamage/Use",CHAN_7)
+  ContinueKick:
 	  FOOT D 0 A_CustomPunch(5,0,0,"KickPuff")
 	  FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-	  FOOT D 0 A_Quake(1,2,0,10)
+	  FOOT D 0 A_Quake(1,2,0,10,"")
 	  FOOT EF 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	  FOOT FEDCBA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	  TNT1 A 8 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
