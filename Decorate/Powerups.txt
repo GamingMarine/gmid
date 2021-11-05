@@ -322,8 +322,8 @@ Actor MegaSphereEffectD : InvulnerabilitySphereEffectA
 
 ACTOR NewMegasphereHealth : Health
 {
-  Inventory.Amount 200
-  Inventory.MaxAmount 200
+  Inventory.Amount 250
+  Inventory.MaxAmount 250
   +INVENTORY.ALWAYSPICKUP
 }
 

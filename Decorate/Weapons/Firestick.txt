@@ -104,7 +104,6 @@ actor Firestick : Weapon
 	FOOT FEDCBA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	TNT1 A 8 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	TNT1 A 0 A_ReFire
-	TNT1 A 0 A_JumpIfInventory("CubeAmmo", 50, "ActuallyReady")
 	Goto Ready
   WeaponStill:
 	SHGG A 22

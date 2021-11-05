@@ -10,37 +10,22 @@ Song name: Bonus Groove
 Game of origin: Terminator 2 (Arcade)
 Composer: Chris Granner
 
-3. D_E1M8
-Song name: Infuscomus
-Game of origin: Blood
-Composers: Daniel Bernstein, Guy Whitmore
-
-4. MFLORD1/MFLORD2
+3. MFLORD1/MFLORD2
 Song name: The Battle with the Natives
 Game of origin: Revolution X
 Composer: Chris Granner, Vince Pontarelli
 
-5. D_E3M8
+4. D_E3M8
 Song name: Warlord
 Game of origin: Unreal
 Composers: Alexander Brandon, Michiel van den Bos
 
-6. D_OPENIN
-Song name: Pestis Cruento
-Game of origin: Blood
-Composers: Daniel Bernstein, Guy Whitmore, Mike Cody
-
-7. DETHMINE
+5. DETHMINE
 Song name: Death in the Mines
 Game of origin: Waxworks (DOS, Roland MT-32)
 Composer: Jezz Woodroffe
 
-9. D_BUNNY
-Song name: Orb
-Game of origin: Hexen: Beyond Heretic
-Composer: Kevin Schilder
-
-10. D_DOME
+6. D_DOME
 Song name: Pleasure Dome
 Game of origin: Total Carnage (SNES)
 Composers: Jon Hey, Byte Size Sound
