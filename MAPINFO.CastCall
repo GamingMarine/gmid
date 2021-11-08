@@ -62,10 +62,9 @@ Intermission GMIDCast
 	  CastClass = "SawnOffWielderCastCall"
 	  CastName = "$TAG_WIELDER"
       AttackSound = "Missile", 1, "weapons/DSDSHTGN"
-	  AttackSound = "Missile", 3, "weapons/DSDSHTGN"
-	  AttackSound = "Missile", 5, "weapons/ssg1"
-	  AttackSound = "Missile", 7, "weapons/DSDBLOAD"
-	  AttackSound = "Missile", 9, "weapons/sshotc"
+	  AttackSound = "Missile", 3, "weapons/ssg1"
+	  AttackSound = "Missile", 5, "weapons/DSDBLOAD"
+	  AttackSound = "Missile", 7, "weapons/sshotc"
 	}
 	Cast
 	{

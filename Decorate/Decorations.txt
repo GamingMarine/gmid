@@ -334,6 +334,7 @@ Height 1
 Speed 5
 PROJECTILE
 +NOCLIP
++DONTSPLASH
 ReactionTime 4
 Scale 0.25
 States
@@ -911,6 +912,7 @@ actor ScurryRat
   +NEVERRESPAWN
   +STANDSTILL
   +AMBUSH
+  +NOTELEPORT
   states
   {
   Spawn:

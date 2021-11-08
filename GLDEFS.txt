@@ -356,7 +356,7 @@ object DoubleSphere
     frame DDMG { light DOUBLER }
 }
 
-FlickerLight2 ZSecAttack
+FlickerLight2 EnemyPistolAttack
 {
   Color 1.0 0.8 0.2
   Size 48
@@ -365,9 +365,41 @@ FlickerLight2 ZSecAttack
   Offset 0 40 0
 }
 
+Object SonicXRainbow
+{
+  Frame SNXRF { Light EnemyPistolAttack }
+}
+
 Object ZSecGunner
 {
-  Frame ZSC1F { Light ZSecAttack }
+  Frame ZSC1F { Light EnemyPistolAttack }
+}
+
+Object BlasterSoldier
+{
+  Frame POFDF { Light EnemyPistolAttack }
+}
+
+Object EvilMarine_Rifle
+{
+  Frame MARRF { Light EnemyPistolAttack }
+}
+
+Pointlight EnemyShotgunAttack
+{
+Color 1.0 0.6 0.0
+Size 24
+Offset 20 28 0
+}
+
+Object Octaleb
+{
+  Frame OCTLF { Light EnemyShotgunAttack }
+}
+
+Object ZSecArsonist
+{
+  Frame ZSP1F { Light EnemyShotgunAttack }
 }
 
 Pointlight SawedOffShotgunGuyAttack
@@ -378,10 +410,15 @@ Size 32
 
 Object SawedOffShotgunGuy
 {
-Frame ZSDOF { Light SawedOffShotgunGuyAttack }
+  Frame ZSDOF { Light SawedOffShotgunGuyAttack }
 }
 
-FlickerLight2 ChaingunMajorAttack
+Object EvilMarine_Shotgun
+{
+  Frame PLA3F { Light EnemyShotgunAttack }
+}
+
+FlickerLight2 EnemyChaingunAttack
 {
 color 1.0 0.8 0.2
 size 48
@@ -390,9 +427,35 @@ interval 1
 offset 0 40 0
 }
 
+Object AppleSheriff
+{
+  Frame APLSF { Light EnemyChaingunAttack }
+}
+
 Object ChaingunMajor
 {
-Frame CPS2F { Light ChaingunMajorAttack }
+  Frame CPS2F { Light EnemyChaingunAttack }
+}
+
+Object HomelessGunman
+{
+  Frame SWRGG { Light EnemyChaingunAttack }
+  Frame SWRGH { Light EnemyChaingunAttack }
+}
+
+Object EvilMarine_Minigun
+{
+  Frame PLA3F { Light EnemyChaingunAttack }
+}
+
+Object AmyPie
+{
+Frame AMPIF { Light EnemyPistolAttack }
+}
+
+Object Rourity
+{
+Frame ROTYF { Light EnemyPistolAttack }
 }
 
 //Based on Doomguy's Warzone code
@@ -435,6 +498,11 @@ object NewBaronBall
     frame BAL7D { light NewBaronBall_X1 }
     frame BAL7E { light NewBaronBall_X2 }
 	frame BAL7F { light NewBaronBall_X3 }
+}
+
+Object FlutterMedic
+{
+Frame FLMDF { Light EnemyPistolAttack }
 }
 
 pulselight REDKEY
@@ -489,4 +557,114 @@ object NewYellowCard
 object NewYellowSkull
 {
     frame YSKU { light YELLOWKEY }
+}
+
+//===============
+// Glowing Flats
+//===============
+
+Glow
+{
+  Flats
+  {
+   blood1
+   blood2
+   blood3
+   fblod1
+   fblod2
+   fbloda
+   fblodb
+   fblodc
+   fblodd
+   fblode
+   fblod3
+   ceil1_2
+   ceil1_3
+   ceil3_4
+   ceil3_6
+//   F_SKY1
+   flat17
+   flat2
+   floor1_7
+   fwater1
+   fwater2
+   fwater3
+   fwater4
+   waterf1
+   waterf2
+   waterf3
+   waterf5
+   waterfb
+   waterfc
+   waterfd
+   waterf4
+   _tp1
+   _tp2
+   _tp3
+   _tp4
+   _tp5
+   _tp6
+   _tp7
+   _tp8
+   gate4
+   grnlite1
+   lava1
+   lava2
+   lava3
+   lavaa
+   lavab
+   lava4
+   nukage1 "0 255 0"
+   nukage2 "0 255 0"
+   nukage3 "0 255 0"
+   nukage4 "0 255 0"
+   fnukge1
+   fnukge2
+   fnukge3
+   rrock01
+   rrock02
+   rrock05
+   rrock06
+   rrock07
+   rrock08
+   slime01
+   slime02
+   slime03
+   slime04
+   slime09
+   slime10
+   slime11
+   slime12
+   tlite6_1
+   tlite6_4
+   tlite6_5
+   tlite6_6
+   
+// FreeDoom
+   aqf010
+   aqf011
+   aqf012
+   aqf014
+   aqf015
+   aqf035
+   aqf036
+   aqf037
+   aqf038
+   aqf039
+   aqf040
+   aqf041
+   aqf042
+   aqf043
+   aqf044
+   aqf058
+   aqf059
+   aqf060
+   aqf061
+   aqf062
+   aqf063
+   aqf064
+   aqf065
+   aqf066
+   
+  }
 }

@@ -71,11 +71,9 @@ actor EvilMarine_Rifle //Evil! EEEVILLL
   Death2:
 	HDSH A 5
 	HDSH B 0 A_PlaySound("gore/head", CHAN_VOICE)
-	HDSH BB 0 A_SpawnDebris("BoneGib")
-	HDSH BB 0 A_SpawnDebris("LimbGib")
-	HDSH BB 0 A_SpawnDebris("BloodSplurt")
-	HDSH B 10
-	HDSH C 10 A_NoBlocking
+	HDSH B 0 A_NoBlocking
+	HDSH B 0 A_SpawnItem("GMIDHeadshotSpawner")
+	HDSH BC 10
 	HDSH B 0 A_Jump(16, "KillTaunt2")
 	HDSH BCDE 10
 	HDSH F -1

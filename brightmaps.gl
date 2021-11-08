@@ -2918,6 +2918,12 @@ Map "Brightmaps/GMID/ZSP1F4F6.png"
 DisableFullBright
 }
 
+Brightmap Sprite ZSP1F5
+{
+Map "Brightmaps/GMID/ZSP1F5.png"
+DisableFullBright
+}
+
 Brightmap Sprite ZSP1G1
 {
 Map "Brightmaps/GMID/ZSP1G1.png"

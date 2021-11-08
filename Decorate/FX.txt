@@ -26,6 +26,7 @@ Actor GMIDBlood_Fly
   Mass 5
   +CORPSE
   +NOTELEPORT
+  +DONTSPLASH
   +NOBLOCKMAP
   States
   {
@@ -54,6 +55,7 @@ Actor GMIDBlood_Splatter
   Height 2
   Mass 900000
   +NOTELEPORT
+  +DONTSPLASH
   -NOBLOCKMAP
   States
   {
@@ -195,6 +197,18 @@ actor GMIDGibSpawner_NoSkull
 	TNT1 A 0 A_SpawnDebris("GutsGib")
 	TNT1 A 0 A_SpawnDebris("LimbGib")
 	TNT1 A 0 A_SpawnDebris("BloodSplurt")
+	Stop
+  }
+}
+
+Actor GMIDHeadshotSpawner
+{
+  States
+  {
+  Spawn:
+	TNT1 AA 0 A_SpawnDebris("BoneGib")
+	TNT1 AA 0 A_SpawnDebris("LimbGib")
+	TNT1 AA 0 A_SpawnDebris("BloodSplurt")
 	Stop
   }
 }
@@ -703,4 +717,40 @@ ACTOR NewItemFog : ItemFog replaces ItemFog
     IFOG ABABABABABABABABCDEFGHIJ 1 Bright
     Stop
   }
+}
+
+ACTOR MudChunk
+{
+	Radius 2
+	Height 4
+	+NOBLOCKMAP 
+	+MISSILE 
+	+DROPOFF
+	+NOTELEPORT
+	+LOWGRAVITY
+	+CANNOTPUSH
+	+DONTSPLASH
+	States
+	{
+	Spawn:
+		MUDS ABCD 8
+		Stop
+	Death:
+		MUDS D 6
+		Stop
+	}
+}
+
+ACTOR MudSplash
+{
+	+NOBLOCKMAP
+	+NOCLIP
+	+NOGRAVITY
+	+DONTSPLASH
+	States
+	{
+	Spawn:
+		MUDS EFGH 6
+		Stop
+	}
 }
