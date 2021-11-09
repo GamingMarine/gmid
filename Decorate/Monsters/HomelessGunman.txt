@@ -5,7 +5,7 @@ ACTOR HomelessGunman
   Height 56
   Speed 5
   PainChance 170
-  PainChance "Fire", 256
+  PainChance "Foot", 256
   Mass 1000
   Scale 1.25
   Monster
@@ -48,8 +48,14 @@ ACTOR HomelessGunman
   Pain:
     SWRG Q 4 A_Pain
 	Goto See
+  Pain.Foot:
+    SWRG Q 2 A_FaceTarget
+    SWRG A 0 A_ChangeFlag("NOPAIN",1)
+    SWRG A 0 A_Recoil(14)
+    SWRG Q 33 A_Pain
+	SWRG Q 0 A_ChangeFlag("NOPAIN",0)
+    Goto See
   Death:
-	TNT1 A 0 A_Jump(16, "KillTaunt")
     SWRG I 4 A_Scream
     SWRG J 4 A_NoBlocking
     SWRG K 4
@@ -59,16 +65,35 @@ ACTOR HomelessGunman
 	SWRG P 0 A_PlaySound("body/hitfloor")
     SWRG P -1
     Stop
-  KillTaunt:
+  Death.Basic:
     SWRG I 4 A_Scream
     SWRG J 4 A_NoBlocking
     SWRG K 4
 	SWRG L 12
 	SWRG M 4 A_PlaySound("OBCTerrVomit",CHAN_VOICE)
 	SWRG NO 4
-	SERG P 0 A_PlaySound("body/hitfloor")
-	SWRG P 10
+	SWRG P 4 A_PlaySound("body/hitfloor")
+	TNT1 A 0 A_Jump(16, "KillTaunt")
+    SWRG P -1
+    Stop
+  KillTaunt:
   	TNT1 A 0 A_PlaySound("player/killtaunt", CHAN_AUTO)
+    SWRG P -1
+    Stop
+  Death.Foot:
+	SWRG I 0 ThrustThingZ(0,16,0,0)
+    SWRG I 4 A_Scream
+    SWRG J 4 A_NoBlocking
+    SWRG K 4
+	SWRG L 12
+	SWRG M 4 A_PlaySound("OBCTerrVomit",CHAN_VOICE)
+	SWRG NO 4
+	SWRG P 4 A_PlaySound("body/hitfloor")
+	TNT1 A 0 A_Jump(16, "KickTaunt")
+    SWRG P -1
+    Stop
+  KickTaunt:
+  	TNT1 A 0 A_PlaySound("player/kicktaunt", CHAN_AUTO)
     SWRG P -1
     Stop
   XDeath:

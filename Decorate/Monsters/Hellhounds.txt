@@ -16,7 +16,6 @@ actor Hellhound replaces Demon
 	AttackSound "Hellhound/melee"
 	Obituary "$OB_HOUND"
 	DropItem "SmallSoul" 100
-	PainChance "Basic", 180
 	Tag "$TAG_HOUND"
 	States
 	{
@@ -116,7 +115,6 @@ actor AdvancedHellhound replaces PainElemental
 	Obituary "$OB_HOUND2"
 	DropItem "LargeSoul" 25
 	DropItem "SmallSoul" 255
-	PainChance "Basic", 128
 	Tag "$TAG_HOUND2"
 	States
 	{

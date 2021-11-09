@@ -43,6 +43,7 @@ actor VinylStorm replaces Arachnotron
     VSTR A 0 A_ChangeFlag("NOPAIN",1)
     VSTR A 0 A_Recoil(14)
     VSTR G 33 A_Pain
+	VSTR G 0 A_ChangeFlag("NOPAIN",0)
     Goto See
   Missile:
 	VSTR A 20 A_FaceTarget
@@ -239,6 +240,7 @@ actor NewbieHooves replaces Fatso
     NWBH A 0 A_ChangeFlag("NOPAIN",1)
     NWBH A 0 A_Recoil(14)
     NWBH G 33 A_Pain
+	NWBH G 0 A_ChangeFlag("NOPAIN",0)
     Goto See
   Missile:
 	NWBH E 20 A_FaceTarget
@@ -437,6 +439,7 @@ actor TwiMage replaces BaronOfHell
     TWMA A 0 A_ChangeFlag("NOPAIN",1)
     TWMA A 0 A_Recoil(14)
     TWMA G 33 A_Pain
+	TWMA G 0 A_ChangeFlag("NOPAIN",0)
     Goto See
   Missile:
 	TWMA E 10 A_FaceTarget

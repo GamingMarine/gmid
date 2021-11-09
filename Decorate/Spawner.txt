@@ -27,19 +27,19 @@ DropItem "GMIDShotgun"
 Actor NewerSSGSpawner : RandomSpawner
 {
 DropItem "GMIDSuperShotgun"
-DropItem "RevX"
+DropItem "revx"
 }
 
 Actor NewSSGSpawnerWithUpgrades : RandomSpawner
 {
 DropItem "GMIDSuperShotgun"
-DropItem "RevX"
+DropItem "revx"
 DropItem "GMIDSuperShotgun"
-DropItem "RevX"
+DropItem "revx"
 DropItem "GMIDSuperShotgun"
-DropItem "RevX"
+DropItem "revx"
 DropItem "GMIDSuperShotgun"
-DropItem "RevX"
+DropItem "revx"
 DropItem "RevXUpgrade1"
 DropItem "RevXUpgrade2"
 }

@@ -64,7 +64,7 @@ GOTVEST1 = "You are now wearing a light armor vest. \cf(\cj100 armor, 25% protec
 GOTVEST2 = "You are now wearing a strong armor vest. \cf(\cj150 armor, 50% protection\cf)";
 GOTVEST3 = "You are now wearing a heavy armor vest. \cf(\cj200 armor, 75% protection\cf)";
 GOTVEST4 = "You are now protected by the Praetor armor vest! \cf(\cj250 armor, 95% protection\cf)";
-GOTMEGA = "\c[Tan]Megasphere!";
+GOTMEGASPHERE = "\c[Tan]Megasphere!";
 GOT9MM1 = "Picked up a pistol magazine. \cf(\cjAmmo for slot 2\cf)";
 GOT9MM2 = "Picked up a box of pistol rounds. \cf(\cjAmmo for slot 2\cf)";
 GOTBULLET1 = "Picked up a chain of bullets. \cf(\cjAmmo for slot 4\cf)";
@@ -104,7 +104,7 @@ GOTGOGGLES = "Night vision goggles!";
 GOTINVUL = "\c[DarkGreen]Invulnerability!";
 GOTDOUBLE = "\cgDouble Damage!\c-";
 GOTQUAD = "\c[LightBlue]Quad Damage!\c-";
-GOTHASTE = "\cxHasteSphere!";
+GOTHASTE = "\ciHasteSphere!";
 GOTCRYSTAL = "You got the Cookie-Crystal! \c[brick]Cookiedemon\c- is ready... \cf(\cjThis item must be activated to use it\cf)";
 GOTSHAKE = "Drank a Super-Cool(tm) Energy Shake! Refreshing! \cf(\cj+50 health\cf)";
 
@@ -113,7 +113,7 @@ GOGGLESFADE = "Night vision goggles' batteries are draining...";
 INVULFADE = "\c[DarkGreen]Invulnerability\c- is almost burned out...";
 DOUBLEFADE = "\cgDouble Damage\c- is wearing off...";
 QUADFADE = "\c[LightBlue]Quad Damage\c- is wearing off...";
-HASTEFADE = "\cxHasteSphere\c- is running out...";
+HASTEFADE = "\ciHasteSphere\c- is running out...";
 
 TAG_COLA1 = "Caco-Cola";
 TAG_COLA2 = "Caco-Cola Zero";

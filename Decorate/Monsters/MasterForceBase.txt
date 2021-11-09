@@ -29,6 +29,7 @@ actor MasterForceBase
     "####" A 0 A_ChangeFlag("NOPAIN",1)
     "####" A 0 A_Recoil(14)
     "####" G 33 A_Pain
+	"####" G 0 A_ChangeFlag("NOPAIN",0)
     Goto See
   Missile:
 	"####" E 10 A_FaceTarget

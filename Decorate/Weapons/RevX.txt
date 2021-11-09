@@ -1,5 +1,3 @@
-//Not gonna lie, this was probably the hardest weapon I've ever had to code. If YandereDev were to code a Doom weapon in
-//DECORATE, it'd most likely look something like this. 
 actor RevX : Weapon
 {
 	Weapon.BobRangeX 0.3
@@ -60,10 +58,15 @@ actor RevX : Weapon
 		Loop
 	Fire: //Oh boy, here we go.
 		RFL1 C 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
+		RFL1 C 0 A_JumpIfInventory("PowerDoubleDamage", 1, "DoubleFire")
 		Goto ContinueFire
 	QuadFire:
 		TNT1 A 0 A_SetBlend("Blue", 0.25, 16)
 		RFL1 C 0 A_PlaySound("QuadDamage/Use")
+		Goto ContinueFire
+	DoubleFire:
+		TNT1 A 0 A_SetBlend("Red", 0.25, 16)
+		RFL1 C 0 A_PlaySound("DoubleDamage/Use")
 	ContinueFire:
 		RFL1 C 0 A_AlertMonsters
 		RFL1 C 0 A_JumpIfInventory("RevXUpgrade1", 1, "CoolantFire")
@@ -215,11 +218,16 @@ actor RevX : Weapon
 		FOOT C 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 		FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 		FOOT D 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadKick")
+		FOOT D 0 A_JumpIfInventory("PowerDoubleDamage", 1, "DoubleKick")
 		Goto ContinueKick
-	  QuadKick:
+	 QuadKick:
 		TNT1 A 0 A_SetBlend("Blue", 0.25, 16)
 		FOOT D 0 A_PlaySound("QuadDamage/Use",CHAN_7)
-	  ContinueKick:
+		Goto ContinueKick
+	 DoubleKick:
+		TNT1 A 0 A_SetBlend("Red", 0.25, 16)
+		FOOT D 0 A_PlaySound("DoubleDamage/Use",CHAN_7)
+	 ContinueKick:
 		FOOT D 0 A_CustomPunch(5,0,0,"KickPuff")
 		FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 		FOOT D 0 A_Quake(1,2,0,10,"")
@@ -317,6 +325,7 @@ ACTOR RevXProjectile : DoomImpBall
 	Scale 0.75
 	Projectile
 	+RANDOMIZE
+	+BLOODSPLATTER
 	SeeSound "RevX/Fire"
 	DeathSound ""
 	Decal "BulletChip"

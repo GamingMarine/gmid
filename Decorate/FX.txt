@@ -16,6 +16,8 @@ Actor GMIDBlood : Blood replaces Blood
   }
 }
 
+Actor GMIDBloodSplatter : GMIDBlood replaces BloodSplatter {} //You Hexen guys had no idea what you were doing, did you?
+
 Actor GMIDBlood_Fly
 {
   Game Doom

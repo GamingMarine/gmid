@@ -260,7 +260,7 @@ ACTOR EnergySphere : CustomInventory Replaces Megasphere
 	+INVENTORY.ALWAYSPICKUP
 	+FORCEXYBILLBOARD
 	Tag "$TAG_MEGA"
-	Inventory.PickupMessage "$GOTMEGA"
+	Inventory.PickupMessage "$GOTMEGASPHERE"
 	Inventory.PickupSound "megaget"
 	Scale 0.82
 	Alpha 0.99

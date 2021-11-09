@@ -19,10 +19,15 @@ Actor GMIDRailgun : PlasmaRifle
 		Fire:
 			RGUN A 0 A_AlertMonsters
 			RGUN A 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
+			RGUN A 0 A_JumpIfInventory("PowerDoubleDamage", 1, "DoubleFire")
 			Goto ContinueFire
 		QuadFire:
 		    TNT1 A 0 A_SetBlend("Blue", 0.25, 16)
 			RGUN A 0 A_PlaySound("QuadDamage/Use")
+			Goto ContinueFire
+		DoubleFire:
+		    TNT1 A 0 A_SetBlend("Red", 0.25, 16)
+			RGUN A 0 A_PlaySound("DoubleDamage/Use")
 		ContinueFire:
 			RGUN A 0 A_SetPitch(pitch-1)
 			RGUN B 0 BRIGHT A_RailAttack(300, 0, 1, "DarkGreen", "Green")
@@ -61,11 +66,16 @@ Actor GMIDRailgun : PlasmaRifle
 			FOOT C 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 			FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 			FOOT D 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadKick")
+			FOOT D 0 A_JumpIfInventory("PowerDoubleDamage", 1, "DoubleKick")
 			Goto ContinueKick
-	    QuadKick:
+		QuadKick:
 			TNT1 A 0 A_SetBlend("Blue", 0.25, 16)
 			FOOT D 0 A_PlaySound("QuadDamage/Use",CHAN_7)
-	    ContinueKick:
+			Goto ContinueKick
+		DoubleKick:
+			TNT1 A 0 A_SetBlend("Red", 0.25, 16)
+			FOOT D 0 A_PlaySound("DoubleDamage/Use",CHAN_7)
+		ContinueKick:
 			FOOT D 0 A_CustomPunch(5,0,0,"KickPuff")
 			FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 			FOOT D 0 A_Quake(1,2,0,10,"")

@@ -32,10 +32,15 @@ Actor GMIDPistol : Pistol Replaces Pistol
 	PISG A 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	PISG A 0 A_AlertMonsters
 	PISG B 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
+	PISG B 0 A_JumpIfInventory("PowerDoubleDamage", 1, "DoubleFire")
 	Goto ContinueFire
 	QuadFire:
 	TNT1 A 0 A_SetBlend("Blue", 0.25, 16)
 	PISG B 0 A_PlaySound("QuadDamage/Use")
+	Goto ContinueFire
+	DoubleFire:
+	TNT1 A 0 A_SetBlend("Red", 0.25, 16)
+	PISG B 0 A_PlaySound("DoubleDamage/Use")
 	ContinueFire:
 	PISG B 0 A_PlaySound("weapons/GMPISTL1", CHAN_WEAPON)
 	PISG B 0 A_SetPitch(pitch-0.15)
@@ -85,10 +90,15 @@ Actor GMIDPistol : Pistol Replaces Pistol
 	FOOT C 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	FOOT D 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadKick")
+	FOOT D 0 A_JumpIfInventory("PowerDoubleDamage", 1, "DoubleKick")
 	Goto ContinueKick
   QuadKick:
 	TNT1 A 0 A_SetBlend("Blue", 0.25, 16)
 	FOOT D 0 A_PlaySound("QuadDamage/Use",CHAN_7)
+	Goto ContinueKick
+  DoubleKick:
+	TNT1 A 0 A_SetBlend("Red", 0.25, 16)
+	FOOT D 0 A_PlaySound("DoubleDamage/Use",CHAN_7)
   ContinueKick:
 	FOOT D 0 A_CustomPunch(5,0,0,"KickPuff")
 	FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
@@ -152,10 +162,15 @@ Actor GMIDDualPistol : GMIDPistol
 	PIS2 A 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	PIS2 A 0 A_AlertMonsters
 	PIS2 B 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
+	PIS2 B 0 A_JumpIfInventory("PowerDoubleDamage", 1, "DoubleFire")
 	Goto ContinueFire
 	QuadFire:
 	TNT1 A 0 A_SetBlend("Blue", 0.25, 16)
-	PIS2 D 0 A_PlaySound("QuadDamage/Use")
+	PIS2 B 0 A_PlaySound("QuadDamage/Use")
+	Goto ContinueFire
+	DoubleFire:
+	TNT1 A 0 A_SetBlend("Red", 0.25, 16)
+	PIS2 B 0 A_PlaySound("DoubleDamage/Use")
 	ContinueFire:
 	PIS2 B 0 A_SetPitch(pitch-0.3)
 	PIS2 B 0 A_PlaySound("weapons/GMPISTL2", CHAN_WEAPON)
@@ -179,10 +194,15 @@ Actor GMIDDualPistol : GMIDPistol
 	FOOT C 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	FOOT D 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadKick")
+	FOOT D 0 A_JumpIfInventory("PowerDoubleDamage", 1, "DoubleKick")
 	Goto ContinueKick
   QuadKick:
 	TNT1 A 0 A_SetBlend("Blue", 0.25, 16)
 	FOOT D 0 A_PlaySound("QuadDamage/Use",CHAN_7)
+	Goto ContinueKick
+  DoubleKick:
+	TNT1 A 0 A_SetBlend("Red", 0.25, 16)
+	FOOT D 0 A_PlaySound("DoubleDamage/Use",CHAN_7)
   ContinueKick:
 	FOOT D 0 A_CustomPunch(5,0,0,"KickPuff")
 	FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)

@@ -233,6 +233,7 @@ misc/ar2_pkup 		AMRSHRD
 backpack/get BPACKUP
 FKITUSE		cokeuse
 DoubleDamage/Pickup			DDMG
+DoubleDamage/use			DDMGFIRE
 DoubleDamage/Fade			DDMGEND
 QuadDamage/Pickup			QUADDMUP
 QuadDamage/Use				QUADDMFR
@@ -497,7 +498,6 @@ cookie/lastwords1			CLASTW1
 cookie/lastwords2			CLASTW2
 $random cookie/lastwords { cookie/lastwords1 cookie/lastwords2 }
 
-misc/startupdone 	STARTUP
 menu/activate			newmenu	// Activate a new menu
 menu/backup			menuback	// Backup to previous menu
 menu/cursor			menulft		// Move cursor up/down

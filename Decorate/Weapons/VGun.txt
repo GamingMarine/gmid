@@ -27,10 +27,15 @@ Actor VGun : Chaingun
 		Fire: 
 		CHGG A 0 A_AlertMonsters
 		CHGG A 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
+		CHGG A 0 A_JumpIfInventory("PowerDoubleDamage", 1, "DoubleFire")
 		Goto ContinueFire
 		QuadFire:
 		TNT1 A 0 A_SetBlend("Blue", 0.25, 16)
 		CHGG A 0 A_PlaySound("QuadDamage/Use")
+		Goto ContinueFire
+		DoubleFire:
+		TNT1 A 0 A_SetBlend("Red", 0.25, 16)
+		CHGG A 0 A_PlaySound("DoubleDamage/Use")
 		ContinueFire:
 		CHGG C 0 A_Light1 
 		CHGG C 0 A_PlaySound("weapons/UZIFIRE", CHAN_WEAPON)
@@ -80,10 +85,15 @@ Actor VGun : Chaingun
 	FOOT C 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	FOOT D 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadKick")
+	FOOT D 0 A_JumpIfInventory("PowerDoubleDamage", 1, "DoubleKick")
 	Goto ContinueKick
   QuadKick:
 	TNT1 A 0 A_SetBlend("Blue", 0.25, 16)
 	FOOT D 0 A_PlaySound("QuadDamage/Use",CHAN_7)
+	Goto ContinueKick
+  DoubleKick:
+	TNT1 A 0 A_SetBlend("Red", 0.25, 16)
+	FOOT D 0 A_PlaySound("DoubleDamage/Use",CHAN_7)
   ContinueKick:
 	FOOT D 0 A_CustomPunch(5,0,0,"KickPuff")
 	FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)

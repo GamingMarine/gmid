@@ -637,37 +637,12 @@ Actor NewShellBox2 : NewShells2
 	}
 }
 
-actor FistPuff
-{
-  +NOBLOCKMAP
-  +NOGRAVITY
-  +PUFFONACTORS
-  activesound ""
-  attacksound "Fist/Hit"
-  seesound "Fist/Hit"
-  DamageType "Fist"
-  states
-  {
-  Spawn:
-    TNT1 A 0
-    TNT1 A 1
-    stop
-  Crash:
-     TNT1 A 0
-     TNT1 A 1
-     stop
-  Melee:
-     TNT1 A 0
-     TNT1 A 1
-     stop
-  }
-}
-
 actor KickPuff
 {
   +NOBLOCKMAP
   +NOGRAVITY
   +PUFFONACTORS
+  +BLOODLESSIMPACT
   activesound ""
   attacksound "FOOT/WALL"
   seesound "FOOT/HIT"
