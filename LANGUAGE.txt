@@ -91,7 +91,7 @@ GOTVGUN = "You got the V-Gun! \cf(\cjSlot 4\cf)";
 GOTREVX = "You got the \"Rev-X\" Battery-Charged Rifle! The Revolution has begun! \cf(\cjSlot 4\cf)";
 GOTUPGRADE1 = "You got the \"Rev-X\" Rapid Fire Coolant!\n\c[white](Rev-X has been upgraded! Battery recharge increased!)";
 GOTUPGRADE2 = "You got the \"Rev-X\" Plasma Pulse Energiser!\n\c[white](Rev-X has been upgraded! Attack damage increased!)";
-GOTLAUNCHER = "You got the Missile Launcher! \cf(\cjSlot 5\cf)";
+GOTMLAUNCHER = "You got the Missile Launcher! \cf(\cjSlot 5\cf)";
 GOTPINEAPPLE = "You got the \"Pineapple Jammer\" Grenade Launcher! \cf(\cjSlot 5\cf)";
 GOTRAIL = "You got the Railgun! \cf(\cjSlot 6\cf)";
 GOTEXCESS = "You got the \"Excessive Force\" Plasma Cannon! \cf(\cjSlot 6\cf)";
@@ -770,7 +770,7 @@ STEP_FLATS = "FWATER1:FWATER2:FWATER3:FWATER4:"
 			"SLIME03:SLIME04:SLIME05:SLIME06:"
 			"SLIME07:SLIME08:SFLR6_1:SFLR6_4:"
 			"SFLR7_1:SFLR7_4:LAVA1:LAVA2:"
-			"LAVA3:LAVA4:F_SKY1";
+			"LAVA3:LAVA4:F_SKY1:GRASS:ROCKS";
 
 // Sounds
 STEP_DEFAULT = "step/default";
@@ -954,3 +954,7 @@ STEP_LAVA4 = "step/lava";
 
 // None
 STEP_F_SKY1 = "";
+
+// Console Port Flats
+STEP_GRASS = "step/carpet";
+STEP_ROCKS = "step/rock";

@@ -1,3 +1,5 @@
+//Not gonna lie, this was probably the hardest weapon I've ever had to code. If YandereDev were to code a Doom weapon in
+//DECORATE, it'd most likely look something like this. 
 actor RevX : Weapon
 {
 	Weapon.BobRangeX 0.3

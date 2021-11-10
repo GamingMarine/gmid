@@ -94,6 +94,17 @@ Actor Q2SoldierProjectile
 ACTOR NewFatShot : FatShot replaces FatShot
 {
 	DamageType "Fire"
+	Scale 0.75
+	RenderStyle Normal
+	States
+	{
+	Spawn:
+		FBAL ABCB 2 Bright
+		Loop
+	Death:
+		FBAL DEFGH 2 Bright
+		Stop
+	}
 }
 
 ACTOR NONPuff : XaserPuff
