@@ -196,6 +196,8 @@ actor MasterForceBase
 	Goto Fall
   Fall:
 	"####" OPQRS 5
+	"####" T 0 A_PlaySound("body/hitfloor")
+	"####" T 5
 	"####" U -1
 	Stop
    }
