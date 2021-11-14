@@ -179,10 +179,10 @@ actor VinylStorm replaces Arachnotron
 	BBQ8 A 0 A_SpawnItem("ToastyGuy")
 	Goto Fall
   Fall:
-	VSTR HIJKL 5
-	VSTR M 0 A_PlaySound("body/hitfloor")
-	VSTR M 5
-	VSTR N -1 A_BossDeath
+	VSTR OPQRS 5
+	VSTR T 0 A_PlaySound("body/hitfloor")
+	VSTR T 5
+	VSTR U -1 A_BossDeath
 	Stop
   XDeath:
 	TNT1 A 0 A_XScream
@@ -379,10 +379,10 @@ actor NewbieHooves replaces Fatso
 	BBQ5 A 0 A_SpawnItem("ToastyGuy")
 	Goto Fall
   Fall:
-	NWBH HIJKL 5
-	NWBH M 0 A_PlaySound("body/hitfloor")
-	NWBH M 5
-	NWBH N -1 A_BossDeath
+	NWBH OPQRS 5
+	NWBH T 0 A_PlaySound("body/hitfloor")
+	NWBH T 5
+	NWBH U -1 A_BossDeath
 	Stop
   XDeath:
 	TNT1 A 0 A_XScream
@@ -574,10 +574,10 @@ actor TwiMage replaces BaronOfHell
 	BBQ7 A 0 A_SpawnItem("ToastyGuy")
 	Goto Fall
   Fall:
-	TWMA HIJKL 5
-	TWMA M 0 A_PlaySound("body/hitfloor")
-	TWMA M 5
-	TWMA N -1 A_BossDeath
+	TWMA OPQRS 5
+	TWMA T 0 A_PlaySound("body/hitfloor")
+	TWMA T 5
+	TWMA U -1 A_BossDeath
 	Stop
   XDeath:
 	TNT1 A 0 A_XScream

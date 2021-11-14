@@ -136,10 +136,10 @@ actor Rourity : MasterForceBase replaces Cacodemon
 	BBQ6 A 0 A_SpawnItem("ToastyGuy")
 	Goto Fall
   Fall:
-	ROTY HIJKL 5
-	ROTY M 0 A_PlaySound("body/hitfloor")
-	ROTY M 5
-	ROTY N -1
+	ROTY OPQRS 5
+	ROTY T 0 A_PlaySound("body/hitfloor")
+	ROTY T 5
+	ROTY U -1
 	Stop
    }
 }
@@ -265,10 +265,10 @@ actor TrixieKir : MasterForceBase replaces HellKnight
 	BBQ9 A 0 A_SpawnItem("ToastyGuy")
 	Goto Fall
   Fall:
-	TRKI HIJKL 5
-	TRKI M 0 A_PlaySound("body/hitfloor")
-	TRKI M 5
-	TRKI N -1
+	TRKI OPQRS 5
+	TRKI T 0 A_PlaySound("body/hitfloor")
+	TRKI T 5
+	TRKI U -1
 	Stop
    }
 }
@@ -446,10 +446,10 @@ actor FlutterMedic : MasterForceBase replaces Archvile
 	BBQ4 A 0 A_SpawnItem("ToastyGuy")
 	Goto Fall
   Fall:
-	FLMD HIJKL 5
-	FLMD M 0 A_PlaySound("body/hitfloor")
-	FLMD M 5
-	FLMD N -1
+	FLMD OPQRS 5
+	FLMD T 0 A_PlaySound("body/hitfloor")
+	FLMD T 5
+	FLMD U -1
 	Stop
    }
 }
