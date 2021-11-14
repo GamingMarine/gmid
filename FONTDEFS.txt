@@ -12,3 +12,8 @@ DIGFONT
 		8 DIGNUM8
 		9 DIGNUM9
 }
+
+BigFont
+{
+  Template REVOX%03d
+}
