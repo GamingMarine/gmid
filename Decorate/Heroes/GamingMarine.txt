@@ -36,13 +36,10 @@ Actor GamingMarine : DoomPlayer
 	{
 	Spawn:
 		GMRN Z -1
-		goto Spawn
+		Loop
 	See:
-		GMRN A 6
-		GMRN B 6
-		GMRN C 6
-		GMRN D 6
-		Goto Spawn
+		GMRN ABCD 6
+		Loop
 	Missile:
 		GMRN E 12
 		Goto Spawn
