@@ -6,6 +6,11 @@ script "NoIntroWarning" (void)
 	SetResultValue(GetCvar("nointrowarn"));
 }
 
+script "NoStrafeTilting" (void)
+{
+	SetResultValue(GetCvar("nostrafetilt"));
+}
+
 script "NoWarmUpAnimation" (void)
 {
     SetResultValue(GetCVar("nowarmupanim"));

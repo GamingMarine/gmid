@@ -21,8 +21,8 @@
 // in your mods.
 // Nash
 
-#include "zcommon.acs"
 #library "qtilt"
+#include "zcommon.acs"
 
 //===========================================================================
 //
@@ -90,7 +90,11 @@ Script "Script_StrafeTilt" ENTER
 {
 	while(1)
 	{
-		if (dostrafetilt)
+		if (GetCvar("nostrafetilt")==1)
+		{
+			Terminate;
+		}
+		else if (dostrafetilt)
 		{
 			int strafemod;
 			int strafe;
