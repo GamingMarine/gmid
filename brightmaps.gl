@@ -61,6 +61,121 @@ Brightmap Sprite RGUNK0
 Map "Brightmaps/GMID/RGUNA0.png"
 }
 
+Brightmap Sprite RGFSA0
+{
+Map "Brightmaps/GMID/RGUNA0.png"
+}
+
+Brightmap Sprite RGFSB0
+{
+Map "Brightmaps/GMID/RGFSB0.png"
+}
+
+Brightmap Sprite RGFSC0
+{
+Map "Brightmaps/GMID/RGFSC0.png"
+}
+
+Brightmap Sprite RGFSD0
+{
+Map "Brightmaps/GMID/RGFSD0.png"
+}
+
+Brightmap Sprite RGFSE0
+{
+Map "Brightmaps/GMID/RGFSE0.png"
+}
+
+Brightmap Sprite RGFSF0
+{
+Map "Brightmaps/GMID/RGFSE0.png"
+}
+
+Brightmap Sprite RGFSG0
+{
+Map "Brightmaps/GMID/RGFSE0.png"
+}
+
+Brightmap Sprite RGFSH0
+{
+Map "Brightmaps/GMID/RGFSH0.png"
+}
+
+Brightmap Sprite RGFSI0
+{
+Map "Brightmaps/GMID/RGFSI0.png"
+}
+
+Brightmap Sprite RGFSJ0
+{
+Map "Brightmaps/GMID/RGFSJ0.png"
+}
+
+Brightmap Sprite RGFSK0
+{
+Map "Brightmaps/GMID/RGFSK0.png"
+}
+
+Brightmap Sprite RGFSL0
+{
+Map "Brightmaps/GMID/RGFSL0.png"
+}
+
+Brightmap Sprite RGFSM0
+{
+Map "Brightmaps/GMID/RGFSM0.png"
+}
+
+Brightmap Sprite RGFSN0
+{
+Map "Brightmaps/GMID/RGFSN0.png"
+}
+
+Brightmap Sprite RGFSR0
+{
+Map "Brightmaps/GMID/RGFSR0.png"
+}
+
+Brightmap Sprite RGFSR0
+{
+Map "Brightmaps/GMID/RGFSR0.png"
+}
+
+Brightmap Sprite RGFSS0
+{
+Map "Brightmaps/GMID/RGFSR0.png"
+}
+
+Brightmap Sprite RGFST0
+{
+Map "Brightmaps/GMID/RGFSR0.png"
+}
+
+Brightmap Sprite RGFSU0
+{
+Map "Brightmaps/GMID/RGFSR0.png"
+}
+
+Brightmap Sprite RGFSV0
+{
+Map "Brightmaps/GMID/RGFSR0.png"
+}
+
+Brightmap Sprite RGFSW0
+{
+Map "Brightmaps/GMID/RGFSW0.png"
+}
+
+Brightmap Sprite RGFSX0
+{
+Map "Brightmaps/GMID/RGFSX0.png"
+}
+
+Brightmap Sprite RGFSY0
+{
+Map "Brightmaps/GMID/RGUNA0.png"
+}
+
 Brightmap Sprite SHTGA0
 {
 Map "Brightmaps/GMID/SHTGA0.png"

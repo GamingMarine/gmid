@@ -65,6 +65,7 @@ actor EvilMarine_Rifle //Evil! EEEVILLL
 	MARR E 6
 	Goto See
   Death:
+	PLA1 G 0 A_GiveToTarget("ScoreItem",250)
 	PLA1 G 0 A_Jump(256, "Death1", "Death2", "Death3")
   Death1:
 	PLA1 H 5
@@ -88,6 +89,7 @@ actor EvilMarine_Rifle //Evil! EEEVILLL
 	PLA3 L -1
 	Stop
   Death.Basic:
+	PLA1 G 0 A_GiveToTarget("ScoreItem",250)
 	PLA1 G 0 A_Jump(256, "Death.Basic1", "Death.Basic2", "Death.Basic3")
   Death.Basic1:
 	PLA1 H 5
@@ -130,6 +132,7 @@ actor EvilMarine_Rifle //Evil! EEEVILLL
 	PLA3 L -1
 	Stop
   Death.Foot:
+	PLA1 G 0 A_GiveToTarget("ScoreItem",250)
 	PLA1 G 0 A_Jump(256, "Death.Foot1", "Death.Foot2")
   Death.Foot1:
 	PLA1 H 5 ThrustThingZ(0,16,0,0)
@@ -161,6 +164,7 @@ actor EvilMarine_Rifle //Evil! EEEVILLL
 	PLA1 MLKJIH 5
 	Goto See
   XDeath:
+	TNT1 A 0 A_GiveToTarget("ScoreItem",250)
 	TNT1 A 0 A_XScream
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_SpawnItem("GMIDGibSpawner")
@@ -171,6 +175,7 @@ actor EvilMarine_Rifle //Evil! EEEVILLL
 	TNT1 A 0 A_PlaySound("player/gibtaunt", CHAN_AUTO)
 	Stop
   Death.Fire:
+	ZSC1 G 0 A_GiveToTarget("ScoreItem",250)
 	ZSC1 G 0 A_NoBlocking
 	ZSC1 G 0 A_SpawnItem("BurningMarine")
 	TNT1 A -1

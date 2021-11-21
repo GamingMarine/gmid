@@ -39,7 +39,37 @@ actor Rourity : MasterForceBase replaces Cacodemon
 	ROTY F 4 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
 	ROTY E 8
 	Goto See
+  Death:
+	ROTY A 0 A_GiveToTarget("ScoreItem",2000)
+	ROTY H 5
+	ROTY I 5 A_Scream
+	ROTY J 5 A_NoBlocking
+	ROTY KL 5
+	ROTY M 0 A_PlaySound("body/hitfloor")
+	ROTY M 5
+	ROTY N -1
+	Stop
+  Death.Basic:
+	ROTY A 0 A_GiveToTarget("ScoreItem",2000)
+	ROTY H 5
+	ROTY I 5 A_Scream
+	ROTY A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
+	Goto ContinueDeath
+  Death.Foot:
+	ROTY A 0 A_GiveToTarget("ScoreItem",2000)
+	ROTY H 5 ThrustThingZ(0,16,0,0)
+	ROTY I 5 A_Scream
+	ROTY A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo2", AAPTR_PLAYER1)
+	Goto ContinueDeath2
+  XDeath:
+	ROTY A 0 A_GiveToTarget("ScoreItem",2000)
+	ROTY A 0 A_XScream
+	ROTY A 0 A_NoBlocking
+	ROTY AA 0 A_SpawnItem("GMIDGibSpawner")
+	ROTY A 0 A_Jump(16, "GibTaunt")
+	Stop
   Death.Fire:
+	ROTY A 0 A_GiveToTarget("ScoreItem",2000)
 	BBQ6 A 0 A_NoBlocking
 	BBQ6 A 0 A_PlaySound("female/burn", CHAN_VOICE)
 	BBQ6 AAA 1 Bright A_Wander
@@ -168,7 +198,37 @@ actor TrixieKir : MasterForceBase replaces HellKnight
 	TRKI F 8 Bright A_CustomMissile("NewBaronBall", 32, 10)
 	TRKI E 8
 	Goto See
+  Death:
+	TRKI A 0 A_GiveToTarget("ScoreItem",2500)
+	TRKI H 5
+	TRKI I 5 A_Scream
+	TRKI J 5 A_NoBlocking
+	TRKI KL 5
+	TRKI M 0 A_PlaySound("body/hitfloor")
+	TRKI M 5
+	TRKI N -1
+	Stop
+  Death.Basic:
+	TRKI A 0 A_GiveToTarget("ScoreItem",2500)
+	TRKI H 5
+	TRKI I 5 A_Scream
+	TRKI A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
+	Goto ContinueDeath
+  Death.Foot:
+	TRKI A 0 A_GiveToTarget("ScoreItem",2500)
+	TRKI H 5 ThrustThingZ(0,16,0,0)
+	TRKI I 5 A_Scream
+	TRKI A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo2", AAPTR_PLAYER1)
+	Goto ContinueDeath2
+  XDeath:
+	TRKI A 0 A_GiveToTarget("ScoreItem",2500)
+	TRKI A 0 A_XScream
+	TRKI A 0 A_NoBlocking
+	TRKI AA 0 A_SpawnItem("GMIDGibSpawner")
+	TRKI A 0 A_Jump(16, "GibTaunt")
+	Stop
   Death.Fire:
+	TRKI A 0 A_GiveToTarget("ScoreItem",2500)
 	BBQ9 A 0 A_NoBlocking
 	BBQ9 A 0 A_PlaySound("female/burn", CHAN_VOICE)
 	BBQ9 AAA 1 Bright A_Wander
@@ -349,7 +409,37 @@ actor FlutterMedic : MasterForceBase replaces Archvile
   Heal:
 	FLMD E 30
 	Goto See
+  Death:
+	FLMD A 0 A_GiveToTarget("ScoreItem",3500)
+	FLMD H 5
+	FLMD I 5 A_Scream
+	FLMD J 5 A_NoBlocking
+	FLMD KL 5
+	FLMD M 0 A_PlaySound("body/hitfloor")
+	FLMD M 5
+	FLMD N -1
+	Stop
+  Death.Basic:
+	FLMD A 0 A_GiveToTarget("ScoreItem",3500)
+	FLMD H 5
+	FLMD I 5 A_Scream
+	FLMD A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
+	Goto ContinueDeath
+  Death.Foot:
+	FLMD A 0 A_GiveToTarget("ScoreItem",3500)
+	FLMD H 5 ThrustThingZ(0,16,0,0)
+	FLMD I 5 A_Scream
+	FLMD A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo2", AAPTR_PLAYER1)
+	Goto ContinueDeath2
+  XDeath:
+	FLMD A 0 A_GiveToTarget("ScoreItem",3500)
+	FLMD A 0 A_XScream
+	FLMD A 0 A_NoBlocking
+	FLMD AA 0 A_SpawnItem("GMIDGibSpawner")
+	FLMD A 0 A_Jump(16, "GibTaunt")
+	Stop
   Death.Fire:
+	FLMD A 0 A_GiveToTarget("ScoreItem",3500)
 	BBQ4 A 0 A_NoBlocking
 	BBQ4 A 0 A_PlaySound("female/burn", CHAN_VOICE)
 	BBQ4 AAA 1 Bright A_Wander

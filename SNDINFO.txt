@@ -70,6 +70,9 @@ missilelauncher/fiddle2	MISLFRS2
 missilelauncher/fiddle3	MISLFRS3
 pineapplejammer/fiddle1 PJAMFRS1
 pineapplejammer/fiddle2 PJAMFRS2
+railgun/fiddle1			RAILFRS1
+railgun/fiddle2			RAILFRS2
+railgun/fiddle3			RAILFRS3
 $volume weapon/fiddle 0.25
 $random fist/normalthrow { normalfist1 normalfist2 normalfist3 normalfist4 }
 normalfist1		 FISTWH1
@@ -511,6 +514,7 @@ menu/choose			menusel	// Choose a menu item
 menu/clear			menuback	// Close top menu
 secret/found1		SECRET1
 secret/found2		SECRET2
+secret/allfound		ALLSECRT
 $random misc/secret { secret/found1 secret/found2 }
 misc/quit1			QUITSND1
 misc/quit2			QUITSND2

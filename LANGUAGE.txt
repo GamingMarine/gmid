@@ -38,7 +38,13 @@ DOSY = "(Do you want to quit? Press Y or N to confirm)";
 TXT_FRAGLIMIT = "Frag limit's up! Let's see the results!";
 TXT_TIMELIMIT = "Time limit's up! Let's see the results!";
 
-SECRETMESSAGE = "A secret area has been discovered!";
+SECRETMESSAGE = "";
+SECRETAREA = "A secret area has been discovered!";
+SECRETREMAIN = " secret areas remain..."; //Keep that space at the start of the string in order for the message to work properly
+SECRETSINGLE = "1 secret area remains...";
+SECRETALL = "All secret areas found! Good hunting!";
+SECRETBONUS = "+10,000pt bonus!";
+
 
 STSTR_CLEV = "Level is being changed...\n";
 

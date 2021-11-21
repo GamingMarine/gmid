@@ -67,3 +67,41 @@ Script "MasterForceLordEnding" (void)
 	Delay(15);
 	SetMusic("*",0);
 }
+
+//This script tells the player how many secret areas a left in the level, and rewards with 10,000 points when all are found.
+//Loosely based on Samsara by TerminusEst13 and Kinsie
+Script "SecretBonus" ENTER
+{
+	int stotal;
+	int sfound2;
+	int sfound;
+
+	stotal = GetLevelInfo(LEVELINFO_TOTAL_SECRETS);
+	sfound2 = sfound;
+	sfound = GetLevelInfo(LEVELINFO_FOUND_SECRETS);
+	
+	if (sfound > sfound2)
+	{
+		if (sfound == stotal) //If the player has found all secrets, give the player 10,000 points
+		{
+			PrintBold(l:"SECRETALL");
+			GiveInventory("ScoreItem",10000);
+			Delay(35*3);
+			PlaySound(0,"secret/allfound",0);
+			PrintBold(l:"SECRETBONUS");
+		}
+		Else
+		{
+			Print(l:"SECRETAREA");
+			Delay(35*3);
+			if (stotal-sfound > 1) //Print plural message if 2 or more secrets are left
+			{
+				Print(d:stotal-sfound,l:"SECRETREMAIN");
+			}
+			Else
+			Print(l:"SECRETSINGLE");
+		}
+	}
+	Delay(1);
+	Restart;
+}

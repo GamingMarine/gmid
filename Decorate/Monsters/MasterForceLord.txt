@@ -58,6 +58,7 @@ ACTOR MasterForceLord replaces Cyberdemon
 	MNTR E 10 A_Pain
 	Goto TrueSee
   Death:
+	MNTR E 0 A_GiveToTarget("ScoreItem",20000)
 	MNTR E 0 A_Quake(3,312,0,5000,"")
 	MNTR E 0 A_Scream
 	MNTR EEEE 35

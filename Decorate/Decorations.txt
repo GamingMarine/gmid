@@ -84,6 +84,7 @@ actor Corp01
   Spawn:
 	TNT1 A 0
 	TNT1 A 0 A_PlaySoundEX("SFX/Buzz","Body",1)
+	TNT1 A 0 A_PlaySoundEX("radio/chat",CHAN_AUTO,1)
 	CORA AAAAA 0 A_SpawnItemEx("SwarmFly2",frandom(-16,16),frandom(-16,16),frandom(-16,16))
 	CORA A -1 
 	Stop
@@ -99,6 +100,7 @@ actor Corp02
   Spawn:
 	TNT1 A 0
 	TNT1 A 0 A_PlaySoundEX("SFX/Buzz","Body",1)
+	TNT1 A 0 A_PlaySoundEX("radio/chat",CHAN_AUTO,1)
 	CORB AAAAA 0 A_SpawnItemEx("SwarmFly2",frandom(-16,16),frandom(-16,16),frandom(-16,16))
 	CORB A -1 
 	Stop
@@ -129,6 +131,7 @@ actor Corp04
   Spawn:
 	TNT1 A 0
 	TNT1 A 0 A_PlaySoundEX("SFX/Buzz","Body",1)
+	TNT1 A 0 A_PlaySoundEX("radio/chat",CHAN_AUTO,1)
 	CORD AAAAA 0 A_SpawnItemEx("SwarmFly2",frandom(-16,16),frandom(-16,16),frandom(-16,16))
 	CORD A -1 
 	Stop
@@ -175,6 +178,7 @@ ACTOR MarineVictim //Hmm. That's one Doomed space marine.
   Spawn:
 	TNT1 A 0
 	TNT1 A 0 A_PlaySoundEX("SFX/Buzz","Body",1)
+	TNT1 A 0 A_PlaySoundEX("radio/chat",CHAN_AUTO,1)
 	VTCM AAAAA 0 A_SpawnItemEx("SwarmFly2",frandom(-16,16),frandom(-16,16),frandom(-16,16))
 	VCTM A -1 
 	Stop

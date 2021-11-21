@@ -336,7 +336,6 @@ ACTOR PowerDoubleDamage : PowerDamage
 ACTOR DoubleSphere : PowerupGiver
 {
 	+COUNTITEM
-	+NOGRAVITY
 	+FORCEXYBILLBOARD
 	+INVENTORY.AUTOACTIVATE
 	+INVENTORY.ALWAYSPICKUP
@@ -531,7 +530,12 @@ Actor CapturedMarine
 	POWM I 10 A_PlaySound("pow/thankyou")
 	POWM JKL 3
 	POWM M 0 A_FaceTarget
+	POWM M 0 A_JumpIfInTargetInventory("RevX", 1, "AlsoGiveUpgrades", AAPTR_PLAYER1)
+	POWM M 20 A_SpawnItemEx("CapturedMarineDrops_NoUpgrades",0,0,28,0.1,-0.1,1,0,SXF_NOCHECKPOSITION)
+	Goto ByeBye
+  AlsoGiveUpgrades:
 	POWM M 20 A_SpawnItemEx("CapturedMarineDrops",0,0,28,0.1,-0.1,1,0,SXF_NOCHECKPOSITION)
+  ByeBye:
 	POWM LKJ 3
 	POWM INO 10
 	POWM P 3

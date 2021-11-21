@@ -211,7 +211,7 @@ actor SoulCubeGenerator : CustomInventory
   +FLOATBOB
   +AUTOACTIVATE
   +FORCEXYBILLBOARD
-  +INVENTORY.ALWAYSPICKUP
+  -INVENTORY.ALWAYSPICKUP
   Tag "$TAG_CUBE"
   Inventory.PickupMessage "$GOTCUBE"
   Inventory.PickupSound "SoulCube/Pickup" 

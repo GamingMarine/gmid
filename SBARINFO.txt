@@ -188,6 +188,13 @@ drawnumber 4, DIGFONT, yellow, ammo2, 292, 160, 0;
 	{
 	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 225, green, 451;
 	}
+	
+// Score System Things
+gamemode singleplayer, cooperative
+{
+drawnumber 8, SMALLFONT, white, score, 235, 191;
+DrawString SMALLFONT, white, "Score", 235, 183;
+}
 
 // Multiplayer Counters
 gamemode deathmatch, teamgame
@@ -276,6 +283,13 @@ drawnumber 4, DIGFONT, yellow, ammo2, 292, 160, 0;
 	{
 	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 225, green, 451;
 	}
+
+// Score System Things
+gamemode singleplayer, cooperative
+{
+drawnumber 8, SMALLFONT, white, score, 235, 191;
+DrawString SMALLFONT, white, "Score", 235, 183;
+}
 
 // Multiplayer Counters
 gamemode deathmatch, teamgame

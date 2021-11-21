@@ -64,8 +64,8 @@ Actor GamingMarineClone replaces Revenant
 	GMRN E 12
 	Goto See
   Death:
-	GMRN G 0 A_Scream
-	GMRN G 20
+	GMRN G 0 A_GiveToTarget("ScoreItem",1500)
+	GMRN G 20 A_Scream
 	GMRN G 0 A_PlaySound("explosion/distant", CHAN_AUTO)
 	GMRN G 0 A_PlaySound("newexplosion")
 	GMRN G 0 A_SpawnItem("ExplosionSpawner")

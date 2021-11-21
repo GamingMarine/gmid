@@ -7,7 +7,6 @@ Actor ZSecGunner
   mass 100
   speed 4
   painchance 200
-  decal bulletchip
   seesound "grunt/sight"
   painsound "grunt/pain"
   deathsound "grunt/death"
@@ -63,6 +62,7 @@ Actor ZSecGunner
 	ZSC1 G 0 A_ChangeFlag("NOPAIN",0)
     Goto See
   Death:
+	ZSC1 G 0 A_GiveToTarget("ScoreItem",200)
     ZSC1 G 5
     ZSC1 H 5 A_Scream
     ZSC1 I 5 A_NoBlocking
@@ -71,6 +71,7 @@ Actor ZSecGunner
     ZSC1 L -1
 	Stop
   Death.Basic:
+	ZSC1 G 0 A_GiveToTarget("ScoreItem",200)
     ZSC1 G 5
     ZSC1 H 5 A_Scream
     ZSC1 I 5 A_NoBlocking
@@ -84,6 +85,7 @@ Actor ZSecGunner
     ZSC1 L -1
 	Stop
   Death.Foot:
+	ZSC1 G 0 A_GiveToTarget("ScoreItem",200)
     ZSC1 G 5 ThrustThingZ(0,16,0,0)
     ZSC1 H 5 A_Scream
     ZSC1 I 5 A_NoBlocking
@@ -97,6 +99,7 @@ Actor ZSecGunner
     ZSC1 L -1
 	Stop
   XDeath:
+	TNT1 A 0 A_GiveToTarget("ScoreItem",200)
 	TNT1 A 0 A_XScream
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_SpawnItem("GMIDGibSpawner")
@@ -110,6 +113,7 @@ Actor ZSecGunner
     ZSC1 LKJIHG 5
     goto See
   Death.Fire:
+	ZSC1 G 0 A_GiveToTarget("ScoreItem",200)
 	ZSC1 G 0 A_NoBlocking
 	ZSC1 G 0 A_SpawnItem("BurningBoi")
 	TNT1 A -1

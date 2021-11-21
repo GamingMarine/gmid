@@ -52,6 +52,7 @@ actor VinylStorm replaces Arachnotron
 	VSTR E 1 A_SpidRefire
 	Goto Missile+1
   Death:
+	VSTR H 0 A_GiveToTarget("ScoreItem",2500)
 	VSTR H 5
 	VSTR I 5 A_Scream
 	VSTR J 5 A_NoBlocking
@@ -83,6 +84,7 @@ actor VinylStorm replaces Arachnotron
 	VSTR N -1
 	Stop
   Death.Fire:
+	VSTR H 0 A_GiveToTarget("ScoreItem",2500)
 	BBQ8 A 0 A_NoBlocking
 	BBQ8 A 0 A_PlaySound("female/burn", CHAN_VOICE)
 	BBQ8 AAA 1 Bright A_Wander
@@ -185,6 +187,7 @@ actor VinylStorm replaces Arachnotron
 	VSTR U -1 A_BossDeath
 	Stop
   XDeath:
+	TNT1 A 0 A_GiveToTarget("ScoreItem",2500)
 	TNT1 A 0 A_XScream
 	TNT1 A 0 A_NoBlocking
 	TNT1 AA 0 A_SpawnItem("GMIDGibSpawner")
@@ -252,6 +255,7 @@ actor NewbieHooves replaces Fatso
 	NWBH E 10 A_FaceTarget
 	Goto See
   Death:
+	NWBH H 0 A_GiveToTarget("ScoreItem",3000)
 	NWBH H 5
 	NWBH I 5 A_Scream
 	NWBH J 5 A_NoBlocking
@@ -283,6 +287,7 @@ actor NewbieHooves replaces Fatso
 	NWBH N -1
 	Stop
   Death.Fire:
+	BBQ5 A 0 A_GiveToTarget("ScoreItem",3000)
 	BBQ5 A 0 A_NoBlocking
 	BBQ5 A 0 A_PlaySound("female/burn", CHAN_VOICE)
 	BBQ5 AAA 1 Bright A_Wander
@@ -385,6 +390,7 @@ actor NewbieHooves replaces Fatso
 	NWBH U -1 A_BossDeath
 	Stop
   XDeath:
+	TNT1 A 0 A_GiveToTarget("ScoreItem",3000)
 	TNT1 A 0 A_XScream
 	TNT1 A 0 A_NoBlocking
 	TNT1 AA 0 A_SpawnItem("GMIDGibSpawner")
@@ -447,6 +453,7 @@ actor TwiMage replaces BaronOfHell
 	TWMA E 8
 	Goto See
   Death:
+	TWMA H 0 A_GiveToTarget("ScoreItem",5000)
 	TWMA H 5
 	TWMA I 5 A_Scream
 	TWMA J 5 A_NoBlocking
@@ -478,6 +485,7 @@ actor TwiMage replaces BaronOfHell
 	TWMA N -1
 	Stop
   Death.Fire:
+	BBQ7 A 0 A_GiveToTarget("ScoreItem",5000)
 	BBQ7 A 0 A_NoBlocking
 	BBQ7 A 0 A_PlaySound("female/burn", CHAN_VOICE)
 	BBQ7 AAA 1 Bright A_Wander
@@ -580,6 +588,7 @@ actor TwiMage replaces BaronOfHell
 	TWMA U -1 A_BossDeath
 	Stop
   XDeath:
+	TNT1 A 0 A_GiveToTarget("ScoreItem",5000)
 	TNT1 A 0 A_XScream
 	TNT1 A 0 A_NoBlocking
 	TNT1 AA 0 A_SpawnItem("GMIDGibSpawner")

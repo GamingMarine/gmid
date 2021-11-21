@@ -62,6 +62,7 @@ ACTOR DoomLuna replaces SpiderMastermind
 	DOLN G 0 A_PlaySound("DoomLuna/Insult", CHAN_VOICE)
 	Goto See
   Death:
+	DOLN H 0 A_GiveToTarget("ScoreItem",20000)
 	DOLN H 0 A_Scream
 	DOLN H 0 A_NoBlocking
 	DOLN HH 35 bright

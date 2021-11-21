@@ -508,3 +508,15 @@ Actor CapturedMarineDrops : RandomSpawner
 	DropItem "HealthBackpack"
 	DropItem "SuperCoolShake"
 }
+
+Actor CapturedMarineDrops_NoUpgrades : RandomSpawner
+{
+	DropItem "BetterBackpack"
+	DropItem "NewShellBox2"
+	DropItem "GMIDDualPistol"
+	DropItem "Firestick"
+	DropItem "RevX"
+	DropItem "PraetorArmorVest"
+	DropItem "HealthBackpack"
+	DropItem "SuperCoolShake"
+}

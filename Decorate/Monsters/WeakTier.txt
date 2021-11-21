@@ -21,7 +21,37 @@ actor SonicXRainbow : MasterForceBase
 	SNXR D 0 A_PlaySound("pony/step", CHAN_BODY)
 	SNXR DD 2 A_FastChase
 	Loop
+  Death:
+	SNXR A 0 A_GiveToTarget("ScoreItem",100)
+	SNXR H 5
+	SNXR I 5 A_Scream
+	SNXR J 5 A_NoBlocking
+	SNXR KL 5
+	SNXR M 0 A_PlaySound("body/hitfloor")
+	SNXR M 5
+	SNXR N -1
+	Stop
+  Death.Basic:
+	SNXR A 0 A_GiveToTarget("ScoreItem",100)
+	SNXR H 5
+	SNXR I 5 A_Scream
+	SNXR A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
+	Goto ContinueDeath
+  Death.Foot:
+	SNXR A 0 A_GiveToTarget("ScoreItem",100)
+	SNXR H 5 ThrustThingZ(0,16,0,0)
+	SNXR I 5 A_Scream
+	SNXR A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo2", AAPTR_PLAYER1)
+	Goto ContinueDeath2
+  XDeath:
+	SNXR A 0 A_GiveToTarget("ScoreItem",100)
+	SNXR A 0 A_XScream
+	SNXR A 0 A_NoBlocking
+	SNXR AA 0 A_SpawnItem("GMIDGibSpawner")
+	SNXR A 0 A_Jump(16, "GibTaunt")
+	Stop
   Death.Fire:
+	SNXR A 0 A_GiveToTarget("ScoreItem",100)
 	BBQ1 A 0 A_NoBlocking
 	BBQ1 A 0 A_PlaySound("female/burn", CHAN_VOICE)
 	BBQ1 AAA 1 Bright A_Wander
@@ -149,7 +179,37 @@ actor OctaLeb : MasterForceBase
 	OCTL F 10 bright A_CustomBulletAttack(22.5, 0, 3, random(1,5)*3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
 	OCTL E 10
 	Goto See
+  Death:
+	OCTL A 0 A_GiveToTarget("ScoreItem",150)
+	OCTL H 5
+	OCTL I 5 A_Scream
+	OCTL J 5 A_NoBlocking
+	OCTL KL 5
+	OCTL M 0 A_PlaySound("body/hitfloor")
+	OCTL M 5
+	OCTL N -1
+	Stop
+  Death.Basic:
+	OCTL A 0 A_GiveToTarget("ScoreItem",150)
+	OCTL H 5
+	OCTL I 5 A_Scream
+	OCTL A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
+	Goto ContinueDeath
+  Death.Foot:
+	OCTL A 0 A_GiveToTarget("ScoreItem",150)
+	OCTL H 5 ThrustThingZ(0,16,0,0)
+	OCTL I 5 A_Scream
+	OCTL A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo2", AAPTR_PLAYER1)
+	Goto ContinueDeath2
+  XDeath:
+	OCTL A 0 A_GiveToTarget("ScoreItem",150)
+	OCTL A 0 A_XScream
+	OCTL A 0 A_NoBlocking
+	OCTL AA 0 A_SpawnItem("GMIDGibSpawner")
+	OCTL A 0 A_Jump(16, "GibTaunt")
+	Stop
   Death.Fire:
+	OCTL A 0 A_GiveToTarget("ScoreItem",150)
 	BBQ0 A 0 A_NoBlocking
 	BBQ0 A 0 A_PlaySound("octaleb/burn", CHAN_VOICE)
 	BBQ0 AAA 1 Bright A_Wander
@@ -278,7 +338,37 @@ actor AppleSheriff : MasterForceBase //Fun fact: Originally, this one was gonna 
 	APLS E 4 Bright A_CPosAttack
 	APLS F 1 A_SpidRefire
 	Goto Missile+1
+  Death:
+	APLS A 0 A_GiveToTarget("ScoreItem",350)
+	APLS H 5
+	APLS I 5 A_Scream
+	APLS J 5 A_NoBlocking
+	APLS KL 5
+	APLS M 0 A_PlaySound("body/hitfloor")
+	APLS M 5
+	APLS N -1
+	Stop
+  Death.Basic:
+	APLS A 0 A_GiveToTarget("ScoreItem",350)
+	APLS H 5
+	APLS I 5 A_Scream
+	APLS A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
+	Goto ContinueDeath
+  Death.Foot:
+	APLS A 0 A_GiveToTarget("ScoreItem",350)
+	APLS H 5 ThrustThingZ(0,16,0,0)
+	APLS I 5 A_Scream
+	APLS A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo2", AAPTR_PLAYER1)
+	Goto ContinueDeath2
+  XDeath:
+	APLS A 0 A_GiveToTarget("ScoreItem",350)
+	APLS A 0 A_XScream
+	APLS A 0 A_NoBlocking
+	APLS AA 0 A_SpawnItem("GMIDGibSpawner")
+	APLS A 0 A_Jump(16, "GibTaunt")
+	Stop
   Death.Fire:
+	APLS A 0 A_GiveToTarget("ScoreItem",350)
 	BBQ3 A 0 A_NoBlocking
 	BBQ3 A 0 A_PlaySound("female/burn", CHAN_VOICE)
 	BBQ3 AAA 1 Bright A_Wander
@@ -401,7 +491,37 @@ actor AmyPie : MasterForceBase replaces DoomImp
   Spawn:
     AMPI A 10 A_Look
 	Loop
+  Death:
+	AMPI A 0 A_GiveToTarget("ScoreItem",300)
+	AMPI H 5
+	AMPI I 5 A_Scream
+	AMPI J 5 A_NoBlocking
+	AMPI KL 5
+	AMPI M 0 A_PlaySound("body/hitfloor")
+	AMPI M 5
+	AMPI N -1
+	Stop
+  Death.Basic:
+	AMPI A 0 A_GiveToTarget("ScoreItem",300)
+	AMPI H 5
+	AMPI I 5 A_Scream
+	AMPI A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
+	Goto ContinueDeath
+  Death.Foot:
+	AMPI A 0 A_GiveToTarget("ScoreItem",300)
+	AMPI H 5 ThrustThingZ(0,16,0,0)
+	AMPI I 5 A_Scream
+	AMPI A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo2", AAPTR_PLAYER1)
+	Goto ContinueDeath2
+  XDeath:
+	AMPI A 0 A_GiveToTarget("ScoreItem",300)
+	AMPI A 0 A_XScream
+	AMPI A 0 A_NoBlocking
+	AMPI AA 0 A_SpawnItem("GMIDGibSpawner")
+	AMPI A 0 A_Jump(16, "GibTaunt")
+	Stop
   Death.Fire:
+	AMPI A 0 A_GiveToTarget("ScoreItem",300)
 	BBQ2 A 0 A_NoBlocking
 	BBQ2 A 0 A_PlaySound("female/burn", CHAN_VOICE)
 	BBQ2 AAA 1 Bright A_Wander
