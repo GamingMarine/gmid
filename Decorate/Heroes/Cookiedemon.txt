@@ -580,7 +580,7 @@ ACTOR CookiedemonIceBall : DoomImpBall
 	Alpha 1
 	scale 0.6
 	Decal "DoomImpScorch"
-	DamageType "Ice"
+	DamageType "CookieIce"
 	
 	States
 	{
@@ -606,7 +606,7 @@ ACTOR CookiedemonFireball : DoomImpBall
 	Alpha 1
 	scale 0.6
 	Decal "DoomImpScorch"
-	DamageType "Fire"
+	DamageType "CookieFire"
 	
 	States
 	{

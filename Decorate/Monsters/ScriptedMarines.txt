@@ -198,6 +198,10 @@ Actor NewScriptedMarine : ScriptedMarine replaces ScriptedMarine
   Raise:
     PLA1 MLKJIH 5
     Goto See
+  Death.CookieIce:
+	"####" "#" 5 A_GenericFreezeDeath
+	"----" A 1 A_FreezeDeathChunks
+	Wait
   }
 }
 

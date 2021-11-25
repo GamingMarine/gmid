@@ -175,11 +175,16 @@ actor EvilMarine_Rifle //Evil! EEEVILLL
 	TNT1 A 0 A_PlaySound("player/gibtaunt", CHAN_AUTO)
 	Stop
   Death.Fire:
+  Death.CookieFire:
 	ZSC1 G 0 A_GiveToTarget("ScoreItem",250)
 	ZSC1 G 0 A_NoBlocking
 	ZSC1 G 0 A_SpawnItem("BurningMarine")
 	TNT1 A -1
 	Stop
+  Death.CookieIce:
+	"####" "#" 5 A_GenericFreezeDeath
+	"----" A 1 A_FreezeDeathChunks
+	Wait
    }
 }
 

@@ -139,10 +139,15 @@ ACTOR ZombieScientist
     SCZA MLKJIH 5
     goto See
   Death.Fire:
+  Death.CookieFire:
 	ZSC1 G 0 A_GiveToTarget("ScoreItem",100)
 	ZSC1 G 0 A_NoBlocking
 	ZSC1 G 0 A_SpawnItem("BurningBoi")
 	TNT1 A -1
 	Stop
+  Death.CookieIce:
+	"####" "#" 5 A_GenericFreezeDeath
+	"----" A 1 A_FreezeDeathChunks
+	Wait
   }
 }
