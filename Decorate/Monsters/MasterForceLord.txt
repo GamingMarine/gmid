@@ -124,15 +124,8 @@ actor BossDeath1
   }
 }
 
-actor BossDeath2
+actor BossDeath2 : BossDeath1
 {
-  Radius 4
-  Height 4
-  Speed 0
-  Projectile
-  -NOGRAVITY
-  Gravity 0.5
-  health 1
   scale 0.65
   SeeSound "OctaLeb/death6"
   States
@@ -140,21 +133,11 @@ actor BossDeath2
   Spawn:
     OCTL G 5
     loop
-  Death:
-    TNT1 A 0
-    stop
   }
 }
 
-actor BossDeath3
+actor BossDeath3 : BossDeath1
 {
-  Radius 4
-  Height 4
-  Speed 0
-  Projectile
-  -NOGRAVITY
-  Gravity 0.5
-  health 1
   scale 1.08
   SeeSound "AppleSheriff/death2"
   States
@@ -162,42 +145,22 @@ actor BossDeath3
   Spawn:
     APLS G 5
     loop
-  Death:
-    TNT1 A 0
-    stop
   }
 }
 
-actor BossDeath4
+actor BossDeath4 : BossDeath1
 {
-  Radius 4
-  Height 4
-  Speed 0
-  Projectile
-  -NOGRAVITY
-  Gravity 0.5
-  health 1
   SeeSound "AmyPie/death4"
   States
   {
   Spawn:
     AMPI G 5
     loop
-  Death:
-    TNT1 A 0
-    stop
   }
 }
 
-actor BossDeath5
+actor BossDeath5 : BossDeath1
 {
-  Radius 4
-  Height 4
-  Speed 0
-  Projectile
-  -NOGRAVITY
-  Gravity 0.5
-  health 1
   scale 0.6
   SeeSound "Hellhound/die2"
   States
@@ -205,42 +168,22 @@ actor BossDeath5
   Spawn:
     HOUN J 5
     loop
-  Death:
-    TNT1 A 0
-    stop
   }
 }
 
-actor BossDeath6
+actor BossDeath6 : BossDeath1
 {
-  Radius 4
-  Height 4
-  Speed 0
-  Projectile
-  -NOGRAVITY
-  Gravity 0.5
-  health 1
   SeeSound "Changeling/death"
   States
   {
   Spawn:
     CHGL H 5
     loop
-  Death:
-    TNT1 A 0
-    stop
   }
 }
 
-actor BossDeath7
+actor BossDeath7 : BossDeath1
 {
-  Radius 4
-  Height 4
-  Speed 0
-  Projectile
-  -NOGRAVITY
-  Gravity 0.5
-  health 1
   scale 1.08
   SeeSound "Rourity/death5"
   States
@@ -248,43 +191,23 @@ actor BossDeath7
   Spawn:
     ROTY G 5
     loop
-  Death:
-    TNT1 A 0
-    stop
   }
 }
 
-actor BossDeath8
+actor BossDeath8 : BossDeath1
 {
-  Radius 4
-  Height 4
-  Speed 0
-  Projectile
-  -NOGRAVITY
-  Gravity 0.5
-  health 1
   scale 1.08
-  SeeSound "TrixieKir/death4"
+  SeeSound "TrixieKir/death6"
   States
   {
   Spawn:
     TRKI G 5
     loop
-  Death:
-    TNT1 A 0
-    stop
   }
 }
 
-actor BossDeath9
+actor BossDeath9 : BossDeath1
 {
-  Radius 4
-  Height 4
-  Speed 0
-  Projectile
-  -NOGRAVITY
-  Gravity 0.5
-  health 1
   Scale 1.08
   SeeSound "TwiMage/death5"
   States
@@ -292,43 +215,23 @@ actor BossDeath9
   Spawn:
     TWMA G 5
     loop
-  Death:
-    TNT1 A 0
-    stop
   }
 }
 
-actor BossDeath10
+actor BossDeath10 : BossDeath1
 {
-  Radius 4
-  Height 4
-  Speed 0
-  Projectile
-  -NOGRAVITY
-  Gravity 0.5
-  health 1
   Scale 1.04
-  SeeSound "VinylStorm/pain3"
+  SeeSound "VinylStorm/death2"
   States
   {
   Spawn:
     VSTR G 5
     loop
-  Death:
-    TNT1 A 0
-    stop
   }
 }
 
-actor BossDeath11
+actor BossDeath11 : BossDeath1
 {
-  Radius 4
-  Height 4
-  Speed 0
-  Projectile
-  -NOGRAVITY
-  Gravity 0.5
-  health 1
   Scale .4
   SeeSound "AdvancedHound/die2"
   States
@@ -336,21 +239,11 @@ actor BossDeath11
   Spawn:
     AHOU J 5
     loop
-  Death:
-    TNT1 A 0
-    stop
   }
 }
 
-actor BossDeath12
+actor BossDeath12 : BossDeath1
 {
-  Radius 4
-  Height 4
-  Speed 0
-  Projectile
-  -NOGRAVITY
-  Gravity 0.5
-  health 1
   Scale 1.06
   SeeSound "NewbieHooves/pain1"
   States
@@ -358,29 +251,16 @@ actor BossDeath12
   Spawn:
     NWBH G 5
     loop
-  Death:
-    TNT1 A 0
-    stop
   }
 }
 
-actor BossDeath13
+actor BossDeath13 : BossDeath1
 {
-  Radius 4
-  Height 4
-  Speed 0
-  Projectile
-  -NOGRAVITY
-  Gravity 0.5
-  health 1
   SeeSound "FlutterMedic/death1"
   States
   {
   Spawn:
     FLMD G 5
     loop
-  Death:
-    TNT1 A 0
-    stop
   }
 }

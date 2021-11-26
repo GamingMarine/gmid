@@ -202,7 +202,13 @@ BOLT1R BOLT1R
 spasup spasup
 duke/weaponup WPNSEL21
 REVXUP REVXUP
-coke/up COLA
+coke/open COLA
+coke/egg COLA_EGG
+//A 1/256 chance to play an easter egg sound.
+//Based on ECWolf's handling of enemy fart sounds (Yes, really).
+$random coke/up16 { coke/egg coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open }
+$random coke/up { coke/up16 coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open }
+
 pc/pick	 PCPICK
 pc/idle	 comp1
 nvg/pick GOGGLES
@@ -1759,9 +1765,9 @@ $limit AmyPie/death4 0
 $limit Hellhound/die2 0
 $limit Changeling/death 0
 $limit Rourity/death5 0
-$limit TrixieKir/death4 0
+$limit TrixieKir/death6 0
 $limit TwiMage/death5 0
-$limit VinylStorm/pain3 0
+$limit VinylStorm/death2 0
 $limit AdvancedHound/die2 0
 $limit NewbieHooves/pain1 0
 $limit FlutterMedic/death1 0

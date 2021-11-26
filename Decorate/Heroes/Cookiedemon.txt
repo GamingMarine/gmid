@@ -593,18 +593,8 @@ ACTOR CookiedemonIceBall : DoomImpBall
 	}
 }
 
-ACTOR CookiedemonFireball : DoomImpBall
+ACTOR CookiedemonFireball : CookiedemonIceBall
 {
-	Radius 6
-	Height 8
-	Speed 40
-	FastSpeed 40
-	Damage 10
-	Projectile
-	+RANDOMIZE
-	RenderStyle Add
-	Alpha 1
-	scale 0.6
 	Decal "DoomImpScorch"
 	DamageType "CookieFire"
 	
