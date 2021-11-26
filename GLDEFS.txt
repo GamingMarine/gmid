@@ -356,6 +356,106 @@ object DoubleSphere
     frame DDMG { light DOUBLER }
 }
 
+pulselight REDKEY
+{
+    color 0.6 0.0 0.0
+    size 16
+    secondarySize 18
+    interval 2.0
+}
+
+object NewRedCard
+{
+    frame RKEY { light REDKEY }
+}
+
+object NewRedSkull
+{
+    frame RSKU { light REDKEY }
+}
+
+pulselight HEALTHPOTION
+{
+    color 0.0 0.0 0.6
+    size 16
+    secondarySize 18
+    interval 2.0
+}
+
+object NewBlueCard
+{
+    frame BKEY { light HEALTHPOTION }
+}
+
+object NewBlueSkull
+{
+    frame BSKU { light HEALTHPOTION }
+}
+
+pulselight YELLOWKEY
+{
+    color 0.6 0.6 0.0
+    size 16
+    secondarySize 18
+    interval 2.0
+}
+
+object NewYellowCard
+{
+    frame YKEY { light YELLOWKEY }
+}
+
+object NewYellowSkull
+{
+    frame YSKU { light YELLOWKEY }
+}
+
+object RevXProjectile
+{
+    frame RFBT { light HEALTHPOTION }
+}
+
+object RevXProjectileHalf
+{
+    frame RFBT { light HEALTHPOTION }
+}
+
+object RevXProjectileQuarter
+{
+    frame RFBT { light HEALTHPOTION }
+}
+
+object SuperRevXProjectile
+{
+    frame RFBT { light YELLOWKEY }
+}
+
+object SuperRevXProjectileHalf
+{
+    frame RFBT { light YELLOWKEY }
+}
+
+object SuperRevXProjectileQuarter
+{
+    frame RFBT { light YELLOWKEY }
+}
+
+pointlight ROCKET
+{
+    color 1.0 1.0 0.0
+    size 56
+}
+
+object GMIDRocket
+{
+	frame MISL { light ROCKET }
+}
+
+object PlasmaCannonProjectile
+{
+    frame ACID { light HEALTHPOTION }
+}
+
 FlickerLight2 EnemyPistolAttack
 {
   Color 1.0 0.8 0.2
@@ -378,6 +478,11 @@ Object ZSecGunner
 Object BlasterSoldier
 {
   Frame POFDF { Light EnemyPistolAttack }
+}
+
+object Q2SoldierProjectile
+{
+    frame ACID { light YELLOWKEY }
 }
 
 Object EvilMarine_Rifle
@@ -453,6 +558,11 @@ Object AmyPie
 Frame AMPIF { Light EnemyPistolAttack }
 }
 
+Object SpiritBall
+{
+Frame PSMM { Light SoulLight }
+}
+
 Object Rourity
 {
 Frame ROTYF { Light EnemyPistolAttack }
@@ -489,10 +599,15 @@ flickerlight NewBaronBall_X3
     chance 0.25
 }
 
+object TrixieKir
+{
+	frame TRKIF { light NewBaronBall }
+}
+
 object NewBaronBall
 {
-    frame BAL7A { light NewBaronBall    }
-    frame BAL7B { light NewBaronBall    }
+    frame BAL7A { light NewBaronBall }
+    frame BAL7B { light NewBaronBall }
 
     frame BAL7C { light NewBaronBall_X1 }
     frame BAL7D { light NewBaronBall_X1 }
@@ -500,63 +615,30 @@ object NewBaronBall
 	frame BAL7F { light NewBaronBall_X3 }
 }
 
+object TwiMage
+{
+	frame TWMAF { light NewBaronBall }
+}
+
+pointlight IMPBALL
+{
+    color 1.0 0.5 0.0
+    size 64
+}
+
+object NewFatShot
+{
+    frame FBAL { light IMPBALL }
+}
+
+Object NewbieHooves
+{
+Frame NWBHF { Light EnemyPistolAttack }
+}
+
 Object FlutterMedic
 {
 Frame FLMDF { Light EnemyPistolAttack }
-}
-
-pulselight REDKEY
-{
-    color 0.6 0.0 0.0
-    size 16
-    secondarySize 18
-    interval 2.0
-}
-
-object NewRedCard
-{
-    frame RKEY { light REDKEY }
-}
-
-object NewRedSkull
-{
-    frame RSKU { light REDKEY }
-}
-
-pulselight HEALTHPOTION
-{
-    color 0.0 0.0 0.6
-    size 16
-    secondarySize 18
-    interval 2.0
-}
-
-object NewBlueCard
-{
-    frame BKEY { light HEALTHPOTION }
-}
-
-object NewBlueSkull
-{
-    frame BSKU { light HEALTHPOTION }
-}
-
-pulselight YELLOWKEY
-{
-    color 0.6 0.6 0.0
-    size 16
-    secondarySize 18
-    interval 2.0
-}
-
-object NewYellowCard
-{
-    frame YKEY { light YELLOWKEY }
-}
-
-object NewYellowSkull
-{
-    frame YSKU { light YELLOWKEY }
 }
 
 //===============
@@ -570,19 +652,10 @@ Glow
    blood1
    blood2
    blood3
-   fblod1
-   fblod2
-   fbloda
-   fblodb
-   fblodc
-   fblodd
-   fblode
-   fblod3
    ceil1_2
    ceil1_3
    ceil3_4
    ceil3_6
-//   F_SKY1
    flat17
    flat2
    floor1_7
@@ -590,30 +663,19 @@ Glow
    fwater2
    fwater3
    fwater4
-   waterf1
-   waterf2
-   waterf3
-   waterf5
-   waterfb
-   waterfc
-   waterfd
-   waterf4
-   _tp1
-   _tp2
-   _tp3
-   _tp4
-   _tp5
-   _tp6
-   _tp7
-   _tp8
+   gate1
+   gate2
+   gate3
    gate4
    grnlite1
    lava1
    lava2
    lava3
-   lavaa
-   lavab
    lava4
+   flava1
+   flava2
+   flava3
+   flava4
    nukage1 "0 255 0"
    nukage2 "0 255 0"
    nukage3 "0 255 0"
@@ -639,7 +701,6 @@ Glow
    tlite6_4
    tlite6_5
    tlite6_6
-   
 // FreeDoom
    aqf010
    aqf011
@@ -665,6 +726,5 @@ Glow
    aqf064
    aqf065
    aqf066
-   
   }
 }

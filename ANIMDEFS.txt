@@ -78,202 +78,224 @@ texture HPP1D0
 	pic HPP1F0 tics 5
 	
 //Textures
+//Nukage
 flat NUKAGE1
     pic FNUKGE1 tics 4
 	pic FNUKGE2 tics 4
 	pic FNUKGE3 tics 4
 	pic FNUKGE2 tics 4
 	
-	
-	flat NUKAGE2
+flat NUKAGE2
     pic FNUKGE1 tics 4
 	pic FNUKGE2 tics 4
 	pic FNUKGE3 tics 4
 	pic FNUKGE2 tics 4
 	
-	flat NUKAGE3
+flat NUKAGE3
     pic FNUKGE1 tics 4
 	pic FNUKGE2 tics 4
 	pic FNUKGE3 tics 4
 	pic FNUKGE2 tics 4
-
 	
 	warp2 flat FNUKGE1
 	warp2 flat FNUKGE2
 	warp2 flat FNUKGE3
 	warp2 flat FNUKGE2
-	
+
+//Blood	
 flat BLOOD1 
     pic FBLOD1 tics 4
 	pic FBLOD2 tics 4
-	pic FBLODA tics 4
-	pic FBLODB tics 4
-	pic FBLODC tics 4
-	pic FBLODD tics 4
-	pic FBLODE tics 4
 	pic FBLOD3 tics 4
-	
-	flat BLOOD2
-    pic FBLOD1 tics 4
+	pic FBLOD4 tics 4
+	pic FBLOD5 tics 4
+	pic FBLOD3 tics 4
 	pic FBLOD2 tics 4
-	pic FBLODA tics 4
-	pic FBLODB tics 4
-	pic FBLODC tics 4
-	pic FBLODD tics 4
-	pic FBLODE tics 4
+	pic FBLOD1 tics 4
+	
+flat BLOOD2
+    pic FBLOD2 tics 4
 	pic FBLOD3 tics 4
-	
-	
-	flat BLOOD3 
-    pic FBLOD1 tics 4
+	pic FBLOD4 tics 4
+	pic FBLOD5 tics 4
+	pic FBLOD4 tics 4
+	pic FBLOD3 tics 4
 	pic FBLOD2 tics 4
-	pic FBLODA tics 4
-	pic FBLODB tics 4
-	pic FBLODC tics 4
-	pic FBLODD tics 4
-	pic FBLODE tics 4
-	pic FBLOD3 tics 4
+	pic FBLOD1 tics 4
 	
+flat BLOOD3 
+    pic FBLOD3 tics 4
+	pic FBLOD4 tics 4
+	pic FBLOD5 tics 4
+	pic FBLOD4 tics 4
+	pic FBLOD3 tics 4
+	pic FBLOD2 tics 4
+	pic FBLOD1 tics 4
+	pic FBLOD2 tics 4
 	
 	warp2 flat FBLOD1
 	warp2 flat FBLOD2
-	warp2 flat FBLODA
-	warp2 flat FBLODB
-	warp2 flat FBLODC
-	warp2 flat FBLODD
-	warp2 flat FBLODE
 	warp2 flat FBLOD3
+	warp2 flat FBLOD4
+	warp2 flat FBLOD5
 
-	flat FWATER1
+//Water
+flat FWATER1
     pic WATERF1 tics 4
 	pic WATERF2 tics 4
 	pic WATERF3 tics 4
-	pic WATERF5 tics 4
-	pic WATERFB tics 4
-	pic WATERFC tics 4
-	pic WATERFD tics 4
 	pic WATERF4 tics 4
+	pic WATERF5 tics 4
+	pic WATERF6 tics 4
+	pic WATERF7 tics 4
+	pic WATERF8 tics 4
 	
+flat FWATER2
+    pic WATERF3 tics 4
+	pic WATERF4 tics 4
+	pic WATERF5 tics 4
+	pic WATERF6 tics 4
+	pic WATERF7 tics 4
+	pic WATERF8 tics 4
+	pic WATERF1 tics 4
+	pic WATERF2 tics 4
 	
-	
-		flat FWATER2
-    pic WATERF1 tics 4
+flat FWATER3
+    pic WATERF5 tics 4
+	pic WATERF6 tics 4
+	pic WATERF7 tics 4
+	pic WATERF8 tics 4
+	pic WATERF1 tics 4
 	pic WATERF2 tics 4
 	pic WATERF3 tics 4
-	pic WATERF5 tics 4
-	pic WATERFB tics 4
-	pic WATERFC tics 4
-	pic WATERFD tics 4
 	pic WATERF4 tics 4
 	
-	
-	
-		flat FWATER3
-    pic WATERF1 tics 4
+flat FWATER4
+    pic WATERF7 tics 4
+	pic WATERF8 tics 4
+	pic WATERF1 tics 4
 	pic WATERF2 tics 4
 	pic WATERF3 tics 4
-	pic WATERF5 tics 4
-	pic WATERFB tics 4
-	pic WATERFC tics 4
-	pic WATERFD tics 4
 	pic WATERF4 tics 4
-	
-	
-		flat FWATER4
-    pic WATERF1 tics 4
-	pic WATERF2 tics 4
-	pic WATERF3 tics 4
 	pic WATERF5 tics 4
-	pic WATERFB tics 4
-	pic WATERFC tics 4
-	pic WATERFD tics 4
-	pic WATERF4 tics 4
+	pic WATERF6 tics 4
 	
 	warp2 flat WATERF1
 	warp2 flat WATERF2
 	warp2 flat WATERF3
-	warp2 flat WATERF5
-	warp2 flat WATERFB
-	warp2 flat WATERFC
-	warp2 flat WATERFD
 	warp2 flat WATERF4
+	warp2 flat WATERF5
+	warp2 flat WATERF6
+	warp2 flat WATERF7
+	warp2 flat WATERF8
 
+//Light Sludge
 flat SLIME01
-    pic SLIME01 tics 4
-	pic SLIME02 tics 4
-	pic SLIME03 tics 4
-	pic SLIME04 tics 4
+    pic LSLUDGE1 tics 4
+	pic LSLUDGE2 tics 4
+	pic LSLUDGE3 tics 4
+	pic LSLUDGE4 tics 4
 	
 flat SLIME02
-    pic SLIME01 tics 4
-	pic SLIME02 tics 4
-	pic SLIME03 tics 4
-	pic SLIME04 tics 4
+    pic LSLUDGE2 tics 4
+	pic LSLUDGE3 tics 4
+	pic LSLUDGE4 tics 4
+	pic LSLUDGE1 tics 4
 	
-
 flat SLIME03
-    pic SLIME01 tics 4
-	pic SLIME02 tics 4
-	pic SLIME03 tics 4
-	pic SLIME04 tics 4	
+    pic LSLUDGE3 tics 4
+	pic LSLUDGE4 tics 4
+	pic LSLUDGE1 tics 4
+	pic LSLUDGE2 tics 4	
 	
 flat SLIME04
-    pic SLIME01 tics 4
+    pic SLIME04 tics 4
+	pic SLIME01 tics 4
 	pic SLIME02 tics 4
-	pic SLIME03 tics 4
-	pic SLIME04 tics 4
-		
+	pic SLIME03 tics 4	
 	
-	warp2 flat SLIME01
-	warp2 flat SLIME02
-	warp2 flat SLIME03
-	warp2 flat SLIME04	
+	warp2 flat LSLUDGE1
+	warp2 flat LSLUDGE2
+	warp2 flat LSLUDGE3
+	warp2 flat LSLUDGE4
 	
-	
-	
-	
+//Dark Sludge
 flat SLIME05
-    pic SLIME05 tics 4
-	pic SLIME06 tics 4
-	pic SLIME07 tics 4
-	pic SLIME75 tics 4
-	pic SLIME7B tics 4
-	pic SLIME08 tics 4
-	
+    pic DSLUDGE1 tics 4
+	pic DSLUDGE2 tics 4
+	pic DSLUDGE3 tics 4
+	pic DSLUDGE4 tics 4
+	pic DSLUDGE5 tics 4
+	pic DSLUDGE6 tics 4
 
 flat SLIME06
-    pic SLIME05 tics 4
-	pic SLIME06 tics 4
-	pic SLIME07 tics 4
-	pic SLIME75 tics 4
-	pic SLIME7B tics 4
-	pic SLIME08 tics 4
-	
+    pic DSLUDGE2 tics 4
+	pic DSLUDGE3 tics 4
+	pic DSLUDGE4 tics 4
+	pic DSLUDGE5 tics 4
+	pic DSLUDGE6 tics 4
+	pic DSLUDGE1 tics 4
 
 flat SLIME07
-    pic SLIME05 tics 4
-	pic SLIME06 tics 4
-	pic SLIME07 tics 4
-	pic SLIME75 tics 4
-	pic SLIME7B tics 4
-	pic SLIME08 tics 4
-	
+    pic DSLUDGE3 tics 4
+	pic DSLUDGE4 tics 4
+	pic DSLUDGE5 tics 4
+	pic DSLUDGE1 tics 4
+	pic DSLUDGE2 tics 4
+	pic DSLUDGE3 tics 4
 
 flat SLIME08
-    pic SLIME05 tics 4
-	pic SLIME06 tics 4
-	pic SLIME07 tics 4
-	pic SLIME75 tics 4
-	pic SLIME7B tics 4
-	pic SLIME08 tics 4	
+    pic DSLUDGE4 tics 4
+	pic DSLUDGE5 tics 4
+	pic DSLUDGE6 tics 4
+	pic DSLUDGE1 tics 4
+	pic DSLUDGE2 tics 4
+	pic DSLUDGE3 tics 4	
 
-	warp2 flat SLIME05
-	warp2 flat SLIME06
-	warp2 flat SLIME07
-	warp2 flat SLIME75
-	warp2 flat SLIME7B
-	warp2 flat SLIME08
+	warp2 flat DSLUDGE1
+	warp2 flat DSLUDGE2
+	warp2 flat DSLUDGE3
+	warp2 flat DSLUDGE4
+	warp2 flat DSLUDGE5
+	warp2 flat DSLUDGE6
 	
+//Lava
+flat LAVA1
+	pic FLAVA1 tics 8
+	pic FLAVA2 tics 8
+	pic FLAVA3 tics 8
+	pic FLAVA4 tics 8
+	pic FLAVA3 tics 8
+	pic FLAVA2 tics 8
+	
+flat LAVA2
+	pic FLAVA2 tics 8
+	pic FLAVA3 tics 8
+	pic FLAVA4 tics 8
+	pic FLAVA3 tics 8
+	pic FLAVA2 tics 8
+	pic FLAVA1 tics 8
+	
+flat LAVA3
+	pic FLAVA3 tics 8
+	pic FLAVA4 tics 8
+	pic FLAVA3 tics 8
+	pic FLAVA2 tics 8
+	pic FLAVA1 tics 8
+	pic FLAVA2 tics 8
+
+flat LAVA4
+	pic FLAVA4 tics 8
+	pic FLAVA3 tics 8
+	pic FLAVA2 tics 8
+	pic FLAVA1 tics 8
+	pic FLAVA2 tics 8
+	pic FLAVA3 tics 8
+
+warp flat FLAVA1
+warp flat FLAVA2
+warp flat FLAVA3
+warp flat FLAVA4
 
 flat GATE1 
     pic _TP1 tics 4
@@ -381,43 +403,34 @@ pic SFALL2	tics 2
 pic SFALL3	tics 2
 pic SFALL4	tics 2
 
-
-
 warp texture SP_FACE1
 
-
-warp flat LAVA1
-warp flat LAVA2
-warp flat LAVA3
-warp flat LAVAA
-warp flat LAVAB
-warp flat LAVA4
 warp flat SFLR6_1
 warp flat SFLR6_4
 
 flat SLIME12
-	pic SLIME09 rand 4 4
-	pic SLIME10 rand 4 4
-	pic SLIME11 rand 4 4
-    pic SLIME12 rand 4 4
+	pic SLIME12 rand 4 4
 	pic SLIME11 rand 4 4
 	pic SLIME10 rand 4 4
+    pic SLIME09 rand 4 4
+	pic SLIME10 rand 4 4
+	pic SLIME11 rand 4 4
 	
 flat SLIME11
+	pic SLIME11 rand 4 4
+	pic SLIME12 rand 4 4
+	pic SLIME11 rand 4 4
+    pic SLIME10 rand 4 4
 	pic SLIME09 rand 4 4
-	pic SLIME10 rand 4 4
-	pic SLIME11 rand 4 4
-    pic SLIME12 rand 4 4
-	pic SLIME11 rand 4 4
 	pic SLIME10 rand 4 4
 	
 flat SLIME10
+	pic SLIME10 rand 4 4
+	pic SLIME11 rand 4 4
+	pic SLIME12 rand 4 4
+    pic SLIME11 rand 4 4
+	pic SLIME10 rand 4 4
 	pic SLIME09 rand 4 4
-	pic SLIME10 rand 4 4
-	pic SLIME11 rand 4 4
-    pic SLIME12 rand 4 4
-	pic SLIME11 rand 4 4
-	pic SLIME10 rand 4 4
 	
 flat SLIME09
 	pic SLIME09 rand 4 4
