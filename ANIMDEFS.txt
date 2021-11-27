@@ -209,10 +209,10 @@ flat SLIME03
 	pic LSLUDGE2 tics 4	
 	
 flat SLIME04
-    pic SLIME04 tics 4
-	pic SLIME01 tics 4
-	pic SLIME02 tics 4
-	pic SLIME03 tics 4	
+    pic LSLUDGE4 tics 4
+	pic LSLUDGE1 tics 4
+	pic LSLUDGE2 tics 4
+	pic LSLUDGE3 tics 4	
 	
 	warp2 flat LSLUDGE1
 	warp2 flat LSLUDGE2
@@ -408,37 +408,37 @@ warp texture SP_FACE1
 warp flat SFLR6_1
 warp flat SFLR6_4
 
-flat SLIME12
-	pic SLIME12 rand 4 4
-	pic SLIME11 rand 4 4
-	pic SLIME10 rand 4 4
-    pic SLIME09 rand 4 4
-	pic SLIME10 rand 4 4
-	pic SLIME11 rand 4 4
-	
-flat SLIME11
-	pic SLIME11 rand 4 4
-	pic SLIME12 rand 4 4
-	pic SLIME11 rand 4 4
-    pic SLIME10 rand 4 4
-	pic SLIME09 rand 4 4
-	pic SLIME10 rand 4 4
+flat SLIME09
+	pic MAGMA1 rand 4 4
+	pic MAGMA2 rand 4 4
+	pic MAGMA3 rand 4 4
+    pic MAGMA4 rand 4 4
+	pic MAGMA3 rand 4 4
+	pic MAGMA2 rand 4 4
 	
 flat SLIME10
-	pic SLIME10 rand 4 4
-	pic SLIME11 rand 4 4
-	pic SLIME12 rand 4 4
-    pic SLIME11 rand 4 4
-	pic SLIME10 rand 4 4
-	pic SLIME09 rand 4 4
+	pic MAGMA2 rand 4 4
+	pic MAGMA3 rand 4 4
+	pic MAGMA4 rand 4 4
+    pic MAGMA3 rand 4 4
+	pic MAGMA2 rand 4 4
+	pic MAGMA1 rand 4 4
 	
-flat SLIME09
-	pic SLIME09 rand 4 4
-	pic SLIME10 rand 4 4
-	pic SLIME11 rand 4 4
-    pic SLIME12 rand 4 4
-	pic SLIME11 rand 4 4
-	pic SLIME10 rand 4 4
+flat SLIME11
+	pic MAGMA3 rand 4 4
+	pic MAGMA4 rand 4 4
+	pic MAGMA3 rand 4 4
+    pic MAGMA2 rand 4 4
+	pic MAGMA1 rand 4 4
+	pic MAGMA2 rand 4 4
+
+flat SLIME12
+	pic MAGMA4 rand 4 4
+	pic MAGMA3 rand 4 4
+	pic MAGMA2 rand 4 4
+    pic MAGMA1 rand 4 4
+	pic MAGMA2 rand 4 4
+	pic MAGMA3 rand 4 4
 	
 Texture BLODRIP1
     pic BLODRIP1 rand 3 3

@@ -4140,3 +4140,23 @@ Brightmap Sprite HOUNU0
 {
 Map "Brightmaps/GMID/HOUNU0.png"
 }
+
+Brightmap Flat MAGMA1
+{
+Map "Brightmaps/GMID/MAGMA.png"
+}
+
+Brightmap Flat MAGMA2
+{
+Map "Brightmaps/GMID/MAGMA.png"
+}
+
+Brightmap Flat MAGMA3
+{
+Map "Brightmaps/GMID/MAGMA.png"
+}
+
+Brightmap Flat MAGMA4
+{
+Map "Brightmaps/GMID/MAGMA.png"
+}
