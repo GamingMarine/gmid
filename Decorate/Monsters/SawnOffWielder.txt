@@ -102,6 +102,7 @@ actor SawedOffShotgunGuy
     ZSDO N -1
     stop
   XDeath:
+  Death.GMIDExplosion:
 	TNT1 A 0 A_GiveToTarget("ScoreItem",300)
 	TNT1 A 0 A_XScream
 	TNT1 A 0 A_NoBlocking
@@ -112,9 +113,6 @@ actor SawedOffShotgunGuy
 	TNT1 A 40
 	TNT1 A 0 A_PlaySound("player/gibtaunt", CHAN_AUTO)
 	Stop
-  Raise:
-    ZSDO KJIH 5
-    goto See
   Death.Fire:
   Death.CookieFire:
 	ZSC1 G 0 A_GiveToTarget("ScoreItem",300)

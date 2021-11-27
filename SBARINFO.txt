@@ -119,7 +119,7 @@ statusbar normal, forcescaled
 {
 // Keys
 DrawKeyBar 3, horizontal, auto, 90, 175, 0;
-DrawKeyBar 3, horizontal, auto, 90, 185, 3; 
+DrawKeyBar 3, horizontal, auto, 90, 187, 3; 
 
 // Inventory Items
 drawselectedinventory SMALLFONT, 280, 120;
@@ -128,72 +128,71 @@ drawselectedinventory SMALLFONT, 280, 120;
 drawmugshot 5, xdeathface, 0, 165;
 
 // Armor
-drawimage armoricon, 16, 165;
-drawnumber 4, DIGFONT, yellow, armor, whennotzero, interpolate(4), 75, 148, red, 25, green, 51;
+drawimage armoricon, 17, 162;
+drawnumber 4, DIGFONT, yellow, armor, whennotzero, interpolate(4), 78, 141, red, 25, green, 51;
+drawnumber 8, SMALLFONT, blue, savepercent, 30, 158, green, 74, red, 94;
        
 // Health
-drawnumber 4, DIGFONT, yellow, health, interpolate(4), 75, 175, red, 25, green, 51;
+drawnumber 4, DIGFONT, yellow, health, interpolate(4), 77, 173, red, 25, green, 51;
 
 // Ammo
-drawimage ammoicon2, 307, 175;
 drawimage ammoicon1, 307, 195;
-drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, 0;
-drawnumber 4, DIGFONT, yellow, ammo2, 292, 160, 0;
+drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, 0;
 
 	IsSelected GMIDPistol
 	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 50, green, 101;
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 50, green, 101;
 	}
 	IsSelected GMIDDualPistol
 	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 50, green, 101;
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 50, green, 101;
 	}
 	IsSelected GMIDShotgun
 	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 12, green, 26;
 	}
 	IsSelected Firestick
 	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 6, green, 13;
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 6, green, 13;
 	}
 	IsSelected GMIDSuperShotgun
 	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 12, green, 26;
 	}
 	IsSelected RevX
 	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 12, green, 26;
 	}
 	IsSelected VGun
 	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 100, green, 202;
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 100, green, 202;
 	}
 	IsSelected GMIDRailgun
 	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 75, green, 151;
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 75, green, 151;
 	}
 	IsSelected ExcessiveForce
 	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 75, green, 151;
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 75, green, 151;
 	}
 	IsSelected GMIDMissilelauncher
 	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 12, green, 26;
 	}
 	IsSelected PineappleJammer
 	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 12, green, 26;
 	}
 	IsSelected SpaceCadet
 	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 225, green, 451;
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 225, green, 451;
 	}
 	
 // Score System Things
 gamemode singleplayer, cooperative
 {
-drawnumber 8, SMALLFONT, white, score, 235, 191;
-DrawString SMALLFONT, white, "Score", 235, 183;
+drawnumber 8, SMALLFONT, white, score, 235, 190;
+DrawString SMALLFONT, white, "Score", 235, 182;
 }
 
 // Multiplayer Counters
@@ -214,7 +213,7 @@ statusbar fullscreen, forcescaled
 {
 // Keys
 DrawKeyBar 3, horizontal, auto, 90, 175, 0;
-DrawKeyBar 3, horizontal, auto, 90, 185, 3; 
+DrawKeyBar 3, horizontal, auto, 90, 187, 3; 
 
 // Inventory Items
 drawselectedinventory SMALLFONT, 280, 120;
@@ -223,72 +222,71 @@ drawselectedinventory SMALLFONT, 280, 120;
 drawmugshot 5, 0, 165;
 
 // Armor
-drawimage armoricon, 16, 165;
-drawnumber 4, DIGFONT, yellow, armor, whennotzero, interpolate(4), 75, 148, red, 25, green, 51;
+drawimage armoricon, 17, 162;
+drawnumber 4, DIGFONT, yellow, armor, whennotzero, interpolate(4), 78, 141, red, 25, green, 51;
+drawnumber 8, SMALLFONT, blue, savepercent, 30, 158, green, 74, red, 94;
        
 // Health
-drawnumber 4, DIGFONT, yellow, health, interpolate(4), 75, 175, red, 25, green, 51;
+drawnumber 4, DIGFONT, yellow, health, interpolate(4), 77, 173, red, 25, green, 51;
 
 // Ammo
-drawimage ammoicon2, 307, 175;
 drawimage ammoicon1, 307, 195;
-drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, 0;
-drawnumber 4, DIGFONT, yellow, ammo2, 292, 160, 0;
+drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, 0;
 
 	IsSelected GMIDPistol
 	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 50, green, 101;
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 50, green, 101;
 	}
 	IsSelected GMIDDualPistol
 	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 50, green, 101;
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 50, green, 101;
 	}
 	IsSelected GMIDShotgun
 	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 12, green, 26;
 	}
 	IsSelected Firestick
 	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 6, green, 13;
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 6, green, 13;
 	}
 	IsSelected GMIDSuperShotgun
 	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 12, green, 26;
 	}
 	IsSelected RevX
 	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 12, green, 26;
 	}
 	IsSelected VGun
 	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 100, green, 202;
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 100, green, 202;
 	}
 	IsSelected GMIDRailgun
 	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 75, green, 151;
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 75, green, 151;
 	}
 	IsSelected ExcessiveForce
 	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 75, green, 151;
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 75, green, 151;
 	}
 	IsSelected GMIDMissilelauncher
 	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 12, green, 26;
 	}
 	IsSelected PineappleJammer
 	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 12, green, 26;
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 12, green, 26;
 	}
 	IsSelected SpaceCadet
 	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 180, red, 225, green, 451;
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 225, green, 451;
 	}
 
 // Score System Things
 gamemode singleplayer, cooperative
 {
-drawnumber 8, SMALLFONT, white, score, 235, 191;
-DrawString SMALLFONT, white, "Score", 235, 183;
+drawnumber 8, SMALLFONT, white, score, 235, 190;
+DrawString SMALLFONT, white, "Score", 235, 182;
 }
 
 // Multiplayer Counters
@@ -305,5 +303,5 @@ DrawString SMALLFONT, darkred, "Kills", 40, 127;
 
 statusbar inventory
 {
-drawinventorybar Doom, noartibox, 5, INDEXFONT, 85, 170;
+drawinventorybar Doom, noartibox, 5, INDEXFONT, 85, 173;
 }

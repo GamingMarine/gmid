@@ -105,7 +105,7 @@ Actor GMIDPistol : Pistol Replaces Pistol
 	FOOT D 0 A_Quake(1,2,0,10,"")
 	FOOT EF 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	FOOT FEDCBA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-	TNT1 A 8 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 8 A_WeaponReady(WRF_NoFire)
 	TNT1 A 0 A_ReFire
 	Goto Ready
   WeaponStill:
@@ -209,7 +209,7 @@ Actor GMIDDualPistol : GMIDPistol
 	FOOT D 0 A_Quake(1,2,0,10,"")
 	FOOT EF 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	FOOT FEDCBA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-	TNT1 A 8 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 8 A_WeaponReady(WRF_NoFire)
 	TNT1 A 0 A_ReFire
 	Goto Ready
   WeaponStill:

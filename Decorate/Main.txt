@@ -6,6 +6,7 @@ ACTOR Blaster_RifleShot
 	Speed 26
 	Damage 5
 	SeeSound "weapons/blasterrifle"
+	DeathSound "q2soldier/shotx"
 	Scale 1.0
 	Decal BulletChip
 	DamageType "Electric"
@@ -27,7 +28,7 @@ ACTOR Blaster_RifleShot_Hit : RedParticleFountain
 	States
 	{
 	Spawn:
-		TNT1 A 16
+		TNT1 A 4
 		Stop
 	}
 }
@@ -57,7 +58,7 @@ ACTOR NewCell : Ammo
   Ammo.BackpackMaxAmount 600
   Tag "$TAG_CHARGE1"
   Inventory.PickupSound "cell/get1"
-  Inventory.Icon "CELLA0"
+  Inventory.Icon "CELLB0"
   States
   {
   Spawn:
@@ -473,7 +474,7 @@ Actor Clip2 : Ammo
 	Ammo.BackpackMaxAmount 400
 	Tag "$TAG_9MM1"
 	Inventory.PickupSound "pistolmagazine/get"
-	Inventory.Icon "PISAA0B0"
+	Inventory.Icon "PISAC0"
 	Inventory.PickupMessage "$GOT9MM1"
 	States
 	{
@@ -519,7 +520,7 @@ Actor Clip3 : Ammo
 	Ammo.BackpackMaxAmount 600
 	Tag "$TAG_BULLET1"
 	Inventory.PickupSound "bulletmagazine/get"
-	Inventory.Icon "BLITA0B0"
+	Inventory.Icon "BLITC0"
 	Inventory.PickupMessage "$GOTBULLET1"
 	States
 	{
@@ -562,7 +563,7 @@ Actor NewShells : Shell
 	Tag "$TAG_SHELLS1"
 	Inventory.PickupSound "shellclip/get"
 	Inventory.PickupMessage "$GOTSHELLS1"
-	Inventory.Icon "SHELC0E0"
+	Inventory.Icon "SHELA0"
 	States
 	{
 	Spawn:
@@ -604,7 +605,7 @@ Actor NewShells2 : Ammo
 	Inventory.Amount 4
 	Inventory.MaxAmount 25
 	Ammo.BackpackMaxAmount 50
-	Inventory.Icon "SHELB0D0"
+	Inventory.Icon "SHELF0"
 	States
 	{
 	Spawn:

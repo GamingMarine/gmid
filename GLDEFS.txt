@@ -1,4 +1,5 @@
-#include brightmaps.gl
+#include lights.gl //Pointlights, flickerlights, and pulselights go there for easier sorting
+#include brightmaps.gl //GamingMarine in Doom's unique brightmaps go there, also for easier sorting (And also because there's just so fucking many of them)
 
 BrightMap Sprite SLIMA0
 {
@@ -48,30 +49,9 @@ Map "Brightmaps/BMSLIMH0.png"
 DisableFullBright
 }
 
-PointLight GreyLamp
-{
-Color 0.6 0.6 0.6
-Size 56
-Offset 0 48 0
-}
-
 Object GreyLamp
 {
 Frame GLMP { Light GreyLamp }
-}
-
-pointlight TLIGHT1
-{
-    color 1.0 1.0 0.8
-    size 56
-    offset 0 72 0
-}
-
-pointlight TLIGHT2
-{
-    color 1.0 1.0 0.8
-    size 56
-    offset 0 44 0
 }
 
 object TLamp1
@@ -84,25 +64,9 @@ object TLamp2
     frame LAMTB { light TLIGHT2 }
 }
 
-pointlight LAMP2
-{
-    color 1.0 1.0 0.8
-    size 84
-    offset 0 44 0
-}
-
 object NewColumn
 {
     frame COLMA { light LAMP2 }
-}
-
-PULSELIGHT LifeSphere1
-{
-Color 0 0 0.8
-OffSet 0 30 0
-Size 52
-SecondarySize 62
-Interval 1
 }
 
 OBJECT LifeSphere
@@ -113,26 +77,9 @@ Frame SOULC { Light LifeSphere1 }
 Frame SOULD { Light LifeSphere1 }
 }
 
-PULSELIGHT EnergySphere1
-{
-Color 0.7 0.7 0.7
-OffSet 0 30 0
-Size 52
-SecondarySize 62
-Interval 1
-}
-
 OBJECT EnergySphere
 {
 Frame MEGA { Light EnergySphere1 }
-}
-
-PulseLight HasteSphere
-{
-Color 1.0 1.0 0.0
-Size 40
-SecondarySize 56
-Interval 5.0
 }
 
 Object HasteSphere
@@ -140,24 +87,9 @@ Object HasteSphere
 Frame HAST { Light HasteSphere }
 }
 
-
-PULSELIGHT ArmorShard1
+object InvulnerabilitySphere_
 {
-Color 0 0.8 0
-OffSet 0 0 0
-Size 6
-SecondarySize 8
-Interval 1
-}
-
-pulselight SuperArmorShard1
-{
-    color 0.6 0.0 0.0
-    size 16
-    secondarySize 20
-    interval 1.0
-	dontlightself 1
-    offset 0 10 0
+    frame PINV { light INVULN }
 }
 
 OBJECT ArmorShard
@@ -170,38 +102,6 @@ OBJECT SuperArmorShard
 Frame BON4 { Light SuperArmorShard1 }
 }
 
-flickerlight DTFOG1
-{
-    color 0.4 1.0 0.4
-    size 84
-    secondarySize 96
-    chance 0.4
-}
-
-flickerlight DTFOG2
-{
-    color 0.4 1.0 0.4
-    size 60
-    secondarySize 72
-    chance 0.4
-}
-
-flickerlight DTFOG3
-{
-    color 0.4 1.0 0.4
-    size 36
-    secondarySize 48
-    chance 0.4
-}
-
-flickerlight DTFOG4
-{
-    color 0.4 1.0 0.4
-    size 15
-    secondarySize 24
-    chance 0.4
-}
-
 object NewTeleportFog
 {
     frame TFOGA { light DTFOG1 }
@@ -210,24 +110,6 @@ object NewTeleportFog
     frame TFOGD { light DTFOG2 }
     frame TFOGE { light DTFOG3 }
     frame TFOGF { light DTFOG4 }
-}
-
-Pulselight SoulLight
-{
-Color 0.8 0.8 0.8
-Size 20
-SecondarySize 12
-Interval 1.0
-Offset 0 16 0
-}
-
-Pulselight SoulLight2
-{
-Color 0.8 0.8 0.8
-Size 40
-SecondarySize 42
-Interval 2.0
-Offset 0 16 0
 }
 
 Object SmallSoul
@@ -250,26 +132,9 @@ Object SpaceCadet
 Frame PINB { Light SoulLight2 }
 }
 
-flickerlight FIREBARREL
-{
-    color 1.0 0.9 0.0
-    size 48
-    secondarySize 54
-    chance 0.8
-    offset 0 32 0
-}
-
 object NewBurningBarrel
 {
     frame BURB { light FIREBARREL }
-}
-
-flickerlight BIGBLUETORCH
-{
-    color 0.2 0.2 0.7
-    size 90
-    secondarySize 99
-    offset 0 60 0
 }
 
 object TallTorch_Blue
@@ -277,25 +142,9 @@ object TallTorch_Blue
     frame TTRB { light BIGBLUETORCH }
 }
 
-flickerlight BIGREDTORCH
-{
-    color 0.7 0.35 0.14
-    size 90
-    secondarySize 99
-    offset 0 60 0
-}
-
 object TallTorch_Red
 {
     frame TTRB { light BIGREDTORCH }
-}
-
-flickerlight BIGGREENTORCH
-{
-    color 0.2 0.7 0.2
-    size 90
-    secondarySize 99
-    offset 0 60 0
 }
 
 object TallTorch_Green
@@ -303,25 +152,9 @@ object TallTorch_Green
     frame TTRB { light BIGGREENTORCH }
 }
 
-flickerlight SMALLBLUETORCH
-{
-    color 0.2 0.2 0.7
-    size 72
-    secondarySize 81
-    offset 0 35 0
-}
-
 object ShortTorch_Blue
 {
     frame STRB { light SMALLBLUETORCH }
-}
-
-flickerlight SMALLREDTORCH
-{
-    color 0.7 0.35 0.14
-    size 72
-    secondarySize 81
-    offset 0 35 0
 }
 
 object ShortTorch_Red
@@ -329,26 +162,14 @@ object ShortTorch_Red
     frame STRB { light SMALLREDTORCH }
 }
 
-flickerlight SMALLGREENTORCH
-{
-    color 0.2 0.7 0.2
-    size 72
-    secondarySize 81
-    offset 0 35 0
-}
-
 object ShortTorch_Green
 {
     frame STRB { light SMALLGREENTORCH }
 }
 
-pulselight DOUBLER
+object QuadDamage
 {
-    color 1.0 0.0 0.0
-    size 40
-    secondarySize 42
-    interval 2.0
-    offset 0 16 0
+    frame QDMG { light LifeSphere1 }
 }
 
 object DoubleSphere
@@ -356,12 +177,9 @@ object DoubleSphere
     frame DDMG { light DOUBLER }
 }
 
-pulselight REDKEY
+Object CubeAmmo
 {
-    color 0.6 0.0 0.0
-    size 16
-    secondarySize 18
-    interval 2.0
+	Frame TERR { Light CubeAmmo }
 }
 
 object NewRedCard
@@ -374,14 +192,6 @@ object NewRedSkull
     frame RSKU { light REDKEY }
 }
 
-pulselight HEALTHPOTION
-{
-    color 0.0 0.0 0.6
-    size 16
-    secondarySize 18
-    interval 2.0
-}
-
 object NewBlueCard
 {
     frame BKEY { light HEALTHPOTION }
@@ -390,14 +200,6 @@ object NewBlueCard
 object NewBlueSkull
 {
     frame BSKU { light HEALTHPOTION }
-}
-
-pulselight YELLOWKEY
-{
-    color 0.6 0.6 0.0
-    size 16
-    secondarySize 18
-    interval 2.0
 }
 
 object NewYellowCard
@@ -440,12 +242,6 @@ object SuperRevXProjectileQuarter
     frame RFBT { light YELLOWKEY }
 }
 
-pointlight ROCKET
-{
-    color 1.0 1.0 0.0
-    size 56
-}
-
 object GMIDRocket
 {
 	frame MISL { light ROCKET }
@@ -456,18 +252,13 @@ object PlasmaCannonProjectile
     frame ACID { light HEALTHPOTION }
 }
 
-FlickerLight2 EnemyPistolAttack
-{
-  Color 1.0 0.8 0.2
-  Size 48
-  SecondarySize 56
-  Interval 1
-  Offset 0 40 0
-}
-
 Object SonicXRainbow
 {
   Frame SNXRF { Light EnemyPistolAttack }
+  Frame BBQ1A { Light SMALLREDTORCH }
+  Frame BBQ1B { Light SMALLREDTORCH }
+  Frame BBQ1C { Light SMALLREDTORCH }
+  Frame BBQ1D { Light SMALLREDTORCH }
 }
 
 Object ZSecGunner
@@ -490,27 +281,18 @@ Object EvilMarine_Rifle
   Frame MARRF { Light EnemyPistolAttack }
 }
 
-Pointlight EnemyShotgunAttack
-{
-Color 1.0 0.6 0.0
-Size 24
-Offset 20 28 0
-}
-
 Object Octaleb
 {
   Frame OCTLF { Light EnemyShotgunAttack }
+  Frame BBQ0A { Light SMALLREDTORCH }
+  Frame BBQ0B { Light SMALLREDTORCH }
+  Frame BBQ0C { Light SMALLREDTORCH }
+  Frame BBQ0D { Light SMALLREDTORCH }
 }
 
 Object ZSecArsonist
 {
   Frame ZSP1F { Light EnemyShotgunAttack }
-}
-
-Pointlight SawedOffShotgunGuyAttack
-{
-Color 1.0 0.8 0.0
-Size 32
 }
 
 Object SawedOffShotgunGuy
@@ -523,18 +305,13 @@ Object EvilMarine_Shotgun
   Frame PLA3F { Light EnemyShotgunAttack }
 }
 
-FlickerLight2 EnemyChaingunAttack
-{
-color 1.0 0.8 0.2
-size 48
-secondarySize 56
-interval 1
-offset 0 40 0
-}
-
 Object AppleSheriff
 {
   Frame APLSF { Light EnemyChaingunAttack }
+  Frame BBQ3A { Light SMALLREDTORCH }
+  Frame BBQ3B { Light SMALLREDTORCH }
+  Frame BBQ3C { Light SMALLREDTORCH }
+  Frame BBQ3D { Light SMALLREDTORCH }
 }
 
 Object ChaingunMajor
@@ -555,60 +332,45 @@ Object EvilMarine_Minigun
 
 Object AmyPie
 {
-Frame AMPIF { Light EnemyPistolAttack }
+  Frame AMPIF { Light EnemyPistolAttack }
+  Frame BBQ2A { Light SMALLREDTORCH }
+  Frame BBQ2B { Light SMALLREDTORCH }
+  Frame BBQ2C { Light SMALLREDTORCH }
+  Frame BBQ2D { Light SMALLREDTORCH }
+}
+
+object Changeling
+{
+    frame CHGLG { light INVULN }
 }
 
 Object SpiritBall
 {
-Frame PSMM { Light SoulLight }
+Frame PSMM { Light SoulLight2 }
 }
 
 Object Rourity
 {
-Frame ROTYF { Light EnemyPistolAttack }
-}
-
-//Based on Doomguy's Warzone code
-pointlight NewBaronBall
-{
-    color 1.0 0.0 1.0
-    size 32
-}
-
-flickerlight NewBaronBall_X1
-{
-    color 0.7 0.0 0.7
-    size 40
-    secondarySize 44
-    chance 0.25
-}
-
-flickerlight NewBaronBall_X2
-{
-    color 0.4 0.0 0.4
-    size 48
-    secondarySize 52
-    chance 0.25
-}
-
-flickerlight NewBaronBall_X3
-{
-    color 0.2 0.0 0.2
-    size 56
-    secondarySize 60
-    chance 0.25
+  Frame ROTYF { Light EnemyPistolAttack }
+  Frame BBQ6A { Light SMALLREDTORCH }
+  Frame BBQ6B { Light SMALLREDTORCH }
+  Frame BBQ6C { Light SMALLREDTORCH }
+  Frame BBQ6D { Light SMALLREDTORCH }
 }
 
 object TrixieKir
 {
-	frame TRKIF { light NewBaronBall }
+  frame TRKIF { light NewBaronBall }
+  Frame BBQ9A { Light SMALLREDTORCH }
+  Frame BBQ9B { Light SMALLREDTORCH }
+  Frame BBQ9C { Light SMALLREDTORCH }
+  Frame BBQ9D { Light SMALLREDTORCH }
 }
 
 object NewBaronBall
 {
     frame BAL7A { light NewBaronBall }
     frame BAL7B { light NewBaronBall }
-
     frame BAL7C { light NewBaronBall_X1 }
     frame BAL7D { light NewBaronBall_X1 }
     frame BAL7E { light NewBaronBall_X2 }
@@ -617,28 +379,128 @@ object NewBaronBall
 
 object TwiMage
 {
-	frame TWMAF { light NewBaronBall }
-}
-
-pointlight IMPBALL
-{
-    color 1.0 0.5 0.0
-    size 64
+  frame TWMAF { light NewBaronBall }
+  Frame BBQ7A { Light SMALLREDTORCH }
+  Frame BBQ7B { Light SMALLREDTORCH }
+  Frame BBQ7C { Light SMALLREDTORCH }
+  Frame BBQ7D { Light SMALLREDTORCH }
 }
 
 object NewFatShot
 {
-    frame FBAL { light IMPBALL }
+frame FBALA { light IMPBALL }
+frame FBALB { light IMPBALL }
+frame FBALC { light IMPBALL }
+frame FBALD { light IMPBALL_X1 }
+frame FBALE { light IMPBALL_X2 }
+frame FBALF { light IMPBALL_X3 }
+frame FBALG { light IMPBALL_X4 }
+frame FBALH { light IMPBALL_X5 }
+}
+
+Object VinylStorm
+{
+  Frame VSTRF { Light DOUBLER }
+  Frame BBQ8A { Light SMALLREDTORCH }
+  Frame BBQ8B { Light SMALLREDTORCH }
+  Frame BBQ8C { Light SMALLREDTORCH }
+  Frame BBQ8D { Light SMALLREDTORCH }
+}
+
+Object Blaster_RifleShot
+{
+  Frame BLAS { Light REDKEY }
+}
+
+Object GamingMarineClone
+{
+Frame GMRNF { Light EnemyPistolAttack }
 }
 
 Object NewbieHooves
 {
-Frame NWBHF { Light EnemyPistolAttack }
+  Frame NWBHF { Light EnemyPistolAttack }
+  Frame BBQ5A { Light SMALLREDTORCH }
+  Frame BBQ5B { Light SMALLREDTORCH }
+  Frame BBQ5C { Light SMALLREDTORCH }
+  Frame BBQ5D { Light SMALLREDTORCH }
 }
 
 Object FlutterMedic
 {
-Frame FLMDF { Light EnemyPistolAttack }
+  Frame FLMDF { Light EnemyPistolAttack }
+  Frame BBQ4A { Light SMALLREDTORCH }
+  Frame BBQ4B { Light SMALLREDTORCH }
+  Frame BBQ4C { Light SMALLREDTORCH }
+  Frame BBQ4D { Light SMALLREDTORCH }
+}
+
+object CookiedemonFireball
+{
+Frame CFIRA { light IMPBALL }
+Frame CFIRB { light IMPBALL }
+Frame CFIRC { light IMPBALL }
+frame CFIRD { light IMPBALL_X1 }
+frame CFIRE { light IMPBALL_X2 }
+frame CFIRF { light IMPBALL_X3 }
+frame CFIRG { light IMPBALL_X4 }
+frame CFIRH { light IMPBALL_X5 }
+frame CFIRI { light IMPBALL_X6 }
+}
+
+object CookiedemonIceBall
+{
+frame CICEA { light CDICEBALL }
+frame CICEB { light CDICEBALL }
+frame CICEC { light CDICEBALL }
+frame CICED { light CDICEBALL_X1 }
+frame CICEE { light CDICEBALL_X2 }
+frame CICEF { light CDICEBALL_X3 }
+frame CICEG { light CDICEBALL_X4 }
+frame CICEH { light CDICEBALL_X5 }
+frame CICEI { light CDICEBALL_X6 }
+}
+
+object BurningBoi
+{
+frame FGUYA { light SMALLREDTORCH }
+frame FGUYB { light SMALLREDTORCH }
+frame FGUYC { light SMALLREDTORCH }
+frame FGUYD { light SMALLREDTORCH }
+frame FGUYE { light SMALLREDTORCH }
+frame FGUYF { light SMALLREDTORCH }
+frame FGUYG { light SMALLREDTORCH }
+frame FGUYH { light SMALLREDTORCH }
+frame FGUYI { light SMALLREDTORCH }
+frame FGUYJ { light SMALLREDTORCH }
+frame FGUYK { light SMALLREDTORCH }
+frame FGUYL { light SMALLREDTORCH }
+frame FGUYM { light SMALLREDTORCH }
+frame FGUYN { light SMALLREDTORCH }
+frame FGUYO { light SMALLREDTORCH }
+frame FGUYP { light SMALLREDTORCH }
+frame FGUYQ { light SMALLREDTORCH }
+}
+
+object BurningMarine
+{
+frame FGUYA { light SMALLREDTORCH }
+frame FGUYB { light SMALLREDTORCH }
+frame FGUYC { light SMALLREDTORCH }
+frame FGUYD { light SMALLREDTORCH }
+frame FGUYE { light SMALLREDTORCH }
+frame FGUYF { light SMALLREDTORCH }
+frame FGUYG { light SMALLREDTORCH }
+frame FGUYH { light SMALLREDTORCH }
+frame FGUYI { light SMALLREDTORCH }
+frame FGUYJ { light SMALLREDTORCH }
+frame FGUYK { light SMALLREDTORCH }
+frame FGUYL { light SMALLREDTORCH }
+frame FGUYM { light SMALLREDTORCH }
+frame FGUYN { light SMALLREDTORCH }
+frame FGUYO { light SMALLREDTORCH }
+frame FGUYP { light SMALLREDTORCH }
+frame FGUYQ { light SMALLREDTORCH }
 }
 
 //===============

@@ -191,6 +191,7 @@ Actor NewScriptedMarine : ScriptedMarine replaces ScriptedMarine
     PLA1 N -1
     Stop
   XDeath:
+  Death.GMIDExplosion:
 	TNT1 A 0 A_XScream
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_SpawnItem("GMIDGibSpawner")

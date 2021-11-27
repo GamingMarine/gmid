@@ -1,0 +1,408 @@
+PointLight GreyLamp
+{
+Color 0.6 0.6 0.6
+Size 56
+Offset 0 48 0
+}
+
+pointlight TLIGHT1
+{
+    color 1.0 1.0 0.8
+    size 56
+    offset 0 72 0
+}
+
+pointlight TLIGHT2
+{
+    color 1.0 1.0 0.8
+    size 56
+    offset 0 44 0
+}
+
+pointlight LAMP2
+{
+    color 1.0 1.0 0.8
+    size 84
+    offset 0 44 0
+}
+
+PULSELIGHT LifeSphere1
+{
+Color 0 0 0.8
+OffSet 0 30 0
+Size 52
+SecondarySize 62
+Interval 1
+}
+
+PULSELIGHT EnergySphere1
+{
+Color 0.7 0.7 0.7
+OffSet 0 30 0
+Size 52
+SecondarySize 62
+Interval 1
+}
+
+PulseLight HasteSphere
+{
+Color 1.0 1.0 0.0
+Size 40
+SecondarySize 56
+Interval 5.0
+}
+
+pulselight INVULN
+{
+    color 0.0 1.0 0.0
+    size 40
+    secondarySize 42
+    interval 2.0
+    offset 0 16 0
+}
+
+
+PULSELIGHT ArmorShard1
+{
+Color 0 0.8 0
+OffSet 0 0 0
+Size 6
+SecondarySize 8
+Interval 1
+}
+
+pulselight SuperArmorShard1
+{
+    color 0.6 0.0 0.0
+    size 16
+    secondarySize 20
+    interval 1.0
+	dontlightself 1
+    offset 0 10 0
+}
+
+flickerlight DTFOG1
+{
+    color 0.4 1.0 0.4
+    size 84
+    secondarySize 96
+    chance 0.4
+}
+
+flickerlight DTFOG2
+{
+    color 0.4 1.0 0.4
+    size 60
+    secondarySize 72
+    chance 0.4
+}
+
+flickerlight DTFOG3
+{
+    color 0.4 1.0 0.4
+    size 36
+    secondarySize 48
+    chance 0.4
+}
+
+flickerlight DTFOG4
+{
+    color 0.4 1.0 0.4
+    size 15
+    secondarySize 24
+    chance 0.4
+}
+
+Pulselight SoulLight
+{
+Color 0.8 0.8 0.8
+Size 20
+SecondarySize 12
+Interval 1.0
+Offset 0 16 0
+}
+
+Pulselight SoulLight2
+{
+Color 0.8 0.8 0.8
+Size 40
+SecondarySize 42
+Interval 2.0
+Offset 0 16 0
+}
+
+flickerlight FIREBARREL
+{
+    color 1.0 0.9 0.0
+    size 48
+    secondarySize 54
+    chance 0.8
+    offset 0 32 0
+}
+
+flickerlight BIGBLUETORCH
+{
+    color 0.2 0.2 0.7
+    size 90
+    secondarySize 99
+    offset 0 60 0
+}
+
+flickerlight BIGREDTORCH
+{
+    color 0.7 0.35 0.14
+    size 90
+    secondarySize 99
+    offset 0 60 0
+}
+
+flickerlight BIGGREENTORCH
+{
+    color 0.2 0.7 0.2
+    size 90
+    secondarySize 99
+    offset 0 60 0
+}
+
+flickerlight SMALLBLUETORCH
+{
+    color 0.2 0.2 0.7
+    size 72
+    secondarySize 81
+    offset 0 35 0
+}
+
+flickerlight SMALLREDTORCH
+{
+    color 0.7 0.35 0.14
+    size 72
+    secondarySize 81
+    offset 0 35 0
+}
+
+flickerlight SMALLGREENTORCH
+{
+    color 0.2 0.7 0.2
+    size 72
+    secondarySize 81
+    offset 0 35 0
+}
+
+pulselight DOUBLER
+{
+    color 1.0 0.0 0.0
+    size 40
+    secondarySize 42
+    interval 2.0
+    offset 0 16 0
+}
+
+Pulselight CubeAmmo
+{
+Color 0.3 0.3 0.0
+Size 20
+SecondarySize 12
+Interval 1.0
+Offset 0 16 0
+}
+
+pulselight REDKEY
+{
+    color 0.6 0.0 0.0
+    size 16
+    secondarySize 18
+    interval 2.0
+}
+
+pulselight HEALTHPOTION
+{
+    color 0.0 0.0 0.6
+    size 16
+    secondarySize 18
+    interval 2.0
+}
+
+pulselight YELLOWKEY
+{
+    color 0.6 0.6 0.0
+    size 16
+    secondarySize 18
+    interval 2.0
+}
+
+pointlight ROCKET
+{
+    color 1.0 1.0 0.0
+    size 56
+}
+
+FlickerLight2 EnemyPistolAttack
+{
+  Color 1.0 0.8 0.2
+  Size 48
+  SecondarySize 56
+  Interval 1
+  Offset 0 40 0
+}
+
+Pointlight EnemyShotgunAttack
+{
+Color 1.0 0.6 0.0
+Size 24
+Offset 20 28 0
+}
+
+Pointlight SawedOffShotgunGuyAttack
+{
+Color 1.0 0.8 0.0
+Size 32
+}
+
+FlickerLight2 EnemyChaingunAttack
+{
+color 1.0 0.8 0.2
+size 48
+secondarySize 56
+interval 1
+offset 0 40 0
+}
+
+//Based on Doomguy's Warzone code
+pointlight NewBaronBall
+{
+    color 1.0 0.0 1.0
+    size 32
+}
+
+flickerlight NewBaronBall_X1
+{
+    color 0.7 0.0 0.7
+    size 40
+    secondarySize 44
+    chance 0.25
+}
+
+flickerlight NewBaronBall_X2
+{
+    color 0.4 0.0 0.4
+    size 48
+    secondarySize 52
+    chance 0.25
+}
+
+flickerlight NewBaronBall_X3
+{
+    color 0.2 0.0 0.2
+    size 56
+    secondarySize 60
+    chance 0.25
+}
+
+//Based on Doom 64 Stuff Pack by Footman
+pointlight IMPBALL
+{
+    color 1.0 0.6 0.0
+    size 64
+}
+
+flickerlight IMPBALL_X1
+{
+    color 0.7 0.4 0.0
+    size 80
+    secondarySize 88
+    chance 0.25
+}
+
+flickerlight IMPBALL_X2
+{
+    color 0.5 0.3 0.0
+    size 96
+    secondarySize 104
+    chance 0.25
+}
+
+flickerlight IMPBALL_X3
+{
+    color 0.4 0.2 0.0
+    size 112
+    secondarySize 120
+    chance 0.25
+}
+
+flickerlight IMPBALL_X4
+{
+    color 0.3 0.2 0.0
+    size 112
+    secondarySize 120
+    chance 0.25
+}
+
+flickerlight IMPBALL_X5
+{
+    color 0.2 0.1 0.0
+    size 112
+    secondarySize 120
+    chance 0.25
+}
+
+flickerlight IMPBALL_X6
+{
+    color 0.1 0.0 0.0
+    size 112
+    secondarySize 120
+    chance 0.25
+}
+
+pointlight CDICEBALL
+{
+    color 0.3 0.0 1.0
+    size 64
+}
+
+flickerlight CDICEBALL_X1
+{
+    color 0.2 0.0 0.7
+    size 80
+    secondarySize 88
+    chance 0.25
+}
+
+flickerlight CDICEBALL_X2
+{
+    color 0.1 0.0 0.5
+    size 96
+    secondarySize 104
+    chance 0.25
+}
+
+flickerlight CDICEBALL_X3
+{
+    color 0.1 0.0 0.4
+    size 112
+    secondarySize 120
+    chance 0.25
+}
+
+flickerlight CDICEBALL_X4
+{
+    color 0.0 0.0 0.3
+    size 112
+    secondarySize 120
+    chance 0.25
+}
+
+flickerlight CDICEBALL_X5
+{
+    color 0.0 0.0 0.2
+    size 112
+    secondarySize 120
+    chance 0.25
+}
+
+flickerlight CDICEBALL_X6
+{
+    color 0.0 0.0 0.1
+    size 112
+    secondarySize 120
+    chance 0.25
+}

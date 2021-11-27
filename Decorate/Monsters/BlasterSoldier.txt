@@ -87,6 +87,7 @@ ACTOR BlasterSoldier
     POFD L -1
     Stop
   XDeath:
+  Death.GMIDExplosion:
 	TNT1 A 0 A_GiveToTarget("ScoreItem",200)
 	TNT1 A 0 A_XScream
 	TNT1 A 0 A_NoBlocking
@@ -97,10 +98,6 @@ ACTOR BlasterSoldier
 	TNT1 A 40
 	TNT1 A 0 A_PlaySound("player/gibtaunt", CHAN_AUTO)
 	Stop
-  Raise:
-    POFD K 5
-    POFD JIH 5
-    Goto See
   Death.Fire:
   Death.CookieFire:
 	ZSC1 G 0 A_GiveToTarget("ScoreItem",200)

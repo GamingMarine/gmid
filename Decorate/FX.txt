@@ -170,7 +170,6 @@ actor SkullGib : RibGib
   }
 }
 
-
 //These two actors are here to make spawning gib particles much easier and makes the code less cluttered
 actor GMIDGibSpawner
 {

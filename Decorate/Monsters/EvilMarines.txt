@@ -160,10 +160,8 @@ actor EvilMarine_Rifle //Evil! EEEVILLL
 	TNT1 A 0 A_PlaySound("player/kicktaunt", CHAN_AUTO)
 	PLA3 L -1
 	Stop
-  Raise:
-	PLA1 MLKJIH 5
-	Goto See
   XDeath:
+  Death.GMIDExplosion:
 	TNT1 A 0 A_GiveToTarget("ScoreItem",250)
 	TNT1 A 0 A_XScream
 	TNT1 A 0 A_NoBlocking

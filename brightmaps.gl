@@ -468,12 +468,12 @@ Brightmap Sprite OCTLI0
 Map "Brightmaps/GMID/OCTLI0.png"
 }
 
-Brightmap Sprite OCTLO0
+Brightmap Sprite BBQ0E0
 {
 Map "Brightmaps/GMID/OCTLH0.png"
 }
 
-Brightmap Sprite OCTLP0
+Brightmap Sprite BBQ0F0
 {
 Map "Brightmaps/GMID/OCTLI0.png"
 }
@@ -898,22 +898,22 @@ Brightmap Sprite VSTRK0
 Map "Brightmaps/GMID/VSTRK0.png"
 }
 
-Brightmap Sprite VSTRO0
+Brightmap Sprite BBQ8E0
 {
 Map "Brightmaps/GMID/VSTRH0.png"
 }
 
-Brightmap Sprite VSTRP0
+Brightmap Sprite BBQ8F0
 {
 Map "Brightmaps/GMID/VSTRI0.png"
 }
 
-Brightmap Sprite VSTRQ0
+Brightmap Sprite BBQ8G0
 {
 Map "Brightmaps/GMID/VSTRJ0.png"
 }
 
-Brightmap Sprite VSTRR0
+Brightmap Sprite BBQ8H0
 {
 Map "Brightmaps/GMID/VSTRK0.png"
 }
@@ -1063,27 +1063,27 @@ Brightmap Sprite AMPIL0
 Map "Brightmaps/GMID/AMPIL0.png"
 }
 
-Brightmap Sprite AMPIO0
+Brightmap Sprite BBQ2E0
 {
 Map "Brightmaps/GMID/AMPIG1.png"
 }
 
-Brightmap Sprite AMPIP0
+Brightmap Sprite BBQ2F0
 {
 Map "Brightmaps/GMID/AMPII0.png"
 }
 
-Brightmap Sprite AMPIQ0
+Brightmap Sprite BBQ2G0
 {
 Map "Brightmaps/GMID/AMPIJ0.png"
 }
 
-Brightmap Sprite AMPIR0
+Brightmap Sprite BBQ2H0
 {
 Map "Brightmaps/GMID/AMPIK0.png"
 }
 
-Brightmap Sprite AMPIS0
+Brightmap Sprite BBQ2I0
 {
 Map "Brightmaps/GMID/AMPIL0.png"
 }
@@ -1322,17 +1322,17 @@ Brightmap Sprite APLSJ0
 Map "Brightmaps/GMID/APLSJ0.png"
 }
 
-Brightmap Sprite APLSO0
+Brightmap Sprite BBQ3E0
 {
 Map "Brightmaps/GMID/APLSH0.png"
 }
 
-Brightmap Sprite APLSP0
+Brightmap Sprite BBQ3F0
 {
 Map "Brightmaps/GMID/APLSI0.png"
 }
 
-Brightmap Sprite APLSQ0
+Brightmap Sprite BBQ3G0
 {
 Map "Brightmaps/GMID/APLSJ0.png"
 }
@@ -1487,27 +1487,27 @@ Brightmap Sprite SNXRL0
 Map "Brightmaps/GMID/SNXRL0.png"
 }
 
-Brightmap Sprite SNXRO0
+Brightmap Sprite BBQ1E0
 {
 Map "Brightmaps/GMID/SNXRH0.png"
 }
 
-Brightmap Sprite SNXRP0
+Brightmap Sprite BBQ1F0
 {
 Map "Brightmaps/GMID/SNXRI0.png"
 }
 
-Brightmap Sprite SNXRQ0
+Brightmap Sprite BBQ1G0
 {
 Map "Brightmaps/GMID/SNXRJ0.png"
 }
 
-Brightmap Sprite SNXRR0
+Brightmap Sprite BBQ1H0
 {
 Map "Brightmaps/GMID/SNXRK0.png"
 }
 
-Brightmap Sprite SNXRS0
+Brightmap Sprite BBQ1I0
 {
 Map "Brightmaps/GMID/SNXRL0.png"
 }
@@ -1677,17 +1677,17 @@ Brightmap Sprite NWBHJ0
 Map "Brightmaps/GMID/NWBHJ0.png"
 }
 
-Brightmap Sprite NWBHO0
+Brightmap Sprite BBQ5E0
 {
 Map "Brightmaps/GMID/NWBHH0.png"
 }
 
-Brightmap Sprite NWBHP0
+Brightmap Sprite BBQ5F0
 {
 Map "Brightmaps/GMID/NWBHI0.png"
 }
 
-Brightmap Sprite NWBHQ0
+Brightmap Sprite BBQ5G0
 {
 Map "Brightmaps/GMID/NWBHJ0.png"
 }
@@ -1877,37 +1877,37 @@ Brightmap Sprite TRKIN0
 Map "Brightmaps/GMID/TRKIN0.png"
 }
 
-Brightmap Sprite TRKIO0
+Brightmap Sprite BBQ9E0
 {
 Map "Brightmaps/GMID/TRKIG1.png"
 }
 
-Brightmap Sprite TRKIP0
+Brightmap Sprite BBQ9F0
 {
 Map "Brightmaps/GMID/TRKII0.png"
 }
 
-Brightmap Sprite TRKIQ0
+Brightmap Sprite BBQ9G0
 {
 Map "Brightmaps/GMID/TRKIJ0.png"
 }
 
-Brightmap Sprite TRKIR0
+Brightmap Sprite BBQ9H0
 {
 Map "Brightmaps/GMID/TRKIK0.png"
 }
 
-Brightmap Sprite TRKIS0
+Brightmap Sprite BBQ9I0
 {
 Map "Brightmaps/GMID/TRKIL0.png"
 }
 
-Brightmap Sprite TRKIT0
+Brightmap Sprite BBQ9J0
 {
 Map "Brightmaps/GMID/TRKIM0.png"
 }
 
-Brightmap Sprite TRKIU0
+Brightmap Sprite BBQ9K0
 {
 Map "Brightmaps/GMID/TRKIN0.png"
 }
@@ -2312,27 +2312,27 @@ Brightmap Sprite ROTYL0
 Map "Brightmaps/GMID/ROTYL0.png"
 }
 
-Brightmap Sprite ROTYO0
+Brightmap Sprite BBQ6E0
 {
 Map "Brightmaps/GMID/ROTYH0.png"
 }
 
-Brightmap Sprite ROTYP0
+Brightmap Sprite BBQ6F0
 {
 Map "Brightmaps/GMID/ROTYI0.png"
 }
 
-Brightmap Sprite ROTYQ0
+Brightmap Sprite BBQ6G0
 {
 Map "Brightmaps/GMID/ROTYJ0.png"
 }
 
-Brightmap Sprite ROTYR0
+Brightmap Sprite BBQ6H0
 {
 Map "Brightmaps/GMID/ROTYK0.png"
 }
 
-Brightmap Sprite ROTYS0
+Brightmap Sprite BBQ6I0
 {
 Map "Brightmaps/GMID/ROTYL0.png"
 }
@@ -2527,37 +2527,37 @@ Brightmap Sprite TWMAN0
 Map "Brightmaps/GMID/TWMAN0.png"
 }
 
-Brightmap Sprite TWMAO0
+Brightmap Sprite BBQ7E0
 {
 Map "Brightmaps/GMID/TWMAG1.png"
 }
 
-Brightmap Sprite TWMAP0
+Brightmap Sprite BBQ7F0
 {
 Map "Brightmaps/GMID/TWMAI0.png"
 }
 
-Brightmap Sprite TWMAQ0
+Brightmap Sprite BBQ7G0
 {
 Map "Brightmaps/GMID/TWMAJ0.png"
 }
 
-Brightmap Sprite TWMAR0
+Brightmap Sprite BBQ7H0
 {
 Map "Brightmaps/GMID/TWMAK0.png"
 }
 
-Brightmap Sprite TWMAS0
+Brightmap Sprite BBQ7I0
 {
 Map "Brightmaps/GMID/TWMAL0.png"
 }
 
-Brightmap Sprite TWMAT0
+Brightmap Sprite BBQ7J0
 {
 Map "Brightmaps/GMID/TWMAM0.png"
 }
 
-Brightmap Sprite TWMAU0
+Brightmap Sprite BBQ7K0
 {
 Map "Brightmaps/GMID/TWMAN0.png"
 }

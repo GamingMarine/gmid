@@ -39,6 +39,11 @@ actor MasterForceBase
   Death:
 	"####" H 5
 	"####" I 5 A_Scream
+	"####" A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmoHuh", AAPTR_PLAYER1)
+	Goto ContinueClassicDeath
+  DropSoulCubeAmmoHuh:
+	"####" A 0 A_SpawnItem("CubeAmmo")
+  ContinueClassicDeath:
 	"####" J 5 A_NoBlocking
 	"####" KL 5
 	"####" M 0 A_PlaySound("body/hitfloor")
@@ -89,6 +94,13 @@ actor MasterForceBase
 	"####" MLKJIH 5
 	Goto See
   XDeath:
+  Death.GMIDExplosion:
+	"####" A 0
+	"####" A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo3", AAPTR_PLAYER1)
+	Goto ContinueXDeath
+  DropSoulCubeAmmo3:
+	"####" A 0 A_SpawnItem("CubeAmmo")
+  ContinueXDeath:
 	"####" A 0 A_XScream
 	"####" A 0 A_NoBlocking
 	"####" AA 0 A_SpawnItem("GMIDGibSpawner")
@@ -100,9 +112,16 @@ actor MasterForceBase
 	Stop
   Death.Fire:
   Death.CookieFire:
+  	"####" A 0 A_PlaySound("female/burn", CHAN_VOICE)
 	"####" A 0 A_NoBlocking
-	"####" A 0 A_PlaySound("female/burn", CHAN_VOICE)
-	"####" AAA 1 Bright A_Wander
+	"####" A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmoGodImFuckingTired", AAPTR_PLAYER1)
+	"####" A 1 Bright A_Wander
+	Goto ContinueFireDeath
+  DropSoulCubeAmmoGodImFuckingTired:
+	"####" A 0 A_SpawnItem("CubeAmmo")
+	"####" A 1 Bright A_Wander
+  ContinueFireDeath:
+	"####" AA 1 Bright A_Wander
 	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
 	"####" BBB 1 Bright A_Wander
 	"####" A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
@@ -196,10 +215,10 @@ actor MasterForceBase
 	"####" A 0 A_SpawnItem("ToastyGuy")
 	Goto Fall
   Fall:
-	"####" OPQRS 5
-	"####" T 0 A_PlaySound("body/hitfloor")
-	"####" T 5
-	"####" U -1
+	"####" EFGHI 5
+	"####" J 0 A_PlaySound("body/hitfloor")
+	"####" J 5
+	"####" K -1
 	Stop
   Death.CookieIce: //This state is already available to all actors by default under the name "Ice", but Cookiedemon's ice balls use a different damage type to prevent player damage, so this is necessary
 	"####" "#" 5 A_GenericFreezeDeath

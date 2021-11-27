@@ -174,8 +174,6 @@ actor Changeling replaces LostSoul
   KickTaunt:
   	TNT1 A 0 A_PlaySound("player/kicktaunt", CHAN_AUTO)
 	Stop
-  Raise:
-	Stop
   Crush:
 	Stop
    }
