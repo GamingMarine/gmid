@@ -395,7 +395,8 @@ DIFFSELECT7 = "You have absolutely no idea what you're dealing with. You will kn
 
 GMIDTITLEMAP = "Your Adventure Begins";
 
-CUBENOPE = "You don't have enough souls to use the \crSoul Cube\c-!";
+BOTTLENOPE = "You are already in perfect condition.";
+CUBENOPE = "The \crSoul Cube\c- has not yet been satisfied...";
 CUBEREADY = "The \crSoul Cube\c- is ready to be used!";
 
 //Options Menu

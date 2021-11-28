@@ -12,6 +12,7 @@ Actor SoulCube : weapon
    Weapon.SlotNumber 7
    +WEAPON.NOALERT
    +WEAPON.NO_AUTO_SWITCH
+   +WEAPON.NOAUTOAIM
    +FORCEXYBILLBOARD
    AttackSound "SoulCube/Use" 
    damagetype Cube

@@ -188,76 +188,76 @@ flat FWATER4
 	warp2 flat WATERF6
 	warp2 flat WATERF7
 	warp2 flat WATERF8
-
+	
 //Light Sludge
 flat SLIME01
-    pic LSLUDGE1 tics 4
-	pic LSLUDGE2 tics 4
-	pic LSLUDGE3 tics 4
-	pic LSLUDGE4 tics 4
+    pic SLIME01 tics 4
+	pic SLIME02 tics 4
+	pic SLIME03 tics 4
+	pic SLIME04 tics 4
 	
 flat SLIME02
-    pic LSLUDGE2 tics 4
-	pic LSLUDGE3 tics 4
-	pic LSLUDGE4 tics 4
-	pic LSLUDGE1 tics 4
+    pic SLIME02 tics 4
+	pic SLIME03 tics 4
+	pic SLIME04 tics 4
+	pic SLIME01 tics 4
 	
 flat SLIME03
-    pic LSLUDGE3 tics 4
-	pic LSLUDGE4 tics 4
-	pic LSLUDGE1 tics 4
-	pic LSLUDGE2 tics 4	
+    pic SLIME03 tics 4
+	pic SLIME04 tics 4
+	pic SLIME01 tics 4
+	pic SLIME02 tics 4	
 	
 flat SLIME04
-    pic LSLUDGE4 tics 4
-	pic LSLUDGE1 tics 4
-	pic LSLUDGE2 tics 4
-	pic LSLUDGE3 tics 4	
+    pic SLIME04 tics 4
+	pic SLIME01 tics 4
+	pic SLIME02 tics 4
+	pic SLIME03 tics 4	
 	
-	warp2 flat LSLUDGE1
-	warp2 flat LSLUDGE2
-	warp2 flat LSLUDGE3
-	warp2 flat LSLUDGE4
+	warp2 flat SLIME01
+	warp2 flat SLIME02
+	warp2 flat SLIME03
+	warp2 flat SLIME04
 	
 //Dark Sludge
 flat SLIME05
-    pic DSLUDGE1 tics 4
-	pic DSLUDGE2 tics 4
-	pic DSLUDGE3 tics 4
-	pic DSLUDGE4 tics 4
-	pic DSLUDGE5 tics 4
-	pic DSLUDGE6 tics 4
+    pic SLIME05 tics 4
+	pic SLIME06 tics 4
+	pic SLIME07 tics 4
+	pic SLIME08 tics 4
+	pic SLIME08A tics 4
+	pic SLIME08B tics 4
 
 flat SLIME06
-    pic DSLUDGE2 tics 4
-	pic DSLUDGE3 tics 4
-	pic DSLUDGE4 tics 4
-	pic DSLUDGE5 tics 4
-	pic DSLUDGE6 tics 4
-	pic DSLUDGE1 tics 4
+    pic SLIME06 tics 4
+	pic SLIME07 tics 4
+	pic SLIME08 tics 4
+	pic SLIME08A tics 4
+	pic SLIME08B tics 4
+	pic SLIME05 tics 4
 
 flat SLIME07
-    pic DSLUDGE3 tics 4
-	pic DSLUDGE4 tics 4
-	pic DSLUDGE5 tics 4
-	pic DSLUDGE1 tics 4
-	pic DSLUDGE2 tics 4
-	pic DSLUDGE3 tics 4
+    pic SLIME07 tics 4
+	pic SLIME08 tics 4
+	pic SLIME08A tics 4
+	pic SLIME08B tics 4
+	pic SLIME05 tics 4
+	pic SLIME06 tics 4
 
 flat SLIME08
-    pic DSLUDGE4 tics 4
-	pic DSLUDGE5 tics 4
-	pic DSLUDGE6 tics 4
-	pic DSLUDGE1 tics 4
-	pic DSLUDGE2 tics 4
-	pic DSLUDGE3 tics 4	
+    pic SLIME08 tics 4
+	pic SLIME08A tics 4
+	pic SLIME08B tics 4
+	pic SLIME05 tics 4
+	pic SLIME06 tics 4
+	pic SLIME07 tics 4
 
-	warp2 flat DSLUDGE1
-	warp2 flat DSLUDGE2
-	warp2 flat DSLUDGE3
-	warp2 flat DSLUDGE4
-	warp2 flat DSLUDGE5
-	warp2 flat DSLUDGE6
+	warp2 flat SLIME05
+	warp2 flat SLIME06
+	warp2 flat SLIME07
+	warp2 flat SLIME08
+	warp2 flat SLIME08A
+	warp2 flat SLIME08B
 	
 //Lava
 flat LAVA1

@@ -12,6 +12,7 @@ Actor GMIDMissileLauncher : RocketLauncher
 	Weapon.UpSound "rockpump"
 	Tag "$TAG_LAUNCHER"
 	+WEAPON.NOALERT
+	+WEAPON.NOAUTOAIM
 	Inventory.PickupMessage "$GOTMLAUNCHER"
 	Obituary "$OB_LAUNCHER"
 	Inventory.Icon "LAUNA0B0"
@@ -122,6 +123,7 @@ Actor GMIDRocket : Rocket replaces Rocket
 	Speed 50
 	Damage 25
 	-ROCKETTRAIL +BRIGHT
+	SeeSound "null"
 	DeathSound "null"
 	Obituary "$OB_LAUNCHER"
 	Decal Scorch

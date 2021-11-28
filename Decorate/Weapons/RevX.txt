@@ -18,6 +18,7 @@ actor RevX : Weapon
     Weapon.upsound "REVXUP"
 	+WEAPON.AMMO_OPTIONAL
 	+WEAPON.NOALERT
+	+WEAPON.NOAUTOAIM
     Scale 0.75
 	Inventory.Icon "RIFLA0B0"
     States

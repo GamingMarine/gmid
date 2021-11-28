@@ -59,6 +59,7 @@ actor Rourity : MasterForceBase replaces Cacodemon
 	Goto ContinueDeath2
   XDeath:
   Death.GMIDExplosion:
+  Death.GMIDRailgun:
 	ROTY A 0 A_GiveToTarget("ScoreItem",2000)
 	ROTY A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo3", AAPTR_PLAYER1)
 	Goto ContinueXDeath
@@ -124,6 +125,7 @@ actor TrixieKir : MasterForceBase replaces HellKnight
 	Goto ContinueDeath2
   XDeath:
   Death.GMIDExplosion:
+  Death.GMIDRailgun:
 	TRKI A 0 A_GiveToTarget("ScoreItem",2500)
 	TRKI A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo3", AAPTR_PLAYER1)
 	Goto ContinueXDeath
@@ -241,6 +243,7 @@ actor FlutterMedic : MasterForceBase replaces Archvile
 	Goto ContinueDeath2
   XDeath:
   Death.GMIDExplosion:
+  Death.GMIDRailgun:
 	FLMD A 0 A_GiveToTarget("ScoreItem",3500)
 	FLMD A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo3", AAPTR_PLAYER1)
 	Goto ContinueXDeath

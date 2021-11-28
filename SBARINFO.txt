@@ -43,54 +43,14 @@
 
 // FACE
 
-mugshot "Normal", health2
-{
-	{ST00, ST01, ST02} 17;
-}
-
-mugshot "Pain", healthspecial, directional
-{
-	{TR00, KILL0, TL00} 35;
-}
-
 mugshot "Rampage", health
 {
 	RAG0 1;
 }
 
-mugshot "Ouch", health
+mugshot "God", health2
 {
-	OUCH0 35;
-}
-
-mugshot "Grin", health
-{
-	EVL0 70;
-}
-
-mugshot "God"
-{
-	{GOD0, GOD1, GOD2} 17;
-}
-
-mugshot "GodAnimated"
-{
-	{GOD0, GOD1, GOD2} 17;
-}
-
-mugshot "Death"
-{
-	DEAD0 -1;
-}
-
-mugshot "XDeath"
-{
-	XDTH0 10;
-	XDTH1 10;
-	XDTH2 10;
-	XDTH3 10;
-	XDTH4 10;
-	XDTH5 -1;
+	{GOD00, GOD01, GOD02} 17;
 }
 
 mugshot "XDeath"
@@ -130,7 +90,7 @@ drawmugshot 5, xdeathface, 0, 165;
 // Armor
 drawimage armoricon, 17, 162;
 drawnumber 4, DIGFONT, yellow, armor, whennotzero, interpolate(4), 78, 141, red, 25, green, 51;
-drawnumber 8, SMALLFONT, blue, savepercent, 30, 158, green, 74, red, 94;
+drawnumber 8, SMALLFONT, blue, savepercent, whennotzero, 30, 158, green, 74, red, 94;
        
 // Health
 drawnumber 4, DIGFONT, yellow, health, interpolate(4), 77, 173, red, 25, green, 51;
@@ -219,12 +179,12 @@ DrawKeyBar 3, horizontal, auto, 90, 187, 3;
 drawselectedinventory SMALLFONT, 280, 120;
 
 // Face
-drawmugshot 5, 0, 165;
+drawmugshot 5, xdeathface, 0, 165;
 
 // Armor
 drawimage armoricon, 17, 162;
 drawnumber 4, DIGFONT, yellow, armor, whennotzero, interpolate(4), 78, 141, red, 25, green, 51;
-drawnumber 8, SMALLFONT, blue, savepercent, 30, 158, green, 74, red, 94;
+drawnumber 8, SMALLFONT, blue, savepercent, whennotzero, 30, 158, green, 74, red, 94;
        
 // Health
 drawnumber 4, DIGFONT, yellow, health, interpolate(4), 77, 173, red, 25, green, 51;

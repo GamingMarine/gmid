@@ -15,17 +15,12 @@ Song name: The Battle with the Natives
 Game of origin: Revolution X
 Composer: Chris Granner, Vince Pontarelli
 
-4. D_E3M8
-Song name: Warlord
-Game of origin: Unreal
-Composers: Alexander Brandon, Michiel van den Bos
-
-5. DETHMINE
+4. DETHMINE
 Song name: Death in the Mines
 Game of origin: Waxworks (DOS, Roland MT-32)
 Composer: Jezz Woodroffe
 
-6. D_DOME
+5. D_DOME
 Song name: Pleasure Dome
 Game of origin: Total Carnage (SNES)
 Composers: Jon Hey, Byte Size Sound

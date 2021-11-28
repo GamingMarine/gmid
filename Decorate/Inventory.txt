@@ -27,6 +27,7 @@ ACTOR HealthBackpack : CustomInventory
 		GiveCheck2:
 		TNT1 A 0 A_JumpIf(CallACS("Check max health") == TRUE, "Give")
 		TNT1 A 0 A_JumpIfInventory("DidHeal", 1, "PlaySound")
+		TNT1 A 0 A_Print("$BOTTLENOPE")
 		Fail
 		PlaySound:
 		TNT1 A 0 A_TakeInventory("Didheal", 1)

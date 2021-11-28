@@ -15,6 +15,7 @@ actor ExcessiveForce : Weapon
     Weapon.upsound "duke/weaponup"
     Scale 0.75
 	+WEAPON.NOALERT
+	+WEAPON.NOAUTOAIM
 	Inventory.Icon "NCHGZ0Y0"
     States
     {

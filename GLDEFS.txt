@@ -480,6 +480,8 @@ frame FGUYN { light SMALLREDTORCH }
 frame FGUYO { light SMALLREDTORCH }
 frame FGUYP { light SMALLREDTORCH }
 frame FGUYQ { light SMALLREDTORCH }
+frame FGUYR { light BurningOut1 }
+frame FGUYS { light BurningOut2 }
 }
 
 object BurningMarine
@@ -501,6 +503,8 @@ frame FGUYN { light SMALLREDTORCH }
 frame FGUYO { light SMALLREDTORCH }
 frame FGUYP { light SMALLREDTORCH }
 frame FGUYQ { light SMALLREDTORCH }
+frame FGUYR { light BurningOut1 }
+frame FGUYS { light BurningOut2 }
 }
 
 //===============

@@ -406,3 +406,19 @@ flickerlight CDICEBALL_X6
     secondarySize 120
     chance 0.25
 }
+
+flickerlight BurningOut1
+{
+    color 0.7 0.35 0.14
+    size 36
+    secondarySize 41
+    offset 0 35 0
+}
+
+flickerlight BurningOut1
+{
+    color 0.7 0.35 0.14
+    size 18
+    secondarySize 21
+    offset 0 35 0
+}

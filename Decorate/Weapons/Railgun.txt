@@ -32,7 +32,7 @@ Actor GMIDRailgun : PlasmaRifle
 			RGUN A 0 A_PlaySound("DoubleDamage/Use")
 		ContinueFire:
 			RGUN A 0 A_SetPitch(pitch-1)
-			RGUN B 0 BRIGHT A_RailAttack(300, 0, 1, "DarkGreen", "Green")
+			RGUN B 0 BRIGHT A_RailAttack(300, 0, 1, "DarkGreen", "Green",0,0,"GMIDRailgunPuff")
 			RGUN B 1 Bright A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 			RGUN C 0 A_SetPitch(pitch+0.50)
 			RGUN C 1 Bright A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
@@ -108,4 +108,15 @@ Actor GMIDRailgun : PlasmaRifle
 			RGUN A 22
 			Goto LightDone
 	}
+}
+
+Actor GMIDRailgunPuff : BulletPuff
+{
+  DamageType "GMIDRailgun"
+  States
+  {
+  Spawn:
+	TNT1 A 0
+	Stop
+  }
 }

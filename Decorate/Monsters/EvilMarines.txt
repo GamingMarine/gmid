@@ -162,6 +162,7 @@ actor EvilMarine_Rifle //Evil! EEEVILLL
 	Stop
   XDeath:
   Death.GMIDExplosion:
+  Death.GMIDRailgun:
 	TNT1 A 0 A_GiveToTarget("ScoreItem",250)
 	TNT1 A 0 A_XScream
 	TNT1 A 0 A_NoBlocking
@@ -260,149 +261,16 @@ actor EvilMarine_Minigun : EvilMarine_Rifle
    }
 }
 
-Actor BurningMarine
+Actor BurningMarine : BurningBoi
 {
-	+DropOff
-    Radius 20
-    Height 56
-    Speed 8
-    Scale 0.5
 	States
 	{
 	Spawn:
 		FGUY A 0 Bright A_Look
 		Goto See
 	See:
-		FGUY A 0 A_PlaySound("bgrunt/burn", CHAN_AUTO)
-		FGUY AAA 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY BBB 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY CCC 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY DDD 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY EEE 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY FFF 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY AAA 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY BBB 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY CCC 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY DDD 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY EEE 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY FFF 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY AAA 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY BBB 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY CCC 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY DDD 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY EEE 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY FFF 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY AAA 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY BBB 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY CCC 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY DDD 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY EEE 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY FFF 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY AAA 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY BBB 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY CCC 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY DDD 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY EEE 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY FFF 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY AAA 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY BBB 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY CCC 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY DDD 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY EEE 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY FFF 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY AAA 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY BBB 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY CCC 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY DDD 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY EEE 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY FFF 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY AAA 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY BBB 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY CCC 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY DDD 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY EEE 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY FFF 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY AAA 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY BBB 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY CCC 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY DDD 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY EEE 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY FFF 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY AAA 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY BBB 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY CCC 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY DDD 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY EEE 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY FFF 1 Bright A_Wander
-		FGUY A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
-		FGUY A 0 A_Jump(1, "Toasty")
-		Goto Death
-	Toasty:
-		FGUY A 0 A_SpawnItem("ToastyGuy")
-		Goto Death
-	Death:
-		FGUY H 0 A_Fall
-		FGUY HIJKLMNOPQRS 6 Bright
-		FGUT T -1
-		Stop
-		}
+		FGUY A 0 A_PlaySound("bgrunt/burn", CHAN_VOICE)
+		FGUY A 1 Bright A_Wander
+		Goto ContinueBurn
 	}
+}
