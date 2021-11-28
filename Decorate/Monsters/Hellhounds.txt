@@ -160,7 +160,7 @@ actor AdvancedHellhound replaces PainElemental
 		AHOU A 10 A_Look 
 		Loop
 	Spawn2:
-		AHOX A 10 A_Look
+		AHOU N 10 A_Look
 		Loop
 	See:
 		AHOU B 0 A_JumpIfHealthLower(100, "See2")
@@ -189,7 +189,7 @@ actor AdvancedHellhound replaces PainElemental
 	Missile2:
 		AHOX F 5 A_FaceTarget
 		AHOX G 7 A_FatAttack2("AdvancedHellhoundShot")
-		AHOX A 7
+		AHOU N 7
 		Goto See
 	Pain:
 		AHOU J 0 A_JumpIfHealthLower(100, "Pain2")

@@ -4141,6 +4141,491 @@ Brightmap Sprite HOUNU0
 Map "Brightmaps/GMID/HOUNU0.png"
 }
 
+Brightmap Sprite AHOUA1
+{
+Map "Brightmaps/GMID/AHOUA1.png"
+}
+
+Brightmap Sprite AHOUA7A3
+{
+Map "Brightmaps/GMID/AHOUA7A3.png"
+}
+
+Brightmap Sprite AHOUA8A2
+{
+Map "Brightmaps/GMID/AHOUA8A2.png"
+}
+
+Brightmap Sprite AHOUB1
+{
+Map "Brightmaps/GMID/AHOUB1.png"
+}
+
+Brightmap Sprite AHOUB7B3
+{
+Map "Brightmaps/GMID/AHOUB7B3.png"
+}
+
+Brightmap Sprite AHOUB8B2
+{
+Map "Brightmaps/GMID/AHOUB8B2.png"
+}
+
+Brightmap Sprite AHOUC1
+{
+Map "Brightmaps/GMID/AHOUC1.png"
+}
+
+Brightmap Sprite AHOUC7C3
+{
+Map "Brightmaps/GMID/AHOUC7C3.png"
+}
+
+Brightmap Sprite AHOUC8C2
+{
+Map "Brightmaps/GMID/AHOUC8C2.png"
+}
+
+Brightmap Sprite AHOUD1
+{
+Map "Brightmaps/GMID/AHOUD1.png"
+}
+
+Brightmap Sprite AHOUD7D3
+{
+Map "Brightmaps/GMID/AHOUD7D3.png"
+}
+
+Brightmap Sprite AHOUD8D2
+{
+Map "Brightmaps/GMID/AHOUD8D2.png"
+}
+
+Brightmap Sprite AHOUE1
+{
+Map "Brightmaps/GMID/AHOUE1.png"
+}
+
+Brightmap Sprite AHOUE7E3
+{
+Map "Brightmaps/GMID/AHOUE7E3.png"
+}
+
+Brightmap Sprite AHOUE8E2
+{
+Map "Brightmaps/GMID/AHOUE8E2.png"
+}
+
+Brightmap Sprite AHOUF1
+{
+Map "Brightmaps/GMID/AHOUF1.png"
+}
+
+Brightmap Sprite AHOUF7F3
+{
+Map "Brightmaps/GMID/AHOUF7F3.png"
+}
+
+Brightmap Sprite AHOUF8F2
+{
+Map "Brightmaps/GMID/AHOUF8F2.png"
+}
+
+Brightmap Sprite AHOUG1
+{
+Map "Brightmaps/GMID/AHOUG1.png"
+}
+
+Brightmap Sprite AHOUG7I3
+{
+Map "Brightmaps/GMID/AHOUG7I3.png"
+}
+
+Brightmap Sprite AHOUG8I2
+{
+Map "Brightmaps/GMID/AHOUG8G2.png"
+}
+
+Brightmap Sprite AHOUH1
+{
+Map "Brightmaps/GMID/AHOUH1.png"
+}
+
+Brightmap Sprite AHOUH7J3
+{
+Map "Brightmaps/GMID/AHOUH7J3.png"
+}
+
+Brightmap Sprite AHOUH8J2
+{
+Map "Brightmaps/GMID/AHOUH8J2.png"
+}
+
+Brightmap Sprite AHOUI1
+{
+Map "Brightmaps/GMID/AHOUI1.png"
+}
+
+Brightmap Sprite AHOUI7G3
+{
+Map "Brightmaps/GMID/AHOUI7G3.png"
+}
+
+Brightmap Sprite AHOUI8G2
+{
+Map "Brightmaps/GMID/AHOUI8G2.png"
+}
+
+Brightmap Sprite AHOUJ1
+{
+Map "Brightmaps/GMID/AHOUJ1.png"
+}
+
+Brightmap Sprite AHOUJ7H3
+{
+Map "Brightmaps/GMID/AHOUJ7H3.png"
+}
+
+Brightmap Sprite AHOUJ8H2
+{
+Map "Brightmaps/GMID/AHOUJ8H2.png"
+}
+
+Brightmap Sprite AHOUK1
+{
+Map "Brightmaps/GMID/AHOUK1.png"
+}
+
+Brightmap Sprite AHOUK2
+{
+Map "Brightmaps/GMID/AHOUK2.png"
+}
+
+Brightmap Sprite AHOUK3
+{
+Map "Brightmaps/GMID/AHOUK3.png"
+}
+
+Brightmap Sprite AHOUK4
+{
+Map "Brightmaps/GMID/AHOUK4.png"
+}
+
+Brightmap Sprite AHOUK5
+{
+Map "Brightmaps/GMID/AHOUK5.png"
+}
+
+Brightmap Sprite AHOUK6
+{
+Map "Brightmaps/GMID/AHOUK6.png"
+}
+
+Brightmap Sprite AHOUK7
+{
+Map "Brightmaps/GMID/AHOUK7.png"
+}
+
+Brightmap Sprite AHOUK8
+{
+Map "Brightmaps/GMID/AHOUK8.png"
+}
+
+Brightmap Sprite AHOUL1
+{
+Map "Brightmaps/GMID/AHOUL1.png"
+}
+
+Brightmap Sprite AHOUL2
+{
+Map "Brightmaps/GMID/AHOUL2.png"
+}
+
+Brightmap Sprite AHOUL3
+{
+Map "Brightmaps/GMID/AHOUL3.png"
+}
+
+Brightmap Sprite AHOUL4
+{
+Map "Brightmaps/GMID/AHOUL4.png"
+}
+
+Brightmap Sprite AHOUL5
+{
+Map "Brightmaps/GMID/AHOUL5.png"
+}
+
+Brightmap Sprite AHOUL6
+{
+Map "Brightmaps/GMID/AHOUL6.png"
+}
+
+Brightmap Sprite AHOUL7
+{
+Map "Brightmaps/GMID/AHOUL7.png"
+}
+
+Brightmap Sprite AHOUL8
+{
+Map "Brightmaps/GMID/AHOUL8.png"
+}
+
+Brightmap Sprite AHOUM1
+{
+Map "Brightmaps/GMID/AHOUM1.png"
+}
+
+Brightmap Sprite AHOUM2
+{
+Map "Brightmaps/GMID/AHOUM2.png"
+}
+
+Brightmap Sprite AHOUM3
+{
+Map "Brightmaps/GMID/AHOUM3.png"
+}
+
+Brightmap Sprite AHOUM6
+{
+Map "Brightmaps/GMID/AHOUM6.png"
+}
+
+Brightmap Sprite AHOUM7
+{
+Map "Brightmaps/GMID/AHOUM7.png"
+}
+
+Brightmap Sprite AHOUM8
+{
+Map "Brightmaps/GMID/AHOUM8.png"
+}
+
+Brightmap Sprite AHOUN1
+{
+Map "Brightmaps/GMID/AHOUN1.png"
+}
+
+Brightmap Sprite AHOUN2
+{
+Map "Brightmaps/GMID/AHOUN2.png"
+}
+
+Brightmap Sprite AHOUN3
+{
+Map "Brightmaps/GMID/AHOUN3.png"
+}
+
+Brightmap Sprite AHOUN7
+{
+Map "Brightmaps/GMID/AHOUN7.png"
+}
+
+Brightmap Sprite AHOUN8
+{
+Map "Brightmaps/GMID/AHOUM8.png"
+}
+
+Brightmap Sprite AHOXA1
+{
+Map "Brightmaps/GMID/AHOXA1.png"
+}
+
+Brightmap Sprite AHOXA2
+{
+Map "Brightmaps/GMID/AHOXA2.png"
+}
+
+Brightmap Sprite AHOXA3
+{
+Map "Brightmaps/GMID/AHOXA3.png"
+}
+
+Brightmap Sprite AHOXA7
+{
+Map "Brightmaps/GMID/AHOUB7B3.png"
+}
+
+Brightmap Sprite AHOXA8
+{
+Map "Brightmaps/GMID/AHOXA8.png"
+}
+
+Brightmap Sprite AHOXB1
+{
+Map "Brightmaps/GMID/AHOXB1.png"
+}
+
+Brightmap Sprite AHOXB2
+{
+Map "Brightmaps/GMID/AHOXB2.png"
+}
+
+Brightmap Sprite AHOXB3
+{
+Map "Brightmaps/GMID/AHOXB3.png"
+}
+
+Brightmap Sprite AHOXB7
+{
+Map "Brightmaps/GMID/AHOUC7C3.png"
+}
+
+Brightmap Sprite AHOXB8
+{
+Map "Brightmaps/GMID/AHOXB8.png"
+}
+
+Brightmap Sprite AHOXC1
+{
+Map "Brightmaps/GMID/AHOXC1.png"
+}
+
+Brightmap Sprite AHOXC2
+{
+Map "Brightmaps/GMID/AHOXC2.png"
+}
+
+Brightmap Sprite AHOXC3
+{
+Map "Brightmaps/GMID/AHOXC3.png"
+}
+
+Brightmap Sprite AHOXC7
+{
+Map "Brightmaps/GMID/AHOUD7D3.png"
+}
+
+Brightmap Sprite AHOXC8
+{
+Map "Brightmaps/GMID/AHOXC8.png"
+}
+
+Brightmap Sprite AHOXD1
+{
+Map "Brightmaps/GMID/AHOXD1.png"
+}
+
+Brightmap Sprite AHOXD2
+{
+Map "Brightmaps/GMID/AHOXD2.png"
+}
+
+Brightmap Sprite AHOXD3
+{
+Map "Brightmaps/GMID/AHOXD3.png"
+}
+
+Brightmap Sprite AHOXD7
+{
+Map "Brightmaps/GMID/AHOUE7E3.png"
+}
+
+Brightmap Sprite AHOXD8
+{
+Map "Brightmaps/GMID/AHOXD8.png"
+}
+
+Brightmap Sprite AHOXE1
+{
+Map "Brightmaps/GMID/AHOXE1.png"
+}
+
+Brightmap Sprite AHOXE2
+{
+Map "Brightmaps/GMID/AHOXE2.png"
+}
+
+Brightmap Sprite AHOXE3
+{
+Map "Brightmaps/GMID/AHOXE3.png"
+}
+
+Brightmap Sprite AHOXE7
+{
+Map "Brightmaps/GMID/AHOUF7F3.png"
+}
+
+Brightmap Sprite AHOXE8
+{
+Map "Brightmaps/GMID/AHOXE8.png"
+}
+
+Brightmap Sprite AHOXF1
+{
+Map "Brightmaps/GMID/AHOXF1.png"
+}
+
+Brightmap Sprite AHOXF2
+{
+Map "Brightmaps/GMID/AHOXF2.png"
+}
+
+Brightmap Sprite AHOXF3
+{
+Map "Brightmaps/GMID/AHOXF3.png"
+}
+
+Brightmap Sprite AHOXF7
+{
+Map "Brightmaps/GMID/AHOUG7I3.png"
+}
+
+Brightmap Sprite AHOXF8
+{
+Map "Brightmaps/GMID/AHOXF8.png"
+}
+
+Brightmap Sprite AHOXG1
+{
+Map "Brightmaps/GMID/AHOXG1.png"
+}
+
+Brightmap Sprite AHOXG2
+{
+Map "Brightmaps/GMID/AHOXG2.png"
+}
+
+Brightmap Sprite AHOXG3
+{
+Map "Brightmaps/GMID/AHOXG3.png"
+}
+
+Brightmap Sprite AHOXG7
+{
+Map "Brightmaps/GMID/AHOUH7J3.png"
+}
+
+Brightmap Sprite AHOXG8
+{
+Map "Brightmaps/GMID/AHOXG8.png"
+}
+
+Brightmap Sprite AHOXH0
+{
+Map "Brightmaps/GMID/AHOXH0.png"
+}
+
+Brightmap Sprite AHOXI0
+{
+Map "Brightmaps/GMID/AHOXI0.png"
+}
+
+Brightmap Sprite AHOXJ0
+{
+Map "Brightmaps/GMID/AHOXJ0.png"
+}
+
+Brightmap Sprite AHOXK0
+{
+Map "Brightmaps/GMID/AHOXK0.png"
+}
+
+Brightmap Sprite AHOXL0
+{
+Map "Brightmaps/GMID/AHOXL0.png"
+}
+
 Brightmap Flat MAGMA1
 {
 Map "Brightmaps/GMID/MAGMA.png"

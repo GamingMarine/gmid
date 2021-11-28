@@ -398,6 +398,18 @@ frame FBALG { light IMPBALL_X4 }
 frame FBALH { light IMPBALL_X5 }
 }
 
+object AdvancedHellhoundShot
+{
+frame FBALA { light IMPBALL }
+frame FBALB { light IMPBALL }
+frame FBALC { light IMPBALL }
+frame FBALD { light IMPBALL_X1 }
+frame FBALE { light IMPBALL_X2 }
+frame FBALF { light IMPBALL_X3 }
+frame FBALG { light IMPBALL_X4 }
+frame FBALH { light IMPBALL_X5 }
+}
+
 Object VinylStorm
 {
   Frame VSTRF { Light DOUBLER }
