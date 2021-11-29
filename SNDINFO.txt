@@ -49,6 +49,7 @@ player/gurgle2	 GURGLE2
 player/gurgle3	 GURGLE3
 player/gurgle4	 GURGLE4
 player/drown	 GMDROWN
+$playerosnud	player	GamingMarine	*dive		gmsubmrg
 $playersound	player	GamingMarine	*surface	gmsurfac
 $playersound	player	GamingMarine	*gasp		gmchoke
 //(Mostly) based on the Legacy releases of GamingMarine in Doom
