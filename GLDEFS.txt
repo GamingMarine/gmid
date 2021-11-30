@@ -255,10 +255,10 @@ object PlasmaCannonProjectile
 Object SonicXRainbow
 {
   Frame SNXRF { Light EnemyPistolAttack }
-  Frame BBQ1A { Light SMALLREDTORCH }
-  Frame BBQ1B { Light SMALLREDTORCH }
-  Frame BBQ1C { Light SMALLREDTORCH }
-  Frame BBQ1D { Light SMALLREDTORCH }
+  Frame BBQ1A { Light BurningEnemy }
+  Frame BBQ1B { Light BurningEnemy }
+  Frame BBQ1C { Light BurningEnemy }
+  Frame BBQ1D { Light BurningEnemy }
 }
 
 Object ZSecGunner
@@ -284,10 +284,10 @@ Object EvilMarine_Rifle
 Object Octaleb
 {
   Frame OCTLF { Light EnemyShotgunAttack }
-  Frame BBQ0A { Light SMALLREDTORCH }
-  Frame BBQ0B { Light SMALLREDTORCH }
-  Frame BBQ0C { Light SMALLREDTORCH }
-  Frame BBQ0D { Light SMALLREDTORCH }
+  Frame BBQ0A { Light BurningEnemy }
+  Frame BBQ0B { Light BurningEnemy }
+  Frame BBQ0C { Light BurningEnemy }
+  Frame BBQ0D { Light BurningEnemy }
 }
 
 Object ZSecArsonist
@@ -308,10 +308,10 @@ Object EvilMarine_Shotgun
 Object AppleSheriff
 {
   Frame APLSF { Light EnemyChaingunAttack }
-  Frame BBQ3A { Light SMALLREDTORCH }
-  Frame BBQ3B { Light SMALLREDTORCH }
-  Frame BBQ3C { Light SMALLREDTORCH }
-  Frame BBQ3D { Light SMALLREDTORCH }
+  Frame BBQ3A { Light BurningEnemy }
+  Frame BBQ3B { Light BurningEnemy }
+  Frame BBQ3C { Light BurningEnemy }
+  Frame BBQ3D { Light BurningEnemy }
 }
 
 Object ChaingunMajor
@@ -333,10 +333,10 @@ Object EvilMarine_Minigun
 Object AmyPie
 {
   Frame AMPIF { Light EnemyPistolAttack }
-  Frame BBQ2A { Light SMALLREDTORCH }
-  Frame BBQ2B { Light SMALLREDTORCH }
-  Frame BBQ2C { Light SMALLREDTORCH }
-  Frame BBQ2D { Light SMALLREDTORCH }
+  Frame BBQ2A { Light BurningEnemy }
+  Frame BBQ2B { Light BurningEnemy }
+  Frame BBQ2C { Light BurningEnemy }
+  Frame BBQ2D { Light BurningEnemy }
 }
 
 object Changeling
@@ -352,19 +352,19 @@ Frame PSMM { Light SoulLight2 }
 Object Rourity
 {
   Frame ROTYF { Light EnemyPistolAttack }
-  Frame BBQ6A { Light SMALLREDTORCH }
-  Frame BBQ6B { Light SMALLREDTORCH }
-  Frame BBQ6C { Light SMALLREDTORCH }
-  Frame BBQ6D { Light SMALLREDTORCH }
+  Frame BBQ6A { Light BurningEnemy }
+  Frame BBQ6B { Light BurningEnemy }
+  Frame BBQ6C { Light BurningEnemy }
+  Frame BBQ6D { Light BurningEnemy }
 }
 
 object TrixieKir
 {
   frame TRKIF { light NewBaronBall }
-  Frame BBQ9A { Light SMALLREDTORCH }
-  Frame BBQ9B { Light SMALLREDTORCH }
-  Frame BBQ9C { Light SMALLREDTORCH }
-  Frame BBQ9D { Light SMALLREDTORCH }
+  Frame BBQ9A { Light BurningEnemy }
+  Frame BBQ9B { Light BurningEnemy }
+  Frame BBQ9C { Light BurningEnemy }
+  Frame BBQ9D { Light BurningEnemy }
 }
 
 object NewBaronBall
@@ -380,10 +380,10 @@ object NewBaronBall
 object TwiMage
 {
   frame TWMAF { light NewBaronBall }
-  Frame BBQ7A { Light SMALLREDTORCH }
-  Frame BBQ7B { Light SMALLREDTORCH }
-  Frame BBQ7C { Light SMALLREDTORCH }
-  Frame BBQ7D { Light SMALLREDTORCH }
+  Frame BBQ7A { Light BurningEnemy }
+  Frame BBQ7B { Light BurningEnemy }
+  Frame BBQ7C { Light BurningEnemy }
+  Frame BBQ7D { Light BurningEnemy }
 }
 
 object NewFatShot
@@ -413,10 +413,10 @@ frame FBALH { light IMPBALL_X5 }
 Object VinylStorm
 {
   Frame VSTRF { Light DOUBLER }
-  Frame BBQ8A { Light SMALLREDTORCH }
-  Frame BBQ8B { Light SMALLREDTORCH }
-  Frame BBQ8C { Light SMALLREDTORCH }
-  Frame BBQ8D { Light SMALLREDTORCH }
+  Frame BBQ8A { Light BurningEnemy }
+  Frame BBQ8B { Light BurningEnemy }
+  Frame BBQ8C { Light BurningEnemy }
+  Frame BBQ8D { Light BurningEnemy }
 }
 
 Object Blaster_RifleShot
@@ -432,19 +432,24 @@ Frame GMRNF { Light EnemyPistolAttack }
 Object NewbieHooves
 {
   Frame NWBHF { Light EnemyPistolAttack }
-  Frame BBQ5A { Light SMALLREDTORCH }
-  Frame BBQ5B { Light SMALLREDTORCH }
-  Frame BBQ5C { Light SMALLREDTORCH }
-  Frame BBQ5D { Light SMALLREDTORCH }
+  Frame BBQ5A { Light BurningEnemy }
+  Frame BBQ5B { Light BurningEnemy }
+  Frame BBQ5C { Light BurningEnemy }
+  Frame BBQ5D { Light BurningEnemy }
 }
 
 Object FlutterMedic
 {
   Frame FLMDF { Light EnemyPistolAttack }
-  Frame BBQ4A { Light SMALLREDTORCH }
-  Frame BBQ4B { Light SMALLREDTORCH }
-  Frame BBQ4C { Light SMALLREDTORCH }
-  Frame BBQ4D { Light SMALLREDTORCH }
+  Frame BBQ4A { Light BurningEnemy }
+  Frame BBQ4B { Light BurningEnemy }
+  Frame BBQ4C { Light BurningEnemy }
+  Frame BBQ4D { Light BurningEnemy }
+}
+
+Object NONBoy
+{
+  Frame NONBI { Light EnemyPistolAttack }
 }
 
 object CookiedemonFireball
@@ -475,48 +480,48 @@ frame CICEI { light CDICEBALL_X6 }
 
 object BurningBoi
 {
-frame FGUYA { light SMALLREDTORCH }
-frame FGUYB { light SMALLREDTORCH }
-frame FGUYC { light SMALLREDTORCH }
-frame FGUYD { light SMALLREDTORCH }
-frame FGUYE { light SMALLREDTORCH }
-frame FGUYF { light SMALLREDTORCH }
-frame FGUYG { light SMALLREDTORCH }
-frame FGUYH { light SMALLREDTORCH }
-frame FGUYI { light SMALLREDTORCH }
-frame FGUYJ { light SMALLREDTORCH }
-frame FGUYK { light SMALLREDTORCH }
-frame FGUYL { light SMALLREDTORCH }
-frame FGUYM { light SMALLREDTORCH }
-frame FGUYN { light SMALLREDTORCH }
-frame FGUYO { light SMALLREDTORCH }
-frame FGUYP { light SMALLREDTORCH }
-frame FGUYQ { light SMALLREDTORCH }
-frame FGUYR { light BurningOut1 }
-frame FGUYS { light BurningOut2 }
+frame FGUYA { light BurningEnemy }
+frame FGUYB { light BurningEnemy }
+frame FGUYC { light BurningEnemy }
+frame FGUYD { light BurningEnemy }
+frame FGUYE { light BurningEnemy }
+frame FGUYF { light BurningEnemy }
+frame FGUYG { light BurningEnemy }
+frame FGUYH { light BurningEnemy }
+frame FGUYI { light BurningEnemy }
+frame FGUYJ { light BurningEnemy }
+frame FGUYK { light BurningEnemy }
+frame FGUYL { light BurningEnemy }
+frame FGUYM { light BurningEnemy }
+frame FGUYN { light BurningEnemy }
+frame FGUYO { light BurningEnemy }
+frame FGUYP { light BurningEnemy }
+frame FGUYQ { light BurningOut1 }
+frame FGUYR { light BurningOut2 }
+frame FGUYS { light BurningOut3 }
 }
 
 object BurningMarine
 {
-frame FGUYA { light SMALLREDTORCH }
-frame FGUYB { light SMALLREDTORCH }
-frame FGUYC { light SMALLREDTORCH }
-frame FGUYD { light SMALLREDTORCH }
-frame FGUYE { light SMALLREDTORCH }
-frame FGUYF { light SMALLREDTORCH }
-frame FGUYG { light SMALLREDTORCH }
-frame FGUYH { light SMALLREDTORCH }
-frame FGUYI { light SMALLREDTORCH }
-frame FGUYJ { light SMALLREDTORCH }
-frame FGUYK { light SMALLREDTORCH }
-frame FGUYL { light SMALLREDTORCH }
-frame FGUYM { light SMALLREDTORCH }
-frame FGUYN { light SMALLREDTORCH }
-frame FGUYO { light SMALLREDTORCH }
-frame FGUYP { light SMALLREDTORCH }
-frame FGUYQ { light SMALLREDTORCH }
-frame FGUYR { light BurningOut1 }
-frame FGUYS { light BurningOut2 }
+frame FGUYA { light BurningEnemy }
+frame FGUYB { light BurningEnemy }
+frame FGUYC { light BurningEnemy }
+frame FGUYD { light BurningEnemy }
+frame FGUYE { light BurningEnemy }
+frame FGUYF { light BurningEnemy }
+frame FGUYG { light BurningEnemy }
+frame FGUYH { light BurningEnemy }
+frame FGUYI { light BurningEnemy }
+frame FGUYJ { light BurningEnemy }
+frame FGUYK { light BurningEnemy }
+frame FGUYL { light BurningEnemy }
+frame FGUYM { light BurningEnemy }
+frame FGUYN { light BurningEnemy }
+frame FGUYO { light BurningEnemy }
+frame FGUYP { light BurningEnemy }
+frame FGUYQ { light BurningOut1 }
+frame FGUYR { light BurningOut2 }
+frame FGUYS { light BurningOut3 }
 }
 
 //===============

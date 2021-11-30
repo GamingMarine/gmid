@@ -1666,9 +1666,7 @@ $random ForceLord/AttackTaunt { ForceLord/AttackTaunt1 ForceLord/AttackTaunt2 }
 ForceLord/Clap					MFLCLAP
 ForceLord/AttackTaunt1			MFLTNT1
 ForceLord/AttackTaunt2			MFLTNT2
-$random ForceLord/Ram { ForceLord/Ram1 ForceLord/Ram2 }
-ForceLord/Ram1					MFLRAM1
-ForceLord/Ram2					MFLRAM2
+ForceLord/Ram					MFLRAM
 $random ForceLord/Pain { ForceLord/Pain1 ForceLord/Pain2 ForceLord/Pain3 ForceLord/Pain4 ForceLord/Pain5 ForceLord/Pain6 ForceLord/Pain7 ForceLord/Pain8 ForceLord/Pain9 }
 ForceLord/Pain1					MFLHRT1
 ForceLord/Pain2					MFLHRT2

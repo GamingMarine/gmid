@@ -9,10 +9,13 @@ ACTOR MasterForceLord replaces Cyberdemon
   Speed 16
   MeleeRange 172
   MeleeThreshold 172
+  DamageFactor "GMIDExplosion", 0.25
   Monster
   +BOSS
   +NOICEDEATH
   +BOSSDEATH
+  +MISSILEMORE
+  +MISSILEEVENMORE
   Obituary "$OB_LORD"
   SeeSound "ForceLord/Sight"
   ActiveSound "ForceLord/Active"
@@ -34,7 +37,7 @@ ACTOR MasterForceLord replaces Cyberdemon
 	MNTR A 0 A_PlaySound("ForceLord/Stomp", CHAN_BODY)
 	Loop
   Missile:
-	TNT1 A 0 A_Jump(128, "TauntBeforeMissile")
+	TNT1 A 0 A_Jump(128, "TauntBeforeMissile", "RamIntoPlayer")
 	Goto ContinueMissile
   TauntBeforeMissile:
 	TNT1 A 0 A_PlaySound("ForceLord/AttackTaunt", CHAN_VOICE)
@@ -42,6 +45,40 @@ ACTOR MasterForceLord replaces Cyberdemon
 	MNTR WVY 3 A_FaceTarget
 	MNTR Z 9 A_CustomMissile("ForceLordHammer",30,0,0,0)
 	MNTR YV 3
+	Goto TrueSee
+  RamIntoPlayer:
+	MNTR W 8 A_FaceTarget
+	MNTR U 0 A_PlaySound("ForceLord/Ram", CHAN_VOICE)
+	MNTR U 2 A_Recoil(-8)
+	MNTR U 2 A_CustomMeleeAttack(25, none, none)
+	MNTR U 0 A_JumpIf(velx==0 && vely==0,"RunIntoWall")
+	MNTR U 2 A_Recoil(-8)
+	MNTR U 2 A_CustomMeleeAttack(25, none, none)
+	MNTR U 0 A_JumpIf(velx==0 && vely==0,"RunIntoWall")
+	MNTR U 2 A_Recoil(-8)
+	MNTR U 2 A_CustomMeleeAttack(25, none, none)
+	MNTR U 0 A_JumpIf(velx==0 && vely==0,"RunIntoWall")
+	MNTR U 2 A_Recoil(-8)
+	MNTR U 2 A_CustomMeleeAttack(25, none, none)
+	MNTR U 0 A_JumpIf(velx==0 && vely==0,"RunIntoWall")
+	MNTR U 2 A_Recoil(-8)
+	MNTR U 2 A_CustomMeleeAttack(25, none, none)
+	MNTR U 0 A_JumpIf(velx==0 && vely==0,"RunIntoWall")
+	MNTR U 2 A_Recoil(-8)
+	MNTR U 2 A_CustomMeleeAttack(25, none, none)
+	MNTR U 0 A_JumpIf(velx==0 && vely==0,"RunIntoWall")
+	MNTR U 2 A_Recoil(-8)
+	MNTR U 2 A_CustomMeleeAttack(25, none, none)
+	MNTR U 0 A_JumpIf(velx==0 && vely==0,"RunIntoWall")
+	MNTR U 2 A_Recoil(-8)
+	MNTR U 2 A_CustomMeleeAttack(25, none, none)
+	MNTR U 0 A_JumpIf(velx==0 && vely==0,"RunIntoWall")
+	MNTR U 2 A_Recoil(-8)
+	MNTR U 2 A_CustomMeleeAttack(25, none, none)
+	MNTR U 0 A_JumpIf(velx==0 && vely==0,"RunIntoWall")
+	Goto RunIntoWall
+  RunIntoWall:
+	MNTR Y 20
 	Goto TrueSee
   Melee:
 	TNT1 A 0 A_Jump(128, "TauntBeforeMelee")

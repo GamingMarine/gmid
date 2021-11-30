@@ -395,7 +395,7 @@ DIFFSELECT7 = "You have absolutely no idea what you're dealing with. You will kn
 
 GMIDTITLEMAP = "Your Adventure Begins";
 
-BOTTLENOPE = "You are already in perfect condition.";
+BOTTLENOPE = "You aren't very thirsty right now...";
 CUBENOPE = "The \crSoul Cube\c- has not yet been satisfied...";
 CUBEREADY = "The \crSoul Cube\c- is ready to be used!";
 
