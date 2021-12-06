@@ -12,7 +12,6 @@ Actor GMIDMissileLauncher : RocketLauncher
 	Weapon.UpSound "rockpump"
 	Tag "$TAG_LAUNCHER"
 	+WEAPON.NOALERT
-	+WEAPON.NOAUTOAIM
 	Inventory.PickupMessage "$GOTMLAUNCHER"
 	Obituary "$OB_LAUNCHER"
 	Inventory.Icon "LAUNA0B0"

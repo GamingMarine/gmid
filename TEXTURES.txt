@@ -1,0 +1,41 @@
+remap LOWLOGO GMIDLOGO
+
+remap HASTE0 HASTE1
+remap HASTF0 HASTE2
+remap HASTG0 HASTE3
+remap HASTH0 HASTE4
+
+remap PINVE0 INVUL1
+remap PINVF0 INVUL2
+remap PINVG0 INVUL3
+remap PINVH0 INVUL4
+
+remap CRYSB0 CCRYSTAL
+
+Graphic "DOOMCURS", 15, 22 
+{
+	Patch "CURSOR", 0, 0
+}
+
+//May as well include these since the Semi-Universal Raven Patch exists
+Graphic "HERECURS", 15, 22 
+{
+	Patch "CURSOR", 0, 0
+}
+
+Graphic "HEXNCURS", 15, 22 
+{
+	Patch "CURSOR", 0, 0
+}
+
+//I think there's one for Chex Quest too
+Graphic "CHEXCURS", 15, 22 
+{
+	Patch "CURSOR", 0, 0
+}
+
+//And in case someone (somehow) manages to make a patch for Strife
+Graphic "STRFCURS", 15, 22 
+{
+	Patch "CURSOR", 0, 0
+}

@@ -411,31 +411,31 @@ flickerlight CDICEBALL_X6
 flickerlight BurningEnemy
 {
 	color 0.7 0.35 0.14
-	size 72
-	secondarySize 81
+	size 48
+	secondarySize 56
 	offset 0 40 0
 }
 
 flickerlight BurningOut1
 {
 	color 0.7 0.35 0.14
-	size 54
-	secondarysize 61
+	size 36
+	secondarysize 42
 	offset 0 40 0
 }
 
 flickerlight BurningOut2
 {
     color 0.7 0.35 0.14
-    size 36
-    secondarySize 41
+    size 24
+    secondarySize 28
     offset 0 40 0
 }
 
 flickerlight BurningOut3
 {
     color 0.7 0.35 0.14
-    size 18
-    secondarySize 21
+    size 12
+    secondarySize 14
     offset 0 40 0
 }

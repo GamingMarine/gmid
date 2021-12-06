@@ -1,6 +1,8 @@
 #library "misc"
 #include "zcommon.acs"
 
+#define MIN_TID (-32768)
+
 //This script is to check if the game is being played in a PVP mode.
 //This can be used to make sure certain items don't spawn in deathmatch.
 //Loosely based on code from Death Foretold by DBT.
@@ -104,4 +106,26 @@ Script "SecretBonus" ENTER
 	}
 	Delay(1);
 	Restart;
+}
+
+//This script (which is a hacky workaround, I know) checks if the player is playing with the 1-Up Music Pack.
+//It is intended to be used with the Master Force Lord to prevent his theme from playing if 1-Up is loaded.
+//(I can't believe I used H-Doom for the necessary function...)
+function bool ClassExists(str class)
+{
+	int tid = UniqueTID(MIN_TID, 0);
+	if (SpawnForced(class, 0, 0, 0, tid))
+	{
+		Thing_Remove(tid);
+		return true;
+	}
+	return false;
+}
+
+script "1UpCheck" (void)
+{
+	if (ClassExists("1UpMusicPackToken"))
+	{
+	  SetResultValue(2);
+	}
 }

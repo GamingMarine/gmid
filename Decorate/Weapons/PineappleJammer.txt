@@ -17,7 +17,6 @@ ACTOR PineappleJammer : Weapon
 	Weapon.BobStyle InverseSmooth
 	Weapon.BobSpeed 2.0
 	+WEAPON.NOALERT
-	+WEAPON.NOAUTOAIM
 	Inventory.Icon "GLMMA0B0"
 	States
 	{

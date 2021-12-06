@@ -1,26 +1,26 @@
 texture M_SKULL1
-    pic M_SKULL1 tics 2
-    pic M_SKULL2 tics 2
-	pic M_SKULL3 tics 2
-	pic M_SKULL4 tics 2
-	pic M_SKULL5 tics 2
-    pic M_SKULL6 tics 2
-	pic M_SKULL7 tics 2
-	pic M_SKULL8 tics 2
-    pic M_SKULL9 tics 2
-    pic M_SKULL0 tics 2
-	pic M_SKULLA tics 2
-	pic M_SKULLB tics 2
-	pic M_SKULLC tics 2
-    pic M_SKULLD tics 2
-	pic M_SKULLE tics 2
-	pic M_SKULLF tics 2
-    pic M_SKULLG tics 2
-    pic M_SKULLH tics 2
-	pic M_SKULLI tics 2
-	pic M_SKULLJ tics 2
-	pic M_SKULLK tics 2
-    pic M_SKULLL tics 2
+    pic SKULLY_1 tics 2
+    pic SKULLY_2 tics 2
+	pic SKULLY_3 tics 2
+	pic SKULLY_4 tics 2
+	pic SKULLY_5 tics 2
+    pic SKULLY_6 tics 2
+	pic SKULLY_7 tics 2
+	pic SKULLY_8 tics 2
+    pic SKULLY_9 tics 2
+    pic SKULLY_0 tics 2
+	pic SKULLY_A tics 2
+	pic SKULLY_B tics 2
+	pic SKULLY_C tics 2
+    pic SKULLY_D tics 2
+	pic SKULLY_E tics 2
+	pic SKULLY_F tics 2
+    pic SKULLY_G tics 2
+    pic SKULLY_H tics 2
+	pic SKULLY_I tics 2
+	pic SKULLY_J tics 2
+	pic SKULLY_K tics 2
+    pic SKULLY_L tics 2
 	
 texture DDMGD0
 	pic DDMGF0 tics 60
