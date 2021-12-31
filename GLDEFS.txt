@@ -559,6 +559,10 @@ Glow
    flava2
    flava3
    flava4
+   flava5
+   flava6
+   flava7
+   flava8
    nukage1 "0 255 0"
    nukage2 "0 255 0"
    nukage3 "0 255 0"

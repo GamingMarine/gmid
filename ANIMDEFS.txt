@@ -265,37 +265,49 @@ flat LAVA1
 	pic FLAVA2 tics 8
 	pic FLAVA3 tics 8
 	pic FLAVA4 tics 8
-	pic FLAVA3 tics 8
-	pic FLAVA2 tics 8
+	pic FLAVA5 tics 8
+	pic FLAVA6 tics 8
+	pic FLAVA7 tics 8
+	pic FLAVA8 tics 8
 	
 flat LAVA2
-	pic FLAVA2 tics 8
 	pic FLAVA3 tics 8
 	pic FLAVA4 tics 8
-	pic FLAVA3 tics 8
-	pic FLAVA2 tics 8
+	pic FLAVA5 tics 8
+	pic FLAVA6 tics 8
+	pic FLAVA7 tics 8
+	pic FLAVA8 tics 8
 	pic FLAVA1 tics 8
+	pic FLAVA2 tics 8
 	
 flat LAVA3
-	pic FLAVA3 tics 8
-	pic FLAVA4 tics 8
-	pic FLAVA3 tics 8
-	pic FLAVA2 tics 8
+	pic FLAVA5 tics 8
+	pic FLAVA6 tics 8
+	pic FLAVA7 tics 8
+	pic FLAVA8 tics 8
 	pic FLAVA1 tics 8
 	pic FLAVA2 tics 8
+	pic FLAVA3 tics 8
+	pic FLAVA4 tics 8
 
 flat LAVA4
-	pic FLAVA4 tics 8
-	pic FLAVA3 tics 8
-	pic FLAVA2 tics 8
+	pic FLAVA7 tics 8
+	pic FLAVA8 tics 8
 	pic FLAVA1 tics 8
 	pic FLAVA2 tics 8
 	pic FLAVA3 tics 8
+	pic FLAVA4 tics 8
+	pic FLAVA5 tics 8
+	pic FLAVA6 tics 8
 
 warp flat FLAVA1
 warp flat FLAVA2
 warp flat FLAVA3
 warp flat FLAVA4
+warp flat FLAVA5
+warp flat FLAVA6
+warp flat FLAVA7
+warp flat FLAVA8
 
 flat GATE1 
     pic _TP1 tics 4
