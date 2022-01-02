@@ -75,6 +75,10 @@ OptionMenu "GMIDOptions"
 	StaticText "$PICKUPOPTION3"
 	StaticText "$PICKUPOPTION4"
 	StaticText " "
+	Option "$EXPLODEOPTION1", "lessboom", "OnOff"
+	StaticText "$EXPLODEOPTION2"
+	StaticText "$EXPLODEOPTION3"
+	StaticText "$EXPLODEOPTION4"
 	StaticText "$CUMMINSOON"
 }
 

@@ -438,6 +438,10 @@ PICKUPOPTION1 = "Weapon Pickup Animations";
 PICKUPOPTION2 = "When enabled, any weapon you pick up for the first time will have";
 PICKUPOPTION3 = "its own pickup animation. Note that you cannot attack while these";
 PICKUPOPTION4 = "animations are playing.";
+EXPLODEOPTION1 = "Reduce Explosion Effects";
+EXPLODEOPTION2 = "By default, explosions leave behind smoke, a shockwave, and flame";
+EXPLODEOPTION3 = "trails. If your device can't handle the fanciness, you can reduce";
+EXPLODEOPTION4 = "them to just the explosion flare.";
 CUMMINSOON = "\cgMore mod-tailored options coming soon!";
 
 //Story screen text

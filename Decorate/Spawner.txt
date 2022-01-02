@@ -401,7 +401,7 @@ DropItem "GardenBush1"
 DropItem "GardenBush3"
 }
 
-Actor ExplosionSpawner : RandomSpawner
+Actor RandomExplosionPicker : RandomSpawner
 {
 DropItem "NewExplosion"
 DropItem "NewExplosion2"

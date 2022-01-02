@@ -20,3 +20,8 @@ script "PickupAnimation" (void)
 {
     SetResultValue(GetCVar("pickupanim"));
 }
+
+script "LessBoomEffects" (void)
+{
+	SetResultValue(GetCVar("lessboom"));
+}
