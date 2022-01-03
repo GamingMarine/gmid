@@ -3,7 +3,7 @@ actor RevXChecker //by 0x8BADF00D#8030
   states
   {
   Spawn:
-	TNT1 AA 2 A_JumpIf(1 == (ACS_ExecuteWithResult(154,0,0,0)), "WithUpgrades")
+	TNT1 AA 0 A_JumpIf(1 == (ACS_ExecuteWithResult(154,0,0,0)), "WithUpgrades")
 	TNT1 A 0 A_SpawnItem("NewerSSGSpawner")
 	stop
   WithUpgrades:
@@ -50,13 +50,13 @@ DropItem "VGun"
 DropItem "VGun"
 }
 
-Actor RocketLauncherSpawner : RandomSpawner replaces RocketLauncher
+Actor RocketLauncherSpawner : RandomSpawner
 {
 DropItem "GMIDMissileLauncher"
 DropItem "PineappleJammer"
 }
 
-Actor PlasmaGunSpawner : RandomSpawner replaces PlasmaRifle
+Actor PlasmaGunSpawner : RandomSpawner
 {
 DropItem "GMIDRailgun"
 DropItem "ExcessiveForce"
@@ -123,7 +123,7 @@ actor SoulCubeChecker
   states
   {
   Spawn:
-	TNT1 AA 2 A_JumpIf(ACS_NamedExecuteWithResult("PVPCheck",0,0,0,0) == 2,"NoSoulCube")
+	TNT1 AA 0 A_JumpIf(ACS_NamedExecuteWithResult("PVPCheck",0,0,0,0) == 2,"NoSoulCube")
 	TNT1 A 0 A_SpawnItem("BFGSpawner")
 	stop
   NoSoulCube:
@@ -132,7 +132,7 @@ actor SoulCubeChecker
   }
 }
 
-Actor BFGSpawner : RandomSpawner replaces BFG9000
+Actor BFGSpawner : RandomSpawner
 {
 DropItem "SpaceCadet"
 DropItem "SoulCubeGenerator"
@@ -280,10 +280,14 @@ ACTOR NewChaingunSpawner replaces Chaingun
 	Spawn:
 		TNT1 A 0 NoDelay A_SpawnItemEx("ChaingunSpawner")
 		TNT1 AAA 0 A_DropItem("ScurryRat")
+		TNT1 AA 0 A_JumpIf(ACS_NamedExecuteWithResult("PVPCheck",0,0,0,0) == 2,"NoChanceofSentry")
 		TNT1 A 0 A_Jump(32, "SpawnSentry")
 		Stop
 	SpawnSentry:
 		TNT1 A 0 A_SpawnItemEx("DeactivatedSentry",0,0,0,random(1,8),random(1,8))
+		Stop
+	NoChanceofSentry:
+		TNT1 A 0
 		Stop
 	}
 }
