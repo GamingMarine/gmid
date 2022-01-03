@@ -507,6 +507,18 @@ cookie/lastwords1			CLASTW1
 cookie/lastwords2			CLASTW2
 $random cookie/lastwords { cookie/lastwords1 cookie/lastwords2 }
 
+sentry/pickup				SENTRYUP
+sentry/deploy				SNTRYDPL
+sentry/arm					SNTRYARM
+sentry/deactivate			SNTRYBYE
+sentry/idle					SNTRYMOV
+sentry/alarm				SNTRYALR
+$random sentry/fire { sentry/fire1 sentry/fire2 sentry/fire3 }
+sentry/fire1				SNTRYFR1
+sentry/fire2				SNTRYFR2
+sentry/fire3				SNTRYFR3
+sentry/ping					SNTRYPNG
+
 menu/activate			newmenu	// Activate a new menu
 menu/backup			menuback	// Backup to previous menu
 menu/cursor			menulft		// Move cursor up/down

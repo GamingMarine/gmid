@@ -26,6 +26,7 @@ Actor GamingMarine : DoomPlayer
 	DamageFactor "Cube", 0
 	DamageFactor "CookieFire", 0
 	DamageFactor "CookieIce", 0
+	DamageFactor "Sentry", 0
 	Player.JumpZ 10
 	Player.WeaponSlot 1, GMIDFist, AngleGrinder
 	Player.WeaponSlot 2, GMIDPistol, GMIDDualPistol

@@ -524,6 +524,12 @@ frame FGUYR { light BurningOut2 }
 frame FGUYS { light BurningOut3 }
 }
 
+Object Sentry
+{
+  Frame SENTB { Light EnemyChaingunAttack }
+  Frame SENTC { Light EnemyChaingunAttack }
+}
+
 //===============
 // Glowing Flats
 //===============

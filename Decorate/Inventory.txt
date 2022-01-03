@@ -1,9 +1,9 @@
-ACTOR HealthBackpackAdd : Health
+ACTOR CacoColaBottleAdd : Health
 {
 	Inventory.Amount 1
 }
 ACTOR DidHeal : Inventory {}
-ACTOR HealthBackpack : CustomInventory
+ACTOR CacoColaBottle : CustomInventory
 {
 	+INVBAR
 	Inventory.Amount 100
@@ -12,7 +12,7 @@ ACTOR HealthBackpack : CustomInventory
 	Inventory.PickupMessage "$GOTBOTTLE"
 	Tag "$TAG_BOTTLE"
 	Inventory.PickupSound "PCOLABUP"
-	Inventory.Icon "I_MBPK"
+	Inventory.Icon "COLAI0"
 	Scale 0.6
 	States
 	{
@@ -21,7 +21,7 @@ ACTOR HealthBackpack : CustomInventory
 		Stop
 		Use:
 		GiveCheck:
-		TNT1 A 0 A_JumpIfInventory("HealthBackpack", 1, "GiveCheck2")
+		TNT1 A 0 A_JumpIfInventory("CacoColaBottle", 1, "GiveCheck2")
 		TNT1 A 0 A_JumpIfInventory("DidHeal", 1, "PlaySound")
 		Fail
 		GiveCheck2:
@@ -36,8 +36,8 @@ ACTOR HealthBackpack : CustomInventory
 		Give:
 		TNT1 A 0 A_GiveInventory("DidHeal", 1)
 		GiveHealth:
-		TNT1 A 0 A_TakeInventory("HealthBackpack", 1)
-		TNT1 A 0 A_GiveInventory("HealthBackpackAdd", 1)
+		TNT1 A 0 A_TakeInventory("CacoColaBottle", 1)
+		TNT1 A 0 A_GiveInventory("CacoColaBottleAdd", 1)
 		Goto GiveCheck
 	}
 }
@@ -79,4 +79,114 @@ Actor NewYellowSkull : YellowSkull replaces YellowSkull
   Species "YellowSkull"
   Inventory.PickupMessage "$GOTYELWSKUL2"
   Inventory.PickupSound "misc/skullup"
+}
+
+Actor DeactivatedSentry : CustomInventory
+{
+	Inventory.Amount 1
+	Inventory.MaxAmount 3
+	Inventory.PickupSound "sentry/pickup"
+	Inventory.UseSound "sentry/pickup"
+	Inventory.PickupMessage "$GOTSENTRY"
+	Inventory.Icon "SNTPZ0"
+	Tag "$TAG_SENTRY"
+	+INVBAR
+	States
+	{
+	Spawn:
+		SNTP A -1
+		Stop
+	Use:
+		SNTP A 0 A_ThrowGrenade("ThrownSentry",2,8,2,0)
+		TNT1 A 0 A_Print("$SENTRYNOTE")
+		Stop
+	}
+}
+
+Actor ThrownSentry
+{
+  +DROPOFF
+  +MISSILE
+  +WINDTHRUST
+  +CANBOUNCEWATER
+  DeathSound "sentry/deploy"
+  States
+  {
+  Spawn:
+	SNTP A 1
+	Loop
+  Death:
+	SNTP A 0 A_Scream
+	SNTP A 0 A_SpawnItem("Sentry")
+	Stop
+  } 
+}
+
+Actor Sentry : SwitchingDecoration
+{
+  Health 250
+  Radius 20
+  Height 56
+  Mass 100000
+  Speed 0
+  MaxTargetRange 2048
+  MinMissileChance 256
+  Activation THINGSPEC_Activate
+  AttackSound "sentry/fire"
+  MONSTER
+  +FLOORCLIP
+  +FRIENDLY
+  +NOBLOOD
+  +LOOKALLAROUND
+  +MISSILEMORE
+  +MISSILEEVENMORE
+  +NEVERRESPAWN
+  +STANDSTILL
+  +USESPECIAL
+  States
+  {
+  Spawn:
+	SNTP A 5
+	SNTP A 0 A_PlaySound("sentry/arm")
+	SNTP BCDEFGHIJKLMNOPQR 2
+	Goto Look
+  Look:
+    SENT AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 4 A_Look
+	SENT A 0 A_PlaySound("sentry/idle")
+	SENT A 0 A_Jump(256, "Turn1", "Turn2")
+	Loop
+  Turn1:
+	SENT A 0 A_SetAngle(45+angle)
+	Goto Look
+  Turn2:
+	SENT A 0 A_SetAngle(-45+angle)
+	Goto Look
+  See:
+	SENT AAAAAAAAA 4 A_Chase
+	SENT A 0 A_PlaySound("sentry/ping")
+	Loop
+  Active:
+	SNTP A 0 A_PlaySound("sentry/deactivate")
+	SNTP RQPONMLKJIHGFEDCB 2
+	SNTP A 0 A_SpawnItem("DeactivatedSentry")
+	Stop
+  Missile:
+	SENT A 0 A_PlaySound("sentry/alarm")
+    SENT AAAAAAAA 2 A_FaceTarget
+	SENT C 0 A_PlaySound("sentry/fire", CHAN_WEAPON)
+	SENT C 2 Bright A_CustomBulletAttack(22.5, 0, 1, random(1,5)*3, "SentryPuff", 0, CBAF_NORANDOM)
+    SENT B 2 Bright A_CposRefire
+    goto Missile+9
+  Death:
+	ZXPL A 0 A_PlaySound("explosion/distant", CHAN_AUTO)
+	ZXPL A 0 A_PlaySound("newexplosion")
+	ZXPL A 0 A_SpawnItem("ExplosionSpawner")
+	TNT1 AAAAAAAAAAAAAAA 0 A_SpawnItemEx("BarrelParts",frandom(5.0,-5.0),frandom(5.0,-5.0),frandom(0.5,10.0),frandom(2.0,8.0),0,random(6.0,12.0),random(0,360))
+	Stop
+  }
+}
+
+Actor SentryPuff : XaserPuff
+{
+  DamageType "Sentry"
 }

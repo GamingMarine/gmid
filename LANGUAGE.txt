@@ -113,6 +113,7 @@ GOTQUAD = "\c[LightBlue]Quad Damage!\c-";
 GOTHASTE = "\ciHasteSphere!";
 GOTCRYSTAL = "You got the Cookie-Crystal! \c[brick]Cookiedemon\c- is ready... \cf(\cjThis item must be activated to use it\cf)";
 GOTSHAKE = "Drank a Super-Cool(tm) Energy Shake! Refreshing! \cf(\cj+50 health\cf)";
+GOTSENTRY = "Picked up a portable sentry! \cf(\cjThis item must be activated to use it\cf)";
 
 BIOFADE = "Air supply in bio-suit is expiring...";
 GOGGLESFADE = "Night vision goggles' batteries are draining...";
@@ -168,6 +169,7 @@ TAG_CRYSTAL = "Cookie-Crystal";
 TAG_UPGRADE1 = "Rapid Fire Coolant";
 TAG_UPGRADE2 = "Plasma Pulse Energiser";
 TAG_SHAKE = "Super-Cool(tm) Energy Shake";
+TAG_SENTRY = "Portable Sentry";
 
 TAG_GRINDER = "Angle Grinder";
 TAG_FISTS = "Bare Hands";
@@ -396,6 +398,7 @@ DIFFSELECT7 = "You have absolutely no idea what you're dealing with. You will kn
 GMIDTITLEMAP = "Your Adventure Begins";
 
 BOTTLENOPE = "You aren't very thirsty right now...";
+SENTRYNOTE = "Press [USE] on the sentry to deactivate it.";
 CUBENOPE = "The \crSoul Cube\c- has not yet been satisfied...";
 CUBEREADY = "The \crSoul Cube\c- is ready to be used!";
 
@@ -418,7 +421,7 @@ GMIDCTRL9 = "Fire Weapon";
 GMIDCTRL10 = "Quick-Kick (Alt-Fire)";
 GMIDCTRL11 = "Select Next Weapon";
 GMIDCTRL12 = "Select Previous Weapon";
-GMIDINVENTORY = "Inventory (Needed to use Caco-Cola bottles and Cookie-Crystals)";
+GMIDINVENTORY = "Inventory (Needed to use the inventory system)";
 GMIDCTRL13 = "Use Selected Inventory";
 GMIDCTRL14 = "Move Inventory Left";
 GMIDCTRL15 = "Move Inventory Right";

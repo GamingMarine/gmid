@@ -4243,7 +4243,7 @@ Map "Brightmaps/GMID/AHOUG7I3.png"
 
 Brightmap Sprite AHOUG8I2
 {
-Map "Brightmaps/GMID/AHOUG8G2.png"
+Map "Brightmaps/GMID/AHOUG8I2.png"
 }
 
 Brightmap Sprite AHOUH1
@@ -4624,6 +4624,90 @@ Map "Brightmaps/GMID/AHOXK0.png"
 Brightmap Sprite AHOXL0
 {
 Map "Brightmaps/GMID/AHOXL0.png"
+}
+
+Brightmap Sprite SENTB1
+{
+DisableFullBright
+Map "Brightmaps/GMID/SENTB1.png"
+}
+
+Brightmap Sprite SENTB2
+{
+DisableFullBright
+Map "Brightmaps/GMID/SENTB2.png"
+}
+
+Brightmap Sprite SENTB3
+{
+DisableFullBright
+Map "Brightmaps/GMID/SENTB3.png"
+}
+
+Brightmap Sprite SENTB4
+{
+DisableFullBright
+Map "Brightmaps/GMID/SENTB4.png"
+}
+
+Brightmap Sprite SENTB6
+{
+DisableFullBright
+Map "Brightmaps/GMID/SENTB6.png"
+}
+
+Brightmap Sprite SENTB7
+{
+DisableFullBright
+Map "Brightmaps/GMID/SENTB7.png"
+}
+
+Brightmap Sprite SENTB8
+{
+DisableFullBright
+Map "Brightmaps/GMID/SENTB8.png"
+}
+
+Brightmap Sprite SENTC1
+{
+DisableFullBright
+Map "Brightmaps/GMID/SENTC1.png"
+}
+
+Brightmap Sprite SENTC2
+{
+DisableFullBright
+Map "Brightmaps/GMID/SENTC2.png"
+}
+
+Brightmap Sprite SENTC3
+{
+DisableFullBright
+Map "Brightmaps/GMID/SENTC3.png"
+}
+
+Brightmap Sprite SENTC4
+{
+DisableFullBright
+Map "Brightmaps/GMID/SENTC4.png"
+}
+
+Brightmap Sprite SENTC6
+{
+DisableFullBright
+Map "Brightmaps/GMID/SENTC6.png"
+}
+
+Brightmap Sprite SENTC7
+{
+DisableFullBright
+Map "Brightmaps/GMID/SENTC7.png"
+}
+
+Brightmap Sprite SENTC8
+{
+DisableFullBright
+Map "Brightmaps/GMID/SENTC8.png"
 }
 
 Brightmap Flat MAGMA1
