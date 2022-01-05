@@ -680,6 +680,7 @@ ACTOR XaserBarrel : ExplosiveBarrel replaces ExplosiveBarrel
 		Loop
    Death:
         TOXB A 10 BRIGHT
+		ZXPL A 0 A_NoBlocking
 		ZXPL A 0 A_PlaySound("explosion/distant", CHAN_AUTO)
 		ZXPL A 0 A_PlaySound("newexplosion")
 		BEXP D 0 A_SpawnItem("ExplosionSpawner")

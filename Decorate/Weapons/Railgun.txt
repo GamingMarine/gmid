@@ -38,6 +38,7 @@ Actor GMIDRailgun : PlasmaRifle
 			RGUN C 1 Bright A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 			RGUN D 0 A_SetPitch(pitch+0.50)
 			RGUN DEFGH 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			RGUN I 0 A_PlaySound("railgun/charge")
 			RGUN I 40 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 			RGUN HGFEDJ 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 			RGUN K 1 A_WeaponReady

@@ -108,6 +108,7 @@ weapons/blasterrifle	DSBLASTR
 railgun/fire1	 RAILFIR1
 railgun/fire2	 RAILFIR2
 $random weapons/railgf { railgun/fire1 railgun/fire2 }
+railgun/charge	 RAILCHRG
 weapons/explosion1		barexp1
 weapons/explosion2		barexp2
 weapons/explosion3		barexp3
@@ -816,7 +817,7 @@ SonicXRainbow/death25      rddie25
 SonicXRainbow/death26      rddie26
 SonicXRainbow/death27      rddie27
 
-$random AmyPie/sight { AmyPie/sight1 AmyPie/sight2 AmyPie/sight3 AmyPie/sight4 AmyPie/sight5 AmyPie/sight6 AmyPie/sight7 AmyPie/sight8 AmyPie/sight9 }
+$random AmyPie/sight { AmyPie/sight1 AmyPie/sight2 AmyPie/sight3 AmyPie/sight4 AmyPie/sight5 AmyPie/sight6 AmyPie/sight7 AmyPie/sight8 AmyPie/sight9 AmyPie/sight10 AmyPie/sight11 AmyPie/sight12 AmyPie/sight13 AmyPie/sight14 AmyPie/sight15 AmyPie/sight16 AmyPie/sight17 AmyPie/sight18 }
 AmyPie/sight1   apsit01
 AmyPie/sight2   apsit02
 AmyPie/sight3   apsit03
@@ -826,7 +827,16 @@ AmyPie/sight6   apsit06
 AmyPie/sight7   apsit07
 AmyPie/sight8   apsit08
 AmyPie/sight9   apsit09
-$random AmyPie/idle	{ AmyPie/idle1 AmyPie/idle2 AmyPie/idle3 AmyPie/idle4 AmyPie/idle5 AmyPie/idle6 AmyPie/idle7 AmyPie/idle8 AmyPie/idle9 AmyPie/idle10 AmyPie/idle11 AmyPie/idle12 AmyPie/idle13 AmyPie/idle14 AmyPie/idle15 AmyPie/idle16 AmyPie/idle17 AmyPie/idle18 AmyPie/idle19 AmyPie/idle20 AmyPie/idle21 AmyPie/idle22 AmyPie/idle23 AmyPie/idle24 AmyPie/idle25 }
+AmyPie/sight10  apsit10
+AmyPie/sight11  apsit11
+AmyPie/sight12  apsit12
+AmyPie/sight13  apsit13
+AmyPie/sight14  apsit14
+AmyPie/sight15  apsit15
+AmyPie/sight16  apsit16
+AmyPie/sight17  apsit17
+AmyPie/sight18  apsit18
+$random AmyPie/idle	{ AmyPie/idle1 AmyPie/idle2 AmyPie/idle3 AmyPie/idle4 AmyPie/idle5 AmyPie/idle6 AmyPie/idle7 AmyPie/idle8 AmyPie/idle9 AmyPie/idle10 AmyPie/idle11 AmyPie/idle12 AmyPie/idle13 AmyPie/idle14 AmyPie/idle15 AmyPie/idle16 AmyPie/idle17 AmyPie/idle18 AmyPie/idle19 AmyPie/idle20 AmyPie/idle21 AmyPie/idle22 AmyPie/idle23 AmyPie/idle24 AmyPie/idle25 AmyPie/idle26 AmyPie/idle27 AmyPie/idle28 AmyPie/idle29 AmyPie/idle30 AmyPie/idle31 AmyPie/idle32 AmyPie/idle33 AmyPie/idle34 AmyPie/idle35 AmyPie/idle36 AmyPie/idle37 AmyPie/idle38 AmyPie/idle39 AmyPie/idle40 AmyPie/idle41 AmyPie/idle42 }
 AmyPie/idle1		   APIDLE01
 AmyPie/idle2		   APIDLE02
 AmyPie/idle3		   APIDLE03
@@ -852,7 +862,24 @@ AmyPie/idle22		   APIDLE22
 AmyPie/idle23		   APIDLE23
 AmyPie/idle24		   APIDLE24
 AmyPie/idle25		   APIDLE25
-$random AmyPie/pain { AmyPie/pain1 AmyPie/pain2 AmyPie/pain3 AmyPie/pain4 AmyPie/pain5 AmyPie/pain6 AmyPie/pain7 AmyPie/pain8 AmyPie/pain9 AmyPie/pain10 AmyPie/pain11 AmyPie/pain12 AmyPie/pain13 AmyPie/pain14 AmyPie/pain15 AmyPie/pain16 AmyPie/pain17 AmyPie/pain18 AmyPie/pain19 AmyPie/pain20 AmyPie/pain21 AmyPie/pain22 AmyPie/pain23 AmyPie/pain24 AmyPie/pain25 }
+AmyPie/idle26		   APIDLE26
+AmyPie/idle27		   APIDLE27
+AmyPie/idle28		   APIDLE28
+AmyPie/idle29		   APIDLE29
+AmyPie/idle30		   APIDLE30
+AmyPie/idle31		   APIDLE31
+AmyPie/idle32		   APIDLE32
+AmyPie/idle33		   APIDLE33
+AmyPie/idle34		   APIDLE34
+AmyPie/idle35		   APIDLE35
+AmyPie/idle36		   APIDLE36
+AmyPie/idle37		   APIDLE37
+AmyPie/idle38		   APIDLE38
+AmyPie/idle39		   APIDLE39
+AmyPie/idle40		   APIDLE40
+AmyPie/idle41		   APIDLE41
+AmyPie/idle42		   APIDLE42
+$random AmyPie/pain { AmyPie/pain1 AmyPie/pain2 AmyPie/pain3 AmyPie/pain4 AmyPie/pain5 AmyPie/pain6 AmyPie/pain7 AmyPie/pain8 AmyPie/pain9 AmyPie/pain10 AmyPie/pain11 AmyPie/pain12 AmyPie/pain13 AmyPie/pain14 AmyPie/pain15 AmyPie/pain16 AmyPie/pain17 AmyPie/pain18 AmyPie/pain19 AmyPie/pain20 AmyPie/pain21 AmyPie/pain22 AmyPie/pain23 AmyPie/pain24 AmyPie/pain25 AmyPie/pain26 AmyPie/pain27 AmyPie/pain28 AmyPie/pain29 }
 AmyPie/pain1		   appain01
 AmyPie/pain2		   appain02
 AmyPie/pain3		   appain03
@@ -877,7 +904,11 @@ AmyPie/pain21		   appain21
 AmyPie/pain22		   appain22
 AmyPie/pain23		   appain23
 AmyPie/pain24		   appain24
-AmyPie/pain25		   appain25 //Alright, 25 pain sounds is all I can handle.
+AmyPie/pain25		   appain25
+AmyPie/pain26		   appain26
+AmyPie/pain27		   appain27
+AmyPie/pain28		   appain28
+AmyPie/pain29		   appain29
 $random AmyPie/death { AmyPie/death1 AmyPie/death2 AmyPie/death3 AmyPie/death4 AmyPie/death5 AmyPie/death6 AmyPie/death7 AmyPie/death8 AmyPie/death9 AmyPie/death10 AmyPie/death11 AmyPie/death12 AmyPie/death13 AmyPie/death14 AmyPie/death15 AmyPie/death16 }
 AmyPie/death1       apdie01
 AmyPie/death2       apdie02
@@ -896,7 +927,7 @@ AmyPie/death14      apdie14
 AmyPie/death15		apdie15
 AmyPie/death16		apdie16 //...Yeah I don't get it either
 
-$random	Applesheriff/sight	{ Applesheriff/sight1 Applesheriff/sight2 Applesheriff/sight3 Applesheriff/sight4 Applesheriff/sight5 Applesheriff/sight6 Applesheriff/sight7 Applesheriff/sight8 Applesheriff/sight9 Applesheriff/sight10 Applesheriff/sight11 Applesheriff/sight12 Applesheriff/sight13 Applesheriff/sight14 }
+$random	Applesheriff/sight	{ Applesheriff/sight1 Applesheriff/sight2 Applesheriff/sight3 Applesheriff/sight4 Applesheriff/sight5 Applesheriff/sight6 Applesheriff/sight7 Applesheriff/sight8 Applesheriff/sight9 Applesheriff/sight10 Applesheriff/sight11 Applesheriff/sight12 Applesheriff/sight13 Applesheriff/sight14 Applesheriff/sight15 }
 Applesheriff/sight1  assit01
 Applesheriff/sight2  assit02
 Applesheriff/sight3  assit03
@@ -911,7 +942,8 @@ Applesheriff/sight11 assit11
 Applesheriff/sight12 assit12
 Applesheriff/sight13 assit13
 Applesheriff/sight14 assit14
-$random Applesheriff/idle	{ Applesheriff/idle1 Applesheriff/idle2 Applesheriff/idle3 Applesheriff/idle4 Applesheriff/idle5 Applesheriff/idle6 Applesheriff/idle7 Applesheriff/idle8 Applesheriff/idle9 Applesheriff/idle10 Applesheriff/idle11 Applesheriff/idle12 Applesheriff/idle13 Applesheriff/idle14 Applesheriff/idle15 Applesheriff/idle16 Applesheriff/idle17 Applesheriff/idle18 Applesheriff/idle19 Applesheriff/idle20 Applesheriff/idle21 Applesheriff/idle22 Applesheriff/idle23 }
+Applesheriff/sight15 assit15
+$random Applesheriff/idle	{ Applesheriff/idle1 Applesheriff/idle2 Applesheriff/idle3 Applesheriff/idle4 Applesheriff/idle5 Applesheriff/idle6 Applesheriff/idle7 Applesheriff/idle8 Applesheriff/idle9 Applesheriff/idle10 Applesheriff/idle11 Applesheriff/idle12 Applesheriff/idle13 Applesheriff/idle14 Applesheriff/idle15 Applesheriff/idle16 Applesheriff/idle17 Applesheriff/idle18 Applesheriff/idle19 Applesheriff/idle20 Applesheriff/idle21 Applesheriff/idle22 Applesheriff/idle23 Applesheriff/idle24 Applesheriff/idle25 Applesheriff/idle26 Applesheriff/idle27 Applesheriff/idle28 Applesheriff/idle29 }
 Applesheriff/idle1		   ASIDLE01
 Applesheriff/idle2		   ASIDLE02
 Applesheriff/idle3		   ASIDLE03
@@ -935,22 +967,46 @@ Applesheriff/idle20		   ASIDLE20
 Applesheriff/idle21		   ASIDLE21
 Applesheriff/idle22		   ASIDLE22
 Applesheriff/idle23		   ASIDLE23
+Applesheriff/idle24		   ASIDLE24
+Applesheriff/idle25		   ASIDLE25
+Applesheriff/idle26		   ASIDLE26
+Applesheriff/idle27		   ASIDLE27
+Applesheriff/idle28		   ASIDLE28
+Applesheriff/idle29		   ASIDLE29
 Applesheriff/attack		   TOMMYGUN
-$random	Applesheriff/Pain	{ Applesheriff/Pain1 Applesheriff/Pain2 Applesheriff/Pain3 Applesheriff/Pain4 Applesheriff/Pain5 Applesheriff/Pain6 Applesheriff/Pain7 }
-Applesheriff/Pain1 aspain01
-Applesheriff/Pain2 aspain02
-Applesheriff/Pain3 aspain03
-Applesheriff/Pain4 aspain04
-Applesheriff/Pain5 aspain05
-Applesheriff/Pain6 aspain06
-Applesheriff/Pain7 aspain07
-$random Applesheriff/death { Applesheriff/death1 Applesheriff/death2 Applesheriff/death3 Applesheriff/death4 Applesheriff/death5 Applesheriff/death6 }
+$random	Applesheriff/Pain	{ Applesheriff/Pain1 Applesheriff/Pain2 Applesheriff/Pain3 Applesheriff/Pain4 Applesheriff/Pain5 Applesheriff/Pain6 Applesheriff/Pain7 Applesheriff/Pain8 Applesheriff/Pain9 Applesheriff/Pain10 Applesheriff/Pain11 Applesheriff/Pain12 Applesheriff/Pain13 Applesheriff/Pain14 Applesheriff/Pain15 Applesheriff/Pain16 Applesheriff/Pain17 Applesheriff/Pain18 Applesheriff/Pain19 Applesheriff/Pain20 }
+Applesheriff/Pain1		   aspain01
+Applesheriff/Pain2		   aspain02
+Applesheriff/Pain3		   aspain03
+Applesheriff/Pain4		   aspain04
+Applesheriff/Pain5		   aspain05
+Applesheriff/Pain6		   aspain06
+Applesheriff/Pain7		   aspain07
+Applesheriff/Pain8		   aspain08
+Applesheriff/Pain9		   aspain09
+Applesheriff/Pain10		   aspain10
+Applesheriff/Pain11		   aspain11
+Applesheriff/Pain12		   aspain12
+Applesheriff/Pain13		   aspain13
+Applesheriff/Pain14		   aspain14
+Applesheriff/Pain15		   aspain15
+Applesheriff/Pain16		   aspain16
+Applesheriff/Pain17		   aspain17
+Applesheriff/Pain18		   aspain18
+Applesheriff/Pain19		   aspain19
+Applesheriff/Pain20		   aspain20
+$random Applesheriff/death { Applesheriff/death1 Applesheriff/death2 Applesheriff/death3 Applesheriff/death4 Applesheriff/death5 Applesheriff/death6 Applesheriff/death7 Applesheriff/death8 Applesheriff/death9 Applesheriff/death10 Applesheriff/death11 }
 Applesheriff/death1       asdie01
 Applesheriff/death2       asdie02
 Applesheriff/death3       asdie03
 Applesheriff/death4       asdie04
 Applesheriff/death5       asdie05
 Applesheriff/death6		  asdie06
+Applesheriff/death7       asdie07
+Applesheriff/death8       asdie08
+Applesheriff/death9       asdie09
+Applesheriff/death10      asdie10
+Applesheriff/death11      asdie11
 
 $random OctaLeb/sight { OctaLeb/sight1 OctaLeb/sight2 OctaLeb/sight3 OctaLeb/sight4 OctaLeb/sight5 OctaLeb/sight6 OctaLeb/sight7 OctaLeb/sight8 OctaLeb/sight9 OctaLeb/sight10 OctaLeb/sight11 OctaLeb/sight12 OctaLeb/sight13 OctaLeb/sight14 OctaLeb/sight15 }
 OctaLeb/sight1       octsit01
