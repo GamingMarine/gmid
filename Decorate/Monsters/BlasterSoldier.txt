@@ -36,7 +36,7 @@ ACTOR BlasterSoldier
     POFD E 8
     Goto See
   Pain:
-    POFD G 3
+    POFD G 3 A_StopSound(CHAN_VOICE)
     POFD G 3 A_Pain
     Goto See
   Pain.Foot:

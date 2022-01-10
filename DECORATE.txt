@@ -9,6 +9,7 @@
 #include Decorate/Weapons/BareHands.txt
 #include Decorate/Weapons/AngleGrinder.txt
 #include Decorate/Weapons/Beretta.txt
+#include Decorate/Weapons/DualBerettas.txt
 #include Decorate/Weapons/UACShotgun.txt
 #include Decorate/Weapons/SawnOff.txt
 #include Decorate/Weapons/Firestick.txt

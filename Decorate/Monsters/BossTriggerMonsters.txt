@@ -35,7 +35,7 @@ actor VinylStorm replaces Arachnotron
 	VSTR DD 2 A_Chase
 	Loop
   Pain:
-    VSTR G 4
+    VSTR G 4 A_StopSound(CHAN_VOICE)
 	VSTR G 4 A_Pain
 	Goto See
   Pain.Foot:
@@ -273,7 +273,7 @@ actor NewbieHooves replaces Fatso
 	NWBH DD 2 A_FastChase
 	Loop
   Pain:
-    NWBH G 4
+    NWBH G 4 A_StopSound(CHAN_VOICE)
 	NWBH G 4 A_Pain
 	Goto See
   Pain.Foot:
@@ -513,7 +513,7 @@ actor TwiMage replaces BaronOfHell
 	TWMA DD 2 A_Chase
 	Loop
   Pain:
-    TWMA G 4
+    TWMA G 4 A_StopSound(CHAN_VOICE)
 	TWMA G 4 A_Pain
 	Goto See
   Pain.Foot:

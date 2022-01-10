@@ -180,7 +180,7 @@ Actor NewScriptedMarine : ScriptedMarine replaces ScriptedMarine
     "####" A 1
     Goto See
   Pain:
-    "####" G 4
+    "####" G 4 A_StopSound(CHAN_VOICE)
     "####" G 4 A_Pain
     Goto Idle
   Death:

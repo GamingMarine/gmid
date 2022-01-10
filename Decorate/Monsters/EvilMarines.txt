@@ -31,7 +31,7 @@ actor EvilMarine_Rifle //Evil! EEEVILLL
 	MARR A 0 A_PlaySound("Cyber/Hoof", CHAN_BODY)	
 	Loop
   Pain:
-    MARR G 4
+    MARR G 4 A_StopSound(CHAN_VOICE)
 	MARR G 4 A_Pain
 	Goto See
   Pain.Foot:
@@ -205,7 +205,7 @@ actor EvilMarine_Shotgun : EvilMarine_Rifle
 	PLA3 A 0 A_PlaySound("Cyber/Hoof", CHAN_BODY)	
 	Loop
   Pain:
-    PLA3 G 4
+    PLA3 G 4 A_StopSound(CHAN_VOICE)
 	PLA3 G 4 A_Pain
 	Goto See
   Pain.Foot:
@@ -241,7 +241,7 @@ actor EvilMarine_Minigun : EvilMarine_Rifle
 	PLA4 A 0 A_PlaySound("Cyber/Hoof", CHAN_BODY)	
 	Loop
   Pain:
-    PLA4 H 4
+    PLA4 H 4 A_StopSound(CHAN_VOICE)
 	PLA4 H 4 A_Pain
 	Goto See
   Pain.Foot:

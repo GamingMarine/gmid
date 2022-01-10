@@ -51,7 +51,7 @@ Actor ZSecGunner
     ZSC1 E 0
     Goto See
   Pain:
-    ZSC1 G 3
+    ZSC1 G 3 A_StopSound(CHAN_VOICE)
     ZSC1 G 3 A_Pain
     Goto See
   Pain.Foot:

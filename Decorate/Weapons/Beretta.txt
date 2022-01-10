@@ -42,7 +42,7 @@ Actor GMIDPistol : Pistol Replaces Pistol
 	TNT1 A 0 A_SetBlend("Red", 0.25, 16)
 	PISG B 0 A_PlaySound("DoubleDamage/Use")
 	ContinueFire:
-	PISG B 0 A_PlaySound("weapons/GMPISTL1", CHAN_WEAPON)
+	PISG B 0 A_PlaySound("weapons/GMPISTOL", CHAN_WEAPON)
 	PISG B 0 A_SetPitch(pitch-0.15)
 	PISG B 0 A_FireBullets (5.6, 0, 1, 5, "XaserPuff")
     PISG B 0 A_FireCustomMissile("CasingSpawner",0,0,17,0)
@@ -111,117 +111,5 @@ Actor GMIDPistol : Pistol Replaces Pistol
   WeaponStill:
 	PISG A 22
 	Goto LightDone
-  }
-}
-
-Actor DualPistolToken : Inventory {}
-
-Actor GMIDDualPistol : GMIDPistol
-{
-	Weapon.BobRangeX 0.3
-	Weapon.BobRangeY 0.5
-	Weapon.BobStyle InverseSmooth
-	Weapon.BobSpeed 2.0
-	Weapon.UpSound "pistup2"
-	attacksound ""
-	Weapon.AmmoType "Clip2"
-	Weapon.AmmoUse 2
-	Tag "$TAG_BERETTA2"
-	Scale 0.5
-	+WEAPON.NOALERT
-	Inventory.PickupMessage "$GOTBERETTA2"
-	Obituary "$OB_BERETTA2"
-	Inventory.Icon "PISTB0" //For mods like DrPyspy's Weapon Wheel and Tapwave's War Trophies
-	states
-	{
-	Ready:
-	TNT1 A 0 A_JumpIfInventory("DualPistolToken",1,"FirstTime")
-	PIS2 A 1 A_WeaponReady
-	Loop
-	FirstTime:
-	TNT1 A 0 A_TakeInventory("DualPistolToken",9999)
-	TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("PVPCheck",0,0,0,0) == 2,"Ready")
-	TNT1 A 0 A_JumpIf(CallACS("PickupAnimation")==0, "Ready")
-	PIS2 A 2 A_WeaponReady
-	TNT1 A 0 A_PlaySound("weapon/fiddle")
-	P2FS ABCDEEEEEEEEEEEEEEE 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-	TNT1 A 0 A_PlaySound("weapon/fiddle")
-	P2FS FGHIJ 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-	TNT1 A 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-	TNT1 A 0 A_PlaySound("weapon/fiddle")
-	P2FS KLMNOPPPPPPPP 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-	TNT1 A 0 A_PlaySound("pistolmagazine/get")
-	P2FS PPQRRRRRRRRRR 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-	TNT1 A 0 A_PlaySound("weapon/fiddle")
-	P2FS STUVW 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-	TNT1 A 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-	TNT1 A 0 A_PlaySound("pistup2")
-	P2FS XYZ 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-	Goto Ready
-	Fire:
-	PIS2 A 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-	PIS2 A 0 A_AlertMonsters
-	PIS2 B 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
-	PIS2 B 0 A_JumpIfInventory("PowerDoubleDamage", 1, "DoubleFire")
-	Goto ContinueFire
-	QuadFire:
-	TNT1 A 0 A_SetBlend("Blue", 0.25, 16)
-	PIS2 B 0 A_PlaySound("QuadDamage/Use")
-	Goto ContinueFire
-	DoubleFire:
-	TNT1 A 0 A_SetBlend("Red", 0.25, 16)
-	PIS2 B 0 A_PlaySound("DoubleDamage/Use")
-	ContinueFire:
-	PIS2 B 0 A_SetPitch(pitch-0.3)
-	PIS2 B 0 A_PlaySound("weapons/GMPISTL2", CHAN_WEAPON)
-	PIS2 B 0 A_FireBullets (11.2, 0, 2, 5, "XaserPuff")
-    PIS2 B 0 A_FireCustomMissile("CasingSpawner",0,0,17,0)
-    PIS2 B 0 A_FireCustomMissile("CasingSpawner",0,0,-13,0)
-	PIS2 B 0 A_Light1
-	PIS2 B 1 Bright A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-	PIS2 C 0 A_Light0
-	PIS2 C 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-	PIS2 D 0 A_Light0
-	PIS2 D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-	PIS2 E 0 A_SetPitch(pitch+0.3)
-	PIS2 EF 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-	PIS2 A 5 A_WeaponReady
-	Goto Ready
-  AltFire:
-	TNT1 A 0 A_GunFlash("WeaponStill")
-	TNT1 A 0 A_PlaySound ("weapons/KICK",CHAN_WEAPON)
-	FOOT AB 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-	FOOT C 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-	FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-	FOOT D 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadKick")
-	FOOT D 0 A_JumpIfInventory("PowerDoubleDamage", 1, "DoubleKick")
-	Goto ContinueKick
-  QuadKick:
-	TNT1 A 0 A_SetBlend("Blue", 0.25, 16)
-	FOOT D 0 A_PlaySound("QuadDamage/Use",CHAN_7)
-	Goto ContinueKick
-  DoubleKick:
-	TNT1 A 0 A_SetBlend("Red", 0.25, 16)
-	FOOT D 0 A_PlaySound("DoubleDamage/Use",CHAN_7)
-  ContinueKick:
-	FOOT D 0 A_CustomPunch(5,0,0,"KickPuff")
-	FOOT D 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-	FOOT D 0 A_Quake(1,2,0,10,"")
-	FOOT EF 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-	FOOT FEDCBA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-	TNT1 A 8 A_WeaponReady(WRF_NoFire)
-	TNT1 A 0 A_ReFire
-	Goto Ready
-  WeaponStill:
-	PIS2 A 22
-	Goto LightDone
-  Deselect:
-    PIS2 A 1 A_Lower
-    PIS2 A 0 A_Lower
-    Loop
-  Select:
-    PIS2 A 1 A_Raise
-    PIS2 A 0 A_Raise
-    Loop
   }
 }

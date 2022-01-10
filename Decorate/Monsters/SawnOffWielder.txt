@@ -44,7 +44,7 @@ actor SawedOffShotgunGuy
 	ZSDO A 5
     goto See
   Pain:
-    ZSDO G 3
+    ZSDO G 3 A_StopSound(CHAN_VOICE)
     ZSDO G 3 A_Pain
     goto See
   Pain.Foot:

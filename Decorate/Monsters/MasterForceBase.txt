@@ -21,7 +21,7 @@ actor MasterForceBase
 	"####" DD 2 A_Chase
 	Loop
   Pain:
-    "####" G 4
+    "####" G 4 A_StopSound(CHAN_VOICE)
 	"####" G 4 A_Pain
 	Goto See
   Pain.Foot:

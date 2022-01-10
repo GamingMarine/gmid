@@ -457,10 +457,6 @@ ACTOR ZombieScientistCastCall
     SCZA F 16 A_CustomMeleeAttack (random (2, 6) *5, "scientist/hit", "scientist/whoosh")
     SCZA E 4
     goto See
-  Pain:
-    SCZA G 3
-    SCZA G 3 A_Pain
-    goto See
   Death:
     SCZA H 5
     SCZA I 5 A_Scream

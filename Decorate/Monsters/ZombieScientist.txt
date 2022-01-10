@@ -32,7 +32,7 @@ ACTOR ZombieScientist
     SCZA E 4
     goto See
   Pain:
-    SCZA G 3
+    SCZA G 3 A_StopSound(CHAN_VOICE)
     SCZA G 3 A_Pain
     goto See
   Pain.Foot:

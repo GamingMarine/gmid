@@ -83,8 +83,8 @@ Actor NewYellowSkull : YellowSkull replaces YellowSkull
 
 Actor DeactivatedSentry : CustomInventory
 {
-	Inventory.Amount 1
 	Inventory.MaxAmount 3
+	Inventory.InterHubAmount 3
 	Inventory.PickupSound "sentry/pickup"
 	Inventory.UseSound "sentry/pickup"
 	Inventory.PickupMessage "$GOTSENTRY"

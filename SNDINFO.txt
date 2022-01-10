@@ -89,8 +89,7 @@ weapons/KICK     KICK
 weapons/DSSAWFUL DSSAWFUL
 weapons/DSSAWHIT DSSAWHIT
 pistol/cock PISTCOCK
-weapons/GMPISTL1 GMPISTL1
-weapons/GMPISTL2 GMPISTL2
+weapons/GMPISTOL GMPISTOL
 $random weapons/GMSHOTGN { shotgun/fire1 shotgun/fire2 shotgun/fire3 shotgun/fire4 }
 shotgun/fire1	 SGFIR1
 shotgun/fire2	 SGFIR2
@@ -1722,7 +1721,11 @@ ForceLord/Sight3				MFLSIT3
 ForceLord/Sight4				MFLSIT4
 ForceLord/Sight5				MFLSIT5
 ForceLord/Sight6				MFLSIT6
-ForceLord/Stomp					MFLSTOMP
+$random ForceLord/Stomp { Forcelord/Stomp1 ForceLord/Stomp2 ForceLord/Stomp3 ForceLord/Stomp4 }
+ForceLord/Stomp1				MFLSTMP1
+ForceLord/Stomp2				MFLSTMP2
+ForceLord/Stomp3				MFLSTMP3
+ForceLord/Stomp4				MFLSTMP4
 $random ForceLord/Active { ForceLord/Active1 ForceLord/Active2 ForceLord/Active3 ForceLord/Active4 ForceLord/Active5 ForceLord/Active6 }
 ForceLord/Active1				MFLACT1
 ForceLord/Active2				MFLACT2

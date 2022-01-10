@@ -37,7 +37,7 @@ actor Changeling replaces LostSoul
 	Loop
   Pain:
 	CHGL H 0 A_SpawnItemEx("ChangelingTrailH",random(-1,1), random(-1,1), 0)
-    CHGL H 4
+    CHGL H 4 A_StopSound(CHAN_VOICE)
 	CHGL H 0 A_SpawnItemEx("ChangelingTrailH",random(-1,1), random(-1,1), 0)
 	CHGL H 4 A_Pain
 	Goto See

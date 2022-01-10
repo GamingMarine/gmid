@@ -29,7 +29,7 @@ Actor ChaingunMajor : ChaingunGuy
     CPS2 F 1 A_CPosRefire
     Goto Missile+1
   Pain:
-    CPS2 G 3
+    CPS2 G 3 A_StopSound(CHAN_VOICE)
     CPS2 G 3 A_Pain
     Goto See
   Pain.Foot:
