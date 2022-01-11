@@ -42,43 +42,101 @@ ACTOR CacoColaBottle : CustomInventory
 	}
 }
 
-Actor NewRedCard : RedCard replaces RedCard
+Actor NewRedCard : CustomInventory replaces RedCard
 {
-  Species "RedCard"
+  Inventory.PickupSound "misc/k_pkup"
   Inventory.PickupMessage "$GOTREDCARD2"
+  States
+  {
+  Spawn:
+	RKEY A 10
+	RKEY B 10 Bright
+	Loop
+  Pickup:
+	TNT1 A 1 A_GiveInventory("RedCard",1)
+	Stop
+  }
 }
 
-Actor NewRedSkull : RedSkull replaces RedSkull
+Actor NewRedSkull : CustomInventory replaces RedSkull
 {
-  Species "RedSkull"
+  Inventory.PickupSound "misc/skullup"
   Inventory.PickupMessage "$GOTREDSKUL2"
-  Inventory.PickupSound "misc/skullup"
+  States
+  {
+  Spawn:
+	RSKU A 10
+	RSKU B 10 Bright
+	Loop
+  Pickup:
+	TNT1 A 1 A_GiveInventory("RedSkull",1)
+	Stop
+  }
 }
 
-Actor NewBlueCard : BlueCard replaces BlueCard
+Actor NewBlueCard : CustomInventory replaces BlueCard
 {
-  Species "BlueCard"
+  Inventory.PickupSound "misc/k_pkup"
   Inventory.PickupMessage "$GOTBLUECARD2"
+  States
+  {
+  Spawn:
+	BKEY A 10
+	BKEY B 10 Bright
+	Loop
+  Pickup:
+	TNT1 A 1 A_GiveInventory("BlueCard",1)
+	Stop
+  }
 }
 
-Actor NewBlueSkull : BlueSkull replaces BlueSkull
+Actor NewBlueSkull : CustomInventory replaces BlueSkull
 {
-  Species "BlueSkull"
+  Inventory.PickupSound "misc/skullup"
   Inventory.PickupMessage "$GOTBLUESKUL2"
-  Inventory.PickupSound "misc/skullup"
+  States
+  {
+  Spawn:
+	BSKU A 10
+	BSKU B 10 Bright
+	Loop
+  Pickup:
+	TNT1 A 1 A_GiveInventory("BlueSkull",1)
+	Stop
+  }
 }
 
-Actor NewYellowCard : YellowCard replaces YellowCard
+
+Actor NewYellowCard : CustomInventory replaces YellowCard
 {
-  Species "YellowCard"
+  Inventory.PickupSound "misc/k_pkup"
   Inventory.PickupMessage "$GOTYELWCARD2"
+  States
+  {
+  Spawn:
+	YKEY A 10
+	YKEY B 10 Bright
+	Loop
+  Pickup:
+	TNT1 A 1 A_GiveInventory("YellowCard",1)
+	Stop
+  }
 }
 
-Actor NewYellowSkull : YellowSkull replaces YellowSkull
+Actor NewYellowSkull : CustomInventory replaces YellowSkull
 {
-  Species "YellowSkull"
-  Inventory.PickupMessage "$GOTYELWSKUL2"
   Inventory.PickupSound "misc/skullup"
+  Inventory.PickupMessage "$GOTYELWSKUL2"
+  States
+  {
+  Spawn:
+	YSKU A 10
+	YSKU B 10 Bright
+	Loop
+  Pickup:
+	TNT1 A 1 A_GiveInventory("YellowSkull",1)
+	Stop
+  }
 }
 
 Actor DeactivatedSentry : CustomInventory
