@@ -65,6 +65,10 @@ weapon/fiddle5	 WFIDDLE5
 weapon/fiddle6	 WFIDDLE6
 weapon/fiddle7	 WFIDDLE7
 vgun/fiddle		 VGUNFRS
+revx/fiddle1	 REVXFRS1
+revx/fiddle2	 REVXFRS2
+revx/fiddle3	 REVXFRS3
+revx/fiddle4	 REVXFRS4
 missilelauncher/fiddle1	MISLFRS1
 missilelauncher/fiddle2	MISLFRS2
 missilelauncher/fiddle3	MISLFRS3
@@ -101,6 +105,8 @@ $random weapons/UZIFIRE { weapons/UZIFIRE1 weapons/UZIFIRE2 weapons/UZIFIRE3 }
 weapons/UZIFIRE1 UZIFIRE1
 weapons/UZIFIRE2 UZIFIRE2
 weapons/UZIFIRE3 UZIFIRE3
+vgun/motor		 CHANMOTR
+vgun/winddown	 CHANWIND
 weapons/GMROCKTL GMROCKTL
 Weapons/RocketFly ROCKFLY
 weapons/blasterrifle	DSBLASTR

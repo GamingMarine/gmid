@@ -26,6 +26,8 @@ Actor VGun : Chaingun
 		Stop
 		Fire: 
 		CHGG A 0 A_AlertMonsters
+		CHGG A 0 A_PlaySound("vgun/motor", CHAN_7, 1.0, true)
+		Hold:
 		CHGG A 0 A_JumpIfInventory("PowerQuadDamageST", 1, "QuadFire")
 		CHGG A 0 A_JumpIfInventory("PowerDoubleDamage", 1, "DoubleFire")
 		Goto ContinueFire
@@ -46,13 +48,16 @@ Actor VGun : Chaingun
 		CHGG D 0 A_SetPitch(pitch+1)
 		CHGG D 0 A_Light0
 		CHGG D 1 Bright A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+		CHGG A 0 A_ReFire("Hold")
+		CHGG A 0 A_PlaySound("vgun/winddown", CHAN_7)
 		CHGG AABBAAAABBBBAAAAAAAABBBBBBBB 1 A_WeaponReady
 		goto Ready
 	Ready:
 		TNT1 A 0 A_JumpIfInventory("VGunToken",1,"FirstTime")
 		CHGG A 1 A_WeaponReady
 		Loop
-	Deselect:
+  Deselect:
+		CHGG A 0 A_StopSound(CHAN_7)
 		CHGG A 1 A_Lower
 		CHGG A 0 A_Lower
 		Loop
