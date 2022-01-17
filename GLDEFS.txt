@@ -137,6 +137,13 @@ object NewBurningBarrel
     frame BURB { light FIREBARREL }
 }
 
+object XaserBarrel
+{
+	frame BEXPR { light BarrelCorpse }
+	frame BEXPS { light BarrelCorpse }
+	frame BEXPT { light BarrelCorpse }
+}
+
 object TallTorch_Blue
 {
     frame TTRB { light BIGBLUETORCH }
@@ -528,6 +535,86 @@ Object Sentry
 {
   Frame SENTB { Light EnemyChaingunAttack }
   Frame SENTC { Light EnemyChaingunAttack }
+}
+
+Object ActivatedSkullBomb
+{
+    frame SBMB { light REDKEY }
+}
+
+Object NewExplosion
+{
+  Frame ZXPLA { Light FIREBARREL }
+  Frame ZXPLB { Light FIREBARREL }
+  Frame ZXPLC { Light FIREBARREL }
+  Frame ZXPLD { Light FIREBARREL }
+  Frame ZXPLE { Light FIREBARREL }
+  Frame ZXPLF { Light FIREBARREL }
+  Frame ZXPLG { Light FIREBARREL }
+  Frame ZXPLH { Light FIREBARREL }
+  Frame ZXPLI { Light FIREBARREL }
+  Frame ZXPLJ { Light FIREBARREL }
+  Frame ZXPLK { Light FIREBARREL }
+  Frame ZXPLL { Light ExplosionFade1 }
+  Frame ZXPLM { Light ExplosionFade2 }
+  Frame ZXPLN { Light ExplosionFade3 }
+}
+
+Object NewExplosion2
+{
+  Frame YXPLA { Light FIREBARREL }
+  Frame YXPLB { Light FIREBARREL }
+  Frame YXPLC { Light FIREBARREL }
+  Frame YXPLD { Light FIREBARREL }
+  Frame YXPLE { Light FIREBARREL }
+  Frame YXPLF { Light FIREBARREL }
+  Frame YXPLG { Light FIREBARREL }
+  Frame YXPLH { Light FIREBARREL }
+  Frame YXPLI { Light FIREBARREL }
+  Frame YXPLJ { Light FIREBARREL }
+  Frame YXPLK { Light FIREBARREL }
+  Frame YXPLL { Light FIREBARREL }
+  Frame YXPLM { Light FIREBARREL }
+  Frame YXPLN { Light FIREBARREL }
+  Frame YXPLO { Light ExplosionFade1 }
+  Frame YXPLP { Light ExplosionFade2 }
+  Frame YXPLQ { Light ExplosionFade3 }
+}
+
+Object NewExplosion3
+{
+  Frame XXPLA { Light FIREBARREL }
+  Frame XXPLB { Light FIREBARREL }
+  Frame XXPLC { Light FIREBARREL }
+  Frame XXPLD { Light FIREBARREL }
+  Frame XXPLE { Light FIREBARREL }
+  Frame XXPLF { Light FIREBARREL }
+  Frame XXPLG { Light FIREBARREL }
+  Frame XXPLH { Light FIREBARREL }
+  Frame XXPLI { Light FIREBARREL }
+  Frame XXPLJ { Light FIREBARREL }
+  Frame XXPLK { Light FIREBARREL }
+  Frame XXPLL { Light FIREBARREL }
+  Frame XXPLM { Light FIREBARREL }
+  Frame XXPLN { Light FIREBARREL }
+  Frame XXPLO { Light ExplosionFade1 }
+  Frame XXPLP { Light ExplosionFade2 }
+  Frame XXPLQ { Light ExplosionFade3 }
+}
+
+Object NewExplosion4
+{
+  Frame WXPLA { Light FIREBARREL }
+  Frame WXPLB { Light FIREBARREL }
+  Frame WXPLC { Light FIREBARREL }
+  Frame WXPLD { Light FIREBARREL }
+  Frame WXPLE { Light FIREBARREL }
+  Frame WXPLF { Light FIREBARREL }
+  Frame WXPLG { Light FIREBARREL }
+  Frame WXPLH { Light FIREBARREL }
+  Frame WXPLI { Light ExplosionFade1 }
+  Frame WXPLJ { Light ExplosionFade2 }
+  Frame WXPLK { Light ExplosionFade3 }
 }
 
 //===============

@@ -77,6 +77,14 @@ texture HPP1D0
 	pic HPP1E0 tics 5
 	pic HPP1F0 tics 5
 	
+texture I_SBG0
+	pic I_SBA0 tics 3
+	pic I_SBB0 tics 3
+	pic I_SBC0 tics 3
+	pic I_SBD0 tics 3
+	pic I_SBE0 tics 3
+	pic I_SBF0 tics 3
+	
 //Textures
 //Nukage
 flat NUKAGE1

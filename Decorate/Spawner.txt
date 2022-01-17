@@ -136,6 +136,9 @@ Actor BFGSpawner : RandomSpawner
 {
 DropItem "SpaceCadet"
 DropItem "SoulCubeGenerator"
+DropItem "SpaceCadet"
+DropItem "SoulCubeGenerator"
+DropItem "SkullBomb"
 }
 
 Actor SpaceCadetSpawner : RandomSpawner //Again, here to fix multiplayer issues

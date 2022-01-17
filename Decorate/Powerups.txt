@@ -524,6 +524,8 @@ Actor CapturedMarine
 	Loop
   Death:
 	POWM D 0 A_Scream
+	POWM D 0 A_Print("$MARINERESCUED")
+	POWM D 0 A_GiveToTarget("ScoreItem",5000)
 	POWM D 5 A_NoBlocking
 	POWM EFG 3
 	POWM H 5

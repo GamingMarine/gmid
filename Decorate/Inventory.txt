@@ -248,3 +248,106 @@ Actor SentryPuff : XaserPuff
 {
   DamageType "Sentry"
 }
+
+Actor SkullBomb : CustomInventory
+{
+	Inventory.MaxAmount 1
+	Inventory.PickupSound "skullbomb/pickup"
+	Inventory.UseSound "skullbomb/throw"
+	Inventory.PickupMessage "$GOTSKULL"
+	Inventory.Icon "I_SBG0"
+	Tag "$TAG_SKULL"
+	+INVBAR
+	Scale 0.5
+	States
+	{
+	Spawn:
+		SBMB Z -1
+		Stop
+	Use:
+		SBMB Z 0 A_ThrowGrenade("ThrownSkullBomb",2,8,2,0)
+		Stop
+	}
+}
+
+Actor ThrownSkullBomb
+{
+  +DROPOFF
+  +MISSILE
+  +WINDTHRUST
+  +CANBOUNCEWATER
+  Scale 0.5
+  States
+  {
+  Spawn:
+	SBMB Z 1
+	Loop
+  Death:
+	SBMB Z 0
+	SBMB Z 0 A_Print("$SKULLWARN")
+	SBMB Z 0 A_SpawnItem("ActivatedSkullBomb")
+	Stop
+  } 
+}
+
+Actor ActivatedSkullBomb
+{
+  Scale 0.5
+  States
+  {
+  Spawn:
+	SBMB ABCDEFABCDEF 3 Bright
+	SBMB A 0 A_PlaySound("sentry/ping")
+	SBMB ABCDEFABCDEF 3 Bright
+	SBMB A 0 A_PlaySound("sentry/ping")
+	SBMB ABCDEFABCDEF 3 Bright
+	SBMB A 0 A_PlaySound("sentry/ping") //5 seconds
+	SBMB A 0 A_Print("5...")
+	SBMB ABCDEFABCDEF 3 Bright
+	SBMB A 0 A_PlaySound("sentry/ping")
+	SBMB A 0 A_Print("4...")
+	SBMB ABCDEFABCDEF 3 Bright
+	SBMB A 0 A_PlaySound("skullbomb/warning")
+	SBMB A 0 A_Print("\cg3...")
+	SBMB ABCDEFABCDEF 3 Bright
+	SBMB A 0 A_PlaySound("skullbomb/warning")
+	SBMB A 0 A_Print("\cg2...")
+	SBMB ABCDEFABCDEF 3 Bright
+	SBMB A 0 A_PlaySound("skullbomb/warning")
+	SBMB A 0 A_Print("\cg1...")
+	SBMB A 0 A_Jump(1,"SecretSegment")
+	SBMB ABCDEFABCDE 3 Bright
+	SBMB F 1 Bright
+	SBMB A 0 A_Print("")
+	SBMB A 0 A_PlaySound("skullbomb/explode")
+	SBMB A 0 A_SpawnItem("SkullBombExplosion")
+	SBMB A 0 ACS_NamedExecuteAlways("SkullBombFace")
+	Stop
+  SecretSegment:
+	SBMB A 0 A_PlaySound("skullbomb/secret1", CHAN_AUTO)
+	SBMB ABCDEFABCDE 3 Bright
+	SBMB F 1 Bright
+	SBMB A 0 A_Print("")
+	SBMB A 0 A_PlaySound("skullbomb/explode")
+	SBMB A 0 A_SpawnItem("SkullBombExplosion")
+	SBMB A 0 ACS_NamedExecuteAlways("SkullBombFace")
+	SBMB A 0 A_PlaySound("skullbomb/secret2", CHAN_AUTO)
+	Stop
+  }
+}
+
+Actor SkullBombExplosion
+{
+  Scale 5
+  DamageType "SkullBomb"
+  +FORCEXYBILLBOARD
+  States
+  {
+  Spawn:
+	TNT1 A 0
+	TNT1 A 0 A_Quake(9,137,0,10000,"null")
+	TNT1 A 0 A_Explode(4375,2000)
+	SBXP ABCDEFGHIJKLMNOPQRSTU 7 Bright
+	Stop
+  }
+}

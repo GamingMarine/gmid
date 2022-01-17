@@ -4710,6 +4710,42 @@ DisableFullBright
 Map "Brightmaps/GMID/SENTC8.png"
 }
 
+Brightmap Sprite SBMBA0
+{
+DisableFullBright
+Map "Brightmaps/GMID/SBMBA0.png"
+}
+
+Brightmap Sprite SBMBB0
+{
+DisableFullBright
+Map "Brightmaps/GMID/SBMBB0.png"
+}
+
+Brightmap Sprite SBMBC0
+{
+DisableFullBright
+Map "Brightmaps/GMID/SBMBA0.png"
+}
+
+Brightmap Sprite SBMBD0
+{
+DisableFullBright
+Map "Brightmaps/GMID/SBMBB0.png"
+}
+
+Brightmap Sprite SBMBE0
+{
+DisableFullBright
+Map "Brightmaps/GMID/SBMBA0.png"
+}
+
+Brightmap Sprite SBMBF0
+{
+DisableFullBright
+Map "Brightmaps/GMID/SBMBB0.png"
+}
+
 Brightmap Flat MAGMA1
 {
 Map "Brightmaps/GMID/MAGMA.png"

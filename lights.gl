@@ -141,6 +141,41 @@ flickerlight FIREBARREL
     offset 0 32 0
 }
 
+flickerlight ExplosionFade1
+{
+	color 1.0 0.9 0.0
+	size 36
+	secondarysize 42
+	chance 0.8
+	offset 0 32 0
+}
+
+flickerlight ExplosionFade2
+{
+	color 1.0 0.9 0.0
+	size 24
+	secondarysize 28
+	chance 0.8
+	offset 0 32 0
+}
+
+flickerlight ExplosionFade3
+{
+	color 1.0 0.9 0.0
+	size 12
+	secondarysize 14
+	chance 0.8
+	offset 0 32 0
+}
+
+flickerlight BarrelCorpse
+{
+	color 1.0 0.9 0.0
+	size 12
+	secondarysize 14
+	chance 0.8
+}
+
 flickerlight BIGBLUETORCH
 {
     color 0.2 0.2 0.7

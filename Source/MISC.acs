@@ -86,22 +86,18 @@ Script "SecretBonus" ENTER
 	{
 		if (sfound == stotal) //If the player has found all secrets, give the player 10,000 points
 		{
-			PrintBold(l:"SECRETALL");
-			GiveInventory("ScoreItem",10000);
-			Delay(35*3);
 			PlaySound(0,"secret/allfound",0);
-			PrintBold(l:"SECRETBONUS");
+			PrintBold(l:"SECRETALL");
 		}
 		Else
 		{
-			Print(l:"SECRETAREA");
-			Delay(35*3);
+			PlaySound(0,"secret/found",0);
 			if (stotal-sfound > 1) //Print plural message if 2 or more secrets are left
 			{
-				Print(d:stotal-sfound,l:"SECRETREMAIN");
+				Print(l:"SECRETAREA",d:stotal-sfound,l:"SECRETREMAIN");
 			}
 			Else
-			Print(l:"SECRETSINGLE");
+			Print(l:"SECRETAREA",l:"SECRETSINGLE");
 		}
 	}
 	Delay(1);
@@ -128,4 +124,14 @@ script "1UpCheck" (void)
 	{
 	  SetResultValue(2);
 	}
+}
+
+Script "SkullBombFace" (void)
+{
+  SetHudSize(320,200,0);
+  FadeTo(0,0,0,1.0,0);
+  SetFont("SKULBOMB");
+  HudMessage(s:"A"; HUDMSG_FADEOUT, 0, CR_UNTRANSLATED,0.1,0.5,0.0,3.0);
+  FadeTo(0,0,0,0.0,3.0);
+  SetHudSize(0,0,0);
 }

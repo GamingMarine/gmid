@@ -1,3 +1,5 @@
+Actor HasSoulCube : Inventory {}
+
 Actor SoulCube : weapon
 {
    Weapon.BobRangeX 0.3
@@ -211,11 +213,9 @@ actor SoulCubeGenerator : CustomInventory
   +FLOATBOB
   +AUTOACTIVATE
   +FORCEXYBILLBOARD
-  -INVENTORY.ALWAYSPICKUP
   Tag "$TAG_CUBE"
   Inventory.PickupMessage "$GOTCUBE"
   Inventory.PickupSound "SoulCube/Pickup" 
-  Inventory.MaxAmount 1
    Scale 0.25
   states
   {
@@ -223,10 +223,19 @@ actor SoulCubeGenerator : CustomInventory
     SCBG A 5
 	Loop
   Pickup:
+	TNT1 A 0
+	TNT1 A 0 A_JumpIfInventory("HasSoulCube",1,"FailIt")
+	Goto Use
+  Use:
+	TNT1 A 0 A_GiveInventory("HasSoulCube")
     TNT1 A 0 A_GiveInventory("SoulCube")
     TNT1 A 0 A_TakeInventory("CubeAmmo", 25)
     TNT1 A 0 A_SelectWeapon("SoulCube") 
-    stop
+    Stop
+  FailIt:
+	TNT1 A 0
+	TNT1 A 0
+	Stop
   }
 }
 

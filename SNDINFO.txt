@@ -525,6 +525,13 @@ sentry/fire2				SNTRYFR2
 sentry/fire3				SNTRYFR3
 sentry/ping					SNTRYPNG
 
+skullbomb/pickup			SKULBMUP
+skullbomb/throw				SKULTHRW
+skullbomb/warning			SKULWARN
+skullbomb/explode			SKULBOOM
+skullbomb/secret1			WTF
+skullbomb/secret2			BOOOOOOM
+
 menu/activate			newmenu	// Activate a new menu
 menu/backup			menuback	// Backup to previous menu
 menu/cursor			menulft		// Move cursor up/down
@@ -539,7 +546,8 @@ menu/clear			menuback	// Close top menu
 secret/found1		SECRET1
 secret/found2		SECRET2
 secret/allfound		ALLSECRT
-$random misc/secret { secret/found1 secret/found2 }
+$random secret/found { secret/found1 secret/found2 }
+misc/secret			null
 misc/quit1			QUITSND1
 misc/quit2			QUITSND2
 misc/quit3			QUITSND3
@@ -700,6 +708,9 @@ $attenuation cookie/spawn 0
 $attenuation cookie/death 0
 $attenuation cookie/leave 0
 $attenuation cookie/lastwords 0
+$attenuation skullbomb/explode 0
+$attenuation skullbomb/secret1 0
+$attenuation skullbomb/secret2 0
 $attenuation misc/toasty 0
 $limit player/killtaunt 1
 $limit player/gibtaunt 1

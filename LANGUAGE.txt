@@ -39,11 +39,11 @@ TXT_FRAGLIMIT = "Frag limit's up! Let's see the results!";
 TXT_TIMELIMIT = "Time limit's up! Let's see the results!";
 
 SECRETMESSAGE = "";
-SECRETAREA = "A secret area has been discovered!";
+SECRETAREA = "A secret area has been discovered!\n"; //Keep the \n call at the end of the string in order for the message to work properly
 SECRETREMAIN = " secret areas remain..."; //Keep that space at the start of the string in order for the message to work properly
 SECRETSINGLE = "1 secret area remains...";
-SECRETALL = "All secret areas found! Good hunting!";
-SECRETBONUS = "+10,000pt bonus!";
+SECRETALL = "All secret areas found! Good hunting!\n"
+			"+10,000pt bonus!";
 
 
 STSTR_CLEV = "Level is being changed...\n";
@@ -114,6 +114,7 @@ GOTHASTE = "\ciHasteSphere!";
 GOTCRYSTAL = "You got the Cookie-Crystal! \c[brick]Cookiedemon\c- is ready... \cf(\cjThis item must be activated to use it\cf)";
 GOTSHAKE = "Drank a Super-Cool(tm) Energy Shake! Refreshing! \cf(\cj+50 health\cf)";
 GOTSENTRY = "Picked up a portable sentry! \cf(\cjThis item must be activated to use it\cf)";
+GOTSKULL = "Picked up a \cgSkull Bomb\c-!!! Devastation is your only option... \cf(\cjThis item must be activated to use it\cf)";
 
 BIOFADE = "Air supply in bio-suit is expiring...";
 GOGGLESFADE = "Night vision goggles' batteries are draining...";
@@ -170,6 +171,7 @@ TAG_UPGRADE1 = "Rapid Fire Coolant";
 TAG_UPGRADE2 = "Plasma Pulse Energiser";
 TAG_SHAKE = "Super-Cool(tm) Energy Shake";
 TAG_SENTRY = "Portable Sentry";
+TAG_SKULL = "Skull Bomb";
 
 TAG_GRINDER = "Angle Grinder";
 TAG_FISTS = "Bare Hands";
@@ -401,6 +403,10 @@ BOTTLENOPE = "You aren't very thirsty right now...";
 SENTRYNOTE = "Press [USE] on the sentry to deactivate it.";
 CUBENOPE = "The \crSoul Cube\c- has not yet been satisfied...";
 CUBEREADY = "The \crSoul Cube\c- is ready to be used!";
+SKULLWARN = "The \cgSkull Bomb\c- has been placed!\n"
+			"\cgTAKE COVER BEFORE IT BLOWS!";
+MARINERESCUED = "Marine rescued\n"
+				"+5,000pt bonus!";
 
 //Options Menu
 GMIDMENU = "GamingMarine in Doom Options";

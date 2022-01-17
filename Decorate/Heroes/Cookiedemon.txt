@@ -145,7 +145,7 @@ ACTOR Cookiedemon
 	BloodColor "Blue"
 	DamageFactor "Basic", 0.0 //Prevents the player from accidentally hurting Cookiedemon.
 	DamageFactor "GMIDExplosion", 0.0 //Same thing, but also goes for explosive barrels.
-	Obituary "%o experienced Cookie's friendly fire."
+	DamageFactor "Skullbomb", 0.0 //For Skull Bombs
 	States
  {
  
