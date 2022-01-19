@@ -830,10 +830,10 @@ STEP_FLAT14 = "step/carpet";
 STEP_FLAT5_5 = "step/carpet";
 STEP_FLOOR1_6 = "step/carpet";
 STEP_CEIL4_1 = "step/carpet";
-STEP_GRASS1 = "step/carpet";
-STEP_GRASS2 = "step/carpet";
 
 // Dirt
+STEP_GRASS1 = "step/dirt";
+STEP_GRASS2 = "step/dirt";
 STEP_RROCK16 = "step/dirt";
 STEP_RROCK19 = "step/dirt";
 
@@ -970,5 +970,5 @@ STEP_LAVA4 = "step/lava";
 STEP_F_SKY1 = "";
 
 // Console Port Flats
-STEP_GRASS = "step/carpet";
+STEP_GRASS = "step/dirt";
 STEP_ROCKS = "step/rock";
