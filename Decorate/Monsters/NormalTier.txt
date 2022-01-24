@@ -57,6 +57,22 @@ actor Rourity : MasterForceBase replaces Cacodemon
 	ROTY I 5 A_Scream
 	ROTY A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo2", AAPTR_PLAYER1)
 	Goto ContinueDeath2
+  Death.BigFist:
+	ROTY A 0 A_GiveToTarget("ScoreItem",2000)
+    ROTY H 2 A_FaceTarget
+    ROTY H 0 A_Recoil(14)
+	ROTY H 3
+	ROTY I 5 A_Scream
+	ROTY A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
+	Goto ContinueDeath
+  Death.Uppercut:
+	ROTY A 0 A_GiveToTarget("ScoreItem",2000)
+    ROTY H 0 A_FaceTarget
+    ROTY H 0 ThrustThingZ(0,32,0,0)
+	ROTY H 5
+	ROTY I 5 A_Scream
+	ROTY A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
+	Goto ContinueDeath
   XDeath:
   Death.GMIDExplosion:
   Death.GMIDRailgun:
@@ -123,6 +139,22 @@ actor TrixieKir : MasterForceBase replaces HellKnight
 	TRKI I 5 A_Scream
 	TRKI A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo2", AAPTR_PLAYER1)
 	Goto ContinueDeath2
+  Death.BigFist:
+	TRKI A 0 A_GiveToTarget("ScoreItem",2500)
+    TRKI H 2 A_FaceTarget
+    TRKI H 0 A_Recoil(14)
+	TRKI H 3
+	TRKI I 5 A_Scream
+	TRKI A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
+	Goto ContinueDeath
+  Death.Uppercut:
+	TRKI A 0 A_GiveToTarget("ScoreItem",2500)
+    TRKI H 0 A_FaceTarget
+    TRKI H 0 ThrustThingZ(0,32,0,0)
+	TRKI H 5
+	TRKI I 5 A_Scream
+	TRKI A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
+	Goto ContinueDeath
   XDeath:
   Death.GMIDExplosion:
   Death.GMIDRailgun:
@@ -241,6 +273,22 @@ actor FlutterMedic : MasterForceBase replaces Archvile
 	FLMD I 5 A_Scream
 	FLMD A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo2", AAPTR_PLAYER1)
 	Goto ContinueDeath2
+  Death.BigFist:
+	FLMD A 0 A_GiveToTarget("ScoreItem",3500)
+    FLMD H 2 A_FaceTarget
+    FLMD H 0 A_Recoil(14)
+	FLMD H 3
+	FLMD I 5 A_Scream
+	FLMD A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
+	Goto ContinueDeath
+  Death.Uppercut:
+	FLMD A 0 A_GiveToTarget("ScoreItem",3500)
+    FLMD H 0 A_FaceTarget
+    FLMD H 0 ThrustThingZ(0,32,0,0)
+	FLMD H 5
+	FLMD I 5 A_Scream
+	FLMD A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
+	Goto ContinueDeath
   XDeath:
   Death.GMIDExplosion:
   Death.GMIDRailgun:

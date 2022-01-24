@@ -48,12 +48,20 @@ actor SawedOffShotgunGuy
     ZSDO G 3 A_Pain
     goto See
   Pain.Foot:
+  Pain.BigFist:
     ZSDO G 2 A_FaceTarget
     ZSDO A 0 A_ChangeFlag("NOPAIN",1)
     ZSDO A 0 A_Recoil(14)
     ZSDO G 33 A_Pain
 	ZSDO G 0 A_ChangeFlag("NOPAIN",0)
     Goto See
+  Pain.Uppercut:
+	ZSDO G 0 A_FaceTarget
+	ZSDO A 0 A_ChangeFlag("NOPAIN",1)
+	ZSDO A 0 ThrustThingZ(0,16,0,0)
+	ZSDO G 33 A_Pain
+	ZSDO G 0 A_ChangeFlag("NOPAIN",0)
+	Goto See
   Death:
 	ZSDO H 0 A_GiveToTarget("ScoreItem",300)
     ZSDO H 5 A_Scream
@@ -97,6 +105,35 @@ actor SawedOffShotgunGuy
     stop
   KickTaunt:
 	TNT1 A 0 A_PlaySound("player/kicktaunt", CHAN_AUTO)
+    ZSDO K 13
+    ZSDO LM 10
+    ZSDO N -1
+    stop
+  Death.BigFist:
+	ZSDO H 0 A_GiveToTarget("ScoreItem",300)
+    ZSDO H 0 A_Scream
+	ZSDO H 2 A_FaceTarget
+	ZSDO H 0 A_Recoil(14)
+	ZSDO H 3
+	ZSDO H 0 A_NoBlocking
+	ZSDO I 0 A_PlaySound("gore/head", CHAN_VOICE)
+	ZSDO I 0 A_SpawnItem("GMIDHeadshotSpawner")
+    ZSDO IJ 13 
+	ZSDO J 0 A_Jump(16, "KillTaunt")
+    ZSDO K 13
+    ZSDO LM 10
+    ZSDO N -1
+    stop
+  Death.Uppercut:
+	ZSDO H 0 A_GiveToTarget("ScoreItem",300)
+	ZSDO H 0 A_FaceTarget
+	ZSDO H 0 ThrustThingZ(0,43,0,0)
+	ZSDO H 5 A_Scream
+	ZSDO H 0 A_NoBlocking
+	ZSDO I 0 A_PlaySound("gore/head", CHAN_VOICE)
+	ZSDO I 0 A_SpawnItem("GMIDHeadshotSpawner")
+    ZSDO IJ 13 
+	ZSDO J 0 A_Jump(16, "KillTaunt")
     ZSDO K 13
     ZSDO LM 10
     ZSDO N -1

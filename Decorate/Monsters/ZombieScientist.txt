@@ -36,12 +36,20 @@ ACTOR ZombieScientist
     SCZA G 3 A_Pain
     goto See
   Pain.Foot:
+  Pain.BigFist:
     SCZA G 2 A_FaceTarget
     SCZA A 0 A_ChangeFlag("NOPAIN",1)
     SCZA A 0 A_Recoil(14)
     SCZA G 33 A_Pain
 	SCZA G 0 A_ChangeFlag("NOPAIN",0)
     Goto See
+  Pain.Uppercut:
+	SCZA G 0 A_FaceTarget
+	SCZA A 0 A_ChangeFlag("NOPAIN",1)
+	SCZA A 0 ThrustThingZ(0,16,0,0)
+	SCZA G 33 A_Pain
+	SCZA G 0 A_ChangeFlag("NOPAIN",0)
+	Goto See
   Death:
 	TNT1 A 0 A_GiveToTarget("ScoreItem",100)
 	TNT1 A 0 A_Jump(256, "Death1", "Death2")
@@ -122,6 +130,30 @@ ACTOR ZombieScientist
     stop
   KickTaunt2:
 	TNT1 A 0 A_PlaySound("player/kicktaunt", CHAN_AUTO)
+    FSMS L -1
+    stop
+  Death.BigFist:
+	FSMS H 0 A_GiveToTarget("ScoreItem",100)
+    FSMS H 2 A_FaceTarget
+	FSMS H 0 A_Recoil(14)
+	FSMS H 3
+    FSMS I 5 A_Scream
+    FSMS J 5 A_NoBlocking
+    FSMS K 5
+	FSMS L 10 A_PlaySound("body/hitfloor")
+	FSMS L 0 A_Jump(16, "KillTaunt2")
+    FSMS L -1
+    stop
+  Death.Uppercut:
+	FSMS H 0 A_GiveToTarget("ScoreItem",100)
+	FSMS H 0 A_FaceTarget
+	FSMS H 0 ThrustThingZ(0,43,0,0)
+	FSMS H 5
+    FSMS I 5 A_Scream
+    FSMS J 5 A_NoBlocking
+    FSMS K 5
+	FSMS L 10 A_PlaySound("body/hitfloor")
+	FSMS L 0 A_Jump(16, "KillTaunt2")
     FSMS L -1
     stop
   XDeath:

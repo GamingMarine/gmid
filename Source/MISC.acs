@@ -135,3 +135,14 @@ Script "SkullBombFace" (void)
   FadeTo(0,0,0,0.0,3.0);
   SetHudSize(0,0,0);
 }
+
+//This script is used to check if the player is crouching, and if they are, to force the uppercut when performing a melee attack
+Script "CrouchCheck" (void)
+{
+	int buttons = GetPlayerInput(-1, INPUT_BUTTONS);
+	
+	if (buttons & BT_CROUCH)
+	{
+	  SetResultValue(2);
+	}
+}

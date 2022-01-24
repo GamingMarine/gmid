@@ -25,12 +25,20 @@ actor MasterForceBase
 	"####" G 4 A_Pain
 	Goto See
   Pain.Foot:
+  Pain.BigFist:
     "####" G 2 A_FaceTarget
     "####" A 0 A_ChangeFlag("NOPAIN",1)
     "####" A 0 A_Recoil(14)
     "####" G 33 A_Pain
 	"####" G 0 A_ChangeFlag("NOPAIN",0)
     Goto See
+  Pain.Uppercut:
+	"####" G 0 A_FaceTarget
+	"####" A 0 A_ChangeFlag("NOPAIN",1)
+	"####" A 0 ThrustThingZ(0,32,0,0)
+	"####" G 33 A_Pain
+	"####" G 0 A_ChangeFlag("NOPAIN",0)
+	Goto See
   Missile:
 	"####" E 10 A_FaceTarget
 	"####" F 8 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
@@ -90,6 +98,20 @@ actor MasterForceBase
   	"####" A 0 A_PlaySound("player/kicktaunt", CHAN_AUTO)
 	"####" N -1
 	Stop
+  Death.BigFist:
+    "####" H 2 A_FaceTarget
+    "####" H 0 A_Recoil(14)
+	"####" H 3
+	"####" I 5 A_Scream
+	"####" A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
+	Goto ContinueDeath
+  Death.Uppercut:
+    "####" H 0 A_FaceTarget
+    "####" H 0 ThrustThingZ(0,32,0,0)
+	"####" H 5
+	"####" I 5 A_Scream
+	"####" A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
+	Goto ContinueDeath
   Raise:
 	"####" MLKJIH 5
 	Goto See

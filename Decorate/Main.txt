@@ -759,32 +759,6 @@ ACTOR XaserPuffSmoke
 	}
 }
 
-ACTOR GrinderPuff
-{
-  +NOBLOCKMAP
-  +NOGRAVITY
-  +PUFFONACTORS
-  activesound ""
-  attacksound "grinder/hitwall"
-  seesound "grinder/hitbody"
-  DamageType "Basic"
-  states
-  {
-  Spawn:
-    TNT1 A 0
-    TNT1 A 1
-    stop
-  Crash:
-     TNT1 A 0
-     TNT1 A 1
-     stop
-  Melee:
-     TNT1 A 0
-     TNT1 A 1
-     stop
-  }
-}
-
 ACTOR ToastyGuy
 {
 	States

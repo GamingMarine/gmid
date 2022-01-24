@@ -55,12 +55,20 @@ Actor ZSecGunner
     ZSC1 G 3 A_Pain
     Goto See
   Pain.Foot:
+  Pain.BigFist:
     ZSC1 G 2 A_FaceTarget
     ZSC1 A 0 A_ChangeFlag("NOPAIN",1)
     ZSC1 A 0 A_Recoil(14)
     ZSC1 G 33 A_Pain
 	ZSC1 G 0 A_ChangeFlag("NOPAIN",0)
     Goto See
+  Pain.Uppercut:
+	ZSC1 G 0 A_FaceTarget
+	ZSC1 A 0 A_ChangeFlag("NOPAIN",1)
+	ZSC1 A 0 ThrustThingZ(0,16,0,0)
+	ZSC1 G 33 A_Pain
+	ZSC1 G 0 A_ChangeFlag("NOPAIN",0)
+	Goto See
   Death:
 	ZSC1 G 0 A_GiveToTarget("ScoreItem",200)
     ZSC1 G 5
@@ -96,6 +104,30 @@ Actor ZSecGunner
 	Stop
   KickTaunt:
   	TNT1 A 0 A_PlaySound("player/kicktaunt", CHAN_AUTO)
+    ZSC1 L -1
+	Stop
+  Death.BigFist:
+	ZSC1 G 0 A_GiveToTarget("ScoreItem",200)
+    ZSC1 G 2 A_FaceTarget
+	ZSC1 G 0 A_Recoil(14)
+	ZSC1 G 3
+    ZSC1 H 5 A_Scream
+    ZSC1 I 5 A_NoBlocking
+    ZSC1 JK 5
+	ZSC1 L 10 A_PlaySound("body/hitfloor")
+	TNT1 A 0 A_Jump(16, "KillTaunt")
+    ZSC1 L -1
+	Stop
+  Death.Uppercut:
+	ZSC1 G 0 A_GiveToTarget("ScoreItem",200)
+	ZSC1 G 0 A_FaceTarget
+	ZSC1 G 0 ThrustThingZ(0,43,0,0)
+	ZSC1 G 5
+    ZSC1 H 5 A_Scream
+    ZSC1 I 5 A_NoBlocking
+    ZSC1 JK 5
+	ZSC1 L 10 A_PlaySound("body/hitfloor")
+	TNT1 A 0 A_Jump(16, "KillTaunt")
     ZSC1 L -1
 	Stop
   XDeath:

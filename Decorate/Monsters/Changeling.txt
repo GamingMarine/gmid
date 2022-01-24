@@ -42,12 +42,23 @@ actor Changeling replaces LostSoul
 	CHGL H 4 A_Pain
 	Goto See
   Pain.Foot:
+  Pain.BigFist:
     TNT1 A 0 A_ChangeFlag("NOPAIN",1)
 	CHGL H 0 A_SpawnItemEx("ChangelingTrailH",random(-1,1), random(-1,1), 0)
     CHGL H 2 A_FaceTarget
     TNT1 A 0 A_Recoil(14)
 	CHGL H 0 A_SpawnItemEx("ChangelingTrailH",random(-1,1), random(-1,1), 0)
-    CHGL H 16 A_Pain
+    CHGL H 33 A_Pain
+	CHGL H 0 A_ChangeFlag("NOPAIN",1)
+    Goto See
+  Pain.Uppercut:
+	TNT1 A 0 A_FaceTarget
+    TNT1 A 0 A_ChangeFlag("NOPAIN",1)
+	CHGL H 0 A_SpawnItemEx("ChangelingTrailH",random(-1,1), random(-1,1), 0)
+    TNT1 A 0 ThrustThingZ(0,16,0,0)
+	CHGL H 0 A_SpawnItemEx("ChangelingTrailH",random(-1,1), random(-1,1), 0)
+    CHGL H 3 A_Pain
+	CHGL H 0 A_ChangeFlag("NOPAIN",1)
     Goto See
   Missile:
 	CHGL E 0 A_SpawnItemEx("ChangelingTrailE",random(-1,1), random(-1,1), 0)
@@ -173,6 +184,44 @@ actor Changeling replaces LostSoul
 	Stop
   KickTaunt:
   	TNT1 A 0 A_PlaySound("player/kicktaunt", CHAN_AUTO)
+	Stop
+  Death.BigFist:
+	CHGL T 0 A_SpawnItemEx("ChangelingTrailT",random(-1,1), random(-1,1), 0)
+	CHGL T 2 A_FaceTarget
+	CHGL T 0 A_Recoil(14)
+	CHGL T 2
+	CHGL U 0 A_SpawnItemEx("ChangelingTrailU",random(-1,1), random(-1,1), 0)
+	CHGL U 4 A_Scream
+	CHGL V 0 A_SpawnItemEx("ChangelingTrailV",random(-1,1), random(-1,1), 0)
+	CHGL V 4 A_NoBlocking
+	CHGL W 0 A_SpawnItemEx("ChangelingTrailW",random(-1,1), random(-1,1), 0)
+	CHGL W 4
+	CHGL X 0 A_SpawnItemEx("ChangelingTrailX",random(-1,1), random(-1,1), 0)
+	CHGL X 4
+	CHGL Y 0 A_SpawnItemEx("ChangelingTrailY",random(-1,1), random(-1,1), 0)
+	CHGL Y 4
+	CHGL Z 0 A_SpawnItemEx("ChangelingTrailZ",random(-1,1), random(-1,1), 0)
+	CHGL ZZZZZZZZZZZZZZ 2 A_FadeOut(0.05)
+	TNT1 A 0 A_Jump(16, "KillTaunt")
+	Stop
+  Death.Uppercut:
+	CHGL T 0 A_SpawnItemEx("ChangelingTrailT",random(-1,1), random(-1,1), 0)
+	CHGL T 0 A_FaceTarget
+	CHGL T 0 ThrustThingZ(0,32,0,0)
+	CHGL T 4
+	CHGL U 0 A_SpawnItemEx("ChangelingTrailU",random(-1,1), random(-1,1), 0)
+	CHGL U 4 A_Scream
+	CHGL V 0 A_SpawnItemEx("ChangelingTrailV",random(-1,1), random(-1,1), 0)
+	CHGL V 4 A_NoBlocking
+	CHGL W 0 A_SpawnItemEx("ChangelingTrailW",random(-1,1), random(-1,1), 0)
+	CHGL W 4
+	CHGL X 0 A_SpawnItemEx("ChangelingTrailX",random(-1,1), random(-1,1), 0)
+	CHGL X 4
+	CHGL Y 0 A_SpawnItemEx("ChangelingTrailY",random(-1,1), random(-1,1), 0)
+	CHGL Y 4
+	CHGL Z 0 A_SpawnItemEx("ChangelingTrailZ",random(-1,1), random(-1,1), 0)
+	CHGL ZZZZZZZZZZZZZZ 2 A_FadeOut(0.05)
+	TNT1 A 0 A_Jump(16, "KillTaunt")
 	Stop
   Crush:
 	Stop

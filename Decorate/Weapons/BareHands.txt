@@ -1,3 +1,5 @@
+Actor ReadyToCombo : Inventory {}
+
 Actor GMIDFist : Fist Replaces Fist
 {
 	Weapon.BobRangeX 0.3
@@ -14,9 +16,21 @@ Actor GMIDFist : Fist Replaces Fist
 	states
 	{
 		Ready:
+			TNT1 A 0 A_JumpIfInventory("ReadyToCombo",1,"ComboReady")
 			FIST A 1 A_WeaponReady
 			loop
+		ComboReady:
+			FIST AAAABBBBCCCCDDDDAAAABBBBCCCCDDDDAAAABBBBCCCCDDDDAAAABBBBCCCCDDDD 1 A_WeaponReady
+			FIST A 0 A_TakeInventory("ReadyToCombo",9999)
+			Goto Ready
 		Fire:
+			TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("CrouchCheck",0,0,0,0) == 2,"ForceUppercut")
+			TNT1 A 0 A_JumpIfInventory("ReadyToCombo",1,"WomboCombo")
+			TNT1 A 0 A_Jump(256, "Fist1", "Fist2")
+			Goto Fist1
+		WomboCombo:
+			TNT1 A 0 A_GunFlash("NullFlash")
+			TNT1 A 0 A_Jump(96, "Haymaker1", "Haymaker2", "Uppercut1", "Uppercut2")
 			TNT1 A 0 A_Jump(256, "Fist1", "Fist2")
 		Fist1:
 			TNT1 A 0 A_GunFlash("LFistStay")
@@ -34,7 +48,9 @@ Actor GMIDFist : Fist Replaces Fist
 			TNT1 A 0 A_PlaySound("DoubleDamage/Use")
 		ContinueFire1:
 			FIS1 E 0 A_CustomPunch(2,0,0,"FistPuff")
+			FIS1 E 0 A_GiveInventory("ReadyToCombo",1)
 			FIS1 EFEDCBA 1 A_WeaponReady(WRF_NoSwitch)
+			FIS1 A 0 A_TakeInventory("ReadyToCombo",9999)
 			Goto Ready
 		Fist2:
 			TNT1 A 0 A_GunFlash("RFistStay")
@@ -52,13 +68,72 @@ Actor GMIDFist : Fist Replaces Fist
 			TNT1 A 0 A_PlaySound("DoubleDamage/Use")
 		ContinueFire2:
 			FIS2 E 0 A_CustomPunch(2,0,0,"FistPuff")
+			FIS2 E 0 A_GiveInventory("ReadyToCombo",1)
 			FIS2 EFEDCBA 1 A_WeaponReady(WRF_NoSwitch)
+			FIS2 A 0 A_TakeInventory("ReadyToCombo",9999)
 			Goto Ready
 		LFistStay:
 			FIS2 A 9
 			Stop
 		RFistStay:
 			FIS1 A 9
+			Stop
+		NullFlash:
+			TNT1 A 1
+			Stop
+		Haymaker1:
+			FISD ABCD 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			TNT1 A 1
+			TNT1 A 0 A_PlaySound("fist/haymaker")
+			HAY1 AD 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			HAY1 G 0 A_CustomPunch(7,0,0,"BigFistPuff")
+			HAY1 GIHGFED 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			HAY1 CBA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			TNT1 A 1 A_WeaponReady(WRF_NoSwitch)
+			FISD DCBA 1 A_WeaponReady(WRF_NoSwitch)
+			Goto ComboReady
+		Haymaker2:
+			FISD ABCD 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			TNT1 A 1
+			TNT1 A 0 A_PlaySound("fist/haymaker")
+			HAY2 AD 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			HAY2 G 0 A_CustomPunch(7,0,0,"BigFistPuff")
+			HAY2 GIHGFED 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			HAY2 CBA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			TNT1 A 1 A_WeaponReady(WRF_NoSwitch)
+			FISD DCBA 1 A_WeaponReady(WRF_NoSwitch)
+			Goto ComboReady
+		ForceUppercut:
+			TNT1 A 0 A_Jump(256, "Uppercut1", "Uppercut2")
+		Uppercut1:
+			TNT1 A 0 A_PlaySound("fist/foley", CHAN_AUTO)
+			TNT1 A 0 A_GunFlash("Charge1")
+			TNT1 A 9
+			TNT1 A 0 A_PlaySound("fist/uppercut")
+			TNT1 A 3
+			UPR1 AD 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			UPR1 G 0 A_CustomPunch(25,0,0,"UppercutPuff")
+			UPR1 GJIHGFEDCBA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			TNT1 A 1 A_WeaponReady(WRF_NoSwitch)
+			FISD DCBA 1 A_WeaponReady(WRF_NoSwitch)
+			Goto ComboReady
+		Uppercut2:
+			TNT1 A 0 A_PlaySound("fist/foley", CHAN_AUTO)
+			TNT1 A 0 A_GunFlash("Charge2")
+			TNT1 A 9
+			TNT1 A 0 A_PlaySound("fist/uppercut")
+			TNT1 A 3
+			UPR2 AD 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			UPR2 G 0 A_CustomPunch(25,0,0,"UppercutPuff")
+			UPR2 GJIHGFEDCBA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+			TNT1 A 1 A_WeaponReady(WRF_NoSwitch)
+			FISD DCBA 1 A_WeaponReady(WRF_NoSwitch)
+			Goto ComboReady
+		Charge1:
+			FCH1 ABCDEFGHIJKLMN 1
+			Stop
+		Charge2:
+			FCH2 ABCDEFGHIJKLMN 1
 			Stop
   AltFire:
 	TNT1 A 0 A_GunFlash("WeaponStill")
@@ -89,6 +164,7 @@ Actor GMIDFist : Fist Replaces Fist
 			FIST A 22
 			Goto LightDone
 		Deselect:
+			FIST A 0 A_TakeInventory("ReadyToCombo",9999)
 			FIST A 1 A_Lower
 			FIST A 0 A_Lower
 			Loop
@@ -124,4 +200,17 @@ actor FistPuff
      TNT1 A 1
      stop
   }
+}
+
+actor BigFistPuff : FistPuff
+{
+  attacksound "Fist/BigHit"
+  seesound "Fist/BigHit"
+  DamageType "BigFist"
+}
+
+actor UppercutPuff : BigFistPuff
+{
+  seesound "Fist/UppercutHit"
+  DamageType "Uppercut"
 }

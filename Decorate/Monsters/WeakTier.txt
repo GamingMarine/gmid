@@ -39,6 +39,22 @@ actor SonicXRainbow : MasterForceBase
 	SNXR I 5 A_Scream
 	SNXR A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo2", AAPTR_PLAYER1)
 	Goto ContinueDeath2
+  Death.BigFist:
+	SNXR A 0 A_GiveToTarget("ScoreItem",100)
+    SNXR H 2 A_FaceTarget
+    SNXR H 0 A_Recoil(14)
+	SNXR H 3
+	SNXR I 5 A_Scream
+	SNXR A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
+	Goto ContinueDeath
+  Death.Uppercut:
+	SNXR A 0 A_GiveToTarget("ScoreItem",100)
+    SNXR H 0 A_FaceTarget
+    SNXR H 0 ThrustThingZ(0,32,0,0)
+	SNXR H 5
+	SNXR I 5 A_Scream
+	SNXR A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
+	Goto ContinueDeath
   XDeath:
   Death.GMIDExplosion:
   Death.GMIDRailgun:
@@ -104,6 +120,22 @@ actor OctaLeb : MasterForceBase
 	OCTL I 5 A_Scream
 	OCTL A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo2", AAPTR_PLAYER1)
 	Goto ContinueDeath2
+  Death.BigFist:
+	OCTL A 0 A_GiveToTarget("ScoreItem",150)
+    OCTL H 2 A_FaceTarget
+    OCTL H 0 A_Recoil(14)
+	OCTL H 3
+	OCTL I 5 A_Scream
+	OCTL A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
+	Goto ContinueDeath
+  Death.Uppercut:
+	OCTL A 0 A_GiveToTarget("ScoreItem",150)
+    OCTL H 0 A_FaceTarget
+    OCTL H 0 ThrustThingZ(0,32,0,0)
+	OCTL H 5
+	OCTL I 5 A_Scream
+	OCTL A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
+	Goto ContinueDeath
   XDeath:
   Death.GMIDExplosion:
   Death.GMIDRailgun:
@@ -170,6 +202,22 @@ actor AppleSheriff : MasterForceBase //Fun fact: Originally, this one was gonna 
 	APLS I 5 A_Scream
 	APLS A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo2", AAPTR_PLAYER1)
 	Goto ContinueDeath2
+  Death.BigFist:
+	APLS A 0 A_GiveToTarget("ScoreItem",350)
+    APLS H 2 A_FaceTarget
+    APLS H 0 A_Recoil(14)
+	APLS H 3
+	APLS I 5 A_Scream
+	APLS A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
+	Goto ContinueDeath
+  Death.Uppercut:
+	APLS A 0 A_GiveToTarget("ScoreItem",350)
+    APLS H 0 A_FaceTarget
+    APLS H 0 ThrustThingZ(0,32,0,0)
+	APLS H 5
+	APLS I 5 A_Scream
+	APLS A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
+	Goto ContinueDeath
   XDeath:
   Death.GMIDExplosion:
   Death.GMIDRailgun:
@@ -230,6 +278,22 @@ actor AmyPie : MasterForceBase replaces DoomImp
 	AMPI I 5 A_Scream
 	AMPI A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo2", AAPTR_PLAYER1)
 	Goto ContinueDeath2
+  Death.BigFist:
+	AMPI A 0 A_GiveToTarget("ScoreItem",300)
+    AMPI H 2 A_FaceTarget
+	AMPI H 0 A_Recoil(14)
+	AMPI H 3
+	AMPI I 5 A_Scream
+	AMPI A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
+	Goto ContinueDeath
+  Death.Uppercut:
+	AMPI A 0 A_GiveToTarget("ScoreItem",300)
+    AMPI H 0 A_FaceTarget
+    AMPI H 0 ThrustThingZ(0,32,0,0)
+	AMPI H 5
+	AMPI I 5 A_Scream
+	AMPI A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
+	Goto ContinueDeath
   XDeath:
   Death.GMIDExplosion:
   Death.GMIDRailgun:

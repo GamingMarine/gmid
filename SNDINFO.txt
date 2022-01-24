@@ -83,12 +83,19 @@ normalfist1		 FISTWH1
 normalfist2		 FISTWH2
 normalfist3		 FISTWH3
 normalfist4		 FISTWH4
+fist/haymaker	 FISTHAYM
+fist/uppercut	 FISTUPR
+fist/foley		 FISTFOLY
 $random fist/hit { fisthit1 fisthit2 fisthit3 fisthit4 fisthit5 }
 fisthit1		 PUNHIT1
 fisthit2		 PUNHIT2
 fisthit3		 PUNHIT3
 fisthit4		 PUNHIT4
 fisthit5		 PUNHIT5
+$random fist/bighit { fistbig1 fistbig2 }
+fistbig1		 PUNBIG1
+fistbig2		 PUNBIG2
+fist/uppercuthit PUNUPPER
 weapons/KICK     KICK
 weapons/DSSAWFUL DSSAWFUL
 weapons/DSSAWHIT DSSAWHIT

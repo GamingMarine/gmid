@@ -33,12 +33,20 @@ Actor ChaingunMajor : ChaingunGuy
     CPS2 G 3 A_Pain
     Goto See
   Pain.Foot:
+  Pain.BigFist:
     CPS2 G 2 A_FaceTarget
     CPS2 A 0 A_ChangeFlag("NOPAIN",1)
     CPS2 A 0 A_Recoil(14)
     CPS2 G 33 A_Pain
 	CPS2 G 0 A_ChangeFlag("NOPAIN",0)
     Goto See
+  Pain.Uppercut:
+	CPS2 G 0 A_FaceTarget
+	CPS2 A 0 A_ChangeFlag("NOPAIN",1)
+	CPS2 A 0 ThrustThingZ(0,16,0,0)
+	CPS2 G 33 A_Pain
+	CPS2 G 0 A_ChangeFlag("NOPAIN",0)
+	Goto See
   Death:
 	CPS2 G 0 A_GiveToTarget("ScoreItem",400)
 	CPS2 G 0 A_Jump(256, "Death1", "Death2", "Death3")
@@ -159,6 +167,32 @@ Actor ChaingunMajor : ChaingunGuy
 	TNT1 A 0 A_PlaySound("player/kicktaunt", CHAN_AUTO)
 	CPS3 A -1
 	Stop
+  Death.BigFist:
+	CPS2 W 0 A_GiveToTarget("ScoreItem",400)
+    CPS2 W 0 A_FaceTarget
+	CPS2 W 0 ThrustThingZ(0,43,0,0)
+	CPS2 W 5
+    CPS2 X 5 A_Scream
+    CPS2 Y 5 A_Fall
+	CPS2 Z 5
+	CPS3 A 0 A_PlaySound("body/hitfloor")
+	CPS3 A 10
+	TNT1 A 0 A_Jump(16, "KillTaunt3")
+    CPS3 A -1
+    Stop
+  Death.Uppercut:
+	CPS2 W 0 A_GiveToTarget("ScoreItem",400)
+    CPS2 W 2 A_FaceTarget
+	CPS2 W 0 A_Recoil(14)
+	CPS2 W 3
+    CPS2 X 5 A_Scream
+    CPS2 Y 5 A_Fall
+	CPS2 Z 5
+	CPS3 A 0 A_PlaySound("body/hitfloor")
+	CPS3 A 10
+	TNT1 A 0 A_Jump(16, "KillTaunt3")
+    CPS3 A -1
+    Stop
   XDeath:
   Death.GMIDExplosion:
   Death.GMIDRailgun:
