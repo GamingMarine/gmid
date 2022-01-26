@@ -112,6 +112,8 @@ $random weapons/UZIFIRE { weapons/UZIFIRE1 weapons/UZIFIRE2 weapons/UZIFIRE3 }
 weapons/UZIFIRE1 UZIFIRE1
 weapons/UZIFIRE2 UZIFIRE2
 weapons/UZIFIRE3 UZIFIRE3
+vgun/add		 CHANADD
+vgun/addstop	 CHANSTOP
 vgun/motor		 CHANMOTR
 vgun/winddown	 CHANWIND
 weapons/GMROCKTL GMROCKTL
@@ -266,7 +268,12 @@ eating/apple				APPLEEAT
 eating/orange				ORANGEAT
 eating/burger				BURGEAT
 eating/heart				HEARTEAT
-eating/swollenheart			HARTEAT2
+$random eating/swollenheat { energy/big1 energy/big2 energy/big3 energy/big4 energy/big5 }
+energy/big1					BIGNRG1
+energy/big2					BIGNRG2
+energy/big3					BIGNRG3
+energy/big4					BIGNRG4
+energy/big5					BIGNRG5
 revx/pickup					REVXPICK
 revx/fire					REVXFIRE
 revx/upgrade				REVXUPGR

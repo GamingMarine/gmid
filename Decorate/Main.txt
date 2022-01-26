@@ -669,6 +669,8 @@ ACTOR XaserBarrel : ExplosiveBarrel replaces ExplosiveBarrel
 {
 	DamageFactor "Foot", 0
 	DamageFactor "Fist", 0
+	DamageFactor "BigFist", 0
+	DamageFactor "Uppercut", 0
 	Tag "$TAG_BARREL"
 	Obituary "$OB_BARREL"
 	+FIREDAMAGE
