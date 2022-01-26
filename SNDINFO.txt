@@ -268,7 +268,7 @@ eating/apple				APPLEEAT
 eating/orange				ORANGEAT
 eating/burger				BURGEAT
 eating/heart				HEARTEAT
-$random eating/swollenheat { energy/big1 energy/big2 energy/big3 energy/big4 energy/big5 }
+$random eating/swollenheart { energy/big1 energy/big2 energy/big3 energy/big4 energy/big5 }
 energy/big1					BIGNRG1
 energy/big2					BIGNRG2
 energy/big3					BIGNRG3
