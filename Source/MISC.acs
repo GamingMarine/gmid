@@ -137,13 +137,23 @@ Script "SkullBombFace" (void)
   SetHudSize(0,0,0);
 }
 
-//This script is used to check if the player is crouching, and if they are, to force the uppercut when performing a melee attack
-Script "CrouchCheck" (void)
+//This script is used to check if the player is holding down certain inputs when using their fist attacks
+Script "MeleeInputCheck" (void)
 {
 	int buttons = GetPlayerInput(-1, INPUT_BUTTONS);
-	
+	//Initiates uppercut
 	if (buttons & BT_CROUCH)
 	{
-	  SetResultValue(2);
+	  SetResultValue(789);
+	}
+	//Initiates right hook
+	else if (buttons & BT_MOVELEFT)
+	{
+	  SetResultValue(456);
+	}
+	//Initiates left hook
+	else if (buttons & BT_MOVERIGHT)
+	{
+	  SetResultValue(123);
 	}
 }

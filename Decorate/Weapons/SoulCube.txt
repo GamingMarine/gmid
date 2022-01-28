@@ -163,7 +163,7 @@ actor SoulCubeReturnSpawner
     TNT1 A 0 A_CustomMissile ("SoulCubeReturner",0,0,0,0,0)
   Death:
     TNT1 A 0 A_GiveToTarget ("SoulCube")
-    TNT1 A 0 A_TakeFromTarget ("CubeAmmo", 50)
+    TNT1 A 0 A_TakeFromTarget ("CubeAmmo",0)
     TNT1 A -1
     Stop
   }
@@ -200,7 +200,7 @@ actor SoulCubeReturner : Ammo
     stop
   Pickup:
     TNT1 A 0 A_GiveInventory("SoulCube")
-    TNT1 A 0 A_TakeInventory("CubeAmmo", 50)
+    TNT1 A 0 A_TakeInventory("CubeAmmo",0)
     stop
   }
 }
@@ -229,7 +229,7 @@ actor SoulCubeGenerator : CustomInventory
   Use:
 	TNT1 A 0 A_GiveInventory("HasSoulCube")
     TNT1 A 0 A_GiveInventory("SoulCube")
-    TNT1 A 0 A_TakeInventory("CubeAmmo", 25)
+    TNT1 A 0 A_TakeInventory("CubeAmmo",0)
     TNT1 A 0 A_SelectWeapon("SoulCube") 
     Stop
   FailIt:

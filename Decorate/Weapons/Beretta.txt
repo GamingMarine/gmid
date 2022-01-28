@@ -65,7 +65,7 @@ Actor GMIDPistol : Pistol Replaces Pistol
     PISG A 0 A_Raise
     Loop
   StartGame: //Damn, those four-legged bastards are gonna pay for being cringy as fuck.
-	TNT1 A 0 A_TakeInventory("StartingAnimation", 9999)
+	TNT1 A 0 A_TakeInventory("StartingAnimation",0)
 	TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("PVPCheck",0,0,0,0) == 2,"AltStartGame")
 	TNT1 A 0 A_JumpIf(CallACS("NoWarmUpAnimation")==1, "AltStartGame")
 	TNT1 A 15 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)

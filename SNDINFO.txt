@@ -726,14 +726,12 @@ $attenuation skullbomb/explode 0
 $attenuation skullbomb/secret1 0
 $attenuation skullbomb/secret2 0
 $attenuation misc/toasty 0
-$limit player/killtaunt 1
-$limit player/gibtaunt 1
-$limit boss/sight 1
-$limit player/kicktaunt 1
-$limit Explosion/Distant 1
+$limit Explosion/Distant 0
 $limit misc/teleport 0
 $limit revx/fire 0
 $limit Q2Soldier/ShotX 0
+$limit foot/hit 0
+$limit foot/wall 0
 
 //Sound definitions for the mobsters
 $random cyber/hoof 		{ cyber/hoof1 cyber/hoof2 cyber/hoof3 cyber/hoof4 }

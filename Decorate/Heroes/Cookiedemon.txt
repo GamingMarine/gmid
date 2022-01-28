@@ -146,6 +146,10 @@ ACTOR Cookiedemon
 	DamageFactor "Basic", 0.0 //Prevents the player from accidentally hurting Cookiedemon.
 	DamageFactor "GMIDExplosion", 0.0 //Same thing, but also goes for explosive barrels.
 	DamageFactor "Skullbomb", 0.0 //For Skull Bombs
+	DamageFactor "Fist", 0.0
+	DamageFactor "BigFist", 0.0
+	DamageFactor "Uppercut", 0.0
+	DamageFactor "Foot", 0.0
 	States
  {
  
