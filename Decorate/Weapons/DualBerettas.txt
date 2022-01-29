@@ -26,7 +26,7 @@ Actor GMIDDualPistol : GMIDPistol
 	TNT1 A 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	TNT1 A 0 A_PlaySound("weapon/fiddle")
 	P2FS KLMNOPPPPPPPP 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
-	TNT1 A 0 A_PlaySound("pistolmagazine/get")
+	TNT1 A 0 A_PlaySound("2beretta/fiddle")
 	P2FS PPQRRRRRRRRRR 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	TNT1 A 0 A_PlaySound("weapon/fiddle")
 	P2FS STUVW 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)

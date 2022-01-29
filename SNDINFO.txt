@@ -64,11 +64,13 @@ weapon/fiddle4	 WFIDDLE4
 weapon/fiddle5	 WFIDDLE5
 weapon/fiddle6	 WFIDDLE6
 weapon/fiddle7	 WFIDDLE7
+2beretta/fiddle	 2PISFRS
 $random shell/load { shell/load1 shell/load2 shell/load3 }
 shell/load1		 SHELLD1
 shell/load2		 SHELLD2
 shell/load3		 SHELLD3
-vgun/fiddle		 VGUNFRS
+vgun/fiddle1	 VGUNFRS1
+vgun/fiddle2	 VGUNFRS2
 revx/fiddle1	 REVXFRS1
 revx/fiddle2	 REVXFRS2
 revx/fiddle3	 REVXFRS3
@@ -545,6 +547,7 @@ sentry/ping					SNTRYPNG
 
 skullbomb/pickup			SKULBMUP
 skullbomb/throw				SKULTHRW
+skullbomb/beep				SKULBEEP
 skullbomb/warning			SKULWARN
 skullbomb/explode			SKULBOOM
 skullbomb/secret1			WTF

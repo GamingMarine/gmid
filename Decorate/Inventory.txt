@@ -297,27 +297,26 @@ Actor ActivatedSkullBomb
   {
   Spawn:
 	SBMB ABCDEFABCDEF 3 Bright
-	SBMB A 0 A_PlaySound("sentry/ping")
+	SBMB A 0 A_PlaySound("skullbomb/beep")
 	SBMB ABCDEFABCDEF 3 Bright
-	SBMB A 0 A_PlaySound("sentry/ping")
+	SBMB A 0 A_PlaySound("skullbomb/beep")
 	SBMB ABCDEFABCDEF 3 Bright
-	SBMB A 0 A_PlaySound("sentry/ping") //5 seconds
+	SBMB A 0 A_PlaySound("skullbomb/beep") //5 seconds
 	SBMB A 0 A_Print("5...")
 	SBMB ABCDEFABCDEF 3 Bright
-	SBMB A 0 A_PlaySound("sentry/ping")
+	SBMB A 0 A_PlaySound("skullbomb/beep")
 	SBMB A 0 A_Print("4...")
 	SBMB ABCDEFABCDEF 3 Bright
-	SBMB A 0 A_PlaySound("skullbomb/warning")
+	SBMB A 0 A_PlaySound("skullbomb/warning",CHAN_7,1,true)
 	SBMB A 0 A_Print("\cg3...")
 	SBMB ABCDEFABCDEF 3 Bright
-	SBMB A 0 A_PlaySound("skullbomb/warning")
 	SBMB A 0 A_Print("\cg2...")
 	SBMB ABCDEFABCDEF 3 Bright
-	SBMB A 0 A_PlaySound("skullbomb/warning")
 	SBMB A 0 A_Print("\cg1...")
 	SBMB A 0 A_Jump(1,"SecretSegment")
 	SBMB ABCDEFABCDE 3 Bright
 	SBMB F 1 Bright
+	SBMB A 0 A_StopSound(CHAN_7)
 	SBMB A 0 A_Print("")
 	SBMB A 0 A_PlaySound("skullbomb/explode")
 	SBMB A 0 A_SpawnItem("SkullBombExplosion")
@@ -327,6 +326,7 @@ Actor ActivatedSkullBomb
 	SBMB A 0 A_PlaySound("skullbomb/secret1", CHAN_AUTO)
 	SBMB ABCDEFABCDE 3 Bright
 	SBMB F 1 Bright
+	SBMB A 0 A_StopSound(CHAN_7)
 	SBMB A 0 A_Print("")
 	SBMB A 0 A_PlaySound("skullbomb/explode")
 	SBMB A 0 A_SpawnItem("SkullBombExplosion")
