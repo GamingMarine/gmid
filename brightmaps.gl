@@ -4746,6 +4746,7 @@ DisableFullBright
 Map "Brightmaps/GMID/SBMBB0.png"
 }
 
+//Textures
 Brightmap Flat MAGMA1
 {
 Map "Brightmaps/GMID/MAGMA.png"
@@ -4764,4 +4765,84 @@ Map "Brightmaps/GMID/MAGMA.png"
 Brightmap Flat MAGMA4
 {
 Map "Brightmaps/GMID/MAGMA.png"
+}
+
+Brightmap Flat _TP1
+{
+Map "Brightmaps/GMID/_TP.png"
+}
+
+Brightmap Flat _TP2
+{
+Map "Brightmaps/GMID/_TP.png"
+}
+
+Brightmap Flat _TP3
+{
+Map "Brightmaps/GMID/_TP.png"
+}
+
+Brightmap Flat _TP4
+{
+Map "Brightmaps/GMID/_TP.png"
+}
+
+Brightmap Flat _TP5
+{
+Map "Brightmaps/GMID/_TP.png"
+}
+
+Brightmap Flat _TP6
+{
+Map "Brightmaps/GMID/_TP.png"
+}
+
+Brightmap Flat _TP7
+{
+Map "Brightmaps/GMID/_TP.png"
+}
+
+Brightmap Flat _TP8
+{
+Map "Brightmaps/GMID/_TP.png"
+}
+
+Brightmap Flat _TPGREY1
+{
+Map "Brightmaps/GMID/_TP.png"
+}
+
+Brightmap Flat _TPGREY2
+{
+Map "Brightmaps/GMID/_TP.png"
+}
+
+Brightmap Flat _TPGREY3
+{
+Map "Brightmaps/GMID/_TP.png"
+}
+
+Brightmap Flat _TPGREY4
+{
+Map "Brightmaps/GMID/_TP.png"
+}
+
+Brightmap Flat _TPGREY5
+{
+Map "Brightmaps/GMID/_TP.png"
+}
+
+Brightmap Flat _TPGREY6
+{
+Map "Brightmaps/GMID/_TP.png"
+}
+
+Brightmap Flat _TPGREY7
+{
+Map "Brightmaps/GMID/_TP.png"
+}
+
+Brightmap Flat _TPGREY8
+{
+Map "Brightmaps/GMID/_TP.png"
 }

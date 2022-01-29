@@ -347,6 +347,16 @@ flat GATE3
 	pic _TP7 tics 4
 	pic _TP8 tics 4
 	
+flat GATE4 
+    pic _TPGREY1 tics 4
+	pic _TPGREY2 tics 4
+	pic _TPGREY3 tics 4
+	pic _TPGREY4 tics 4
+	pic _TPGREY5 tics 4
+	pic _TPGREY6 tics 4
+	pic _TPGREY7 tics 4
+	pic _TPGREY8 tics 4
+	
 texture WFALL1
 pic WFALL1	tics 2
 pic WFALL2	tics 2

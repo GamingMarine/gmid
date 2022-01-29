@@ -64,6 +64,10 @@ weapon/fiddle4	 WFIDDLE4
 weapon/fiddle5	 WFIDDLE5
 weapon/fiddle6	 WFIDDLE6
 weapon/fiddle7	 WFIDDLE7
+$random shell/load { shell/load1 shell/load2 shell/load3 }
+shell/load1		 SHELLD1
+shell/load2		 SHELLD2
+shell/load3		 SHELLD3
 vgun/fiddle		 VGUNFRS
 revx/fiddle1	 REVXFRS1
 revx/fiddle2	 REVXFRS2
