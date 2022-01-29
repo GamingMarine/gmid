@@ -26,8 +26,13 @@ actor expsmoke
   States
 {
 	spawn:
+	TNT1 A 0
+	TNT1 A 0 A_JumpIf(CallACS("NoSmoke")==1, "NoThankYou")
     SMOK ABCDEFGHIJKLMNOPQR 3 Bright A_fadeout(0.05)
 	stop
+	NoThankYou:
+	TNT1 A 0
+	Stop
 }
 }
 
@@ -585,7 +590,6 @@ ACTOR CookiedemonIceBall : DoomImpBall
 	scale 0.6
 	Decal "DoomImpScorch"
 	DamageType "CookieIce"
-	
 	States
 	{
 		Spawn:

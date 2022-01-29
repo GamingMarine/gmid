@@ -6,8 +6,10 @@ Actor CarcassBrownScientist
   {
   Spawn:
 	TNT1 A 0
+	TNT1 A 0 A_JumpIf(CallACS("NoFlies")==1, "NowDecide")
 	TNT1 A 0 A_PlaySoundEX("SFX/Buzz","Body",1)
 	CRP3 NNNNN 0 A_SpawnItemEx("SwarmFly2",frandom(-16,16),frandom(-16,16),frandom(-16,16))
+  NowDecide:
 	CRP3 N 0 A_Jump(256, "Spawn1", "Spawn2")
   Spawn1:
     CRP3 N -1
@@ -28,8 +30,10 @@ ACTOR DeadGeneral
   {
   Spawn:
 	TNT1 A 0
+	TNT1 A 0 A_JumpIf(CallACS("NoFlies")==1, "NowDecide")
 	TNT1 A 0 A_PlaySoundEX("SFX/Buzz","Body",1)
 	GENE AAAAA 0 A_SpawnItemEx("SwarmFly2",frandom(-16,16),frandom(-16,16),frandom(-16,16))
+  NowDecide:
 	GENE A 0 A_Jump(128, "AltSpawn")
     GENE A -1
     Loop
@@ -86,8 +90,10 @@ actor Corp01
   {
   Spawn:
 	TNT1 A 0
+	TNT1 A 0 A_JumpIf(CallACS("NoFlies")==1, "NowDecide")
 	TNT1 A 0 A_PlaySoundEX("SFX/Buzz","Body",1)
 	CORA AAAAA 0 A_SpawnItemEx("SwarmFly2",frandom(-16,16),frandom(-16,16),frandom(-16,16))
+  NowDecide:
 	CORA A 0 A_Jump(256, "Spawn1", "Spawn2")
   Spawn1:
 	TNT1 A 0 A_PlaySoundEX("radio/chat",CHAN_AUTO,1)
@@ -179,8 +185,10 @@ ACTOR MarineVictim //Hmm. That's one Doomed space marine.
   Spawn:
 	TNT1 A 0
 	TNT1 A 0 A_PlaySoundEX("SFX/Buzz","Body",1)
+	TNT1 A 0 A_JumpIf(CallACS("NoFlies")==1, "NowDecide")
 	TNT1 A 0 A_PlaySoundEX("radio/chat",CHAN_AUTO,1)
 	VCTM AAAAA 0 A_SpawnItemEx("SwarmFly2",frandom(-16,16),frandom(-16,16),frandom(-16,16))
+  NowDecide:
 	VCTM A 0 A_Jump(128, "AltSpawn")
 	VCTM A -1 
 	Stop
@@ -244,8 +252,10 @@ Actor DeadPony1
   {
   Spawn:
 	TNT1 A 0
+	TNT1 A 0 A_JumpIf(CallACS("NoFlies")==1, "NowDecide")
 	TNT1 A 0 A_PlaySoundEX("SFX/Buzz","Body",1)
 	HAHA AAAAA 0 A_SpawnItemEx("SwarmFly2",frandom(-16,16),frandom(-16,16),frandom(-16,16))
+  NowDecide:
 	HAHA A 0 A_Jump(128, "AltSpawn")
     HAHA A -1
     Loop
@@ -263,8 +273,10 @@ Actor DeadCivilian replaces DeadZombieman
   {
   Spawn:
 	TNT1 A 0
+	TNT1 A 0 A_JumpIf(CallACS("NoFlies")==1, "NowDecide")
 	TNT1 A 0 A_PlaySoundEX("SFX/Buzz","Body",1)
 	CIVI AAAAA 0 A_SpawnItemEx("SwarmFly2",frandom(-16,16),frandom(-16,16),frandom(-16,16))
+  NowDecide:
 	CIVI A 0 A_Jump(256, "Spawn1", "Spawn2", "Spawn3", "Spawn4", "Spawn5", "Spawn6", "Spawn7", "Spawn8", "Spawn9", "Spawn10", "Spawn11", "Spawn12", "Spawn13", "Spawn14", "Spawn15", "Spawn16", "Spawn17", "Spawn18")
   Spawn1:
     CIVI A -1
@@ -334,8 +346,10 @@ Actor DeadHellhound : DeadCivilian replaces DeadDemon
   {
   Spawn:
 	TNT1 A 0
+	TNT1 A 0 A_JumpIf(CallACS("NoFlies")==1, "NowCorpse")
 	TNT1 A 0 A_PlaySoundEX("SFX/Buzz","Body",1)
 	HOUN AAAAA 0 A_SpawnItemEx("SwarmFly2",frandom(-16,16),frandom(-16,16),frandom(-16,16))
+  NowCorpse:
 	HOUN R -1
 	Stop
   }
@@ -347,8 +361,10 @@ Actor DeadPinkiePie : DeadCivilian replaces DeadDoomImp
   {
   Spawn:
 	TNT1 A 0
+	TNT1 A 0 A_JumpIf(CallACS("NoFlies")==1, "NowCorpse")
 	TNT1 A 0 A_PlaySoundEX("SFX/Buzz","Body",1)
 	AMPI AAAAA 0 A_SpawnItemEx("SwarmFly2",frandom(-16,16),frandom(-16,16),frandom(-16,16))
+  NowCorpse:
 	AMPI N -1
 	Stop
   }
@@ -360,8 +376,10 @@ Actor DeadRarity : DeadCivilian replaces DeadCacodemon
   {
   Spawn:
 	TNT1 A 0
+	TNT1 A 0 A_JumpIf(CallACS("NoFlies")==1, "NowCorpse")
 	TNT1 A 0 A_PlaySoundEX("SFX/Buzz","Body",1)
 	ROTY AAAAA 0 A_SpawnItemEx("SwarmFly2",frandom(-16,16),frandom(-16,16),frandom(-16,16))
+  NowCorpse:
 	ROTY N -1
 	Stop
   }
@@ -879,6 +897,8 @@ actor ScurryRat
   states
   {
   Spawn:
+	TNT1 A 0
+	TNT1 A 0 A_JumpIf(CallACS("NoRats")==1, "Vanish")
     RATS A 10 A_Look 
     loop
   See:
@@ -987,7 +1007,8 @@ ACTOR PillarGlassShard
   {
   Spawn:
      TNT1 A 0
-     TNT1 A 0 A_Jump(255,"Standard","Small","Tiny","XLarge") //Randomly selects a glass shard size.
+	 TNT1 A 0 A_JumpIf(CallACS("NoDebris")==1, "NoThankYou")
+     TNT1 A 0 A_Jump(256,"Standard","Small","Tiny","XLarge") //Randomly selects a glass shard size.
   Standard:	
      PGSD ABCD 1
 	 Loop
@@ -1007,6 +1028,9 @@ ACTOR PillarGlassShard
      TNT1 A 0 A_SetTranslucent(0.3)
      PGSD E 125
      Stop
+  NoThankYou:
+	TNT1 A 0
+	Stop
   }
 }
 
