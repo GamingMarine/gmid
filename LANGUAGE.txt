@@ -42,6 +42,11 @@ SECRETMESSAGE = "";
 SECRETAREA = "A secret area has been discovered!\n"; //Keep the \n call at the end of the string in order for the message to work properly
 SECRETREMAIN = " secret areas remain..."; //Keep that space at the start of the string in order for the message to work properly
 SECRETSINGLE = "1 secret area remains...";
+
+KILLALL = "What a massacre! All monsters killed!\n"
+		  "+10,000pt bonus!";
+PICKUPALL = "Congrats, collector! All items picked up!\n"
+			"+10,000pt bonus!";
 SECRETALL = "All secret areas found! Good hunting!\n"
 			"+10,000pt bonus!";
 

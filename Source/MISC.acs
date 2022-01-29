@@ -70,6 +70,64 @@ Script "MasterForceLordEnding" (void)
 	SetMusic("*",0);
 }
 
+//This script rewards the player with 10,000 points if they kill all monsters on the level.
+Script "MonsterBonus" ENTER
+{
+	int mtotal;
+	int mkilled2;
+	int mkilled;
+	
+	mtotal = GetLevelInfo(LEVELINFO_TOTAL_MONSTERS);
+	mkilled2 = mkilled;
+	mkilled = GetLevelInfo(LEVELINFO_KILLED_MONSTERS);
+	
+	if (GameType () < 2) //So that the player doesn't get rewarded in Deathmatch
+	{
+		if (mkilled > mkilled2)
+		{
+			if (mkilled == mtotal)
+			{
+				FadeTo(255,0,0,0.25,0);
+				PlaySound(0,"secret/allfound",0);
+				GiveInventory("ScoreItem",10000);
+				PrintBold(l:"KILLALL");
+				FadeTo(0,0,0,0.0,1.0);
+			}
+		}
+		Delay(1);
+		Restart;
+	}
+}
+
+//Ditto, but for items.
+Script "ItemBonus" ENTER
+{
+	int itotal;
+	int ipicked2;
+	int ipicked;
+	
+	itotal = GetLevelInfo(LEVELINFO_TOTAL_ITEMS);
+	ipicked2 = ipicked;
+	ipicked = GetLevelInfo(LEVELINFO_FOUND_ITEMS);
+	
+	if (GameType () < 2)
+	{
+		if (ipicked > ipicked2)
+		{
+			if (ipicked == itotal)
+			{
+				FadeTo(0,0,255,0.25,0);
+				PlaySound(0,"secret/allfound",0);
+				GiveInventory("ScoreItem",10000);
+				PrintBold(l:"PICKUPALL");
+				FadeTo(0,0,0,0.0,1.0);
+			}
+		}
+		Delay(1);
+		Restart;
+	}
+}
+
 //This script tells the player how many secret areas a left in the level, and rewards with 10,000 points when all are found.
 //Loosely based on Samsara by TerminusEst13 and Kinsie
 Script "SecretBonus" ENTER
@@ -81,28 +139,33 @@ Script "SecretBonus" ENTER
 	stotal = GetLevelInfo(LEVELINFO_TOTAL_SECRETS);
 	sfound2 = sfound;
 	sfound = GetLevelInfo(LEVELINFO_FOUND_SECRETS);
-	
-	if (sfound > sfound2)
+
+	if (GameType () < 2)
 	{
-		if (sfound == stotal) //If the player has found all secrets, give the player 10,000 points
+		if (sfound > sfound2)
 		{
-			PlaySound(0,"secret/allfound",0);
-			GiveInventory("ScoreItem",10000);
-			PrintBold(l:"SECRETALL");
-		}
-		Else
-		{
-			PlaySound(0,"secret/found",0);
-			if (stotal-sfound > 1) //Print plural message if 2 or more secrets are left
+			if (sfound == stotal) //If the player has found all secrets, give the player 10,000 points
 			{
-				Print(l:"SECRETAREA",d:stotal-sfound,l:"SECRETREMAIN");
+				FadeTo(255,255,0,0.25,0);
+				PlaySound(0,"secret/allfound",0);
+				GiveInventory("ScoreItem",10000);
+				PrintBold(l:"SECRETALL");
+				FadeTo(0,0,0,0.0,1.0);
 			}
 			Else
-			Print(l:"SECRETAREA",l:"SECRETSINGLE");
+			{
+				PlaySound(0,"secret/found",0);
+				if (stotal-sfound > 1) //Print plural message if 2 or more secrets are left
+				{
+					Print(l:"SECRETAREA",d:stotal-sfound,l:"SECRETREMAIN");
+				}
+				Else
+				Print(l:"SECRETAREA",l:"SECRETSINGLE");
+			}
 		}
+		Delay(1);
+		Restart;
 	}
-	Delay(1);
-	Restart;
 }
 
 //This script (which is a hacky workaround, I know) checks if the player is playing with the 1-Up Music Pack.
