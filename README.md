@@ -25,3 +25,11 @@ The events of GamingMarine in Doom are as follows:
  - **Thy Flesh Consumed:** In between **Inferno** and **Hell on Earth** is one of the toughest experiences you'll have! Travel through distorted cities and avoid easy death around every corner.
 
 ***UNDER CONSTRUCTION***
+
+## Getting Started
+
+GamingMarine in Doom requires a commercial Doom IWAD in order to play. This includes *Doom (registered)*, [*Doom II*](https://store.steampowered.com/app/2300/DOOM_II/), [*The Ultimate Doom*](https://store.steampowered.com/app/2280/Ultimate_Doom/), and either chapter of [*Final Doom*](https://store.steampowered.com/app/2290/Final_DOOM/) (*TNT: Evilution* and *The Plutonia Experiment*). If you are unable to acquire a commercial IWAD, the mod is also fully compatible with any open-source alternative, such as [*FreeDoom*](https://freedoom.github.io/), [*The People's Doom*](http://www.doomlegends.com/tpd/nfmain.html), and [*Satanic Infestion*](https://github.com/sergeirocks100/satanicinfestation).
+
+**NOTE: Playing with an IWAD generated from [*Wadsmoosh*](https://jp.itch.io/wadsmoosh) is** ***not*** **recommended, due to the way that program handles stuff like intermission content and textures.**
+
+You will also need [*GZDoom*](https://www.zdoom.org/downloads) in order to play this mod. 2.1pre is the minimum-tested version, but the mod runs best using the latest version of the source port. [*Zandronum*](https://zandronum.com/) is also supported, but has not been tested nearly as much as *GZDoom*, so expect an issue or two. [**ZDoom**](https://www.zdoom.org/downloads) ***and*** [**Skulltag**](http://www.skulltag.com/) ***have not been tested AT ALL and are in no way guaranteed to work with GamingMarine in Doom. YOU HAVE BEEN WARNED!***
