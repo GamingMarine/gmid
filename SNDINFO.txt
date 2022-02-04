@@ -240,6 +240,15 @@ INVULGET INVULGET
 Invulnerability/Fade INVULEND
 HASTEUP  HASTEUP
 Haste/Fade HASTEEND
+announcer/soulsphere   AN_SOUL
+announcer/megasphere   AN_MEGA
+announcer/haste		   AN_HASTE
+announcer/doubledamage AN_DDMG
+announcer/quaddamage   AN_QUAD
+announcer/biosuit	   AN_BIO
+announcer/automap	   AN_AUTOM
+announcer/nvg		   AN_GOGGL
+announcer/invul		   AN_INVUL
 PCOLABUP PCOLABUP
 weapon/get1			DSWPNUP1
 weapon/get2			DSWPNUP2

@@ -21,6 +21,11 @@ script "PickupAnimation" (void)
     SetResultValue(GetCVar("pickupanim"));
 }
 
+script "DisableAnnouncer" (void)
+{
+	SetResultValue(GetCVar("noannouncer"));
+}
+
 //All of the typical explosion effect except for the explosion itself
 script "LessBoomEffects" (void)
 {

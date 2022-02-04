@@ -466,6 +466,9 @@ PICKUPOPTION1 = "Weapon Pickup Animations";
 PICKUPOPTION2 = "When enabled, any weapon you pick up for the first time will have";
 PICKUPOPTION3 = "its own pickup animation. Note that you cannot attack while these";
 PICKUPOPTION4 = "animations are playing.";
+ANNOUNOPTION1 = "Disable Announcer";
+ANNOUNOPTION2 = "In case you prefer silent powerup pickups, like in earlier versions";
+ANNOUNOPTION3 = "of this mod.";
 CUMMINSOON = "\cgMore mod-tailored options coming soon!";
 
 //Story screen text

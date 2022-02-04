@@ -75,6 +75,10 @@ OptionMenu "GMIDOptions"
 	StaticText "$PICKUPOPTION2"
 	StaticText "$PICKUPOPTION3"
 	StaticText "$PICKUPOPTION4"
+	StaticText ""
+	Option "$ANNOUNOPTION1", "noannouncer", "OnOff"
+	StaticText "$ANNOUNOPTION2"
+	StaticText "$ANNOUNOPTION3"
 	StaticText "$CUMMINSOON"
 }
 

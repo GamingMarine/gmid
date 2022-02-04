@@ -1,4 +1,4 @@
-ACTOR NewAllmap : MapRevealer
+ACTOR NewAllmap : CustomInventory
 {
   +COUNTITEM
   +INVENTORY.FANCYPICKUPSOUND
@@ -16,6 +16,15 @@ ACTOR NewAllmap : MapRevealer
   Idle:
     PMAP ABCBAD 3 Bright
     Loop
+  Pickup:
+	TNT1 A 0 A_GiveInventory("MapRevealer",1)
+	TNT1 A 0 A_SetBlend("Red",0.75,16)
+	TNT1 A 0 A_JumpIf(CallACS("DisableAnnouncer")==1, "NoAnnouncer")
+	TNT1 A 0 A_PlaySound("announcer/automap", 0, 1, FALSE, ATTN_NONE)
+	Stop
+  NoAnnouncer:
+	TNT1 A 0
+	Stop
   }
 }
 
@@ -36,7 +45,13 @@ Actor BioSuit : CustomInventory replaces RadSuit
   Pickup:
     TNT1 A 0 A_GiveInventory("BioSuitFeet", 1)
     TNT1 A 0 A_GiveInventory("BioSuitProtector", 1)
-    Stop
+	TNT1 A 0 A_SetBlend("Green",0.75,16)
+	TNT1 A 0 A_JumpIf(CallACS("DisableAnnouncer")==1, "NoAnnouncer")
+	TNT1 A 0 A_PlaySound("announcer/biosuit", 0, 1, FALSE, ATTN_NONE)
+	Stop
+  NoAnnouncer:
+	TNT1 A 0
+	Stop
   }
 }
 
@@ -80,10 +95,11 @@ Actor BioSuitProtector : PowerupGiver
   }
 }
 
-Actor NightVisionGoggles : InfraRed replaces InfraRed
+Actor NightVisionGoggles : CustomInventory replaces InfraRed
 {
+  +COUNTITEM
+  +INVENTORY.ALWAYSPICKUP
   Scale 0.75
-  Powerup.Type "LightAmp2"
   Tag "$TAG_GOGGLES"
   Inventory.PickupMessage "$GOTGOGGLES"
   Inventory.PickupSound "nvg/pick"
@@ -97,7 +113,24 @@ Actor NightVisionGoggles : InfraRed replaces InfraRed
   Spawn2:
 	PVIS C -1
 	Stop
+  Pickup:
+    TNT1 A 0 A_GiveInventory("NightVisionPowerup", 1)
+	TNT1 A 0 A_SetBlend("Black",0.75,16)
+	TNT1 A 0 A_JumpIf(CallACS("DisableAnnouncer")==1, "NoAnnouncer")
+	TNT1 A 0 A_PlaySound("announcer/nvg", 0, 1, FALSE, ATTN_NONE)
+	Stop
+  NoAnnouncer:
+	TNT1 A 0
+	Stop
   }
+}
+
+Actor NightVisionPowerup : PowerupGiver
+{
+  +COUNTITEM
+  +INVENTORY.AUTOACTIVATE
+  Inventory.MaxAmount 0
+  Powerup.Type "LightAmp2"
 }
 
 Actor PowerLightAmp2 : PowerLightAmp
@@ -105,18 +138,12 @@ Actor PowerLightAmp2 : PowerLightAmp
   Inventory.Icon "PVISB0"
 }
 
-ACTOR InvulnerabilitySphere_  : PowerupGiver Replaces InvulnerabilitySphere
+ACTOR InvulnerabilitySphere_  : CustomInventory Replaces InvulnerabilitySphere
 {
-	Game Doom
-	SpawnID 133
 	+COUNTITEM
-	+INVENTORY.AUTOACTIVATE
 	+INVENTORY.ALWAYSPICKUP
 	+INVENTORY.BIGPOWERUP
 	+FORCEXYBILLBOARD
-	Inventory.MaxAmount 0
-	Powerup.Type Invulnerable2
-	Powerup.Color "Yellow", 0.05
 	Tag "$TAG_INVUL"
 	Inventory.PickupMessage "$GOTINVUL"
 	Inventory.PickupSound "INVULGET"
@@ -141,6 +168,15 @@ ACTOR InvulnerabilitySphere_  : PowerupGiver Replaces InvulnerabilitySphere
 		PINV D 60 Bright
 		PINV CB 3 Bright
 		Goto Spawn
+	Pickup:
+		TNT1 A 0 A_GiveInventory("InvulPower")
+		TNT1 A 0 A_SetBlend("DarkGreen",0.75,16)
+		TNT1 A 0 A_JumpIf(CallACS("DisableAnnouncer")==1, "NoAnnouncer")
+		TNT1 A 0 A_PlaySound("announcer/invul", 0, 1, FALSE, ATTN_NONE)
+		Stop
+	NoAnnouncer:
+		TNT1 A 0
+		Stop
 	}
 }
 
@@ -196,7 +232,15 @@ Actor InvulnerabilitySphereEffectD : InvulnerabilitySphereEffectA
 	 }
 }
 
-ACTOR LifeSphere : Health Replaces SoulSphere
+Actor InvulPower : PowerupGiver
+{
+	+INVENTORY.AUTOACTIVATE
+	Inventory.MaxAmount 0
+	Powerup.Type "PowerInvulnerable2"
+	Powerup.Color "Gold", 0.25
+}
+
+ACTOR LifeSphere : CustomInventory Replaces SoulSphere
 {
 	+COUNTITEM
 	+INVENTORY.ALWAYSPICKUP
@@ -206,8 +250,6 @@ ACTOR LifeSphere : Health Replaces SoulSphere
 	Scale 0.82
 	Alpha 0.99
 	Inventory.PickupSound "soulget"
-	Inventory.Amount 100
-	Inventory.MaxAmount 250
 	+FLOATBOB
 	States
 	{
@@ -227,6 +269,15 @@ ACTOR LifeSphere : Health Replaces SoulSphere
 		SOUL D 60 Bright
 		SOUL CB 3 Bright
 		Goto Spawn
+	Pickup:
+		TNT1 A 0 A_GiveInventory("SoulSphereHealth",1)
+		TNT1 A 0 A_SetBlend("Blue",0.75,16)
+		TNT1 A 0 A_JumpIf(CallACS("DisableAnnouncer")==1, "NoAnnouncer")
+		TNT1 A 0 A_PlaySound("announcer/soulsphere", 0, 1, FALSE, ATTN_NONE)
+		Stop
+	NoAnnouncer:
+		TNT1 A 0
+		Stop
 	}
 }
 
@@ -270,6 +321,13 @@ Actor SoulSphereEffectD : InvulnerabilitySphereEffectA
 	 }
 }
 
+Actor SoulSphereHealth : Health
+{
+	Inventory.Amount 100
+	Inventory.MaxAmount 250
+	+INVENTORY.ALWAYSPICKUP
+}
+
 ACTOR EnergySphere : CustomInventory Replaces Megasphere
 {
 	+COUNTITEM
@@ -297,6 +355,12 @@ ACTOR EnergySphere : CustomInventory Replaces Megasphere
 	Pickup:
 		TNT1 A 0 A_GiveInventory("PraetorArmorVest", 1)
 		TNT1 A 0 A_GiveInventory("NewMegasphereHealth", 1)
+		TNT1 A 0 A_SetBlend("White",0.75,16)
+		TNT1 A 0 A_JumpIf(CallACS("DisableAnnouncer")==1, "NoAnnouncer")
+		TNT1 A 0 A_PlaySound("announcer/megasphere", 0, 1, FALSE, ATTN_NONE)
+		Stop
+	NoAnnouncer:
+		TNT1 A 0
 		Stop
 	}
 }
@@ -354,17 +418,21 @@ ACTOR PowerDoubleDamage : PowerDamage
 	Inventory.Icon "DDMGD0"
 }
 
-ACTOR DoubleSphere : PowerupGiver
+Actor DoubleSphereDamage : PowerupGiver
 {
-	+COUNTITEM
-	+FORCEXYBILLBOARD
 	+INVENTORY.AUTOACTIVATE
-	+INVENTORY.ALWAYSPICKUP
-	+FLOATBOB
 	Inventory.MaxAmount 0
 	Powerup.Type DoubleDamage
 	Powerup.Color Red, 0.3
 	Powerup.Duration -30
+}
+
+ACTOR DoubleSphere : CustomInventory
+{
+	+COUNTITEM
+	+FORCEXYBILLBOARD
+	+INVENTORY.ALWAYSPICKUP
+	+FLOATBOB
 	Alpha 0.99
 	Tag "$TAG_DOUBLE"
 	Inventory.PickupMessage "$GOTDOUBLE"
@@ -385,6 +453,15 @@ ACTOR DoubleSphere : PowerupGiver
 		DDMG C 60 Bright
 		DDMG B 3 Bright
 		Goto Spawn
+	Pickup:
+		TNT1 A 0 A_GiveInventory("DoubleSphereDamage",1)
+		TNT1 A 0 A_SetBlend("Red",0.75,16)
+		TNT1 A 0 A_JumpIf(CallACS("DisableAnnouncer")==1, "NoAnnouncer")
+		TNT1 A 0 A_PlaySound("announcer/doubledamage", 0, 1, FALSE, ATTN_NONE)
+		Stop
+	NoAnnouncer:
+		TNT1 A 0
+		Stop
 	}
 }
 
@@ -425,15 +502,20 @@ Damagefactor "Normal", 4
 Inventory.Icon "QDMGB0"
 }
 
-Actor QuadDamage : PowerupGiver
+Actor QuadDamagePowerup : PowerupGiver
 {
-  +CountItem
   +Inventory.AutoActivate
-  +Inventory.AlwaysPickup
   Inventory.MaxAmount 0
   Powerup.Type QuadDamageST
   Powerup.Color Blue, 0.3
-  powerup.duration 1050
+  powerup.duration -30
+}
+
+Actor QuadDamage : CustomInventory
+{
+  +CountItem
+  +Inventory.AlwaysPickup
+  Inventory.MaxAmount 0
   Tag "$TAG_QUAD"
   Inventory.PickupMessage "$GOTQUAD"
   Inventory.PickupSound "QuadDamage/Pickup"
@@ -451,6 +533,15 @@ Actor QuadDamage : PowerupGiver
   NoBlur:
 	QDMG A 1 Bright
 	Goto Spawn
+  Pickup:
+	TNT1 A 0 A_GiveInventory("QuadDamagePowerup",1)
+	TNT1 A 0 A_SetBlend("Blue",0.75,16)
+	TNT1 A 0 A_JumpIf(CallACS("DisableAnnouncer")==1, "NoAnnouncer")
+	TNT1 A 0 A_PlaySound("announcer/quaddamage", 0, 1, FALSE, ATTN_NONE)
+	Stop
+  NoAnnouncer:
+	TNT1 A 0
+	Stop
   }
 }
 
@@ -469,17 +560,21 @@ actor PowerSpeed2 : PowerSpeed
 	Inventory.Icon "HASTE0"
 }
 
-actor HasteSphere : PowerupGiver replaces BlurSphere
+Actor HasteSpherePowerup : PowerupGiver
 {
-	Tag "$TAG_HASTE"
-	inventory.pickupmessage "$GOTHASTE"
 	inventory.maxamount 0
-	Inventory.PickupSound "HASTEUP"
 	powerup.duration -45
 	powerup.color "FF FF 00", 0.1
 	powerup.type Speed2
-	+COUNTITEM
 	+INVENTORY.AUTOACTIVATE
+}
+
+actor HasteSphere : CustomInventory replaces BlurSphere
+{
+	Tag "$TAG_HASTE"
+	inventory.pickupmessage "$GOTHASTE"
+	Inventory.PickupSound "HASTEUP"
+	+COUNTITEM
 	+INVENTORY.ALWAYSPICKUP
 	Scale 0.5
 	Alpha 0.99
@@ -500,6 +595,15 @@ actor HasteSphere : PowerupGiver replaces BlurSphere
 	NoBlur:
 		HAST ABCDCB 2 Bright
 		Goto Spawn
+	Pickup:
+		TNT1 A 0 A_GiveInventory("HasteSpherePowerup", 1)
+		TNT1 A 0 A_SetBlend("Orange",0.75,16)
+		TNT1 A 0 A_JumpIf(CallACS("DisableAnnouncer")==1, "NoAnnouncer")
+		TNT1 A 0 A_PlaySound("announcer/haste", 0, 1, FALSE, ATTN_NONE)
+		Stop
+	NoAnnouncer:
+		TNT1 A 0
+		Stop
 	}
 }
 
