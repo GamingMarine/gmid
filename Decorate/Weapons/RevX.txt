@@ -22,6 +22,7 @@ actor RevX : Weapon
 	+WEAPON.NOALERT
     Scale 0.75
 	Inventory.Icon "RIFLA0B0"
+	Weapon.SelectionOrder 2000
     States
     {
 	  Spawn:

@@ -15,6 +15,7 @@ Actor GMIDMissileLauncher : RocketLauncher
 	Inventory.PickupMessage "$GOTMLAUNCHER"
 	Obituary "$OB_LAUNCHER"
 	Inventory.Icon "LAUNA0B0"
+	Weapon.SelectionOrder 2400
 	states
 	{
   Spawn:

@@ -16,6 +16,7 @@ actor ExcessiveForce : Weapon
     Scale 0.75
 	+WEAPON.NOALERT
 	Inventory.Icon "NCHGZ0Y0"
+	Weapon.SelectionOrder 100
     States
     {
       Spawn:

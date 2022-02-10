@@ -8,6 +8,7 @@ Actor GMIDDualPistol : GMIDPistol
   Inventory.PickupMessage "$GOTBERETTA2"
   Obituary "$OB_BERETTA2"
   Inventory.Icon "PISTB0" //For mods like DrPyspy's Weapon Wheel and Tapwave's War Trophies
+  Weapon.SelectionOrder 1800
   States
   {
   Ready:

@@ -18,6 +18,7 @@ ACTOR PineappleJammer : Weapon
 	Weapon.BobSpeed 2.0
 	+WEAPON.NOALERT
 	Inventory.Icon "GLMMA0B0"
+	Weapon.SelectionOrder 2500
 	States
 	{
 	Ready:

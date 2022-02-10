@@ -13,6 +13,7 @@ Actor AngleGrinder : Chainsaw
 	Inventory.PickupMessage "$GOTGRINDER"
 	Obituary "$OB_GRINDER"
 	Inventory.Icon "CSAWA0B0"
+	Weapon.SelectionOrder 2200
 	States
 	{
 	Spawn:

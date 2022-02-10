@@ -14,6 +14,7 @@ Actor GMIDShotgun : Shotgun
 	Inventory.PickupMessage "$GOTBOOMSTICK"
 	Obituary "$OB_BOOMSTICK"
 	Inventory.Icon "SHOTA0B0"
+	Weapon.SelectionOrder 1300
 	states
 	{
 		  Spawn:

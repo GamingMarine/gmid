@@ -16,6 +16,7 @@ actor Firestick : Weapon
   Tag "$TAG_FIRESTICK"
   +WEAPON.NOALERT
   Inventory.Icon "SHGPA0B0"
+  Weapon.SelectionOrder 5000
   States
 	{
   Ready:

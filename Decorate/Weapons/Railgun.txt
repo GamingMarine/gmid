@@ -16,6 +16,7 @@ Actor GMIDRailgun : PlasmaRifle
 	Inventory.PickupMessage "$GOTRAIL"
 	Obituary "$OB_RAIL"
 	Inventory.Icon "RGNGA0B0"
+	Weapon.SelectionOrder 200
 	states
 	{
 		Fire:

@@ -15,6 +15,7 @@ Actor SpaceCadet : BFG9000
 	Scale 0.3125
 	+FLOATBOB
 	+FORCEXYBILLBOARD
+	Weapon.SelectionOrder 5000
 	states
 	{
   Ready:

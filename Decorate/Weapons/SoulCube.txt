@@ -18,6 +18,7 @@ Actor SoulCube : weapon
    AttackSound "SoulCube/Use" 
    damagetype Cube
    Scale 0.5
+   Weapon.SelectionOrder 5000
    States 
    { 
    Spawn: 

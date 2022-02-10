@@ -13,6 +13,7 @@ Actor GMIDSuperShotgun : SuperShotgun
 	Inventory.PickupMessage "$GOTSAWNOFF"
 	Obituary "$OB_SAWNOFF"
 	Inventory.Icon "SGN2A0B0"
+	Weapon.SelectionOrder 400
 	states
 	{
 	  Spawn:
