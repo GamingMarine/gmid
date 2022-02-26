@@ -542,6 +542,8 @@ cookie/lastwords1			CLASTW1
 cookie/lastwords2			CLASTW2
 $random cookie/lastwords { cookie/lastwords1 cookie/lastwords2 }
 
+inventory/cantuse			INVDENY
+
 sentry/pickup				SENTRYUP
 sentry/deploy				SNTRYDPL
 sentry/arm					SNTRYARM

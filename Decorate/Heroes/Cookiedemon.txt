@@ -10,6 +10,11 @@ Actor TargetIsAMarine : Inventory //ALWAYS give this inventory to friendly monst
 inventory.maxamount 1
 }
 
+Actor HasSummonedCookie : Inventory //Not from Brutal Friends, but is necessary so the player can only use one Cookie-Crystal per level.
+{
+inventory.maxamount 1
+}
+
 //Shamelessly stolen from Stormy Blue is Doomed (Yeah... *that* mod)
 actor expsmoke
 {
@@ -70,8 +75,15 @@ Actor CookieCrystal : CustomInventory
 		CRYS A 1 Bright
 		Loop
 	Use:
+		CRYS A 0
+		CRYS A 0 A_JumpIfInventory("HasSummonedCookie",1,"NoCanDo")
+		CRYS A 0 A_GiveInventory("HasSummonedCookie",1)
 		CRYS A 0 A_ThrowGrenade("CookiedemonSpawner",2,8,2,0)
 		Stop
+	NoCanDo:
+		TNT1 A 0 A_PlaySound("inventory/cantuse")
+		TNT1 A 0 A_Print("$COOKIENOPE")
+		Fail
 	}
 }
 

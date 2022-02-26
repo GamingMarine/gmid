@@ -299,6 +299,7 @@ QUITMSG20 = "IS IT THE SHOES???"; //NBA Jam
 QUITMSG21 = "Contact your local D.E.A. recruiter."; //N.A.R.C.
 QUITMSG22 = "Remember: Music is the Weapon."; //Do I really have to tell you?
 QUITMSG23 = "Sure, go back to viewing that \"Homework\" folder...";
+QUITMSG24 = "Tell you what: You sit here, and I'll show you what it's like to hit the target!"; //If you can tell me where this comes from, you'll win the "Nostalgic Fuck" award
 
 GMIDPD_BLUEO = "This object is restricted to those with \chblue\c- access.";
 GMIDPD_REDO = "This object is restricted to those with \cgred\c- access.";
@@ -377,7 +378,7 @@ MENULOADNETGAME = "You will need to quit this netgame in order to load any progr
 MENUSAVE = "Save Progress";
 MENUQUIT = "Surrender";
 MODVERSION1 = "Mod version:";
-MODVERSION2 = "v1.2.0 EXPERIMEMTAL BUILD 70 - Compiled February 12, 2022";
+MODVERSION2 = "v1.2.0 EXPERIMEMTAL BUILD 71 - Compiled February 25, 2022";
 MENUEPSD = "Choose Your Destiny";
 MENUSKIL = "How tough are you?";
 DIFFNAME1 = "Trainee";
@@ -421,6 +422,7 @@ TOTD13 = "\cf#13:\c- Be cautious when using the Pineapple Jammer--The velocity o
 
 GMIDTITLEMAP = "Your Adventure Begins";
 
+COOKIENOPE = "You've already summoned \c[brick]Cookie\c- in this area!";
 BOTTLENOPE = "You aren't very thirsty right now...";
 SENTRYNOTE = "Press [USE] on the sentry to deactivate it.";
 CUBENOPE = "The \crSoul Cube\c- has not yet been satisfied...";

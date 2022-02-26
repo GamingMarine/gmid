@@ -14,6 +14,14 @@ script "PVPCheck" (void)
 	}
 }
 
+//This script clears the player of a certain token upon starting the level.
+//This is necessary so that the player can only use one Cookie-Crystal per level.
+Script "LevelIntro" ENTER
+{
+	TakeInventory("HasSummonedCookie",1);
+	Delay(1);
+}
+
 //Plays a warning sound and logs a message to the console when a powerup is about to phase out
 //Based on Quake II Stuff by TheCamaleonMaligno
 script "PowerupFading" ENTER
