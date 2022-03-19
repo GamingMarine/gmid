@@ -60,11 +60,11 @@ GOTAPPLE = "Ate an apple. \cf(\cj10 health\cf)";
 GOTGRAPES = "Ate a set of grapes. \cf(\cj10 health\cf)";
 GOTORANGE = "Ate an orange. \cf(\cj10 health\cf)";
 GOTHAMBURG = "Ate a hamburger. \cf(\cj25 health\cf)";
-GOTHAMBURG2 = "Found a hamburger!";
+GOTHAMBURG2 = "Frantically stuffed your face with a hamburger!";
 GOTCHICKEN = "Ate an entire chicken. \cf(\cj25 health\cf)";
-GOTCHICKEN2 = "Found an entire chicken!";
+GOTCHICKEN2 = "Desperately gobbled up an entire chicken!";
 GOTPIZZA = "Gourged on an entire pizza. \cf(\cj25 health\cf)";
-GOTPIZZA2 = "Found an entire pizza!";
+GOTPIZZA2 = "Crazily chowed down on an entire pizza!";
 GOTSOUL = "\c[blue]SoulSphere!";
 GOTBOTTLE = "Picked up a bottle of Caco-Cola! \cf(\cjThis item must be activated to use it\cf)";
 GOTSHARD1 = "Slapped on an armor shard. \cf(\cj+5 armor\cf)";
@@ -377,8 +377,8 @@ MENULOAD = "Restore Progress";
 MENULOADNETGAME = "You will need to quit this netgame in order to load any progress.";
 MENUSAVE = "Save Progress";
 MENUQUIT = "Surrender";
-MODVERSION1 = "Mod version:";
-MODVERSION2 = "v1.2.0 EXPERIMEMTAL BUILD 71 - Compiled February 25, 2022";
+MODVERSION1 = "v1.2.0 EXPERIMEMTAL BUILD 72";
+MODVERSION2 = "Compiled Saturday, March 19th, 2022";
 MENUEPSD = "Choose Your Destiny";
 MENUSKIL = "How tough are you?";
 DIFFNAME1 = "Trainee";
@@ -419,6 +419,18 @@ TOTD10 = "\cf#10:\c- Some of the Master Force's footsoldiers are rode by medics,
 TOTD11 = "\cf#11:\c- Holding down either [PRIMARY FIRE] or [QUICK-KICK] while picking up a new weapon will skip the pickup animation, which is especially useful if you're surrounded by alerted enemies!";
 TOTD12 = "\cf#12:\c- Drinking from a Caco-Cola Bottle will only use as much of it as necessary before you have 100% health. Any excess health will remain in your inventory.";
 TOTD13 = "\cf#13:\c- Be cautious when using the Pineapple Jammer--The velocity of the missile can cause them to fly right back at you!";
+
+GAMEOVERA1 = "You died!";
+GAMEOVERA2 = "Game over, man!"; //Aliens
+GAMEOVERA3 = "You blew it!"; //Revolution X
+GAMEOVERA4 = "He's dead, Jim!"; //Google Chrome
+GAMEOVERA5 = "Welcome to Die!"; //X-Men (Arcade)
+GAMEOVERB1 = "Thought you were hot. Guess what? You're not."; //Total Distortion
+GAMEOVERB2 = "Ouch! You should've seen the other guy.";
+GAMEOVERB3 = "I play GamingMarine in Doom and I can't get up!"; //Doom 64
+GAMEOVERB4 = "Sure, try that one another fifty times and don't change your strategy whatsoever.";
+GAMEOVERB5 = "Too bad, dude. YOU LOSER."; //Extreme Wintersports
+GAMEOVERB6 = "You think you are God, but you are only a chunk of shit."; //Email-Worm.Win32.Magistr
 
 GMIDTITLEMAP = "Your Adventure Begins";
 
@@ -488,7 +500,11 @@ PICKUPOPTION4 = "animations are playing.";
 ANNOUNOPTION1 = "Disable Announcer";
 ANNOUNOPTION2 = "In case you prefer silent powerup pickups, like in earlier versions";
 ANNOUNOPTION3 = "of this mod.";
-CUMMINSOON = "\cgMore mod-tailored options coming soon!";
+BOSSMUSIC1 = "Disable Boss Music";
+BOSSMUSIC2 = "What it says on the tin, intended for compatibility with certain mapsets";
+BOSSMUSIC3 = "or music randomizers. May require a map restart.";
+BOSSMUSIC4 = "\cf(NOTE: When playing with the 1-Up Music Pack, this feature is";
+BOSSMUSIC5 = "\cfdisabled automatically.)";
 
 //Story screen text
 //Doom

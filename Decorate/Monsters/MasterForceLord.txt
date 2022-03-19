@@ -29,6 +29,7 @@ ACTOR MasterForceLord replaces Cyberdemon
 	Loop
   See:
 	MNTR A 0 A_JumpIf(ACS_NamedExecuteWithResult("1UpCheck",0,0,0,0) == 2,"TrueSee")
+	MNTR A 0 A_JumpIf(CallACS("NoBossMusic")==1, "TrueSee")
 	MNTR A 0 ACS_NamedExecuteAlways("MasterForceLordTheme",0,5)
 	Goto TrueSee
   TrueSee:
@@ -110,6 +111,7 @@ ACTOR MasterForceLord replaces Cyberdemon
 	TNT1 AAAAA 0 A_SpawnItem("GMIDGibSpawner_NoSkull")
 	TNT1 AA 35
 	TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("1UpCheck",0,0,0,0) == 2,"ShortenedBossDeath")
+	TNT1 A 0 A_JumpIf(CallACS("NoBossMusic")==1, "ShortenedBossDeath")
 	TNT1 A 0 ACS_NamedExecuteAlways("MasterForceLordEnding",0,5)
 	TNT1 AAA 35
 	TNT1 A 15
@@ -122,6 +124,7 @@ ACTOR MasterForceLord replaces Cyberdemon
 	TNT1 AAAAA 0 A_SpawnItem("GMIDGibSpawner_NoSkull")
 	TNT1 AA 35
 	TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("1UpCheck",0,0,0,0) == 2,"ShortenedBossDeath")
+	TNT1 A 0 A_JumpIf(CallACS("NoBossMusic")==1, "ShortenedBossDeath")
 	TNT1 A 0 ACS_NamedExecuteAlways("MasterForceLordEnding",0,5)
 	TNT1 AAA 35
 	TNT1 A 15

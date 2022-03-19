@@ -82,7 +82,12 @@ OptionMenu "GMIDOptions"
 	Option "$ANNOUNOPTION1", "noannouncer", "OnOff"
 	StaticText "$ANNOUNOPTION2"
 	StaticText "$ANNOUNOPTION3"
-	StaticText "$CUMMINSOON"
+	StaticText ""
+	Option "$BOSSMUSIC1", "nobossmusic", "OnOff"
+	StaticText "$BOSSMUSIC2"
+	StaticText "$BOSSMUSIC3"
+	StaticText "$BOSSMUSIC4"
+	StaticText "$BOSSMUSIC5"
 }
 
 OptionMenu "GMIDKeybindOptions"

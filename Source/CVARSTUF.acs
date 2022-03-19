@@ -26,6 +26,11 @@ script "DisableAnnouncer" (void)
 	SetResultValue(GetCVar("noannouncer"));
 }
 
+script "NoBossMusic" (void)
+{
+	SetResultValue(GetCvar("nobossmusic"));
+}
+
 //All of the typical explosion effect except for the explosion itself
 script "LessBoomEffects" (void)
 {

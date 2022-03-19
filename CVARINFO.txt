@@ -3,6 +3,7 @@ user int nostrafetilt = 0;
 user int nowarmupanim = 0;
 user int pickupanim = 1;
 user int noannouncer = 0;
+server int nobossmusic = 0;
 server int lessboom = 0;
 server int cleanblood = 0;
 server int nodebris = 0;

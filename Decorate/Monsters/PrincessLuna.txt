@@ -8,6 +8,7 @@ ACTOR DoomLuna replaces SpiderMastermind
   PainChance 40
   Speed 7.5
   DamageFactor "GMIDExplosion", 0.25
+  DamageFactor "Crush", 1.333 //So that MAP06: The Crusher (And clones) will kill her at roughly the same speed as in vanilla Doom
   Monster
   +BOSS
   +NOICEDEATH
