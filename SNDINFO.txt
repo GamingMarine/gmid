@@ -1858,6 +1858,7 @@ body/hitfloor9					BODLAND9
 body/hitfloor10					BODLAND0
 body/hitfloor11					BODLANDA
 $random body/hitfloor { body/hitfloor1 body/hitfloor2 body/hitfloor3 body/hitfloor4 body/hitfloor5 body/hitfloor6 body/hitfloor7 body/hitfloor8 body/hitfloor9 body/hitfloor10 body/hitfloor11 }
+body/crush						BODCRUSH
 gore/hitbig GOREHIT
 gore/head	HEADSHOT
 

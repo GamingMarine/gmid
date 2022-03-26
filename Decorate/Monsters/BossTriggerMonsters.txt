@@ -256,6 +256,10 @@ actor VinylStorm replaces Arachnotron
   Raise:
 	VSTR MLKJIH 5
 	Goto See
+  Crush:
+	TNT1 A 0 A_PlaySound("body/crush",CHAN_VOICE)
+	POL5 B -1
+	Stop
    }
 }
 
@@ -781,5 +785,9 @@ actor TwiMage replaces BaronOfHell
   Raise:
 	TWMA MLKJIH 5
 	Goto See
+  Crush:
+	TNT1 A 0 A_PlaySound("body/crush",CHAN_VOICE)
+	POL5 B -1
+	Stop
    }
 }

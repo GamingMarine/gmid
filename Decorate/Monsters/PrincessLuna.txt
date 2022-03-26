@@ -124,5 +124,7 @@ ACTOR DoomLuna replaces SpiderMastermind
 	TNT1 AA 35
 	TNT1 A 0 A_BossDeath
     Stop
+  Crush:
+	Stop
   }
 }

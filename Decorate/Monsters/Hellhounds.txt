@@ -122,6 +122,10 @@ actor Hellhound replaces Demon
 	Raise:
 		HOUN QPONMLK 3
 		Goto See
+	Crush:
+		TNT1 A 0 A_PlaySound("body/crush",CHAN_VOICE)
+		POL5 B -1
+		Stop
 	}
 }
 
@@ -263,6 +267,10 @@ actor AdvancedHellhound replaces PainElemental
 		AHOX PONMLKJIH 2
 		AHOU NMLKJ 2
 		Goto See
+	Crush:
+		TNT1 A 0 A_PlaySound("body/crush",CHAN_VOICE)
+		POL5 B -1
+		Stop
 	}
 }
 
