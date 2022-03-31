@@ -1,0 +1,95 @@
+//These are just so that the Heretic enemies have advanced functions from GMID, like giving score and player taunts.
+Actor NewHereticImp : HereticImp replaces HereticImp
+{
+  States
+  {
+  Death:
+	TNT1 A 0 A_GiveToTarget("ScoreItem",200)
+    IMPX G 4 A_ImpDeath
+    IMPX H 5
+    Wait
+  }
+}
+
+Actor NewHereticImpLeader : HereticImpLeader replaces HereticImpLeader
+{
+  States
+  {
+  Death:
+	TNT1 A 0 A_GiveToTarget("ScoreItem",400)
+    IMPX G 4 A_ImpDeath
+    IMPX H 5
+    Wait
+  }
+}
+
+Actor NewMummy : Mummy replaces Mummy
+{
+  States
+  {
+  Death:
+    MUMM I 5 A_GiveToTarget("ScoreItem",400)
+    MUMM J 5 A_Scream
+    MUMM K 5 A_SpawnItemEx("MummySoul", 0, 0, 10, 0, 0, 1)
+    MUMM L 5
+    MUMM M 5 A_NoBlocking
+    MUMM NO 5
+    MUMM P -1
+    Stop
+  }
+}
+
+Actor NewMummyGhost : NewMummy replaces MummyGhost
+{
+  +SHADOW
+  +GHOST
+  RenderStyle Translucent
+  Alpha 0.4
+}
+
+Actor NewMummyLeader : MummyLeader replaces MummyLeader
+{
+  States
+  {
+  Death:
+    MUMM I 5 A_GiveToTarget("ScoreItem",500)
+    MUMM J 5 A_Scream
+    MUMM K 5 A_SpawnItemEx("MummySoul", 0, 0, 10, 0, 0, 1)
+    MUMM L 5
+    MUMM M 5 A_NoBlocking
+    MUMM NO 5
+    MUMM P -1
+    Stop
+  }
+}
+
+Actor NewMummyLeaderGhost : NewMummyLeader replaces MummyLeaderGhost
+{
+  +SHADOW
+  +GHOST
+  RenderStyle Translucent
+  Alpha 0.4
+}
+
+Actor NewKnight : Knight replaces Knight
+{
+  States
+  {
+  Death:
+    KNIG I 6 A_GiveToTarget("ScoreItem",1000)
+    KNIG J 6 A_Scream
+    KNIG K 6
+    KNIG L 6 A_NoBlocking
+    KNIG MN 6
+    KNIG O -1
+    Stop
+  }
+}
+
+Actor NewKnightGhost : NewKnight replaces KnightGhost
+{
+  +SHADOW
+  +GHOST
+  RenderStyle Translucent
+  Alpha 0.4
+}

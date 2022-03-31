@@ -1,4 +1,4 @@
-ACTOR NewAllmap : CustomInventory
+ACTOR NewAllmap : CustomInventory replaces SuperMap
 {
   +COUNTITEM
   +INVENTORY.FANCYPICKUPSOUND
@@ -133,6 +133,8 @@ Actor NightVisionPowerup : PowerupGiver
   Powerup.Type "LightAmp2"
 }
 
+Actor NightVisionGoggles_Heretic : NightVisionGoggles replaces ArtiTorch {}
+
 Actor PowerLightAmp2 : PowerLightAmp
 {
   Inventory.Icon "PVISB0"
@@ -239,6 +241,8 @@ Actor InvulPower : PowerupGiver
 	Powerup.Type "PowerInvulnerable2"
 	Powerup.Color "Gold", 0.25
 }
+
+Actor InvulnerabilitySphere_Heretic : InvulnerabilitySphere_ replaces ArtiInvulnerability {}
 
 ACTOR LifeSphere : CustomInventory Replaces SoulSphere
 {
@@ -647,6 +651,8 @@ Actor HasteSphereEffectD : HasteSphereEffectA
 	  Loop
 	 }
 }
+
+Actor HasteSphere_Heretic : HasteSphere replaces ArtiInvisibility {}
 
 Actor CapturedMarine
 {

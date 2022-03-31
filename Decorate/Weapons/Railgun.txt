@@ -122,3 +122,35 @@ Actor GMIDRailgunPuff : BulletPuff
 	Stop
   }
 }
+
+ACTOR NewCell : Ammo replaces SkullRodAmmo
+{
+  Inventory.PickupMessage "$GOTCHARGE1"
+  Inventory.Amount 20
+  Inventory.MaxAmount 300
+  Ammo.BackpackAmount 20
+  Ammo.BackpackMaxAmount 600
+  Tag "$TAG_CHARGE1"
+  Inventory.PickupSound "cell/get1"
+  Inventory.Icon "CELLB0"
+  States
+  {
+  Spawn:
+    CELL A -1
+    Stop
+  }
+}
+
+ACTOR NewCellPack : NewCell replaces SkullRodHefty
+{
+  Tag "$TAG_CHARGE2"
+  Inventory.PickupMessage "$GOTCHARGE2"
+  Inventory.PickupSound "cell/get2"
+  Inventory.Amount 100
+  States
+  {
+  Spawn:
+    CELP A -1
+    Stop
+  }
+}

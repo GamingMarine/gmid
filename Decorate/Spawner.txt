@@ -184,13 +184,32 @@ DropItem "LightArmorVest"
 DropItem "StrongArmorVest"
 }
 
+Actor GreenArmorSpawner_Heretic : RandomSpawner replaces SilverShield
+{
+DropItem "LightArmorVest"
+DropItem "StrongArmorVest"
+}
+
 Actor BlueArmorSpawner : RandomSpawner replaces BlueArmor
 {
 DropItem "HeavyArmorVest"
 DropItem "PraetorArmorVest"
 }
 
+Actor BlueArmorSpawner_Heretic : RandomSpawner replaces EnchantedShield
+{
+DropItem "HeavyArmorVest"
+DropItem "PraetorArmorVest"
+}
+
+
 Actor BerserkSpawner : RandomSpawner replaces Berserk
+{
+DropItem "DoubleSphere"
+DropItem "QuadDamage"
+}
+
+Actor BerserkSpawner_Heretic : RandomSpawner replaces ArtiTomeOfPower
 {
 DropItem "DoubleSphere"
 DropItem "QuadDamage"
@@ -223,7 +242,21 @@ DropItem "Grapes"
 DropItem "Orange"
 }
 
+Actor MinorFoodSpawner_Heretic : RandomSpawner replaces CrystalVial
+{
+DropItem "Apple"
+DropItem "Grapes"
+DropItem "Orange"
+}
+
 Actor MajorFoodSpawner : RandomSpawner replaces Medikit
+{
+DropItem "Hamburg"
+DropItem "EntireChickenYouWeirdo"
+DropItem "PizzaZone"
+}
+
+Actor MajorFoodSpawner_Heretic : RandomSpawner replaces ArtiHealth
 {
 DropItem "Hamburg"
 DropItem "EntireChickenYouWeirdo"
@@ -254,7 +287,29 @@ ACTOR NewChainsawSpawner replaces Chainsaw
 	}
 }
 
+ACTOR NewChainsawSpawner_Heretic replaces Gauntlets
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay A_SpawnItemEx("ChainsawSpawner")
+		TNT1 AAA 0 A_DropItem("ScurryRat")
+		Stop
+	}
+}
+
 ACTOR NewShotgunSpawner replaces Shotgun
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay A_SpawnItemEx("ShotgunSpawner")
+		TNT1 AAA 0 A_DropItem("ScurryRat")
+		Stop
+	}
+}
+
+ACTOR NewShotgunSpawner_Heretic replaces Crossbow
 {
 	States
 	{
@@ -295,6 +350,17 @@ ACTOR NewChaingunSpawner replaces Chaingun
 	}
 }
 
+ACTOR NewChaingunSpawner_Heretic replaces Blaster
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay A_SpawnItemEx("ChaingunSpawner")
+		TNT1 AAA 0 A_DropItem("ScurryRat")
+		Stop
+	}
+}
+
 ACTOR NewRocketLauncherSpawner replaces RocketLauncher
 {
 	States
@@ -306,7 +372,29 @@ ACTOR NewRocketLauncherSpawner replaces RocketLauncher
 	}
 }
 
+ACTOR NewRocketLauncherSpawner_Heretic replaces PhoenixRod
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay A_SpawnItemEx("RocketLauncherSpawner")
+		TNT1 AAA 0 A_DropItem("ScurryRat")
+		Stop
+	}
+}
+
 ACTOR NewPlasmaRifleSpawner replaces PlasmaRifle
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay A_SpawnItemEx("PlasmaGunSpawner")
+		TNT1 AAA 0 A_DropItem("ScurryRat")
+		Stop
+	}
+}
+
+ACTOR NewPlasmaRifleSpawner_Heretic replaces SkullRod
 {
 	States
 	{

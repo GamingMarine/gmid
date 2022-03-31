@@ -42,3 +42,4 @@
 #include Decorate/Monsters/ScriptedMarines.txt
 #include Decorate/Monsters/WayneCampbell.txt
 #include Decorate/Monsters/MonstersCastCall.txt
+#include Decorate/Monsters/HereticMonsters.txt

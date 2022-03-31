@@ -89,6 +89,7 @@ gameinfo
 	"$QUITMSG11","$QUITMSG12","$QUITMSG13","$QUITMSG14", "$QUITMSG15", "$QUITMSG16",
 	"$QUITMSG17", "$QUITMSG18", "$QUITMSG19", "$QUITMSG20", "$QUITMSG21", "$QUITMSG22",
 	"$QUITMSG23", "$QUITMSG24"
+	pausesign = "PAWS"
 }
 
 map TITLEMAP lookup "Your Adventure Begins"

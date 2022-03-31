@@ -13,7 +13,7 @@ Actor GMIDPistol : Pistol Replaces Pistol
 	+WEAPON.NOALERT
 	Inventory.PickupMessage "$GOTBERETTA"
 	Obituary "$OB_BERETTA"
-	Inventory.Icon "PISTA0C0"
+	Inventory.Icon "PISTA0"
 	Weapon.SelectionOrder 1900
 	states
 	{
@@ -113,4 +113,49 @@ Actor GMIDPistol : Pistol Replaces Pistol
 	PISG A 22
 	Goto LightDone
   }
+}
+
+Actor Clip2 : Ammo replaces GoldWandAmmo
+{
+	Scale .58
+	+FLOORCLIP
+	+DONTGIB
+	Inventory.Amount 10
+	Inventory.MaxAmount 200
+	Ammo.BackpackAmount 10
+	Ammo.BackpackMaxAmount 400
+	Tag "$TAG_9MM1"
+	Inventory.PickupSound "pistolmagazine/get"
+	Inventory.Icon "PISAC0"
+	Inventory.PickupMessage "$GOT9MM1"
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_Jump(128, "Spawn2")
+		PISA A -1 
+		Stop
+	Spawn2:
+		PISA B -1
+		Stop
+	}
+}
+
+Actor ClipBox2 : Clip2 replaces GoldWandHefty
+{
+	+FLOORCLIP
+	+DONTGIB
+	Scale 1.15
+	Inventory.Amount 30
+	Ammo.BackpackAmount 30
+	Tag "$TAG_9MM2"
+	Inventory.PickupSound "pistolbox/get"
+	Inventory.Icon "PISAA0B0"
+	Inventory.PickupMessage "$GOT9MM2"
+	States
+	{
+	Spawn:
+		BBOX A -1
+		Stop
+	}
 }

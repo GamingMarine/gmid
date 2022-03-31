@@ -162,3 +162,80 @@ Lock 101 Doom
 	RemoteMessage "$GMIDPD_ALL6O"
 	LockedSound "lock/misc"
 }
+
+//Heretic
+//Green Key
+Lock 1 Heretic
+{
+	KeyGreen
+	Message "$GMIDPD_GREENH"
+	LockedSound "lock/heretic"
+	Mapcolor 0 255 0
+}
+
+//Blue Key
+Lock 2 Heretic
+{
+	KeyBlue 
+	Message "$GMIDPD_BLUEH"
+	LockedSound "lock/heretic"
+	Mapcolor 0 0 255
+}
+
+//Yellow Key
+Lock 3 Heretic
+{
+	KeyYellow
+	Message "$GMIDPD_YELLOWH"
+	LockedSound "lock/heretic"
+	Mapcolor 255 255 0
+}
+
+//Green Key (Duplicate, for some reason)
+Lock 129 Heretic
+{
+	KeyGreen
+	Message "$GMIDPD_GREENH"
+	LockedSound "lock/heretic"
+	Mapcolor 0 255 0
+}
+
+//Blue Key (Duplicate)
+Lock 130 Heretic
+{
+	KeyBlue 
+	Message "$GMIDPD_BLUEH"
+	LockedSound "lock/heretic"
+	Mapcolor 0 0 255
+}
+
+//Yellow Key (Duplicate
+Lock 131 Heretic
+{
+	KeyYellow
+	Message "$GMIDPD_YELLOWH"
+	LockedSound "lock/heretic"
+	Mapcolor 255 255 0
+}
+
+//All Three Keys
+Lock 229 Heretic
+{
+	KeyGreen 
+	KeyYellow 
+	KeyBlue
+	Message "$GMIDPD_ALL6"
+	RemoteMessage "$GMIDPD_ALL6O"
+	LockedSound "lock/heretic"
+}
+
+//All Three Keys (Duplicate)
+Lock 101 Heretic
+{
+	KeyGreen 
+	KeyYellow 
+	KeyBlue
+	Message "$GMIDPD_ALL6"
+	RemoteMessage "$GMIDPD_ALL6O"
+	LockedSound "lock/heretic"
+}

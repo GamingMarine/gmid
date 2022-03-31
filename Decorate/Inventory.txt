@@ -3,7 +3,7 @@ ACTOR CacoColaBottleAdd : Health
 	Inventory.Amount 1
 }
 ACTOR DidHeal : Inventory {}
-ACTOR CacoColaBottle : CustomInventory
+ACTOR CacoColaBottle : CustomInventory replaces ArtiSuperHealth
 {
 	+INVBAR
 	Inventory.Amount 100
@@ -137,6 +137,55 @@ Actor NewYellowSkull : CustomInventory replaces YellowSkull
 	Loop
   Pickup:
 	TNT1 A 1 A_GiveInventory("YellowSkull",1)
+	Stop
+  }
+}
+
+//Heretic Keys
+Actor YellowPrismKey : CustomInventory replaces KeyYellow
+{
+  Inventory.PickupSound "misc/prismup"
+  Inventory.PickupMessage "$GOTYELWPRISM"
+  +FLOATBOB
+  States
+  {
+  Spawn:
+    CKYY ABCDEFGHI 3 Bright
+    Loop
+  Pickup:
+	TNT1 A 1 A_GiveInventory("KeyYellow",1)
+	Stop
+  }
+}
+
+Actor GreenPrismKey : CustomInventory replaces KeyGreen
+{
+  Inventory.PickupSound "misc/prismup"
+  Inventory.PickupMessage "$GOTGREENPRISM"
+  +FLOATBOB
+  States
+  {
+  Spawn:
+    AKYY ABCDEFGHI 3 Bright
+    Loop
+  Pickup:
+	TNT1 A 1 A_GiveInventory("KeyGreen",1)
+	Stop
+  }
+}
+
+Actor BluePrismKey : CustomInventory replaces KeyBlue
+{
+  Inventory.PickupSound "misc/prismup"
+  Inventory.PickupMessage "$GOTBLUEPRISM"
+  +FLOATBOB
+  States
+  {
+  Spawn:
+    BKYY ABCDEFGHI 3 Bright
+    Loop
+  Pickup:
+	TNT1 A 1 A_GiveInventory("KeyBlue",1)
 	Stop
   }
 }

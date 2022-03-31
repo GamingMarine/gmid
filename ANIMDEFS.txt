@@ -1,4 +1,4 @@
-texture M_SKULL1
+texture SKULLY_1
     pic SKULLY_1 tics 2
     pic SKULLY_2 tics 2
 	pic SKULLY_3 tics 2
@@ -469,80 +469,6 @@ flat SLIME12
     pic MAGMA1 rand 4 4
 	pic MAGMA2 rand 4 4
 	pic MAGMA3 rand 4 4
-	
-Texture BLODRIP1
-    pic BLODRIP1 rand 3 3
-	pic BLODRIP2 rand 3 3
-	pic BLODRIP3 rand 3 3
-	pic BLODRIP4 rand 3 3
-Texture BLODRIP2
-    pic BLODRIP1 rand 3 3
-	pic BLODRIP2 rand 3 3
-	pic BLODRIP3 rand 3 3
-	pic BLODRIP4 rand 3 3
-Texture BLODRIP3
-    pic BLODRIP1 rand 3 3
-	pic BLODRIP2 rand 3 3
-	pic BLODRIP3 rand 3 3
-	pic BLODRIP4 rand 3 3
-Texture BLODRIP4
-    pic BLODRIP1 rand 3 3
-	pic BLODRIP2 rand 3 3
-	pic BLODRIP3 rand 3 3
-	pic BLODRIP4 rand 3 3
-	
-Texture GSTFONT1
-    pic GSTFONT1 rand 3 3
-	pic GSTFONT2 rand 3 3
-	pic GSTFONT3 rand 3 3
-Texture GSTFONT2
-    pic GSTFONT1 rand 3 3
-	pic GSTFONT2 rand 3 3
-	pic GSTFONT3 rand 3 3
-Texture GSTFONT3
-    pic GSTFONT1 rand 3 3
-	pic GSTFONT2 rand 3 3
-	pic GSTFONT3 rand 3 3
-
-Texture FIREWALL
-    pic FIREWALL rand 3 3
-	pic FIREWALA rand 3 3
-	pic FIREWALB rand 3 3
-Texture FIREWALA
-    pic FIREWALL rand 3 3
-	pic FIREWALA rand 3 3
-	pic FIREWALB rand 3 3
-Texture FIREWALB
-    pic FIREWALL rand 3 3
-	pic FIREWALA rand 3 3
-	pic FIREWALB rand 3 3
-	
-Texture FIREMAG1
-    pic FIREMAG1 rand 3 3
-	pic FIREMAG2 rand 3 3
-	pic FIREMAG3 rand 3 3
-Texture FIREMAG2
-    pic FIREMAG1 rand 3 3
-	pic FIREMAG2 rand 3 3
-	pic FIREMAG3 rand 3 3
-Texture FIREMAG3
-    pic FIREMAG1 rand 3 3
-	pic FIREMAG2 rand 3 3
-	pic FIREMAG3 rand 3 3
-	
-
-Texture FIRELAVA
-    pic FIRELAVA rand 3 3
-	pic FIRELAV2 rand 3 3
-	pic FIRELAV3 rand 3 3
-Texture FIRELAV2
-    pic FIRELAVA rand 3 3
-	pic FIRELAV2 rand 3 3
-	pic FIRELAV3 rand 3 3
-Texture FIRELAV3
-    pic FIRELAVA rand 3 3
-	pic FIRELAV2 rand 3 3
-	pic FIRELAV3 rand 3 3
 	
 //Switch sounds
 switch doom 1 SW1BRCOM on sound switches/sw1s pic SW2BRCOM tics 0

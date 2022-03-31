@@ -14,7 +14,7 @@ Actor GMIDMissileLauncher : RocketLauncher
 	+WEAPON.NOALERT
 	Inventory.PickupMessage "$GOTMLAUNCHER"
 	Obituary "$OB_LAUNCHER"
-	Inventory.Icon "LAUNA0B0"
+	Inventory.Icon "LAUNA0"
 	Weapon.SelectionOrder 2400
 	states
 	{
@@ -141,3 +141,21 @@ Actor GMIDRocket : Rocket replaces Rocket
 		Stop
 	}
 }
+
+ACTOR RocketAmmo2 : RocketAmmo replaces RocketAmmo
+{
+  Tag "$TAG_MISSILE1"
+  Inventory.PickupSound "rocket/get"
+  Inventory.PickupMessage "$GOTMISSILE1"
+}
+
+ACTOR RocketAmmo2_Heretic : RocketAmmo2 replaces PhoenixRodAmmo {}
+
+ACTOR RocketBox2 : RocketBox replaces RocketBox
+{
+  Tag "$TAG_MISSILE2"
+  Inventory.PickupSound "rocketbox/get"
+  Inventory.PickupMessage "$GOTMISSILE2"
+}
+
+ACTOR RocketBox2_Heretic : RocketBox2 replaces PhoenixRodHefty {}

@@ -51,7 +51,7 @@ Actor CookieCrystalSpawner
 		Stop
 	}
 }
-Actor CookieCrystal : CustomInventory
+Actor CookieCrystal : CustomInventory replaces ArtiEgg
 {
 	Radius 21
 	Height 12

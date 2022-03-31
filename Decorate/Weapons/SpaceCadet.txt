@@ -139,3 +139,36 @@ ACTOR IveGotSmallBalls
       Stop
    }
 }
+
+Actor SmallMana : Ammo replaces MaceAmmo
+{
+	Inventory.Amount 50
+	Inventory.MaxAmount 450
+	Ammo.BackpackAmount 50
+	Ammo.BackpackMaxAmount 900
+	Inventory.PickupSound "mana/smallget"
+	Tag "$TAG_MANA1"
+	Inventory.PickupMessage "$GOTMANA1"
+	Inventory.Icon "HPP1D0"
+	+FLOATBOB
+	States
+	{
+	Spawn:
+		HPP1 ABC 4 Bright 
+		Loop
+	}
+}
+
+ACTOR LargeMana : SmallMana replaces MaceHefty
+{
+	Inventory.Amount 150
+	Tag "$TAG_MANA2"
+	Inventory.PickupSound "mana/largeget"
+	Inventory.PickupMessage "$GOTMANA2"
+	States
+	{
+	Spawn:
+		HPP2 A -1 Bright
+		Stop
+	}
+}

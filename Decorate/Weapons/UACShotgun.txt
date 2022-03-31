@@ -13,7 +13,7 @@ Actor GMIDShotgun : Shotgun
 	Tag "$TAG_BOOMSTICK"
 	Inventory.PickupMessage "$GOTBOOMSTICK"
 	Obituary "$OB_BOOMSTICK"
-	Inventory.Icon "SHOTA0B0"
+	Inventory.Icon "SHOTA0"
 	Weapon.SelectionOrder 1300
 	states
 	{
@@ -124,4 +124,43 @@ Actor GMIDShotgun : Shotgun
 			SHTG A 22
 			Goto LightDone
 		}
+}
+
+Actor NewShells : Shell replaces CrossbowAmmo
+{
+	Scale 0.6
+	Tag "$TAG_SHELLS1"
+	Inventory.PickupSound "shellclip/get"
+	Inventory.PickupMessage "$GOTSHELLS1"
+	Inventory.Icon "SHELA0"
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_Jump(128, "Spawn2")
+		SHEL C -1 
+		Stop
+	Spawn2:
+		SHEL E -1
+		Stop
+	}
+}
+
+Actor NewShellBox : ShellBox replaces CrossbowHefty
+{
+	Scale 0.6
+	Tag "$TAG_SHELLS2"
+	Inventory.PickupSound "shellbox/get"
+	Inventory.PickupMessage "$GOTSHELLS2"
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_Jump(128, "Spawn2")
+		SBOX A -1
+		Stop
+	Spawn2:
+		SBOX C -1
+		Stop
+	}
 }

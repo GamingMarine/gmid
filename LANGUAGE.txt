@@ -327,12 +327,20 @@ GMIDPD_ALL6 = "This door is restricted to those with \cjall six keys\c-.";
 GMIDPD_ALL6O = "This object is restricted to those with \cjall six keys\c-.";
 GMIDPD_ALLKEYS = "\cjEvery single key\c- is required.";
 
+//Heretic locks
+GMIDPD_YELLOWH = "This door requires the \ckyellow\c- prism key.";
+GMIDPD_GREENH = "This door requires the \cdgreen\c- prism key.";
+GMIDPD_BLUEH = "This door requires the \chblue\c- prism key.";
+
 GOTBLUECARD2 = "You've found the \chblue\c- keycard!";
 GOTYELWCARD2 = "You've found the \ckyellow\c- keycard!";
 GOTREDCARD2 = "You've found the \cgred\c- keycard!";
 GOTBLUESKUL2 = "You've found the \chblue\c- skull key!";
 GOTYELWSKUL2 = "You've found the \ckyellow\c- skull key!";
 GOTREDSKUL2 = "You've found the \cgred\c- skull key!";
+GOTYELWPRISM = "You've found the \ckyellow\c- prism key!";
+GOTGREENPRISM = "You've found the \ckgreen\c- prism key!";
+GOTBLUEPRISM = "You've found the \ckblue\c- prism key!";
 
 // Obituary strings
 // First the self-kills, then the other-kills
@@ -377,8 +385,8 @@ MENULOAD = "Restore Progress";
 MENULOADNETGAME = "You will need to quit this netgame in order to load any progress.";
 MENUSAVE = "Save Progress";
 MENUQUIT = "Surrender";
-MODVERSION1 = "v1.2.0 EXPERIMEMTAL BUILD 74";
-MODVERSION2 = "Compiled Saturday, March 26th, 2022";
+MODVERSION1 = "v1.2.0 EXPERIMEMTAL BUILD 75";
+MODVERSION2 = "Compiled Wednesday, March 30th, 2022";
 MENUEPSD = "Choose Your Destiny";
 MENUSKIL = "How tough are you?";
 DIFFNAME1 = "Trainee";

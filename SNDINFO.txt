@@ -1,4 +1,7 @@
+$pitchshiftrange 0
+
 //------------Player------------------//
+$playersound	player	GamingMarine	*usefail		gmnoway
 $playersound	player	GamingMarine	*falling        GMPLFALL
 $random player/pain100	{ pp10 pp11 pp12 pp13 }
 pp10 pain1
@@ -31,6 +34,7 @@ poof-4 ploof4
 poof-5 ploof5
 $random gmarinoof { poof-1 poof-2 poof-3 poof-4 poof-5 }
 $playeralias player GamingMarine *grunt gmarinoof
+$playersound player	GamingMarine *land	gmoof
 pdhi-1	diehi1
 pdhi-2	diehi2
 pdhi-3	diehi3
@@ -301,6 +305,7 @@ ARMOR4						ARMOR4
 //------------Misc-------------------//
 misc/k_pkup  dsgotkey
 misc/skullup skullup
+misc/prismup herekey
 $random player/gibtaunt { ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ds13 ds14 ds15 ds16 ds17 ds18 ds19 ds20 ds21 ds22 ds23 ds24 ds25 }
 ds1 pieces1
 ds2 pieces2
@@ -591,6 +596,7 @@ weapons/shotgr		CONTINUE
 lock/card			DOORLOCK
 lock/skull			DOORLOK2
 lock/misc			DOORLOK3
+lock/heretic		DOORLOK4
 $volume casings/bullet/bounce 0.4
 $random Casings/Bullet/bounce { CBNCE1 CBNCE2 CBNCE3 CBNCE4 CBNCE5 }
 CBNCE1 DSCASIN1
