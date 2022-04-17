@@ -620,7 +620,7 @@ $random casings/rifle/bounce { RBNCE1 RBNCE2 RBNCE3 }
 RBNCE1 RCASING1
 RBNCE2 RCASING2
 RBNCE3 RCASING3
-$random misc/ricochet { misc/ricochet1 misc/ricochet2 misc/ricochet3 misc/ricochet4 misc/ricochet5 misc/ricochet6  misc/ricochet7 }
+$random misc/ricochet { misc/ricochet1 misc/ricochet2 misc/ricochet3 misc/ricochet4 misc/ricochet5 misc/ricochet6  misc/ricochet7 misc/ricochet8 misc/ricochet9 }
 misc/ricochet1	RICOCHE1
 misc/ricochet2	RICOCHE2
 misc/ricochet3	RICOCHE3
@@ -628,6 +628,8 @@ misc/ricochet4	RICOCHE4
 misc/ricochet5	RICOCHE5
 misc/ricochet6	RICOCHE6
 misc/ricochet7	RICOCHE7
+misc/ricochet8	RICOCHE8
+misc/ricochet9	RICOCHE9
 
 Blood/Splat 	BLUDDROP
 $volume Blood/Splat 0.25
