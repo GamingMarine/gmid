@@ -2,6 +2,8 @@
 #include "zcommon.acs"
 
 #define MIN_TID (-32768)
+#define PLAYER_MAX 64
+#define HUD_DEATHMSG 8888
 
 //This script is to check if the game is being played in a PVP mode.
 //This can be used to make sure certain items don't spawn in deathmatch.
@@ -227,4 +229,45 @@ Script "MeleeInputCheck" (void)
 	{
 	  SetResultValue(123);
 	}
+}
+
+//These scripts print a messaqe on the screen when the player dies
+//Based on The Adventures of Square by BigBrik Games
+Script "GameOverMan" DEATH
+{
+	str randomGameOver = "";
+	switch (GameType())
+	{
+		case GAME_SINGLE_PLAYER:
+			randomGameOver = StrParam(s:"GAMEOVERA",i:random(1,6));
+			HudMessage(l:randomGameOver,s:"\n",l:"GAMEOVERB1"; HUDMSG_PLAIN, HUD_DEATHMSG, CR_GOLD, 1.5, 0.75, 0.0);
+			break;
+		case GAME_NET_COOPERATIVE:
+		case GAME_NET_DEATHMATCH:
+			HudMessage(l:"GAMEOVERB2"; HUDMSG_PLAIN, HUD_DEATHMSG, CR_GOLD, 1.5, 0.75, 0.0);
+			break;
+		case GAME_TITLE_MAP:
+			break;
+	}
+}
+
+function void AssignPlayerTID(void)
+{
+	int player_tags[PLAYER_MAX];
+	int pid = PlayerNumber();
+	if (pid < 0)
+		return;
+
+	int ptid = UniqueTID();
+	player_tags[pid] = ptid;
+	// activator is player
+	Thing_ChangeTID(0, ptid);
+}
+
+script "RespawnThePlayer" RESPAWN
+{
+	// Clear HUD message
+	HudMessage(s:""; HUDMSG_PLAIN, HUD_DEATHMSG, CR_GOLD, 200.0, 120.0, 0.0);
+	// reassign TID
+	AssignPlayerTID();
 }

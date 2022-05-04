@@ -124,6 +124,7 @@ actor MasterForceBase
   DropSoulCubeAmmo3:
 	"####" A 0 A_SpawnItem("CubeAmmo")
   ContinueXDeath:
+	"####" A 0 A_StopSound(CHAN_VOICE)
 	"####" A 0 A_XScream
 	"####" A 0 A_NoBlocking
 	"####" AA 0 A_SpawnItem("GMIDGibSpawner")

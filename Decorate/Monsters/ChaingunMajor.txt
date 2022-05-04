@@ -197,6 +197,7 @@ Actor ChaingunMajor : ChaingunGuy
   Death.GMIDExplosion:
   Death.GMIDRailgun:
 	TNT1 A 0 A_GiveToTarget("ScoreItem",400)
+	TNT1 A 0 A_StopSound(CHAN_VOICE)
 	TNT1 A 0 A_XScream
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_SpawnItem("GMIDGibSpawner")

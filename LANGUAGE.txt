@@ -385,8 +385,8 @@ MENULOAD = "Restore Progress";
 MENULOADNETGAME = "You will need to quit this netgame in order to load any progress.";
 MENUSAVE = "Save Progress";
 MENUQUIT = "Surrender";
-MODVERSION1 = "v1.2.0 EXPERIMEMTAL BUILD 76";
-MODVERSION2 = "Compiled Sunday, April 17th, 2022";
+MODVERSION1 = "v1.2.0 EXPERIMEMTAL BUILD 77";
+MODVERSION2 = "Compiled Wednesday, May 4th, 2022";
 MENUEPSD = "Choose Your Destiny";
 MENUSKIL = "How tough are you?";
 DIFFNAME1 = "Trainee";
@@ -416,7 +416,7 @@ DIFFSELECT7 = "You have absolutely no idea what you're dealing with. You will kn
 TOTDSTART = "Tip of the Day:";
 TOTD1 = "\cf#1:\c- The Rev-X's battery recharges itself when not in use and cannot be depleted. However, the lower the battery charge, the slower and weaker the weapon's attacks get.";
 TOTD2 = "\cf#2:\c- Portable Sentries are fully reusable! Pressing [USE] on an active sentry will deactivate it, allowing you to pick it back up and store it in your inventory for future situations.";
-TOTD3 = "\cf#3:\c- Performing multiple attacks with your fists in quick succession will put you in Combo Mode, which gives you the chance to pull of special moves.";
+TOTD3 = "\cf#3:\c- Performing multiple attacks with your fists in quick succession will put you in Combo Mode, which gives you the chance to pull off special moves.";
 TOTD4 = "\cf#4:\c- The Firestick is designed for use against hordes of weak enemies. The weapon's splash damage will set most of the crowd ablaze!";
 TOTD5 = "\cf#5:\c- On your adventures, you may come across some of your marine buddies, tied up against their will. Shooting at them with any weapon will free them, and they might even give you special items as a reward for your troubles...";
 TOTD6 = "\cf#6:\c- To help you get the best experience out of GamingMarine in Doom, a list of necessary keybinds is available in the Mod Configure menu.";
@@ -427,18 +427,16 @@ TOTD10 = "\cf#10:\c- Some of the Master Force's footsoldiers are rode by medics,
 TOTD11 = "\cf#11:\c- Holding down either [PRIMARY FIRE] or [QUICK-KICK] while picking up a new weapon will skip the pickup animation, which is especially useful if you're surrounded by alerted enemies!";
 TOTD12 = "\cf#12:\c- Drinking from a Caco-Cola Bottle will only use as much of it as necessary before you have 100% health. Any excess health will remain in your inventory.";
 TOTD13 = "\cf#13:\c- Be cautious when using the Pineapple Jammer--The velocity of the missile can cause them to fly right back at you!";
+TOTD14 = "\cf#14:\c- Aiming for a high score? Then be sure to achieve 100% kills, items, and secrets on a level! Achieving those rewards 10,000 points each.";
 
 GAMEOVERA1 = "You died!";
 GAMEOVERA2 = "Game over, man!"; //Aliens
 GAMEOVERA3 = "You blew it!"; //Revolution X
 GAMEOVERA4 = "He's dead, Jim!"; //Google Chrome
 GAMEOVERA5 = "Welcome to Die!"; //X-Men (Arcade)
-GAMEOVERB1 = "Thought you were hot. Guess what? You're not."; //Total Distortion
-GAMEOVERB2 = "Ouch! You should've seen the other guy.";
-GAMEOVERB3 = "I play GamingMarine in Doom and I can't get up!"; //Doom 64
-GAMEOVERB4 = "Sure, try that one another fifty times and don't change your strategy whatsoever.";
-GAMEOVERB5 = "Too bad, dude. YOU LOSER."; //Extreme Wintersports
-GAMEOVERB6 = "You think you are God, but you are only a chunk of shit."; //Email-Worm.Win32.Magistr
+GAMEOVERA6 = "Game over... or is it?"; //Lameduke
+GAMEOVERB1 = "Strike [USE] to load your last save or restart the level."; //For single-player
+GAMEOVERB2 = "Strike [USE] to respawn."; //For multiplayer
 
 GMIDTITLEMAP = "Your Adventure Begins";
 
@@ -454,7 +452,7 @@ MARINERESCUED = "Marine rescued\n"
 
 //Options Menu
 GMIDMENU = "GamingMarine in Doom Options";
-KEYBINDMENU = "Necessary Keybinds Options";
+KEYBINDMENU = "Necessary Keybinds";
 KEYBINDNOTE1 = "These controls are necessary to get the best possible experience out";
 KEYBINDNOTE2 = "of GamingMarine in Doom.";
 GMIDACTIONS = "Basic Actions";
