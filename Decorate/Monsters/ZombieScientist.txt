@@ -60,6 +60,8 @@ ACTOR ZombieScientist
     SCZA K 5
 	SCZA L 5 A_PlaySound("body/hitfloor")
 	SCZA M 5
+	SCZA N 10
+	SCZA N 0 A_GiveToTarget("PlayerKillTaunt",1)
     SCZA N -1
     stop
   Death2:
@@ -67,38 +69,8 @@ ACTOR ZombieScientist
     FSMS I 5 A_Scream
     FSMS J 5 A_NoBlocking
     FSMS K 5
-	FSMS L 0 A_PlaySound("body/hitfloor")
-    FSMS L -1
-    stop
-  Death.Basic:
-	TNT1 A 0 A_GiveToTarget("ScoreItem",100)
-	TNT1 A 0 A_Jump(256, "Death.Basic1", "Death.Basic2")
-  Death.Basic1:
-    SCZA H 5
-    SCZA I 5 A_Scream
-    SCZA J 5 A_NoBlocking
-    SCZA K 5
-	SCZA L 5 A_PlaySound("body/hitfloor")
-	SCZA M 5
-	SCZA N 10
-	SCZA N 0 A_Jump(16, "KillTaunt1")
-    SCZA N -1
-    stop
-  Death.Basic2:
-    FSMS H 5
-    FSMS I 5 A_Scream
-    FSMS J 5 A_NoBlocking
-    FSMS K 5
 	FSMS L 10 A_PlaySound("body/hitfloor")
-	FSMS L 0 A_Jump(16, "KillTaunt2")
-    FSMS L -1
-    stop
-  KillTaunt1:
-	TNT1 A 0 A_PlaySound("player/killtaunt", CHAN_AUTO)
-    SCZA N -1
-    stop
-  KillTaunt2:
-	TNT1 A 0 A_PlaySound("player/killtaunt", CHAN_AUTO)
+	FSMS L 0 A_GiveToTarget("PlayerKillTaunt",1)
     FSMS L -1
     stop
   Death.Foot:
@@ -112,7 +84,7 @@ ACTOR ZombieScientist
 	SCZA L 5 A_PlaySound("body/hitfloor")
 	SCZA M 5
 	SCZA N 10
-	SCZA N 0 A_Jump(16, "KickTaunt1")
+	SCZA N 0 A_GiveToTarget("PlayerKickTaunt",1)
     SCZA N -1
     stop
   Death.Foot2:
@@ -121,15 +93,7 @@ ACTOR ZombieScientist
     FSMS J 5 A_NoBlocking
     FSMS K 5
 	FSMS L 10 A_PlaySound("body/hitfloor")
-	FSMS L 0 A_Jump(16, "KickTaunt2")
-    FSMS L -1
-    stop
-  KickTaunt1:
-	TNT1 A 0 A_PlaySound("player/kicktaunt", CHAN_AUTO)
-    SCZA N -1
-    stop
-  KickTaunt2:
-	TNT1 A 0 A_PlaySound("player/kicktaunt", CHAN_AUTO)
+	FSMS L 0 A_GiveToTarget("PlayerKickTaunt",1)
     FSMS L -1
     stop
   Death.BigFist:
@@ -141,7 +105,7 @@ ACTOR ZombieScientist
     FSMS J 5 A_NoBlocking
     FSMS K 5
 	FSMS L 10 A_PlaySound("body/hitfloor")
-	FSMS L 0 A_Jump(16, "KillTaunt2")
+	FSMS L 0 A_GiveToTarget("PlayerKillTaunt",1)
     FSMS L -1
     stop
   Death.Uppercut:
@@ -153,7 +117,7 @@ ACTOR ZombieScientist
     FSMS J 5 A_NoBlocking
     FSMS K 5
 	FSMS L 10 A_PlaySound("body/hitfloor")
-	FSMS L 0 A_Jump(16, "KillTaunt2")
+	FSMS L 0 A_GiveToTarget("PlayerKillTaunt",1)
     FSMS L -1
     stop
   XDeath:
@@ -164,11 +128,8 @@ ACTOR ZombieScientist
 	TNT1 A 0 A_XScream
 	TNT1 A 0 A_NoBlocking
 	TNT1 A 0 A_SpawnItem("GMIDGibSpawner")
-	TNT1 A 0 A_Jump(16, "GibTaunt")
-	Stop
-  GibTaunt:
 	TNT1 A 40
-	TNT1 A 0 A_PlaySound("player/gibtaunt", CHAN_AUTO)
+	TNT1 A 0 A_GiveToTarget("PlayerGibTaunt",1)
 	Stop
   Death.Fire:
   Death.CookieFire:

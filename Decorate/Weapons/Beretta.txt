@@ -70,7 +70,9 @@ Actor GMIDPistol : Pistol Replaces Pistol
 	TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("PVPCheck",0,0,0,0) == 2,"AltStartGame")
 	TNT1 A 0 A_JumpIf(CallACS("NoWarmUpAnimation")==1, "AltStartGame")
 	TNT1 A 15 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 0 A_JumpIf(CallACS("PlayerVocalizations")==0, "ContinueIntro")
 	KNUX A 0 A_PlaySound("player/intro", CHAN_VOICE)
+  ContinueIntro:
 	KNUX ABC 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	KNUX A 0 A_PlaySound("knuckled")
 	KNUX DDDCBA 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
@@ -82,6 +84,7 @@ Actor GMIDPistol : Pistol Replaces Pistol
 	BRLD ABCDEFGHIJKLMNOPQ 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	Goto Ready
   AltStartGame:
+	TNT1 A 0 A_JumpIf(CallACS("PlayerVocalizations")==0, "Ready")
 	TNT1 A 0 A_PlaySound("player/intro", CHAN_VOICE)
 	Goto Ready
   AltFire:

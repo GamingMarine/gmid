@@ -128,6 +128,7 @@ Actor NightVisionGoggles : CustomInventory replaces InfraRed
 Actor NightVisionPowerup : PowerupGiver
 {
   +COUNTITEM
+  +INVENTORY.ALWAYSPICKUP
   +INVENTORY.AUTOACTIVATE
   Inventory.MaxAmount 0
   Powerup.Type "LightAmp2"
@@ -236,6 +237,7 @@ Actor InvulnerabilitySphereEffectD : InvulnerabilitySphereEffectA
 
 Actor InvulPower : PowerupGiver
 {
+	+INVENTORY.ALWAYSPICKUP
 	+INVENTORY.AUTOACTIVATE
 	Inventory.MaxAmount 0
 	Powerup.Type "PowerInvulnerable2"
@@ -424,6 +426,7 @@ ACTOR PowerDoubleDamage : PowerDamage
 
 Actor DoubleSphereDamage : PowerupGiver
 {
+	+INVENTORY.ALWAYSPICKUP
 	+INVENTORY.AUTOACTIVATE
 	Inventory.MaxAmount 0
 	Powerup.Type DoubleDamage
@@ -508,6 +511,7 @@ Inventory.Icon "QDMGB0"
 
 Actor QuadDamagePowerup : PowerupGiver
 {
+  +Inventory.AlwaysPickup
   +Inventory.AutoActivate
   Inventory.MaxAmount 0
   Powerup.Type QuadDamageST
@@ -571,6 +575,7 @@ Actor HasteSpherePowerup : PowerupGiver
 	powerup.color "FF FF 00", 0.1
 	powerup.type Speed2
 	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
 }
 
 actor HasteSphere : CustomInventory replaces BlurSphere

@@ -5,6 +5,17 @@
 #define PLAYER_MAX 64
 #define HUD_DEATHMSG 8888
 
+//This script is pretty much what makes the player taunting not happen every time you kill an enemy (unless you have the mod set up that way in the configuration).
+//Based on Duke Nukem: War Against the Doomed by xenoxols
+script "PlayerTauntCooldown" (void)
+{
+	while (CheckInventory("PlayerTauntCooldown") > 0)
+	{
+		Delay(GetCVar("tauntcooldown"));
+		TakeInventory("PlayerTauntCooldown",1);
+	}
+}
+
 //This script is to check if the game is being played in a PVP mode.
 //This can be used to make sure certain items don't spawn in deathmatch.
 //Loosely based on code from Death Foretold by DBT.

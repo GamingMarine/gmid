@@ -63,21 +63,6 @@ actor VinylStorm replaces Arachnotron
 	VSTR H 0 A_GiveToTarget("ScoreItem",2500)
 	VSTR H 5
 	VSTR I 5 A_Scream
-	VSTR A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmoHuh", AAPTR_PLAYER1)
-	Goto ContinueClassicDeath
-  DropSoulCubeAmmoHuh:
-	VSTR A 0 A_SpawnItem("CubeAmmo")
-  ContinueClassicDeath:
-	VSTR J 5 A_NoBlocking
-	VSTR KL 5
-	VSTR M 0 A_PlaySound("body/hitfloor")
-	VSTR M 5
-	VSTR N -1 A_BossDeath
-	Stop
-  Death.Basic:
-	VSTR H 0 A_GiveToTarget("ScoreItem",2500)
-	VSTR H 5
-	VSTR I 5 A_Scream
 	VSTR A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
 	Goto ContinueDeath
   DropSoulCubeAmmo:
@@ -88,11 +73,7 @@ actor VinylStorm replaces Arachnotron
 	VSTR M 0 A_PlaySound("body/hitfloor")
 	VSTR M 5
 	VSTR N 10 A_BossDeath
-	VSTR A 0 A_Jump(16, "KillTaunt")
-	VSTR N -1
-	Stop
-  KillTaunt:
-	VSTR A 0 A_PlaySound("player/killtaunt", CHAN_AUTO)
+	VSTR A 0 A_GiveToTarget("PlayerKillTaunt",1)
 	VSTR N -1
 	Stop
   Death.Foot:
@@ -109,11 +90,7 @@ actor VinylStorm replaces Arachnotron
 	VSTR M 0 A_PlaySound("body/hitfloor")
 	VSTR M 5
 	VSTR N 10 A_BossDeath
-	VSTR A 0 A_Jump(16, "KickTaunt")
-	VSTR N -1
-	Stop
-  KickTaunt:
-  	VSTR A 0 A_PlaySound("player/kicktaunt", CHAN_AUTO)
+	VSTR A 0 A_GiveToTarget("PlayerKickTaunt",1)
 	VSTR N -1
 	Stop
   Death.BigFist:
@@ -252,7 +229,7 @@ actor VinylStorm replaces Arachnotron
 	TNT1 A 0 A_NoBlocking
 	TNT1 AA 0 A_SpawnItem("GMIDGibSpawner")
 	TNT1 A 0 A_BossDeath
-	TNT1 A 0 A_Jump(16, "GibTaunt")
+	TNT1 A 0 A_GiveToTarget("PlayerGibTaunt",1)
 	Stop
   Raise:
 	VSTR MLKJIH 5
@@ -333,21 +310,6 @@ actor NewbieHooves replaces Fatso
 	NWBH H 0 A_GiveToTarget("ScoreItem",3000)
 	NWBH H 5
 	NWBH I 5 A_Scream
-	NWBH A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmoHuh", AAPTR_PLAYER1)
-	Goto ContinueClassicDeath
-  DropSoulCubeAmmoHuh:
-	NWBH A 0 A_SpawnItem("CubeAmmo")
-  ContinueClassicDeath:
-	NWBH J 5 A_NoBlocking
-	NWBH KL 5
-	NWBH M 0 A_PlaySound("body/hitfloor")
-	NWBH M 5
-	NWBH N -1 A_BossDeath
-	Stop
-  Death.Basic:
-	NWBH H 0 A_GiveToTarget("ScoreItem",3000)
-	NWBH H 5
-	NWBH I 5 A_Scream
 	NWBH A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
 	Goto ContinueDeath
   DropSoulCubeAmmo:
@@ -358,11 +320,7 @@ actor NewbieHooves replaces Fatso
 	NWBH M 0 A_PlaySound("body/hitfloor")
 	NWBH M 5
 	NWBH N 10 A_BossDeath
-	NWBH A 0 A_Jump(16, "KillTaunt")
-	NWBH N -1
-	Stop
-  KillTaunt:
-	NWBH A 0 A_PlaySound("player/killtaunt", CHAN_AUTO)
+	NWBH A 0 A_GiveToTarget("PlayerKillTaunt",1)
 	NWBH N -1
 	Stop
   Death.Foot:
@@ -379,11 +337,7 @@ actor NewbieHooves replaces Fatso
 	NWBH M 0 A_PlaySound("body/hitfloor")
 	NWBH M 5
 	NWBH N 10 A_BossDeath
-	NWBH A 0 A_Jump(16, "KickTaunt")
-	NWBH N -1
-	Stop
-  KickTaunt:
-  	NWBH A 0 A_PlaySound("player/kicktaunt", CHAN_AUTO)
+	NWBH A 0 A_GiveToTarget("PlayerKickTaunt",1)
 	NWBH N -1
 	Stop
   Death.BigFist:
@@ -522,7 +476,7 @@ actor NewbieHooves replaces Fatso
 	TNT1 A 0 A_NoBlocking
 	TNT1 AA 0 A_SpawnItem("GMIDGibSpawner")
 	TNT1 A 0 A_BossDeath
-	TNT1 A 0 A_Jump(16, "GibTaunt")
+	TNT1 A 0 A_GiveToTarget("PlayerGibTaunt",1)
 	Stop
   Raise:
 	NWBH MLKJIH 5
@@ -594,21 +548,6 @@ actor TwiMage replaces BaronOfHell
 	TWMA H 0 A_GiveToTarget("ScoreItem",5000)
 	TWMA H 5
 	TWMA I 5 A_Scream
-	TWMA A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmoHuh", AAPTR_PLAYER1)
-	Goto ContinueClassicDeath
-  DropSoulCubeAmmoHuh:
-	TWMA A 0 A_SpawnItem("CubeAmmo")
-  ContinueClassicDeath:
-	TWMA J 5 A_NoBlocking
-	TWMA KL 5
-	TWMA M 0 A_PlaySound("body/hitfloor")
-	TWMA M 5
-	TWMA N -1 A_BossDeath
-	Stop
-  Death.Basic:
-	TWMA H 0 A_GiveToTarget("ScoreItem",5000)
-	TWMA H 5
-	TWMA I 5 A_Scream
 	TWMA A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
 	Goto ContinueDeath
   DropSoulCubeAmmo:
@@ -619,11 +558,7 @@ actor TwiMage replaces BaronOfHell
 	TWMA M 0 A_PlaySound("body/hitfloor")
 	TWMA M 5
 	TWMA N 10 A_BossDeath
-	TWMA A 0 A_Jump(16, "KillTaunt")
-	TWMA N -1
-	Stop
-  KillTaunt:
-	TWMA A 0 A_PlaySound("player/killtaunt", CHAN_AUTO)
+	TWMA A 0 A_GiveToTarget("PlayerKillTaunt",1)
 	TWMA N -1
 	Stop
   Death.Foot:
@@ -640,11 +575,7 @@ actor TwiMage replaces BaronOfHell
 	TWMA M 0 A_PlaySound("body/hitfloor")
 	TWMA M 5
 	TWMA N 10 A_BossDeath
-	TWMA A 0 A_Jump(16, "KickTaunt")
-	TWMA N -1
-	Stop
-  KickTaunt:
-  	TWMA A 0 A_PlaySound("player/kicktaunt", CHAN_AUTO)
+	TWMA A 0 A_GiveToTarget("PlayerKickTaunt",1)
 	TWMA N -1
 	Stop
   Death.BigFist:
@@ -783,7 +714,7 @@ actor TwiMage replaces BaronOfHell
 	TNT1 A 0 A_NoBlocking
 	TNT1 AA 0 A_SpawnItem("GMIDGibSpawner")
 	TNT1 A 0 A_BossDeath
-	TNT1 A 0 A_Jump(16, "GibTaunt")
+	TNT1 A 0 A_GiveToTarget("PlayerGibTaunt",1)
 	Stop
   Raise:
 	TWMA MLKJIH 5

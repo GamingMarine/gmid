@@ -40,21 +40,6 @@ actor Hellhound replaces Demon
 		HOUN K 6 A_GiveToTarget("ScoreItem",750)
 		HOUN L 5 A_Scream
 		HOUN M 4
-		HOUN N 0 A_JumpIfInTargetInventory("SoulCube",1,"DropSoulCubeAmmoHuh", AAPTR_PLAYER1)
-		Goto ContinueClassicDeath
-	DropSoulCubeAmmoHuh:
-		HOUN N 0 A_SpawnItem("CubeAmmo")
-	ContinueClassicDeath:
-		HOUN N 4 A_NoBlocking
-		HOUN O 4
-		HOUN P 4 A_PlaySound("Hellhound/Thud")
-		HOUN Q 4
-		HOUN R -1
-		Stop
-	Death.Basic:
-		HOUN K 6 A_GiveToTarget("ScoreItem",750)
-		HOUN L 5 A_Scream
-		HOUN M 4
 		HOUN N 0 A_JumpIfInTargetInventory("SoulCube",1,"DropSoulCubeAmmo", AAPTR_PLAYER1)
 		Goto ContinueDeath
 	DropSoulCubeAmmo:
@@ -65,11 +50,7 @@ actor Hellhound replaces Demon
 		HOUN P 4 A_PlaySound("Hellhound/Thud")
 		HOUN Q 4
 		HOUN R 10
-		TNT1 A 0 A_Jump(16, "KillTaunt")
-		HOUN R -1
-		Stop
-	KillTaunt:
-		HOUN R 0 A_PlaySound("player/killtaunt", CHAN_AUTO)
+		TNT1 A 0 A_GiveToTarget("PlayerKillTaunt",1)
 		HOUN R -1
 		Stop
 	Death.Foot:
@@ -109,11 +90,7 @@ actor Hellhound replaces Demon
 		HOUN A 0 A_SpawnItem("GMIDGibSpawner_NoSkull")
 		HOUN TUVW 4
 		HOUN X 20
-		TNT1 A 0 A_Jump(16, "GibTaunt")
-		HOUN X -1
-		Stop
-	GibTaunt:
-		TNT1 A 0 A_PlaySound("player/gibtaunt", CHAN_AUTO)
+		TNT1 A 0 A_GiveToTarget("PlayerGibTaunt",1)
 		HOUN X -1
 		Stop
 	Death.CookieIce:
@@ -213,19 +190,6 @@ actor AdvancedHellhound replaces PainElemental
 	Death:
 		AHOX H 5 A_GiveToTarget("ScoreItem",2000)
 		AHOX I 5 A_Scream
-		AHOX J 0 A_JumpIfInTargetInventory("SoulCube",1,"DropSoulCubeAmmoHuh", AAPTR_PLAYER1)
-		Goto ContinueClassicDeath
-	DropSoulCubeAmmoHuh:
-		AHOX J 0 A_SpawnItem("CubeAmmo")
-	ContinueClassicDeath:	
-		AHOX J 5 A_NoBlocking
-		AHOX K 5 A_PlaySound("Hellhound/Thud")
-		AHOX LMNOP 5
-		AHOX Q -1
-		Stop
-	Death.Basic:
-		AHOX H 5 A_GiveToTarget("ScoreItem",2000)
-		AHOX I 5 A_Scream
 		AHOX J 0 A_JumpIfInTargetInventory("SoulCube",1,"DropSoulCubeAmmo", AAPTR_PLAYER1)
 		Goto ContinueDeath
 	DropSoulCubeAmmo:
@@ -234,11 +198,7 @@ actor AdvancedHellhound replaces PainElemental
 		AHOX J 5 A_NoBlocking
 		AHOX K 5 A_PlaySound("Hellhound/Thud")
 		AHOX LMNOPQQ 5
-		TNT1 A 0 A_Jump(16, "KillTaunt")
-		AHOX Q -1
-		Stop
-	KillTaunt:
-		AHOX Q 0 A_PlaySound("player/killtaunt", CHAN_AUTO)
+		TNT1 A 0 A_GiveToTarget("PlayerKillTaunt",1)
 		AHOX Q -1
 		Stop
 	Death.Foot:

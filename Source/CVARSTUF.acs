@@ -11,6 +11,11 @@ script "NoStrafeTilting" (void)
 	SetResultValue(GetCvar("nostrafetilt"));
 }
 
+script "PlayerVocalizations" (void)
+{
+	SetResultValue(GetCvar("playervoice"));
+}
+
 script "NoWarmUpAnimation" (void)
 {
     SetResultValue(GetCVar("nowarmupanim"));

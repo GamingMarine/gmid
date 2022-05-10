@@ -1,5 +1,7 @@
 user int nointrowarn = 0;
 user int nostrafetilt = 0;
+user int playervoice = 1;
+user int tauntcooldown = 70;
 user int nowarmupanim = 0;
 user int pickupanim = 1;
 user int noannouncer = 0;
