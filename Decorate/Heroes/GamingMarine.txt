@@ -21,6 +21,7 @@ Actor GamingMarine : DoomPlayer
 	Player.StartItem "GMIDMissileLauncherToken", 1
 	Player.StartItem "PineappleJammerToken", 1
 	Player.StartItem "RailgunToken", 1
+	Player.StartItem "ExcessiveForceToken", 1
 	Player.StartItem "IsPlayer", 1
 	Player.SoundClass "GamingMarine"
 	Player.Face "GMN"

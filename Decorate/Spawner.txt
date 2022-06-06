@@ -68,6 +68,12 @@ DropItem "Clip2"
 DropItem "Clip3"
 }
 
+Actor UsedClipSpawner : RandomSpawner
+{
+DropItem "Clip2_Used"
+DropItem "Clip3_Used"
+}
+
 Actor ClipBoxSpawner : RandomSpawner replaces ClipBox
 {
 DropItem "ClipBox2"

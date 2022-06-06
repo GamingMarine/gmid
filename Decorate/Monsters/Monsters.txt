@@ -16,7 +16,7 @@ ACTOR NONBoy replaces WolfensteinSS
   ActiveSound "NONBoy/Sight"
   AttackSound "NONBoy/Attack"
   Obituary "$OB_NONBOY"
-  Dropitem "ClipSpawner"
+  Dropitem "UsedClipSpawner"
   Tag "$TAG_NONBOY"
   States
   {

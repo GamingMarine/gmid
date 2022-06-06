@@ -12,7 +12,7 @@ ACTOR BlasterSoldier
   PainSound "BlasterSoldier/Pain"
   DeathSound "BlasterSoldier/Death"
   Obituary "$OB_BLASTER"
-  DropItem "ClipSpawner"
+  DropItem "UsedClipSpawner"
   Tag "$TAG_BLASTER"
   PainChance "Foot", 256
   States

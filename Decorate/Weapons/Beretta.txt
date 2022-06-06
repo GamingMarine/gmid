@@ -144,6 +144,11 @@ Actor Clip2 : Ammo replaces GoldWandAmmo
 	}
 }
 
+Actor Clip2_Used : Clip2 //This is here so that picking up a magazine from an enemy will display a different message
+{
+	Inventory.PickupMessage "$GOT9MM_USED"
+}
+
 Actor ClipBox2 : Clip2 replaces GoldWandHefty
 {
 	+FLOORCLIP

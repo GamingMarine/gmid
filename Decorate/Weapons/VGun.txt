@@ -144,6 +144,11 @@ Actor Clip3 : Ammo replaces BlasterAmmo
 	}
 }
 
+Actor Clip3_Used : Clip3 //This is here so that picking up a magazine from an enemy will display a different message
+{
+	Inventory.PickupMessage "$GOTBULLET_USED"
+}
+
 Actor ClipBox3 : Clip3 replaces BlasterHefty
 {
 	Inventory.Amount 100

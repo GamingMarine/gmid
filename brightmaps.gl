@@ -4746,6 +4746,111 @@ DisableFullBright
 Map "Brightmaps/GMID/SBMBB0.png"
 }
 
+Brightmap Sprite XFFSA0
+{
+Map "Brightmaps/GMID/XFFSA0.png"
+}
+
+Brightmap Sprite XFFSB0
+{
+Map "Brightmaps/GMID/XFFSB0.png"
+}
+
+Brightmap Sprite XFFSC0
+{
+Map "Brightmaps/GMID/XFFSC0.png"
+}
+
+Brightmap Sprite XFFSD0
+{
+Map "Brightmaps/GMID/XFFSC0.png"
+}
+
+Brightmap Sprite XFFSE0
+{
+Map "Brightmaps/GMID/XFFSE0.png"
+}
+
+Brightmap Sprite XFFSF0
+{
+Map "Brightmaps/GMID/XFFSF0.png"
+}
+
+Brightmap Sprite XFFSG0
+{
+Map "Brightmaps/GMID/XFFSG0.png"
+}
+
+Brightmap Sprite XFFSH0
+{
+Map "Brightmaps/GMID/XFFSA0.png"
+}
+
+Brightmap Sprite XFFSI0
+{
+Map "Brightmaps/GMID/XFFSA0.png"
+}
+
+Brightmap Sprite XFFSJ0
+{
+Map "Brightmaps/GMID/XFFSA0.png"
+}
+
+Brightmap Sprite XFFSK0
+{
+Map "Brightmaps/GMID/XFFSA0.png"
+}
+
+Brightmap Sprite XFFSL0
+{
+Map "Brightmaps/GMID/XFFSL0.png"
+}
+
+Brightmap Sprite XFFSM0
+{
+Map "Brightmaps/GMID/XFFSM0.png"
+}
+
+Brightmap Sprite XFFSN0
+{
+Map "Brightmaps/GMID/XFFSN0.png"
+}
+
+Brightmap Sprite XFFSO0
+{
+Map "Brightmaps/GMID/XFFSO0.png"
+}
+
+Brightmap Sprite XFFSP0
+{
+Map "Brightmaps/GMID/XFFSP0.png"
+}
+
+Brightmap Sprite XFFSQ0
+{
+Map "Brightmaps/GMID/XFFSQ0.png"
+}
+
+Brightmap Sprite XFFSR0
+{
+Map "Brightmaps/GMID/XFFSR0.png"
+}
+
+Brightmap Sprite XFFSS0
+{
+Map "Brightmaps/GMID/XFFSS0.png"
+}
+
+Brightmap Sprite XFFST0
+{
+Map "Brightmaps/GMID/XFFST0.png"
+}
+
+Brightmap Sprite XFFSU0
+{
+Map "Brightmaps/GMID/XFFSU0.png"
+}
+
 //Textures
 Brightmap Flat MAGMA1
 {

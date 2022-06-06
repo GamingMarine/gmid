@@ -165,6 +165,10 @@ bigball/bounce1		CADETHT1
 bigball/bounce2		CADETHT2
 $random bigball/bounce { bigball/bounce1 bigball/bounce2 }
 plasma/fire			PLACANFR
+plasma/fiddle1		EXCSFRS1
+plasma/fiddle2		EXCSFRS2
+plasma/fiddle3		EXCSFRS3
+plasma/fiddle4		EXCSFRS4
 SoulCube/Pickup		SCPICKUP
 SoulCube/GetSoul	SCSOULUP
 SoulCube/NotYet		SCNOPE

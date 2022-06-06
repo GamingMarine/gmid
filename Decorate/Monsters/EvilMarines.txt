@@ -14,7 +14,7 @@ actor EvilMarine_Rifle //Evil! EEEVILLL
   ActiveSound "bgrunt/active"
   DeathSound "bgrunt/death"
   AttackSound "rifle/fire"
-  DropItem "ClipSpawner"
+  DropItem "UsedClipSpawner"
   translation "112:127=%[0, 0, 0]:[2, 2, 0]"
   Obituary "$OB_EVILMARINE"
   Tag "$TAG_EVILMARINE1"

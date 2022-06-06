@@ -6,7 +6,7 @@ actor SonicXRainbow : MasterForceBase
   PainSound "SonicXRainbow/pain"
   ActiveSound "SonicXRainbow/idle"
   DeathSound "SonicXRainbow/death"
-  DropItem "ClipSpawner"
+  DropItem "UsedClipSpawner"
   Obituary "$OB_DASHIE"
   Tag "$TAG_DASHIE"
   States
@@ -234,7 +234,7 @@ actor AmyPie : MasterForceBase replaces DoomImp
   PainSound "AmyPie/pain"
   ActiveSound "AmyPie/idle"
   DeathSound "AmyPie/death"
-  DropItem "ClipSpawner"
+  DropItem "UsedClipSpawner"
   DropItem "SmallSoul" 60
   Tag "$TAG_PINKIE"
   States

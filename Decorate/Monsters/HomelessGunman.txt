@@ -20,7 +20,7 @@ ACTOR HomelessGunman
   DeathSound "Gunman/Die"
   AttackSound "Weapons/MiniFire"
   Obituary "$OB_HOMELESS"
-  DropItem "ClipSpawner"
+  DropItem "UsedClipSpawner"
   Tag "$TAG_HOMELESS"
   States
   {
