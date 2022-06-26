@@ -1750,6 +1750,7 @@ GamingMarineClone/Idle4			GMBOTID4
 GamingMarineClone/Idle5			GMBOTID5
 $random GamingMarineClone/Idle { GamingMarineClone/Idle1 GamingMarineClone/Idle2 GamingMarineClone/Idle3 GamingMarineClone/Idle4 GamingMarineClone/Idle5 }
 GamingMarineClone/Ready			GMBOTRDY
+GamingMarineClone/FireCD		GMBOTFIR
 $random GamingMarineClone/Death { GamingMarineClone/Death1 GamingMarineClone/Death2 GamingMarineClone/Death3 }
 GamingMarineClone/Death1		GMBOTDT1
 GamingMarineClone/Death2		GMBOTDT2

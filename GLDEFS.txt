@@ -353,7 +353,16 @@ object Changeling
 
 Object SpiritBall
 {
-Frame PSMM { Light SoulLight2 }
+Frame PSMMA { Light SoulLight2 }
+Frame PSMMB { Light SoulLight2 }
+Frame PSMMC { Light SoulLight2 }
+Frame PSMMD { Light SoulLight2 }
+Frame PSMME { Light SoulLight2 }
+Frame PSMMF { Light SoulLight2 }
+Frame PSMMG { Light SoulLight2 }
+Frame PSMMH { Light SpiritBallFade1 }
+Frame PSMMI { Light SpiritBallFade2 }
+Frame PSMMJ { Light SpiritBallFade3 }
 }
 
 Object Rourity
@@ -434,6 +443,17 @@ Object Blaster_RifleShot
 Object GamingMarineClone
 {
 Frame GMRNF { Light EnemyPistolAttack }
+}
+
+object GMBotProjectile
+{
+    frame RFBT { light HEALTHPOTION }
+}
+
+Object GMBotCD
+{
+	Frame GMBPA { light SoulLight2 }
+	Frame GMBPB { light BIGREDTORCH }
 }
 
 Object NewbieHooves

@@ -132,6 +132,30 @@ Interval 2.0
 Offset 0 16 0
 }
 
+Pulselight SpiritBallFade1
+{
+Color 0.8 0.8 0.8
+Size 30
+SecondarySize 31
+Offset 0 16 0
+}
+
+PulseLight SpiritBallFade2
+{
+Color 0.8 0.8 0.8
+Size 20
+SecondarySize 20
+Offset 0 16 0
+}
+
+PulseLight SpiritBallFade3
+{
+Color 0.8 0.8 0.8
+Size 10
+SecondarySize 9
+Offset 0 16 0
+}
+
 flickerlight FIREBARREL
 {
     color 1.0 0.9 0.0

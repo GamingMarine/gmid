@@ -185,7 +185,7 @@ Intermission GMIDCast
       AttackSound = "Missile", 13, "RevX/Fire"
 	  AttackSound = "Missile", 15, "RevX/Fire"
       AttackSound = "Melee", 1, "GamingMarineClone/Ready"
-	  AttackSound = "Melee", 2, "weapons/GMROCKTL"
+	  AttackSound = "Melee", 2, "GamingMarineClone/FireCD"
 	}
    Cast
    {
