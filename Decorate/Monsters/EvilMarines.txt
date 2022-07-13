@@ -22,7 +22,6 @@ actor EvilMarine_Rifle //Evil! EEEVILLL
   {
   Spawn:
 	MARR EH 10 A_Look
-//	MR7S BBAABCCBB 5 A_Look
     Loop
   See:
 	MARR AABB 2 A_FastChase
@@ -73,6 +72,7 @@ actor EvilMarine_Rifle //Evil! EEEVILLL
 	MARR E 6
 	Goto See
   Death:
+  Death.RevX:
 	PLA1 G 0 A_GiveToTarget("ScoreItem",250)
 	PLA1 G 0 A_Jump(256, "Death1", "Death2", "Death3")
   Death1:

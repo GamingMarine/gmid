@@ -59,6 +59,7 @@ Actor ZSecArsonist
 	ZSP1 G 0 A_ChangeFlag("NOPAIN",0)
 	Goto See
   Death:
+  Death.RevX:
 	TNT1 A 0 A_GiveToTarget("ScoreItem",400)
 	TNT1 A 0 A_Jump(256, "Death1", "Death2")
   Death1:

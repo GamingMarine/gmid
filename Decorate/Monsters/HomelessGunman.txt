@@ -64,6 +64,7 @@ ACTOR HomelessGunman
 	SWRG Q 0 A_ChangeFlag("NOPAIN",0)
 	Goto See
   Death:
+  Death.RevX:
 	SWRG I 0 A_GiveToTarget("ScoreItem",700)
     SWRG I 4 A_Scream
     SWRG J 4 A_NoBlocking

@@ -371,6 +371,7 @@ ACTOR LargeSoul : SmallSoul
 
 ACTOR BetterBackpack : Backpack replaces Backpack
 {
+  +COUNTITEM
   Height 26
   Tag "$TAG_BACKPACK"
   Inventory.PickupMessage "$GOTBACKPACK2"

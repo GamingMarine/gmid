@@ -48,6 +48,7 @@ Actor ChaingunMajor : ChaingunGuy
 	CPS2 G 0 A_ChangeFlag("NOPAIN",0)
 	Goto See
   Death:
+  Death.RevX:
 	CPS2 G 0 A_GiveToTarget("ScoreItem",400)
 	CPS2 G 0 A_Jump(256, "Death1", "Death2", "Death3")
   Death1:

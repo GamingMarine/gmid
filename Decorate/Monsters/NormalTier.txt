@@ -40,6 +40,7 @@ actor Rourity : MasterForceBase replaces Cacodemon
 	ROTY E 8
 	Goto See
   Death:
+  Death.RevX:
 	ROTY A 0 A_GiveToTarget("ScoreItem",2000)
 	ROTY H 5
 	ROTY I 5 A_Scream
@@ -116,6 +117,7 @@ actor TrixieKir : MasterForceBase replaces HellKnight
 	TRKI E 8
 	Goto See
   Death:
+  Death.RevX:
 	TRKI A 0 A_GiveToTarget("ScoreItem",2500)
 	TRKI H 5
 	TRKI I 5 A_Scream
@@ -244,6 +246,7 @@ actor FlutterMedic : MasterForceBase replaces Archvile
 	FLMD E 30
 	Goto See
   Death:
+  Death.RevX:
 	FLMD A 0 A_GiveToTarget("ScoreItem",3500)
 	FLMD H 5
 	FLMD I 5 A_Scream

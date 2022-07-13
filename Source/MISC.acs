@@ -11,7 +11,7 @@ script "PlayerTauntCooldown" (void)
 {
 	while (CheckInventory("PlayerTauntCooldown") > 0)
 	{
-		Delay(GetCVar("tauntcooldown"));
+		Delay(GetCVar("gmid_tauntcooldown"));
 		TakeInventory("PlayerTauntCooldown",1);
 	}
 }

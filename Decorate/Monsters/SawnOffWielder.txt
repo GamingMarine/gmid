@@ -63,6 +63,7 @@ actor SawedOffShotgunGuy
 	ZSDO G 0 A_ChangeFlag("NOPAIN",0)
 	Goto See
   Death:
+  Death.RevX:
 	ZSDO H 0 A_GiveToTarget("ScoreItem",300)
     ZSDO H 5 A_Scream
 	ZSDO H 0 A_NoBlocking
