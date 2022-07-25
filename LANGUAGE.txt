@@ -122,6 +122,7 @@ GOTCRYSTAL = "You got the Cookie-Crystal! \c[brick]Cookiedemon\c- is ready... \c
 GOTSHAKE = "Drank a Super-Cool(tm) Energy Shake! Refreshing! \cf(\cj+50 health\cf)";
 GOTSENTRY = "Picked up a portable sentry! \cf(\cjThis item must be activated to use it\cf)";
 GOTSKULL = "Picked up a \cgSkull Bomb\c-!!! Devastation is your only option... \cf(\cjThis item must be activated to use it\cf)";
+GOTBELT = "Picked up a Zero-Gravity Belt! \cf(\cjThis item must be activated to use it\cf)";
 
 BIOFADE = "Air supply in bio-suit is expiring...";
 GOGGLESFADE = "Night vision goggles' batteries are draining...";
@@ -129,6 +130,7 @@ INVULFADE = "\c[DarkGreen]Invulnerability\c- is almost burned out...";
 DOUBLEFADE = "\cgDouble Damage\c- is wearing off...";
 QUADFADE = "\c[LightBlue]Quad Damage\c- is wearing off...";
 HASTEFADE = "\ciHasteSphere\c- is running out...";
+BELTFADE = "Z-Grav belt is deteriorating...";
 
 TAG_COLA1 = "Caco-Cola";
 TAG_COLA2 = "Caco-Cola Zero";
@@ -179,6 +181,7 @@ TAG_UPGRADE2 = "Plasma Pulse Energiser";
 TAG_SHAKE = "Super-Cool(tm) Energy Shake";
 TAG_SENTRY = "Portable Sentry";
 TAG_SKULL = "Skull Bomb";
+TAG_BELT = "Z-Grav Belt";
 
 TAG_GRINDER = "Angle Grinder";
 TAG_FISTS = "Bare Hands";
@@ -341,8 +344,8 @@ GOTBLUESKUL2 = "You've found the \chblue\c- skull key!";
 GOTYELWSKUL2 = "You've found the \ckyellow\c- skull key!";
 GOTREDSKUL2 = "You've found the \cgred\c- skull key!";
 GOTYELWPRISM = "You've found the \ckyellow\c- prism key!";
-GOTGREENPRISM = "You've found the \ckgreen\c- prism key!";
-GOTBLUEPRISM = "You've found the \ckblue\c- prism key!";
+GOTGREENPRISM = "You've found the \cdgreen\c- prism key!";
+GOTBLUEPRISM = "You've found the \chblue\c- prism key!";
 
 // Obituary strings
 // First the self-kills, then the other-kills
@@ -387,8 +390,8 @@ MENULOAD = "Restore Progress";
 MENULOADNETGAME = "You will need to quit this netgame in order to load any progress.";
 MENUSAVE = "Save Progress";
 MENUQUIT = "Surrender";
-MODVERSION1 = "v1.2.0 EXPERIMEMTAL BUILD 82";
-MODVERSION2 = "Compiled Wednesday, July 13th, 2022";
+MODVERSION1 = "v2.0.0 EXPERIMEMTAL BUILD 83";
+MODVERSION2 = "Compiled Monday, July 25th, 2022";
 MENUEPSD = "Choose Your Destiny";
 MENUSKIL = "How tough are you?";
 DIFFNAME1 = "Can I play, Daddy?";
@@ -809,6 +812,27 @@ NERVETEXT =
 	"teach it a lesson for pulling off this stunt.\n"
 	"\n"
 	"Sorry, sir, the park is closed.\n";
+//Heretic
+HE1TEXT =
+	"With the Iron Liches down for good, the entrance to\n"
+	"Hell's Maw has been stripped wide open, and you grow\n"
+	"all the more confused. This doesn't seem like the kind\n"
+	"of place someone like Cookie would inhabit, and these\n"
+	"creatures are far more surreal than anyone the Master\n"
+	"Force could concieve.\n"
+	"\n"
+	"The path up ahead is certainly heated, but nothing\n"
+	"you're unfamiliar with by now. The beasts, however,\n"
+	"are far beyond anything you could possibly imagine,\n"
+	"and their fierce nature will show that with flying\n"
+	"colors.\n"
+	"\n"
+	"Clearly, you don't belong in this realm, and this\n"
+	"D'Sparil guy, whatever he might be, is willing to\n"
+	"make that blatantly clear.\n"
+	"\n"
+	"But hey, nobody ever said being a space marine was\n"
+	"easy!";
 	
 // Flats
 // This is a list of flats that have footstep sounds associated with them.
@@ -851,7 +875,13 @@ STEP_FLATS = "FWATER1:FWATER2:FWATER3:FWATER4:"
 			"SLIME03:SLIME04:SLIME05:SLIME06:"
 			"SLIME07:SLIME08:SFLR6_1:SFLR6_4:"
 			"SFLR7_1:SFLR7_4:LAVA1:LAVA2:"
-			"LAVA3:LAVA4:F_SKY1:GRASS:ROCKS";
+			"LAVA3:LAVA4:F_SKY1:GRASS:ROCKS:"
+			"FLOOR00:FLOOR01:FLOOR03:FLOOR04:"
+			"FLOOR05:FLOOR06:FLOOR08:FLOOR10:"
+			"FLOOR11:FLOOR12:FLOOR17:FLOOR18:"
+			"FLOOR19:FLTWAWA1:FLTWAWA2:FLTWAWA3:"
+			"FLTSLUD1:FLTSLUD2:FLTSLUD3:FLTFLWW1:"
+			"FLTFLWW2:FLTFLWW3";
 
 // Sounds
 STEP_DEFAULT = "step/default";
@@ -1039,3 +1069,27 @@ STEP_F_SKY1 = "";
 // Console Port Flats
 STEP_GRASS = "step/dirt";
 STEP_ROCKS = "step/rock";
+
+// Heretic Flats
+STEP_FLOOR00 = "step/rock";
+STEP_FLOOR01 = "step/rock";
+STEP_FLOOR03 = "step/rock";
+STEP_FLOOR04 = "step/rock";
+STEP_FLOOR05 = "step/rock";
+STEP_FLOOR06 = "step/tile/b";
+STEP_FLOOR08 = "step/metal/a";
+STEP_FLOOR10 = "step/wood";
+STEP_FLOOR11 = "step/rock";
+STEP_FLOOR12 = "step/rock";
+STEP_FLOOR17 = "step/gravel";
+STEP_FLOOR18 = "step/tile/b";
+STEP_FLOOR19 = "step/tile/b";
+STEP_FLTWAWA1 = "step/water";
+STEP_FLTWAWA2 = "step/water";
+STEP_FLTWAWA3 = "step/water";
+STEP_FLTSLUD1 = "step/slime";
+STEP_FLTSLUD2 = "step/slime";
+STEP_FLTSLUD3 = "step/slime";
+STEP_FLTFLWW1 = "step/water";
+STEP_FLTFLWW2 = "step/water";
+STEP_FLTFLWW3 = "step/water";

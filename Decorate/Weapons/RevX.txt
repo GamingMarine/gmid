@@ -360,7 +360,7 @@ ACTOR RevXProjectile : DoomImpBall
 	SeeSound "RevX/Fire"
 	DeathSound ""
 	Decal "BulletChip"
-	DamageType "Basic"
+	DamageType "RevX"
 	Obituary "$OB_REVX"
 	States
 	{

@@ -1,0 +1,10 @@
+//This had to be split from the rest of ANIMDEFS because I hope whoever decided that Heretic should use a wall texture named LAVA1 forever lays on the warm side of their pillow first.
+flat LAVA1
+	pic FLAVA1 tics 8
+	pic FLAVA2 tics 8
+	pic FLAVA3 tics 8
+	pic FLAVA4 tics 8
+	pic FLAVA5 tics 8
+	pic FLAVA6 tics 8
+	pic FLAVA7 tics 8
+	pic FLAVA8 tics 8

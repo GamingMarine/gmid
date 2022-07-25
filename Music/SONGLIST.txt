@@ -2,25 +2,25 @@ List of songs used:
 
 1. FLCASTLE
 Song name: Flight Castle
-Game of origin: Unreal
+Game of origin: Unreal (Epic MegaGames/Digital Extremes, 1998)
 Composer: Alexander Brandon
 
 2. MSSNCLER
 Song name: Bonus Groove
-Game of origin: Terminator 2 (Arcade)
+Game of origin: Terminator 2 (Arcade) (Midway Games, 1991)
 Composer: Chris Granner
 
 3. MFLORD1/MFLORD2
 Song name: The Battle with the Natives
-Game of origin: Revolution X
+Game of origin: Revolution X (Midway Games, 1994)
 Composer: Chris Granner, Vince Pontarelli
 
 4. DETHMINE
 Song name: Death in the Mines
-Game of origin: Waxworks (DOS, Roland MT-32)
+Game of origin: Waxworks (DOS, Roland MT-32) (Horror Soft, 1992)
 Composer: Jezz Woodroffe
 
 5. D_DOME
 Song name: Pleasure Dome
-Game of origin: Total Carnage (SNES)
-Composers: Jon Hey, Byte Size Sound
+Game of origin: Total Carnage (Midway Games, 1992)
+Composers: Jon Hey

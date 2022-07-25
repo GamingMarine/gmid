@@ -268,16 +268,6 @@ flat SLIME08
 	warp2 flat SLIME08B
 	
 //Lava
-flat LAVA1
-	pic FLAVA1 tics 8
-	pic FLAVA2 tics 8
-	pic FLAVA3 tics 8
-	pic FLAVA4 tics 8
-	pic FLAVA5 tics 8
-	pic FLAVA6 tics 8
-	pic FLAVA7 tics 8
-	pic FLAVA8 tics 8
-	
 flat LAVA2
 	pic FLAVA3 tics 8
 	pic FLAVA4 tics 8
@@ -469,6 +459,14 @@ flat SLIME12
     pic MAGMA1 rand 4 4
 	pic MAGMA2 rand 4 4
 	pic MAGMA3 rand 4 4
+	
+//Heretic
+warp2 flat FLTWAWA1
+warp2 flat FLTWAWA2
+warp2 flat FLTWAWA3
+warp flat FLTSLUD1
+warp flat FLTSLUD2
+warp flat FLTSLUD3
 	
 //Switch sounds
 switch doom 1 SW1BRCOM on sound switches/sw1s pic SW2BRCOM tics 0

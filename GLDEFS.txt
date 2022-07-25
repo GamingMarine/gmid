@@ -637,6 +637,31 @@ Object NewExplosion4
   Frame WXPLK { Light ExplosionFade3 }
 }
 
+Object NewHereticImp
+{
+  frame IBRNA { light BurningEnemy }
+  frame IBRNB { light BurningEnemy }
+  frame IBRNC { light BurningEnemy }
+  frame IBRND { light BurningEnemy }
+  frame IBRNE { light BurningEnemy }
+  frame IBRNF { light BurningOut1 }
+  frame IBRNG { light BurningOut2 }
+  frame IBRNH { light BurningOut3 }
+}
+
+Object NewHereticImpLeader
+{
+  frame IBRNA { light BurningEnemy }
+  frame IBRNB { light BurningEnemy }
+  frame IBRNC { light BurningEnemy }
+  frame IBRND { light BurningEnemy }
+  frame IBRNE { light BurningEnemy }
+  frame IBRNF { light BurningOut1 }
+  frame IBRNG { light BurningOut2 }
+  frame IBRNH { light BurningOut3 }
+}
+
+
 //===============
 // Glowing Flats
 //===============
@@ -726,5 +751,33 @@ Glow
    aqf064
    aqf065
    aqf066
+//Heretic
+   flat517
+   flathuh1
+   flathuh2
+   flathuh3
+   flathuh4
+   floor21
+   floor22
+   floor23
+   floor24
+   floor26
+   fltflww1
+   fltflww2
+   fltflww3
+   fltlava1
+   fltlava2
+   fltlava3
+   fltlava4
+   fltslud1
+   fltslud2
+   fltslud3
+   flttele1
+   flttele2
+   flttele3
+   flttele4
+   fltwawa1
+   fltwawa2
+   fltwawa3
   }
 }

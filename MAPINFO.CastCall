@@ -242,7 +242,7 @@ Intermission GMIDCast
 	{
 	  CastClass = "GamingMarineCastCall"
 	  CastName = "$CC_GM"
-	  AttackSound = "Missile", 1, "weapons/GMPISTL1"
+	  AttackSound = "Missile", 1, "weapons/GMPISTOL"
 	}
 	Cast
 	{

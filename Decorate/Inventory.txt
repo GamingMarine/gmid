@@ -402,3 +402,27 @@ Actor SkullBombExplosion
 	Stop
   }
 }
+
+Actor PowerFlight2 : PowerFlight
+{
+  Inventory.Icon "BELTC0"
+}
+
+Actor ZGravBelt : PowerupGiver replaces ArtiFly
+{
+  Inventory.MaxAmount 3
+  Inventory.InterHubAmount 0 //The original code's INTERHUBSTRIP flag is deprecated, sooo...
+  Inventory.Icon "BELTB0"
+  Inventory.PickupSound "belt/pick"
+  Inventory.UseSound "belt/use"
+  Inventory.PickupMessage "$GOTBELT"
+  Tag "$TAG_BELT"
+  Powerup.Type "Flight2"
+  Powerup.Color "Blue", 0.25
+  States
+  {
+  Spawn:
+	BELT A -1 Bright
+	Stop
+  }
+}

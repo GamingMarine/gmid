@@ -4851,6 +4851,41 @@ Brightmap Sprite XFFSU0
 Map "Brightmaps/GMID/XFFSU0.png"
 }
 
+Brightmap Sprite IBRNA0
+{
+Map "Brightmaps/GMID/IBRNA0.png"
+}
+
+Brightmap Sprite IBRNB0
+{
+Map "Brightmaps/GMID/IBRNB0.png"
+}
+
+Brightmap Sprite IBRNC0
+{
+Map "Brightmaps/GMID/IBRNC0.png"
+}
+
+Brightmap Sprite IBRND0
+{
+Map "Brightmaps/GMID/IBRND0.png"
+}
+
+Brightmap Sprite IBRNE0
+{
+Map "Brightmaps/GMID/IBRNE0.png"
+}
+
+Brightmap Sprite IBRNG0
+{
+Map "Brightmaps/GMID/IBRNG0.png"
+}
+
+Brightmap Sprite IBRNH0
+{
+Map "Brightmaps/GMID/IBRNH0.png"
+}
+
 //Textures
 Brightmap Flat MAGMA1
 {

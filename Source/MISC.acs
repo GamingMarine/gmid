@@ -72,6 +72,11 @@ script "PowerupFading" ENTER
 			Log(l:"HASTEFADE");
 			PlaySound(0,"Haste/Fade",0);
 		}
+		If(GetActorPowerupTics(0,"PowerFlight2")==105)
+		{
+			Log(l:"BELTFADE");
+			PlaySound(0,"Belt/Fade",0);
+		}
 		Delay(1);
 	}
 }

@@ -248,6 +248,9 @@ INVULGET INVULGET
 Invulnerability/Fade INVULEND
 HASTEUP  HASTEUP
 Haste/Fade HASTEEND
+belt/pick BELTPICK
+belt/use  BELTUSE
+belt/fade BELTFADE
 announcer/soulsphere   AN_SOUL
 announcer/megasphere   AN_MEGA
 announcer/haste		   AN_HASTE
@@ -2065,3 +2068,7 @@ world/lavasizzle acid5
 world/sludgegloop muck5
 
 thank/you THANKS
+
+//Heretic sounds
+$pitchshiftrange 2
+himp/burn			IMPBURN
