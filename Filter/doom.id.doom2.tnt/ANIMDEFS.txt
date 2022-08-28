@@ -1,0 +1,36 @@
+//This is here to bypass an issue in this mod that has arisen due to the way TNT makes use of th WFALL patches.
+
+//An explanation as to why this was necessary:
+//The original Doom II executable had unused code to animate any patches between the names of WFALL1 and WFALL4. Waterfall
+//textures were created during the game's development (later used in this mod), but were never used nor included in the final
+//game. The Plutonia Experiment, as well as some later Doom PWADs, implement patches which use the code. TNT, however, takes
+//advantage of this by using 512x128 patches containing multiple textures (Namely an activated skull switch, a switch and a
+//lever with what appears to be a forcefield, hacked/malfunctioning computer panels, and a proper waterfall, in that order).
+//Previously, GamingMarine in Doom would override TNT's WFALL patches and always display a waterfall, regardless of what was
+//actually used in the original game. With this filtered lump, the mod will now respect the original patches if GZDoom detects
+//that the user is playing TNT.
+//(Speaking of which, due to the way this filter had to be done, this fix will only work in newer versions of GZDoom. Sorry,
+//Zandronum users. :\)
+texture WFALL1
+pic WFALL1		tics 8
+pic SW2SKULL	tics 8
+pic FALL3		tics 8
+pic WFALL4		tics 8
+
+texture WFALL2
+pic WFALL1		tics 8
+pic SW2SKULL	tics 8
+pic FALL3		tics 8
+pic WFALL4		tics 8
+
+texture WFALL3
+pic WFALL1		tics 8
+pic SW2SKULL	tics 8
+pic FALL3		tics 8
+pic WFALL4		tics 8
+
+texture WFALL4
+pic WFALL1		tics 8
+pic SW2SKULL	tics 8
+pic FALL3		tics 8
+pic WFALL4		tics 8

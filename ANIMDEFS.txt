@@ -348,28 +348,28 @@ flat GATE4
 	pic _TPGREY8 tics 4
 	
 texture WFALL1
-pic WFALL1	tics 2
-pic WFALL2	tics 2
-pic WFALL3	tics 2
-pic WFALL4	tics 2
+pic WATRFAL1	tics 2
+pic WATRFAL2	tics 2
+pic WATRFAL3	tics 2
+pic WATRFAL4	tics 2
 
 texture WFALL2
-pic WFALL1	tics 2
-pic WFALL2	tics 2
-pic WFALL3	tics 2
-pic WFALL4	tics 2
+pic WATRFAL1	tics 2
+pic WATRFAL2	tics 2
+pic WATRFAL3	tics 2
+pic WATRFAL4	tics 2
 
 texture WFALL3
-pic WFALL1	tics 2
-pic WFALL2	tics 2
-pic WFALL3	tics 2
-pic WFALL4	tics 2
+pic WATRFAL1	tics 2
+pic WATRFAL2	tics 2
+pic WATRFAL3	tics 2
+pic WATRFAL4	tics 2
 
 texture WFALL4
-pic WFALL1	tics 2
-pic WFALL2	tics 2
-pic WFALL3	tics 2
-pic WFALL4	tics 2
+pic WATRFAL1	tics 2
+pic WATRFAL2	tics 2
+pic WATRFAL3	tics 2
+pic WATRFAL4	tics 2
 
 
 

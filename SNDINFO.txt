@@ -638,9 +638,12 @@ misc/ricochet7	RICOCHE7
 misc/ricochet8	RICOCHE8
 misc/ricochet9	RICOCHE9
 
-Blood/Splat 	BLUDDROP
+$random Blood/Splat { Blood/Splat1 Blood/Splat2 }
+Blood/Splat1 	BLUDDRP1
+Blood/Splat2	BLUDDRP2
 $volume Blood/Splat 0.25
-$limit Blood/Splat 0
+$limit Blood/Splat1 0
+$limit Blood/Splat2 0
 
 Rat/Squeek	DSRAT
 $volume radio/chat 0.5
