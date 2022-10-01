@@ -549,7 +549,7 @@ ACTOR NewExplosion
 	+BRIGHT
 	Alpha 0.99
 	Scale 1.5
-	DamageType GMIDExplosion
+	DamageType "GMIDExplosion"
 	States
 	{
 	Spawn:

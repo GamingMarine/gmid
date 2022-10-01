@@ -13,7 +13,7 @@ Composer: Chris Granner
 3. MFLORD1/MFLORD2
 Song name: The Battle with the Natives
 Game of origin: Revolution X (Midway Games, 1994)
-Composer: Chris Granner, Vince Pontarelli
+Composers: Chris Granner, Vince Pontarelli
 
 4. DETHMINE
 Song name: Death in the Mines

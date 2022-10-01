@@ -138,6 +138,7 @@ Actor 40mmShot
   ReactionTime 139
   Seesound "40mm/grenbounce"
   Obituary "$OB_PINEAPPLE"
+  DamageType "GMIDExplosion"
   States
   {
   Spawn:

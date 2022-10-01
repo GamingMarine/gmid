@@ -126,7 +126,8 @@ Actor GMIDRocket : Rocket replaces Rocket
 	SeeSound "null"
 	DeathSound "null"
 	Obituary "$OB_LAUNCHER"
-	Decal Scorch
+	Decal "Scorch"
+	DamageType "GMIDExplosion"
 	States
 	{
 	Spawn:

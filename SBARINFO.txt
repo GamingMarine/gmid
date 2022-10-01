@@ -145,7 +145,7 @@ drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, 0;
 	}
 	IsSelected SpaceCadet
 	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 225, green, 451;
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 12, green, 26;
 	}
 	
 // Score System Things
@@ -239,7 +239,7 @@ drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, 0;
 	}
 	IsSelected SpaceCadet
 	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 225, green, 451;
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 12, green, 26;
 	}
 
 // Score System Things

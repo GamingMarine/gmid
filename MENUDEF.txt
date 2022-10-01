@@ -17,8 +17,8 @@ ListMenu "MainMenu"
 	TextItem "$MENUSAVE", "s",	"SaveGameMenu"
 	TextItem "$MENUQUIT", "q",	"QuitMenu"
 	Font "SmallFnt", Gold
-	StaticText 0, 178, "$MODVERSION1"
-	StaticText 0, 189, "$MODVERSION2"
+	StaticText 0, 180, "$MODVERSION1"
+	StaticText 0, 191, "$MODVERSION2"
 }
 
 ListMenu "PlayerclassMenu"
