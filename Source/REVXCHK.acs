@@ -1,7 +1,7 @@
-#include "zcommon.acs"
 #library "REVXCHK"
+#include "zcommon.acs"
 // by 0x8BADF00D#8030
-script 154 (void)
+script "RevXSpawnChecker" (void)
 {
     SetActivator(0, AAPTR_PLAYER1);
 	SetResultValue(CheckInventory("RevX"));

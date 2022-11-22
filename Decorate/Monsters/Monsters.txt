@@ -4,7 +4,7 @@ ACTOR NONBoy replaces WolfensteinSS
   Health 50
   Radius 20
   Height 56
-  Speed 4
+  Speed 8
   PainChance 0
   Scale 0.8
   Monster
@@ -24,7 +24,7 @@ ACTOR NONBoy replaces WolfensteinSS
     NONB H 1 A_Look
     Loop
   See:
-    NONB AABBCCDDEEFFGG 1 A_Chase
+    NONB ABCDEFG 2 A_Chase
     Loop
   Missile:
     NONB H 2 A_FaceTarget
@@ -306,13 +306,14 @@ actor BFireTrail : BulletPuff
   +RANDOMIZE
   +NOGRAVITY
   +WINDTHRUST
-  +ClientSideOnly
+  //+ClientSideOnly
   +CannotPush
+  DamageType "Fire"
   states
   {
   Spawn:   
   TNT1 A 0
- //   TNT1 A 0 A_Jump(220,4,5,6,7)
+  TNT1 A 0 A_Explode(6,30)
     SFIR ABCDEFGH 4 bright A_Recoil(random(-1,1))
     stop
   }

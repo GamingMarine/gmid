@@ -6,7 +6,7 @@ actor SawedOffShotgunGuy
   radius 20
   height 56
   mass 100
-  speed 4
+  speed 8
   painchance 200
   PainChance "Foot", 256
   seesound "sawedoff/sit"
@@ -25,9 +25,9 @@ actor SawedOffShotgunGuy
     ZSDO A 10 A_Look
     loop
   See:
-    ZSDO AAAABBBB 1 A_Chase
+    ZSDO AABB 2 A_Chase
 	ZSDO C 0 A_PlaySound("Cyber/Hoof", CHAN_BODY)	
-	ZSDO CCCCDDDD 1 A_Chase
+	ZSDO CCDD 2 A_Chase
 	ZSDO A 0 A_PlaySound("Cyber/Hoof", CHAN_BODY)	
     loop
   Missile:

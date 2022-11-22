@@ -111,6 +111,16 @@ weapons/DSSAWFUL DSSAWFUL
 weapons/DSSAWHIT DSSAWHIT
 pistol/cock PISTCOCK
 weapons/GMPISTOL GMPISTOL
+$random pistol/low { pistol/low1 pistol/low2 pistol/low3 pistol/low4 pistol/low5 }
+pistol/low1		 PISTLOW1
+pistol/low2		 PISTLOW2
+pistol/low3		 PISTLOW3
+pistol/low4		 PISTLOW4
+pistol/low5		 PISTLOW5
+pistol/reload1	 PISTREL1
+pistol/reload2	 PISTREL2
+pistol/reload3	 PISTREL3
+pistol/reloadalt PISTRELG
 $random weapons/GMSHOTGN { shotgun/fire1 shotgun/fire2 shotgun/fire3 shotgun/fire4 }
 shotgun/fire1	 SGFIR1
 shotgun/fire2	 SGFIR2
@@ -1855,15 +1865,29 @@ brain/pain6						BOSSHRT6
 brain/pain7						BOSSHRT7
 brain/death						BOSSDTH
 
-$random Zombie/Burn { Zombie/Burn1 Zombie/Burn2 Zombie/Burn3 }
-Zombie/Burn1					BURNZOM1
-Zombie/Burn2					BURNZOM2
-Zombie/Burn3					BURNZOM3
-$random Female/Burn { Female/Burn1 Female/Burn2 Female/Burn3 Female/Burn4 }
+$random Zombie/Burn { Zombie/Burn1 Zombie/Burn2 Zombie/Burn3 Zombie/Burn4 Zombie/Burn5 Zombie/Burn6 Zombie/Burn7 Zombie/Burn8 Zombie/Burn9 Zombie/Burn10 Zombie/Burn11 Zombie/Burn12 Zombie/Burn13 Zombie/Burn14 }
+Zombie/Burn1					BRNZOM01
+Zombie/Burn2					BRNZOM02
+Zombie/Burn3					BRNZOM03
+Zombie/Burn4					BRNZOM04
+Zombie/Burn5					BRNZOM05
+Zombie/Burn6					BRNZOM06
+Zombie/Burn7					BRNZOM07
+Zombie/Burn8					BRNZOM08
+Zombie/Burn9					BRNZOM09
+Zombie/Burn10					BRNZOM10
+Zombie/Burn11					BRNZOM11
+Zombie/Burn12					BRNZOM12
+Zombie/Burn13					BRNZOM13
+Zombie/Burn14					BRNZOM14
+$random Female/Burn { Female/Burn1 Female/Burn2 Female/Burn3 Female/Burn4 Female/Burn5 Female/Burn6 Female/Burn7 }
 Female/Burn1					FEMFIRE1
 Female/Burn2					FEMFIRE2
 Female/Burn3					FEMFIRE3
 Female/Burn4					FEMFIRE4
+Female/Burn5					FEMFIRE5
+Female/Burn6					FEMFIRE6
+Female/Burn7					FEMFIRE7
 
 body/hitfloor1					BODLAND1
 body/hitfloor2					BODLAND2

@@ -390,8 +390,8 @@ MENULOAD = "Restore Progress";
 MENULOADNETGAME = "You will need to quit this netgame in order to load any progress.";
 MENUSAVE = "Save Progress";
 MENUQUIT = "Surrender";
-MODVERSION1 = "v2.0.0 EXPERIMEMTAL BUILD 85";
-MODVERSION2 = "Compiled Saturday, October 1st, 2022";
+MODVERSION1 = "v2.0.0 EXPERIMEMTAL BUILD 86";
+MODVERSION2 = "Compiled Monday, November 21st, 2022";
 MENUEPSD = "Choose Your Destiny";
 MENUSKIL = "How tough are you?";
 DIFFNAME1 = "Can I play, Daddy?";
@@ -401,22 +401,13 @@ DIFFNAME4 = "Bring 'em on!";
 DIFFNAME5 = "Call me the Revolutionist.";
 DIFFNAME6 = "I am DEATH Incarnate!";
 DIFFNAME7 = "Lost Cause";
-DIFFSELECT1 = "The Master Force seems to have worryingly underestimated the Marine Corps, considering the amount of firepower they're sending your way.\n\n"
-			  "Not only will the amount of enemies you'll encounter be minimal, but you'll take half the amount of damage, and all the ammunition you'll find will be doubled.";
-DIFFSELECT2 = "Your friends luckily managed to take out most of the foes lurking around the area. That doesn't mean they survived...\n\n"
-			  "The amount of enemies you will face on the battlefield will be fairly small, but will be able to take you down if you're not careful.";
-DIFFSELECT3 = "Your training has suited you rather well for this mission.\n\n"
-			  "Enemy forces will come in packs, willing to take a human down without question. If you know what you're doing, then your chances of survival are fairly high.";
-DIFFSELECT4 = "The Master Force knows what they're facing. In return, they're outnumbering you and the rest of the Marine Corps. Look at what's happened because of that...\n\n"
-			  "There will be foes lurking around practically every single corner. You best hope you have what it takes or you're dead meat.";
-DIFFSELECT5 = "Despite how well you've payed attention during your training and the mission breifing, you still feel fragile.\n\n"
-			  "Not only will you find members of the Master Force every five seconds, but you will also take twice the amount of all damage...\n...including friendly fire from \c[brick]Cookiedemon\c-!";
-DIFFSELECT6 = "They know where you're hiding. If you try to run, they'll follow you.\n"
-			  "There is no escape.\n\n"
-			  "You will be surrounded the whole mission, and you will be taking twice the beating. To make matters worse, your foes will be much more aggressive towards you, and take half as much damage. Thank God \c[brick]Cookiedemon\c- is also applied to this...";
-DIFFSELECT7 = "You have absolutely no idea what you're dealing with. You will know what it means to be...\n"
-			  "...a \cmLost Cause\c-.\n\n"
-			  "All your foes have \c[LightBlue]Quad Damage\c- applied to their attacks, take four times the beating, show you no mercy, will not infight, and will never, *ever* flinch. Any hope of salvation is gone for extra measures. In other words, you die a lot and then uninstall the mod. This difficulty isn't even remotely fair and in no way are you expected to beat it.";
+DIFFSELECT1 = "Very easy difficulty. Easy spawns with double ammo and half incoming damage. OK?";
+DIFFSELECT2 = "Default easy difficulty. Easy spawns. OK?";
+DIFFSELECT3 = "Default medium difficulty. Normal spawns. OK?";
+DIFFSELECT4 = "Default hard difficulty. Hard spawns. OK?";
+DIFFSELECT5 = "Very hard difficulty. Hard spawns with double incoming damage. OK?";
+DIFFSELECT6 = "Extra hard difficulty. Hard spawns with double incoming damage, double enemy health, and double enemy aggressiveness. OK?";
+DIFFSELECT7 = "NIGHTMARE difficulty. You die a lot and uninstall the mod. Not even remotely fair. OK?";
 
 TOTDSTART = "Tip of the Day:";
 TOTD1 = "\cf#1:\c- The Rev-X's battery recharges itself when not in use and cannot be depleted. However, the lower the battery charge, the slower and weaker the weapon's attacks get.";
@@ -441,6 +432,15 @@ GAMEOVERA3 = "You blew it!"; //Revolution X
 GAMEOVERA4 = "He's dead, Jim!"; //Star Trek
 GAMEOVERA5 = "Welcome to Die!"; //X-Men (Arcade)
 GAMEOVERA6 = "Game over... or is it?"; //Lameduke
+GAMEOVER1 = "Game Over";
+GAMEOVER2 = "You Died";
+GAMEOVER3 = "You Are Dead";
+GAMEOVER4 = "You Blew It";
+GAMEOVER5 = "Ded";
+GAMEOVER6 = "Not Big Surprise";
+GAMEOVER7 = "Welcome to Die";
+GAMEOVER8 = "Skill Issue";
+GAMEOVER9 = "Git Gud";
 GAMEOVERB1 = "Strike [USE] to load your last save or restart the level."; //For single-player
 GAMEOVERB2 = "Strike [USE] to respawn."; //For multiplayer
 
@@ -523,7 +523,7 @@ BOSSMUSIC3 = "or music randomizers. May require a map restart.";
 BOSSMUSIC4 = "\cf(NOTE: When playing with the 1-Up Music Pack, this feature is";
 BOSSMUSIC5 = "\cfdisabled automatically.)";
 
-//Story screen text
+//Story screen text (Sorted by canonical occurence)
 //Doom
 E1TEXT =
 	"As expected, it wouldn't be that easy to claim\n"
@@ -533,7 +533,7 @@ E1TEXT =
 	"corner in the dark. That's all you witness before blacking\n"
 	"out.\n"
 	"\n"
-	"When you regain conciousness, you notice that you've\n"
+	"When you regain consciousness, you notice that you've\n"
 	"been taken to the lost Deimos Base that was reported\n"
 	"missing when this mess started, not to mention that\n"
 	"you've been stripped clean of almost all your equipment.\n"
@@ -594,139 +594,100 @@ E4TEXT =
 	"Time to raise Hell on Earth.";
 //Doom II: Hell on Earth
 C1TEXT =
-	"You've made your way to some sort of\n"
-	"starport. It seems that those four-\n"
-	"legged bastards are using this place's\n"
-	"powers to take the entire human race\n"
-	"hostage.\n"
+	"To your disbelief, the Master Force's assault on\n"
+	"humanity is already well underway: The remaining\n"
+	"population is currently being held hostage by the\n"
+	"powers of the twisted starport you have found\n"
+	"yourself in.\n"
 	"\n"
-	"A switch that controls this lies up ahead.\n"
-	"Reach it, and you'll be able to get everyone\n"
-	"out of the Earth's atmosphere.\n"
-	"If you fail, billions will meet their fate\n"
-	"against the last thing they'd expect to be\n"
-	"killed by.\n"
+	"The master switch for this capsule is located up\n"
+	"ahead. When the switch is deactivated, the\n"
+	"hostages will escape this nightmare by fleeing the\n"
+	"Earth's atmosphere. If you fail, billions will meet\n"
+	"their fate against the last thing they'd expect to\n"
+	"be killed by.\n"
 	"\n"
 	"Good luck.";
 C2TEXT =
-	"Great work! You've managed to survive the\n"
-	"heavily guarded area and pull the switch.\n"
-	"However, you could not make it to the rocket\n"
-	"that is sending everyone out of here.\n"
-	"You're now the only living human left on Earth,\n"
-	"with more of those freaks surrounding you.\n"
-	"You've decided that your work here is done,\n"
-	"and proceed to stuff your shotgun in your mouth.\n"
+	"You sigh in relief as you pull the capsule's switch,\n"
+	"hearing the rocket containing the hostages roar in\n"
+	"the distance. However, that just leaves you, Cookie,\n"
+	"and the Master Force left on Earth. In an act of\n"
+	"hesitation, you stick your Beretta in your mouth.\n"
+	"There isn't all the ammo in the world to completely\n"
+	"rid this place of those four-legged bastards.\n"
 	"\n"
 	"Suddenly, a message beams down from space:\n"
-	"\"Sensors have located the source of the\n"
-	"alien invasion. If you go there, you may be\n"
-	"able to block their entry. The alien base is\n"
-	"in the heart of your own home city, not far\n"
-	"from the starport.\"\n"
-	"Looks like suicide isn't your next step here.\n"
-	"Get going and kick some more ass!";
+	"\"Sensors have located the source of the alien\n"
+	"invasion. If you go there, you may be able to block\n"
+	"their entry. The alien base is in the heart of your\n"
+	"own home city, not far from the starport.\"\n"
+	"\n"
+	"Talk about being close to home! Holstering your\n"
+	"Beretta, you get up and continue on the move. There's\n"
+	"still work to be done.";
 C3TEXT =
-	"After going from area to area, killing endless\n"
-	"hordes of ponies, only now has it hit you; They're\n"
-	"not gonna stop coming. They're not gonna give up,\n"
-	"unless...\n"
+	"At this point, you are absolutely covered in blood and\n"
+	"guts, most of it not even yours. Three straight days\n"
+	"of constant fighting has exhausted you, and you're on\n"
+	"the verge of collapsing. But just as you're about to\n"
+	"give up, you find what you've been looking for since\n"
+	"you got here:\n"
 	"\n"
-	"...we kill the mother.\n"
-	"\n"
-	"The portal you went through has taken you to the\n"
-	"Master Force's dimension. Keep exploring, find the\n"
-	"source, and destroy it!\n";
+	"A portal back to the Master Force's universe! Oh,\n"
+	"you've partied here before. And this time, you're\n"
+	"partying harder. 'Cause you're taking down the\n"
+	"Mother of this invasion for good!";
 C4TEXT =
-	"Congratulations and well done!\n"
-	"The giant being that you've just destroyed\n"
-	"was the mother of this whole invasion.\n"
-	"The monster starts to bellow very loudly,\n"
-	"with its thrashing limbs destroying the\n"
-	"whole place.\n"
+	"Gushes of blood fill the arena as the screech\n"
+	"emitted by the Mother practically deafens your ears,\n"
+	"but you don't care. Because you've just stopped this\n"
+	"invasion cold!\n"
 	"\n"
-	"The invasion is no more. Humanity can\n"
-	"come back to Earth, and restore the heavily\n"
-	"decreased population safely. You will now be\n"
-	"seen as a hero, but you feel that's not enough.\n"
-	"You wish to help everyone rebuild what was once\n"
-	"your favorite places when you were young.\n"
-	"\n"
-	"Those four-legged freaks shouldn't rise again for\n"
-	"some time.";
+	"When you are teleported back home, you send an all-\n"
+	"clear signal to the ISS to return the hostages back\n"
+	"to Earth. Rebuilding will certainly take a long time,\n"
+	"especially now that the UAC is stunned from the\n"
+	"invasion, but the heroic status of you and Cookie and\n"
+	"how you battled impossible odds will be the tale for\n"
+	"the ages.\n";
 C5TEXT =
-	"Your curiousity has led you to an area you're\n"
-	"not very familiar with. Swastikas and paintings\n"
-	"of Adolf Hitler surround the place. However, you\n"
-	"hear some human voices outside the door. Hopefully,\n"
-	"they are friends.\n"
+	"Blue-stoned walls and a giant, rusty, metal-grated\n"
+	"door? What is this? Certainly nothing you're used to.\n"
 	"\n"
-	"Hopefully.";
+	"Strangely, you hear what sound like military voices\n"
+	"outside the door. \"Maybe they are hostages that\n"
+	"didn't reach the rocket,\" you think to yourself. But\n"
+	"why would they be here...?\n"
+	"\n"
+	"You decide to open the door to investiage and see if\n"
+	"they need help....";
 C6TEXT =
-	"As it turns out, a corrupt neo-industrial-governmental-\n"
-	"militaristic oppressive alliance named the New Order\n"
-	"Nation has taken over this area.\n"
+	"Help? Maybe not the kind you were thinking of. Even\n"
+	"though they *really* wanted you dead, they didn't seem\n"
+	"to pledge allegiance to the Master Force. Strange.\n"
 	"\n"
-	"From the looks of it, they're not through with you\n"
-	"yet.";
-//Final Doom: The Plutonia Experiment	
-P1TEXT =
-	"You begin to take a deep breath as the\n"
-	"Accelerator's guardian hits the floor.\n"
-	"But as you look around the room, you feel\n"
-	"that something's missing...\n"
-	"Shit, there was supposed to be TWO\n"
-	"prototypes, but you can't see the other\n"
-	"one. It must've fallen into the wrong hands.\n"
+	"Even stranger is the exit you just took. Guess it won't\n"
+	"be easy to get these guys to leave you alone.";
+//No Rest For The Living
+NERVETEXT =
+	"Looks like trouble was brewing up again\n"
+	"in your home country. Some asshole thought\n"
+	"it would be a good idea to start up an\n"
+	"amusement park, with Earth being the ticket\n"
+	"booth.\n"
 	"\n"
-	"Find the prototype, or your struggling\n"
-	"efforts will have been for nothing. Keep\n"
-	"moving. Keep fighting. Keep killing.\n"
-	"Oh, yeah, and keep living.";
-P2TEXT =
-	"Not even the labyrinth of the damned could\n"
-	"stop you in your tracks. You walk up to\n"
-	"the prototype Accelerator and fire your Rev-X\n"
-	"at it, permanently shutting it down.\n"
+	"Little did it know a teen with a Rev-X\n"
+	"in his hands was making a guest appearance,\n"
+	"and turning up the crank on the shooting\n"
+	"gallery to a 12.\n"
 	"\n"
-	"There's no time for resting, however. Up ahead\n"
-	"lies another stronghold tougher than you can\n"
-	"imagine.\n"
+	"The clone's corpse now lies right in the\n"
+	"middle of the hedge maze, with its infected\n"
+	"guts and blood covering the walls. That should\n"
+	"teach it a lesson for pulling off this stunt.\n"
 	"\n"
-	"Knock, knock.";
-P3TEXT =
-	"After having kicked in the faces of countless\n"
-	"horses, you realize at how close you've gotten\n"
-	"to the Gatekeeper's domain. He may have brought\n"
-	"forth the toughest army you've ever faced, but\n"
-	"there can only exist one other person capable of\n"
-	"worse than him. You know who.\n"
-	"\n"
-	"With the grin of a madman, you check your weapons,\n"
-	"well aware of what you're capable of bringing\n"
-	"those bastards as punishment.";
-P4TEXT =
-	"A few missiles into the exposed brain of the\n"
-	"Gatekeeper erupts a monstrous roar, startling\n"
-	"even the beast's minions.\n"
-	"Every living thing that remains is sucked up\n"
-	"into thin air, along with what's left of the\n"
-	"Prototype Accelerator. It's over. The Master\n"
-	"Force has surrendered again. At least, for now.\n"
-	"\n"
-	"If you ever have children, you may have one hell\n"
-	"of a story to tell them.";
-P5TEXT =
-	"Congratulations! You have just recieved a one-way\n"
-	"ticket to the two hardest areas we have available.\n"
-	"\n"
-	"Welcome to the Cyberden. Only a master marine will\n"
-	"succeed.";
-P6TEXT =
-	"Great work! You've managed to survive one of the\n"
-	"hidden challenges. Yeah, ONE of them.\n"
-	"\n"
-	"This time around, no one gets out alive.";
+	"Sorry, sir, the park is closed.\n";
 //Final Doom: TNT: Evilution	
 T1TEXT =
 	"It seems that the UAC never learns its lesson\n"
@@ -793,25 +754,64 @@ T6TEXT =
 	"\n"
 	"But all of the peacefulness you were prepared\n"
 	"for becomes ruined as you hear a Force Lord's stomping.";
-//No Rest For The Living
-NERVETEXT =
-	"Looks like trouble was brewing up again\n"
-	"in your home country. Some asshole thought\n"
-	"it would be a good idea to start up an\n"
-	"amusement park, with Earth being the ticket\n"
-	"booth.\n"
+//Final Doom: The Plutonia Experiment	
+P1TEXT =
+	"You begin to take a deep breath as the\n"
+	"Accelerator's guardian hits the floor.\n"
+	"But as you look around the room, you feel\n"
+	"that something's missing...\n"
+	"Shit, there was supposed to be TWO\n"
+	"prototypes, but you can't see the other\n"
+	"one. It must've fallen into the wrong hands.\n"
 	"\n"
-	"Little did it know a teen with a Rev-X\n"
-	"in his hands was making a guest appearance,\n"
-	"and turning up the crank on the shooting\n"
-	"gallery to a 12.\n"
+	"Find the prototype, or your struggling\n"
+	"efforts will have been for nothing. Keep\n"
+	"moving. Keep fighting. Keep killing.\n"
+	"Oh, yeah, and keep living.";
+P2TEXT =
+	"Not even the labyrinth of the damned could\n"
+	"stop you in your tracks. You walk up to\n"
+	"the prototype Accelerator and fire your Rev-X\n"
+	"at it, permanently shutting it down.\n"
 	"\n"
-	"The clone's corpse now lies right in the\n"
-	"middle of the hedge maze, with its infected\n"
-	"guts and blood covering the walls. That should\n"
-	"teach it a lesson for pulling off this stunt.\n"
+	"There's no time for resting, however. Up ahead\n"
+	"lies another stronghold tougher than you can\n"
+	"imagine.\n"
 	"\n"
-	"Sorry, sir, the park is closed.\n";
+	"Knock, knock.";
+P3TEXT =
+	"After having kicked in the faces of countless\n"
+	"horses, you realize at how close you've gotten\n"
+	"to the Gatekeeper's domain. He may have brought\n"
+	"forth the toughest army you've ever faced, but\n"
+	"there can only exist one other person capable of\n"
+	"worse than him. You know who.\n"
+	"\n"
+	"With the grin of a madman, you check your weapons,\n"
+	"well aware of what you're capable of bringing\n"
+	"those bastards as punishment.";
+P4TEXT =
+	"A few missiles into the exposed brain of the\n"
+	"Gatekeeper erupts a monstrous roar, startling\n"
+	"even the beast's minions.\n"
+	"Every living thing that remains is sucked up\n"
+	"into thin air, along with what's left of the\n"
+	"Prototype Accelerator. It's over. The Master\n"
+	"Force has surrendered again. At least, for now.\n"
+	"\n"
+	"If you ever have children, you may have one hell\n"
+	"of a story to tell them.";
+P5TEXT =
+	"Congratulations! You have just recieved a one-way\n"
+	"ticket to the two hardest areas we have available.\n"
+	"\n"
+	"Welcome to the Cyberden. Only a master marine will\n"
+	"succeed.";
+P6TEXT =
+	"Great work! You've managed to survive one of the\n"
+	"hidden challenges. Yeah, ONE of them.\n"
+	"\n"
+	"This time around, no one gets out alive.";
 //Heretic
 HE1TEXT =
 	"With the Iron Liches down for good, the entrance to\n"
@@ -833,6 +833,7 @@ HE1TEXT =
 	"\n"
 	"But hey, nobody ever said being a space marine was\n"
 	"easy!";
+//This concludes GamingMarine in Doom's story. See you in Tales of the Lost Kaka Village!
 	
 // Flats
 // This is a list of flats that have footstep sounds associated with them.
