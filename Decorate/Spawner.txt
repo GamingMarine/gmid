@@ -215,11 +215,7 @@ DropItem "DoubleSphere"
 DropItem "QuadDamage"
 }
 
-Actor BerserkSpawner_Heretic : RandomSpawner replaces ArtiTomeOfPower
-{
-DropItem "DoubleSphere"
-DropItem "QuadDamage"
-}
+//Heretic version of BerserkSpawner has been moved to filter folder
 
 Actor DeadPlayerSpawner : RandomSpawner replaces DeadMarine
 {
@@ -248,12 +244,7 @@ DropItem "Grapes"
 DropItem "Orange"
 }
 
-Actor MinorFoodSpawner_Heretic : RandomSpawner replaces CrystalVial
-{
-DropItem "Apple"
-DropItem "Grapes"
-DropItem "Orange"
-}
+//Heretic version of MinorFoodSpawner has been moved to filter folder
 
 Actor MajorFoodSpawner : RandomSpawner replaces Medikit
 {
@@ -262,12 +253,7 @@ DropItem "EntireChickenYouWeirdo"
 DropItem "PizzaZone"
 }
 
-Actor MajorFoodSpawner_Heretic : RandomSpawner replaces ArtiHealth
-{
-DropItem "Hamburg"
-DropItem "EntireChickenYouWeirdo"
-DropItem "PizzaZone"
-}
+//Heretic version of MajorFoodSpawner has been moved to filter folder
 
 Actor AllMapSpawner : RandomSpawner replaces AllMap
 {

@@ -261,6 +261,7 @@ Haste/Fade HASTEEND
 belt/pick BELTPICK
 belt/use  BELTUSE
 belt/fade BELTFADE
+tadd/pick TADDPICK
 announcer/soulsphere   AN_SOUL
 announcer/megasphere   AN_MEGA
 announcer/haste		   AN_HASTE

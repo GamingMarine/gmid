@@ -64,7 +64,9 @@ Actor AngleGrinder : Chainsaw
 	ContinueFire:
 	SAWG E 0 A_AlertMonsters
 	SAWG E 1 A_CustomPunch(2*random(1,10),1,0,"GrinderPuff")
-	SAWG FGH 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	SAWG F 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	SAWG G 1 A_CustomPunch(2*random(1,10),1,0,"GrinderPuff")
+	SAWG H 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	TNT1 A 0 A_Refire("CheckForQuad")
 	SAWG D 0 A_StopSound(CHAN_WEAPON)
 	SAWG D 0 A_PlaySound("grinder/stop", CHAN_WEAPON)

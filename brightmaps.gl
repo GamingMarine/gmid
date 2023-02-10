@@ -4886,6 +4886,11 @@ Brightmap Sprite IBRNH0
 Map "Brightmaps/GMID/IBRNH0.png"
 }
 
+Brightmap Sprite TADDA0
+{
+Map "Brightmaps/GMID/TADDA0.png"
+}
+
 //Textures
 Brightmap Flat MAGMA1
 {

@@ -123,6 +123,7 @@ GOTSHAKE = "Drank a Super-Cool(tm) Energy Shake! Refreshing! \cf(\cj+50 health\c
 GOTSENTRY = "Picked up a portable sentry! \cf(\cjThis item must be activated to use it\cf)";
 GOTSKULL = "Picked up a \cgSkull Bomb\c-!!! Devastation is your only option... \cf(\cjThis item must be activated to use it\cf)";
 GOTBELT = "Picked up a Zero-Gravity Belt! \cf(\cjThis item must be activated to use it\cf)";
+GOTTADD = "Picked up a \"Showstopper\" Time Allocation Delay Device! \cf(\cjThis item must be activated to use it\cf)";
 
 BIOFADE = "Air supply in bio-suit is expiring...";
 GOGGLESFADE = "Night vision goggles' batteries are draining...";
@@ -182,6 +183,7 @@ TAG_SHAKE = "Super-Cool(tm) Energy Shake";
 TAG_SENTRY = "Portable Sentry";
 TAG_SKULL = "Skull Bomb";
 TAG_BELT = "Z-Grav Belt";
+TAG_TADD = "Showstopper";
 
 TAG_GRINDER = "Angle Grinder";
 TAG_FISTS = "Bare Hands";
@@ -390,8 +392,8 @@ MENULOAD = "Restore Progress";
 MENULOADNETGAME = "You will need to quit this netgame in order to load any progress.";
 MENUSAVE = "Save Progress";
 MENUQUIT = "Surrender";
-MODVERSION1 = "v2.0.0 EXPERIMEMTAL BUILD 86";
-MODVERSION2 = "Compiled Monday, November 21st, 2022";
+MODVERSION1 = "v2.0.0 EXPERIMEMTAL BUILD 88";
+MODVERSION2 = "Compiled Friday, February 10th, 2023";
 MENUEPSD = "Choose Your Destiny";
 MENUSKIL = "How tough are you?";
 DIFFNAME1 = "Can I play, Daddy?";
