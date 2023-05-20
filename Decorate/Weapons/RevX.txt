@@ -386,6 +386,7 @@ ACTOR RevXProjectileQuarter : RevXProjectile
 ACTOR SuperRevXProjectile : RevXProjectile
 {
 	Damage 20
+	SeeSound "RevX/SuperFire"
 	States
 	{
 		Spawn:

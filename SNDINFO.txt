@@ -1,4 +1,5 @@
 $pitchshiftrange 0
+misc/startupdone LOADDONE
 
 //------------Player------------------//
 $playersound	player	GamingMarine	*usefail		gmnoway
@@ -139,10 +140,17 @@ vgun/winddown	 CHANWIND
 weapons/GMROCKTL GMROCKTL
 Weapons/RocketFly ROCKFLY
 weapons/blasterrifle	DSBLASTR
-railgun/fire1	 RAILFIR1
-railgun/fire2	 RAILFIR2
+railgun/hum		  RAILHUM
+railgun/fire1	  RAILFIR1
+railgun/fire2	  RAILFIR2
 $random weapons/railgf { railgun/fire1 railgun/fire2 }
-railgun/charge	 RAILCHRG
+railgun/charge	  RAILCHRG
+railgun/hit		  RAILHIT
+railgun/scopeup   RAILSCUP
+railgun/scopedown RAILSCDN
+railgun/zoomin	  RAILZIN
+railgun/zoomout	  RAILZOUT
+railgun/empty	  RAILEMPT
 weapons/explosion1		barexp1
 weapons/explosion2		barexp2
 weapons/explosion3		barexp3
@@ -241,12 +249,7 @@ BOLT1R BOLT1R
 spasup spasup
 duke/weaponup WPNSEL21
 REVXUP REVXUP
-coke/open COLA
-coke/egg COLA_EGG
-//A 1/256 chance to play an easter egg sound.
-//Based on ECWolf's handling of enemy fart sounds (Yes, really).
-$random coke/up16 { coke/egg coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open }
-$random coke/up { coke/up16 coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open coke/open }
+coke/up COLA
 
 pc/pick	 PCPICK
 pc/idle	 comp1
@@ -313,6 +316,7 @@ energy/big4					BIGNRG4
 energy/big5					BIGNRG5
 revx/pickup					REVXPICK
 revx/fire					REVXFIRE
+revx/superfire				REVXSFIR
 revx/upgrade				REVXUPGR
 shake/pickup				SHAKEUP
 ARMOR1						ARMOR1
@@ -649,12 +653,13 @@ misc/ricochet7	RICOCHE7
 misc/ricochet8	RICOCHE8
 misc/ricochet9	RICOCHE9
 
-$random Blood/Splat { Blood/Splat1 Blood/Splat2 }
+$random Blood/Splat { Blood/Splat1 Blood/Splat2 Blood/Splat3 Blood/Splat4 Blood/Splat5 }
 Blood/Splat1 	BLUDDRP1
 Blood/Splat2	BLUDDRP2
-$volume Blood/Splat 0.25
-$limit Blood/Splat1 0
-$limit Blood/Splat2 0
+Blood/Splat3 	BLUDDRP3
+Blood/Splat4	BLUDDRP4
+Blood/Splat5 	BLUDDRP5
+$volume Blood/Splat 0.50
 
 Rat/Squeek	DSRAT
 $volume radio/chat 0.5
@@ -776,6 +781,7 @@ $attenuation misc/toasty 0
 $limit Explosion/Distant 0
 $limit misc/teleport 0
 $limit revx/fire 0
+$limit revx/superfire 0
 $limit Q2Soldier/ShotX 0
 $limit foot/hit 0
 $limit foot/wall 0
