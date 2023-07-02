@@ -525,8 +525,15 @@ cookie/spawn8				CINTRO08
 cookie/spawn9				CINTRO09
 cookie/spawn10				CINTRO10
 cookie/spawn11				CINTRO11
+cookie/spawn12				CINTRO12
+$random cookie/spawn { cookie/spawn1 cookie/spawn2 cookie/spawn3 cookie/spawn4 cookie/spawn5 cookie/spawn6 cookie/spawn7 cookie/spawn8 cookie/spawn9 cookie/spawn10 cookie/spawn11 cookie/spawn12 }
+cookie/idle1				CIDLE1
+cookie/idle2				CIDLE2
+cookie/idle3				CIDLE3
+cookie/idle4				CIDLE4
+cookie/idle5				CIDLE5
+$random cookie/idle { cookie/idle1 cookie/idle2 cookie/idle3 cookie/idle4 cookie/idle5 }
 cookie/teleport				CTELEPRT
-$random cookie/spawn { cookie/spawn1 cookie/spawn2 cookie/spawn3 cookie/spawn4 cookie/spawn5 cookie/spawn6 cookie/spawn7 cookie/spawn8 cookie/spawn9 cookie/spawn10 cookie/spawn11 }
 cookie/taunt1				CTAUNT01
 cookie/taunt2				CTAUNT02
 cookie/taunt3				CTAUNT03
@@ -540,7 +547,17 @@ cookie/taunt10				CTAUNT10
 cookie/taunt11				CTAUNT11
 cookie/taunt12				CTAUNT12
 cookie/taunt13				CTAUNT13
-$random cookie/taunt { cookie/taunt1 cookie/taunt2 cookie/taunt3 cookie/taunt4 cookie/taunt5 cookie/taunt6 cookie/taunt7 cookie/taunt8 cookie/taunt9 cookie/taunt10 cookie/taunt11 cookie/taunt12 cookie/taunt13 }
+cookie/taunt14				CTAUNT14
+cookie/taunt15				CTAUNT15
+cookie/taunt16				CTAUNT16
+cookie/taunt17				CTAUNT17
+cookie/taunt18				CTAUNT18
+cookie/taunt19				CTAUNT19
+cookie/taunt20				CTAUNT20
+cookie/taunt21				CTAUNT21
+cookie/taunt22				CTAUNT22
+cookie/taunt23				CTAUNT23
+$random cookie/taunt { cookie/taunt1 cookie/taunt2 cookie/taunt3 cookie/taunt4 cookie/taunt5 cookie/taunt6 cookie/taunt7 cookie/taunt8 cookie/taunt9 cookie/taunt10 cookie/taunt11 cookie/taunt12 cookie/taunt13 cookie/taunt14 cookie/taunt15 cookie/taunt16 cookie/taunt17 cookie/taunt18 cookie/taunt19 cookie/taunt20 cookie/taunt21 cookie/taunt22 cookie/taunt23 }
 cookie/pain1				CPAIN01
 cookie/pain2				CPAIN02
 cookie/pain3				CPAIN03
@@ -562,7 +579,10 @@ cookie/pain18				CPAIN18
 cookie/pain19				CPAIN19
 cookie/pain20				CPAIN20
 cookie/pain21				CPAIN21
-$random cookie/pain { cookie/pain1 cookie/pain2 cookie/pain3 cookie/pain4 cookie/pain5 cookie/pain6 cookie/pain7 cookie/pain8 cookie/pain9 cookie/pain10 cookie/pain11 cookie/pain12 cookie/pain13 cookie/pain14 cookie/pain15 cookie/pain16 cookie/pain17 cookie/pain18 cookie/pain19 cookie/pain20 cookie/pain21 }
+cookie/pain22				CPAIN22
+cookie/pain23				CPAIN23
+cookie/pain24				CPAIN24
+$random cookie/pain { cookie/pain1 cookie/pain2 cookie/pain3 cookie/pain4 cookie/pain5 cookie/pain6 cookie/pain7 cookie/pain8 cookie/pain9 cookie/pain10 cookie/pain11 cookie/pain12 cookie/pain13 cookie/pain14 cookie/pain15 cookie/pain16 cookie/pain17 cookie/pain18 cookie/pain19 cookie/pain20 cookie/pain21 cookie/pain22 cookie/pain23 cookie/pain24 }
 cookie/death				CDEATH
 cookie/leave				CLEAVE
 cookie/lastwords1			CLASTW1
@@ -737,6 +757,9 @@ ambience/bird6			BIRD06
 ambience/bird7			BIRD07
 $volume ambience/bird 0.5
 $random ambience/bird { ambience/bird1 ambience/bird2 ambience/bird3 ambience/bird4 ambience/bird5 ambience/bird6 ambience/bird7 }
+$random barrel/hit { barrel/hit1 barrel/hit2 }
+barrel/hit1				BARLHIT1
+barrel/hit2				BARLHIT2
 radio/break				VENTBUST
 SFX/Buzz				DSBUZZ
 $volume SFX/Buzz 0.25
@@ -1965,12 +1988,10 @@ NONBoy/Scream3					 NONSCRM3
 NONBoy/Scream4					 NONSCRM4
 $random NONBoy/Scream { NONBoy/Scream1 NONBoy/Scream2 NONBoy/Scream3 NONBoy/Scream4 }
 
-wayne/excellent					 WAYNEEXC
-wayne/shwing					 WAYNESHW
-wayne/partyon					 WAYNEPAR
-$random wayne/sight { wayne/excellent wayne/shwing wayne/partyon }
-wayne/not						 WAYNENOT
-wayne/notworthy					 WAYNEWTH
+freedoomer/pain					 FRDMPAIN
+$random freedoomer/death { freedoomer/death1 freedoomer/death2 }
+freedoomer/death1				 FRDMDTH1
+freedoomer/death2				 FRDMDTH2
 
 // Footsteps
 // Sound Info

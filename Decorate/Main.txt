@@ -415,12 +415,14 @@ actor KickPuff
 
 ACTOR XaserBarrel : ExplosiveBarrel replaces ExplosiveBarrel
 {
-	DamageFactor "Foot", 0
-	DamageFactor "Fist", 0
-	DamageFactor "BigFist", 0
-	DamageFactor "Uppercut", 0
+	DamageFactor "Foot", 0.1
+	DamageFactor "Fist", 0.5
+	DamageFactor "BigFist", 0.1
+	DamageFactor "Uppercut", 0.05
 	Tag "$TAG_BARREL"
 	Obituary "$OB_BARREL"
+	PainChance 256
+	PainSound "barrel/hit"
 	+FIREDAMAGE
 	+PUSHABLE
    States
@@ -428,8 +430,28 @@ ACTOR XaserBarrel : ExplosiveBarrel replaces ExplosiveBarrel
    Spawn:
 		TOXB A 1
 		Loop
+   Pain:
+		TOXB A 1 A_Pain
+		Goto Spawn
+   Pain.Fist:
+		TOXB A 0 HealThing(100)
+		TOXB A 0 A_FaceTarget
+		TOXB A 0 A_Recoil(7)
+		TOXB A 1 A_Pain
+		Goto Spawn
+   Pain.Foot:
+   Pain.BigFist:
+		TOXB A 0 HealThing(100)
+		TOXB A 0 A_FaceTarget
+		TOXB A 0 A_Recoil(14)
+		TOXB A 1 A_Pain
+   Pain.Uppercut:
+		TOXB A 0 HealThing(100)
+		TOXB A 0 ThrustThingZ(0,32,0,0)
+		TOXB A 1 A_Pain
+		Goto Spawn
    Death:
-        TOXB A 10 BRIGHT
+        TOXB A 10 BRIGHT A_Pain
 		ZXPL A 0 A_NoBlocking
 		ZXPL A 0 A_PlaySound("explosion/distant", CHAN_AUTO)
 		ZXPL A 0 A_PlaySound("newexplosion")

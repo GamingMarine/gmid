@@ -39,6 +39,5 @@
 #include Decorate/Monsters/ZombieScientist.txt
 #include Decorate/Monsters/GMBot.txt
 #include Decorate/Monsters/MasterForceLord.txt
-#include Decorate/Monsters/WayneCampbell.txt
 #include Decorate/Monsters/MonstersCastCall.txt
 #include Decorate/Monsters/HereticMonsters.txt

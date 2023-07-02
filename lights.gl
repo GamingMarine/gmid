@@ -359,6 +359,54 @@ flickerlight NewBaronBall_X3
 }
 
 //Based on Doom 64 Stuff Pack by Footman
+flickerlight CACOBALL
+{
+    color 1.0 0.0 0.0
+    size 56
+    secondarySize 64
+    chance 0.5
+}
+
+flickerlight CACOBALL_X1
+{
+    color 0.9 0.0 0.0
+    size 72
+    secondarySize 80
+    chance 0.25
+}
+
+flickerlight CACOBALL_X2
+{
+    color 0.6 0.0 0.0
+    size 88
+    secondarySize 96
+    chance 0.25
+}
+
+flickerlight CACOBALL_X3
+{
+    color 0.3 0.0 0.0
+    size 104
+    secondarySize 112
+    chance 0.25
+}
+
+flickerlight CACOBALL_X4
+{
+    color 0.2 0.0 0.0
+    size 104
+    secondarySize 112
+    chance 0.25
+}
+
+flickerlight CACOBALL_X5
+{
+    color 0.1 0.0 0.0
+    size 104
+    secondarySize 112
+    chance 0.25
+}
+
 pointlight IMPBALL
 {
     color 1.0 0.6 0.0

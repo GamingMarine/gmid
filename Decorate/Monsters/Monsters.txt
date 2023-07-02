@@ -16,7 +16,7 @@ ACTOR NONBoy replaces WolfensteinSS
   ActiveSound "NONBoy/Sight"
   AttackSound "NONBoy/Attack"
   Obituary "$OB_NONBOY"
-  Dropitem "UsedClipSpawner"
+  Dropitem "Clip3_Used"
   Tag "$TAG_NONBOY"
   States
   {
@@ -89,12 +89,51 @@ ACTOR NONBoy replaces WolfensteinSS
     NONB ONMLKJ 5
     Goto See 
   Death.CookieIce:
+	"####" "#" 0 A_StopSound(CHAN_VOICE)
 	"####" "#" 5 A_GenericFreezeDeath
 	"----" A 1 A_FreezeDeathChunks
 	Wait
   Crush:
 	TNT1 A 0 A_PlaySound("body/crush",CHAN_VOICE)
 	POL5 A -1
+	Stop
+  }
+}
+
+Actor FreeDoomDeltaMarine replaces CommanderKeen
+{
+  Health 100
+  Radius 16
+  Height 72
+  Mass 10000000
+  PainChance 256
+  Scale 0.8
+  +SOLID
+  +NOGRAVITY
+  +SHOOTABLE
+  +COUNTKILL
+  +NOICEDEATH
+  +ISMONSTER
+  PainSound "freedoomer/pain"
+  DeathSound "freedoomer/death"
+  Tag "$TAG_FREEDOOMER"
+  States
+  {
+  Spawn:
+    FRDM A -1
+    Loop
+  Pain:
+    FRDM B 4
+    FRDM B 4 A_Pain
+    Goto Spawn
+  Death:
+	FRDM B 0 A_GiveToTarget("ScoreItem",500)
+	FRDM B 0 A_PlaySound("misc/gibbed",CHAN_AUTO)
+	FRDM B 0 A_Scream
+	FRDM B 0 A_NoBlocking
+	FRDM B 0 A_SpawnItem("GMIDGibSpawner")
+	FRDM CDEF 4
+	FRDM G -1 A_KeenDie
 	Stop
   }
 }

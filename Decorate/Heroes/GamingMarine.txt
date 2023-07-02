@@ -26,6 +26,7 @@ Actor GamingMarine : DoomPlayer
 	Player.SoundClass "GamingMarine"
 	Player.Face "GMN"
 	DamageFactor "Cube", 0
+	DamageFactor "CookieElectric", 0
 	DamageFactor "CookieFire", 0
 	DamageFactor "CookieIce", 0
 	DamageFactor "Sentry", 0

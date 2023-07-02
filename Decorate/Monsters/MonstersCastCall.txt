@@ -246,10 +246,10 @@ actor EvilMarine_ShotgunCastCall
 	PLA3 E 10
 	Goto See
   Death:
-	PLA3 H 5 A_Scream
-	PLA3 I 5 A_NoBlocking
-	PLA3 JK 5
-	PLA3 L -1
+	EVMD A 5 A_Scream
+	EVMD B 5 A_NoBlocking
+	EVMD CD 5
+	EVMD E -1
 	Stop
    }
 }

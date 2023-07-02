@@ -479,6 +479,19 @@ Object NONBoy
   Frame NONBI { Light EnemyPistolAttack }
 }
 
+object CookiedemonElectricBall
+{
+    frame CELEA { light CACOBALL }
+    frame CELEB { light CACOBALL }
+    frame CELEC { light CACOBALL }
+
+    frame CELED { light CACOBALL_X1 }
+    frame CELEE { light CACOBALL_X2 }
+    frame CELEF { light CACOBALL_X3 }
+    frame CELEG { light CACOBALL_X4 }
+    frame CELEH { light CACOBALL_X5 }
+}
+
 object CookiedemonFireball
 {
 Frame CFIRA { light IMPBALL }

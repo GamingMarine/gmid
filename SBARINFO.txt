@@ -263,5 +263,5 @@ DrawString SMALLFONT, darkred, "Kills", 40, 127;
 
 statusbar inventory
 {
-drawinventorybar Doom, noartibox, 5, INDEXFONT, 85, 173;
+drawinventorybar Doom, noartibox, 5, INDEXFONT, 85, 167;
 }

@@ -396,7 +396,6 @@ ACTOR Cookiedemon
 	Waits2:
 		TNT1 A 0 A_SetAngle(random(90, -90) + angle)
 		COOK A 6 A_Stop
-		TNT1 A 0 //A_PlaySound("MRNWT", 2)
 		COOK A 6 A_Stop
 		TNT1 A 0 A_CheckSight("FollowPlayer")
 		TNT1 A 0 A_ChangeFLag("FRIENDLY", 1)
@@ -414,12 +413,10 @@ ACTOR Cookiedemon
 	
 	Waits3:
 		TNT1 A 0
-		//TNT1 A 0 A_JumpIfInTargetInventory("Clip2", 40, 3)
-		//Goto GiveAmmo
+		TNT1 A 0 A_Jump(32, "IdleTalk")
 		TNT1 AAA 0
 		TNT1 A 0 A_SetAngle(random(90, -90) + angle)
 		COOK A 4 A_Stop
-		TNT1 A 0 //A_PlaySound("MRNWC", 2)
 		COOK A 4 A_Stop
 		TNT1 A 0 A_CheckSight("FollowPlayer")
 		TNT1 A 0 A_ChangeFLag("FRIENDLY", 1)
@@ -434,7 +431,9 @@ ACTOR Cookiedemon
 		TNT1 A 0 A_ChangeFlag("SHOOTABLE", 1)
 		TNT1 A 0 A_JumpIfCloser(300, "Waits")
 		Goto FollowPLayer
-
+	IdleTalk:
+		TNT1 A 0 A_PlaySound("cookie/idle", CHAN_VOICE)
+		Goto FollowPlayer
 	Missile:
         TNT1 A 0
         TNT1 A 0 A_ChangeFlag("NODROPOFF", 1)
@@ -451,15 +450,19 @@ ACTOR Cookiedemon
 		
 	ActualFireState:
 		COOK EEEEEEEEEEEEEEEE 1 A_FaceTarget
-		COOK E 0 A_Jump(256, "IceAttack", "FireballAttack")
+		COOK E 0 A_Jump(256, "ElectricAttack", "IceAttack", "FireballAttack")
+		Goto See
+	ElectricAttack:
+        COOK A 6 A_CustomMissile("CookiedemonElectricBall", 32, 0)
+		COOK A 0 A_Jump(24, "Taunt")
 		Goto See
 	IceAttack:
         COOK A 6 A_CustomMissile("CookiedemonIceBall", 32, 0)
-		COOK A 0 A_Jump(16, "Taunt")
+		COOK A 0 A_Jump(24, "Taunt")
 		Goto See
 	FireballAttack:
         COOK A 6 A_CustomMissile("CookiedemonFireball", 32, 0)
-		COOK A 0 A_Jump(16, "Taunt")
+		COOK A 0 A_Jump(24, "Taunt")
 		Goto See
 	Taunt:
 		COOK A 0 A_PlaySound("cookie/taunt", CHAN_VOICE)
@@ -590,7 +593,7 @@ Damagetype "SpawnMarine"
 }
 }
 
-ACTOR CookiedemonIceBall : DoomImpBall
+ACTOR CookiedemonElectricBall : DoomImpBall
 {
 	Radius 6
 	Height 8
@@ -603,6 +606,21 @@ ACTOR CookiedemonIceBall : DoomImpBall
 	Alpha 1
 	scale 0.6
 	Decal "DoomImpScorch"
+	DamageType "CookieElectric"
+	States
+	{
+		Spawn:
+			CELE ABC 4 BRIGHT
+			Loop
+		Death:
+			CELE DEFGHIJ 2 BRIGHT
+			Stop
+	}
+}
+
+ACTOR CookiedemonIceBall : CookiedemonElectricBall
+{
+	Decal "DoomImpScorch"
 	DamageType "CookieIce"
 	States
 	{
@@ -610,12 +628,12 @@ ACTOR CookiedemonIceBall : DoomImpBall
 			CICE ABC 4 BRIGHT
 			Loop
 		Death:
-			CICE DEFGHI 2 BRIGHT
+			CICE DEFGHI 3 BRIGHT
 			Stop
 	}
 }
 
-ACTOR CookiedemonFireball : CookiedemonIceBall
+ACTOR CookiedemonFireball : CookiedemonElectricBall
 {
 	Decal "DoomImpScorch"
 	DamageType "CookieFire"
@@ -626,7 +644,7 @@ ACTOR CookiedemonFireball : CookiedemonIceBall
 			CFIR ABC 4 BRIGHT
 			Loop
 		Death:
-			CFIR DEFGHI 2 BRIGHT
+			CFIR DEFGHI 3 BRIGHT
 			Stop
 	}
 }
