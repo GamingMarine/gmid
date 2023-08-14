@@ -34,6 +34,11 @@ poof-3 ploof3
 poof-4 ploof4
 poof-5 ploof5
 $random gmarinoof { poof-1 poof-2 poof-3 poof-4 poof-5 }
+player/falldamage1		FALLDMG1
+player/falldamage2		FALLDMG2
+player/falldamage3		FALLDMG3
+player/falldamage4		FALLDMG4
+$random player/falldamage { player/falldamage1 player/falldamage2 player/falldamage3 player/falldamage4 }
 $playeralias player GamingMarine *grunt gmarinoof
 $playersound player	GamingMarine *land	gmoof
 pdhi-1	diehi1
@@ -44,7 +49,9 @@ $playersound	player	GamingMarine	*death		GMPLDETH
 $playeralias	player	GamingMarine	*xdeath		GMPDIEHI
 player/jump1	 DSJUMP1
 player/jump2	 DSJUMP2
-$random gmarinjmp { player/jump1 player/jump2 }
+player/jump3	 DSJUMP3
+player/jump4	 DSJUMP4
+$random gmarinjmp { player/jump1 player/jump2 player/jump3 player/jump4 }
 $playeralias	player	GamingMarine	*jump		gmarinjmp
 $playeralias	player	GamingMarine	*gibbed		misc/gibbed
 player/zaps		 ZAPS
@@ -193,8 +200,16 @@ SoulCube/NotYet		SCNOPE
 SoulCube/UseUs		SCUSEUS
 SoulCube/Use		SCUSE
 SoulCube/Slice		SCSLICE
+Grenade/Pickup		GRENPICK
+Grenade/Select		GRENUP
+Grenade/Pull		GRENPULL
+Grenade/Toss		GRENTOSS
+$random Grenade/Bounce { Grenade/Bounce1 Grenade/Bounce2 }
+Grenade/Bounce1		GRENHIT1
+Grenade/Bounce2		GRENHIT2
 FOOT/WALL			FOOTWALL
 FOOT/HIT			FOOTHIT
+grinder/select		DSSAWUP
 grinder/start		MOTFIRE
 grinder/continue	MOTFIREB
 grinder/stop		MOTFIREC
@@ -662,6 +677,11 @@ $random casings/rifle/bounce { RBNCE1 RBNCE2 RBNCE3 }
 RBNCE1 RCASING1
 RBNCE2 RCASING2
 RBNCE3 RCASING3
+$volume casings/magazine/bounce 0.8
+$random casings/magazine/bounce { MBNCE1 MBNCE2 MBNCE3 }
+MBNCE1 PMAGDRP1
+MBNCE2 PMAGDRP2
+MBNCE3 PMAGDRP3
 $random misc/ricochet { misc/ricochet1 misc/ricochet2 misc/ricochet3 misc/ricochet4 misc/ricochet5 misc/ricochet6  misc/ricochet7 misc/ricochet8 misc/ricochet9 }
 misc/ricochet1	RICOCHE1
 misc/ricochet2	RICOCHE2
@@ -709,6 +729,10 @@ metal/hit4				METAL4
 metal/hit5				METAL5
 metal/hit6				METAL6
 $random metal/hit { metal/hit1 metal/hit2 metal/hit3 metal/hit4 metal/hit5 metal/hit6 }
+wood/break				WOODBRK
+wood/hit1				WOODHIT1
+wood/hit2				WOODHIT2
+$random wood/hit { wood/hit1 wood/hit2 }
 $volume ambience/reactor 0.5
 ambience/reactor		reactor
 ambience/scream1		SCREAM01
@@ -808,6 +832,12 @@ $limit revx/superfire 0
 $limit Q2Soldier/ShotX 0
 $limit foot/hit 0
 $limit foot/wall 0
+$limit PillarGlassBreak 0
+$limit radio/break 0
+$limit glass/break 0
+$limit wood/break 0
+$limit GlassShardImpact 0
+$limit wood/hit 0
 
 //Sound definitions for the mobsters
 $random cyber/hoof 		{ cyber/hoof1 cyber/hoof2 cyber/hoof3 cyber/hoof4 }
@@ -1145,7 +1175,7 @@ OctaLeb/active13      octact13
 OctaLeb/active14      octact14
 OctaLeb/active15      octact15
 OctaLeb/attack		  CALEBFIR
-$random OctaLeb/pain { OctaLeb/pain1 OctaLeb/pain2 OctaLeb/pain3 OctaLeb/pain4 OctaLeb/pain5 OctaLeb/pain6 OctaLeb/pain7 OctaLeb/pain8 OctaLeb/pain9 OctaLeb/pain10 OctaLeb/pain11 OctaLeb/pain12 OctaLeb/pain13 OctaLeb/pain14 OctaLeb/pain15 OctaLeb/pain16 }
+$random OctaLeb/pain { OctaLeb/pain1 OctaLeb/pain2 OctaLeb/pain3 OctaLeb/pain4 OctaLeb/pain5 OctaLeb/pain6 OctaLeb/pain7 OctaLeb/pain8 OctaLeb/pain9 OctaLeb/pain10 OctaLeb/pain11 OctaLeb/pain12 OctaLeb/pain13 OctaLeb/pain14 OctaLeb/pain15 OctaLeb/pain16 OctaLeb/pain17 OctaLeb/pain18 OctaLeb/pain19 OctaLeb/pain20 OctaLeb/pain21 OctaLeb/pain22 OctaLeb/pain23 OctaLeb/pain24 OctaLeb/pain25 OctaLeb/pain26 OctaLeb/pain27 OctaLeb/pain28 OctaLeb/pain29 }
 OctaLeb/pain1 octpan01
 OctaLeb/pain2 octpan02
 OctaLeb/pain3 octpan03
@@ -1162,19 +1192,48 @@ OctaLeb/pain13 octpan13
 OctaLeb/pain14 octpan14
 OctaLeb/pain15 octpan15
 OctaLeb/pain16 octpan16
-$random OctaLeb/death { OctaLeb/death1 OctaLeb/death2 OctaLeb/death3 OctaLeb/death4 OctaLeb/death5 OctaLeb/death6 OctaLeb/death7 OctaLeb/death8 OctaLeb/death9 OctaLeb/death10 OctaLeb/death11 OctaLeb/death12 }
-OctaLeb/death1       octdth1
-OctaLeb/death2       octdth2
-OctaLeb/death3       octdth3
-OctaLeb/death4       octdth4
-OctaLeb/death5       octdth5
-OctaLeb/death6       octdth6
-OctaLeb/death7       octdth7
-OctaLeb/death8       octdth8
-OctaLeb/death9       octdth9
-OctaLeb/death10      octdth0
-OctaLeb/death11      octdtha
-OctaLeb/death12      octdthb
+OctaLeb/pain17 octpan17
+OctaLeb/pain18 octpan18
+OctaLeb/pain19 octpan19
+OctaLeb/pain20 octpan20
+OctaLeb/pain21 octpan21
+OctaLeb/pain22 octpan22
+OctaLeb/pain23 octpan23
+OctaLeb/pain24 octpan24
+OctaLeb/pain25 octpan25
+OctaLeb/pain26 octpan26
+OctaLeb/pain27 octpan27
+OctaLeb/pain28 octpan28
+OctaLeb/pain29 octpan29
+$random OctaLeb/death { OctaLeb/death1 OctaLeb/death2 OctaLeb/death3 OctaLeb/death4 OctaLeb/death5 OctaLeb/death6 OctaLeb/death7 OctaLeb/death8 OctaLeb/death9 OctaLeb/death10 OctaLeb/death11 OctaLeb/death12 OctaLeb/death13 OctaLeb/death14 OctaLeb/death15 OctaLeb/death16 OctaLeb/death17 OctaLeb/death18 OctaLeb/death19 OctaLeb/death20 OctaLeb/death21 OctaLeb/death22 OctaLeb/death23 OctaLeb/death24 OctaLeb/death25 OctaLeb/death26 OctaLeb/death27 OctaLeb/death28 }
+OctaLeb/death1       octdth01
+OctaLeb/death2       octdth02
+OctaLeb/death3       octdth03
+OctaLeb/death4       octdth04
+OctaLeb/death5       octdth05
+OctaLeb/death6       octdth06
+OctaLeb/death7       octdth07
+OctaLeb/death8       octdth08
+OctaLeb/death9       octdth09
+OctaLeb/death10      octdth10
+OctaLeb/death11      octdth11
+OctaLeb/death12      octdth12
+OctaLeb/death13      octdth13
+OctaLeb/death14      octdth14
+OctaLeb/death15      octdth15
+OctaLeb/death16      octdth16
+OctaLeb/death17      octdth17
+OctaLeb/death18      octdth18
+OctaLeb/death19      octdth19
+OctaLeb/death20      octdth20
+OctaLeb/death21      octdth21
+OctaLeb/death22      octdth22
+OctaLeb/death23      octdth23
+OctaLeb/death24      octdth24
+OctaLeb/death25      octdth25
+OctaLeb/death26      octdth26
+OctaLeb/death27      octdth27
+OctaLeb/death28      octdth28
 $random Octaleb/Burn { Octaleb/Burn1 Octaleb/Burn2 Octaleb/Burn3 Octaleb/Burn4 Octaleb/Burn5 Octaleb/Burn6 Octaleb/Burn7 Octaleb/Burn8 Octaleb/Burn9 }
 Octaleb/Burn1		 octburn1
 Octaleb/Burn2		 octburn2

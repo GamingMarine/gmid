@@ -459,6 +459,50 @@ ACTOR RifleCasing : BulletCasing
    }
 }
 
+ACTOR PistolMagazineSpawner : CasingSpawner
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0
+		TNT1 A 1
+		TNT1 A 0 A_CustomMissile("PistolMagazine",0,0,random(-80,-100),2,random(45,80))
+		TNT1 A 0
+		Stop
+	}
+}
+
+ACTOR PistolMagazine : BulletCasing
+{
+   Scale 0.26
+   SeeSound "casings/magazine/bounce"
+   States
+   {
+
+   Spawn:
+      PMAG ABCDEFGH 2
+      Loop
+   Death:
+	  TNT1 A 0 A_jump(256,"DeadCase1","DeadCase2","DeadCase3","DeadCase4")
+   DeadCase1:
+           PMAG I 350
+		   PMAG IIIIIIIIIII 1 A_FadeOut
+           stop
+   DeadCase2:
+           PMAG J 350
+		   PMAG JJJJJJJJJJJ 1 A_FadeOut
+           stop
+   DeadCase3:
+           PMAG K 350
+		   PMAG KKKKKKKKKKK 1 A_FadeOut
+           stop
+   DeadCase4:
+           PMAG L 350
+		   PMAG LLLLLLLLLLL 1 A_FadeOut
+           stop
+   }
+}
+
 ACTOR CasingSmoketrail 
 {
    Speed 2

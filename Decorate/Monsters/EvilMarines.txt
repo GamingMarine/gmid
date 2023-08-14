@@ -15,6 +15,7 @@ actor EvilMarine_Rifle //Evil! EEEVILLL
   DeathSound "bgrunt/death"
   AttackSound "rifle/fire"
   DropItem "UsedClipSpawner"
+  DropItem "GMIDHandGrenade" 32
   translation "112:127=%[0, 0, 0]:[2, 2, 0]"
   Obituary "$OB_EVILMARINE"
   Tag "$TAG_EVILMARINE1"
@@ -100,7 +101,7 @@ actor EvilMarine_Rifle //Evil! EEEVILLL
 	EVMD CD 5
 	EVMD E 10
 	TNT1 A 0 A_GiveToTarget("PlayerKillTaunt",1)
-	EVMS E -1
+	EVMD E -1
 	Stop
   Death.Foot:
 	PLA1 G 0 A_GiveToTarget("ScoreItem",250)
@@ -118,7 +119,7 @@ actor EvilMarine_Rifle //Evil! EEEVILLL
 	EVMD A 0 ThrustThingZ(0,16,0,0)
 	EVMD A 5 A_Scream
 	EVMD B 5 A_NoBlocking
-	EMVD CD 5
+	EVMD CD 5
 	EVMD E 10
 	TNT1 A 0 A_GiveToTarget("PlayerKickTaunt",1)
 	EVMD E -1
@@ -143,7 +144,7 @@ actor EvilMarine_Rifle //Evil! EEEVILLL
 	EVMD CD 5
 	EVMD E 10
 	TNT1 A 0 A_GiveToTarget("PlayerKillTaunt",1)
-	EVMD F -1
+	EVMD E -1
 	Stop
   XDeath:
   Death.GMIDExplosion:
@@ -179,6 +180,7 @@ actor EvilMarine_Shotgun : EvilMarine_Rifle
 {
   AttackSound "Shotguy/Attack"
   DropItem "GmidShotgun"
+  DropItem "GMIDHandGrenade" 32
   translation "112:127=%[0, 0, 0]:[2, 1, 0]"
   Tag "$TAG_EVILMARINE2"
   States
@@ -223,6 +225,7 @@ actor EvilMarine_Minigun : EvilMarine_Rifle
 {
   AttackSound "weapons/UZIFIRE1"
   DropItem "VGun"
+  DropItem "GMIDHandGrenade" 32
   translation "112:127=%[0, 0, 0]:[2, 0, 0]"
   Tag "$TAG_EVILMARINE3"
   States

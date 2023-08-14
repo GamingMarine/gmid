@@ -148,7 +148,11 @@ Actor GMIDDualPistol : GMIDPistol
 	P2RL H 0 A_PlaySound("pistol/reload1", CHAN_AUTO)
 	P2RL HI 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	P2RL J 0 A_PlaySound("pistol/reload1", CHAN_AUTO)
-	P2RL JKLMNOO 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	P2RL JK 2  A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	P2RL L 0 A_FireCustomMissile("PistolMagazineSpawner",0,0,-16,-16)
+	P2RL LM 2
+	P2RL N 0 A_FireCustomMissile("PistolMagazineSpawner",0,0,16,-16)
+	P2RL NOO 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	TNT1 A 0 A_PlaySound("weapon/fiddle", CHAN_AUTO)
 	P2RL O 1 Offset(0,35)
 	P2RL O 1 Offset(0,40)

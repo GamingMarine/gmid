@@ -53,6 +53,31 @@ mugshot "God", health2
 	{GOD00, GOD01, GOD02} 17;
 }
 
+mugshot "SoulGrin"
+{
+	SOUL0 70;
+}
+
+mugshot "MegaGrin"
+{
+	MEGA0 70;
+}
+
+mugshot "HasteSphere", health
+{
+	HAST0 70;
+}
+
+mugshot "DoubleDamage", health
+{
+	ARNO0 70;
+}
+
+mugshot "QuadDamage", health
+{
+	QUAD0 70;
+}
+
 mugshot "XDeath"
 {
 	XDTH0 3;
@@ -147,6 +172,10 @@ drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, 0;
 	{
 	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 12, green, 26;
 	}
+	IsSelected GMIDHandGrenade
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 4, green, 8;
+	}
 	
 // Score System Things
 gamemode singleplayer, cooperative
@@ -240,6 +269,10 @@ drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, 0;
 	IsSelected SpaceCadet
 	{
 	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 12, green, 26;
+	}
+	IsSelected GMIDHandGrenade
+	{
+	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 4, green, 8;
 	}
 
 // Score System Things

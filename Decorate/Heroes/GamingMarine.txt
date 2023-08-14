@@ -9,7 +9,9 @@ Actor GamingMarine : DoomPlayer
 	Player.DisplayName "GamingMarine"
 	Player.StartItem "GMIDPistol"
 	Player.StartItem "GMIDFist"
+	Player.StartItem "GMIDHandGrenade"
 	Player.StartItem "Clip2", 75
+	Player.StartItem "GMIDHandGrenadeAmmo", 3
 	Player.StartItem "StartingAnimation", 1
 	Player.StartItem "AngleGrinderToken", 1
 	Player.StartItem "DualPistolToken", 1
@@ -39,6 +41,7 @@ Actor GamingMarine : DoomPlayer
 	Player.WeaponSlot 6, GMIDRailgun
 	Player.WeaponSlot 7, SpaceCadet
 	Player.WeaponSlot 8, SoulCube
+	Player.WeaponSlot 9, GMIDHandGrenade
 	Player.CrouchSprite "GMRC"
 	States
 	{
@@ -62,10 +65,13 @@ Actor GamingMarine : DoomPlayer
 		GMRN G 4
 		GMRN G 4 A_PlaySound("player/gurgle", CHAN_VOICE)
 		Goto Spawn
+	Pain.Falling:
+		GMRN G 1
+		GMRN G 7 A_PlaySound("player/falldamage", CHAN_VOICE)
+		Goto Spawn
 	Death:
 		TNT1 A 0 A_Jump(256, "NewDeath1", "NewDeath2")
 	NewDeath1:
-	Death.Falling:
 		GMRN H 5
 		GMRN I 5 A_PlayerScream
 		GMRN J 5 A_NoBlocking
@@ -142,6 +148,15 @@ Actor GamingMarine : DoomPlayer
 		PDTH D 5
 		PDTH E 0 A_PlaySound("body/hitfloor")
 		PDTH E -1
+		Stop
+	Death.Falling:
+		GMRN H 5 A_PlaySound("player/falldamage", CHAN_VOICE)
+		GMRN I 5
+		GMRN J 5 A_NoBlocking
+		GMRN K 5
+		GMRN L 0 A_PlaySound("body/hitfloor")
+		GMRN LM 5
+		GMRN N -1
 		Stop
 	XDeath:
 	Death.ForceLord:

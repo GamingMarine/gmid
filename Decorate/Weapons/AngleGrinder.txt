@@ -6,7 +6,7 @@ Actor AngleGrinder : Chainsaw
 	Weapon.BobRangeY 0.5
 	Weapon.BobStyle InverseSmooth
 	Weapon.BobSpeed 2.0
-	Weapon.UpSound "weapons/sawup"
+	Weapon.UpSound "grinder/select"
 	Weapon.ReadySound ""
 	Tag "$TAG_GRINDER"
 	+WEAPON.NOALERT

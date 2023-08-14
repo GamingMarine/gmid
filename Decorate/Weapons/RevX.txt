@@ -8,7 +8,6 @@ actor RevX : Weapon
 	Weapon.BobRangeY 0.5
 	Weapon.BobStyle InverseSmooth
 	Weapon.BobSpeed 2.0
-    Weapon.SlotNumber 3
     Weapon.SelectionOrder 100
     Weapon.AmmoGive 100
     Weapon.AmmoType "RevXAmmo"

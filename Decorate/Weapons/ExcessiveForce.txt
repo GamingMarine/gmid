@@ -6,7 +6,6 @@ actor ExcessiveForce : Weapon
 	Weapon.BobRangeY 0.5
 	Weapon.BobStyle InverseSmooth
 	Weapon.BobSpeed 2.0
-    Weapon.SlotNumber 6
     Weapon.SelectionOrder 100
     Weapon.AmmoGive 25
     Weapon.AmmoType "NewCell"

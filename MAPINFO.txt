@@ -91,6 +91,7 @@ gameinfo
 	"$QUITMSG23", "$QUITMSG24"
 	pausesign = "PAWS"
 	dimcolor = "000000"
+	endoom = "ENGMID"
 }
 
 map TITLEMAP lookup "Your Adventure Begins"

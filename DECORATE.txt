@@ -21,6 +21,7 @@
 #include Decorate/Weapons/ExcessiveForce.txt
 #include Decorate/Weapons/SpaceCadet.txt
 #include Decorate/Weapons/SoulCube.txt
+#include Decorate/Weapons/HandGrenades.txt
 #include Decorate/Monsters/Monsters.txt
 #include Decorate/Monsters/MasterForceBase.txt
 #include Decorate/Monsters/WeakTier.txt
