@@ -74,7 +74,6 @@ skill nightmare
 	DamageFactor = 4
 	Aggressiveness = 1.0
 	MonsterHealth = 4
-	NoInfighting
 	NoPain
 	DisableCheats
 }
@@ -84,6 +83,8 @@ gameinfo
 	intermissionmusic = "MSSNCLER"
 	finalemusic = "DETHMINE"
 	pickupcolor = "blue"
+	chatsound = "gmid/chat"
+	quitsound = "gmid/quit"
 	quitmessages = "$QUITMSG","$QUITMSG1","$QUITMSG2","$QUITMSG3","$QUITMSG4",
 	"$QUITMSG5","$QUITMSG6","$QUITMSG7","$QUITMSG8","$QUITMSG9","$QUITMSG10",
 	"$QUITMSG11","$QUITMSG12","$QUITMSG13","$QUITMSG14", "$QUITMSG15", "$QUITMSG16",
@@ -92,6 +93,12 @@ gameinfo
 	pausesign = "PAWS"
 	dimcolor = "000000"
 	endoom = "ENGMID"
+}
+
+automap
+{
+	base = "strife"
+	showlocks = true
 }
 
 map TITLEMAP lookup "Your Adventure Begins"

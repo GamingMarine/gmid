@@ -517,6 +517,17 @@ player/kicktaunt7			kick07
 player/kicktaunt8			kick08
 player/kicktaunt9			kick09
 player/kicktaunt10			kick10
+$random player/headshot { player/headshot1 player/headshot2 player/headshot3 player/headshot4 player/headshot5 player/headshot6 player/headshot7 player/headshot8 player/headshot9 player/headshot10 }
+player/headshot1			hedsht01
+player/headshot2			hedsht02
+player/headshot3			hedsht03
+player/headshot4			hedsht04
+player/headshot5			hedsht05
+player/headshot6			hedsht06
+player/headshot7			hedsht07
+player/headshot8			hedsht08
+player/headshot9			hedsht09
+player/headshot10			hedsht10
 player/imonfire		gmpdiehi
 player/meleedie		deathhit
 player/death		GMPLDETH //Used during the cast call
@@ -645,8 +656,8 @@ misc/secret			null
 misc/quit1			QUITSND1
 misc/quit2			QUITSND2
 misc/quit3			QUITSND3
-$random menu/quit1 { misc/quit1 misc/quit2 misc/quit3 }
-$random menu/quit2 { misc/quit1 misc/quit2 misc/quit3 }
+$random gmid/quit { misc/quit1 misc/quit2 misc/quit3 }
+gmid/chat			CHATSND
 intermission/tick	COUNTING
 intermission/nextstage	COUNTEND
 weapons/shotgr		CONTINUE
@@ -733,6 +744,14 @@ wood/break				WOODBRK
 wood/hit1				WOODHIT1
 wood/hit2				WOODHIT2
 $random wood/hit { wood/hit1 wood/hit2 }
+tree/break				TREEBRK
+$random bush/rustle { bush/rustle1 bush/rustle2 bush/rustle3 }
+bush/rustle1			BUSHRST1
+bush/rustle2			BUSHRST2
+bush/rustle3			BUSHRST3
+$random limb/break { limb/break1 limb/break2 }
+limb/break1				LIMBGIB1
+limb/break2				LIMBGIB2
 $volume ambience/reactor 0.5
 ambience/reactor		reactor
 ambience/scream1		SCREAM01
@@ -836,8 +855,11 @@ $limit PillarGlassBreak 0
 $limit radio/break 0
 $limit glass/break 0
 $limit wood/break 0
+$limit tree/break 0
+$limit limb/break 0
 $limit GlassShardImpact 0
 $limit wood/hit 0
+$limit bush/rustle 0
 
 //Sound definitions for the mobsters
 $random cyber/hoof 		{ cyber/hoof1 cyber/hoof2 cyber/hoof3 cyber/hoof4 }
@@ -1831,6 +1853,7 @@ $random Chainguy/Pain { Chainguy/Pain1 Chainguy/Pain2 }
 Chainguy/Pain1		MAJRHRT1
 Chainguy/Pain2		MAJRHRT2
 Chainguy/Death		MAJRDTH
+Chainguy/Headshot	MAJRHEAD
 
 //Damn, I wouldn't want to lose to me either.
 GamingMarineClone/Sight1		GMBOTST1
@@ -2181,8 +2204,16 @@ world/watersplash gloop
 world/lavasizzle acid5
 world/sludgegloop muck5
 
+world/spark4			spark4	
+$random world/spark		{ world/spark1  world/spark2  world/spark3  world/spark4 }
+
 thank/you THANKS
 
 //Heretic sounds
 $pitchshiftrange 2
 himp/burn			IMPBURN
+
+brute/sight			BRUTSIT
+brute/active		BRUTACT
+brute/pain			BRUTPAIN
+brute/death			BRUTDTH

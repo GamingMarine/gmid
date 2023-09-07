@@ -15,7 +15,7 @@ actor EvilMarine_Rifle //Evil! EEEVILLL
   DeathSound "bgrunt/death"
   AttackSound "rifle/fire"
   DropItem "UsedClipSpawner"
-  DropItem "GMIDHandGrenade" 32
+  DropItem "GMIDHandGrenadeGiver"
   translation "112:127=%[0, 0, 0]:[2, 2, 0]"
   Obituary "$OB_EVILMARINE"
   Tag "$TAG_EVILMARINE1"
@@ -91,7 +91,7 @@ actor EvilMarine_Rifle //Evil! EEEVILLL
 	HDSH B 0 A_NoBlocking
 	HDSH B 0 A_SpawnItem("GMIDHeadshotSpawner")
 	HDSH BC 10
-	HDSH B 0 A_GiveToTarget("PlayerKillTaunt",1)
+	HDSH B 0 A_GiveToTarget("PlayerHeadshotTaunt",1)
 	HDSH BCDE 10
 	HDSH F -1
 	Stop
@@ -102,6 +102,19 @@ actor EvilMarine_Rifle //Evil! EEEVILLL
 	EVMD E 10
 	TNT1 A 0 A_GiveToTarget("PlayerKillTaunt",1)
 	EVMD E -1
+	Stop
+  Death.AngleGrinder:
+	EVC1 A 0 A_GiveToTarget("ScoreItem",250)
+	EVC1 A 5 A_Scream
+	EVC1 B 0 A_NoBlocking
+	EVC1 B 5 A_PlaySound("misc/gibbed",CHAN_AUTO)
+	EVC1 C 0 A_FaceTarget
+	EVC1 C 5 A_SpawnItemEx("EvilMarineTorso_Rifle",0,0,32,random(-2,-4),random(-1,1),random(2,4),1)
+	EVC1 D 5
+	EVC1 E 5 A_PlaySound("body/hitfloor")
+	EVC1 FG 5
+	TNT1 A 0 A_GiveToTarget("PlayerKillTaunt",1)
+	EVC1 G -1
 	Stop
   Death.Foot:
 	PLA1 G 0 A_GiveToTarget("ScoreItem",250)
@@ -180,7 +193,7 @@ actor EvilMarine_Shotgun : EvilMarine_Rifle
 {
   AttackSound "Shotguy/Attack"
   DropItem "GmidShotgun"
-  DropItem "GMIDHandGrenade" 32
+  DropItem "GMIDHandGrenadeGiver"
   translation "112:127=%[0, 0, 0]:[2, 1, 0]"
   Tag "$TAG_EVILMARINE2"
   States
@@ -218,6 +231,19 @@ actor EvilMarine_Shotgun : EvilMarine_Rifle
 	PLA3 F 10 bright A_CustomBulletAttack(22.5, 0, 3, random(1,5)*3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
 	PLA3 E 10
 	Goto See
+  Death.AngleGrinder:
+	EVC1 A 0 A_GiveToTarget("ScoreItem",250)
+	EVC1 A 5 A_Scream
+	EVC1 B 0 A_NoBlocking
+	EVC1 B 5 A_PlaySound("misc/gibbed",CHAN_AUTO)
+	EVC1 C 0 A_FaceTarget
+	EVC1 C 5 A_SpawnItemEx("EvilMarineTorso_Shotgun",0,0,32,random(-2,-4),random(-1,1),random(2,4),1)
+	EVC1 D 5
+	EVC1 E 5 A_PlaySound("body/hitfloor")
+	EVC1 FG 5
+	TNT1 A 0 A_GiveToTarget("PlayerKillTaunt",1)
+	EVC1 G -1
+	Stop
    }
 }
 
@@ -225,7 +251,7 @@ actor EvilMarine_Minigun : EvilMarine_Rifle
 {
   AttackSound "weapons/UZIFIRE1"
   DropItem "VGun"
-  DropItem "GMIDHandGrenade" 32
+  DropItem "GMIDHandGrenadeGiver"
   translation "112:127=%[0, 0, 0]:[2, 0, 0]"
   Tag "$TAG_EVILMARINE3"
   States
@@ -265,6 +291,19 @@ actor EvilMarine_Minigun : EvilMarine_Rifle
 	PLA4 G 1 bright A_CustomBulletAttack(22.5, 0, 3, random(1,5)*3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
 	PLA4 E 1 A_SpidRefire
 	Goto Missile+1
+  Death.AngleGrinder:
+	EVC1 A 0 A_GiveToTarget("ScoreItem",250)
+	EVC1 A 5 A_Scream
+	EVC1 B 0 A_NoBlocking
+	EVC1 B 5 A_PlaySound("misc/gibbed",CHAN_AUTO)
+	EVC1 C 0 A_FaceTarget
+	EVC1 C 5 A_SpawnItemEx("EvilMarineTorso_Minigun",0,0,32,random(-2,-4),random(-1,1),random(2,4),1)
+	EVC1 D 5
+	EVC1 E 5 A_PlaySound("body/hitfloor")
+	EVC1 FG 5
+	TNT1 A 0 A_GiveToTarget("PlayerKillTaunt",1)
+	EVC1 G -1
+	Stop
    }
 }
 
@@ -280,4 +319,48 @@ Actor BurningMarine : BurningBoi
 		FGUY A 1 Bright A_Wander
 		Goto ContinueBurn
 	}
+}
+
+Actor EvilMarineTorso_Rifle
+{
+  Radius 3
+  Height 3
+  Mass 1
+  +MISSILE
+  +NOTELEPORT
+  +MOVEWITHSECTOR
+  +BLOODLESSIMPACT
+  +FLOORCLIP
+  +NOBLOCKMAP
+  -BOUNCEONACTORS
+  -SOLID
+  Speed 2
+  BounceCount 8
+  BounceSound "body/hitfloor"
+  Translation "112:127=%[0, 0, 0]:[2, 2, 0]"
+  States
+  {
+  Spawn:
+	EVC2 A 0
+	TNT1 A 0 A_JumpIf(CallACS("CleanerBlood")==1, "NoThankYou")
+	EVC2 A 1 A_SpawnItemEx("BloodSplurt",0,0,0,2,random(-2,2),random(-3,3),random(-3,3))
+	Loop
+  NoThankYou:
+	EVC2 A 1
+	Loop
+  Death:
+	EVC2 BCD 5
+	EVC2 E -1
+	Stop
+  }
+}
+
+Actor EvilMarineTorso_Shotgun : EvilMarineTorso_Rifle
+{
+  Translation "112:127=%[0, 0, 0]:[2, 1, 0]"
+}
+
+Actor EvilMarineTorso_Minigun : EvilMarineTorso_Shotgun
+{
+  Translation "112:127=%[0, 0, 0]:[2, 0, 0]"
 }

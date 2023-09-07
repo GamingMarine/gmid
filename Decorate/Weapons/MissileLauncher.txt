@@ -135,6 +135,7 @@ Actor GMIDRocket : Rocket replaces Rocket
 	Death:
 		ZXPL A 0 A_PlaySound("explosion/distant", CHAN_VOICE)
 		ZXPL A 0 A_PlaySound("newexplosion")
+		ZXPL A 0 A_Explode(175,148)
 		BEXP D 0 A_SpawnItem("ExplosionSpawner")
 		Stop
 	}

@@ -1,6 +1,6 @@
 DefaultListMenu
 {
-	Font "BigFont", "Red"
+	Font "BigFont", "Green", "White"
 	Selector "SKULLY_1", -32, -5
 	LineSpacing 18
 }

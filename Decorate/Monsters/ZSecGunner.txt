@@ -72,6 +72,8 @@ Actor ZSecGunner
   Death:
   Death.RevX:
 	ZSC1 G 0 A_GiveToTarget("ScoreItem",200)
+	TNT1 A 0 A_Jump(256, "Death1", "Death2")
+  Death1:
     ZSC1 G 5
     ZSC1 H 5 A_Scream
     ZSC1 I 5 A_NoBlocking
@@ -80,6 +82,15 @@ Actor ZSecGunner
 	TNT1 A 0 A_GiveToTarget("PlayerKillTaunt",1)
     ZSC1 L -1
 	Stop
+  Death2:
+	ZSCD A 5
+	ZSCD B 5 A_Scream
+	ZSCD C 5
+	ZSCD D 5 A_NoBlocking
+	ZSCD EFG 5
+	TNT1 A 0 A_GiveToTarget("PlayerKillTaunt",1)
+	ZSCD H 5 A_PlaySound("body/hitfloor")
+	ZSCD I -1
   Death.Foot:
 	ZSC1 G 0 A_GiveToTarget("ScoreItem",200)
     ZSC1 G 5 ThrustThingZ(0,16,0,0)

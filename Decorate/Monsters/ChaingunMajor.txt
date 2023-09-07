@@ -50,7 +50,7 @@ Actor ChaingunMajor : ChaingunGuy
   Death:
   Death.RevX:
 	CPS2 G 0 A_GiveToTarget("ScoreItem",400)
-	CPS2 G 0 A_Jump(256, "Death1", "Death2", "Death3")
+	CPS2 G 0 A_Jump(256, "Death1", "Death2", "Death3", "Death4")
   Death1:
     CPS2 H 5
     CPS2 I 5 A_Scream
@@ -81,6 +81,19 @@ Actor ChaingunMajor : ChaingunGuy
 	CPS3 A 10
 	TNT1 A 0 A_GiveToTarget("PlayerKillTaunt",1)
     CPS3 A -1
+    Stop
+  Death4:
+    CPS3 B 5 A_Scream
+	CPS3 B 0 A_NoBlocking
+	CPS3 B 0 A_PlaySound("Chainguy/Headshot", CHAN_VOICE)
+	CPS3 B 0 A_SpawnItem("GMIDHeadshotSpawner")
+	CPS3 C 5
+	CPS3 D 20
+	CPS3 E 5
+	TNT1 A 0 A_GiveToTarget("PlayerHeadshotTaunt",1)
+	CPS3 E 2
+	CPS3 F 0 A_PlaySound("body/hitfloor")
+    CPS3 F -1
     Stop
   Death.Foot:
 	CPS2 G 0 A_GiveToTarget("ScoreItem",400)

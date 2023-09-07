@@ -149,6 +149,7 @@ Actor 40mmShot
 	MIS6 B 0 A_NoGravity
 	ZXPL A 0 A_PlaySound("explosion/distant", CHAN_AUTO)
 	ZXPL A 0 A_PlaySound("newexplosion")
+	ZXPL A 0 A_Explode(175,148)
 	BEXP D 0 A_SpawnItem("ExplosionSpawner")
 	Stop
   }

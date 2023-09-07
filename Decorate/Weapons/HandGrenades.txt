@@ -16,6 +16,7 @@ Actor GMIDHandGrenade : Weapon replaces ArtiTimeBomb
 	Weapon.UpSound "Grenade/Select"
 	Tag "$TAG_GRENADE"
 	+WEAPON.NOALERT
+	+WEAPON.NOAUTOAIM
 	Inventory.PickupMessage "$GOTGRENADE"
 	Obituary "$OB_GRENADE"
 	Inventory.Icon "HGRPA0"
@@ -291,6 +292,7 @@ Actor ThrownHandGrenade1
 	  ZXPL A 0 A_AlertMonsters
 	  ZXPL A 0 A_PlaySound("explosion/distant", CHAN_VOICE)
 	  ZXPL A 0 A_PlaySound("newexplosion")
+	  ZXPL A 0 A_Explode(175,148)
 	  BEXP D 0 A_SpawnItem("ExplosionSpawner")
 	  Stop
 	}
@@ -314,4 +316,29 @@ Actor ThrownHandGrenade4 : ThrownHandGrenade1
 Actor HandGrenadeSmokeTrail : CasingSmokeTrail
 {
 	RenderStyle Translucent
+}
+
+Actor GMIDHandGrenadeGiver : GMIDHandGrenadeAmmo //For some reason, GMIDHandGrenades dropped by Evil Marines cannot be picked up, so this is here to fix that.
+{
+	Inventory.PickupSound "Grenade/Pickup"
+	Inventory.PickupMessage "$GOTGRENADE"
+	Scale 0.6
+	States
+	{
+  Spawn:
+	TNT1 A 0
+	TNT1 A 0 A_Jump(256, "Spawn1", "Spawn2", "Spawn3", "Spawn4")
+  Spawn1:
+	HGRP A -1
+	Stop
+  Spawn2:
+	HGRP B -1
+	Stop
+  Spawn3:
+	HGRP C -1
+	Stop
+  Spawn4:
+	HGRP D -1
+	Stop
+  }
 }

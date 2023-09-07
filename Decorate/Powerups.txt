@@ -278,7 +278,6 @@ ACTOR LifeSphere : CustomInventory Replaces SoulSphere
 	Pickup:
 		TNT1 A 0 A_GiveInventory("SoulSphereHealth",1)
 		TNT1 A 0 A_SetBlend("Blue",0.75,16)
-		TNT1 A 0 A_SetMugshotState("SoulGrin")
 		TNT1 A 0 A_JumpIf(CallACS("DisableAnnouncer")==1, "NoAnnouncer")
 		TNT1 A 0 A_PlaySound("announcer/soulsphere", 0, 1, FALSE, ATTN_NONE)
 		Stop
@@ -363,7 +362,6 @@ ACTOR EnergySphere : CustomInventory Replaces Megasphere
 		TNT1 A 0 A_GiveInventory("PraetorArmorVest", 1)
 		TNT1 A 0 A_GiveInventory("NewMegasphereHealth", 1)
 		TNT1 A 0 A_SetBlend("White",0.75,16)
-		TNT1 A 0 A_SetMugshotState("MegaGrin")
 		TNT1 A 0 A_JumpIf(CallACS("DisableAnnouncer")==1, "NoAnnouncer")
 		TNT1 A 0 A_PlaySound("announcer/megasphere", 0, 1, FALSE, ATTN_NONE)
 		Stop
@@ -465,7 +463,6 @@ ACTOR DoubleSphere : CustomInventory
 	Pickup:
 		TNT1 A 0 A_GiveInventory("DoubleSphereDamage",1)
 		TNT1 A 0 A_SetBlend("Red",0.75,16)
-		TNT1 A 0 A_SetMugshotState("DoubleDamage")
 		TNT1 A 0 A_JumpIf(CallACS("DisableAnnouncer")==1, "NoAnnouncer")
 		TNT1 A 0 A_PlaySound("announcer/doubledamage", 0, 1, FALSE, ATTN_NONE)
 		Stop
@@ -547,7 +544,6 @@ Actor QuadDamage : CustomInventory
   Pickup:
 	TNT1 A 0 A_GiveInventory("QuadDamagePowerup",1)
 	TNT1 A 0 A_SetBlend("Blue",0.75,16)
-	TNT1 A 0 A_SetMugshotState("QuadDamage")
 	TNT1 A 0 A_JumpIf(CallACS("DisableAnnouncer")==1, "NoAnnouncer")
 	TNT1 A 0 A_PlaySound("announcer/quaddamage", 0, 1, FALSE, ATTN_NONE)
 	Stop
@@ -611,7 +607,6 @@ actor HasteSphere : CustomInventory replaces BlurSphere
 	Pickup:
 		TNT1 A 0 A_GiveInventory("HasteSpherePowerup", 1)
 		TNT1 A 0 A_SetBlend("Orange",0.75,16)
-		TNT1 A 0 A_SetMugshotState("HasteSphere")
 		TNT1 A 0 A_JumpIf(CallACS("DisableAnnouncer")==1, "NoAnnouncer")
 		TNT1 A 0 A_PlaySound("announcer/haste", 0, 1, FALSE, ATTN_NONE)
 		Stop

@@ -70,7 +70,7 @@ actor SawedOffShotgunGuy
 	ZSDO I 0 A_PlaySound("gore/head", CHAN_VOICE)
 	ZSDO I 0 A_SpawnItem("GMIDHeadshotSpawner")
     ZSDO IJ 13 
-	ZSDO J 0 A_GiveToTarget("PlayerKillTaunt",1)
+	ZSDO J 0 A_GiveToTarget("PlayerHeadshotTaunt",1)
     ZSDO K 13
     ZSDO LM 10
     ZSDO N -1

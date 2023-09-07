@@ -113,7 +113,9 @@ Actor FreeDoomDeltaMarine replaces CommanderKeen
   +SHOOTABLE
   +COUNTKILL
   +NOICEDEATH
+  +SPAWNCEILING
   +ISMONSTER
+  +DONTFALL
   PainSound "freedoomer/pain"
   DeathSound "freedoomer/death"
   Tag "$TAG_FREEDOOMER"

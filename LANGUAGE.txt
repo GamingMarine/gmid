@@ -30,8 +30,8 @@ TXT_DEFAULTPICKUPMSG = "You get Tool.";
 D_DEVSTR = "Useless mode ENABLED.\n";
 PRESSKEY = "Press any key to continue.";
 PRESSYN = "Press Y or N to confirm.";
-TXT_YES = "Yeah Boi";
-TXT_NO = "Naw Fam";
+TXT_YES = "Yeah";
+TXT_NO = "Nah";
 SAFEMESSAGE = "Are you sure? You might not be able to undo this action.";
 DOSY = "(Do you want to quit? Press Y or N to confirm)";
 
@@ -232,6 +232,7 @@ TAG_LORD = "Master Force Lord";
 TAG_LUNA = "Princess Luna";
 TAG_NONBOY = "NONBoy";
 TAG_FREEDOOMER = "Hung Marine";
+TAG_BRUTE = "Undead Brute";
 
 CC_COOKIE = "Cookiedemon";
 CC_GM = "GamingMarine";
@@ -273,6 +274,7 @@ OB_GMBOT = "%o was terminated by a GMBot.";
 OB_LORD = "%o was obliterated by the Master Force Lord.";
 OB_LUNA = "%o kneeled before Princess Luna.";
 OB_NONBOY = "%o couldn't stop the New Order.";
+OB_BRUTE = "%o was demolished by an Undead Brute.";
 
 //Quit messages
 QUITMSG = "The Master force still grows rapidly.\n"
@@ -395,8 +397,8 @@ MENULOAD = "Restore Progress";
 MENULOADNETGAME = "You will need to quit this netgame in order to load any progress.";
 MENUSAVE = "Save Progress";
 MENUQUIT = "Surrender";
-MODVERSION1 = "v2.0.0 EXPERIMEMTAL BUILD 91";
-MODVERSION2 = "Compiled Monday, August 14th, 2023";
+MODVERSION1 = "v2.0.0 EXPERIMEMTAL BUILD 92";
+MODVERSION2 = "Compiled Thursday, September 7th, 2023";
 MENUEPSD = "Choose Your Destiny";
 MENUSKIL = "How tough are you?";
 DIFFNAME1 = "Can I play, Daddy?";

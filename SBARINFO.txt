@@ -53,31 +53,6 @@ mugshot "God", health2
 	{GOD00, GOD01, GOD02} 17;
 }
 
-mugshot "SoulGrin"
-{
-	SOUL0 70;
-}
-
-mugshot "MegaGrin"
-{
-	MEGA0 70;
-}
-
-mugshot "HasteSphere", health
-{
-	HAST0 70;
-}
-
-mugshot "DoubleDamage", health
-{
-	ARNO0 70;
-}
-
-mugshot "QuadDamage", health
-{
-	QUAD0 70;
-}
-
 mugshot "XDeath"
 {
 	XDTH0 3;

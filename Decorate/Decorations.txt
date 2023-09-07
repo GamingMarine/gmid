@@ -450,9 +450,12 @@ ACTOR HangedMarine1Blocking replaces HangTSkull
   Game Doom
   Radius 22
   Height 54
+  Health 10
+  Mass 900000
   +SOLID
   +NOGRAVITY
   +SPAWNCEILING
+  +SHOOTABLE
   States
   {
   Spawn:
@@ -464,6 +467,11 @@ ACTOR HangedMarine1Blocking replaces HangTSkull
   Spawn2:
     HMAR D -1
     Stop
+  Death:
+	TNT1 A 0 A_XScream
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_SpawnItem("GMIDGibSpawner")
+	Stop
   }
 }
 
@@ -491,6 +499,11 @@ ACTOR HangedMarine3Blocking : HangedMarine1Blocking replaces HangTLookingDown
   Spawn2:
 	HMAR F -1
 	Stop
+  Death:
+	TNT1 A 0 A_XScream
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_SpawnItem("GMIDGibSpawner_NoSkull")
+	Stop
   }
 }
 
@@ -513,9 +526,12 @@ ACTOR CTHangMarineLimb replaces Meat5
 {
   Radius 16
   Height 68
+  Health 5
+  Mass 900000
   +SOLID
   +NOGRAVITY
   +SPAWNCEILING
+  +SHOOTABLE
   States
   {
   Spawn:
@@ -526,6 +542,11 @@ ACTOR CTHangMarineLimb replaces Meat5
     Loop
   Spawn2:
 	HANL C -1
+	Stop
+  Death:
+	TNT1 A 0 A_PlaySound("Limb/Break")
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_SpawnItem("GMIDHeadshotSpawner")
 	Stop
   }
 }
@@ -559,9 +580,12 @@ ACTOR LiveHangingMarine replaces NonsolidTwitch
   Game Doom
   Radius 16
   Height 64
+  Health 20
+  Mass 900000
   +NOGRAVITY
   +SPAWNCEILING
   +FLOAT
+  +SHOOTABLE
   States
   {
   Spawn:
@@ -573,6 +597,11 @@ ACTOR LiveHangingMarine replaces NonsolidTwitch
   Spawn2:
 	HUSO IJKLMNO 6
 	Loop
+  Death:
+	TNT1 A 0 A_XScream
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_SpawnItem("GMIDGibSpawner")
+	Stop
   }
 }
 
@@ -604,35 +633,29 @@ ACTOR MostlyDeadHangingMarine : DeadHangingMarine replaces NonsolidMeat3
 
 ACTOR LiveHangingMarineBlocking : LiveHangingMarine replaces BloodyTwitch
 {
-  Mass 999999999
   +SOLID
-  +SHOOTABLE
-  +NODAMAGE
 }
 
 ACTOR DeadHangingMarineBlocking : DeadHangingMarine replaces Meat2
 {
-  Mass 999999999
   +SOLID
-  +SHOOTABLE
-  +NODAMAGE
 }
 
 ACTOR MostlyDeadHangingMarineBlocking : MostlyDeadHangingMarine replaces Meat3
 {
-  Mass 999999999
   +SOLID
-  +SHOOTABLE
-  +NODAMAGE
 }
 
 ACTOR CTHangPlayer1 replaces HangNoGuts
 {
   Radius 16
   Height 88
+  Health 20
+  Mass 900000
   +SOLID
   +NOGRAVITY
   +SPAWNCEILING
+  +SHOOTABLE
   States
   {
   Spawn:
@@ -643,6 +666,11 @@ ACTOR CTHangPlayer1 replaces HangNoGuts
     Stop
   Spawn2:
 	HANP C -1
+	Stop
+  Death:
+	TNT1 A 0 A_XScream
+	TNT1 A 0 A_NoBlocking
+	TNT1 A 0 A_SpawnItem("GMIDGibSpawner")
 	Stop
   }
 }
@@ -1263,7 +1291,14 @@ Actor Gardentree1
 {
   Radius 20
   Height 90
-  +Solid 
+  DeathHeight 50
+  Health 200
+  Mass 900000
+  PainChance 256
+  BloodType "TreeDecalSpawner"
+  +Solid
+  +Shootable
+  +NoBloodDecals
   States
   {
   Spawn:
@@ -1274,14 +1309,23 @@ Actor Gardentree1
   SaySomething:
 	PLAN A 0 A_PlaySound("ambience/bird")
     Goto Spawn+1
+  Pain.Fist:
+  Pain.BigFist:
+  Pain.Uppercut:
+  Pain.Foot:
+	TNT1 A 0 A_SpawnItem("TinyBushPieceSpawner")
+	Goto Spawn
+  Death:
+	TNT1 AAAAAAAAAAAAAAAAAAAA 0 A_SpawnItemEx("WoodShard",0,0,48,random(-2,2),random(-2,2),random(3,9),random(0,359),32)
+	TNT1 AAAAA 0 A_SpawnItemEx("TreeBranch",0,0,48,random(-2,2),random(-2,2),random(3,9),random(0,359),32)
+	TNT1 A 0 A_PlaySound("tree/break")
+	BTRE A -1
+	Stop
   }
 }
 
-Actor Gardentree2
+Actor Gardentree2 : Gardentree1
 {
-  Radius 20
-  Height 90
-  +Solid
   States
   {
   Spawn:
@@ -1292,6 +1336,52 @@ Actor Gardentree2
   SaySomething:
 	PLAN B 0 A_PlaySound("ambience/bird")
     Goto Spawn+1
+  Pain.Fist:
+  Pain.BigFist:
+  Pain.Uppercut:
+  Pain.Foot:
+	TNT1 A 0 A_SpawnItem("TinyBushPieceSpawner")
+	Goto Spawn
+  Death:
+	TNT1 AAAAAAAAAAAAAAAAAAAA 0 A_SpawnItemEx("WoodShard",0,0,48,random(-2,2),random(-2,2),random(3,9),random(0,359),32)
+	TNT1 AAAAA 0 A_SpawnItemEx("TreeBranch",0,0,48,random(-2,2),random(-2,2),random(3,9),random(0,359),32)
+	TNT1 A 0 A_PlaySound("tree/break")
+	BTRE B -1
+	Stop
+  }
+}
+
+ACTOR TreeBranch : WoodShard
+{
+  DeathSound "bush/rustle"
+  Gravity 0.4
+  States
+  {
+  Spawn:
+     TNT1 A 0
+     TNT1 A 0 A_Jump(256,"Standard","Small","Tiny","XLarge")
+  Standard:	
+     BRNC ABCDEFGH 3
+	 Loop
+  Small:	
+     TNT1 A 0 A_SetScale(0.8)
+     BRNC ABCDEFGH 2
+	 Loop	
+  Tiny:	
+     TNT1 A 0 A_SetScale(0.4)
+     BRNC ABCDEFGH 1
+	 Loop
+  XLarge:	
+     TNT1 A 0 A_SetScale(1.6)
+     BRNC ABCDEFGH 4
+	 Loop	
+  Death:
+     TNT1 A 0 A_Jump(128, "AltDeath")
+     BRNC I 250
+     Stop
+  AltDeath:
+	BRNC J 250
+	Stop
   }
 }
 
@@ -1299,7 +1389,14 @@ Actor Gardenbush1
 {
   Radius 24
   Height 30
+  DeathHeight 5
+  Health 5
+  Mass 900000
+  PainChance 256
+  BloodType "TinyBushPieceSpawner"
   +Solid
+  +Shootable
+  +NoBloodDecals
   States
   {
   Spawn:
@@ -1310,14 +1407,21 @@ Actor Gardenbush1
   SaySomething:
 	PLAN C 0 A_PlaySound("toad/ribbit")
     Goto Spawn+1
+  Pain.Fist:
+	TNT1 A 0 A_SpawnItem("TinyBushPieceSpawner")
+	Goto Spawn
+  Death:
+	TNT1 AAA 0 A_SpawnItemEx("WoodShard",0,0,10,random(-2,2),random(-2,2),random(3,9),random(0,359),32)
+	TNT1 AAAAAAAAAA 0 A_SpawnItemEx("BushPiece",0,0,10,random(-2,2),random(-2,2),random(3,9),random(0,359),32)
+	TNT1 A 0 A_PlaySound("bush/rustle")
+	BTRE C -1
+	Stop
   }
 }
 
-Actor Gardenbush2 replaces TorchTree
+Actor Gardenbush2 : Gardenbush1 replaces TorchTree
 {
   Radius 16
-  Height 30
-  +Solid
   States
   {
   Spawn:
@@ -1328,14 +1432,20 @@ Actor Gardenbush2 replaces TorchTree
   SaySomething:
 	PLAN D 0 A_PlaySound("ambience/bird")
     Goto Spawn+1
+  Pain.Fist:
+	TNT1 A 0 A_SpawnItem("TinyBushPieceSpawner")
+	Goto Spawn
+  Death:
+	TNT1 AAA 0 A_SpawnItemEx("WoodShard",0,0,10,random(-2,2),random(-2,2),random(3,9),random(0,359),32)
+	TNT1 AAAAAAA 0 A_SpawnItemEx("BushPiece",0,0,10,random(-2,2),random(-2,2),random(3,9),random(0,359),32)
+	TNT1 A 0 A_PlaySound("bush/rustle")
+	BTRE D -1
+	Stop
   }
 }
 
-Actor Gardenbush3
+Actor Gardenbush3 : Gardenbush2
 {
-  Radius 16
-  Height 30
-  +Solid
   States
   {
   Spawn:
@@ -1346,5 +1456,106 @@ Actor Gardenbush3
   SaySomething:
 	PLAN E 0 A_PlaySound("toad/ribbit")
     Goto Spawn+1
+  Pain.Fist:
+	TNT1 A 0 A_SpawnItem("TinyBushPieceSpawner")
+	Goto Spawn
+  Death:
+	TNT1 AAA 0 A_SpawnItemEx("WoodShard",0,0,10,random(-2,2),random(-2,2),random(3,9),random(0,359),32)
+	TNT1 AAAAA 0 A_SpawnItemEx("BushPiece",0,0,10,random(-2,2),random(-2,2),random(3,9),random(0,359),32)
+	TNT1 A 0 A_PlaySound("bush/rustle")
+	BTRE E -1
+	Stop
+  }
+}
+
+ACTOR BushPiece : WoodShard
+{
+  DeathSound "bush/rustle"
+  Gravity 0.5
+  States
+  {
+  Spawn:
+     TNT1 A 0
+     TNT1 A 0 A_Jump(256,"Standard","Small","Tiny","XLarge")
+  Standard:	
+     BUSH ABCDEFGH 3
+	 Loop
+  Small:	
+     TNT1 A 0 A_SetScale(0.8)
+     BUSH ABCDEFGH 2
+	 Loop	
+  Tiny:	
+     TNT1 A 0 A_SetScale(0.4)
+     BUSH ABCDEFGH 1
+	 Loop
+  XLarge:	
+     TNT1 A 0 A_SetScale(1.6)
+     BUSH ABCDEFGH 4
+	 Loop	
+  Death:
+     BUSH I 250
+     Stop
+  }
+}
+
+Actor TinyBushPiece : BushPiece
+{
+  States
+  {
+  Spawn:
+	TNT1 A 0
+	Goto Tiny
+  }
+}
+
+actor TreeDecalSpawner
+{
+  States
+  {
+  Spawn:
+	TNT1 A 0
+	TNT1 A 0 A_SpawnItemEx("WoodShard",0,0,10,random(-2,2),random(-2,2),random(3,9),random(0,359),32)
+  	TNT1 A 0 A_SpawnItemEx("TinyBushPiece",0,0,10,random(-2,2),random(-2,2),random(3,9),random(0,359),32)
+	Stop
+  }
+}
+
+actor TinyBushPieceSpawner
+{
+  States
+  {
+  Spawn:
+	TNT1 A 0
+  	TNT1 AAA 0 A_SpawnItemEx("TinyBushPiece",0,0,10,random(-2,2),random(-2,2),random(3,9),random(0,359),32)
+	Stop
+  }
+}
+
+//Heretic Decorations
+Actor GMIDWoodenBarrel : Barrel replaces Barrel
+{
+  Health 20
+  +PUSHABLE
+  +SHOOTABLE
+  +NOBLOODDECALS
+  BloodType "WoodShardSpawner"
+  DeathSound "wood/break"
+  States
+  {
+  Death:
+	TNT1 AAAAAAAAAAAAAAA 0 A_SpawnItemEx("WoodShard",0,0,16,random(-2,2),random(-2,2),random(3,9),random(0,359),32)
+	TNT1 A 0 A_Scream
+	Stop
+  }
+}
+
+actor WoodShardSpawner
+{
+  States
+  {
+  Spawn:
+	TNT1 A 0
+  	TNT1 AAA 0 A_SpawnItemEx("WoodShard",0,0,10,random(-2,2),random(-2,2),random(3,9),random(0,359),32)
+	Stop
   }
 }
