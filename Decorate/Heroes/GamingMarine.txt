@@ -46,11 +46,17 @@ Actor GamingMarine : DoomPlayer
 	States
 	{
 	Spawn:
-		GMRN Z -1
+		GMRN Z 1
 		Loop
 	See:
 		GMRN ABCD 6
 		Loop
+	Jump:
+		GMRN O 8
+		GMRN O 1 A_CheckFloor(1)
+		Wait
+		GMRN Z 0
+		Goto Spawn
 	Missile:
 		GMRN E 12
 		Goto Spawn

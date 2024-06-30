@@ -85,11 +85,15 @@ actor Firestick : Weapon
     Goto LightDone
   Spawn:
 	TNT1 A 0
+	TNT1 A 0 A_JumpIf(CallACS("VoxelsToggle")==1, "VoxelSpawn")
 	TNT1 A 0 A_Jump(128, "Spawn2")
 	SHGP A -1 
 	Stop
   Spawn2:
 	SHGP B -1
+	Stop
+  VoxelSpawn:
+	SHGP C -1
 	Stop
   AltFire:
 	TNT1 A 0 A_GunFlash("WeaponStill")
@@ -176,11 +180,15 @@ Actor NewShells2 : Ammo
 	{
 	Spawn:
 		TNT1 A 0
+		TNT1 A 0 A_JumpIf(CallACS("VoxelsToggle")==1, "VoxelSpawn")
 		TNT1 A 0 A_Jump(128, "Spawn2")
 		SHEL B -1 
 		Stop
 	Spawn2:
 		SHEL D -1
+		Stop
+	VoxelSpawn:
+		SHEL F -1
 		Stop
 	}
 }

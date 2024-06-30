@@ -1,6 +1,6 @@
 #library "REVXCHK"
 #include "zcommon.acs"
-// by 0x8BADF00D#8030
+// by f7cjo
 script "RevXSpawnChecker" (void)
 {
     SetActivator(0, AAPTR_PLAYER1);

@@ -81,7 +81,7 @@ skill nightmare
 gameinfo
 {
 	intermissionmusic = "MSSNCLER"
-	finalemusic = "DETHMINE"
+	finalemusic = "KPSKOUNT"
 	pickupcolor = "blue"
 	chatsound = "gmid/chat"
 	quitsound = "gmid/quit"
@@ -103,6 +103,6 @@ automap
 
 map TITLEMAP lookup "Your Adventure Begins"
 {
-	music = FLCASTLE
+	music = INSTINCT
 	skybox = GFIRSK00
 }

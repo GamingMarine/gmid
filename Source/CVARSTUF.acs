@@ -6,6 +6,11 @@ script "NoIntroWarning" (void)
 	SetResultValue(GetCvar("gmid_nointrowarning"));
 }
 
+script "VoxelsToggle" (void)
+{
+	SetResultValue(GetCvar("gmid_voxels"));
+}
+
 script "NoStrafeTilting" (void)
 {
 	SetResultValue(GetCvar("gmid_nostrafetilt"));

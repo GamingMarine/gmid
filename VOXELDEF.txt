@@ -1,0 +1,36 @@
+//These voxels by GamingMarine
+BKEYC = "BKEYC" { Spin = 75 }
+BKEYD = "BKEYD" { Spin = 75 }
+BON3E = "BON3E" { Spin = 75 }
+BON3F = "BON3F" { Spin = 75 }
+BON3G = "BON3G" { Spin = 75 }
+BON3H = "BON3H" { Spin = 75 }
+BON4E = "BON4E" { Spin = 75 }
+BON4F = "BON4F" { Spin = 75 }
+BON4G = "BON4G" { Spin = 75 }
+BON4H = "BON4H" { Spin = 75 }
+CSAWC = "CSAWC" { Spin = 75 }
+RFUGD = "RFUGD" { Spin = 75 }
+RKEYC = "RKEYC" { Spin = 75 }
+RKEYD = "RKEYD" { Spin = 75 }
+SHELA = "SHELA" { Spin = 75 }
+SHELF = "SHELF" { Spin = 75 }
+YKEYC = "YKEYC" { Spin = 75 }
+YKEYD = "YKEYD" { Spin = 75 }
+
+//These voxels by Absolute Lambda
+BBOXB = "BBOXB" { Spin = 75 }
+BLITC = "BLITC" { Spin = 75 }
+BROKB = "BROKB" { Spin = 75 }
+CHGPC = "CHGPC" { Spin = 75 }
+GLMMC = "GLMMC" { Spin = 75 }
+LAUNC = "LAUNC" { Spin = 75 }
+MGUNC = "MGUNC" { Spin = 75 }
+PISAC = "PISAC" { Spin = 75 }
+PISTB = "PISTB" { Spin = 75 }
+RIFLC = "RIFLC" { Spin = 75 }
+ROCKB = "ROCKB" { Spin = 75 }
+SBOXE = "SBOXE" { Spin = 75 }
+SGN2C = "SGN2C" { Spin = 75 }
+SHGPC = "SHGPC" { Spin = 75 }
+SHOTC = "SHOTC" { Spin = 75 }

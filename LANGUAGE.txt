@@ -281,8 +281,7 @@ QUITMSG = "The Master force still grows rapidly.\n"
 		  "Quitting will in no way advance the situation.";
 QUITMSG1 = "You quittin' on me, Private?";
 QUITMSG2 = "Hey, no one ever said being a space marine was easy!"; //Heretic
-QUITMSG3 = "What's that? You're gonna go play BlazBlue instead?\n\n"
-		   "Fine, then. It's not as appealing as this, though.";
+QUITMSG3 = "I don't suppose you'd reconsider?"; //Half-Life/Black Mesa
 QUITMSG4 = "Press N to fight strong.\n"
 		   "Press Y to die like the wimp you are.";
 QUITMSG5 = "Well, go click on your icons then.\n\n"
@@ -299,7 +298,8 @@ QUITMSG11 = "I wouldn't leave if I were you.\n"
 			"You got some really weird shit on your desktop."; //Doom II
 QUITMSG12 = "Okay, fine. Abandon all hope for humanity.\n\n"
 			"Genius move of you.";
-QUITMSG13 = "Watching nothing but Hazbin Hotel is no way to go through life, son."; //The Animal House
+QUITMSG13 = "What is the square root of a fish?\n\n"
+			"Now I'm sad."; //Skullgirls anti-piracy
 QUITMSG14 = "Heroes don't quit, but go ahead and press Y if you aren't one."; //Spear of Destiny
 QUITMSG15 = "Well, Sport, you think you can handle this without getting the lowest body count in the history of this mod?"; //Plumbers Don't Wear Ties
 QUITMSG16 = "Hey, Ron! Can we say 'bruh' in the game?"; //Doom source code/"Development mode only" quit messages
@@ -356,7 +356,6 @@ GOTBLUEPRISM = "You've found the \chblue\c- prism key!";
 
 // Obituary strings
 // First the self-kills, then the other-kills
-OB_SUICIDE = "%o, suicide is not the answer. Call the National Suicide Prevention Lifeline.";
 OB_FALLING = "%o's legs became splinters.";
 OB_CRUSH = "%o went \"squish!\"";
 OB_EXIT = "%o hates this map.";
@@ -365,13 +364,13 @@ OB_SLIME = "%o mutated into a pile of goop.";
 OB_LAVA = "%o melted like a crayon in the hot Sun.";
 OB_BARREL = "%o perished.";
 OB_SPLASH = "%o learned what splash damage is.";
-OB_KILLEDSELF = "%o took the easy way out.";
+OB_KILLEDSELF = "%o bit the bullet.";
 OB_VOODOO = "%o was voodoo'd.";
 
 // Same as OB_MPTELEFRAG, but shown when a monster telefrags you
 OB_MONTELEFRAG = "%o stood in the way of a monster.";
 
-OB_DEFAULT = "%o said %p final farewells.";
+OB_DEFAULT = "%o expired.";
 OB_MPDEFAULT = "%k eliminated %o.";
 OB_FRIENDLY1 = "%k killed a teammate of %p.";
 OB_FRIENDLY2 = "%k got in the way of someone else.";
@@ -397,8 +396,8 @@ MENULOAD = "Restore Progress";
 MENULOADNETGAME = "You will need to quit this netgame in order to load any progress.";
 MENUSAVE = "Save Progress";
 MENUQUIT = "Surrender";
-MODVERSION1 = "v2.0.0 EXPERIMEMTAL BUILD 92";
-MODVERSION2 = "Compiled Thursday, September 7th, 2023";
+MODVERSION1 = "v2.0.0 EXPERIMEMTAL BUILD 93";
+MODVERSION2 = "Compiled Sunday, June 30th, 2024";
 MENUEPSD = "Choose Your Destiny";
 MENUSKIL = "How tough are you?";
 DIFFNAME1 = "Can I play, Daddy?";
@@ -505,6 +504,9 @@ NOMISC = "No Miscellaneous";
 WARNOPTION1 = "Disable Intro Warning";
 WARNOPTION2 = "In case you don't care about the content warning when starting up";
 WARNOPTION3 = "the mod, you can instead have it cut straight to the fade in effect.";
+VOXELOPTION1 = "Use Voxels for Pickups";
+VOXELOPTION2 = "If you want the good-ol' flat sprite pickups instead.";
+VOXELOPTION3 = "\cf(Changing this option requires a map restart in order to take effect.)";
 TILTOPTION1 = "Disable Strafe-Tilting";
 TILTOPTION2 = "In newer versions of GZDoom, the player's screen tilts left or right";
 TILTOPTION3 = "when strafing, ala Quake 1. You can disable that here if it gives you";
@@ -561,44 +563,43 @@ E2TEXT =
 	"with you, for as you look down, your eyes widen.\n"
 	"\n"
 	"Deimos now floats above this dimension!\n"
-	"It was bad enough that the Master Force was invading\n"
-	"the area, but teleporting Deimos to wherever they live\n"
-	"is a whole new level of asshole.\n"
-	"Quickly, you rush down to the surface, thirsty for\n"
-	"ass-kicking.\n"
+	"You would be pissed about the Master Force doing such a\n"
+	"thing to something that doesn't belong to them, but at\n"
+	"the same time, it's generous they would leave you such\n"
+	"an easy shortcut to their hometown! Quickly, you rush\n"
+	"down to the surface.\n"
 	"\n"
 	"Time to teach these bastards the true meaning of\n"
 	"Inferno.";
 E3TEXT =
-	"'Tis quite a shame that you had to\n"
-	"assassinate one of your closest friends.\n"
-	"He was under the influence of those damned\n"
-	"creatures, riding one of them, so it's not\n"
-	"like you could do anything else.\n"
+	"That was one of your closest friends you just\n"
+	"assassinated. Not that you could do much else, seeing\n"
+	"as how he was already put under the influence of the\n"
+	"Master Force.\n"
 	"\n"
-	"A portal appears in the distance, urging\n"
-	"you to walk through it. As you look through\n"
-	"the portal, you see your desired destination:\n"
-	"The green fields of Earth!\n"
+	"Upon his death, a portal opens up nearby, beckoning you\n"
+	"to walk through. You take a quick peek through the\n"
+	"portal, to be greeted by something you feel like you\n"
+	"haven't seen in forever: the green fields of Earth!\n"
 	"It's good to be back home.\n"
 	"\n"
-	"As you step foot outside the portal, you\n"
-	"wonder to yourself: \"With all the madness\n"
-	"I've been through, what has Earth been doing?\"\n"
-	"After all, there's no way anyone could've gone\n"
-	"through the portal with you... right?";
+	"As you step foot outside the portal, you suddenly\n"
+	"remember: \"Some marines were situated here when this\n"
+	"shitshow started, right? I wonder how they're holding\n"
+	"up...\"\n"
+	"If anything, the amount of marines sent to Earth means\n"
+	"the mess has already been cleaned up... right?";
 //The Ultimate Doom
 E4TEXT =
-	"You had seen a lot of clones ever since you've\n"
-	"started your adventure. But the fact that even\n"
-	"the toughest fellas here are cloned as well makes\n"
-	"you doubt that you'll find the original version\n"
-	"of them.\n"
+	"Seems like your return home was too little too late:\n"
+	"While you were busy navigating your way through Mars's\n"
+	"moons, the marines on Earth were greatly and swiftly\n"
+	"overwhelmed by the invading forces.\n"
 	"\n"
-	"Anyway, those creatures managed to make their way\n"
-	"to Earth. Considering how insane these guys were\n"
-	"beforehand, you should know how bad it's gonna\n"
-	"be back home.\n"
+	"Earth is now a full-on warzone. The Master Force is\n"
+	"fully hellbent on the capture of humanity. If you\n"
+	"want this nightmare to end, you'll need to up your\n"
+	"game.\n"
 	"\n"
 	"Time to raise Hell on Earth.";
 //Doom II: Hell on Earth
@@ -669,7 +670,7 @@ C5TEXT =
 	"didn't reach the rocket,\" you think to yourself. But\n"
 	"why would they be here...?\n"
 	"\n"
-	"You decide to open the door to investiage and see if\n"
+	"You decide to open the door to investigate and see if\n"
 	"they need help....";
 C6TEXT =
 	"Help? Maybe not the kind you were thinking of. Even\n"
@@ -827,7 +828,7 @@ HE1TEXT =
 	"Hell's Maw has been stripped wide open, and you grow\n"
 	"all the more confused. This doesn't seem like the kind\n"
 	"of place someone like Cookie would inhabit, and these\n"
-	"creatures are far more surreal than anyone the Master\n"
+	"creatures are far more surreal than anything the Master\n"
 	"Force could concieve.\n"
 	"\n"
 	"The path up ahead is certainly heated, but nothing\n"
@@ -838,7 +839,7 @@ HE1TEXT =
 	"\n"
 	"Clearly, you don't belong in this realm, and this\n"
 	"D'Sparil guy, whatever he might be, is willing to\n"
-	"make that blatantly clear.\n"
+	"make that even clearer.\n"
 	"\n"
 	"But hey, nobody ever said being a space marine was\n"
 	"easy!";

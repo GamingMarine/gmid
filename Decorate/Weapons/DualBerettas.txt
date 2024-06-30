@@ -143,6 +143,7 @@ Actor GMIDDualPistol : GMIDPistol
 	TNT1 A 0 A_TakeInventory("DualBerettaShotCount",0)
 	TNT1 A 0 A_CheckReload
 	PISD A 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 0 A_Jump(1,"ReloadEasterEgg")
 	TNT1 A 0 A_PlaySound("weapon/fiddle", CHAN_AUTO)
 	P2RL ABCDEFG 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	P2RL H 0 A_PlaySound("pistol/reload1", CHAN_AUTO)
@@ -173,6 +174,23 @@ Actor GMIDDualPistol : GMIDPistol
 	P2FS XY 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	TNT1 A 0 A_PlaySound("pistol/reload3", CHAN_AUTO)
 	P2FS Z 2 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	Goto Ready
+  ReloadEasterEgg:
+	TNT1 A 0 A_PlaySound("pistol/magictrick1", CHAN_7)
+	P2MT ABCDEF 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	P2MT G 10 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	P2MT FE 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	P2MT H 1 A_PlaySound("cookie/leave", CHAN_7)
+	P2MT IJKLM 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	P2MT N 20 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	P2MT M 1 A_PlaySound("pistol/magictrick2", CHAN_6)
+	P2MT LOPQRS 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	P2MT T 25 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	P2MT SRQPO 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	P2MT U 1 A_PlaySound("pistol/magictrick3", CHAN_7)
+	P2MT V 25 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	P2MT U 1 A_PlaySound("pistol/magictrick4", CHAN_5)
+	P2MT WXYZ 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 	Goto Ready
   AltFire:
 	TNT1 A 0 A_GunFlash("WeaponStill")

@@ -5,6 +5,7 @@ user int gmid_tauntcooldown = 70;
 user int gmid_nowarmupanimation = 0;
 user int gmid_pickupanimation = 1;
 user int gmid_noannouncer = 0;
+server int gmid_voxels = 1;
 server int gmid_nobossmusic = 0;
 server int gmid_lessboom = 0;
 server int gmid_cleanblood = 0;

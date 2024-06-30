@@ -35,6 +35,24 @@ Script "LevelIntro" ENTER
 	Delay(1);
 }
 
+//This script checks if the player is jumping; If so, display a jumping sprite
+//Taken from Quake II Stuff by TheCamaleonMaligno
+Script "JumpCheck" Enter
+{
+	Int PNum = PlayerNumber();
+	While(PNum == PlayerNumber())
+	{
+		While(GetActorVelZ(0)==0)
+		{
+			Delay(1);
+			If((GetPlayerInput(-1,INPUT_BUTTONS) & BT_JUMP) && GetActorVelZ(0)>1.0)
+			SetActorState(0,"Jump");
+		}
+		Delay(1);
+	}
+}
+//(Fun fact: I looked to Brutal Doom first for a method on doing this, but Quake II Stuff's was much, MUCH cleaner)
+
 //Plays a warning sound and logs a message to the console when a powerup is about to phase out
 //Based on Quake II Stuff by TheCamaleonMaligno
 script "PowerupFading" ENTER

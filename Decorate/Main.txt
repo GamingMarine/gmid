@@ -232,14 +232,18 @@ Actor ArmorShard : BasicArmorBonus Replaces ArmorBonus
 	states
 	{
 	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_JumpIf(CallACS("VoxelsToggle")==1, "VoxelSpawn")
 		BON3 ABCDCBA 3 BRIGHT
+		Loop
+	VoxelSpawn:
+		BON3 EFGHGFE 3 BRIGHT
 		Loop
 	}
 }
 
-Actor SuperArmorShard : BasicArmorBonus
+Actor SuperArmorShard : ArmorShard
 {
-	+INVENTORY.ALWAYSPICKUP
 	Armor.SaveAmount 10
 	Armor.MaxSaveAmount 500
 	Armor.SavePercent 50
@@ -250,7 +254,12 @@ Actor SuperArmorShard : BasicArmorBonus
 	states
 	{
 	Spawn:
+		TNT1 A 0
+		TNT1 A 0 A_JumpIf(CallACS("VoxelsToggle")==1, "VoxelSpawn")
 		BON4 ABCDCBA 3 BRIGHT
+		Loop
+	VoxelSpawn:
+		BON4 EFGHGFE 3 BRIGHT
 		Loop
 	}
 }

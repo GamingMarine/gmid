@@ -129,6 +129,10 @@ pistol/reload1	 PISTREL1
 pistol/reload2	 PISTREL2
 pistol/reload3	 PISTREL3
 pistol/reloadalt PISTRELG
+pistol/magictrick1 MAGTRIK1
+pistol/magictrick2 MAGTRIK2
+pistol/magictrick3 MAGTRIK3
+pistol/magictrick4 MAGTRIK4
 $random weapons/GMSHOTGN { shotgun/fire1 shotgun/fire2 shotgun/fire3 shotgun/fire4 }
 shotgun/fire1	 SGFIR1
 shotgun/fire2	 SGFIR2

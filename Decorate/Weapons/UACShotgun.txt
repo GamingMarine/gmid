@@ -19,11 +19,15 @@ Actor GMIDShotgun : Shotgun
 	{
 		  Spawn:
 			TNT1 A 0
+			TNT1 A 0 A_JumpIf(CallACS("VoxelsToggle")==1, "VoxelSpawn")
 			TNT1 A 0 A_Jump(128, "Spawn2")
 			SHOT A -1 
 			Stop
 		  Spawn2:
 			SHOT B -1
+			Stop
+		  VoxelSpawn:
+			SHOT C -1
 			Stop
 		Fire:
 			SHTG A 3 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
@@ -137,11 +141,15 @@ Actor NewShells : Shell replaces CrossbowAmmo
 	{
 	Spawn:
 		TNT1 A 0
+		TNT1 A 0 A_JumpIf(CallACS("VoxelsToggle")==1, "VoxelSpawn")
 		TNT1 A 0 A_Jump(128, "Spawn2")
 		SHEL C -1 
 		Stop
 	Spawn2:
 		SHEL E -1
+		Stop
+	VoxelSpawn:
+		SHEL A -1
 		Stop
 	}
 }
@@ -156,11 +164,15 @@ Actor NewShellBox : ShellBox replaces CrossbowHefty
 	{
 	Spawn:
 		TNT1 A 0
+		TNT1 A 0 A_JumpIf(CallACS("VoxelsToggle")==1, "VoxelSpawn")
 		TNT1 A 0 A_Jump(128, "Spawn2")
 		SBOX A -1
 		Stop
 	Spawn2:
 		SBOX C -1
+		Stop
+	VoxelSpawn:
+		SBOX E -1
 		Stop
 	}
 }
