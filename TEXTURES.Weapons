@@ -1,0 +1,2257 @@
+//Melee
+Sprite "KNUXA0", 298, 91
+{
+  Offset -22, -87
+  Patch "KNUCKLE1", 0, 0
+}
+
+Sprite "KNUXB0", 343, 99
+{
+  Offset -4, -79
+  Patch "KNUCKLE2", 0, 0
+}
+
+Sprite "KNUXC0", 326, 99
+{
+  Offset -26, -79
+  Patch "KNUCKLE3", 0, 0
+}
+
+Sprite "KNUXD0", 295, 98
+{
+  Offset -24, -80
+  Patch "KNUCKLE4", 0, 0
+}
+
+Sprite "KNX2A0", 298, 91
+{
+  Offset 0, -87
+  Patch "KNUCKLE1", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "KNX2B0", 343, 99
+{
+  Offset 27, -79
+  Patch "KNUCKLE2", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "KNX2C0", 326, 99
+{
+  Offset 32, -79
+  Patch "KNUCKLE3", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "KNX2D0", 295, 98
+{
+  Offset 0, -80
+  Patch "KNUCKLE4", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "FISTA0", 285, 56
+{
+  Offset -11, -122
+  Patch "PUNCH2", -35, 0
+  Patch "PUNCH1", 184, 9
+  {
+    FlipX
+  }
+}
+
+Sprite "FISTB0", 288, 55
+{
+  Offset -12, -123
+  Patch "PUNCH2", -37, 0
+  Patch "PUNCH1", 184, 6
+  {
+    FlipX
+  }
+}
+
+Sprite "FISTC0", 291, 55
+{
+  Offset -11, -123
+  Patch "PUNCH2", -37, 0
+  Patch "PUNCH1", 186, 5
+  {
+    FlipX
+  }
+}
+
+Sprite "FISTD0", 295, 56
+{
+  Offset -8, -122
+  Patch "PUNCH2", -35, 0
+  Patch "PUNCH1", 190, 6
+  {
+    FlipX
+  }
+}
+
+Sprite "FISTE0", 296, 57
+{
+  Offset -7, -121
+  Patch "PUNCH2", -34, 0
+  Patch "PUNCH1", 192, 8
+  {
+    FlipX
+  }
+}
+
+Sprite "FISTF0", 293, 58
+{
+  Offset -7, -120
+  Patch "PUNCH2", -33, 0
+  Patch "PUNCH1", 191, 10
+  {
+    FlipX
+  }
+}
+
+Sprite "FISTG0", 289, 58
+{
+  Offset -8, -120
+  Patch "PUNCH2", -33, 0
+  Patch "PUNCH1", 188, 11
+  {
+    FlipX
+  }
+}
+
+Sprite "FISTH0", 285, 57
+{
+  Offset -10, -121
+  Patch "PUNCH2", -34, 0
+  Patch "PUNCH1", 185, 11
+  {
+    FlipX
+  }
+}
+
+Sprite "FIS1A0", 123, 64
+{
+  Offset -195, -131
+  Patch "PUNCH1", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "FIS1B0", 123, 64
+{
+  Offset -184, -121
+  Patch "PUNCH1", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "FIS1C0", 123, 64
+{
+  Offset -172, -113
+  Patch "PUNCH1", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "FIS1D0", 123, 64
+{
+  Offset -161, -105
+  Patch "PUNCH1", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "FIS1E0", 150, 82
+{
+  Offset -151, -101
+  Patch "PUNCH2", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "FIS1F0", 161, 108
+{
+  Offset -139, -93
+  Patch "PUNCH3", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "FIS2A0", 150, 82
+{
+  Offset 24, -122
+  Patch "PUNCH2", 0, 0
+}
+
+Sprite "FIS2B0", 123, 64
+{
+  Offset -14, -121
+  Patch "PUNCH1", 0, 0
+}
+
+Sprite "FIS2C0", 123, 64
+{
+  Offset -25, -113
+  Patch "PUNCH1", 0, 0
+}
+
+Sprite "FIS2D0", 123, 64
+{
+  Offset -36, -105
+  Patch "PUNCH1", 0, 0
+}
+
+Sprite "FIS2E0", 150, 82
+{
+  Offset -24, -101
+  Patch "PUNCH2", 0, 0
+}
+
+Sprite "FIS2F0", 161, 108
+{
+  Offset -22, -93
+  Patch "PUNCH3", 0, 0
+}
+
+Sprite "FISDA0", 295, 56
+{
+  Offset -6, -132
+  Patch "PUNCH2", -35, 0
+  Patch "PUNCH1", 194, 9
+  {
+    FlipX
+  }
+}
+
+Sprite "FISDB0", 305, 56
+{
+  Offset -1, -142
+  Patch "PUNCH2", -35, 0
+  Patch "PUNCH1", 204, 9
+  {
+    FlipX
+  }
+}
+
+Sprite "FISDC0", 310, 56
+{
+  Offset -1, -152
+  Patch "PUNCH2", -40, 0
+  Patch "PUNCH1", 209, 9
+  {
+    FlipX
+  }
+}
+
+Sprite "FISDD0", 315, 56
+{
+  Offset -1, -162
+  Patch "PUNCH2", -45, 0
+  Patch "PUNCH1", 214, 9
+  {
+    FlipX
+  }
+}
+
+Sprite "HAY1A0", 70, 101
+{
+  Offset -391, -91
+  Patch "HAYMAKR1", 0, 0
+}
+
+Sprite "HAY1B0", 70, 101
+{
+  Offset -343, -75
+  Patch "HAYMAKR1", 0, 0
+}
+
+Sprite "HAY1C0", 139, 91
+{
+  Offset -320, -83
+  Patch "HAYMAKR2", 0, 0
+}
+
+Sprite "HAY1D0", 139, 91
+{
+  Offset -296, -80
+  Patch "HAYMAKR2", 0, 0
+}
+
+Sprite "HAY1E0", 139, 91
+{
+  Offset -273, -77
+  Patch "HAYMAKR2", 0, 0
+}
+
+Sprite "HAY1F0", 195, 106
+{
+  Offset -239, -72
+  Patch "HAYMAKR3", 0, 0
+}
+
+Sprite "HAY1G0", 195, 106
+{
+  Offset -202, -68
+  Patch "HAYMAKR3", 0, 0
+}
+
+Sprite "HAY1H0", 195, 106
+{
+  Offset -201, -68
+  Patch "HAYMAKR3", 0, 0
+}
+
+Sprite "HAY1I0", 195, 106
+{
+  Offset -200, -68
+  Patch "HAYMAKR3", 0, 0
+}
+
+Sprite "HAY2A0", 70, 101
+{
+  Offset 108, -91
+  Patch "HAYMAKR1", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "HAY2B0", 70, 101
+{
+  Offset 92, -75
+  Patch "HAYMAKR1", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "HAY2C0", 139, 91
+{
+  Offset 139, -83
+  Patch "HAYMAKR2", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "HAY2D0", 139, 91
+{
+  Offset 115, -80
+  Patch "HAYMAKR2", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "HAY2E0", 139, 91
+{
+  Offset 92, -77
+  Patch "HAYMAKR2", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "HAY2F0", 195, 106
+{
+  Offset 114, -72
+  Patch "HAYMAKR3", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "HAY2G0", 195, 106
+{
+  Offset 77, -68
+  Patch "HAYMAKR3", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "HAY2H0", 195, 106
+{
+  Offset 76, -68
+  Patch "HAYMAKR3", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "HAY2I0", 195, 106
+{
+  Offset 75, -68
+  Patch "HAYMAKR3", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "FCH1A0", 278, 55
+{
+  Offset -20, -123
+  Patch "PUNHAND", -19, 0
+  {
+    FlipX
+  }
+  Patch "PUNCH1", 179, 10
+  {
+    FlipX
+  }
+}
+
+Sprite "FCH1B0", 276, 61
+{
+  Offset -20, -115
+  Patch "PUNHAND", -11, 0
+  {
+    FlipX
+  }
+  Patch "PUNCH1", 183, 20
+  {
+    FlipX
+  }
+}
+
+Sprite "FCH1C0", 270, 66
+{
+  Offset -24, -109
+  Patch "PUNHAND", -5, 0
+  {
+    FlipX
+  }
+  Patch "PUNCH1", 184, 30
+  {
+    FlipX
+  }
+}
+
+Sprite "FCH1D0", 256, 71
+{
+  Offset -36, -105
+  Patch "PUNHAND", -2, 0
+  {
+    FlipX
+  }
+  Patch "PUNCH1", 179, 43
+  {
+    FlipX
+  }
+}
+
+Sprite "FCH1E0", 242, 74
+{
+  Offset -47, -102
+  Patch "PUNHAND", 0, 0
+  {
+    FlipX
+  }
+  Patch "PUNCH1", 177, 56
+  {
+    FlipX
+  }
+}
+
+Sprite "FCH1F0", 211, 74
+{
+  Offset -58, -98
+  Patch "PUNHAND", 0, 0
+  {
+    FlipX
+  }
+  Patch "PUNCH1", 158, 69
+  {
+    FlipX
+  }
+}
+
+Sprite "FCH1G0", 141, 74
+{
+  Offset -70, -95
+  Patch "PUNHAND", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "FCH1H0", 141, 74
+{
+  Offset -72, -94
+  Patch "PUNHAND", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "FCH1I0", 141, 74
+{
+  Offset -65, -98
+  Patch "PUNHAND", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "FCH1J0", 141, 74
+{
+  Offset -52, -106
+  Patch "PUNHAND", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "FCH1K0", 141, 74
+{
+  Offset -42, -113
+  Patch "PUNHAND", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "FCH1L0", 141, 74
+{
+  Offset -34, -121
+  Patch "PUNHAND", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "FCH1M0", 141, 74
+{
+  Offset -20, -138
+  Patch "PUNHAND", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "FCH1N0", 141, 74
+{
+  Offset -5, -155
+  Patch "PUNHAND", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "FCH2A0", 278, 55
+{
+  Offset -23, -123
+  Patch "PUNHAND", 156, 0
+  Patch "PUNCH1", -24, 10
+}
+
+Sprite "FCH2B0", 276, 61
+{
+  Offset -25, -115
+  Patch "PUNHAND", 146, 0
+  Patch "PUNCH1", -30, 20
+}
+
+Sprite "FCH2C0", 270, 66
+{
+  Offset -26, -109
+  Patch "PUNHAND", 134, 0
+  Patch "PUNCH1", -37, 30
+}
+
+Sprite "FCH2D0", 256, 71
+{
+  Offset -28, -105
+  Patch "PUNHAND", 117, 0
+  Patch "PUNCH1", -46, 43
+}
+
+Sprite "FCH2E0", 242, 74
+{
+  Offset -32, -102
+  Patch "PUNHAND", 101, 0
+  Patch "PUNCH1", -58, 56
+}
+
+Sprite "FCH2F0", 211, 74
+{
+  Offset -53, -98
+  Patch "PUNHAND", 70, 0
+  Patch "PUNCH1", -70, 69
+}
+
+Sprite "FCH2G0", 141, 74
+{
+  Offset -112, -95
+  Patch "PUNHAND", 0, 0
+}
+
+Sprite "FCH2H0", 141, 74
+{
+  Offset -111, -94
+  Patch "PUNHAND", 0, 0
+}
+
+Sprite "FCH2I0", 141, 74
+{
+  Offset -118, -98
+  Patch "PUNHAND", 0, 0
+}
+
+Sprite "FCH2J0", 141, 74
+{
+  Offset -131, -106
+  Patch "PUNHAND", 0, 0
+}
+
+Sprite "FCH2K0", 141, 74
+{
+  Offset -141, -113
+  Patch "PUNHAND", 0, 0
+}
+
+Sprite "FCH2L0", 141, 74
+{
+  Offset -149, -121
+  Patch "PUNHAND", 0, 0
+}
+
+Sprite "FCH2M0", 141, 74
+{
+  Offset -155, -138
+  Patch "PUNHAND", 0, 0
+}
+
+Sprite "FCH2N0", 141, 74
+{
+  Offset -170, -155
+  Patch "PUNHAND", 0, 0
+}
+
+Sprite "UPR1A0", 143, 212
+{
+  Offset -164, -160
+  Patch "UPPERCUT", 0, 0
+}
+
+Sprite "UPR1B0", 143, 212
+{
+  Offset -151, -138
+  Patch "UPPERCUT", 0, 0
+}
+
+Sprite "UPR1C0", 143, 212
+{
+  Offset -139, -112
+  Patch "UPPERCUT", 0, 0
+}
+
+Sprite "UPR1D0", 143, 212
+{
+  Offset -128, -86
+  Patch "UPPERCUT", 0, 0
+}
+
+Sprite "UPR1E0", 143, 212
+{
+  Offset -116, -60
+  Patch "UPPERCUT", 0, 0
+}
+
+Sprite "UPR1F0", 143, 212
+{
+  Offset -106, -42
+  Patch "UPPERCUT", 0, 0
+}
+
+Sprite "UPR1G0", 143, 212
+{
+  Offset -96, -22
+  Patch "UPPERCUT", 0, 0
+}
+
+Sprite "UPR1H0", 143, 212
+{
+  Offset -88, -10
+  Patch "UPPERCUT", 0, 0
+}
+
+Sprite "UPR1I0", 143, 212
+{
+  Offset -84, -3
+  Patch "UPPERCUT", 0, 0
+}
+
+Sprite "UPR1J0", 143, 212
+{
+  Offset -82, -1
+  Patch "UPPERCUT", 0, 0
+}
+
+Sprite "UPR2A0", 143, 212
+{
+  Offset -15, -160
+  Patch "UPPERCUT", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "UPR2B0", 143, 212
+{
+  Offset -28, -138
+  Patch "UPPERCUT", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "UPR2C0", 143, 212
+{
+  Offset -40, -112
+  Patch "UPPERCUT", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "UPR2D0", 143, 212
+{
+  Offset -49, -86
+  Patch "UPPERCUT", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "UPR2E0", 143, 212
+{
+  Offset -57, -60
+  Patch "UPPERCUT", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "UPR2F0", 143, 212
+{
+  Offset -67, -42
+  Patch "UPPERCUT", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "UPR2G0", 143, 212
+{
+  Offset -77, -22
+  Patch "UPPERCUT", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "UPR2H0", 143, 212
+{
+  Offset -89, -10
+  Patch "UPPERCUT", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "UPR2I0", 143, 212
+{
+  Offset -93, -3
+  Patch "UPPERCUT", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "UPR2J0", 143, 212
+{
+  Offset -95, -1
+  Patch "UPPERCUT", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "HOK1A0", 123, 64
+{
+  Offset -224, -145
+  Patch "PUNCH1", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "HOK1B0", 123, 64
+{
+  Offset -204, -126
+  Patch "PUNCH1", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "HOK1C0", 150, 84
+{
+  Offset -175, -105
+  Patch "PUNCH2", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "HOK1D0", 150, 84
+{
+  Offset -153, -101
+  Patch "PUNCH2", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "HOK1E0", 161, 108
+{
+  Offset -133, -90
+  Patch "PUNCH3", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "HOK1F0", 155, 74
+{
+  OFfset -120, -100
+  Patch "HOOK1", 0, 0
+}
+
+Sprite "HOK1G0", 151, 62
+{
+  OFfset -103, -111
+  Patch "HOOK2", 0, 0
+}
+
+Sprite "HOK1H0", 149, 55
+{
+  OFfset -93, -117
+  Patch "HOOK3", 0, 0
+}
+
+Sprite "HOK1I0", 140, 46
+{
+  OFfset -83, -125
+  Patch "HOOK4", 0, 0
+}
+
+Sprite "HOK1J0", 139, 32
+{
+  OFfset -69, -138
+  Patch "HOOK5", 0, 0
+}
+
+Sprite "HOK1K0", 127, 22
+{
+  OFfset -59, -147
+  Patch "HOOK6", 0, 0
+}
+
+Sprite "HOK1L0", 127, 22
+{
+  OFfset -69, -155
+  Patch "HOOK6", 0, 0
+}
+
+Sprite "HOK1M0", 127, 22
+{
+  OFfset -99, -165
+  Patch "HOOK6", 0, 0
+}
+
+Sprite "HOK2A0", 123, 64
+{
+  Offset 27, -145
+  Patch "PUNCH1", 0, 0
+}
+
+Sprite "HOK2B0", 123, 64
+{
+  Offset 7, -126
+  Patch "PUNCH1", 0, 0
+}
+
+Sprite "HOK2C0", 150, 84
+{
+  Offset 4, -105
+  Patch "PUNCH2", 0, 0
+}
+
+Sprite "HOK2D0", 150, 84
+{
+  Offset -18, -101
+  Patch "PUNCH2", 0, 0
+}
+
+Sprite "HOK2E0", 161, 108
+{
+  Offset -26, -90
+  Patch "PUNCH3", 0, 0
+}
+
+Sprite "HOK2F0", 155, 74
+{
+  OFfset -45, -100
+  Patch "HOOK1", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "HOK2G0", 151, 62
+{
+  OFfset -66, -111
+  Patch "HOOK2", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "HOK2H0", 149, 55
+{
+  OFfset -78, -117
+  Patch "HOOK3", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "HOK2I0", 140, 46
+{
+  OFfset -97, -125
+  Patch "HOOK4", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "HOK2J0", 139, 32
+{
+  OFfset -112, -138
+  Patch "HOOK5", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "HOK2K0", 127, 22
+{
+  OFfset -134, -147
+  Patch "HOOK6", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "HOK2L0", 127, 22
+{
+  OFfset -124, -155
+  Patch "HOOK6", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "HOK2M0", 127, 22
+{
+  OFfset -94, -165
+  Patch "HOOK6", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "FOOTA0", 154, 65
+{
+  Offset -52, -155
+  Patch "FOOTA1", 0, 0
+}
+
+Sprite "FOOTB0", 154, 65
+{
+  Offset -48, -142
+  Patch "FOOTA1", 0, 0
+}
+
+Sprite "FOOTC0", 154, 65
+{
+  Offset -37, -125
+  Patch "FOOTA1", 0, 0
+}
+
+Sprite "FOOTD0", 89, 137
+{
+  Offset -86, -45
+  Patch "FOOTA2", 0, 0
+}
+
+Sprite "FOOTE0", 89, 137
+{
+  Offset -83, -33
+  Patch "FOOTA2", 0, 0
+}
+
+Sprite "FOOTF0", 89, 137
+{
+  Offset -82, -31
+  Patch "FOOTA2", 0, 0
+}
+
+Sprite "FOT1A0", 109, 39
+{
+  Offset -10, -147
+  Patch "FOOTB1", 0, 0
+}
+
+Sprite "FOT1B0", 109, 39
+{
+  Offset -20, -139
+  Patch "FOOTB1", 0, 0
+}
+
+Sprite "FOT1C0", 109, 39
+{
+  Offset -30, -133
+  Patch "FOOTB1", 0, 0
+}
+
+Sprite "FOT1D0", 128, 125
+{
+  Offset -59, -44
+  Patch "FOOTB2", 0, 0
+}
+
+Sprite "FOT1E0", 128, 125
+{
+  Offset -47, -58
+  Patch "FOOTB2", 0, 0
+}
+
+Sprite "FOT2A0", 109, 39
+{
+  Offset -207, -147
+  Patch "FOOTB1", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "FOT2B0", 109, 39
+{
+  Offset -197, -139
+  Patch "FOOTB1", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "FOT2C0", 109, 39
+{
+  Offset -187, -133
+  Patch "FOOTB1", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "FOT2D0", 128, 125
+{
+  Offset -129, -44
+  Patch "FOOTB2", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "FOT2E0", 128, 125
+{
+  Offset -153, -58
+  Patch "FOOTB2", 0, 0
+  {
+    FlipX
+  }
+}
+
+//Angle Grinder
+Sprite "SAWGA0", 162, 98
+{
+  Offset -156, -81
+  Patch "AGRINDR1", 0, 0
+}
+
+Sprite "SAWGB0", 161, 102
+{
+  Offset -159, -81
+  Patch "AGRINDR2", 0, 0
+}
+
+Sprite "SAWGC0", 162, 98
+{
+  Offset -147, -81
+  Patch "AGRINDR1", 0, 0
+}
+
+Sprite "SAWGD0", 161, 102
+{
+  Offset -140, -81
+  Patch "AGRINDR2", 0, 0
+}
+
+Sprite "SAWGE0", 71, 133
+{
+  Offset -176, -60
+  Patch "AGRINDR3", 0, 0
+}
+
+Sprite "SAWGF0", 72, 133
+{
+  Offset -174, -62
+  Patch "AGRINDR4", 0, 0
+}
+
+Sprite "SAWGG0", 71, 133
+{
+  Offset -178, -64
+  Patch "AGRINDR3", 0, 0
+}
+
+Sprite "SAWGH0", 72, 133
+{
+  Offset -180, -62
+  Patch "AGRINDR4", 0, 0
+}
+
+Sprite "AGFSA0", 162, 98
+{
+  Offset -155, -82
+  Patch "AGRINDR1", 0, 0
+}
+
+//Beretta
+Sprite "P1FSA0", 256, 151
+{
+  Offset 48, -121
+  Patch "BERFRS1", 140, 37
+  Patch "BERFHND1", 0, 0
+}
+
+Sprite "P1FSB0", 256, 151
+{
+  Offset 36, -111
+  Patch "BERFRS1", 140, 37
+  Patch "BERFHND1", 0, 0
+}
+
+Sprite "P1FSC0", 256, 151
+{
+  Offset 24, -101
+  Patch "BERFRS1", 140, 37
+  Patch "BERFHND1", 0, 0
+}
+
+Sprite "P1FSD0", 256, 151
+{
+  Offset 12, -91
+  Patch "BERFRS1", 140, 37
+  Patch "BERFHND1", 0, 0
+}
+
+Sprite "P1FSE0", 256, 151
+{
+  Offset 0, -89
+  Patch "BERFRS1", 140, 37
+  Patch "BERFHND1", 0, 0
+}
+
+Sprite "P1FSF0", 256, 138
+{
+  Offset 0, -104
+  Patch "BERFRS1", 140, 24
+  Patch "BERFHND1", 0, 0
+}
+
+Sprite "P1FSG0", 256, 120
+{
+  Offset 0, -123
+  Patch "BERFRS2", 140, 7
+  Patch "BERFHND1", 0, 0
+}
+
+Sprite "P1FSH0", 256, 138
+{
+  Offset 0, -107
+  Patch "BERFRS1", 140, 24
+  Patch "BERFHND1", 0, 0
+}
+
+Sprite "P1FSI0", 256, 138
+{
+  Offset 0, -105
+  Patch "BERFRS1", 140, 24
+  Patch "BERFHND1", 0, 0
+}
+
+Sprite "P1FSJ0", 248, 132
+{
+  Offset -8, -109
+  Patch "BERFRS1", 132, 18
+  Patch "BERFHND2", 0, 0
+}
+
+Sprite "P1FSK0", 253, 122
+{
+  Offset -13, -113
+  Patch "BERFRS1", 137, 8
+  Patch "BERFHND2", 0, 0
+}
+
+Sprite "P1FSL0", 258, 114
+{
+  Offset -18, -115
+  Patch "BERFRS1", 142, 0
+  Patch "BERFHND2", 0, 2
+}
+
+Sprite "P1FSM0", 263, 114
+{
+  Offset -23, -101
+  Patch "BERFRS1", 147, 0
+  Patch "BERFHND2", 0, 12
+}
+
+Sprite "P1FSN0", 268, 114
+{
+  Offset -28, -87
+  Patch "BERFRS1", 152, 0
+  Patch "BERFHND2", 0, 22
+}
+
+Sprite "P1FSO0", 226, 111
+{
+  Offset -38, -78
+  Patch "BERETTA3", 146, 0
+  Patch "BERFHND2", 0, 25
+}
+
+Sprite "P1FSP0", 136, 93
+{
+  Offset -132, -89
+  Patch "BERFHND3", 0, 27
+  Patch "BERETTA1", 57, 0
+}
+
+Sprite "P1FSQ0", 112, 90
+{
+  Offset -161, -88
+  Patch "BERFHND3", 0, 24
+  Patch "BERETTA1", 33, 0
+}
+
+Sprite "PISGA0", 97, 80
+{
+  Offset -178, -88
+  Patch "BERCRDL1", -7, 29
+  Patch "BERETTA1", 18, 0
+}
+
+Sprite "PISGB0", 104, 103
+{
+  Offset -177, -70
+  Patch "BERCRDL2", -13, 52
+  Patch "BERETTA5", 15, 0
+}
+
+Sprite "PISGC0", 104, 85
+{
+  Offset -176, -87
+  Patch "BERCRDL2", -13, 34
+  Patch "BERETTA6", 24, 0
+}
+
+Sprite "PISGD0", 98, 78
+{
+	Offset -182, -94
+	Patch "BERCRDL1", -8, 26
+	Patch "BERETTA4", 17, 0
+}
+
+Sprite "PISGE0", 97, 80
+{
+  Offset -180, -90
+  Patch "BERCRDL1", -7, 29
+  Patch "BERETTA1", 18, 0
+}
+
+Sprite "PISGF0", 97, 80
+{
+  Offset -179, -89
+  Patch "BERCRDL1", -7, 29
+  Patch "BERETTA1", 18, 0
+}
+
+Sprite "BRLDR0", 121, 101
+{
+  Offset -170, -77
+  Patch "BERRELD1", 0, 0
+}
+
+Sprite "BRLDS0", 121, 101
+{
+  Offset -170, -77
+  Patch "MAGGRIP1", -23, 90
+  Patch "BERRELD1", 0, 0
+}
+
+Sprite "BRLDT0", 131, 101
+{
+  Offset -160, -77
+  Patch "MAGGRIP1", -9, 74
+  Patch "BERRELD1", 10, 0
+}
+
+Sprite "BRLDU0", 129, 101
+{
+  Offset -163, -76
+  Patch "MAGGRIP1", -6, 60
+  Patch "BERRELD1", 8, 0
+}
+
+Sprite "BRLDV0", 125, 101
+{
+  Offset -169, -75
+  Patch "BERRELD1", 4, 0
+  Patch "MAGGRIP2", -5, 59
+}
+
+Sprite "BRLDW0", 124, 101
+{
+  Offset -171, -74
+  Patch "BERRELD1", 3, 0
+  Patch "MAGGRIP2", -5, 57
+}
+
+Sprite "BRLDX0", 124, 103
+{
+  Offset -173, -70
+  Patch "BERRELD2", 3, 0
+  Patch "MAGGRIP2", -5, 59
+}
+
+Sprite "BRLDY0", 124, 103
+{
+  Offset -171, -72
+  Patch "BERRELD2", 3, 0
+  Patch "MAGGRIP2", -5, 59
+}
+
+Sprite "BRLDZ0", 124, 103
+{
+  Offset -175, -77
+  Patch "BERRELD2", 3, 0
+  Patch "MAGGRIP2", -5, 59
+}
+
+//Dual Berettas
+Sprite "P2FSA0", 228, 82
+{
+  Offset -44, -86
+  Patch "BERANGL3", 0, 23
+  {
+    FlipX
+  }
+  Patch "BERANGL5", 158, 0
+}
+
+Sprite "P2FSB0", 225, 80
+{
+  Offset -44, -88
+  Patch "BERANGL2", 0, 48
+  {
+    FlipX
+  }
+  Patch "BERANGL6", 170, 0
+}
+
+Sprite "P2FSC0", 194, 100
+{
+  Offset -84, -68
+  Patch "BERANGL1", 0, 92
+  {
+    FlipX
+  }
+  Patch "BERRELD3", 111, 0
+}
+
+Sprite "P2FSD0", 121, 103
+{
+  Offset -171, -72
+  Patch "BERRELD2", 0, 0
+}
+
+Sprite "P2FSE0", 121, 103
+{
+  Offset -168, -73
+  Patch "BERRELD2", 0, 0
+}
+
+Sprite "P2FSF0", 121, 103
+{
+  Offset -30, -75
+  Patch "BERRELD1", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "P2FSG0", 121, 103
+{
+  Offset -32, -75
+  Patch "BERRELD2", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "P2FSH0", 121, 103
+{
+  Offset -30, -73
+  Patch "BERRELD2", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "P2FSI0", 154, 8
+{
+  Offset -86, -165
+  Patch "BERANGL1", 0, 0
+  {
+    FlipX
+  }
+  Patch "BERANGL1", 99, 0
+}
+
+Sprite "P2FSJ0", 154, 8
+{
+  Offset -86, -160
+  Patch "BERANGL1", 0, 0
+  {
+    FlipX
+  }
+  Patch "BERANGL1", 99, 0
+}
+
+Sprite "P2FSK0", 226, 32
+{
+  Offset -46, -141
+  Patch "BERANGL2", 0, 0
+  {
+    FlipX
+  }
+  Patch "BERANGL2", 120, 0
+}
+
+Sprite "P2FSL0", 226, 32
+{
+  Offset -46, -136
+  Patch "BERANGL2", 0, 0
+  {
+    FlipX
+  }
+  Patch "BERANGL2", 120, 0
+}
+
+Sprite "P2FSM0", 229, 59
+{
+  Offset -45, -114
+  Patch "BERANGL3", 0, 0
+  {
+    FlipX
+  }
+  Patch "BERANGL3", 135, 0
+}
+
+Sprite "P2FSN0", 229, 59
+{
+  Offset -45, -109
+  Patch "BERANGL3", 0, 0
+  {
+    FlipX
+  }
+  Patch "BERANGL3", 135, 0
+}
+
+Sprite "PISDA0", 231, 80
+{
+  Offset -44, -88
+  Patch "BERETTA1", 0, 0
+  {
+    FlipX
+  }
+  Patch "BERETTA1", 152, 0
+}
+
+Sprite "PIS1A0", 79, 80
+{
+  Offset -44, -88
+  Patch "BERETTA1", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "PIS1B0", 90, 106
+{
+  Offset -38, -67
+  Patch "BERETTA2", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "PIS1C0", 80, 91
+{
+  Offset -39, -81
+  Patch "BERETTA3", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "PIS1D0", 82, 78
+{
+  Offset -38, -94
+  Patch "BERETTA4", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "PIS1E0", 79, 80
+{
+  Offset -42, -90
+  Patch "BERETTA1", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "PIS1F0", 79, 80
+{
+  Offset -43, -89
+  Patch "BERETTA1", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "PIS2A0", 79, 80
+{
+  Offset -196, -88
+  Patch "BERETTA1", 0, 0
+}
+
+Sprite "PIS2B0", 90, 106
+{
+  Offset -191, -67
+  Patch "BERETTA2", 0, 0
+}
+
+Sprite "PIS2C0", 80, 91
+{
+  Offset -200, -81
+  Patch "BERETTA3", 0, 0
+}
+
+Sprite "PIS2D0", 82, 78
+{
+  Offset -199, -94
+  Patch "BERETTA4", 0, 0
+}
+
+Sprite "PIS2E0", 79, 80
+{
+  Offset -198, -90
+  Patch "BERETTA1", 0, 0
+}
+
+Sprite "PIS2F0", 79, 80
+{
+  Offset -197, -89
+  Patch "BERETTA1", 0, 0
+}
+
+Sprite "P2RLA0", 225, 82
+{
+  Offset -47, -86
+  Patch "BERANGL5", 155, 0
+  Patch "BERANGL5", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "P2RLB0", 235, 82
+{
+  Offset -42, -86
+  Patch "BERANGL5", 165, 0
+  Patch "BERANGL5", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "P2RLC0", 219, 80
+{
+  Offset -50, -88
+  Patch "BERANGL6", 164, 0
+  Patch "BERANGL6", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "P2RLD0", 229, 80
+{
+  Offset -45, -88
+  Patch "BERANGL6", 174, 0
+  Patch "BERANGL6", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "P2RLE0", 264, 100
+{
+  Offset -28, -73
+  Patch "BERRELD3", 181, 0
+  Patch "BERRELD3", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "P2RLF0", 254, 100
+{
+  Offset -33, -71
+  Patch "BERRELD3", 171, 0
+  Patch "BERRELD3", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "P2RLG0", 304, 103
+{
+  Offset -7, -73
+  Patch "BERRELD2", 183, 0
+  Patch "BERRELD2", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "P2RLH0", 298, 103
+{
+  Offset -10, -72
+  Patch "BERMAGMT", 71, 42
+  {
+    FlipX
+  }
+  Patch "BERRELD2", 177, 0
+  Patch "BERRELD1", 0, 2
+  {
+    FlipX
+  }
+}
+
+Sprite "P2RLI0", 298, 103
+{
+  Offset -10, -71
+  Patch "BERMAGMT", 78, 56
+  {
+    FlipX
+  }
+  Patch "BERRELD2", 177, 0
+  Patch "BERRELD1", 0, 2
+  {
+    FlipX
+  }
+}
+
+Sprite "P2RLJ0", 298, 101
+{
+  Offset -10, -70
+  Patch "BERMAGMT", 85, 69
+  {
+    FlipX
+  }
+  Patch "BERMAGMT", 195, 40
+  Patch "BERRELD1", 177, 0
+  Patch "BERRELD1", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "P2RLK0", 298, 101
+{
+  Offset -10, -69
+  Patch "BERMAGMT", 92, 83
+  {
+    FlipX
+  }
+  Patch "BERMAGMT", 188, 54
+  Patch "BERRELD1", 177, 0
+  Patch "BERRELD1", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "P2RLL0", 298, 101
+{
+  Offset -10, -68
+  Patch "BERMAGMT", 98, 98
+  {
+    FlipX
+  }
+  Patch "BERMAGMT", 181, 69
+  Patch "BERRELD1", 177, 0
+  Patch "BERRELD1", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "P2RLM0", 298, 101
+{
+  Offset -10, -68
+  Patch "BERMAGMT", 174, 83
+  Patch "BERRELD1", 177, 0
+  Patch "BERRELD1", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "P2RLN0", 298, 101
+{
+  Offset -10, -68
+  Patch "BERMAGMT", 168, 98
+  Patch "BERRELD1", 177, 0
+  Patch "BERRELD1", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "P2RLO0", 298, 101
+{
+  Offset -10, -68
+  Patch "BERRELD1", 177, 0
+  Patch "BERRELD1", 0, 0
+  {
+    FlipX
+  }
+}
+
+Sprite "P2MTA0", 221, 74
+{
+  Offset -49, -94
+  Patch "BERANGL4", 0, 0
+  {
+    FlipX
+  }
+  Patch "BERANGL4", 137, 0
+}
+
+Sprite "P2MTB0", 211, 74
+{
+  Offset -54, -94
+  Patch "BERANGL4", 0, 0
+  {
+    FlipX
+  }
+  Patch "BERANGL4", 127, 0
+}
+
+Sprite "P2MTC0", 201, 59
+{
+  Offset -59, -109
+  Patch "BERANGL3", 0, 0
+  {
+    FlipX
+  }
+  Patch "BERANGL3", 107, 0
+}
+
+Sprite "P2MTD0", 191, 59
+{
+  Offset -64, -109
+  Patch "BERANGL3", 0, 0
+  {
+    FlipX
+  }
+  Patch "BERANGL3", 97, 0
+}
+
+Sprite "P2MTY0", 231, 92
+{
+  Offset -44, -76
+  Patch "BERFRS1", -19, 0
+  {
+    FlipX
+  }
+  Patch "BERFRS1", 134, 0
+}
+
+Sprite "P2MTZ0", 231, 91
+{
+  Offset -44, -79
+  Patch "BERFRS1", -22, 0
+  {
+    FlipX
+  }
+  Patch "BERFRS1", 137, 0
+}
+
+//UAC Shotgun
+Sprite "SHTGA0", 225, 80
+{
+  Offset -97, -94
+  Patch "UACSHTG1", 0, 0
+}
+
+Sprite "SHTGB0", 225, 88
+{
+  Offset -98, -87
+  Patch "UACSHTG7", 0, 0
+}
+
+Sprite "SHTGC0", 225, 88
+{
+  Offset -105, -93
+  Patch "UACSHTG8", 0, 0
+}
+
+Sprite "SHTGD0", 225, 80
+{
+  Offset -115, -111
+  Patch "UACSHTG4", 0, 0
+}
+
+Sprite "SHTGE0", 225, 80
+{
+  Offset -110, -106
+  Patch "UACSHTG4", 0, 0
+}
+
+Sprite "SHTGF0", 225, 80
+{
+  Offset -105, -101
+  Patch "UACSHTG4", 0, 0
+}
+
+Sprite "SHTGG0", 225, 80
+{
+  Offset -102, -98
+  Patch "UACSHTG4", 0, 0
+}
+
+Sprite "SHTGH0", 225, 80
+{
+  Offset -100, -96
+  Patch "UACSHTG4", 0, 0
+}
+
+Sprite "SHTGI0", 225, 80
+{
+  Offset -102, -97
+  Patch "UACSHTG4", 0, 0
+}
+
+Sprite "SHTGJ0", 215, 80
+{
+  Offset -113, -98
+  Patch "UACSHTG5", 0, 0
+}
+
+Sprite "SHTGK0", 215, 80
+{
+  Offset -115, -99
+  Patch "UACSHTG5", 0, 0
+}
+
+Sprite "SHTGL0", 204, 80
+{
+  Offset -127, -100
+  Patch "UACSHTG6", 0, 0
+}
+
+Sprite "SHTGM0", 204, 80
+{
+  Offset -129, -101
+  Patch "UACSHTG6", 0, 0
+}
+
+Sprite "SHTGN0", 204, 80
+{
+  Offset -127, -100
+  Patch "UACSHTG3", 0, 0
+}
+
+Sprite "SHTGO0", 215, 80
+{
+  Offset -115, -99
+  Patch "UACSHTG2", 0, 0
+}
+
+Sprite "SHTGP0", 215, 80
+{
+  Offset -113, -98
+  Patch "UACSHTG2", 0, 0
+}
+
+Sprite "SHTGQ0", 225, 80
+{
+  Offset -102, -97
+  Patch "UACSHTG1", 0, 0
+}
+
+Sprite "SHTGR0", 225, 80
+{
+  Offset -100, -96
+  Patch "UACSHTG1", 0, 0
+}
+
+Sprite "SHTGS0", 225, 80
+{
+  Offset -97, -94
+  Patch "UACSHTG4", 0, 0
+}
+
+Sprite "SHTGT0", 204, 80
+{
+  Offset -129, -101
+  Patch "UACSHTG3", 0, 0
+}
+
+//Firestick
+Sprite "SHGGA0", 107, 75
+{
+  Offset -190, -104
+  Patch "FSTICK1", 0, 0
+}
+
+Sprite "SHGGB0", 107, 75
+{
+  Offset -200, -109
+  Patch "FSTICK1", 0, 0
+}
+
+Sprite "SHGGC0", 107, 75
+{
+  Offset -205, -112
+  Patch "FSTICK1", 0, 0
+}
+
+Sprite "SHGGD0", 107, 75
+{
+  Offset -210, -114
+  Patch "FSTICK1", 0, 0
+}
+
+Sprite "SHGGE0", 107, 75
+{
+  Offset -194, -106
+  Patch "FSTICK1", 0, 0
+}
+
+Sprite "SHGGF0", 107, 75
+{
+  Offset -191, -105
+  Patch "FSTICK1", 0, 0
+}
+
+Sprite "SHGCA0", 125, 85
+{
+  Offset -183, -95
+  Patch "FSTICK2", 0, 0
+}
+
+Sprite "SHGCB0", 125, 85
+{
+  Offset -186, -92
+  Patch "FSTICK2", 0, 0
+}
+
+Sprite "SHGCC0", 125, 85
+{
+  Offset -191, -89
+  Patch "FSTICK2", 0, 0
+}
+
+Sprite "SHGCD0", 140, 115
+{
+  Offset -186, -69
+  Patch "FSTICK3", 0, 0
+}
+
+Sprite "SHGCE0", 140, 115
+{
+  Offset -196, -66
+  Patch "FSTICK3", 0, 0
+}
+
+Sprite "SHGCF0", 140, 115
+{
+  Offset -200, -63
+  Patch "FSTICK3", 0, 0
+}
+
+Sprite "SHGCG0", 131, 144
+{
+  Offset -191, -49
+  Patch "FSTICK4", 0, 0
+}
+
+Sprite "SHGCH0", 131, 144
+{
+  Offset -202, -36
+  Patch "FSTICK4", 0, 0
+}
+
+Sprite "SHGCI0", 131, 144
+{
+  Offset -213, -31
+  Patch "FSTICK4", 0, 0
+}
+
+Sprite "SHGCJ0", 131, 144
+{
+  Offset -214, -32
+  Patch "FSTICK4", 0, 0
+}
+
+Sprite "SHGCK0", 131, 144
+{
+  Offset -215, -33
+  Patch "FSTICK4", 0, 0
+}
+
+Sprite "SHGCL0", 131, 144
+{
+  Offset -216, -34
+  Patch "FSTICK4", 0, 0
+}
+
+Sprite "SHGCM0", 118, 155
+{
+  Offset -236, -37
+  Patch "FSTICK5", 0, 0
+}
+
+Sprite "SHGCN0", 118, 155
+{
+  Offset -237, -39
+  Patch "FSTICK5", 0, 0
+}
+
+//Pineapple Jammer
+Sprite "RGLGA0", 144, 92
+{
+  Offset -203, -100
+  Patch "PINEJAM1", 0, 0
+}
+
+Sprite "RGLGB0", 144, 92
+{
+  Offset -208, -97
+  Patch "PINEJAM1", 0, 0
+}
+
+Sprite "RGLGC0", 144, 92
+{
+  Offset -213, -94
+  Patch "PINEJAM1", 0, 0
+}
+
+Sprite "RGLGD0", 186, 132
+{
+  Offset -213, -91
+  Patch "PINEJAM2", 0, 0
+}
+
+Sprite "RGLGE0", 186, 132
+{
+  Offset -212, -90
+  Patch "PINEJAM2", 0, 0
+}
+
+Sprite "RGLGF0", 186, 132
+{
+  Offset -211, -89
+  Patch "PINEJAM2", 0, 0
+}
+
+Sprite "RGLGG0", 178, 126
+{
+  Offset -212, -90
+  Patch "PINEJAM3", 0, 0
+}
+
+Sprite "RGLGH0", 178, 126
+{
+  Offset -210, -92
+  Patch "PINEJAM3", 0, 0
+}
+
+Sprite "RGLGI0", 178, 126
+{
+  Offset -208, -94
+  Patch "PINEJAM3", 0, 0
+}
+
+Sprite "RGLGJ0", 164, 115
+{
+  Offset -210, -95
+  Patch "PINEJAM4", 0, 0
+}
+
+Sprite "RGLGK0", 164, 115
+{
+  Offset -208, -96
+  Patch "PINEJAM4", 0, 0
+}
+
+Sprite "RGLGL0", 164, 115
+{
+  Offset -206, -97
+  Patch "PINEJAM4", 0, 0
+}
+
+Sprite "RGLGM0", 154, 103
+{
+  Offset -207, -99
+  Patch "PINEJAM5", 0, 0
+}
+
+Sprite "RGLGN0", 154, 103
+{
+  Offset -206, -98
+  Patch "PINEJAM5", 0, 0
+}
+
+Sprite "RGLGO0", 154, 103
+{
+  Offset -204, -97
+  Patch "PINEJAM5", 0, 0
+}
+
+Sprite "PJFSI0", 186, 132
+{
+  Offset -200, -85
+  Patch "PINEJAM2", 0, 0
+}
+
+Sprite "PJFSJ0", 154, 103
+{
+  Offset -203, -96
+  Patch "PINEJAM5", 0, 0
+}
+
+Sprite "PJFSK0", 164, 115
+{
+  Offset -202, -91
+  Patch "PINEJAM4", 0, 0
+}
+
+Sprite "PJFSL0", 178, 126
+{
+  Offset -200, -85
+  Patch "PINEJAM3", 0, 0
+}
+
+//Hand Grenades
+Sprite "THR2A0", 249, 148
+{
+  Offset -244, -13
+  Patch "GRTHROB1", 0, 0
+}
+
+Sprite "THR2B0", 249, 148
+{
+  Offset -224, -24
+  Patch "GRTHROB1", 0, 0
+}
+
+Sprite "THR2C0", 249, 148
+{
+  Offset -203, -35
+  Patch "GRTHROB1", 0, 0
+}
+
+Sprite "THR2D0", 220, 114
+{
+  Offset -176, -83
+  Patch "GRTHROB2", 0, 0
+}
+
+Sprite "THR2E0", 220, 114
+{
+  Offset -168, -104
+  Patch "GRTHROB2", 0, 0
+}
+
+Sprite "THR2F0", 220, 114
+{
+  Offset -159, -125
+  Patch "GRTHROB2", 0, 0
+}
+
+Sprite "THR2G0", 194, 117
+{
+  Offset -142, -150
+  Patch "GRTHROB3", 0, 0
+}
+
+Sprite "THR2H0", 194, 117
+{
+  Offset -142, -155
+  Patch "GRTHROB3", 0, 0
+}
+
+Sprite "THR2I0", 194, 117
+{
+  Offset -142, -160
+  Patch "GRTHROB3", 0, 0
+}
