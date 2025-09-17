@@ -1,0 +1,30 @@
+[enu default]
+STEP_FLATS = "FLOOR00:FLOOR01:FLOOR03:FLOOR04:"
+			"FLOOR05:FLOOR06:FLOOR08:FLOOR10:"
+			"FLOOR11:FLOOR12:FLOOR17:FLOOR18:"
+			"FLOOR19:FLTWAWA1:FLTWAWA2:FLTWAWA3:"
+			"FLTSLUD1:FLTSLUD2:FLTSLUD3:FLTFLWW1:"
+			"FLTFLWW2:FLTFLWW3";
+
+STEP_FLOOR00 = "step/rock";
+STEP_FLOOR01 = "step/rock";
+STEP_FLOOR03 = "step/rock";
+STEP_FLOOR04 = "step/rock";
+STEP_FLOOR05 = "step/rock";
+STEP_FLOOR06 = "step/tile/b";
+STEP_FLOOR08 = "step/metal/a";
+STEP_FLOOR10 = "step/wood";
+STEP_FLOOR11 = "step/rock";
+STEP_FLOOR12 = "step/rock";
+STEP_FLOOR17 = "step/gravel";
+STEP_FLOOR18 = "step/tile/b";
+STEP_FLOOR19 = "step/tile/b";
+STEP_FLTWAWA1 = "step/water";
+STEP_FLTWAWA2 = "step/water";
+STEP_FLTWAWA3 = "step/water";
+STEP_FLTSLUD1 = "step/slime";
+STEP_FLTSLUD2 = "step/slime";
+STEP_FLTSLUD3 = "step/slime";
+STEP_FLTFLWW1 = "step/water";
+STEP_FLTFLWW2 = "step/water";
+STEP_FLTFLWW3 = "step/water";

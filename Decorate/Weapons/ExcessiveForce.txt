@@ -72,11 +72,11 @@ actor ExcessiveForce : Weapon
 		NCHG A 0 A_JumpIfInventory("PowerDoubleDamage", 1, "DoubleFire")
 		Goto ContinueFire
 	QuadFire:
-		TNT1 A 0 A_SetBlend("Blue", 0.25, 16)
+		TNT1 A 0 ACS_NamedExecute("QuadFlash")
 		NCHG A 0 A_PlaySound("QuadDamage/Use")
 		Goto ContinueFire
 	DoubleFire:
-		TNT1 A 0 A_SetBlend("Red", 0.25, 16)
+		TNT1 A 0 ACS_NamedExecute("DoubleFlash")
 		NCHG A 0 A_PlaySound("DoubleDamage/Use")
 	ContinueFire:
 		NCHG A 0 A_PlayWeaponSound ("plasma/fire")
@@ -104,11 +104,11 @@ actor ExcessiveForce : Weapon
 	FOOT D 0 A_JumpIfInventory("PowerDoubleDamage", 1, "DoubleKick")
 	Goto ContinueKick
   QuadKick:
-	TNT1 A 0 A_SetBlend("Blue", 0.25, 16)
+	TNT1 A 0 ACS_NamedExecute("QuadFlash")
 	FOOT D 0 A_PlaySound("QuadDamage/Use",CHAN_7)
 	Goto ContinueKick
   DoubleKick:
-	TNT1 A 0 A_SetBlend("Red", 0.25, 16)
+	TNT1 A 0 ACS_NamedExecute("DoubleFlash")
 	FOOT D 0 A_PlaySound("DoubleDamage/Use",CHAN_7)
   ContinueKick:
 	FOOT D 0 A_CustomPunch(5,0,0,"KickPuff")

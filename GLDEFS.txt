@@ -686,6 +686,7 @@ Glow
    blood1
    blood2
    blood3
+   blood4 //ID24
    ceil1_2
    ceil1_3
    ceil3_4
@@ -721,6 +722,11 @@ Glow
    fnukge1
    fnukge2
    fnukge3
+   fnukge4
+   fnukge5
+   fnukge6
+   fnukge7
+   fnukge8
    rrock01
    rrock02
    rrock05
@@ -764,33 +770,45 @@ Glow
    aqf064
    aqf065
    aqf066
-//Heretic
-   flat517
-   flathuh1
-   flathuh2
-   flathuh3
-   flathuh4
-   floor21
-   floor22
-   floor23
-   floor24
-   floor26
-   fltflww1
-   fltflww2
-   fltflww3
-   fltlava1
-   fltlava2
-   fltlava3
-   fltlava4
-   fltslud1
-   fltslud2
-   fltslud3
-   flttele1
-   flttele2
-   flttele3
-   flttele4
-   fltwawa1
-   fltwawa2
-   fltwawa3
+// Legacy of Rust/ID24
+   blavaa1
+   blavaa2
+   blavaa3
+   blavaa4
+   blavab1
+   blavab2
+   blavab3
+   blavab4
+   blavac1
+   blavac2
+   blavac3
+   blavac4
+   ceil1_2b
+   ceil1_2c
+   ceil1_2d
+   ceil1_2e
+   ceil1_2f
+   ceil1_2g
+   fblood1
+   fblood2
+   fblood3
+   fblood4
+   floor8_1
+   floor8_2
+   floor8_3
+   floor8_4
+   floor8_6
+   gate5
+   sblood1
+   sblood2
+   sblood3
+   swater1
+   swater2
+   swater3
+   swater4
+   tlite6_2
+   tlite6_3
+   tlitex_5
+   tlitex_6
   }
 }

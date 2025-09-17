@@ -4933,6 +4933,11 @@ Brightmap Sprite RGNSH0
 Map "Brightmaps/GMID/RGNSH0.png"
 }
 
+Brightmap Sprite CRYOA0
+{
+Map "Brightmaps/GMID/CRYOA0.png"
+}
+
 //Textures
 Brightmap Flat MAGMA1
 {
@@ -5032,4 +5037,84 @@ Map "Brightmaps/GMID/_TP.png"
 Brightmap Flat _TPGREY8
 {
 Map "Brightmaps/GMID/_TP.png"
+}
+
+Brightmap Flat _TPBLUE1
+{
+Map "Brightmaps/GMID/_TP.png"
+}
+
+Brightmap Flat _TPBLUE2
+{
+Map "Brightmaps/GMID/_TP.png"
+}
+
+Brightmap Flat _TPBLUE3
+{
+Map "Brightmaps/GMID/_TP.png"
+}
+
+Brightmap Flat _TPBLUE4
+{
+Map "Brightmaps/GMID/_TP.png"
+}
+
+Brightmap Flat _TPBLUE5
+{
+Map "Brightmaps/GMID/_TP.png"
+}
+
+Brightmap Flat _TPBLUE6
+{
+Map "Brightmaps/GMID/_TP.png"
+}
+
+Brightmap Flat _TPBLUE7
+{
+Map "Brightmaps/GMID/_TP.png"
+}
+
+Brightmap Flat _TPBLUE8
+{
+Map "Brightmaps/GMID/_TP.png"
+}
+
+Brightmap Flat FNUKWLK1
+{
+Map "Brightmaps/GMID/FNUKWLK.png"
+}
+
+Brightmap Flat FNUKWLK2
+{
+Map "Brightmaps/GMID/FNUKWLK.png"
+}
+
+Brightmap Flat FNUKWLK3
+{
+Map "Brightmaps/GMID/FNUKWLK.png"
+}
+
+Brightmap Flat FNUKWLK4
+{
+Map "Brightmaps/GMID/FNUKWLK.png"
+}
+
+Brightmap Flat FNUKWLK5
+{
+Map "Brightmaps/GMID/FNUKWLK.png"
+}
+
+Brightmap Flat FNUKWLK6
+{
+Map "Brightmaps/GMID/FNUKWLK.png"
+}
+
+Brightmap Flat FNUKWLK7
+{
+Map "Brightmaps/GMID/FNUKWLK.png"
+}
+
+Brightmap Flat FNUKWLK8
+{
+Map "Brightmaps/GMID/FNUKWLK.png"
 }

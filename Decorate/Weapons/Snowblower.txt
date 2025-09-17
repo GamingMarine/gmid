@@ -1,0 +1,16 @@
+Actor CryoAmmo : Ammo replaces ID24Fuel
+{
+  Inventory.PickupMessage "$GOTCRYO"
+  Inventory.Amount 25
+  Inventory.MaxAmount 350
+  Ammo.BackpackAmount 25
+  Ammo.BackpackMaxAmount 700
+  Tag "$TAG_CRYO"
+  Inventory.PickupSound "cryo/get"
+  States
+  {
+  Spawn:
+    CRYO A -1
+    Stop
+  }
+}

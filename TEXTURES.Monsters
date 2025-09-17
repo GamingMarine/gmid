@@ -721,3 +721,1089 @@ Sprite "BBQ2D5", 57, 74
     Blend "#FF0000"
   }
 }
+
+//Rourity
+Sprite "BBQ6A1", 46, 72
+{
+  Offset 23, 68
+  Patch "ROTYA1", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ6A2A8", 65, 66
+{
+  Offset 32, 62
+  Patch "ROTYA2A8", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ6A3A7", 74, 70
+{
+  Offset 37, 66
+  Patch "ROTYA3A7", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ6A4A6", 74, 70
+{
+  Offset 37, 60
+  Patch "ROTYA4A6", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ6A5", 36, 75
+{
+  Offset 18, 71
+  Patch "ROTYA5", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ6B1", 39, 68
+{
+  Offset 19, 64
+  Patch "ROTYB1", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ6B2B8", 59, 74
+{
+  Offset 29, 70
+  Patch "ROTYB2B8", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ6B3B7", 73, 71
+{
+  Offset 36, 67
+  Patch "ROTYB3B7", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ6B4B6", 57, 71
+{
+  Offset 28, 63
+  Patch "ROTYB4B6", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ6B5", 54, 74
+{
+  Offset 27, 70
+  Patch "ROTYB5", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ6C1", 55, 75
+{
+  Offset 27, 71
+  Patch "ROTYC1", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ6C2C8", 67, 71
+{
+  Offset 33, 67
+  Patch "ROTYC2C8", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ6C3C7", 74, 77
+{
+  Offset 37, 73
+  Patch "ROTYC3C7", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ6C4C6", 64, 73
+{
+  Offset 32, 62
+  Patch "ROTYC4C6", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ6C5", 40, 73
+{
+  Offset 20, 69
+  Patch "ROTYC5", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ6D1", 48, 74
+{
+  Offset 24, 70
+  Patch "ROTYD1", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ6D2D8", 61, 69
+{
+  Offset 30, 65
+  Patch "ROTYD2D8", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ6D3D7", 73, 71
+{
+  Offset 36, 67
+  Patch "ROTYD3D7", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ6D4D6", 57, 71
+{
+  Offset 28, 61
+  Patch "ROTYD4D6", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ6D5", 43, 75
+{
+  Offset 21, 71
+  Patch "ROTYD5", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+//TrixieKir
+Sprite "BBQ9A1", 46, 73
+{
+  Offset 20, 73
+  Patch "TRKIA1", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ9A2A8", 68, 70
+{
+  Offset 34, 66
+  Patch "TRKIA2A8", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ9A3A7", 73, 72
+{
+  Offset 36, 68
+  Patch "TRKIA3A7", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ9A4A6", 54, 75
+{
+  Offset 27, 71
+  Patch "TRKIA4A6", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ9A5", 60, 77
+{
+  Offset 30, 73
+  Patch "TRKIA5", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ9B1", 46, 70
+{
+  Offset 23, 66
+  Patch "TRKIB1", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ9B2B8", 64, 73
+{
+  Offset 32, 69
+  Patch "TRKIB2B8", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ9B3B7", 78, 77
+{
+  Offset 39, 73
+  Patch "TRKIB3B7", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ9B4B6", 69, 71
+{
+  Offset 34, 67
+  Patch "TRKIB4B6", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ9B5", 46, 78
+{
+  Offset 23, 74
+  Patch "TRKIB5", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ9C1", 55, 70
+{
+  Offset 27, 66
+  Patch "TRKIC1", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ9C2C8", 65, 67
+{
+  Offset 32, 63
+  Patch "TRKIC2C8", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ9C3C7", 78, 71
+{
+  Offset 39, 67
+  Patch "TRKIC3C7", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ9C4C6", 71, 72
+{
+  Offset 35, 68
+  Patch "TRKIC4C6", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ9C5", 52, 75
+{
+  Offset 26, 71
+  Patch "TRKIC5", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ9D1", 60, 74
+{
+  Offset 30, 70
+  Patch "TRKID1", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ9D2D8", 73, 73
+{
+  Offset 36, 69
+  Patch "TRKID2D8", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ9D3D7", 67, 73
+{
+  Offset 33, 69
+  Patch "TRKID3D7", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ9D4D6", 72, 74
+{
+  Offset 36, 70
+  Patch "TRKID4D6", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ9D5", 56, 85
+{
+  Offset 28, 81
+  Patch "TRKID5", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+//TwiMage
+Sprite "BBQ7A1", 47, 76
+{
+  Offset 23, 77
+  Patch "TWMAA1", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ7A2A8", 65, 67
+{
+  Offset 31, 66
+  Patch "TWMAA2A8", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ7A3A7", 67, 69
+{
+  Offset 32, 66
+  Patch "TWMAA3A7", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ7A4A6", 79, 77
+{
+  Offset 36, 69
+  Patch "TWMAA4A6", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ7A5", 48, 70
+{
+  Offset 23, 70
+  Patch "TWMAA5", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ7B1", 46, 72
+{
+  Offset 22, 72
+  Patch "TWMAB1", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ7B2B8", 61, 69
+{
+  Offset 29, 68
+  Patch "TWMAB2B8", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ7B3B7", 76, 68
+{
+  Offset 42, 66
+  Patch "TWMAB3B7", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ7B4B6", 63, 68
+{
+  Offset 32, 66
+  Patch "TWMAB4B6", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ7B5", 56, 72
+{
+  Offset 26, 71
+  Patch "TWMAB5", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ7C1", 59, 77
+{
+  Offset 29, 74
+  Patch "TWMAC1", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ7C2C8", 78, 83
+{
+  Offset 35, 72
+  Patch "TWMAC2C8", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ7C3C7", 87, 73
+{
+  Offset 45, 70
+  Patch "TWMAC3C7", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ7C4C6", 68, 72
+{
+  Offset 28, 65
+  Patch "TWMAC4C6", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ7C5", 63, 73
+{
+  Offset 31, 69
+  Patch "TWMAC5", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ7D1", 58, 73
+{
+  Offset 28, 72
+  Patch "TWMAD1", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ7D2D8", 78, 83
+{
+  Offset 33, 71
+  Patch "TWMAD2D8", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ7D3D7", 86, 74
+{
+  Offset 39, 69
+  Patch "TWMAD3D7", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ7D4D6", 72, 68
+{
+  Offset 33, 60
+  Patch "TWMAD4D6", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ7D5", 68, 71
+{
+  Offset 33, 65
+  Patch "TWMAD5", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+//VinylStorm
+Sprite "BBQ8A1", 36, 77
+{
+  Offset 18, 77
+  Patch "VSTRA1", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ8A2A8", 59, 66
+{
+  Offset 29, 65
+  Patch "VSTRA2A8", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ8A3A7", 71, 69
+{
+  Offset 35, 68
+  Patch "VSTRA3A7", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ8A4A6", 56, 64
+{
+  Offset 28, 61
+  Patch "VSTRA4A6", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ8A5", 55, 67
+{
+  Offset 27, 66
+  Patch "VSTRA5", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ8B1", 36, 77
+{
+  Offset 18, 71
+  Patch "VSTRB1", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ8B2B8", 59, 66
+{
+  Offset 29, 65
+  Patch "VSTRB2B8", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ8B3B7", 66, 66
+{
+  Offset 34, 64
+  Patch "VSTRB3B7", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ8B4B6", 56, 64
+{
+  Offset 28, 53
+  Patch "VSTRB4B6", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ8B5", 55, 67
+{
+  Offset 27, 66
+  Patch "VSTRB5", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ8C1", 36, 77
+{
+  Offset 18, 76
+  Patch "VSTRC1", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ8C2C8", 59, 66
+{
+  Offset 29, 65
+  Patch "VSTRC2C8", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ8C3C7", 67, 71
+{
+  Offset 33, 70
+  Patch "VSTRC3C7", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ8C4C6", 58, 66
+{
+  Offset 29, 60
+  Patch "VSTRC4C6", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ8C5", 55, 67
+{
+  Offset 27, 66
+  Patch "VSTRC5", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ8D1", 39, 75
+{
+  Offset 19, 71
+  Patch "VSTRD1", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ8D2D8", 59, 63
+{
+  Offset 29, 61
+  Patch "VSTRD2D8", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ8D3D7", 67, 66
+{
+  Offset 33, 65
+  Patch "VSTRD3D7", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ8D4D6", 56, 66
+{
+  Offset 28, 58
+  Patch "VSTRD4D6", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ8D5", 55, 67
+{
+  Offset 27, 66
+  Patch "VSTRD5", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+//NewbieHooves
+Sprite "BBQ5A1", 42, 75
+{
+  Offset 21, 74
+  Patch "NWBHA1", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ5A2A8", 52, 64
+{
+  Offset 26, 60
+  Patch "NWBHA2A8", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ5A3A7", 62, 70
+{
+  Offset 31, 66
+  Patch "NWBHA3A7", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ5A4A6", 62, 70
+{
+  Offset 31, 59
+  Patch "NWBHA4A6", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ5A5", 53, 76
+{
+  Offset 26, 66
+  Patch "NWBHA5", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ5B1", 41, 75
+{
+  Offset 20, 71
+  Patch "NWBHB1", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ5B2B8", 59, 72
+{
+  Offset 29, 68
+  Patch "NWBHB2B8", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ5B3B7", 72, 70
+{
+  Offset 36, 66
+  Patch "NWBHB3B7", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ5B4B6", 58, 78
+{
+  Offset 29, 65
+  Patch "NWBHB4B6", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ5B5", 39, 78
+{
+  Offset 19, 69
+  Patch "NWBHB5", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ5C1", 45, 72
+{
+  Offset 20, 71
+  Patch "NWBHC1", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ5C2C8", 50, 63
+{
+  Offset 25, 59
+  Patch "NWBHC2C8", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ5C3C7", 69, 69
+{
+  Offset 34, 65
+  Patch "NWBHC3C7", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ5C4C6", 52, 79
+{
+  Offset 26, 67
+  Patch "NWBHC4C6", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ5C5", 43, 80
+{
+  Offset 21, 70
+  Patch "NWBHC5", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ5D1", 42, 73
+{
+  Offset 18, 68
+  Patch "NWBHD1", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ5D2D8", 55, 63
+{
+  Offset 27, 59
+  Patch "NWBHD2D8", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ5D3D7", 70, 72
+{
+  Offset 35, 68
+  Patch "NWBHD3D7", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ5D4D6", 55, 77
+{
+  Offset 27, 62
+  Patch "NWBHD4D6", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ5D5", 48, 81
+{
+  Offset 24, 72
+  Patch "NWBHD5", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+//FlutterMedic
+Sprite "BBQ4A1", 48, 74
+{
+  Offset 24, 70
+  Patch "FLMDA1", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ4A2A8", 73, 69
+{
+  Offset 36, 65
+  Patch "FLMDA2A8", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ4A3A7", 96, 75
+{
+  Offset 48, 71
+  Patch "FLMDA3A7", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ4A4A6", 65, 70
+{
+  Offset 32, 55
+  Patch "FLMDA4A6", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ4A5", 44, 73
+{
+  Offset 22, 69
+  Patch "FLMDA5", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ4B1", 42, 75
+{
+  Offset 21, 71
+  Patch "FLMDB1", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ4B2B8", 70, 71
+{
+  Offset 35, 67
+  Patch "FLMDB2B8", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ4B3B7", 82, 73
+{
+  Offset 41, 69
+  Patch "FLMDB3B7", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ4B4B6", 58, 68
+{
+  Offset 29, 55
+  Patch "FLMDB4B6", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ4B5", 35, 68
+{
+  Offset 17, 64
+  Patch "FLMDB5", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ4C1", 43, 71
+{
+  Offset 21, 67
+  Patch "FLMDC1", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ4C2C8", 65, 66
+{
+  Offset 32, 62
+  Patch "FLMDC2C8", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ4C3C7", 84, 69
+{
+  Offset 42, 65
+  Patch "FLMDC3C7", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ4C4C6", 65, 70
+{
+  Offset 32, 57
+  Patch "FLMDC4C6", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ4C5", 36, 68
+{
+  Offset 18, 64
+  Patch "FLMDC5", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ4D1", 49, 70
+{
+  Offset 24, 66
+  Patch "FLMDD1", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ4D2D8", 65, 66
+{
+  Offset 32, 62
+  Patch "FLMDD2D8", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ4D3D7", 96, 75
+{
+  Offset 48, 71
+  Patch "FLMDD3D7", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ4D4D6", 65, 70
+{
+  Offset 32, 56
+  Patch "FLMDD4D6", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}
+
+Sprite "BBQ4D5", 36, 68
+{
+  Offset 18, 64
+  Patch "FLMDD5", 0, 0
+  {
+    Blend "#FF0000"
+  }
+}

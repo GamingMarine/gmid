@@ -231,11 +231,13 @@ floor lava4 DoomLava
 floor blood1 DoomBlood
 floor blood2 DoomBlood
 floor blood3 DoomBlood
+floor blood4 DoomBlood //ID24
 
 //slime
 floor nukage1 DoomSlime
 floor nukage2 DoomSlime
 floor nukage3 DoomSlime
+floor nukage4 DoomSlime //ID24
 
 //muddy sludge
 floor slime01 DoomMud
@@ -258,3 +260,28 @@ floor slime09 DoomSizzle
 floor slime10 DoomSizzle
 floor slime11 DoomSizzle
 floor slime12 DoomSizzle
+
+//Legacy of Rust/ID24 Terrains
+floor blavaa1 DoomLava
+floor blavaa2 DoomLava
+floor blavaa3 DoomLava
+floor blavaa4 DoomLava
+floor blavab1 DoomLava
+floor blavab2 DoomLava
+floor blavab3 DoomLava
+floor blavab4 DoomLava
+floor blavac1 DoomLava
+floor blavac2 DoomLava
+floor blavac3 DoomLava
+floor blavac4 DoomLava
+floor fblood1 DoomBlood
+floor fblood2 DoomBlood
+floor fblood3 DoomBlood
+floor fblood4 DoomBlood
+floor sblood1 DoomBlood
+floor sblood2 DoomBlood
+floor sblood3 DoomBlood
+floor swater1 Doomwater
+floor swater2 Doomwater
+floor swater3 Doomwater
+floor swater4 Doomwater

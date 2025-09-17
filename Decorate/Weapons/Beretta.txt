@@ -1,3 +1,5 @@
+Actor BasicPistolToken : Inventory {} //If you're playing with a map that takes away your pistol at the start, then play an alternate animation on first equip
+
 Actor BerettaShotCount : Inventory
 {
   Inventory.MaxAmount 15
@@ -36,6 +38,7 @@ Actor GMIDPistol : Pistol Replaces Pistol
 	Stop
 	Ready:
 	TNT1 A 0 A_JumpIfInventory("StartingAnimation",1,"StartGame")
+	TNT1 A 0 A_JumpIfInventory("BasicPistolToken",1,"FirstTime")
 	PISG A 1 A_WeaponReady
 	Loop
 	Fire:
@@ -46,11 +49,11 @@ Actor GMIDPistol : Pistol Replaces Pistol
 	PISG B 0 A_JumpIfInventory("PowerDoubleDamage", 1, "DoubleFire")
 	Goto ContinueFire
 	QuadFire:
-	TNT1 A 0 A_SetBlend("Blue", 0.25, 16)
+	TNT1 A 0 ACS_NamedExecute("QuadFlash")
 	PISG B 0 A_PlaySound("QuadDamage/Use")
 	Goto ContinueFire
 	DoubleFire:
-	TNT1 A 0 A_SetBlend("Red", 0.25, 16)
+	TNT1 A 0 ACS_NamedExecute("DoubleFlash")
 	PISG B 0 A_PlaySound("DoubleDamage/Use")
 	ContinueFire:
 	PISG B 0 A_PlaySound("weapons/GMPISTOL", CHAN_WEAPON)
@@ -138,11 +141,16 @@ Actor GMIDPistol : Pistol Replaces Pistol
     PISG A 0 A_Lower
     Loop
   Select:
+	TNT1 A 0 A_JumpIfInventory("StartingAnimation",1,"SkipRaise")
     PISG A 1 A_Raise
     PISG A 0 A_Raise
     Loop
+  SkipRaise:
+	TNT1 A 0 A_Raise
+	Loop
   StartGame: //Damn, those four-legged bastards are gonna pay for being cringy as fuck.
 	TNT1 A 0 A_TakeInventory("StartingAnimation",0)
+	TNT1 A 0 A_TakeInventory("BasicPistolToken",0)
 	TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("PVPCheck",0,0,0,0) == 2,"AltStartGame")
 	TNT1 A 0 A_JumpIf(CallACS("NoWarmUpAnimation")==1, "AltStartGame")
 	TNT1 A 15 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
@@ -163,6 +171,38 @@ Actor GMIDPistol : Pistol Replaces Pistol
 	TNT1 A 0 A_JumpIf(CallACS("PlayerVocalizations")==0, "Ready")
 	TNT1 A 0 A_PlaySound("player/intro", CHAN_VOICE)
 	Goto Ready
+  FirstTime:
+	TNT1 A 0 A_TakeInventory("BasicPistolToken",0)
+	TNT1 A 0 A_JumpIf(ACS_NamedExecuteWithResult("PVPCheck",0,0,0,0) == 2,"Ready")
+	TNT1 A 0 A_JumpIf(CallACS("PickupAnimation")==0, "Ready")
+	PISG A 2 A_WeaponReady
+	TNT1 A 0 A_PlaySound("pistol/fiddle1")
+	P1F2 ABCDEF 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	P1F2 G 1 A_PlaySound("pistol/fiddle2",CHAN_AUTO)
+	P1F2 HIJKLMN 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	P1F2 G 1 A_PlaySound("pistol/fiddle2",CHAN_AUTO)
+	P1F2 HIJKLMN 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	P1F2 G 1 A_PlaySound("pistol/fiddle2",CHAN_AUTO)
+	P1F2 HIJKLMN 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	P1F2 G 1 A_PlaySound("pistol/fiddle2",CHAN_AUTO)
+	P1F2 HIJKLMN 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	P1F2 G 1 A_PlaySound("pistol/fiddle2",CHAN_AUTO)
+	P1F2 HIJKLM 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 0 A_PlaySound("pistol/fiddle3")
+	P1F2 OPQRRR 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 0 A_PlaySound("weapon/fiddle",CHAN_AUTO)
+	P1F2 RSTUVWXYZ 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	P1F3 ABCCC 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 0 A_PlaySound("weapon/fiddle",CHAN_AUTO)
+	P1F3 DEFG 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 0 A_PlaySound("pistol/cock")
+	P1F3 HIJKLMMMMMMMMLKJIHGGGGGG 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 0 A_PlaySound("weapon/fiddle",CHAN_AUTO)
+	P1F3 FEDC 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	TNT1 A 0 A_PlaySound("weapon/fiddle",CHAN_AUTO)
+	P1F3 BA 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	P1F2 ZYXW 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
+	Goto Ready
   AltFire:
 	TNT1 A 0 A_GunFlash("WeaponStill")
 	TNT1 A 0 A_PlaySound ("weapons/KICK",CHAN_WEAPON)
@@ -173,11 +213,11 @@ Actor GMIDPistol : Pistol Replaces Pistol
 	FOOT D 0 A_JumpIfInventory("PowerDoubleDamage", 1, "DoubleKick")
 	Goto ContinueKick
   QuadKick:
-	TNT1 A 0 A_SetBlend("Blue", 0.25, 16)
+	TNT1 A 0 ACS_NamedExecute("QuadFlash")
 	FOOT D 0 A_PlaySound("QuadDamage/Use",CHAN_7)
 	Goto ContinueKick
   DoubleKick:
-	TNT1 A 0 A_SetBlend("Red", 0.25, 16)
+	TNT1 A 0 ACS_NamedExecute("DoubleFlash")
 	FOOT D 0 A_PlaySound("DoubleDamage/Use",CHAN_7)
   ContinueKick:
 	FOOT D 0 A_CustomPunch(5,0,0,"KickPuff")

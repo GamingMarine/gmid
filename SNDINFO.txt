@@ -76,6 +76,13 @@ weapon/fiddle4	 WFIDDLE4
 weapon/fiddle5	 WFIDDLE5
 weapon/fiddle6	 WFIDDLE6
 weapon/fiddle7	 WFIDDLE7
+pistol/fiddle1	 BERFRS1
+$random pistol/fiddle2 { pistol/fiddle2a pistol/fiddle2b pistol/fiddle2c pistol/fiddle2d }
+pistol/fiddle2a  BERFRS2A
+pistol/fiddle2b  BERFRS2B
+pistol/fiddle2c  BERFRS2C
+pistol/fiddle2d  BERFRS2D
+pistol/fiddle3	 BERFRS3
 2beretta/fiddle	 2PISFRS
 $random shell/load { shell/load1 shell/load2 shell/load3 }
 shell/load1		 SHELLD1
@@ -312,6 +319,7 @@ cell/get1			CELLGET
 cell/get2			CELLGET2
 mana/smallget		SMOLMANA
 mana/largeget		BIGMANA
+cryo/get			CRYOUP
 misc/ar2_pkup 		AMRSHRD
 backpack/get BPACKUP
 FKITUSE		cokeuse
@@ -510,6 +518,17 @@ player/killtaunt92			KILL92
 player/killtaunt93			KILL93
 player/killtaunt94			KILL94
 player/killtaunt95			KILL95
+$random player/punchtaunt { player/punchtaunt1 player/punchtaunt2 player/punchtaunt3 player/punchtaunt4 player/punchtaunt5 player/punchtaunt6 player/punchtaunt7 player/punchtaunt8 player/punchtaunt9 player/punchtaunt10 }
+player/punchtaunt1			punch01
+player/punchtaunt2			punch02
+player/punchtaunt3			punch03
+player/punchtaunt4			punch04
+player/punchtaunt5			punch05
+player/punchtaunt6			punch06
+player/punchtaunt7			punch07
+player/punchtaunt8			punch08
+player/punchtaunt9			punch09
+player/punchtaunt10			punch10
 $random player/kicktaunt { player/kicktaunt1 player/kicktaunt2 player/kicktaunt3 player/kicktaunt4 player/kicktaunt5 player/kicktaunt6 player/kicktaunt7 player/kicktaunt8 player/kicktaunt9 player/kicktaunt10 }
 player/kicktaunt1			kick01
 player/kicktaunt2			kick02
@@ -532,6 +551,46 @@ player/headshot7			hedsht07
 player/headshot8			hedsht08
 player/headshot9			hedsht09
 player/headshot10			hedsht10
+$random player/burnem { player/burnem1 player/burnem2 player/burnem3 player/burnem4 player/burnem5 player/burnem6 player/burnem7 player/burnem8 player/burnem9 player/burnem10 }
+player/burnem1				crispy01
+player/burnem2				crispy02
+player/burnem3				crispy03
+player/burnem4				crispy04
+player/burnem5				crispy05
+player/burnem6				crispy06
+player/burnem7				crispy07
+player/burnem8				crispy08
+player/burnem9				crispy09
+player/burnem10				crispy10
+$random player/deathmatchtaunt { player/deathmatchtaunt1 player/deathmatchtaunt2 player/deathmatchtaunt3 player/deathmatchtaunt4 player/deathmatchtaunt5 player/deathmatchtaunt6 player/deathmatchtaunt7 player/deathmatchtaunt8 player/deathmatchtaunt9 player/deathmatchtaunt10 player/deathmatchtaunt11 player/deathmatchtaunt12 player/deathmatchtaunt13 player/deathmatchtaunt14 player/deathmatchtaunt15 player/deathmatchtaunt16 player/deathmatchtaunt17 player/deathmatchtaunt18 player/deathmatchtaunt19 player/deathmatchtaunt20 player/deathmatchtaunt21 player/deathmatchtaunt22 player/deathmatchtaunt23 player/deathmatchtaunt24 player/deathmatchtaunt25 player/deathmatchtaunt26 player/deathmatchtaunt27 player/deathmatchtaunt28 player/killtaunt2 player/killtaunt5 player/killtaunt12 player/killtaunt13 player/killtaunt19 player/killtaunt31 player/killtaunt33 player/killtaunt43 player/killtaunt47 player/killtaunt49 player/killtaunt73 }
+player/deathmatchtaunt1		DMKILL01
+player/deathmatchtaunt2		DMKILL02
+player/deathmatchtaunt3		DMKILL03
+player/deathmatchtaunt4		DMKILL04
+player/deathmatchtaunt5		DMKILL05
+player/deathmatchtaunt6		DMKILL06
+player/deathmatchtaunt7		DMKILL07
+player/deathmatchtaunt8		DMKILL08
+player/deathmatchtaunt9		DMKILL09
+player/deathmatchtaunt10	DMKILL10
+player/deathmatchtaunt11	DMKILL11
+player/deathmatchtaunt12	DMKILL12
+player/deathmatchtaunt13	DMKILL13
+player/deathmatchtaunt14	DMKILL14
+player/deathmatchtaunt15	DMKILL15
+player/deathmatchtaunt16	DMKILL16
+player/deathmatchtaunt17	DMKILL17
+player/deathmatchtaunt18	DMKILL18
+player/deathmatchtaunt19	DMKILL19
+player/deathmatchtaunt20	DMKILL20
+player/deathmatchtaunt21	DMKILL21
+player/deathmatchtaunt22	DMKILL22
+player/deathmatchtaunt23	DMKILL23
+player/deathmatchtaunt24	DMKILL24
+player/deathmatchtaunt25	DMKILL25
+player/deathmatchtaunt26	DMKILL26
+player/deathmatchtaunt27	DMKILL27
+player/deathmatchtaunt28	DMKILL28
 player/imonfire		gmpdiehi
 player/meleedie		deathhit
 player/death		GMPLDETH //Used during the cast call
@@ -661,6 +720,22 @@ misc/quit1			QUITSND1
 misc/quit2			QUITSND2
 misc/quit3			QUITSND3
 $random gmid/quit { misc/quit1 misc/quit2 misc/quit3 }
+misc/cheater1		CHEAT01
+misc/cheater2		CHEAT02
+misc/cheater3		CHEAT03
+misc/cheater4		CHEAT04
+misc/cheater5		CHEAT05
+misc/cheater6		CHEAT06
+misc/cheater7		CHEAT07
+misc/cheater8		CHEAT08
+misc/cheater9		CHEAT09
+misc/cheater10		CHEAT10
+misc/cheater11		CHEAT11
+misc/cheater12		CHEAT12
+misc/cheater13		CHEAT13
+misc/cheater14		CHEAT14
+misc/cheater15		CHEAT15
+$random misc/cheater { misc/cheater1 misc/cheater2 misc/cheater3 misc/cheater4 misc/cheater5 misc/cheater6 misc/cheater7 misc/cheater8 misc/cheater9 misc/cheater10 misc/cheater11 misc/cheater12 misc/cheater13 misc/cheater14 misc/cheater15 }
 gmid/chat			CHATSND
 intermission/tick	COUNTING
 intermission/nextstage	COUNTEND
@@ -832,9 +907,9 @@ GTSOH					GTSOH
 big/nute				BIGNUT
 misc/toasty				TOASTY
 
-$attenuation player/killtaunt 0
+/*$attenuation player/killtaunt 0
 $attenuation player/gibtaunt 0
-$attenuation player/kicktaunt 0
+$attenuation player/kicktaunt 0*/
 $attenuation Explosion/Distant 0
 $attenuation crystal/spawn 0
 $attenuation cookie/jingle 0
@@ -1755,7 +1830,7 @@ bg/b1 BGRFIRE1
 bg/b2 BGRFIRE2
 bg/b3 BGRFIRE3
 
-//I know that the character these sounds come from (Sorlag from Quake Champions) is actually a female, but, oh well.
+//I know that the character these sounds come from (Sorlag from Quake Champions) is actually female, but, oh well.
 $random Hellhound/sit { Hellhound/sit1 Hellhound/sit2 Hellhound/sit3 Hellhound/sit4 Hellhound/sit5 Hellhound/sit6 Hellhound/sit7 Hellhound/sit8 Hellhound/sit9 Hellhound/sit10 Hellhound/sit11 }
 Hellhound/sit1	HOUNST01
 Hellhound/sit2	HOUNST02

@@ -91,24 +91,50 @@ flat NUKAGE1
     pic FNUKGE1 tics 4
 	pic FNUKGE2 tics 4
 	pic FNUKGE3 tics 4
-	pic FNUKGE2 tics 4
+	pic FNUKGE4 tics 4
+	pic FNUKGE5 tics 4
+	pic FNUKGE6 tics 4
+	pic FNUKGE7 tics 4
+	pic FNUKGE8 tics 4
 	
 flat NUKAGE2
-    pic FNUKGE1 tics 4
-	pic FNUKGE2 tics 4
-	pic FNUKGE3 tics 4
+    pic FNUKGE3 tics 4
+	pic FNUKGE4 tics 4
+	pic FNUKGE5 tics 4
+	pic FNUKGE6 tics 4
+	pic FNUKGE7 tics 4
+	pic FNUKGE8 tics 4
+	pic FNUKGE1 tics 4
 	pic FNUKGE2 tics 4
 	
 flat NUKAGE3
-    pic FNUKGE1 tics 4
+    pic FNUKGE5 tics 4
+	pic FNUKGE6 tics 4
+	pic FNUKGE7 tics 4
+	pic FNUKGE8 tics 4
+	pic FNUKGE1 tics 4
 	pic FNUKGE2 tics 4
 	pic FNUKGE3 tics 4
+	pic FNUKGE4 tics 4
+	
+flat NUKAGE4
+    pic FNUKGE7 tics 4
+	pic FNUKGE8 tics 4
+	pic FNUKGE1 tics 4
 	pic FNUKGE2 tics 4
+	pic FNUKGE3 tics 4
+	pic FNUKGE4 tics 4
+	pic FNUKGE5 tics 4
+	pic FNUKGE6 tics 4
 	
 	warp2 flat FNUKGE1
 	warp2 flat FNUKGE2
 	warp2 flat FNUKGE3
-	warp2 flat FNUKGE2
+	warp2 flat FNUKGE4
+	warp2 flat FNUKGE5
+	warp2 flat FNUKGE6
+	warp2 flat FNUKGE7
+	warp2 flat FNUKGE8
 
 //Blood	
 flat BLOOD1 
@@ -140,6 +166,16 @@ flat BLOOD3
 	pic FBLOD2 tics 4
 	pic FBLOD1 tics 4
 	pic FBLOD2 tics 4
+	
+flat BLOOD4 
+    pic FBLOD5 tics 4
+	pic FBLOD4 tics 4
+	pic FBLOD3 tics 4
+	pic FBLOD2 tics 4
+	pic FBLOD1 tics 4
+	pic FBLOD2 tics 4
+	pic FBLOD3 tics 4
+	pic FBLOD4 tics 4
 	
 	warp2 flat FBLOD1
 	warp2 flat FBLOD2
@@ -459,6 +495,361 @@ flat SLIME12
     pic MAGMA1 rand 4 4
 	pic MAGMA2 rand 4 4
 	pic MAGMA3 rand 4 4
+
+//Legacy of Rust/ID24
+flat NUKWALK1
+    pic FNUKWLK1 tics 4
+	pic FNUKWLK2 tics 4
+	pic FNUKWLK3 tics 4
+	pic FNUKWLK4 tics 4
+	pic FNUKWLK5 tics 4
+	pic FNUKWLK6 tics 4
+	pic FNUKWLK7 tics 4
+	pic FNUKWLK8 tics 4
+	
+flat NUKWALK2
+    pic FNUKWLK3 tics 4
+	pic FNUKWLK4 tics 4
+	pic FNUKWLK5 tics 4
+	pic FNUKWLK6 tics 4
+	pic FNUKWLK7 tics 4
+	pic FNUKWLK8 tics 4
+	pic FNUKWLK1 tics 4
+	pic FNUKWLK2 tics 4
+	
+flat NUKWALK3
+    pic FNUKWLK5 tics 4
+	pic FNUKWLK6 tics 4
+	pic FNUKWLK7 tics 4
+	pic FNUKWLK8 tics 4
+	pic FNUKWLK1 tics 4
+	pic FNUKWLK2 tics 4
+	pic FNUKWLK3 tics 4
+	pic FNUKWLK4 tics 4
+	
+flat NUKWALK4
+    pic FNUKWLK7 tics 4
+	pic FNUKWLK8 tics 4
+	pic FNUKWLK1 tics 4
+	pic FNUKWLK2 tics 4
+	pic FNUKWLK3 tics 4
+	pic FNUKWLK4 tics 4
+	pic FNUKWLK5 tics 4
+	pic FNUKWLK6 tics 4
+	
+flat BLAVAA1
+	pic FLAVA1 tics 8
+	pic FLAVA2 tics 8
+	pic FLAVA3 tics 8
+	pic FLAVA4 tics 8
+	pic FLAVA5 tics 8
+	pic FLAVA6 tics 8
+	pic FLAVA7 tics 8
+	pic FLAVA8 tics 8
+
+flat BLAVAA2
+	pic FLAVA3 tics 8
+	pic FLAVA4 tics 8
+	pic FLAVA5 tics 8
+	pic FLAVA6 tics 8
+	pic FLAVA7 tics 8
+	pic FLAVA8 tics 8
+	pic FLAVA1 tics 8
+	pic FLAVA2 tics 8
+	
+flat BLAVAA3
+	pic FLAVA5 tics 8
+	pic FLAVA6 tics 8
+	pic FLAVA7 tics 8
+	pic FLAVA8 tics 8
+	pic FLAVA1 tics 8
+	pic FLAVA2 tics 8
+	pic FLAVA3 tics 8
+	pic FLAVA4 tics 8
+
+flat BLAVAA4
+	pic FLAVA7 tics 8
+	pic FLAVA8 tics 8
+	pic FLAVA1 tics 8
+	pic FLAVA2 tics 8
+	pic FLAVA3 tics 8
+	pic FLAVA4 tics 8
+	pic FLAVA5 tics 8
+	pic FLAVA6 tics 8
+
+flat BLAVAB1
+	pic FLAVA1 tics 8
+	pic FLAVA2 tics 8
+	pic FLAVA3 tics 8
+	pic FLAVA4 tics 8
+	pic FLAVA5 tics 8
+	pic FLAVA6 tics 8
+	pic FLAVA7 tics 8
+	pic FLAVA8 tics 8
+
+flat BLAVAB2
+	pic FLAVA3 tics 8
+	pic FLAVA4 tics 8
+	pic FLAVA5 tics 8
+	pic FLAVA6 tics 8
+	pic FLAVA7 tics 8
+	pic FLAVA8 tics 8
+	pic FLAVA1 tics 8
+	pic FLAVA2 tics 8
+	
+flat BLAVAB3
+	pic FLAVA5 tics 8
+	pic FLAVA6 tics 8
+	pic FLAVA7 tics 8
+	pic FLAVA8 tics 8
+	pic FLAVA1 tics 8
+	pic FLAVA2 tics 8
+	pic FLAVA3 tics 8
+	pic FLAVA4 tics 8
+
+flat BLAVAB4
+	pic FLAVA7 tics 8
+	pic FLAVA8 tics 8
+	pic FLAVA1 tics 8
+	pic FLAVA2 tics 8
+	pic FLAVA3 tics 8
+	pic FLAVA4 tics 8
+	pic FLAVA5 tics 8
+	pic FLAVA6 tics 8
+
+flat BLAVAC1
+	pic FLAVA1 tics 8
+	pic FLAVA2 tics 8
+	pic FLAVA3 tics 8
+	pic FLAVA4 tics 8
+	pic FLAVA5 tics 8
+	pic FLAVA6 tics 8
+	pic FLAVA7 tics 8
+	pic FLAVA8 tics 8
+
+flat BLAVAC2
+	pic FLAVA3 tics 8
+	pic FLAVA4 tics 8
+	pic FLAVA5 tics 8
+	pic FLAVA6 tics 8
+	pic FLAVA7 tics 8
+	pic FLAVA8 tics 8
+	pic FLAVA1 tics 8
+	pic FLAVA2 tics 8
+	
+flat BLAVAC3
+	pic FLAVA5 tics 8
+	pic FLAVA6 tics 8
+	pic FLAVA7 tics 8
+	pic FLAVA8 tics 8
+	pic FLAVA1 tics 8
+	pic FLAVA2 tics 8
+	pic FLAVA3 tics 8
+	pic FLAVA4 tics 8
+
+flat BLAVAC4
+	pic FLAVA7 tics 8
+	pic FLAVA8 tics 8
+	pic FLAVA1 tics 8
+	pic FLAVA2 tics 8
+	pic FLAVA3 tics 8
+	pic FLAVA4 tics 8
+	pic FLAVA5 tics 8
+	pic FLAVA6 tics 8
+
+
+flat FBLOOD1 
+    pic FBLOD1 tics 4
+	pic FBLOD2 tics 4
+	pic FBLOD3 tics 4
+	pic FBLOD4 tics 4
+	pic FBLOD5 tics 4
+	pic FBLOD3 tics 4
+	pic FBLOD2 tics 4
+	pic FBLOD1 tics 4
+	
+flat FBLOOD2
+    pic FBLOD2 tics 4
+	pic FBLOD3 tics 4
+	pic FBLOD4 tics 4
+	pic FBLOD5 tics 4
+	pic FBLOD4 tics 4
+	pic FBLOD3 tics 4
+	pic FBLOD2 tics 4
+	pic FBLOD1 tics 4
+	
+flat FBLOOD3 
+    pic FBLOD3 tics 4
+	pic FBLOD4 tics 4
+	pic FBLOD5 tics 4
+	pic FBLOD4 tics 4
+	pic FBLOD3 tics 4
+	pic FBLOD2 tics 4
+	pic FBLOD1 tics 4
+	pic FBLOD2 tics 4
+	
+flat FBLOOD4 
+    pic FBLOD5 tics 4
+	pic FBLOD4 tics 4
+	pic FBLOD3 tics 4
+	pic FBLOD2 tics 4
+	pic FBLOD1 tics 4
+	pic FBLOD2 tics 4
+	pic FBLOD3 tics 4
+	pic FBLOD4 tics 4
+	
+flat GATE5 
+    pic _TPBLUE1 tics 4
+	pic _TPBLUE2 tics 4
+	pic _TPBLUE3 tics 4
+	pic _TPBLUE4 tics 4
+	pic _TPBLUE5 tics 4
+	pic _TPBLUE6 tics 4
+	pic _TPBLUE7 tics 4
+	pic _TPBLUE8 tics 4
+
+flat SBLOOD1 
+    pic FBLOD1 tics 4
+	pic FBLOD2 tics 4
+	pic FBLOD3 tics 4
+	pic FBLOD4 tics 4
+	pic FBLOD5 tics 4
+	pic FBLOD3 tics 4
+	pic FBLOD2 tics 4
+	pic FBLOD1 tics 4
+	
+flat SBLOOD2
+    pic FBLOD2 tics 4
+	pic FBLOD3 tics 4
+	pic FBLOD4 tics 4
+	pic FBLOD5 tics 4
+	pic FBLOD4 tics 4
+	pic FBLOD3 tics 4
+	pic FBLOD2 tics 4
+	pic FBLOD1 tics 4
+	
+flat SBLOOD3 
+    pic FBLOD3 tics 4
+	pic FBLOD4 tics 4
+	pic FBLOD5 tics 4
+	pic FBLOD4 tics 4
+	pic FBLOD3 tics 4
+	pic FBLOD2 tics 4
+	pic FBLOD1 tics 4
+	pic FBLOD2 tics 4
+
+flat SWATER1
+    pic WATERF1 tics 4
+	pic WATERF2 tics 4
+	pic WATERF3 tics 4
+	pic WATERF4 tics 4
+	pic WATERF5 tics 4
+	pic WATERF6 tics 4
+	pic WATERF7 tics 4
+	pic WATERF8 tics 4
+	
+flat SWATER2
+    pic WATERF3 tics 4
+	pic WATERF4 tics 4
+	pic WATERF5 tics 4
+	pic WATERF6 tics 4
+	pic WATERF7 tics 4
+	pic WATERF8 tics 4
+	pic WATERF1 tics 4
+	pic WATERF2 tics 4
+	
+flat SWATER3
+    pic WATERF5 tics 4
+	pic WATERF6 tics 4
+	pic WATERF7 tics 4
+	pic WATERF8 tics 4
+	pic WATERF1 tics 4
+	pic WATERF2 tics 4
+	pic WATERF3 tics 4
+	pic WATERF4 tics 4
+	
+flat SWATER4
+    pic WATERF7 tics 4
+	pic WATERF8 tics 4
+	pic WATERF1 tics 4
+	pic WATERF2 tics 4
+	pic WATERF3 tics 4
+	pic WATERF4 tics 4
+	pic WATERF5 tics 4
+	pic WATERF6 tics 4
+
+texture NUKDRIP1
+pic SFALL1	tics 2
+pic SFALL2	tics 2
+pic SFALL3	tics 2
+pic SFALL4	tics 2
+
+texture NUKDRIP2
+pic SFALL1	tics 2
+pic SFALL2	tics 2
+pic SFALL3	tics 2
+pic SFALL4	tics 2
+
+texture NUKDRIP3
+pic SFALL1	tics 2
+pic SFALL2	tics 2
+pic SFALL3	tics 2
+pic SFALL4	tics 2
+
+texture NUKDRIP4
+pic SFALL1	tics 2
+pic SFALL2	tics 2
+pic SFALL3	tics 2
+pic SFALL4	tics 2
+
+texture LAVAWAL1
+pic FLAVA1 tics 8
+pic FLAVA2 tics 8
+pic FLAVA3 tics 8
+pic FLAVA4 tics 8
+pic FLAVA5 tics 8
+pic FLAVA6 tics 8
+pic FLAVA7 tics 8
+pic FLAVA8 tics 8
+
+texture LAVAWAL2
+pic FLAVA3 tics 8
+pic FLAVA4 tics 8
+pic FLAVA5 tics 8
+pic FLAVA6 tics 8
+pic FLAVA7 tics 8
+pic FLAVA8 tics 8
+pic FLAVA1 tics 8
+pic FLAVA2 tics 8
+	
+texture LAVAWAL3
+pic FLAVA5 tics 8
+pic FLAVA6 tics 8
+pic FLAVA7 tics 8
+pic FLAVA8 tics 8
+pic FLAVA1 tics 8
+pic FLAVA2 tics 8
+pic FLAVA3 tics 8
+pic FLAVA4 tics 8
+
+texture LAVAWAL4
+pic FLAVA7 tics 8
+pic FLAVA8 tics 8
+pic FLAVA1 tics 8
+pic FLAVA2 tics 8
+pic FLAVA3 tics 8
+pic FLAVA4 tics 8
+pic FLAVA5 tics 8
+pic FLAVA6 tics 8
+
+warp flat SFLR6_2
+warp flat SFLR6_3
+warp flat SFLR6_5
+warp flat SFLR6_6
+warp flat SFLR7_2
+warp flat SFLR7_3
+warp flat SFLR7_5
+warp flat SFLR7_6
 	
 //Heretic
 warp2 flat FLTWAWA1

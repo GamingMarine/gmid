@@ -541,6 +541,20 @@ ACTOR XaserPuffSmoke
 	}
 }
 
+//To be used in conjunction with the "QuasaiAntiCheat" script to reset the player's score
+//Loosely based on AEons of Death by DBThanatos
+Actor GMIDAntiCheatToken : Weapon
+{
+	States
+	{
+	Ready:
+	Select:
+	Deselect:
+	Fire:
+		TNT1 A 1
+	}
+}
+
 ACTOR ToastyGuy
 {
 	States

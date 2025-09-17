@@ -89,11 +89,13 @@ GOTFIRESHELLS2 = "Picked up a case of \"Dragon's Breath\" shotgun shells! \cf(\c
 GOTMISSILE1 = "Picked up a missile. \cf(\cjAmmo for slot 5\cf)";
 GOTMISSILE2 = "Picked up a crate full of missiles. \cf(\cjAmmo for slot 5\cf)";
 GOTCHARGE1 = "Picked up a lesser plasma charge. \cf(\cjAmmo for slot 6\cf)";
+GOTCHARGE_USED = "Picked up a used lesser plasma charge. \cf(\cjAmmo for slot 6\cf)";
 GOTCHARGE2 = "Picked up a greater plasma charge. \cf(\cjAmmo for slot 6\cf)";
 GOTMANA1 = "Picked up a vial of mana. \cf(\cjAmmo for slot 7\cf)";
 GOTMANA2 = "Picked up a jar of mana. \cf(\cjAmmo for slot 7\cf)";
 GOTCUBEAMMO = "The \crSoul Cube\c- feeds on the enemy soul...";
 GOTGRENADE = "You got a Hand Grenade! \cf(\cjSlot 9\cf)";
+GOTCRYO = "Picked up a cryo tube. \cf(\cjAmmo for Snowblower\cf)";
 GOTBACKPACK2 = "Picked up a leather backpack full of goodies!";
 GOTGRINDER = "You got the Angle Grinder! Groovy! \cf(\cjSlot 1\cf)";
 GOTBERETTA = "Picked up a Beretta. \cf(\cjSlot 2\cf)";
@@ -169,6 +171,7 @@ TAG_MANA1 = "Mana Vial";
 TAG_MANA2 = "Mana Jar";
 TAG_CUBEAMMO = "Soul";
 TAG_REVXAMMO = "Rev-X Battery"; //For compatibility with m8f's Status Widget
+TAG_CRYO = "Cryo Tube";
 TAG_BACKPACK = "Backpack";
 TAG_AUTOMAP = "Automap";
 TAG_BIOSUIT = "Bio-Suit";
@@ -232,6 +235,9 @@ TAG_LORD = "Master Force Lord";
 TAG_LUNA = "Princess Luna";
 TAG_NONBOY = "NONBoy";
 TAG_FREEDOOMER = "Hung Marine";
+TAG_CHANGELING2 = "Winged Changeling";
+TAG_EVILMARINE4 = "Evil Marine (Railgun)";
+TAG_APPRENTICE = "Master Force Apprentice";
 TAG_BRUTE = "Undead Brute";
 
 CC_COOKIE = "Cookiedemon";
@@ -274,6 +280,7 @@ OB_GMBOT = "%o was terminated by a GMBot.";
 OB_LORD = "%o was obliterated by the Master Force Lord.";
 OB_LUNA = "%o kneeled before Princess Luna.";
 OB_NONBOY = "%o couldn't stop the New Order.";
+OB_APPRENTICE = "%o was rolled over by a Master Force Apprentice.";
 OB_BRUTE = "%o was demolished by an Undead Brute.";
 
 //Quit messages
@@ -371,7 +378,7 @@ OB_VOODOO = "%o was voodoo'd.";
 OB_MONTELEFRAG = "%o stood in the way of a monster.";
 
 OB_DEFAULT = "%o expired.";
-OB_MPDEFAULT = "%k eliminated %o.";
+OB_MPDEFAULT = "%k ripped %o a new one.";
 OB_FRIENDLY1 = "%k killed a teammate of %p.";
 OB_FRIENDLY2 = "%k got in the way of someone else.";
 OB_FRIENDLY3 = "%k gave the other team a frag.";
@@ -436,13 +443,26 @@ TOTD16 = "\cf#16:\c- With the Hand Grenades, you can control how far you throw t
 GAMEOVERA1 = "You died!";
 GAMEOVERA2 = "Game over, man!"; //Aliens
 GAMEOVERA3 = "You blew it!"; //Revolution X
-GAMEOVERA4 = "He's dead, Jim!"; //Star Trek
+GAMEOVERA4 = "It's a sad thing that your adventures have ended here!!"; //Shadowgate (NES)
 GAMEOVERA5 = "Welcome to Die!"; //X-Men (Arcade)
 GAMEOVERA6 = "Game over... or is it?"; //Lameduke
 GAMEOVERA7 = "Ouch! That had to hurt."; //Doom 64
 GAMEOVERA8 = "Get the bag. You're goin' home to Mom."; //Postal 1 prototype
+GAMEOVERA9 = "Have a nice day!"; //MIDI Maze/Faceball 2000
 GAMEOVERB1 = "Strike [USE] to load your last save or restart the level."; //For single-player
 GAMEOVERB2 = "Strike [USE] to respawn."; //For multiplayer
+
+IMCHEATING1_1 = "You just made Cookie cry. Hope you're happy.";
+IMCHEATING1_2 = "You humour me greatly with your arrogance and contempt...";
+IMCHEATING1_3 = "For debugging, right? Right?!";
+IMCHEATING1_4 = "I mean, I don't wanna rain on your fun, but...";
+IMCHEATING1_5 = "Of course I would do that...duh.";
+IMCHEATING1_6 = "Nice score you got there. Would be a shame if...";
+IMCHEATING2_1 = "Score has been reset to zero.";
+IMCHEATING2_2 = "Score is being reset to zero. Maybe don't cheat next time!";
+IMCHEATING2_3 = "You get no score and will be reported to the Secret Police!";
+IMCHEATING2_4 = "I award you no points, and may God have mercy on your soul.";
+IMCHEATING2_5 = "You should thank me for not dragging you to the Serious Room.";
 
 GMIDTITLEMAP = "Your Adventure Begins";
 
@@ -480,6 +500,9 @@ GMIDINVENTORY = "Inventory (Needed to use the inventory system)";
 GMIDCTRL14 = "Use Selected Inventory";
 GMIDCTRL15 = "Move Inventory Left";
 GMIDCTRL16 = "Move Inventory Right";
+ACCESSIBILITYMENU = "Accessibility Options";
+ACCESSIBILITYNOTE1 = "These options are here to help aid those who might experience negative";
+ACCESSIBILITYNOTE2 = "physical side effects from playing GamingMarine in Doom.";
 PARTICLEMENU = "Particle Chokers";
 PARTICLENOTE1 = "Particle chokers reduce the amount of visual flair present in certain";
 PARTICLENOTE2 = "aspects of the mod, which can help improve performance for those hosting";
@@ -521,6 +544,9 @@ PICKUPOPTION4 = "animations are playing.";
 ANNOUNOPTION1 = "Disable Announcer";
 ANNOUNOPTION2 = "In case you prefer silent powerup pickups, like in earlier versions";
 ANNOUNOPTION3 = "of this mod.";
+AMPFLASHOPTION1 = "Disable Damage Amp. Flashes";
+AMPFLASHOPTION2 = "Toggles whether or not to flash the screen when attacking while under the";
+AMPFLASHOPTION3 = "influence of Double/Quad Damage. Helps reduce the risk of epilepsy.";
 BOSSMUSIC1 = "Disable Boss Music";
 BOSSMUSIC2 = "What it says on the tin, intended for compatibility with certain mapsets";
 BOSSMUSIC3 = "or music randomizers. May require a map restart.";
@@ -815,6 +841,27 @@ P6TEXT =
 	"hidden challenges. Yeah, ONE of them.\n"
 	"\n"
 	"This time around, no one gets out alive.";
+//Legacy of Rust
+//(Potentially temporary identifiers, taken from Doom Fusion)
+INTERTEXT_ID1_E1 =
+	"You just fell for the oldest trick in the book! At\n"
+	"least, as old as it's been since the Deimos takeover.\n"
+	"\n"
+	"You manage to maintain a fracture of your conscience\n"
+	"as some changelings come forth and lift your body to\n"
+	"take you who-knows-where, but only enough to have\n"
+	"questions running through your mind. Surely the UAC\n"
+	"should've known damn well that this whole thing was\n"
+	"FUBAR. But then again, sending the Master Force's two\n"
+	"best opponents on a suicide mission? That'd be a brand\n"
+	"new low... like the UAC's had many highs to begin\n"
+	"with.\n"
+	"\n"
+	"You fully regain yourself in an old, rusty cell, equipped\n"
+	"with nothing but a conveniently misplaced Beretta.\n"
+	"\n"
+	"Seems like that saying about history repeating itself\n"
+	"rings true.";
 //Heretic
 HE1TEXT =
 	"With the Iron Liches down for good, the entrance to\n"
@@ -874,18 +921,27 @@ STEP_FLATS = "FWATER1:FWATER2:FWATER3:FWATER4:"
 			"CEIL3_4:FLAT3:FLOOR7_2:DEM1_1:"
 			"DEM1_2:DEM1_3:DEM1_4:DEM1_5:"
 			"DEM1_6:CEIL1_1:FLAT5_1:FLAT5_2:"
-			"NUKAGE1:NUKAGE2:NUKAGE3:BLOOD1:"
-			"BLOOD2:BLOOD3:SLIME01:SLIME02:"
-			"SLIME03:SLIME04:SLIME05:SLIME06:"
-			"SLIME07:SLIME08:SFLR6_1:SFLR6_4:"
-			"SFLR7_1:SFLR7_4:LAVA1:LAVA2:"
-			"LAVA3:LAVA4:F_SKY1:GRASS:ROCKS:"
-			"FLOOR00:FLOOR01:FLOOR03:FLOOR04:"
-			"FLOOR05:FLOOR06:FLOOR08:FLOOR10:"
-			"FLOOR11:FLOOR12:FLOOR17:FLOOR18:"
-			"FLOOR19:FLTWAWA1:FLTWAWA2:FLTWAWA3:"
-			"FLTSLUD1:FLTSLUD2:FLTSLUD3:FLTFLWW1:"
-			"FLTFLWW2:FLTFLWW3";
+			"NUKAGE1:NUKAGE2:NUKAGE3:NUKAGE4:"
+			"BLOOD1:BLOOD2:BLOOD3:BLOOD4:"
+			"SLIME01:SLIME02:SLIME03:SLIME04:"
+			"SLIME05:SLIME06:SLIME07:SLIME08:"
+			"SFLR6_1:SFLR6_4:SFLR7_1:SFLR7_4:"
+			"LAVA1:LAVA2:LAVA3:LAVA4:F_SKY1:"
+			//Console Ports
+			"GRASS:ROCKS:"
+			//Legacy of Rust/ID24
+			"CEIL3_7:CEIL3_8:CONS1_2:CONS1_3:CONS1_4:CONS1_6:CONS1_8:FLAT29:FLOOR1_2:FLOOR1_3:FLOOR1_5:"
+			"FLOOR1_A:FLOOR1_B:FLOOR1_C:FLOOR1_D:FLOOR3_1:FLOOR3_3:FLOOR3_4:FLOOR3_5:FLOOR3_6:FLOOR3_7:"
+			"FLOOR3_8:FLOOR3_9:FLOOR3_A:FLOOR4_9:FLOOR5_8:FLOOR8_1:FLOOR8_2:FLOOR8_3:FLOOR8_4:FLOOR8_5:"
+			"FLOOR8_6:FLOOR8_7:TLITE6_2:TLITE6_3:BLAVAA1:BLAVAA2:BLAVAA3:BLAVAA4:BLAVAB1:BLAVAB2:BLAVAB3:"
+			"BLAVAB4:BLAVAC1:BLAVAC2:BLAVAC3:BLAVAC4:CEIL1_4:CEIL6_1:CEIL6_2:CEIL6_3:CEIL6_4:CEIL6_5:"
+			"CEIL6_6:DEM1_7:DEM1_8:DEM1_9:DEM2_1:DEM2_2:DEM2_3:DEM2_4:DEM3_1:DEM3_2:DEM3_3:DEM3_4:FBLOOD1:"
+			"FBLOOD2:FBLOOD3:FBLOOD4:GATE5:GATE6:MFLR9_1:MFLR9_2:MFLR9_3:MFLR9_4:MFLR9_5:MFLR9:6:SBLOOD1:"
+			"SBLOOD2:SBLOOD3:SFLR6_2:SFLR6_3:SFLR6_5:SFLR6_6:SFLR7_2:SFLR7_3:SFLR7_5:SFLR7_6:SWATER1:"
+			"SWATER2:SWATER3:SWATER4:GRASS3:GRASS4:GRAVEL1:GRAVEL2:CEIL1_2B:CEIL1_2C:CEIL1_2D:CEIL1_2E:"
+			"CEIL1_2F:CEIL1_2G:CONS1_1B:FLAT22B:FLOOR6_3:FLOOR7_3:STEP3:STEP4:STEP5:STEP6:STEP7:STEP8:"
+			"STEPWODE:STEPWODN:STEPWODS:STEPWODW:TCLTA:TCMFLRA:TCMFLRB:TCMFLRC:TCMFLRD:TCMFLRE:TCMFLRF:"
+			"TCMFLRG:TCMUD1:TCRCKA:TLITEX_6";
 
 // Sounds
 STEP_DEFAULT = "step/default";
@@ -1044,9 +1100,11 @@ STEP_FLAT5_2 = "step/wood";
 STEP_NUKAGE1 = "step/slime";
 STEP_NUKAGE2 = "step/slime";
 STEP_NUKAGE3 = "step/slime";
+STEP_NUKAGE4 = "step/slime"; //ID24
 STEP_BLOOD1 = "step/slime";
 STEP_BLOOD2 = "step/slime";
 STEP_BLOOD3 = "step/slime";
+STEP_BLOOD4 = "step/slime"; //ID24
 STEP_SLIME01 = "step/slime";
 STEP_SLIME02 = "step/slime";
 STEP_SLIME04 = "step/slime";
@@ -1074,26 +1132,131 @@ STEP_F_SKY1 = "";
 STEP_GRASS = "step/dirt";
 STEP_ROCKS = "step/rock";
 
-// Heretic Flats
-STEP_FLOOR00 = "step/rock";
-STEP_FLOOR01 = "step/rock";
-STEP_FLOOR03 = "step/rock";
-STEP_FLOOR04 = "step/rock";
-STEP_FLOOR05 = "step/rock";
-STEP_FLOOR06 = "step/tile/b";
-STEP_FLOOR08 = "step/metal/a";
-STEP_FLOOR10 = "step/wood";
-STEP_FLOOR11 = "step/rock";
-STEP_FLOOR12 = "step/rock";
-STEP_FLOOR17 = "step/gravel";
-STEP_FLOOR18 = "step/tile/b";
-STEP_FLOOR19 = "step/tile/b";
-STEP_FLTWAWA1 = "step/water";
-STEP_FLTWAWA2 = "step/water";
-STEP_FLTWAWA3 = "step/water";
-STEP_FLTSLUD1 = "step/slime";
-STEP_FLTSLUD2 = "step/slime";
-STEP_FLTSLUD3 = "step/slime";
-STEP_FLTFLWW1 = "step/water";
-STEP_FLTFLWW2 = "step/water";
-STEP_FLTFLWW3 = "step/water";
+//Legacy of Rust/ID24 Flats
+STEP_CEIL3_7 = "step/tile/a";
+STEP_CEIL3_8 = "step/tile/a";
+STEP_CONS1_2 = "step/metal/a";
+STEP_CONS1_3 = "step/metal/a";
+STEP_CONS1_4 = "step/metal/a";
+STEP_CONS1_6 = "step/metal/a";
+STEP_CONS1_8 = "step/metal/a";
+STEP_FLAT29 = "step/gravel";
+STEP_FLOOR1_2 = "step/carpet";
+STEP_FLOOR1_3 = "step/carpet";
+STEP_FLOOR1_5 = "step/carpet";
+STEP_FLOOR1_A = "step/carpet";
+STEP_FLOOR1_B = "step/carpet";
+STEP_FLOOR1_C = "step/carpet";
+STEP_FLOOR1_D = "step/carpet";
+STEP_FLOOR3_1 = "step/tile/a";
+STEP_FLOOR3_2 = "step/tile/a";
+STEP_FLOOR3_4 = "step/tile/a";
+STEP_FLOOR3_5 = "step/tile/a";
+STEP_FLOOR3_6 = "step/tile/a";
+STEP_FLOOR3_7 = "step/tile/a";
+STEP_FLOOR3_8 = "step/tile/a";
+STEP_FLOOR3_9 = "step/tile/a";
+STEP_FLOOR3_A = "step/tile/a";
+STEP_FLOOR4_9 = "step/hard";
+STEP_FLOOR5_8 = "step/carpet";
+STEP_FLOOR8_1 = "step/hard";
+STEP_FLOOR8_2 = "step/hard";
+STEP_FLOOR8_3 = "step/hard";
+STEP_FLOOR8_4 = "step/hard";
+STEP_FLOOR8_5 = "step/hard";
+STEP_FLOOR8_6 = "step/hard";
+STEP_FLOOR8_7 = "step/hard";
+STEP_TLITE6_2 = "step/hard";
+STEP_TLITE6_3 = "step/hard";
+STEP_BLAVAA1 = "step/lava";
+STEP_BLAVAA2 = "step/lava";
+STEP_BLAVAA3 = "step/lava";
+STEP_BLAVAA4 = "step/lava";
+STEP_BLAVAB1 = "step/lava";
+STEP_BLAVAB2 = "step/lava";
+STEP_BLAVAB3 = "step/lava";
+STEP_BLAVAB4 = "step/lava";
+STEP_BLAVAC1 = "step/lava";
+STEP_BLAVAC2 = "step/lava";
+STEP_BLAVAC3 = "step/lava";
+STEP_BLAVAC4 = "step/lava";
+STEP_CEIL1_4 = "step/wood";
+STEP_CEIL6_1 = "step/wood";
+STEP_CEIL6_2 = "step/wood";
+STEP_CEIL6_3 = "step/wood";
+STEP_CEIL6_4 = "step/wood";
+STEP_CEIL6_5 = "step/wood";
+STEP_CEIL6_6 = "step/wood";
+STEP_DEM1_7 = "step/tile/b";
+STEP_DEM1_8 = "step/tile/b";
+STEP_DEM1_9 = "step/tile/b";
+STEP_DEM2_1 = "step/tile/b";
+STEP_DEM2_2 = "step/tile/b";
+STEP_DEM2_3 = "step/tile/b";
+STEP_DEM2_4 = "step/tile/b";
+STEP_DEM3_1 = "step/tile/b";
+STEP_DEM3_2 = "step/tile/b";
+STEP_DEM3_3 = "step/tile/b";
+STEP_DEM3_4 = "step/tile/b";
+STEP_FBLOOD1 = "step/slime";
+STEP_FBLOOD2 = "step/slime";
+STEP_FBLOOD3 = "step/slime";
+STEP_FBLOOD4 = "step/slime";
+STEP_GATE5 = "step/metal/a";
+STEP_GATE6 = "step/metal/a";
+STEP_MFLR9_1 = "step/gravel";
+STEP_MFLR9_2 = "step/gravel";
+STEP_MFLR9_3 = "step/gravel";
+STEP_MFLR9_4 = "step/gravel";
+STEP_MFLR9_5 = "step/gravel";
+STEP_MFLR9_6 = "step/gravel";
+STEP_SBLOOD1 = "step/slime";
+STEP_SBLOOD2 = "step/slime";
+STEP_SBLOOD3 = "step/slime";
+STEP_SFLR6_2 = "step/slimy";
+STEP_SFLR6_3 = "step/slimy";
+STEP_SFLR6_5 = "step/slimy";
+STEP_SFLR6_6 = "step/slimy";
+STEP_SFLR7_2 = "step/slimy";
+STEP_SFLR7_3 = "step/slimy";
+STEP_SFLR7_5 = "step/slimy";
+STEP_SFLR7_6 = "step/slimy";
+STEP_SWATER1 = "step/water";
+STEP_SWATER2 = "step/water";
+STEP_SWATER3 = "step/water";
+STEP_SWATER4 = "step/water";
+STEP_GRASS3 = "step/dirt";
+STEP_GRASS4 = "step/dirt";
+STEP_GRAVEL1 = "step/gravel";
+STEP_GRAVEL2 = "step/gravel";
+STEP_CEIL1_2B = "step/metal/a";
+STEP_CEIL1_2C = "step/metal/a";
+STEP_CEIL1_2D = "step/metal/a";
+STEP_CEIL1_2E = "step/metal/a";
+STEP_CEIL1_2F = "step/metal/a";
+STEP_CEIL1_2G = "step/metal/a";
+STEP_CONS1_1B = "step/metal/a";
+STEP_FLAT22B = "step/metal/a";
+STEP_FLOOR6_3 = "step/gravel";
+STEP_FLOOR7_3 = "step/tile/b";
+STEP_STEP3 = "step/metal/a";
+STEP_STEP4 = "step/metal/a";
+STEP_STEP5 = "step/metal/a";
+STEP_STEP6 = "step/metal/a";
+STEP_STEP7 = "step/metal/a";
+STEP_STEP8 = "step/metal/a";
+STEP_STEPWODE = "step/wood";
+STEP_STEPWODN = "step/wood";
+STEP_STEPWODS = "step/wood";
+STEP_STEPWODW = "step/wood";
+STEP_TCLTA = "step/metal/a";
+STEP_TCMFLRA = "step/metal/a";
+STEP_TCMFLRB = "step/metal/a";
+STEP_TCMFLRC = "step/metal/a";
+STEP_TCMFLRD = "step/metal/a";
+STEP_TCMFLRE = "step/metal/a";
+STEP_TCMFLRF = "step/metal/a";
+STEP_TCMFLRG = "step/metal/a";
+STEP_TCMUD1 = "step/rock";
+STEP_TCRCKA = "step/rock";
+STEP_TLITEX_6 = "step/hard";

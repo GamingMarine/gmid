@@ -41,6 +41,11 @@ script "NoBossMusic" (void)
 	SetResultValue(GetCvar("gmid_nobossmusic"));
 }
 
+script "NoDamageAmpFlashes" (void)
+{
+	SetResultValue(GetCvar("gmid_noampflashes"));
+}
+
 //All of the typical explosion effect except for the explosion itself
 script "LessBoomEffects" (void)
 {

@@ -1,0 +1,33 @@
+Glow
+{
+  Flats
+  {
+   flat517
+   flathuh1
+   flathuh2
+   flathuh3
+   flathuh4
+   floor21
+   floor22
+   floor23
+   floor24
+   floor26
+   fltflww1
+   fltflww2
+   fltflww3
+   fltlava1
+   fltlava2
+   fltlava3
+   fltlava4
+   fltslud1
+   fltslud2
+   fltslud3
+   flttele1
+   flttele2
+   flttele3
+   flttele4
+   fltwawa1
+   fltwawa2
+   fltwawa3
+  }
+}

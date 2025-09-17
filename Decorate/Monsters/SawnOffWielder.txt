@@ -65,57 +65,73 @@ actor SawedOffShotgunGuy
   Death:
   Death.RevX:
 	ZSDO H 0 A_GiveToTarget("ScoreItem",300)
+    ZSDO G 5 A_Jump(85,"HeadshotDeath")
     ZSDO H 5 A_Scream
-	ZSDO H 0 A_NoBlocking
-	ZSDO I 0 A_PlaySound("gore/head", CHAN_VOICE)
-	ZSDO I 0 A_SpawnItem("GMIDHeadshotSpawner")
-    ZSDO IJ 13 
-	ZSDO J 0 A_GiveToTarget("PlayerHeadshotTaunt",1)
-    ZSDO K 13
-    ZSDO LM 10
-    ZSDO N -1
+    ZSDO IJ 5
+	ZSDO K 5 A_NoBlocking
+	ZSDO L 5 A_PlaySound("body/hitfloor")
+	ZSDO M 5
+	TNT1 A 0 A_GiveToTarget("PlayerKillTaunt",1)
+    ZSDO M -1
+	Stop
+  HeadshotDeath:
+    ZSDO N 5 A_Scream
+	ZSDO N 0 A_NoBlocking
+	ZSDO O 0 A_PlaySound("gore/head", CHAN_VOICE)
+	ZSDO O 0 A_SpawnItem("GMIDHeadshotSpawner")
+    ZSDO OP 13 
+	ZSDO P 0 A_GiveToTarget("PlayerHeadshotTaunt",1)
+    ZSDO Q 13
+    ZSDO RS 10
+    ZSDO T -1
     stop
   Death.Foot:
-	ZSDO H 0 A_GiveToTarget("ScoreItem",300)
-	ZSDO H 0 ThrustThingZ(0,16,0,0)
+	ZSDO G 0 A_GiveToTarget("ScoreItem",300)
+	ZSDO G 5 ThrustThingZ(0,16,0,0)
     ZSDO H 5 A_Scream
-	ZSDO H 0 A_NoBlocking
-	ZSDO I 0 A_PlaySound("gore/head", CHAN_VOICE)
-	ZSDO I 0 A_SpawnItem("GMIDHeadshotSpawner")
-    ZSDO IJ 13 
-	ZSDO J 0 A_GiveToTarget("PlayerKickTaunt",1)
-    ZSDO K 13
-    ZSDO LM 10
-    ZSDO N -1
+    ZSDO IJ 5
+	ZSDO K 5 A_NoBlocking
+	ZSDO L 5 A_PlaySound("body/hitfloor")
+	ZSDO M 5
+	TNT1 A 0 A_GiveToTarget("PlayerKickTaunt",1)
+    ZSDO M -1
     stop
-  Death.BigFist:
+  Death.Fist:
 	ZSDO H 0 A_GiveToTarget("ScoreItem",300)
-    ZSDO H 0 A_Scream
-	ZSDO H 2 A_FaceTarget
-	ZSDO H 0 A_Recoil(14)
-	ZSDO H 3
-	ZSDO H 0 A_NoBlocking
-	ZSDO I 0 A_PlaySound("gore/head", CHAN_VOICE)
-	ZSDO I 0 A_SpawnItem("GMIDHeadshotSpawner")
-    ZSDO IJ 13 
-	ZSDO J 0 A_GiveToTarget("PlayerKillTaunt",1)
-    ZSDO K 13
-    ZSDO LM 10
-    ZSDO N -1
+    ZSDO G 5
+    ZSDO H 5 A_Scream
+    ZSDO IJ 5
+	ZSDO K 5 A_NoBlocking
+	ZSDO L 5 A_PlaySound("body/hitfloor")
+	ZSDO M 5
+	TNT1 A 0 A_GiveToTarget("PlayerPunchTaunt",1)
+    ZSDO M -1
+	Stop
+  Death.BigFist:
+	ZSDO G 0 A_GiveToTarget("ScoreItem",300)
+    ZSDO G 2 A_FaceTarget
+	ZSDO G 0 A_Recoil(14)
+	ZSDO G 3
+    ZSDO H 5 A_Scream
+    ZSDO IJ 5
+	ZSDO K 5 A_NoBlocking
+	ZSDO L 5 A_PlaySound("body/hitfloor")
+	ZSDO M 5
+	TNT1 A 0 A_GiveToTarget("PlayerPunchTaunt",1)
+    ZSDO M -1
     stop
   Death.Uppercut:
 	ZSDO H 0 A_GiveToTarget("ScoreItem",300)
-	ZSDO H 0 A_FaceTarget
-	ZSDO H 0 ThrustThingZ(0,43,0,0)
-	ZSDO H 5 A_Scream
-	ZSDO H 0 A_NoBlocking
-	ZSDO I 0 A_PlaySound("gore/head", CHAN_VOICE)
-	ZSDO I 0 A_SpawnItem("GMIDHeadshotSpawner")
-    ZSDO IJ 13 
-	ZSDO J 0 A_GiveToTarget("PlayerKillTaunt",1)
-    ZSDO K 13
-    ZSDO LM 10
-    ZSDO N -1
+	ZSDO G 0 A_FaceTarget
+	ZSDO G 0 ThrustThingZ(0,43,0,0)
+	ZSDO G 5
+    ZSDO H 5 A_Scream
+    ZSDO IJ 5
+	ZSDO K 5 A_NoBlocking
+	ZSDO L 5 A_PlaySound("body/hitfloor")
+	ZSDO M 5
+	TNT1 A 0 A_GiveToTarget("PlayerPunchTaunt",1)
+    ZSDO M -1
     stop
   XDeath:
   Death.GMIDExplosion:

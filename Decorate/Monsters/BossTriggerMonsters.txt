@@ -94,22 +94,39 @@ actor VinylStorm replaces Arachnotron
 	VSTR A 0 A_GiveToTarget("PlayerKickTaunt",1)
 	VSTR N -1
 	Stop
+  Death.Fist:
+	VSTR H 0 A_GiveToTarget("ScoreItem",2500)
+	VSTR H 5
+	VSTR I 5 A_Scream
+	VSTR A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo4", AAPTR_PLAYER1)
+	Goto ContinueDeath4
   Death.BigFist:
 	VSTR H 0 A_GiveToTarget("ScoreItem",2500)
     VSTR H 2 A_FaceTarget
     VSTR H 0 A_Recoil(14)
 	VSTR H 3
 	VSTR I 5 A_Scream
-	VSTR A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
-	Goto ContinueDeath
+	VSTR A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo4", AAPTR_PLAYER1)
+	Goto ContinueDeath4
   Death.Uppercut:
 	VSTR A 0 A_GiveToTarget("ScoreItem",2500)
     VSTR H 0 A_FaceTarget
     VSTR H 0 ThrustThingZ(0,32,0,0)
 	VSTR H 5
 	VSTR I 5 A_Scream
-	VSTR A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
-	Goto ContinueDeath
+	VSTR A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo4", AAPTR_PLAYER1)
+	Goto ContinueDeath4
+  DropSoulCubeAmmo4:
+	VSTR A 0 A_SpawnItem("CubeAmmo")
+  ContinueDeath4:
+	VSTR J 5 A_NoBlocking
+	VSTR KL 5
+	VSTR M 0 A_PlaySound("body/hitfloor")
+	VSTR M 5
+	VSTR N 10 A_BossDeath
+	VSTR A 0 A_GiveToTarget("PlayerPunchTaunt",1)
+	VSTR N -1
+	Stop
   Death.Fire:
   Death.CookieFire: //Unfortunately these guys do not inherit from MasterForceBase, so three cheers for bloated code!
 	VSTR H 0 A_GiveToTarget("ScoreItem",2500)
@@ -211,6 +228,7 @@ actor VinylStorm replaces Arachnotron
 	BBQ8 DDD 1 Bright A_Wander
 	BBQ8 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
 	BBQ8 A 0 A_Jump(1, "Toasty")
+	BBQ8 A 0 A_GiveToTarget("PlayerBurnTaunt",1)
 	Goto Fall
   Toasty:
 	BBQ8 A 0 A_SpawnItem("ToastyGuy")
@@ -226,6 +244,11 @@ actor VinylStorm replaces Arachnotron
   Death.GMIDRailgun:
 	TNT1 A 0 A_GiveToTarget("ScoreItem",2500)
 	TNT1 A 0 A_StopSound(CHAN_VOICE)
+	TNT1 A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo3", AAPTR_PLAYER1)
+	Goto ContinueXDeath
+  DropSoulCubeAmmo3:
+	TNT1 A 0 A_SpawnItem("CubeAmmo")
+  ContinueXDeath:
 	TNT1 A 0 A_XScream
 	TNT1 A 0 A_NoBlocking
 	TNT1 AA 0 A_SpawnItem("GMIDGibSpawner")
@@ -342,22 +365,39 @@ actor NewbieHooves replaces Fatso
 	NWBH A 0 A_GiveToTarget("PlayerKickTaunt",1)
 	NWBH N -1
 	Stop
+  Death.Fist:
+	NWBH H 0 A_GiveToTarget("ScoreItem",3000)
+	NWBH H 5
+	NWBH I 5 A_Scream
+	NWBH A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo4", AAPTR_PLAYER1)
+	Goto ContinueDeath4
   Death.BigFist:
     NWBH H 0 A_GiveToTarget("ScoreItem",3000)
 	NWBH H 2 A_FaceTarget
     NWBH H 0 A_Recoil(14)
 	NWBH H 3
 	NWBH I 5 A_Scream
-	NWBH A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
-	Goto ContinueDeath
+	NWBH A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo4", AAPTR_PLAYER1)
+	Goto ContinueDeath4
   Death.Uppercut:
 	NWBH A 0 A_GiveToTarget("ScoreItem",3000)
     NWBH H 0 A_FaceTarget
     NWBH H 0 ThrustThingZ(0,32,0,0)
 	NWBH H 5
 	NWBH I 5 A_Scream
-	NWBH A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
-	Goto ContinueDeath
+	NWBH A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo4", AAPTR_PLAYER1)
+	Goto ContinueDeath4
+  DropSoulCubeAmmo4:
+	NWBH A 0 A_SpawnItem("CubeAmmo")
+  ContinueDeath4:
+	NWBH J 5 A_NoBlocking
+	NWBH KL 5
+	NWBH M 0 A_PlaySound("body/hitfloor")
+	NWBH M 5
+	NWBH N 10
+	NWBH A 0 A_GiveToTarget("PlayerPunchTaunt",1)
+	NWBH N -1
+	Stop
   Death.Fire:
   Death.CookieFire:
 	BBQ5 A 0 A_GiveToTarget("ScoreItem",3000)
@@ -459,6 +499,7 @@ actor NewbieHooves replaces Fatso
 	BBQ5 DDD 1 Bright A_Wander
 	BBQ5 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
 	BBQ5 A 0 A_Jump(1, "Toasty")
+	BBQ5 A 0 A_GiveToTarget("PlayerBurnTaunt",1)
 	Goto Fall
   Toasty:
 	BBQ5 A 0 A_SpawnItem("ToastyGuy")
@@ -474,6 +515,11 @@ actor NewbieHooves replaces Fatso
   Death.GMIDRailgun:
 	TNT1 A 0 A_GiveToTarget("ScoreItem",3000)
 	TNT1 A 0 A_StopSound(CHAN_VOICE)
+	TNT1 A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo3", AAPTR_PLAYER1)
+	Goto ContinueXDeath
+  DropSoulCubeAmmo3:
+	TNT1 A 0 A_SpawnItem("CubeAmmo")
+  ContinueXDeath:
 	TNT1 A 0 A_XScream
 	TNT1 A 0 A_NoBlocking
 	TNT1 AA 0 A_SpawnItem("GMIDGibSpawner")
@@ -581,22 +627,39 @@ actor TwiMage replaces BaronOfHell
 	TWMA A 0 A_GiveToTarget("PlayerKickTaunt",1)
 	TWMA N -1
 	Stop
+  Death.RevX:
+	TWMA H 0 A_GiveToTarget("ScoreItem",5000)
+	TWMA H 5
+	TWMA I 5 A_Scream
+	TWMA A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo4", AAPTR_PLAYER1)
+	Goto ContinueDeath4
   Death.BigFist:
 	TWMA H 0 A_GiveToTarget("ScoreItem",5000)
     TWMA H 2 A_FaceTarget
     TWMA H 0 A_Recoil(14)
 	TWMA H 3
 	TWMA I 5 A_Scream
-	TWMA A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
-	Goto ContinueDeath
+	TWMA A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo4", AAPTR_PLAYER1)
+	Goto ContinueDeath4
   Death.Uppercut:
 	TWMA A 0 A_GiveToTarget("ScoreItem",5000)
     TWMA H 0 A_FaceTarget
     TWMA H 0 ThrustThingZ(0,32,0,0)
 	TWMA H 5
 	TWMA I 5 A_Scream
-	TWMA A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo", AAPTR_PLAYER1)
-	Goto ContinueDeath
+	TWMA A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo4", AAPTR_PLAYER1)
+	Goto ContinueDeath4
+  DropSoulCubeAmmo4:
+	TWMA A 0 A_SpawnItem("CubeAmmo")
+  ContinueDeath4:
+	TWMA J 5 A_NoBlocking
+	TWMA KL 5
+	TWMA M 0 A_PlaySound("body/hitfloor")
+	TWMA M 5
+	TWMA N 10
+	TWMA A 0 A_GiveToTarget("PlayerPunchTaunt",1)
+	TWMA N -1
+	Stop
   Death.Fire:
   Death.CookieFire:
 	BBQ7 A 0 A_GiveToTarget("ScoreItem",5000)
@@ -698,6 +761,7 @@ actor TwiMage replaces BaronOfHell
 	BBQ7 DDD 1 Bright A_Wander
 	BBQ7 A 0 A_SpawnItem("BFireTrail",8+random(-5,5),58+random(-5,5),0,0)
 	BBQ7 A 0 A_Jump(1, "Toasty")
+	BBQ7 A 0 A_GiveToTarget("PlayerBurnTaunt",1)
 	Goto Fall
   Toasty:
 	BBQ7 A 0 A_SpawnItem("ToastyGuy")
@@ -713,6 +777,11 @@ actor TwiMage replaces BaronOfHell
   Death.GMIDRailgun:
 	TNT1 A 0 A_GiveToTarget("ScoreItem",5000)
 	TNT1 A 0 A_StopSound(CHAN_VOICE)
+	TNT1 A 0 A_JumpIfInTargetInventory("SoulCube", 1, "DropSoulCubeAmmo3", AAPTR_PLAYER1)
+	Goto ContinueXDeath
+  DropSoulCubeAmmo3:
+	TNT1 A 0 A_SpawnItem("CubeAmmo")
+  ContinueXDeath:
 	TNT1 A 0 A_XScream
 	TNT1 A 0 A_NoBlocking
 	TNT1 AA 0 A_SpawnItem("GMIDGibSpawner")

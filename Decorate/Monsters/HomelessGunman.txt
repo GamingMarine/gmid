@@ -89,6 +89,18 @@ ACTOR HomelessGunman
 	TNT1 A 0 A_GiveToTarget("PlayerKickTaunt",1)
     SWRG P -1
     Stop
+  Death.Fist:
+	SWRG I 0 A_GiveToTarget("ScoreItem",700)
+    SWRG I 4 A_Scream
+    SWRG J 4 A_NoBlocking
+    SWRG K 4
+	SWRG L 12
+	SWRG M 4 A_PlaySound("OBCTerrVomit",CHAN_VOICE)
+	SWRG NO 4
+	SWRG P 4 A_PlaySound("body/hitfloor")
+	TNT1 A 0 A_GiveToTarget("PlayerPunchTaunt",1)
+    SWRG P -1
+    Stop
   Death.BigFist:
 	SWRG I 0 A_GiveToTarget("ScoreItem",700)
     SWRG I 0 A_Scream
@@ -101,7 +113,7 @@ ACTOR HomelessGunman
 	SWRG M 4 A_PlaySound("OBCTerrVomit",CHAN_VOICE)
 	SWRG NO 4
 	SWRG P 4 A_PlaySound("body/hitfloor")
-	TNT1 A 0 A_GiveToTarget("PlayerKillTaunt",1)
+	TNT1 A 0 A_GiveToTarget("PlayerPunchTaunt",1)
     SWRG P -1
     Stop
   Death.Uppercut:
@@ -115,7 +127,7 @@ ACTOR HomelessGunman
 	SWRG M 4 A_PlaySound("OBCTerrVomit",CHAN_VOICE)
 	SWRG NO 4
 	SWRG P 4 A_PlaySound("body/hitfloor")
-	TNT1 A 0 A_GiveToTarget("PlayerKillTaunt",1)
+	TNT1 A 0 A_GiveToTarget("PlayerPunchTaunt",1)
     SWRG P -1
     Stop
   XDeath:
