@@ -1,0 +1,177 @@
+Actor GMIDAnomaly replaces ID24Banshee
+{
+  Health 35
+  Radius 20
+  Height 56
+  Scale 0.25
+  Speed 8
+  MONSTER
+  -SOLID
+  +FLOAT
+  +NOGRAVITY
+  +LOOKALLAROUND
+  +NOBLOODDECALS
+  +NODAMAGETHRUST
+  -SHOOTABLE
+  BloodType "GMIDNullActor"
+  DamageType "Anomaly"
+  DamageFactor "Anomaly", 0.0
+  RenderStyle "Add"
+  DeathSound "Anomaly/Death"
+  Tag "$TAG_ANOMALY"
+  Obituary "$OB_ANOMALY"
+  States
+  {
+  Spawn:
+	TNT1 A 10 A_Look
+	Loop
+  See:
+	TNT1 A 0 A_Explode(2,64)
+	TNT1 A 0 A_Chase
+	ANOM Q 2 Bright A_PlaySound("Anomaly/Noise",CHAN_VOICE,1.0,true)
+	TNT1 A 0 A_Explode(4,64)
+	ANOM R 2 Bright A_Chase
+	TNT1 A 0 A_Explode(6,64)
+	ANOM S 2 Bright A_Chase
+	TNT1 A 0 A_Explode(8,64)
+	ANOM T 2 Bright A_Chase
+	TNT1 A 0 A_ChangeFlag(SHOOTABLE,true)
+  RealSee:
+	TNT1 A 0 A_Explode(10,64)
+	ANOM A 2 Bright A_Chase
+	TNT1 A 0 A_Explode(10,64)
+	ANOM B 2 Bright A_Chase
+	TNT1 A 0 A_Explode(10,64)
+	ANOM C 2 Bright A_Chase
+	TNT1 A 0 A_Explode(10,64)
+	ANOM D 2 Bright A_Chase
+	TNT1 A 0 A_Explode(10,64)
+	ANOM E 2 Bright A_Chase
+	TNT1 A 0 A_Explode(10,64)
+	ANOM F 2 Bright A_Chase
+	TNT1 A 0 A_Explode(10,64)
+	ANOM G 2 Bright A_Chase
+	TNT1 A 0 A_Explode(10,64)
+	ANOM H 2 Bright A_Chase
+	TNT1 A 0 A_Explode(10,64)
+	ANOM I 2 Bright A_Chase
+	TNT1 A 0 A_Explode(10,64)
+	ANOM J 2 Bright A_Chase
+	TNT1 A 0 A_Explode(10,64)
+	ANOM K 2 Bright A_Chase
+	TNT1 A 0 A_Explode(10,64)
+	ANOM L 2 Bright A_Chase
+	TNT1 A 0 A_Explode(10,64)
+	ANOM M 2 Bright A_Chase
+	TNT1 A 0 A_Explode(10,64)
+	ANOM N 2 Bright A_Chase
+	TNT1 A 0 A_Explode(10,64)
+	ANOM O 2 Bright A_Chase
+	TNT1 A 0 A_Explode(10,64)
+	ANOM P 2 Bright A_Chase
+	Loop
+  Idle:
+	TNT1 A 0 A_Explode(10,64)
+	ANOM A 2 Bright A_Wander
+	TNT1 A 0 A_Explode(10,64)
+	ANOM B 2 Bright A_Wander
+	TNT1 A 0 A_Explode(10,64)
+	ANOM C 2 Bright A_Wander
+	TNT1 A 0 A_Explode(10,64)
+	ANOM D 2 Bright A_Wander
+	TNT1 A 0 A_Explode(10,64)
+	ANOM E 2 Bright A_Wander
+	TNT1 A 0 A_Explode(10,64)
+	ANOM F 2 Bright A_Wander
+	TNT1 A 0 A_Explode(10,64)
+	ANOM G 2 Bright A_Wander
+	TNT1 A 0 A_Explode(10,64)
+	ANOM H 2 Bright A_Wander
+	TNT1 A 0 A_Explode(10,64)
+	ANOM I 2 Bright A_Wander
+	TNT1 A 0 A_Explode(10,64)
+	ANOM J 2 Bright A_Wander
+	TNT1 A 0 A_Explode(10,64)
+	ANOM K 2 Bright A_Wander
+	TNT1 A 0 A_Explode(10,64)
+	ANOM L 2 Bright A_Wander
+	TNT1 A 0 A_Explode(10,64)
+	ANOM M 2 Bright A_Wander
+	TNT1 A 0 A_Explode(10,64)
+	ANOM N 2 Bright A_Wander
+	TNT1 A 0 A_Explode(10,64)
+	ANOM O 2 Bright A_Wander
+	TNT1 A 0 A_Explode(10,64)
+	ANOM P 2 Bright A_Wander
+	TNT1 A 0 A_Explode(8,64)
+	TNT1 A 0 A_Wander
+	ANOM U 2 Bright A_PlaySound("Anomaly/FadeOut",CHAN_VOICE)
+	TNT1 A 0 A_Explode(6,64)
+	ANOM V 2 Bright A_Wander
+	TNT1 A 0 A_Explode(4,64)
+	ANOM W 2 Bright A_Wander
+	TNT1 A 0 A_Explode(2,64)
+	ANOM X 2 Bright A_Wander
+	TNT1 A 0 A_ChangeFlag(SHOOTABLE,false)
+	Goto Spawn
+  Death:
+	TNT1 A 0 A_GiveToTarget("ScoreItem",175)
+	TNT1 A 0 A_Scream
+	TNT1 A 0 A_SetScale(0.275)
+	TNT1 A 0 A_FadeOut(0.05)
+	TNT1 A 0 A_Stop
+	ANOM A 1 Bright
+	TNT1 A 0 A_SetScale(0.3)
+	TNT1 A 0 A_FadeOut(0.05)
+	ANOM A 1 Bright
+	TNT1 A 0 A_SetScale(0.325)
+	TNT1 A 0 A_FadeOut(0.05)
+	ANOM B 1 Bright
+	TNT1 A 0 A_SetScale(0.35)
+	TNT1 A 0 A_FadeOut(0.05)
+	ANOM B 1 Bright
+	TNT1 A 0 A_SetScale(0.375)
+	TNT1 A 0 A_FadeOut(0.05)
+	ANOM C 1 Bright
+	TNT1 A 0 A_SetScale(0.4)
+	TNT1 A 0 A_FadeOut(0.05)
+	ANOM C 1 Bright
+	TNT1 A 0 A_SetScale(0.425)
+	TNT1 A 0 A_FadeOut(0.05)
+	ANOM D 1 Bright
+	TNT1 A 0 A_SetScale(0.45)
+	TNT1 A 0 A_FadeOut(0.05)
+	ANOM D 1 Bright
+	TNT1 A 0 A_SetScale(0.475)
+	TNT1 A 0 A_FadeOut(0.05)
+	ANOM E 1 Bright
+	TNT1 A 0 A_SetScale(0.5)
+	TNT1 A 0 A_FadeOut(0.05)
+	ANOM E 1 Bright
+	TNT1 A 0 A_SetScale(0.525)
+	TNT1 A 0 A_FadeOut(0.05)
+	ANOM F 1 Bright
+	TNT1 A 0 A_SetScale(0.55)
+	TNT1 A 0 A_FadeOut(0.05)
+	ANOM F 1 Bright
+	TNT1 A 0 A_SetScale(0.575)
+	TNT1 A 0 A_FadeOut(0.05)
+	ANOM G 1 Bright
+	TNT1 A 0 A_SetScale(0.6)
+	TNT1 A 0 A_FadeOut(0.05)
+	ANOM G 1 Bright
+	TNT1 A 0 A_SetScale(0.625)
+	TNT1 A 0 A_FadeOut(0.05)
+	ANOM H 1 Bright
+	TNT1 A 0 A_SetScale(0.65)
+	TNT1 A 0 A_FadeOut(0.05)
+	ANOM H 1 Bright
+	TNT1 A 0 A_SetScale(0.675)
+	TNT1 A 0 A_FadeOut(0.05)
+	ANOM I 1 Bright
+	TNT1 A 0 A_SetScale(0.7)
+	TNT1 A 0 A_FadeOut(0.05)
+	ANOM I 1 Bright
+	Stop
+  }
+}

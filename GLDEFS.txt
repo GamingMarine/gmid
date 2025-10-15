@@ -385,12 +385,12 @@ object TrixieKir
 
 object NewBaronBall
 {
-    frame BAL7A { light NewBaronBall }
-    frame BAL7B { light NewBaronBall }
-    frame BAL7C { light NewBaronBall_X1 }
-    frame BAL7D { light NewBaronBall_X1 }
-    frame BAL7E { light NewBaronBall_X2 }
-	frame BAL7F { light NewBaronBall_X3 }
+    frame WZBLA { light NewBaronBall }
+    frame WZBLB { light NewBaronBall }
+    frame WZBLC { light NewBaronBall_X1 }
+    frame WZBLD { light NewBaronBall_X1 }
+    frame WZBLE { light NewBaronBall_X2 }
+	frame WZBLF { light NewBaronBall_X3 }
 }
 
 object TwiMage

@@ -130,7 +130,7 @@ Intermission GMIDCast
 	}
     Cast
 	{
-	  CastClass = "Changeling"
+	  CastClass = "ChangelingCastCall"
 	  CastName = "$TAG_CHANGELING"
       AttackSound = "Missile", 2, "changeling/attack"
 	}
@@ -155,13 +155,13 @@ Intermission GMIDCast
 	}
     Cast
 	{
-	  CastClass = "TwiMage"
+	  CastClass = "TwilightSparkleCastCall"
 	  CastName = "$TAG_TWILIGHT"
       AttackSound = "Missile", 1, "imp/attack"
 	}
     Cast
 	{
-	  CastClass = "VinylStorm"
+	  CastClass = "VinylScratchCastCall"
 	  CastName = "$TAG_VINYL"
       AttackSound = "Missile", 1, "weapons/blasterrifle"
 	}
@@ -189,7 +189,7 @@ Intermission GMIDCast
 	}
    Cast
    {
-      CastClass = "NewbieHooves"
+      CastClass = "DerpyHoovesCastCall"
       CastName = "$TAG_DERPY"
       AttackSound = "Missile", 1, "fatso/attack"
       AttackSound = "Missile", 3, "fatso/attack"

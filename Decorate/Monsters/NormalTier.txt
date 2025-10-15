@@ -181,10 +181,19 @@ actor TrixieKir : MasterForceBase replaces HellKnight
    }
 }
 
-actor NewBaronBall : BaronBall
+actor NewBaronBall : BaronBall //This previously just used a translation of vanilla Doom's baron balls, but now it uses its own sprites so they're not invisible in mapsets like Earthless
 {
-  Translation "112:127=250:254"
+  States
+  {
+  Spawn:
+    WZBL AB 4 Bright
+    Loop
+  Death:
+    WZBL CDE 6 Bright
+    Stop
+  }
 }
+
 
 actor FlutterMedic : MasterForceBase replaces Archvile
 {

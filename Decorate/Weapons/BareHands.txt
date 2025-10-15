@@ -205,7 +205,6 @@ Actor GMIDFist : Fist Replaces Fist
 			TNT1 A 0 A_PlaySound("DoubleDamage/Use")
 		ContinueFire5:
 			UPR1 G 0 A_CustomPunch(25,0,0,"UppercutPuff")
-			UPR1 G 0 A_CustomPunch(25,0,0,"UppercutPuff")
 			UPR1 G 0 A_SetPitch(pitch+0.2)
 			UPR1 G 1 A_WeaponReady(WRF_NoFire|WRF_NoSwitch)
 			UPR1 J 0 A_SetPitch(pitch+0.2)

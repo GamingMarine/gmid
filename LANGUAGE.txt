@@ -3,6 +3,8 @@
 
 [enu default]
 
+FONTTEST = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG\nthe quick brown fox jumps over the lazy dog\n!\"#$%&'()*+,-./:<=>?@[]^_`{|}~";
+
 STARTUP1 = "GamingMarine in Doom";
 STARTUP2 = "\"No one had the guts ...UNTIL NOW!\"";
 STARTUP3 = "\n";
@@ -236,6 +238,7 @@ TAG_LUNA = "Princess Luna";
 TAG_NONBOY = "NONBoy";
 TAG_FREEDOOMER = "Hung Marine";
 TAG_CHANGELING2 = "Winged Changeling";
+TAG_ANOMALY = "Anomaly";
 TAG_EVILMARINE4 = "Evil Marine (Railgun)";
 TAG_APPRENTICE = "Master Force Apprentice";
 TAG_BRUTE = "Undead Brute";
@@ -280,6 +283,7 @@ OB_GMBOT = "%o was terminated by a GMBot.";
 OB_LORD = "%o was obliterated by the Master Force Lord.";
 OB_LUNA = "%o kneeled before Princess Luna.";
 OB_NONBOY = "%o couldn't stop the New Order.";
+OB_ANOMALY = "%o was sucked into an anomaly.";
 OB_APPRENTICE = "%o was rolled over by a Master Force Apprentice.";
 OB_BRUTE = "%o was demolished by an Undead Brute.";
 
@@ -439,6 +443,7 @@ TOTD13 = "\cf#13:\c- Be cautious when using the Pineapple Jammer--The velocity o
 TOTD14 = "\cf#14:\c- Aiming for a high score? Then be sure to achieve 100% kills, items, and secrets on a level! Achieving those rewards 10,000 points each.";
 TOTD15 = "\cf#15:\c- To ensure your armor lasts as long as possible, always prioritize obtaining the best available armor vest type before picking up any armor shards.";
 TOTD16 = "\cf#16:\c- With the Hand Grenades, you can control how far you throw them by holding down [PRIMARY FIRE]. A gauge will appear at the bottom of the screen to indicate the force you give your throw.";
+TOTD17 = "\cf#17:\c- Extra caution is recommended when fighting against GMBots, as they can sometimes shoot exploding CDs at you! They're not exactly smart about using it in confined spaces, however...";
 
 GAMEOVERA1 = "You died!";
 GAMEOVERA2 = "Game over, man!"; //Aliens
@@ -568,8 +573,9 @@ E1TEXT =
 	"missing when this mess started, not to mention that\n"
 	"you've been stripped clean of almost all your equipment.\n"
 	"\n"
-	"All you care about right now is where the Hell Deimos\n"
-	"went. But the Master Force is still going strong.\n"
+	"All you care about right now is what the Hell you're\n"
+	"doing on Deimos. But the Master Force is still going\n"
+	"strong.\n"
 	"\n"
 	"This is only the beginning.\n";
 E2TEXT =
@@ -577,16 +583,16 @@ E2TEXT =
 	"dead now. It seems it was commanding these guys to\n"
 	"build a nice crib for it. Too bad you've just trashed\n"
 	"the place. Oops.\n"
-	"However, you've still yet to find out what happened to\n"
+	"However, you've still yet to find out why you're on\n"
 	"Deimos. It seems your morbid curiousity has caught up\n"
 	"with you, for as you look down, your eyes widen.\n"
 	"\n"
 	"Deimos now floats above this dimension!\n"
-	"You would be pissed about the Master Force doing such a\n"
-	"thing to something that doesn't belong to them, but at\n"
-	"the same time, it's generous they would leave you such\n"
-	"an easy shortcut to their hometown! Quickly, you rush\n"
-	"down to the surface.\n"
+	"You can only imagine the worst thinking what this could\n"
+	"mean for the situe back on Earth, but at the same time,\n"
+	"it's generous they would leave you such an easy shortcut\n"
+	"to their hometown! Quickly, you rush down to the\n"
+	"surface.\n"
 	"\n"
 	"Time to teach these bastards the true meaning of\n"
 	"Inferno.";
@@ -883,6 +889,27 @@ HE1TEXT =
 	"\n"
 	"But hey, nobody ever said being a space marine was\n"
 	"easy!";
+HE2TEXT =
+	"The collapse of the towering brutes leaves you at\n"
+	"ease, knowing that even in whatever realm this is,\n"
+	"the forces of evil are pushovers for the Duo of the\n"
+	"Revolution!\n"
+	"\n"
+	"The now-opened portals take you somewhere unlike\n"
+	"anything you've seen yet. Somewhere... aquatic? But\n"
+	"before you can ponder any further...\n"
+	"\n"
+	"\"Greetings, interlopers.\"\n"
+	"\n"
+	"A shrilling voice not of your own echoes in your ears.\n"
+	"Maybe this is that D'Sparil dude communicating through\n"
+	"your consciousness?\n"
+	"\n"
+	"\"I was expecting a Sidhe to dare challenge me and my\n"
+	"minions, but whoever you are, you two will do nicely...\n"
+	"trapped here in my domain!\"\n"
+	"\n"
+	"The voice's chanting turns to a fading cackle...";
 //This concludes GamingMarine in Doom's story. See you in Tales of the Lost Kaka Village!
 	
 // Flats

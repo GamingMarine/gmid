@@ -249,11 +249,12 @@ actor VinylStorm replaces Arachnotron
   DropSoulCubeAmmo3:
 	TNT1 A 0 A_SpawnItem("CubeAmmo")
   ContinueXDeath:
-	TNT1 A 0 A_XScream
-	TNT1 A 0 A_NoBlocking
-	TNT1 AA 0 A_SpawnItem("GMIDGibSpawner")
-	TNT1 A 0 A_BossDeath
-	TNT1 A 0 A_GiveToTarget("PlayerGibTaunt",1)
+	VSTR A 0 A_StopSound(CHAN_VOICE)
+	VSTR A 0 A_XScream
+	VSTR A 0 A_NoBlocking
+	VSTR AA 0 A_SpawnItem("GMIDGibSpawner")
+	VSTR Z 40 A_BossDeath
+	VSTR A 0 A_GiveToTarget("PlayerGibTaunt",1)
 	Stop
   Raise:
 	VSTR MLKJIH 5
@@ -520,11 +521,12 @@ actor NewbieHooves replaces Fatso
   DropSoulCubeAmmo3:
 	TNT1 A 0 A_SpawnItem("CubeAmmo")
   ContinueXDeath:
-	TNT1 A 0 A_XScream
-	TNT1 A 0 A_NoBlocking
-	TNT1 AA 0 A_SpawnItem("GMIDGibSpawner")
-	TNT1 A 0 A_BossDeath
-	TNT1 A 0 A_GiveToTarget("PlayerGibTaunt",1)
+	NWBH A 0 A_StopSound(CHAN_VOICE)
+	NWBH A 0 A_XScream
+	NWBH A 0 A_NoBlocking
+	NWBH AA 0 A_SpawnItem("GMIDGibSpawner")
+	NWBH Z 40 A_BossDeath
+	NWBH A 0 A_GiveToTarget("PlayerGibTaunt",1)
 	Stop
   Raise:
 	NWBH MLKJIH 5
@@ -627,7 +629,7 @@ actor TwiMage replaces BaronOfHell
 	TWMA A 0 A_GiveToTarget("PlayerKickTaunt",1)
 	TWMA N -1
 	Stop
-  Death.RevX:
+  Death.Fist:
 	TWMA H 0 A_GiveToTarget("ScoreItem",5000)
 	TWMA H 5
 	TWMA I 5 A_Scream
@@ -782,11 +784,12 @@ actor TwiMage replaces BaronOfHell
   DropSoulCubeAmmo3:
 	TNT1 A 0 A_SpawnItem("CubeAmmo")
   ContinueXDeath:
-	TNT1 A 0 A_XScream
-	TNT1 A 0 A_NoBlocking
-	TNT1 AA 0 A_SpawnItem("GMIDGibSpawner")
-	TNT1 A 0 A_BossDeath
-	TNT1 A 0 A_GiveToTarget("PlayerGibTaunt",1)
+	TWMA A 0 A_StopSound(CHAN_VOICE)
+	TWMA A 0 A_XScream
+	TWMA A 0 A_NoBlocking
+	TWMA AA 0 A_SpawnItem("GMIDGibSpawner")
+	TWMA Z 40 A_BossDeath
+	TWMA A 0 A_GiveToTarget("PlayerGibTaunt",1)
 	Stop
   Raise:
 	TWMA MLKJIH 5

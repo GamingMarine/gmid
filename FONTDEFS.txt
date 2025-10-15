@@ -15,5 +15,10 @@ DIGFONT
 
 BigFont
 {
-  Template REVOX%03d
+  Template REVXB%03d
+}
+
+SmallFont
+{
+  Template REVXS%03d
 }

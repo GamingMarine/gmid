@@ -155,7 +155,7 @@ drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, 0;
 // Score System Things
 gamemode singleplayer, cooperative
 {
-drawnumber 8, SMALLFONT, white, score, interpolate(50), 235, 190;
+drawnumber 8, SMALLFONT, white, score, interpolate(1000), 235, 190;
 DrawString SMALLFONT, white, "Score", 235, 182;
 }
 
@@ -253,7 +253,7 @@ drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, 0;
 // Score System Things
 gamemode singleplayer, cooperative
 {
-drawnumber 8, SMALLFONT, white, score, interpolate(50), 235, 190;
+drawnumber 8, SMALLFONT, white, score, interpolate(1000), 235, 190;
 DrawString SMALLFONT, white, "Score", 235, 182;
 }
 

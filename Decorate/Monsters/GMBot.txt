@@ -12,7 +12,7 @@ Actor GamingMarineClone replaces Revenant
   ActiveSound "GamingMarineClone/active"
   DeathSound "GamingMarineClone/death"
   AttackSound "GamingMarineClone/Fire"
-  translation "112:127=[0,128,192]:[0,0,0]"
+  translation "112:127=[0,128,192]:[0,0,0]", "205:205=181:181"
   Obituary "$OB_GMBOT"
   +NOBLOOD
   +NOICEDEATH

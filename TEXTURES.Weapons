@@ -1596,6 +1596,74 @@ Sprite "PISGF0", 97, 80
   Patch "BERETTA1", 18, 0
 }
 
+Sprite "BRLDA0", 98, 78
+{
+	Offset -180, -95
+	Patch "BERCRDL1", -8, 26
+	Patch "BERETTA4", 17, 0
+}
+
+Sprite "BRLDB0", 98, 78
+{
+	Offset -177, -96
+	Patch "BERCRDL1", -8, 26
+	Patch "BERETTA4", 17, 0
+}
+
+Sprite "BRLDC0", 98, 78
+{
+	Offset -172, -97
+	Patch "BERCRDL1", -8, 26
+	Patch "BERETTA4", 17, 0
+}
+
+Sprite "BRLDD0", 98, 78
+{
+	Offset -169, -98
+	Patch "BERCRDL1", -8, 26
+	Patch "BERETTA4", 17, 0
+}
+
+Sprite "BRLDE0", 104, 85
+{
+  Offset -160, -92
+  Patch "BERCRDL2", -13, 34
+  Patch "BERETTA6", 24, 0
+}
+
+Sprite "BRLDF0", 104, 85
+{
+  Offset -155, -94
+  Patch "BERCRDL2", -13, 34
+  Patch "BERETTA6", 24, 0
+}
+
+Sprite "BRLDK0", 178, 65
+{
+  Offset -113, -132
+  Patch "PMAGG0", 44, 9
+  Patch "BERSIDE", 0, 0
+}
+
+Sprite "BRLDL0", 178, 65
+{
+  Offset -106, -131
+  Patch "PMAGG0", 62, 10
+  Patch "BERSIDE", 0, 0
+}
+
+Sprite "BRLDP0", 178, 65
+{
+  Offset -76, -133
+  Patch "BERSIDE", 0, 0
+}
+
+Sprite "BRLDQ0", 178, 65
+{
+  Offset -75, -134
+  Patch "BERSIDE", 0, 0
+}
+
 Sprite "BRLDR0", 121, 101
 {
   Offset -170, -77
@@ -2103,6 +2171,104 @@ Sprite "P2MTD0", 191, 59
   Patch "BERANGL3", 97, 0
 }
 
+Sprite "P2MTO0", 187, 86
+{
+  Offset -66, -82
+  Patch "MAGHNDS4", -27, 0
+  Patch "MAGHNDS4", 114, 6
+  {
+	FlipX
+  }
+}
+
+Sprite "P2MTP0", 177, 86
+{
+  Offset -71, -83
+  Patch "MAGHNDS4", -27, 0
+  Patch "MAGHNDS4", 104, 6
+  {
+	FlipX
+  }
+}
+
+Sprite "P2MTQ0", 194, 96
+{
+  Offset -63, -76
+  Patch "MAGHNDS5", -20, 0
+  Patch "MAGHNDS5", 105, 6
+  {
+	FlipX
+  }
+}
+
+Sprite "P2MTR0", 184, 96
+{
+  Offset -67, -73
+  Patch "MAGHNDS5", -20, 0
+  Patch "MAGHNDS5", 95, 6
+  {
+	FlipX
+  }
+}
+
+Sprite "P2MTS0", 184, 117
+{
+  Offset -68, -56
+  Patch "MAGHNDS6", -42, 0
+  Patch "MAGHNDS6", 96, 7
+  {
+	FlipX
+  }
+}
+
+Sprite "P2MTT0", 182, 118
+{
+  Offset -69, -55
+  Patch "MAGHNDS6", -42, 0
+  Patch "MAGHNDS6", 94, 7
+  {
+	FlipX
+  }
+}
+
+Sprite "P2MTU0", 209, 106
+{
+  Offset -57, -64
+  Patch "BERHNLS1", 18, 8
+  {
+	Rotate 90
+  }
+  Patch "MAGHNDS7", -10, 0
+  Patch "BERHNLS1", 111, 8
+  {
+    FlipX
+	Rotate -90
+  }
+  Patch "MAGHNDS7", 112, 0
+  {
+	FlipX
+  }
+}
+
+Sprite "P2MTV0", 207, 105
+{
+  Offset -58, -65
+  Patch "BERHNLS1", 18, 8
+  {
+	Rotate 90
+  }
+  Patch "MAGHNDS7", -10, 0
+  Patch "BERHNLS1", 109, 8
+  {
+    FlipX
+	Rotate -90
+  }
+  Patch "MAGHNDS7", 110, 0
+  {
+	FlipX
+  }
+}
+
 Sprite "P2MTY0", 231, 92
 {
   Offset -44, -76
@@ -2605,6 +2771,161 @@ Sprite "SHO2E0", 106, 61
   Patch "SWNOFMPT", 37, 3
 }
 
+//Rev-X
+Sprite "RFL1A0", 146, 91
+{
+  Offset -152, -98
+  Patch "REVX1", 22, 0
+  Patch "REVXCRAD", -3, 26
+  Patch "REVXLITE", 89, 9
+}
+
+Sprite "RFL1B0", 146, 91
+{
+  Offset -135, -87
+  XScale 0.9
+  YScale 0.9
+  Patch "REVX1", 22, 0
+  Patch "REVXCRAD", -3, 26
+  Patch "REVXLITE", 89, 9
+  Patch "REVXMF1", 20, 6
+}
+
+Sprite "RFL1C0", 146, 91
+{
+  Offset -118, -77
+  XScale 0.8
+  YScale 0.8
+  Patch "REVX1", 22, 0
+  Patch "REVXCRAD", -3, 26
+  Patch "REVXLITE", 89, 9
+  Patch "REVXMF2", 19, 3
+}
+
+Sprite "RFL2A0", 146, 91
+{
+  Offset -152, -98
+  Patch "REVX1", 22, 0
+  Patch "REVXCRAD", -3, 26
+  Patch "REVXLITE", 89, 9
+  {
+	Translation "168:191=192:207"
+  }
+}
+
+Sprite "RFL2B0", 146, 91
+{
+  Offset -135, -87
+  XScale 0.9
+  YScale 0.9
+  Patch "REVX1", 22, 0
+  Patch "REVXCRAD", -3, 26
+  Patch "REVXLITE", 89, 9
+  {
+	Translation "168:191=192:207"
+  }
+  Patch "REVXMF1", 20, 6
+}
+
+Sprite "RFL2C0", 146, 91
+{
+  Offset -118, -77
+  XScale 0.8
+  YScale 0.8
+  Patch "REVX1", 22, 0
+  Patch "REVXCRAD", -3, 26
+  Patch "REVXLITE", 89, 9
+  {
+	Translation "168:191=192:207"
+  }
+  Patch "REVXMF2", 19, 3
+}
+
+Sprite "RFL3A0", 146, 91
+{
+  Offset -152, -98
+  Patch "REVX1", 22, 0
+  Patch "REVXCRAD", -3, 26
+  Patch "REVXLITE", 89, 9
+  {
+	Translation "168:191=160:167"
+  }
+}
+
+Sprite "RFL3B0", 146, 91
+{
+  Offset -135, -87
+  XScale 0.9
+  YScale 0.9
+  Patch "REVX1", 22, 0
+  Patch "REVXCRAD", -3, 26
+  Patch "REVXLITE", 89, 9
+  {
+	Translation "168:191=160:167"
+  }
+  Patch "REVXMF3", 20, 6
+}
+
+Sprite "RFL3C0", 146, 91
+{
+  Offset -118, -77
+  XScale 0.8
+  YScale 0.8
+  Patch "REVX1", 22, 0
+  Patch "REVXCRAD", -3, 26
+  Patch "REVXLITE", 89, 9
+  {
+	Translation "168:191=160:167"
+  }
+  Patch "REVXMF4", 19, 3
+}
+
+Sprite "RFL4A0", 146, 91
+{
+  Offset -152, -98
+  Patch "REVX1", 22, 0
+  Patch "REVXCRAD", -3, 26
+  Patch "REVXLITE", 89, 9
+  {
+	Translation "168:191=112:127"
+  }
+}
+
+Sprite "RFL4B0", 146, 91
+{
+  Offset -135, -87
+  XScale 0.9
+  YScale 0.9
+  Patch "REVX1", 22, 0
+  Patch "REVXCRAD", -3, 26
+  Patch "REVXLITE", 89, 9
+  {
+	Translation "168:191=112:127"
+  }
+  Patch "REVXMF3", 20, 6
+}
+
+Sprite "RFL4C0", 146, 91
+{
+  Offset -118, -77
+  XScale 0.8
+  YScale 0.8
+  Patch "REVX1", 22, 0
+  Patch "REVXCRAD", -3, 26
+  Patch "REVXLITE", 89, 9
+  {
+	Translation "168:191=112:127"
+  }
+  Patch "REVXMF4", 19, 3
+}
+
+Sprite "RFL5A0", 146, 91
+{
+  Offset -152, -98
+  Patch "REVX1", 22, 0
+  Patch "REVXCRAD", -3, 26
+}
+
 //Pineapple Jammer
 Sprite "RGLGA0", 144, 92
 {
@@ -2846,6 +3167,40 @@ Sprite "RGNSH0", 87, 56
 }
 
 //Hand Grenades
+Sprite "HGRNA0", 83, 45
+{
+  Offset -172, -127
+  Patch "HGRENADE", 0, 0
+}
+
+Sprite "HGRNB0", 190, 45
+{
+  Offset -65, -127
+  Patch "HGRENADE", 107, 0
+  Patch "BERFHND2", -90, 19
+}
+
+Sprite "HGRNC0", 182, 45
+{
+  Offset -73, -127
+  Patch "HGRENADE", 99, 0
+  Patch "BERFHND2", -69, 1
+}
+
+Sprite "HGRND0", 178, 55
+{
+  Offset -77, -117
+  Patch "HGRENADE", 95, 10
+  Patch "BERFHND2", -51, 0
+}
+
+Sprite "HGRNE0", 183, 64
+{
+  Offset -73, -109
+  Patch "HGRENADE", 100, 19
+  Patch "BERFHND2", -38, 0
+}
+
 Sprite "THR2A0", 249, 148
 {
   Offset -244, -13

@@ -1,3 +1,13 @@
+Actor GMIDNullActor
+{
+  States
+  {
+  Spawn:
+	TNT1 A 0
+	Stop
+  }
+}
+
 #include Decorate/Main.txt
 #include Decorate/Powerups.txt
 #include Decorate/Inventory.txt
@@ -41,5 +51,6 @@
 #include Decorate/Monsters/ZombieScientist.txt
 #include Decorate/Monsters/GMBot.txt
 #include Decorate/Monsters/MasterForceLord.txt
+#include Decorate/Monsters/Anomaly.txt
 #include Decorate/Monsters/MonstersCastCall.txt
 #include Decorate/Monsters/HereticMonsters.txt

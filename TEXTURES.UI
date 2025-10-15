@@ -1,0 +1,406 @@
+Graphic "WIOSTK", 34, 18
+{
+  Patch "REVXB075", 0, 0
+  Patch "REVXB105", 10, 0
+  Patch "REVXB108", 15, 0
+  Patch "REVXB108", 20, 0
+  Patch "REVXB115", 25, 0
+}
+
+Graphic "WIOSTI", 49, 18
+{
+  Patch "REVXB073", 0, 0
+  Patch "REVXB116", 5, 0
+  Patch "REVXB101", 15, 0
+  Patch "REVXB109", 25, 0
+  Patch "REVXB115", 40, 0
+}
+
+Graphic "WIF", 94, 18
+{
+  Patch "REVXB119", 0, 0
+  Patch "REVXB105", 15, 0
+  Patch "REVXB112", 20, 0
+  Patch "REVXB101", 30, 0
+  Patch "REVXB100", 40, 0
+  Patch "REVXB111", 60, 0
+  Patch "REVXB117", 70, 0
+  Patch "REVXB116", 80, 0
+  Patch "REVXB033", 90, 0
+}
+
+Graphic "WIMSTT", 44, 18
+{
+  Patch "REVXB084", 0, 0
+  Patch "REVXB111", 11, 0
+  Patch "REVXB116", 21, 0
+  Patch "REVXB097", 31, 0
+  Patch "REVXB108", 40, 0
+}
+
+Graphic "WITIME", 40, 18
+{
+  Patch "REVXB084", 0, 0
+  Patch "REVXB105", 11, 0
+  Patch "REVXB109", 16, 0
+  Patch "REVXB101", 31, 0
+}
+
+Graphic "WIPAR", 26, 18
+{
+  Patch "REVXB080", 0, 0
+  Patch "REVXB097", 10, 0
+  Patch "REVXB114", 19, 0
+}
+
+Graphic "WIMSTAR", 30, 18
+{
+  Patch "REVXB089", 0, 0
+  Patch "REVXB111", 11, 0
+  Patch "REVXB117", 21, 0
+}
+
+Graphic "WIMINUS", 13, 18
+{
+  Patch "REVXB045", 0, 0
+}
+
+Graphic "WIPCNT", 11, 18
+{
+  Patch "REVXB037", 0, 0
+}
+
+Graphic "WINUM0", 10, 18
+{
+  Patch "REVXB048", 0, 0
+}
+
+Graphic "WINUM1", 7, 18
+{
+  Patch "REVXB049", 0, 0
+}
+
+Graphic "WINUM2", 10, 18
+{
+  Patch "REVXB050", 0, 0
+}
+
+Graphic "WINUM3", 10, 18
+{
+  Patch "REVXB051", 0, 0
+}
+
+Graphic "WINUM4", 12, 18
+{
+  Patch "REVXB052", 0, 0
+}
+
+Graphic "WINUM5", 10, 18
+{
+  Patch "REVXB053", 0, 0
+}
+
+Graphic "WINUM6", 10, 18
+{
+  Patch "REVXB054", 0, 0
+}
+
+Graphic "WINUM7", 11, 18
+{
+  Patch "REVXB055", 0, 0
+}
+
+Graphic "WINUM8", 10, 18
+{
+  Patch "REVXB056", 0, 0
+}
+
+Graphic "WINUM9", 10, 18
+{
+  Patch "REVXB057", 0, 0
+}
+
+Graphic "WICOLON", 5, 18
+{
+  Patch "REVXB058", 0, 0
+}
+
+Graphic "WISUCKS", 37, 18
+{
+  Patch "REVXB066", 0, 0
+  Patch "REVXB114", 10, 0
+  Patch "REVXB117", 18, 0
+  Patch "REVXB104", 28, 0
+}
+
+Graphic "WISCRT2", 68, 18
+{
+  Patch "REVXB083", 0, 0
+  Patch "REVXB101", 10, 0
+  Patch "REVXB099", 20, 0
+  Patch "REVXB114", 31, 0
+  Patch "REVXB101", 39, 0
+  Patch "REVXB116", 49, 0
+  Patch "REVXB115", 59, 0
+}
+
+Graphic "WIENTER", 116, 18
+{
+  Patch "REVXB080", 0, 0
+  Patch "REVXB114", 10, 0
+  Patch "REVXB101", 18, 0
+  Patch "REVXB112", 28, 0
+  Patch "REVXB097", 38, 0
+  Patch "REVXB114", 47, 0
+  Patch "REVXB101", 55, 0
+  Patch "REVXB102", 75, 0
+  Patch "REVXB111", 84, 0
+  Patch "REVXB114", 94, 0
+  Patch "REVXB046", 102, 0
+  Patch "REVXB046", 107, 0
+  Patch "REVXB046", 112, 0
+}
+
+//Relocated HUD icons
+Sprite "PISAC0", 15, 25
+{
+  Offset 7, 21
+  Patch "PISAA0B0", 0, 0
+}
+
+Sprite "BLITC0", 14, 13
+{
+  Offset 7, 17
+  Patch "BLITA0B0", 0, 0
+}
+
+Sprite "CELLB0", 17, 12
+{
+  Offset 8, 16
+  Patch "CELLA0", 0, 0
+}
+
+Sprite "HPP1D0", 6, 16
+{
+  Offset 3, 18
+  Patch "HPP1A0", 0, 0
+}
+
+Sprite "HPP1E0", 6, 16
+{
+  Offset 3, 18
+  Patch "HPP1B0", 0, 0
+}
+
+Sprite "HPP1F0", 6, 16
+{
+  Offset 3, 18
+  Patch "HPP1C0", 0, 0
+}
+
+Sprite "HHRTD0", 16, 16
+{
+  Offset 7, 20
+  Patch "HHRTA0", 0, 0
+}
+
+Sprite "HHRTE0", 16, 16
+{
+  Offset 7, 20
+  Patch "HHRTB0", 0, 0
+}
+
+Sprite "HHRTF0", 16, 16
+{
+  Offset 7, 20
+  Patch "HHRTC0", 0, 0
+}
+
+Sprite "BHRTE0", 24, 24
+{
+  Offset 11, 24
+  Patch "BHRTA0", 0, 0
+}
+
+Sprite "BHRTF0", 24, 24
+{
+  Offset 11, 24
+  Patch "BHRTB0", 0, 0
+}
+
+Sprite "BHRTG0", 24, 24
+{
+  Offset 11, 24
+  Patch "BHRTC0", 0, 0
+}
+
+Sprite "BHRTH0", 24, 24
+{
+  Offset 11, 24
+  Patch "BHRTD0", 0, 0
+}
+
+Sprite "COLAI0", 30, 30
+{
+  Patch "COLAH0", 10, -4
+}
+
+Sprite "SNTPZ0", 30, 30
+{
+  Patch "SNTPA0", 8, -2
+  {
+    Rotate 90
+  }
+}
+
+Sprite "CRYSB0", 84, 84
+{
+  Patch "CRYSA0", 11, 2
+  XScale 2.8
+  YScale 2.8
+}
+
+Sprite "I_SBA0", 30, 30
+{
+  Patch "SBMBA0", -3, 0
+}
+
+Sprite "I_SBB0", 30, 30
+{
+  Patch "SBMBB0", -3, 0
+}
+
+Sprite "I_SBC0", 30, 30
+{
+  Patch "SBMBC0", -3, 0
+}
+
+Sprite "I_SBD0", 30, 30
+{
+  Patch "SBMBD0", -3, 0
+}
+
+Sprite "I_SBE0", 30, 30
+{
+  Patch "SBMBE0", -3, 0
+}
+
+Sprite "I_SBF0", 30, 30
+{
+  Patch "SBMBF0", -3, 0
+}
+
+Sprite "I_SBG0", 30, 30
+{
+  Patch "SBMBZ0", -3, 0
+}
+
+Sprite "BELTB0", 30, 30
+{
+  Patch "BELTA0", 5, 9
+}
+
+Sprite "BELTC0", 21, 13
+{
+  Offset 11, 6
+  Patch "BELTA0", 0, 0
+}
+
+Sprite "TADDB0", 30, 30
+{
+  Patch "TADDA0", 6, 6
+}
+
+Sprite "TADDC0", 18, 18
+{
+  Offset 9, 9
+  Patch "TADDA0", 0, 0
+}
+
+Sprite "DDMGD0", 25, 25
+{
+  Offset 12, 12
+  Patch "DDMGA0", 0, 0
+}
+
+Sprite "DDMGE0", 25, 25
+{
+  Offset 12, 12
+  Patch "DDMGB0", 0, 0
+}
+
+Sprite "DDMGF0", 25, 25
+{
+  Offset 12, 12
+  Patch "DDMGC0", 0, 0
+}
+
+Sprite "HASTE0", 50, 50
+{
+  XScale 2.0
+  YScale 2.0
+  Offset 24, 24
+  Patch "HASTA0", 0, 0
+}
+
+Sprite "HASTF0", 50, 50
+{
+  XScale 2.0
+  YScale 2.0
+  Offset 24, 24
+  Patch "HASTB0", 0, 0
+}
+
+Sprite "HASTG0", 50, 50
+{
+  XScale 2.0
+  YScale 2.0
+  Offset 24, 24
+  Patch "HASTC0", 0, 0
+}
+
+Sprite "HASTH0", 50, 50
+{
+  XScale 2.0
+  YScale 2.0
+  Offset 24, 24
+  Patch "HASTD0", 0, 0
+}
+
+Sprite "PVISB0", 33, 18
+{
+  Offset 16, 9
+  Patch "PVISA0C0", 0, 0
+}
+
+Sprite "PINVE0", 34, 34
+{
+  XScale 1.3
+  YScale 1.3
+  Offset 16, 16
+  Patch "PINVA0", 0, 0
+}
+
+Sprite "PINVF0", 34, 34
+{
+  XScale 1.3
+  YScale 1.3
+  Offset 16, 16
+  Patch "PINVB0", 0, 0
+}
+
+Sprite "PINVG0", 34, 34
+{
+  XScale 1.3
+  YScale 1.3
+  Offset 16, 16
+  Patch "PINVC0", 0, 0
+}
+
+Sprite "PINVH0", 34, 34
+{
+  XScale 1.3
+  YScale 1.3
+  Offset 16, 16
+  Patch "PINVD0", 0, 0
+}

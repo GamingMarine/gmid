@@ -1807,3 +1807,724 @@ Sprite "BBQ4D5", 36, 68
     Blend "#FF0000"
   }
 }
+
+//Scaled-down monster sprites so the cast call appears properly in Zandronum
+Sprite "CC05A0", 72, 139
+{
+  Offset 36, 135
+  XScale 1.6
+  YScale 1.6
+  Patch "OCTLA1", 0, 0
+}
+
+Sprite "CC05B0", 81, 132
+{
+  Offset 40, 127
+  XScale 1.6
+  YScale 1.6
+  Patch "OCTLB1", 0, 0
+}
+
+Sprite "CC05C0", 84, 126
+{
+  Offset 42, 122
+  XScale 1.6
+  YScale 1.6
+  Patch "OCTLC1", 0, 0
+}
+
+Sprite "CC05D0", 70, 129
+{
+  Offset 35, 125
+  XScale 1.6
+  YScale 1.6
+  Patch "OCTLD1", 0, 0
+}
+
+Sprite "CC05E0", 65, 110
+{
+  Offset 32, 106
+  XScale 1.6
+  YScale 1.6
+  Patch "OCTLE1", 0, 0
+}
+
+Sprite "CC05F0", 65, 110
+{
+  Offset 32, 106
+  XScale 1.6
+  YScale 1.6
+  Patch "OCTLF1", 0, 0
+}
+
+Sprite "CC05H0", 91, 154
+{
+  Offset 43, 141
+  XScale 1.6
+  YScale 1.6
+  Patch "OCTLH0", 0, 0
+}
+
+Sprite "CC05I0", 151, 162
+{
+  Offset 45, 158
+  XScale 1.6
+  YScale 1.6
+  Patch "OCTLI0", 0, 0
+}
+
+Sprite "CC05J0", 151, 162
+{
+  Offset 31, 143
+  XScale 1.6
+  YScale 1.6
+  Patch "OCTLJ0", 0, 0
+}
+
+Sprite "CC05K0", 151, 162
+{
+  Offset 31, 139
+  XScale 1.6
+  YScale 1.6
+  Patch "OCTLK0", 0, 0
+}
+
+Sprite "CC05L0", 151, 162
+{
+  Offset 31, 135
+  XScale 1.6
+  YScale 1.6
+  Patch "OCTLL0", 0, 0
+}
+
+Sprite "CC05M0", 151, 162
+{
+  Offset 31, 130
+  XScale 1.6
+  YScale 1.6
+  Patch "OCTLM0", 0, 0
+}
+
+Sprite "CC05N0", 151, 162
+{
+  Offset 31, 130
+  XScale 1.6
+  YScale 1.6
+  Patch "OCTLN0", 0, 0
+}
+
+Sprite "CC11B0", 46, 57
+{
+  Offset 21, 57
+  XScale 0.8
+  YScale 0.8
+  Patch "SWRGB0", 0, 0
+}
+
+Sprite "CC11C0", 51, 56
+{
+  Offset 26, 56
+  XScale 0.8
+  YScale 0.8
+  Patch "SWRGC0", 0, 0
+}
+
+Sprite "CC11D0", 49, 57
+{
+  Offset 29, 57
+  XScale 0.8
+  YScale 0.8
+  Patch "SWRGD0", 0, 0
+}
+
+Sprite "CC11E0", 51, 56
+{
+  Offset 25, 56
+  XScale 0.8
+  YScale 0.8
+  Patch "SWRGE0", 0, 0
+}
+
+Sprite "CC11F0", 43, 56
+{
+  Offset 21, 56
+  XScale 0.8
+  YScale 0.8
+  Patch "SWRGF0", 0, 0
+}
+
+Sprite "CC11G0", 43, 56
+{
+  Offset 21, 56
+  XScale 0.8
+  YScale 0.8
+  Patch "SWRGG0", 0, 0
+}
+
+Sprite "CC11H0", 44, 56
+{
+  Offset 21, 56
+  XScale 0.8
+  YScale 0.8
+  Patch "SWRGH0", 0, 0
+}
+
+Sprite "CC11I0", 45, 56
+{
+  Offset 24, 56
+  XScale 0.8
+  YScale 0.8
+  Patch "SWRGI0", 0, 0
+}
+
+Sprite "CC11J0", 50, 56
+{
+  Offset 27, 56
+  XScale 0.8
+  YScale 0.8
+  Patch "SWRGJ0", 0, 0
+}
+
+Sprite "CC11K0", 52, 53
+{
+  Offset 27, 53
+  XScale 0.8
+  YScale 0.8
+  Patch "SWRGK0", 0, 0
+}
+
+Sprite "CC11L0", 50, 46
+{
+  Offset 26, 46
+  XScale 0.8
+  YScale 0.8
+  Patch "SWRGL0", 0, 0
+}
+
+Sprite "CC11M0", 50, 43
+{
+  Offset 26, 43
+  XScale 0.8
+  YScale 0.8
+  Patch "SWRGM0", 0, 0
+}
+
+Sprite "CC11N0", 50, 43
+{
+  Offset 26, 43
+  XScale 0.8
+  YScale 0.8
+  Patch "SWRGN0", 0, 0
+}
+
+Sprite "CC11O0", 58, 30
+{
+  Offset 30, 30
+  XScale 0.8
+  YScale 0.8
+  Patch "SWRGO0", 0, 0
+}
+
+Sprite "CC11P0", 57, 14
+{
+  Offset 26, 14
+  XScale 0.8
+  YScale 0.8
+  Patch "SWRGP0", 0, 0
+}
+
+Sprite "CC14A0", 64, 63
+{
+  Offset 33, 62
+  XScale 1.6
+  YScale 1.6
+  Patch "HOUNA1", 0, 0
+}
+
+Sprite "CC14B0", 64, 62
+{
+  Offset 33, 62
+  XScale 1.6
+  YScale 1.6
+  Patch "HOUNB1", 0, 0
+}
+
+Sprite "CC14C0", 65, 73
+{
+  Offset 29, 78
+  XScale 1.6
+  YScale 1.6
+  Patch "HOUNC1", 0, 0
+}
+
+Sprite "CC14D0", 70, 75
+{
+  Offset 30, 72
+  XScale 1.6
+  YScale 1.6
+  Patch "HOUND1", 0, 0
+}
+
+Sprite "CC14E0", 65, 73
+{
+  Offset 27, 65
+  XScale 1.6
+  YScale 1.6
+  Patch "HOUNE1", 0, 0
+}
+
+Sprite "CC14F0", 59, 72
+{
+  Offset 27, 68
+  XScale 1.6
+  YScale 1.6
+  Patch "HOUNF1", 0, 0
+}
+
+Sprite "CC14G0", 54, 62
+{
+  Offset 26, 62
+  XScale 1.6
+  YScale 1.6
+  Patch "HOUNG1", 0, 0
+}
+
+Sprite "CC14H0", 62, 64
+{
+  Offset 33, 63
+  XScale 1.6
+  YScale 1.6
+  Patch "HOUNH1", 0, 0
+}
+
+Sprite "CC14I0", 60, 64
+{
+  Offset 32, 63
+  XScale 1.6
+  YScale 1.6
+  Patch "HOUNI1", 0, 0
+}
+
+Sprite "CC14K0", 57, 60
+{
+  Offset 30, 59
+  XScale 1.6
+  YScale 1.6
+  Patch "HOUNK0", 0, 0
+}
+
+Sprite "CC14L0", 64, 67
+{
+  Offset 34, 67
+  XScale 1.6
+  YScale 1.6
+  Patch "HOUNL0", 0, 0
+}
+
+Sprite "CC14M0", 86, 74
+{
+  Offset 53, 74
+  XScale 1.6
+  YScale 1.6
+  Patch "HOUNM0", 0, 0
+}
+
+Sprite "CC14N0", 98, 73
+{
+  Offset 64, 72
+  XScale 1.6
+  YScale 1.6
+  Patch "HOUNN0", 0, 0
+}
+
+Sprite "CC14O0", 81, 48
+{
+  Offset 41, 47
+  XScale 1.6
+  YScale 1.6
+  Patch "HOUNO0", 0, 0
+}
+
+Sprite "CC14P0", 70, 40
+{
+  Offset 46, 40
+  XScale 1.6
+  YScale 1.6
+  Patch "HOUNP0", 0, 0
+}
+
+Sprite "CC14Q0", 69, 38
+{
+  Offset 45, 38
+  XScale 1.6
+  YScale 1.6
+  Patch "HOUNQ0", 0, 0
+}
+
+Sprite "CC14R0", 69, 38
+{
+  Offset 45, 38
+  XScale 1.6
+  YScale 1.6
+  Patch "HOUNR0", 0, 0
+}
+
+Sprite "CC21A0", 100, 98
+{
+  Offset 51, 97
+  XScale 1.6
+  YScale 1.6
+  Patch "AHOUA1", 0, 0
+}
+
+Sprite "CC21B0", 100, 96
+{
+  Offset 49, 94
+  XScale 1.6
+  YScale 1.6
+  Patch "AHOUB1", 0, 0
+}
+
+Sprite "CC21C0", 100, 96
+{
+  Offset 51, 95
+  XScale 1.6
+  YScale 1.6
+  Patch "AHOUC1", 0, 0
+}
+
+Sprite "CC21D0", 110, 95
+{
+  Offset 52, 95
+  XScale 1.6
+  YScale 1.6
+  Patch "AHOUD1", 0, 0
+}
+
+Sprite "CC21E0", 104, 96
+{
+  Offset 50, 96
+  XScale 1.6
+  YScale 1.6
+  Patch "AHOUE1", 0, 0
+}
+
+Sprite "CC21F0", 109, 96
+{
+  Offset 56, 95
+  XScale 1.6
+  YScale 1.6
+  Patch "AHOUF1", 0, 0
+}
+
+Sprite "CC21G0", 100, 98
+{
+  Offset 51, 97
+  XScale 1.6
+  YScale 1.6
+  Patch "AHOUG1", 0, 0
+}
+
+Sprite "CC21H0", 100, 98
+{
+  Offset 51, 97
+  XScale 1.6
+  YScale 1.6
+  Patch "AHOUH1", 0, 0
+}
+
+Sprite "CC21I0", 100, 98
+{
+  Offset 51, 97
+  XScale 1.6
+  YScale 1.6
+  Patch "AHOUI1", 0, 0
+}
+
+Sprite "CC21J0", 100, 98
+{
+  Offset 51, 97
+  XScale 1.6
+  YScale 1.6
+  Patch "AHOUJ1", 0, 0
+}
+
+Sprite "CC21K0", 118, 98
+{
+  Offset 69, 97
+  XScale 1.6
+  YScale 1.6
+  Patch "AHOXH0", 0, 0
+}
+
+Sprite "CC21L0", 125, 98
+{
+  Offset 76, 97
+  XScale 1.6
+  YScale 1.6
+  Patch "AHOXI0", 0, 0
+}
+
+Sprite "CC21M0", 124, 91
+{
+  Offset 73, 90
+  XScale 1.6
+  YScale 1.6
+  Patch "AHOXJ0", 0, 0
+}
+
+Sprite "CC21N0", 107, 70
+{
+  Offset 53, 69
+  XScale 1.6
+  YScale 1.6
+  Patch "AHOXK0", 0, 0
+}
+
+Sprite "CC21O0", 107, 63
+{
+  Offset 53, 62
+  XScale 1.6
+  YScale 1.6
+  Patch "AHOXL0", 0, 0
+}
+
+Sprite "CC21P0", 107, 63
+{
+  Offset 53, 62
+  XScale 1.6
+  YScale 1.6
+  Patch "AHOXM0", 0, 0
+}
+
+Sprite "CC21Q0", 107, 60
+{
+  Offset 53, 59
+  XScale 1.6
+  YScale 1.6
+  Patch "AHOXN0", 0, 0
+}
+
+Sprite "CC21R0", 107, 57
+{
+  Offset 53, 56
+  XScale 1.6
+  YScale 1.6
+  Patch "AHOXO0", 0, 0
+}
+
+Sprite "CC21S0", 103, 54
+{
+  Offset 53, 53
+  XScale 1.6
+  YScale 1.6
+  Patch "AHOXP0", 0, 0
+}
+
+Sprite "CC21T0", 102, 49
+{
+  Offset 53, 48
+  XScale 1.6
+  YScale 1.6
+  Patch "AHOXQ0", 0, 0
+}
+
+Sprite "CC25A0", 68, 106
+{
+  Offset 38, 101
+  XScale 0.8
+  YScale 0.8
+  Patch "MNTRA1", 0, 0
+}
+
+Sprite "CC25B0", 87, 104
+{
+  Offset 44, 99
+  XScale 0.8
+  YScale 0.8
+  Patch "MNTRB1", 0, 0
+}
+
+Sprite "CC25C0", 78, 104
+{
+  Offset 38, 99
+  XScale 0.8
+  YScale 0.8
+  Patch "MNTRC1", 0, 0
+}
+
+Sprite "CC25D0", 89, 104
+{
+  Offset 43, 99
+  XScale 0.8
+  YScale 0.8
+  Patch "MNTRD1", 0, 0
+}
+
+Sprite "CC25E0", 102, 122
+{
+  Offset 61, 117
+  XScale 0.8
+  YScale 0.8
+  Patch "MNTRE1", 0, 0
+}
+
+Sprite "CC25F0", 139, 112
+{
+  Offset 100, 109
+  XScale 0.8
+  YScale 0.8
+  Patch "MNTRF0", 0, 0
+}
+
+Sprite "CC25G0", 100, 128
+{
+  Offset 54, 125
+  XScale 0.8
+  YScale 0.8
+  Patch "MNTRG0", 0, 0
+}
+
+Sprite "CC25H0", 105, 139
+{
+  Offset 54, 136
+  XScale 0.8
+  YScale 0.8
+  Patch "MNTRH0", 0, 0
+}
+
+Sprite "CC25I0", 116, 144
+{
+  Offset 62, 141
+  XScale 0.8
+  YScale 0.8
+  Patch "MNTRI0", 0, 0
+}
+
+Sprite "CC25J0", 128, 137
+{
+  Offset 67, 134
+  XScale 0.8
+  YScale 0.8
+  Patch "MNTRJ0", 0, 0
+}
+
+Sprite "CC25K0", 140, 123
+{
+  Offset 68, 120
+  XScale 0.8
+  YScale 0.8
+  Patch "MNTRK0", 0, 0
+}
+
+Sprite "CC25L0", 152, 92
+{
+  Offset 73, 87
+  XScale 0.8
+  YScale 0.8
+  Patch "MNTRL0", 0, 0
+}
+
+Sprite "CC25M0", 158, 77
+{
+  Offset 77, 71
+  XScale 0.8
+  YScale 0.8
+  Patch "MNTRM0", 0, 0
+}
+
+Sprite "CC25N0", 152, 69
+{
+  Offset 77, 57
+  XScale 0.8
+  YScale 0.8
+  Patch "MNTRN0", 0, 0
+}
+
+Sprite "CC25O0", 163, 52
+{
+  Offset 80, 40
+  XScale 0.8
+  YScale 0.8
+  Patch "MNTRO0", 0, 0
+}
+
+Sprite "CC25P0", 145, 46
+{
+  Offset 70, 31
+  XScale 0.8
+  YScale 0.8
+  Patch "MNTRP0", 0, 0
+}
+
+Sprite "CC25Q0", 136, 40
+{
+  Offset 63, 25
+  XScale 0.8
+  YScale 0.8
+  Patch "MNTRQ0", 0, 0
+}
+
+Sprite "CC25R0", 135, 36
+{
+  Offset 62, 20
+  XScale 0.8
+  YScale 0.8
+  Patch "MNTRR0", 0, 0
+}
+
+Sprite "CC25S0", 141, 35
+{
+  Offset 64, 20
+  XScale 0.8
+  YScale 0.8
+  Patch "MNTRS0", 0, 0
+}
+
+Sprite "CC25T0", 141, 35
+{
+  Offset 64, 20
+  XScale 0.8
+  YScale 0.8
+  Patch "MNTRT0", 0, 0
+}
+
+Sprite "CC25V0", 87, 115
+{
+  Offset 44, 111
+  XScale 0.8
+  YScale 0.8
+  Patch "MNTRV1", 0, 0
+}
+
+Sprite "CC25W0", 85, 116
+{
+  Offset 34, 112
+  XScale 0.8
+  YScale 0.8
+  Patch "MNTRW1", 0, 0
+}
+
+Sprite "CC25X0", 71, 87
+{
+  Offset 27, 64
+  XScale 0.8
+  YScale 0.8
+  Patch "MNTRX1", 0, 0
+}
+
+Sprite "CC25Y0", 108, 111
+{
+  Offset 71, 107
+  XScale 0.8
+  YScale 0.8
+  Patch "MNTRY1", 0, 0
+}
+
+Sprite "CC25Z0", 92, 112
+{
+  Offset 33, 108
+  XScale 0.8
+  YScale 0.8
+  Patch "MNTRZ1", 0, 0
+}
