@@ -1,46 +1,3 @@
-// >> ALL-INFO CLASSIC HUD V.1.1 <<
- 
-// (Made by patrik, 2015)
-
-// Compatible with both Zdoom/Gzdoom (tested on build 2.8pre-1250) 
-// and Zandronum (tested on stable release v. 2.0).
-// Should run nicely with vanilla and most of not too complex mods.
-
-// NOTE: 
-// This fullscreen hud replaces Statusbar (I know it sounds weird),
-// but that was the only way I was capable to show level stats for 
-// overlay map. If you see built-in default Zdoom fullscreen HUD instead
-// of this, shrink screen one step down.
-
-// NOTE 2: 
-// Centered deliberately, as I prefer having info in center of
-// widescreen. But feel free to make any modifications (like editing 
-// it with fullscreen offsets) and distribute it further.
-
-// NOTE 3: 
-// Copies of vanilla Doom Statusbar Fonts (DIGNUMs) are included,
-// because I dont like it when some PWADs and mods replace them with 
-// their own ones.
-
-// POSSIBLE TO-DOs:
-// - Implement all 4 colors for values of counter digits. So far I was
-//   able to implement only 3.
-// - Scale down SelectedWeaponIcon. Seems to be not yet possible, only
-//   in test build of Gzdoom f73275a :(
-// If you know any way to accomplish this *without breaking cross mod
-// compatibility*, please contact me at Zdoom Forums. My nickname there
-// is same, patrik.
-
-// CREDITS: 
-// All code made by me. Copies of original statusbar font 
-// graphics (STYSNUM*s) made by ID Software. 
-// Little help from Blue Shadow with colorizing counters.
-// Inspiration by Odamex (mugshot), Doomsday (level stats for overlay map) 
-// and Boom (colorized counters from graphical hud) HUDs.
-
-
-//------------------------------------------------------------------
-
 // FACE
 
 mugshot "Rampage", health
@@ -75,96 +32,146 @@ CompleteBorder true;
 
 // STATUSBAR FULLSCREEN HUD
 
-statusbar normal, forcescaled
+statusbar normal, fullscreenoffsets
 {
-// Keys
-DrawKeyBar 3, horizontal, auto, 90, 175, 0;
-DrawKeyBar 3, horizontal, auto, 90, 187, 3; 
+//Left Bar (Health, armor)
+  IfHealth 250%
+  {
+	DrawBar "GMIDHBRF", "GMIDHBRE", health(500), horizontal, interpolate(4), 28, -12;
+  }
+  Else IfHealth 100%
+  {
+	DrawBar "GMIDOBRF", "GMIDOBRE", health(250), horizontal, interpolate(4), 44, -12;
+  }
+  Else
+  {
+	DrawBar "GMIDLBRF", "GMIDLBRE", health(100), horizontal, interpolate(4), 76, -12;
+  }
+  InInventory "BasicArmor", 250
+  {
+	DrawBar "GMIDHBRF", "GMIDHBRE", armor(500), horizontal, interpolate(4), 28, -22;
+  }
+  Else InInventory "BasicArmor", 100
+  {
+	DrawBar "GMIDOBRF", "GMIDOBRE", armor(250), horizontal, interpolate(4), 44, -22;
+  }
+  Else
+  {
+	DrawBar "GMIDLBRF", "GMIDLBRE", armor(100), horizontal, interpolate(4), 76, -22;
+  }
+  DrawImage "GMIDHUDL", 0, -59;
+  DrawMugshot 5, xdeathface, 1, -56;
+  DrawNumber 3, GMIDHUDFONT, untranslated, health, 74, -11;
+  DrawNumber 3, GMIDHUDFONT, untranslated, armor, 74, -21;
 
-// Inventory Items
-drawselectedinventory SMALLFONT, 280, 120;
+//Right Bar (Ammo, keys, score)
+  DrawBar "GMIDRBRF", "GMIDRBRE", ammo1, horizontal, -48, -11;
+  DrawImage "GMIDHUDR", -126, -57;
+  DrawNumber 3, GMIDHUDFONT, untranslated, ammo1, -50, -10;
+  DrawNumber 8, GMIDHUDFONT, untranslated, score, -3, -22;
+  DrawSelectedInventory SMALLFONT, -32, -55;
 
-// Face
-drawmugshot 5, xdeathface, 0, 165;
+  InInventory RedCard, 1 || RedSkull, 1
+  {
+	DrawImage "GMIDKEYR", -57, -32;
+  }
+  InInventory YellowCard, 1 || YellowSkull, 1
+  {
+	DrawImage "GMIDKEYY", -49, -32;
+  }
+  InInventory BlueCard, 1 || BlueSkull, 1
+  {
+	DrawImage "GMIDKEYB", -41, -32;
+  }
 
-// Armor
-drawimage armoricon, 17, 162;
-drawnumber 4, DIGFONT, yellow, armor, whennotzero, interpolate(4), 78, 141, red, 25, green, 51;
-drawnumber 8, SMALLFONT, blue, savepercent, whennotzero, 30, 158, green, 74, red, 94;
-       
-// Health
-drawnumber 4, DIGFONT, yellow, health, interpolate(4), 77, 173, red, 25, green, 51;
+//Top-right Bar (Ammo count)
+  DrawImage "GMIDHUDT", -40, 0;
+  DrawNumber 3, SMALLFONT, untranslated, ammo(Clip2), -3, 3;
+  InInventory GMIDPistol, 1
+  {
+	DrawString SMALLFONT, gold, "2", -30, 3;
+  }
+  Else
+  {
+	DrawString SMALLFONT, darkgray, "2", -30, 3;
+  }
+  DrawNumber 3, SMALLFONT, untranslated, ammo(Shell), -3, 11;
+  InInventory GMIDShotgun, 1 || GMIDSuperShotgun, 1
+  {
+	DrawString SMALLFONT, gold, "3", -30, 11;
+  }
+  Else
+  {
+	DrawString SMALLFONT, darkgray, "3", -30, 11;
+  }
+  DrawNumber 3, SMALLFONT, untranslated, ammo(NewShells2), -3, 19;
+  InInventory Firestick, 1
+  {
+	DrawString SMALLFONT, orange, "3", -30, 19;
+  }
+  Else
+  {
+	DrawString SMALLFONT, darkred, "3", -30, 19;
+  }
+  DrawNumber 3, SMALLFONT, untranslated, ammo(Clip3), -3, 27;
+  InInventory VGun, 1
+  {
+	DrawString SMALLFONT, gold, "4", -30, 27;
+  }
+  Else
+  {
+	DrawString SMALLFONT, darkgray, "4", -30, 27;
+  }
+  DrawNumber 3, SMALLFONT, untranslated, ammo(RocketAmmo), -3, 35;
+  InInventory GMIDMissileLauncher, 1 || PineappleJammer, 1
+  {
+	DrawString SMALLFONT, gold, "5", -30, 35;
+  }
+  Else
+  {
+	DrawString SMALLFONT, darkgray, "5", -30, 35;
+  }
+  DrawNumber 3, SMALLFONT, untranslated, ammo(NewCell), -3, 43;
+  InInventory GMIDRailgun, 1 || ExcessiveForce, 1
+  {
+	DrawString SMALLFONT, gold, "6", -30, 43;
+  }
+  Else
+  {
+	DrawString SMALLFONT, darkgray, "6", -30, 43;
+  }
+  DrawNumber 3, SMALLFONT, untranslated, ammo(SmallMana), -3, 51;
+  InInventory SpaceCadet, 1
+  {
+	DrawString SMALLFONT, gold, "7", -30, 51;
+  }
+  Else
+  {
+	DrawString SMALLFONT, darkgray, "7", -30, 51;
+  }
+  DrawNumber 3, SMALLFONT, untranslated, ammo(GMIDHandGrenadeAmmo), -3, 59;
+  InInventory GMIDHandGrenade, 1
+  {
+	DrawString SMALLFONT, gold, "9", -30, 59;
+  }
+  Else
+  {
+	DrawString SMALLFONT, darkgray, "0", -30, 59;
+  }
 
-// Ammo
-drawimage ammoicon1, 307, 195;
-drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, 0;
-
-	IsSelected GMIDPistol
+  InInventory RevX, 1
+  {
+    DrawBar "GMIDXBRF", "GMIDXBRE", ammo(RevXAmmo), vertical, interpolate(4), -61, 0;
+    DrawImage "GMIDHUDX", -63, 0;
+	InInventory RevXUpgrade1, 1
 	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 50, green, 101;
+	  DrawImage "GMIDUPG1", -61, 18;
 	}
-	IsSelected GMIDDualPistol
+	InInventory RevXUpgrade2, 1
 	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 50, green, 101;
+	  DrawImage "GMIDUPG2", -50, 18;
 	}
-	IsSelected GMIDShotgun
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 12, green, 26;
-	}
-	IsSelected Firestick
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 6, green, 13;
-	}
-	IsSelected GMIDSuperShotgun
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 12, green, 26;
-	}
-	IsSelected RevX
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 12, green, 26;
-	}
-	IsSelected VGun
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 100, green, 202;
-	}
-	IsSelected GMIDRailgun
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 75, green, 151;
-	}
-	IsSelected ExcessiveForce
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 75, green, 151;
-	}
-	IsSelected GMIDMissilelauncher
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 12, green, 26;
-	}
-	IsSelected PineappleJammer
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 12, green, 26;
-	}
-	IsSelected SpaceCadet
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 12, green, 26;
-	}
-	IsSelected GMIDHandGrenade
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 4, green, 8;
-	}
-	
-// Score System Things
-gamemode singleplayer, cooperative
-{
-drawnumber 8, SMALLFONT, white, score, interpolate(1000), 235, 190;
-DrawString SMALLFONT, white, "Score", 235, 182;
-}
-
-// Multiplayer Counters
-gamemode deathmatch, teamgame
-{
-drawnumber 8, SMALLFONT, darkred, frags, 40, 135;
-DrawString SMALLFONT, darkred, "Kills", 40, 127;
-}
+  }
 }
 
 //------------------------------------------------------------------
@@ -173,96 +180,56 @@ DrawString SMALLFONT, darkred, "Kills", 40, 127;
 
 //------------------------------------------------------------------
 
-statusbar fullscreen, forcescaled
+statusbar fullscreen, fullscreenoffsets
 {
-// Keys
-DrawKeyBar 3, horizontal, auto, 90, 175, 0;
-DrawKeyBar 3, horizontal, auto, 90, 187, 3; 
+  DrawImage "GMIDSHUL", 0, -59;
+  DrawMugshot 5, xdeathface, 1, -56;
+  DrawNumber 3, GMIDHUDFONT, untranslated, health, 74, -11;
+  DrawNumber 3, GMIDHUDFONT, untranslated, armor, 74, -21;
 
-// Inventory Items
-drawselectedinventory SMALLFONT, 280, 120;
+//Right bar is duplicate for now, wanna do something later
+  DrawBar "GMIDRBRF", "GMIDRBRE", ammo1, horizontal, -48, -11;
+  DrawImage "GMIDHUDR", -126, -57;
+  DrawNumber 3, GMIDHUDFONT, untranslated, ammo1, -50, -10;
+  DrawNumber 8, GMIDHUDFONT, untranslated, score, -3, -22;
+  DrawSelectedInventory SMALLFONT, -32, -55;
 
-// Face
-drawmugshot 5, xdeathface, 0, 165;
-
-// Armor
-drawimage armoricon, 17, 162;
-drawnumber 4, DIGFONT, yellow, armor, whennotzero, interpolate(4), 78, 141, red, 25, green, 51;
-drawnumber 8, SMALLFONT, blue, savepercent, whennotzero, 30, 158, green, 74, red, 94;
-       
-// Health
-drawnumber 4, DIGFONT, yellow, health, interpolate(4), 77, 173, red, 25, green, 51;
-
-// Ammo
-drawimage ammoicon1, 307, 195;
-drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, 0;
-
-	IsSelected GMIDPistol
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 50, green, 101;
-	}
-	IsSelected GMIDDualPistol
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 50, green, 101;
-	}
-	IsSelected GMIDShotgun
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 12, green, 26;
-	}
-	IsSelected Firestick
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 6, green, 13;
-	}
-	IsSelected GMIDSuperShotgun
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 12, green, 26;
-	}
-	IsSelected RevX
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 12, green, 26;
-	}
-	IsSelected VGun
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 100, green, 202;
-	}
-	IsSelected GMIDRailgun
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 75, green, 151;
-	}
-	IsSelected ExcessiveForce
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 75, green, 151;
-	}
-	IsSelected GMIDMissilelauncher
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 12, green, 26;
-	}
-	IsSelected PineappleJammer
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 12, green, 26;
-	}
-	IsSelected SpaceCadet
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 12, green, 26;
-	}
-	IsSelected GMIDHandGrenade
-	{
-	drawnumber 4, DIGFONT, yellow, ammo1, 292, 173, red, 4, green, 8;
-	}
-
-// Score System Things
-gamemode singleplayer, cooperative
-{
-drawnumber 8, SMALLFONT, white, score, interpolate(1000), 235, 190;
-DrawString SMALLFONT, white, "Score", 235, 182;
+  InInventory RedCard, 1 || RedSkull, 1
+  {
+	DrawImage "GMIDKEYR", -57, -32;
+  }
+  InInventory YellowCard, 1 || YellowSkull, 1
+  {
+	DrawImage "GMIDKEYY", -49, -32;
+  }
+  InInventory BlueCard, 1 || BlueSkull, 1
+  {
+	DrawImage "GMIDKEYB", -41, -32;
+  }
 }
 
-// Multiplayer Counters
-gamemode deathmatch, teamgame
+//------------------------------------------------------------------
+
+// FULLSCREEN HUD FOR AUTOMAP
+
+statusbar automap, fullscreenoffsets
 {
-drawnumber 8, SMALLFONT, darkred, frags, 40, 135;
-DrawString SMALLFONT, darkred, "Kills", 40, 127;
-}
+  DrawImage "GMIDAHUL", 0, -25;
+  DrawNumber 3, GMIDHUDFONT, untranslated, health, 74, -11;
+  DrawNumber 3, GMIDHUDFONT, untranslated, armor, 74, -21;
+  DrawImage "GMIDKEYSC", 79, -9;
+  InInventory RedCard, 1 || RedSkull, 1
+  {
+	DrawImage "GMIDKEYR", 79, -8;
+  }
+  InInventory YellowCard, 1 || YellowSkull, 1
+  {
+	DrawImage "GMIDKEYY", 87, -8;
+  }
+  InInventory BlueCard, 1 || BlueSkull, 1
+  {
+	DrawImage "GMIDKEYB", 95, -8;
+  }
 }
 
 //------------------------------------------------------------------

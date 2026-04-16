@@ -1,3 +1,68 @@
+Graphic "GMIDLBRE", 48, 9
+{
+  Patch "GMIDLBRF", 0, 0
+  {
+	Blend "#000000"
+  }
+}
+
+Graphic "GMIDOBRE", 80, 9
+{
+  Patch "GMIDLBRF", 32, 0
+}
+
+Graphic "GMIDOBRF", 80, 9
+{
+  Patch "GMIDLBRF", 0, 0
+  {
+	Blend "#0000FF", 1.0
+  }
+  Patch "GMIDLBRF", 32, 0
+  {
+	Blend "#0000FF", 1.0
+  }
+}
+
+Graphic "GMIDHBRE", 96, 9
+{
+  Patch "GMIDOBRF", 16, 0
+}
+
+Graphic "GMIDHBRF", 96, 9
+{
+  Patch "GMIDOBRF", 0, 0
+  {
+    Blend "#FFFFFF", 1.0
+  }
+  Patch "GMIDOBRF", 16, 0
+  {
+	Blend "#FFFFFF", 1.0
+  }
+}
+
+Graphic "GMIDRBRE", 44, 8
+{
+  Patch "GMIDLBRF", 0, 0
+  {
+	Blend "#000000"
+  }
+}
+
+Graphic "GMIDRBRF", 44, 8
+{
+  Patch "GMIDLBRF", -2, 0
+}
+
+Graphic "GMIDAHUL", 79, 25
+{
+  Patch "GMIDSHUL", 0, -34
+}
+
+Graphic "GMIDKEYSC", 24, 9
+{
+  Patch "GMIDHUDR", -69, -24
+}
+
 Graphic "WIOSTK", 34, 18
 {
   Patch "REVXB075", 0, 0
