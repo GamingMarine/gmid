@@ -277,9 +277,16 @@ ACTOR LightArmorVest : GreenArmor replaces GreenArmor
   States
   {
   Spawn:
+	TNT1 A 0
+	TNT1 A 0 A_JumpIf(CallACS("VoxelsToggle")==1, "VoxelSpawn")
+  RealSpawn:
     ARM1 A 7
     ARM1 A 7 Bright
     Loop
+  VoxelSpawn:
+	ARM1 B 7
+	ARM1 B 7 Bright
+	Loop
   }
 }
 
@@ -296,9 +303,16 @@ ACTOR StrongArmorVest : GreenArmor
   States
   {
   Spawn:
+	TNT1 A 0
+	TNT1 A 0 A_JumpIf(CallACS("VoxelsToggle")==1, "VoxelSpawn")
+  RealSpawn:
     ARM3 A 7
     ARM3 A 7 Bright
     Loop
+  VoxelSpawn:
+	ARM3 B 7
+	ARM3 B 7 Bright
+	Loop
   }
 }
 
@@ -315,9 +329,16 @@ ACTOR HeavyArmorVest : BlueArmor replaces BlueArmor
   States
   {
   Spawn:
+	TNT1 A 0
+	TNT1 A 0 A_JumpIf(CallACS("VoxelsToggle")==1, "VoxelSpawn")
+  RealSpawn:
     ARM2 A 7
     ARM2 A 7 Bright
     Loop
+  VoxelSpawn:
+	ARM2 B 7
+	ARM2 B 7 Bright
+	Loop
   }
 }
 
@@ -334,9 +355,16 @@ ACTOR PraetorArmorVest : BlueArmor
   States
   {
   Spawn:
+	TNT1 A 0
+	TNT1 A 0 A_JumpIf(CallACS("VoxelsToggle")==1, "VoxelSpawn")
+  RealSpawn:
     ARM4 A 7
     ARM4 A 7 Bright
     Loop
+  VoxelSpawn:
+	ARM4 B 7
+	ARM4 B 7 Bright
+	Loop
   }
 }
 

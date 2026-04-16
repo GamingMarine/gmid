@@ -19,10 +19,7 @@ YKEYC = "YKEYC" { Spin = 75 }
 YKEYD = "YKEYD" { Spin = 75 }
 
 //These voxels by Absolute Lambda
-BBOXB = "BBOXB" { Spin = 75 }
-BLITC = "BLITC" { Spin = 75 }
 BROKB = "BROKB" { Spin = 75 }
-CHGPC = "CHGPC" { Spin = 75 }
 GLMMC = "GLMMC" { Spin = 75 }
 LAUNC = "LAUNC" { Spin = 75 }
 MGUNC = "MGUNC" { Spin = 75 }
@@ -30,7 +27,23 @@ PISAC = "PISAC" { Spin = 75 }
 PISTB = "PISTB" { Spin = 75 }
 RIFLC = "RIFLC" { Spin = 75 }
 ROCKB = "ROCKB" { Spin = 75 }
-SBOXE = "SBOXE" { Spin = 75 }
 SGN2C = "SGN2C" { Spin = 75 }
 SHGPC = "SHGPC" { Spin = 75 }
 SHOTC = "SHOTC" { Spin = 75 }
+
+//These voxels originally made by Reikall
+BBOXB = "BBOXB" { Spin = 75 }
+BLITC = "BLITC" { Spin = 75 }
+BSKUC = "BSKUC" { Spin = 75 }
+RSKUC = "RSKUC" { Spin = 75 }
+YSKUC = "YSKUC" { Spin = 75 }
+
+//These voxels taken from Voxel Duke 3D by Cheello
+ARM1B = "ARM1B" { Spin = 75 ZOffset = 13 } //Edit by GamingMarine
+ARM2B = "ARM2B" { Spin = 75 ZOffset = 13 } //Edit by GamingMarine
+ARM3B = "ARM3B" { Spin = 75 ZOffset = 13 }
+ARM4B = "ARM4B" { Spin = 75 ZOffset = 13 } //Edit by GamingMarine
+CHGPC = "CHGPC" { Spin = 75 ZOffset = 18 }
+PVISB = "PVISB" { Spin = 75 ZOffset = 9 }
+SBOXE = "SBOXE" { Spin = 75 ZOffset = 15 }
+SBOXF = "SBOXF" { Spin = 75 ZOffset = 15 } //Edit by GamingMarine

@@ -109,6 +109,7 @@ Actor NightVisionGoggles : CustomInventory replaces InfraRed
   {
   Spawn:
 	TNT1 A 0
+	TNT1 A 0 A_JumpIf(CallACS("VoxelsToggle")==1, "VoxelSpawn")
 	TNT1 A 0 A_Jump(128, "Spawn2")
 	PVIS A -1
 	Stop
@@ -124,6 +125,9 @@ Actor NightVisionGoggles : CustomInventory replaces InfraRed
 	Stop
   NoAnnouncer:
 	TNT1 A 0
+	Stop
+  VoxelSpawn:
+	PVIS B -1
 	Stop
   }
 }

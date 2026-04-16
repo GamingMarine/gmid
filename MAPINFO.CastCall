@@ -114,7 +114,7 @@ Intermission GMIDCast
 	{
 	  CastClass = "PinkiePieCastCall"
 	  CastName = "$TAG_PINKIE"
-      AttackSound = "Missile", 1, "grunt/attack"
+      AttackSound = "Missile", 1, "mf/projectile"
 	}
     Cast
 	{
@@ -138,14 +138,14 @@ Intermission GMIDCast
 	{
 	  CastClass = "RarityCastCall"
 	  CastName = "$TAG_RARITY"
-      AttackSound = "Missile", 1, "grunt/attack"
-      AttackSound = "Missile", 3, "grunt/attack"
-      AttackSound = "Missile", 5, "grunt/attack"
-      AttackSound = "Missile", 7, "grunt/attack"
-      AttackSound = "Missile", 9, "grunt/attack"
-      AttackSound = "Missile", 11, "grunt/attack"
-      AttackSound = "Missile", 13, "grunt/attack"
-      AttackSound = "Missile", 15, "grunt/attack"
+      AttackSound = "Missile", 1, "mf/projectile"
+      AttackSound = "Missile", 3, "mf/projectile"
+      AttackSound = "Missile", 5, "mf/projectile"
+      AttackSound = "Missile", 7, "mf/projectile"
+      AttackSound = "Missile", 9, "mf/projectile"
+      AttackSound = "Missile", 11, "mf/projectile"
+      AttackSound = "Missile", 13, "mf/projectile"
+      AttackSound = "Missile", 15, "mf/projectile"
 	}
     Cast
 	{
@@ -199,22 +199,22 @@ Intermission GMIDCast
 	{
 	  CastClass = "FluttershyCastCall"
 	  CastName = "$TAG_FLUTTERSHY"
-      AttackSound = "Missile", 1, "grunt/attack"
-	  AttackSound = "Missile", 3, "grunt/attack"
-      AttackSound = "Missile", 5, "grunt/attack"
-	  AttackSound = "Missile", 7, "grunt/attack"
-      AttackSound = "Missile", 9, "grunt/attack"
-	  AttackSound = "Missile", 11, "grunt/attack"
-      AttackSound = "Missile", 13, "grunt/attack"
-	  AttackSound = "Missile", 15, "grunt/attack"
-      AttackSound = "Missile", 17, "grunt/attack"
-	  AttackSound = "Missile", 19, "grunt/attack"
-      AttackSound = "Missile", 21, "grunt/attack"
-	  AttackSound = "Missile", 23, "grunt/attack"
-      AttackSound = "Missile", 25, "grunt/attack"
-	  AttackSound = "Missile", 27, "grunt/attack"
-      AttackSound = "Missile", 29, "grunt/attack"
-	  AttackSound = "Missile", 31, "grunt/attack"
+      AttackSound = "Missile", 1, "mf/projectile"
+	  AttackSound = "Missile", 3, "mf/projectile"
+      AttackSound = "Missile", 5, "mf/projectile"
+	  AttackSound = "Missile", 7, "mf/projectile"
+      AttackSound = "Missile", 9, "mf/projectile"
+	  AttackSound = "Missile", 11, "mf/projectile"
+      AttackSound = "Missile", 13, "mf/projectile"
+	  AttackSound = "Missile", 15, "mf/projectile"
+      AttackSound = "Missile", 17, "mf/projectile"
+	  AttackSound = "Missile", 19, "mf/projectile"
+      AttackSound = "Missile", 21, "mf/projectile"
+	  AttackSound = "Missile", 23, "mf/projectile"
+      AttackSound = "Missile", 25, "mf/projectile"
+	  AttackSound = "Missile", 27, "mf/projectile"
+      AttackSound = "Missile", 29, "mf/projectile"
+	  AttackSound = "Missile", 31, "mf/projectile"
 	}
     Cast
 	{

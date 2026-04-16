@@ -383,7 +383,7 @@ actor PinkiePieCastCall
 	Loop
   Missile:
 	AMPI E 10 A_FaceTarget
-	AMPI F 8 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	AMPI F 8 Bright A_CustomMissile("MasterForceProjectile", 32, 3)
 	AMPI E 8
 	Goto See
   Death:
@@ -491,23 +491,22 @@ actor RarityCastCall
 	Loop
   Missile:
 	ROTY E 10 A_FaceTarget
-	ROTY F 4 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	ROTY F 4 Bright A_CustomMissile("MasterForceProjectile", 32, 3)
 	ROTY E 2
-	ROTY F 4 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	ROTY F 4 Bright A_CustomMissile("MasterForceProjectile", 32, 3)
 	ROTY E 2
-	ROTY F 4 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	ROTY F 4 Bright A_CustomMissile("MasterForceProjectile", 32, 3)
 	ROTY E 2
-	ROTY F 4 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	ROTY F 4 Bright A_CustomMissile("MasterForceProjectile", 32, 3)
 	ROTY E 2
-	ROTY F 4 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	ROTY F 4 Bright A_CustomMissile("MasterForceProjectile", 32, 3)
 	ROTY E 2
-	ROTY F 4 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	ROTY F 4 Bright A_CustomMissile("MasterForceProjectile", 32, 3)
 	ROTY E 2
-	ROTY F 4 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	ROTY F 4 Bright A_CustomMissile("MasterForceProjectile", 32, 3)
 	ROTY E 2
-	ROTY F 4 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	ROTY F 4 Bright A_CustomMissile("MasterForceProjectile", 32, 3)
 	ROTY E 8
-	Goto See
 	Goto See
   Death:
 	ROTY H 5
@@ -722,37 +721,37 @@ actor FluttershyCastCall
 	Loop
   Missile:
 	FLMD E 10 A_FaceTarget
-	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD F 2 Bright A_CustomMissile("MasterForceProjectile", 32, 3)
 	FLMD E 1
-	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD F 2 Bright A_CustomMissile("MasterForceProjectile", 32, 3)
 	FLMD E 1
-	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD F 2 Bright A_CustomMissile("MasterForceProjectile", 32, 3)
 	FLMD E 1
-	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD F 2 Bright A_CustomMissile("MasterForceProjectile", 32, 3)
 	FLMD E 1
-	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD F 2 Bright A_CustomMissile("MasterForceProjectile", 32, 3)
 	FLMD E 1
-	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD F 2 Bright A_CustomMissile("MasterForceProjectile", 32, 3)
 	FLMD E 1
-	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD F 2 Bright A_CustomMissile("MasterForceProjectile", 32, 3)
 	FLMD E 1
-	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD F 2 Bright A_CustomMissile("MasterForceProjectile", 32, 3)
 	FLMD E 1
-	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD F 2 Bright A_CustomMissile("MasterForceProjectile", 32, 3)
 	FLMD E 1
-	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD F 2 Bright A_CustomMissile("MasterForceProjectile", 32, 3)
 	FLMD E 1
-	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD F 2 Bright A_CustomMissile("MasterForceProjectile", 32, 3)
 	FLMD E 1
-	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD F 2 Bright A_CustomMissile("MasterForceProjectile", 32, 3)
 	FLMD E 1
-	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD F 2 Bright A_CustomMissile("MasterForceProjectile", 32, 3)
 	FLMD E 1
-	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD F 2 Bright A_CustomMissile("MasterForceProjectile", 32, 3)
 	FLMD E 1
-	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD F 2 Bright A_CustomMissile("MasterForceProjectile", 32, 3)
 	FLMD E 1
-	FLMD F 2 A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "XaserPuff_NoTaunt", 0, CBAF_NORANDOM)
+	FLMD F 2 Bright A_CustomMissile("MasterForceProjectile", 32, 3)
 	FLMD E 8
 	Goto See
   Death:

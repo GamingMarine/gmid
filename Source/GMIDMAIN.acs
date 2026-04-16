@@ -299,7 +299,7 @@ Script "GameOverMan" DEATH
 	switch (GameType())
 	{
 		case GAME_SINGLE_PLAYER:
-			randomGameOver = StrParam(s:"GAMEOVERA",i:random(1,9));
+			randomGameOver = StrParam(s:"GAMEOVERA",i:random(1,11));
 			HudMessage(l:randomGameOver,s:"\n",l:"GAMEOVERB1"; HUDMSG_PLAIN, HUD_DEATHMSG, CR_GOLD, 1.5, 0.75, 0.0);
 			break;
 		case GAME_NET_COOPERATIVE:

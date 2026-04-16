@@ -248,3 +248,25 @@ actor MasterForceBase
 	Stop
    }
 }
+
+ACTOR MasterForceProjectile : DoomImpBall
+{
+  Radius 6
+  Height 8
+  Speed 20
+  Damage 3
+  Scale 0.75
+  +BLOODSPLATTER
+  SeeSound "mf/projectile"
+  DeathSound ""
+  Decal "BulletChip"
+  States
+  {
+  Spawn:
+	MFPR A 1 Bright
+	Loop
+  Death:
+	MFPR BCD 2 Bright
+	Stop
+	}
+}

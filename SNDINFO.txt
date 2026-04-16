@@ -712,10 +712,8 @@ menu/invalid3		menuno3
 menu/dismiss			menuback	// Dismiss a prompt message
 menu/choose			menusel	// Choose a menu item
 menu/clear			menuback	// Close top menu
-secret/found1		SECRET1
-secret/found2		SECRET2
+secret/found		SECRET
 secret/allfound		ALLSECRT
-$random secret/found { secret/found1 secret/found2 }
 misc/secret			null
 misc/quit1			QUITSND1
 misc/quit2			QUITSND2
@@ -955,6 +953,7 @@ pony/step4			PONYSTP4
 pony/step5			PONYSTP5
 pony/step6			PONYSTP6
 rifle/fire			DSRIFLE
+mf/projectile		MFPROJEC
 
 $random SonicXRainbow/sight { SonicXRainbow/sight1 SonicXRainbow/sight2 SonicXRainbow/sight3 SonicXRainbow/sight4 SonicXRainbow/sight5 SonicXRainbow/sight6 SonicXRainbow/sight7 SonicXRainbow/sight8 SonicXRainbow/sight9 SonicXRainbow/sight10 SonicXRainbow/sight11 SonicXRainbow/sight12 SonicXRainbow/sight13 SonicXRainbow/sight14 SonicXRainbow/sight15 SonicXRainbow/sight16 SonicXRainbow/sight17 SonicXRainbow/sight18 SonicXRainbow/sight19 }
 SonicXRainbow/sight1   	   rdsit01
@@ -1982,13 +1981,12 @@ scientist/whoosh				SCIWSH
 scientist/hit					SCIHIT
 scientist/death					SCIDIE
 
-$random ForceLord/Sight { ForceLord/Sight1 ForceLord/Sight2 ForceLord/Sight3 ForceLord/Sight4 ForceLord/Sight5 ForceLord/Sight6 }
+$random ForceLord/Sight { ForceLord/Sight1 ForceLord/Sight2 ForceLord/Sight3 ForceLord/Sight4 ForceLord/Sight5 }
 ForceLord/Sight1				MFLSIT1
 ForceLord/Sight2				MFLSIT2
 ForceLord/Sight3				MFLSIT3
 ForceLord/Sight4				MFLSIT4
 ForceLord/Sight5				MFLSIT5
-ForceLord/Sight6				MFLSIT6
 $random ForceLord/Stomp { Forcelord/Stomp1 ForceLord/Stomp2 ForceLord/Stomp3 ForceLord/Stomp4 }
 ForceLord/Stomp1				MFLSTMP1
 ForceLord/Stomp2				MFLSTMP2
@@ -2158,6 +2156,8 @@ freedoomer/pain					 FRDMPAIN
 $random freedoomer/death { freedoomer/death1 freedoomer/death2 }
 freedoomer/death1				 FRDMDTH1
 freedoomer/death2				 FRDMDTH2
+
+$limit mf/projectile 0
 
 // Footsteps
 // Sound Info

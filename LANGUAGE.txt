@@ -98,6 +98,7 @@ GOTMANA2 = "Picked up a jar of mana. \cf(\cjAmmo for slot 7\cf)";
 GOTCUBEAMMO = "The \crSoul Cube\c- feeds on the enemy soul...";
 GOTGRENADE = "You got a Hand Grenade! \cf(\cjSlot 9\cf)";
 GOTCRYO = "Picked up a cryo tube. \cf(\cjAmmo for Snowblower\cf)";
+GOTBFGCELL = "Picked up a BFG cell. \cf(\cjAmmo for BFG\cf)";
 GOTBACKPACK2 = "Picked up a leather backpack full of goodies!";
 GOTGRINDER = "You got the Angle Grinder! Groovy! \cf(\cjSlot 1\cf)";
 GOTBERETTA = "Picked up a Beretta. \cf(\cjSlot 2\cf)";
@@ -116,6 +117,8 @@ GOTEXCESS = "You got the \"Excessive Force\" Plasma Cannon! \cf(\cjSlot 6\cf)";
 GOTPINBALL = "You got the \"Space Cadet\" Pinball spell! Time to bring pain and nostalgia upon thee... \cf(\cjSlot 7\cf)";
 GOTCUBE = "The mysterious artifact speaks to you... \"We are many. We are one. We are the Praeleanthor. You know us as the \crSoul Cube\c-.\" \cf(\cjSlot 8\cf)";
 GOTCUBE2 = "You retrieved the \crSoul Cube\c-.";
+GOTSNOW = "You got the \"Snowblower\" cryo-blaster! \cf(\cjSlot 6\cf)";
+GOTGMIDBFG = "You got the BFG 10k Prototype! Oh, yes... \cf(\cjSlot 7\cf)";
 GOTAUTOMAP = "Automap downloaded!";
 GOTBIOSUIT = "Put on a bio-suit.";
 GOTGOGGLES = "Night vision goggles!";
@@ -174,6 +177,7 @@ TAG_MANA2 = "Mana Jar";
 TAG_CUBEAMMO = "Soul";
 TAG_REVXAMMO = "Rev-X Battery"; //For compatibility with m8f's Status Widget
 TAG_CRYO = "Cryo Tube";
+TAG_BFGCELL = "BFG Cell";
 TAG_BACKPACK = "Backpack";
 TAG_AUTOMAP = "Automap";
 TAG_BIOSUIT = "Bio-Suit";
@@ -206,6 +210,8 @@ TAG_RAIL = "Railgun";
 TAG_EXCESS = "Excessive Force";
 TAG_PINBALL = "Space Cadet";
 TAG_CUBE = "Soul Cube";
+TAG_SNOW = "Snowblower";
+TAG_GMIDBFG = "BFG 10k";
 TAG_GRENADE = "Hand Grenades";
 
 TAG_BARREL = "Explosive Barrel";
@@ -444,6 +450,8 @@ TOTD14 = "\cf#14:\c- Aiming for a high score? Then be sure to achieve 100% kills
 TOTD15 = "\cf#15:\c- To ensure your armor lasts as long as possible, always prioritize obtaining the best available armor vest type before picking up any armor shards.";
 TOTD16 = "\cf#16:\c- With the Hand Grenades, you can control how far you throw them by holding down [PRIMARY FIRE]. A gauge will appear at the bottom of the screen to indicate the force you give your throw.";
 TOTD17 = "\cf#17:\c- Extra caution is recommended when fighting against GMBots, as they can sometimes shoot exploding CDs at you! They're not exactly smart about using it in confined spaces, however...";
+TOTD18 = "\cf#18:\c- In GamingMarine in Doom, your foes are far more nimble than usual Doom mods. Being equally quick on your toes (and the trigger) will get you very far.";
+TOTD19 = "\cf#19:\c- While he may have a tendency of flaunting off his colorful vocabulary, GamingMarine never stoops low enough to resort to slurs. Always judge people by their character, not what they can't control.";
 
 GAMEOVERA1 = "You died!";
 GAMEOVERA2 = "Game over, man!"; //Aliens
@@ -454,6 +462,8 @@ GAMEOVERA6 = "Game over... or is it?"; //Lameduke
 GAMEOVERA7 = "Ouch! That had to hurt."; //Doom 64
 GAMEOVERA8 = "Get the bag. You're goin' home to Mom."; //Postal 1 prototype
 GAMEOVERA9 = "Have a nice day!"; //MIDI Maze/Faceball 2000
+GAMEOVERA10 = "That's a wrap!"; //Skullgirls
+GAMEOVERA11 = "Thought you were hot. Guess what? You're not."; //Total Distortion
 GAMEOVERB1 = "Strike [USE] to load your last save or restart the level."; //For single-player
 GAMEOVERB2 = "Strike [USE] to respawn."; //For multiplayer
 
@@ -522,6 +532,8 @@ NOFLIES = "No Flies*";
 NORATS = "No Rats";
 NOSMOKE = "No Smoke";
 NOMISC = "No Miscellaneous";
+1UPMENU = "1-Up Music Pack Options";
+1UPNOTE = "\cf(Requires 1-Up Music Pack to be loaded in order to be accessed)";
 WARNOPTION1 = "Disable Intro Warning";
 WARNOPTION2 = "In case you don't care about the content warning when starting up";
 WARNOPTION3 = "the mod, you can instead have it cut straight to the fade in effect.";
@@ -868,6 +880,21 @@ INTERTEXT_ID1_E1 =
 	"\n"
 	"Seems like that saying about history repeating itself\n"
 	"rings true.";
+INTERTEXT_ID1_E2 =
+	"Who would've guessed that attempting to colonize\n"
+	"interdimensional milita territory would result in said\n"
+	"militia claiming the technology for themselves?\n"
+	"\n"
+	"You rush through the portal and shut it down before\n"
+	"activating the detonation. If the destruction of the\n"
+	"Gatekeeper wasn't enough to set the Master Force back,\n"
+	"then surely their warheads blowing up in their own\n"
+	"faces ought to be the biggest wrench you've ever thrown\n"
+	"in their plans.\n"
+	"\n"
+	"As for the UAC? Well, with their bleeding cash problem,\n"
+	"let's hope they'll accept your return as your two-weeks\n"
+	"notice...";
 //Heretic
 HE1TEXT =
 	"With the Iron Liches down for good, the entrance to\n"
@@ -911,7 +938,7 @@ HE2TEXT =
 	"\n"
 	"The voice's chanting turns to a fading cackle...";
 //This concludes GamingMarine in Doom's story. See you in Tales of the Lost Kaka Village!
-	
+
 // Flats
 // This is a list of flats that have footstep sounds associated with them.
 // Items are separated by a colon ( : )
